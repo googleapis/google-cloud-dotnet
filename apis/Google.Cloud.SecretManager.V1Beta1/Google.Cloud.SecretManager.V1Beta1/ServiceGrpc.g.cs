@@ -259,7 +259,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+      /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -271,8 +272,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-      /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+      /// containing secret data and attaches it to an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -296,7 +298,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Updates metadata of an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -320,8 +323,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-      /// data.
+      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+      /// call does not return secret data.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -333,7 +336,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Gets metadata for a
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -348,7 +352,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// This call returns the secret data.
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -365,7 +370,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -380,7 +386,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -395,9 +402,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-      /// secret data.
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+      /// irrevocably destroys the secret data.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -412,8 +420,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// Sets the access control policy on the specified secret. Replaces any
       /// existing policy.
       ///
-      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-      /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+      /// are enforced according to the policy set on the associated
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -533,7 +542,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecrets, null, options, request);
       }
       /// <summary>
-      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+      /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -546,7 +556,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CreateSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+      /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -557,7 +568,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSecret, null, options, request);
       }
       /// <summary>
-      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+      /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -570,7 +582,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CreateSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+      /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -581,8 +594,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSecret, null, options, request);
       }
       /// <summary>
-      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-      /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+      /// containing secret data and attaches it to an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -595,8 +609,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return AddSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-      /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+      /// containing secret data and attaches it to an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -607,8 +622,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_AddSecretVersion, null, options, request);
       }
       /// <summary>
-      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-      /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+      /// containing secret data and attaches it to an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -621,8 +637,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return AddSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-      /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+      /// containing secret data and attaches it to an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -681,7 +698,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecret, null, options, request);
       }
       /// <summary>
-      /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Updates metadata of an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -694,7 +712,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return UpdateSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Updates metadata of an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -705,7 +724,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSecret, null, options, request);
       }
       /// <summary>
-      /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Updates metadata of an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -718,7 +738,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return UpdateSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Updates metadata of an existing
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -777,8 +798,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSecret, null, options, request);
       }
       /// <summary>
-      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-      /// data.
+      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+      /// call does not return secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -791,8 +812,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return ListSecretVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-      /// data.
+      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+      /// call does not return secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -803,8 +824,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSecretVersions, null, options, request);
       }
       /// <summary>
-      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-      /// data.
+      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+      /// call does not return secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -817,8 +838,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return ListSecretVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-      /// data.
+      /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+      /// call does not return secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -829,7 +850,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecretVersions, null, options, request);
       }
       /// <summary>
-      /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Gets metadata for a
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -845,7 +867,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return GetSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Gets metadata for a
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -859,7 +882,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSecretVersion, null, options, request);
       }
       /// <summary>
-      /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Gets metadata for a
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -875,7 +899,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return GetSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// Gets metadata for a
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -889,7 +914,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecretVersion, null, options, request);
       }
       /// <summary>
-      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// This call returns the secret data.
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -905,7 +931,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return AccessSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// This call returns the secret data.
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -919,7 +946,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_AccessSecretVersion, null, options, request);
       }
       /// <summary>
-      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// This call returns the secret data.
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -935,7 +963,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         return AccessSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+      /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+      /// This call returns the secret data.
       ///
       /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
       /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -951,7 +980,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -967,7 +997,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -981,7 +1012,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -997,7 +1029,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1011,7 +1044,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1027,7 +1061,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1041,7 +1076,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1057,7 +1093,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
       /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1071,9 +1108,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-      /// secret data.
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+      /// irrevocably destroys the secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1088,9 +1126,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-      /// secret data.
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+      /// irrevocably destroys the secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1103,9 +1142,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-      /// secret data.
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+      /// irrevocably destroys the secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1120,9 +1160,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// <summary>
       /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
       ///
-      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-      /// secret data.
+      /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+      /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+      /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+      /// irrevocably destroys the secret data.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1136,8 +1177,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// Sets the access control policy on the specified secret. Replaces any
       /// existing policy.
       ///
-      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-      /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+      /// are enforced according to the policy set on the associated
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1153,8 +1195,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// Sets the access control policy on the specified secret. Replaces any
       /// existing policy.
       ///
-      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-      /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+      /// are enforced according to the policy set on the associated
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1168,8 +1211,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// Sets the access control policy on the specified secret. Replaces any
       /// existing policy.
       ///
-      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-      /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+      /// are enforced according to the policy set on the associated
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1185,8 +1229,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       /// Sets the access control policy on the specified secret. Replaces any
       /// existing policy.
       ///
-      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-      /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+      /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+      /// are enforced according to the policy set on the associated
+      /// [Secret][google.cloud.secrets.v1beta1.Secret].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

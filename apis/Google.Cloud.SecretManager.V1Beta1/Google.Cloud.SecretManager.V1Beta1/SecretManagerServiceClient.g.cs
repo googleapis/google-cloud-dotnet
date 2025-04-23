@@ -19,6 +19,7 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -63,6 +64,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -265,6 +267,11 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SecretManagerServiceSettings"/> object.</returns>
         public SecretManagerServiceSettings Clone() => new SecretManagerServiceSettings(this);
@@ -414,6 +421,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
 
         /// <summary>The underlying gRPC SecretManagerService client</summary>
         public virtual SecretManagerService.SecretManagerServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists [Secrets][google.cloud.secrets.v1beta1.Secret].
@@ -570,7 +580,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -579,7 +590,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -588,7 +600,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -597,7 +610,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             CreateSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project to associate with the
@@ -611,7 +625,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial
+        /// field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -624,7 +639,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project to associate with the
@@ -638,7 +654,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial
+        /// field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -651,7 +668,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project to associate with the
@@ -665,7 +683,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial
+        /// field values.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -673,7 +692,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             CreateSecretAsync(parent, secretId, secret, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project to associate with the
@@ -687,7 +707,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial
+        /// field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -700,7 +721,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project to associate with the
@@ -714,7 +736,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial
+        /// field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -727,7 +750,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project to associate with the
@@ -741,7 +765,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial
+        /// field values.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -749,8 +774,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
             CreateSecretAsync(parent, secretId, secret, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -759,8 +785,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -769,8 +796,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -779,15 +807,19 @@ namespace Google.Cloud.SecretManager.V1Beta1
             AddSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
-        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="payload">
-        /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Required. The secret payload of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -799,15 +831,19 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
-        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="payload">
-        /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Required. The secret payload of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -819,15 +855,19 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
-        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="payload">
-        /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Required. The secret payload of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -835,15 +875,19 @@ namespace Google.Cloud.SecretManager.V1Beta1
             AddSecretVersionAsync(parent, payload, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
-        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="payload">
-        /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Required. The secret payload of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -855,15 +899,19 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
-        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="payload">
-        /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Required. The secret payload of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -875,15 +923,19 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
-        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="payload">
-        /// Required. The secret payload of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Required. The secret payload of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -921,7 +973,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Gets metadata for a given [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret], in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret], in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -935,7 +989,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Gets metadata for a given [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret], in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret], in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -949,7 +1005,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Gets metadata for a given [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret], in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret], in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -960,7 +1018,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Gets metadata for a given [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret], in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret], in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -974,7 +1034,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Gets metadata for a given [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret], in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret], in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -988,7 +1050,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Gets metadata for a given [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret], in the format `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret], in the format
+        /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -996,7 +1060,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             GetSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1005,7 +1070,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1014,7 +1080,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1023,10 +1090,12 @@ namespace Google.Cloud.SecretManager.V1Beta1
             UpdateSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="secret">
-        /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field values.
+        /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field
+        /// values.
         /// </param>
         /// <param name="updateMask">
         /// Required. Specifies the fields to be updated.
@@ -1041,10 +1110,12 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="secret">
-        /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field values.
+        /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field
+        /// values.
         /// </param>
         /// <param name="updateMask">
         /// Required. Specifies the fields to be updated.
@@ -1059,10 +1130,12 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="secret">
-        /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field values.
+        /// Required. [Secret][google.cloud.secrets.v1beta1.Secret] with updated field
+        /// values.
         /// </param>
         /// <param name="updateMask">
         /// Required. Specifies the fields to be updated.
@@ -1103,7 +1176,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Deletes a [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
         /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1118,7 +1192,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Deletes a [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
         /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1133,7 +1208,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Deletes a [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
         /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1145,7 +1221,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Deletes a [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
         /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1160,7 +1237,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Deletes a [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
         /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1175,7 +1253,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Deletes a [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] to delete in the format
         /// `projects/*/secrets/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1184,8 +1263,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             DeleteSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,8 +1273,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1204,13 +1283,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
-        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in the format
-        /// `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in
+        /// the format `projects/*/secrets/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1240,13 +1320,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
-        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in the format
-        /// `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in
+        /// the format `projects/*/secrets/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1276,13 +1357,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
-        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in the format
-        /// `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in
+        /// the format `projects/*/secrets/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1312,13 +1394,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
-        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in the format
-        /// `projects/*/secrets/*`.
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secrets.v1beta1.Secret] associated with the
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] to list, in
+        /// the format `projects/*/secrets/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1348,7 +1431,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1360,7 +1444,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1372,7 +1457,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1384,13 +1470,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             GetSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1404,13 +1492,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1424,13 +1514,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1441,13 +1533,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             GetSecretVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1461,13 +1555,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1481,13 +1577,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1498,7 +1596,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             GetSecretVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1510,7 +1609,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1522,7 +1622,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1534,13 +1635,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             AccessSecretVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1552,13 +1655,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1570,13 +1675,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1585,13 +1692,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             AccessSecretVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1603,13 +1712,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1621,13 +1732,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
         /// `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1638,7 +1751,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1650,7 +1764,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1662,7 +1777,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1674,12 +1790,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1692,12 +1810,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1710,12 +1830,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1725,12 +1847,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1743,12 +1867,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1761,12 +1887,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to disable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1776,7 +1904,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1788,7 +1917,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1800,7 +1930,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1812,12 +1943,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1830,12 +1963,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1848,12 +1983,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1863,12 +2000,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1881,12 +2020,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1899,12 +2040,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to enable in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1914,9 +2057,10 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1927,9 +2071,10 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1940,9 +2085,10 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1953,13 +2099,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1972,13 +2120,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1991,13 +2141,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2007,13 +2159,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2026,13 +2180,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2045,13 +2201,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in the format
-        /// `projects/*/secrets/*/versions/*`.
+        /// Required. The resource name of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to destroy in
+        /// the format `projects/*/secrets/*/versions/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2062,8 +2220,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Sets the access control policy on the specified secret. Replaces any
         /// existing policy.
         /// 
-        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-        /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+        /// are enforced according to the policy set on the associated
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2075,8 +2234,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Sets the access control policy on the specified secret. Replaces any
         /// existing policy.
         /// 
-        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-        /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+        /// are enforced according to the policy set on the associated
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2088,8 +2248,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Sets the access control policy on the specified secret. Replaces any
         /// existing policy.
         /// 
-        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-        /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+        /// are enforced according to the policy set on the associated
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2231,6 +2392,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListSecrets = clientHelper.BuildApiCall<ListSecretsRequest, ListSecretsResponse>("ListSecrets", grpcClient.ListSecretsAsync, grpcClient.ListSecrets, effectiveSettings.ListSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSecrets);
             Modify_ListSecretsApiCall(ref _callListSecrets);
@@ -2316,6 +2478,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>The underlying gRPC SecretManagerService client</summary>
         public override SecretManagerService.SecretManagerServiceClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
         partial void Modify_ListSecretsRequest(ref ListSecretsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateSecretRequest(ref CreateSecretRequest request, ref gaxgrpc::CallSettings settings);
@@ -2371,7 +2536,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2383,7 +2549,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no
+        /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2395,8 +2562,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2408,8 +2576,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] containing secret data and attaches
-        /// it to an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Creates a new [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+        /// containing secret data and attaches it to an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2445,7 +2614,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2457,7 +2627,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Updates metadata of an existing [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Updates metadata of an existing
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2493,8 +2664,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2506,8 +2677,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
-        /// data.
+        /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This
+        /// call does not return secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2519,7 +2690,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -2534,7 +2706,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// Gets metadata for a
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -2549,7 +2722,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -2564,7 +2738,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         }
 
         /// <summary>
-        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]. This call returns the secret data.
+        /// Accesses a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+        /// This call returns the secret data.
         /// 
         /// `projects/*/secrets/*/versions/latest` is an alias to the `latest`
         /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -2581,7 +2756,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2596,7 +2772,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Disables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [DISABLED][google.cloud.secrets.v1beta1.SecretVersion.State.DISABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2611,7 +2788,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2626,7 +2804,8 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Enables a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
         /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2641,9 +2820,10 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2657,9 +2837,10 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// <summary>
         /// Destroys a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
         /// 
-        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
-        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and irrevocably destroys the
-        /// secret data.
+        /// Sets the [state][google.cloud.secrets.v1beta1.SecretVersion.state] of the
+        /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] to
+        /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED] and
+        /// irrevocably destroys the secret data.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2674,8 +2855,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Sets the access control policy on the specified secret. Replaces any
         /// existing policy.
         /// 
-        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-        /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+        /// are enforced according to the policy set on the associated
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2690,8 +2872,9 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// Sets the access control policy on the specified secret. Replaces any
         /// existing policy.
         /// 
-        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] are enforced according
-        /// to the policy set on the associated [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Permissions on [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]
+        /// are enforced according to the policy set on the associated
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2787,5 +2970,21 @@ namespace Google.Cloud.SecretManager.V1Beta1
         public scg::IEnumerator<SecretVersion> GetEnumerator() => Versions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class SecretManagerService
+    {
+        public partial class SecretManagerServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }
