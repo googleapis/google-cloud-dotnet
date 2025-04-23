@@ -81,6 +81,28 @@ namespace Google.Cloud.GkeBackup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest> __Marshaller_google_cloud_gkebackup_v1_DeleteBackupPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest> __Marshaller_google_cloud_gkebackup_v1_CreateBackupChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest> __Marshaller_google_cloud_gkebackup_v1_ListBackupChannelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse> __Marshaller_google_cloud_gkebackup_v1_ListBackupChannelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest> __Marshaller_google_cloud_gkebackup_v1_GetBackupChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.BackupChannel> __Marshaller_google_cloud_gkebackup_v1_BackupChannel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.BackupChannel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest> __Marshaller_google_cloud_gkebackup_v1_UpdateBackupChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest> __Marshaller_google_cloud_gkebackup_v1_DeleteBackupChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest> __Marshaller_google_cloud_gkebackup_v1_ListBackupPlanBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse> __Marshaller_google_cloud_gkebackup_v1_ListBackupPlanBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest> __Marshaller_google_cloud_gkebackup_v1_GetBackupPlanBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.BackupPlanBinding> __Marshaller_google_cloud_gkebackup_v1_BackupPlanBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.BackupPlanBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.CreateBackupRequest> __Marshaller_google_cloud_gkebackup_v1_CreateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.CreateBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListBackupsRequest> __Marshaller_google_cloud_gkebackup_v1_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListBackupsRequest.Parser));
@@ -116,6 +138,28 @@ namespace Google.Cloud.GkeBackup.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.UpdateRestorePlanRequest> __Marshaller_google_cloud_gkebackup_v1_UpdateRestorePlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.UpdateRestorePlanRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.DeleteRestorePlanRequest> __Marshaller_google_cloud_gkebackup_v1_DeleteRestorePlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.DeleteRestorePlanRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest> __Marshaller_google_cloud_gkebackup_v1_CreateRestoreChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest> __Marshaller_google_cloud_gkebackup_v1_ListRestoreChannelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse> __Marshaller_google_cloud_gkebackup_v1_ListRestoreChannelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest> __Marshaller_google_cloud_gkebackup_v1_GetRestoreChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.RestoreChannel> __Marshaller_google_cloud_gkebackup_v1_RestoreChannel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.RestoreChannel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest> __Marshaller_google_cloud_gkebackup_v1_UpdateRestoreChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest> __Marshaller_google_cloud_gkebackup_v1_DeleteRestoreChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest> __Marshaller_google_cloud_gkebackup_v1_ListRestorePlanBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse> __Marshaller_google_cloud_gkebackup_v1_ListRestorePlanBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest> __Marshaller_google_cloud_gkebackup_v1_GetRestorePlanBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.RestorePlanBinding> __Marshaller_google_cloud_gkebackup_v1_RestorePlanBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.RestorePlanBinding.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.CreateRestoreRequest> __Marshaller_google_cloud_gkebackup_v1_CreateRestoreRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.CreateRestoreRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -182,6 +226,62 @@ namespace Google.Cloud.GkeBackup.V1 {
         "DeleteBackupPlan",
         __Marshaller_google_cloud_gkebackup_v1_DeleteBackupPlanRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest, global::Google.LongRunning.Operation> __Method_CreateBackupChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackupChannel",
+        __Marshaller_google_cloud_gkebackup_v1_CreateBackupChannelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse> __Method_ListBackupChannels = new grpc::Method<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupChannels",
+        __Marshaller_google_cloud_gkebackup_v1_ListBackupChannelsRequest,
+        __Marshaller_google_cloud_gkebackup_v1_ListBackupChannelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest, global::Google.Cloud.GkeBackup.V1.BackupChannel> __Method_GetBackupChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest, global::Google.Cloud.GkeBackup.V1.BackupChannel>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupChannel",
+        __Marshaller_google_cloud_gkebackup_v1_GetBackupChannelRequest,
+        __Marshaller_google_cloud_gkebackup_v1_BackupChannel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest, global::Google.LongRunning.Operation> __Method_UpdateBackupChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupChannel",
+        __Marshaller_google_cloud_gkebackup_v1_UpdateBackupChannelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest, global::Google.LongRunning.Operation> __Method_DeleteBackupChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackupChannel",
+        __Marshaller_google_cloud_gkebackup_v1_DeleteBackupChannelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse> __Method_ListBackupPlanBindings = new grpc::Method<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupPlanBindings",
+        __Marshaller_google_cloud_gkebackup_v1_ListBackupPlanBindingsRequest,
+        __Marshaller_google_cloud_gkebackup_v1_ListBackupPlanBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest, global::Google.Cloud.GkeBackup.V1.BackupPlanBinding> __Method_GetBackupPlanBinding = new grpc::Method<global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest, global::Google.Cloud.GkeBackup.V1.BackupPlanBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupPlanBinding",
+        __Marshaller_google_cloud_gkebackup_v1_GetBackupPlanBindingRequest,
+        __Marshaller_google_cloud_gkebackup_v1_BackupPlanBinding);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateBackupRequest, global::Google.LongRunning.Operation> __Method_CreateBackup = new grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(
@@ -278,6 +378,62 @@ namespace Google.Cloud.GkeBackup.V1 {
         "DeleteRestorePlan",
         __Marshaller_google_cloud_gkebackup_v1_DeleteRestorePlanRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest, global::Google.LongRunning.Operation> __Method_CreateRestoreChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRestoreChannel",
+        __Marshaller_google_cloud_gkebackup_v1_CreateRestoreChannelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest, global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse> __Method_ListRestoreChannels = new grpc::Method<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest, global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRestoreChannels",
+        __Marshaller_google_cloud_gkebackup_v1_ListRestoreChannelsRequest,
+        __Marshaller_google_cloud_gkebackup_v1_ListRestoreChannelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest, global::Google.Cloud.GkeBackup.V1.RestoreChannel> __Method_GetRestoreChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest, global::Google.Cloud.GkeBackup.V1.RestoreChannel>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRestoreChannel",
+        __Marshaller_google_cloud_gkebackup_v1_GetRestoreChannelRequest,
+        __Marshaller_google_cloud_gkebackup_v1_RestoreChannel);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest, global::Google.LongRunning.Operation> __Method_UpdateRestoreChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRestoreChannel",
+        __Marshaller_google_cloud_gkebackup_v1_UpdateRestoreChannelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest, global::Google.LongRunning.Operation> __Method_DeleteRestoreChannel = new grpc::Method<global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRestoreChannel",
+        __Marshaller_google_cloud_gkebackup_v1_DeleteRestoreChannelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest, global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse> __Method_ListRestorePlanBindings = new grpc::Method<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest, global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRestorePlanBindings",
+        __Marshaller_google_cloud_gkebackup_v1_ListRestorePlanBindingsRequest,
+        __Marshaller_google_cloud_gkebackup_v1_ListRestorePlanBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest, global::Google.Cloud.GkeBackup.V1.RestorePlanBinding> __Method_GetRestorePlanBinding = new grpc::Method<global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest, global::Google.Cloud.GkeBackup.V1.RestorePlanBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRestorePlanBinding",
+        __Marshaller_google_cloud_gkebackup_v1_GetRestorePlanBindingRequest,
+        __Marshaller_google_cloud_gkebackup_v1_RestorePlanBinding);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateRestoreRequest, global::Google.LongRunning.Operation> __Method_CreateRestore = new grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateRestoreRequest, global::Google.LongRunning.Operation>(
@@ -409,6 +565,90 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackupPlan(global::Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new BackupChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackupChannel(global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists BackupChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse> ListBackupChannels(global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve the details of a single BackupChannel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.BackupChannel> GetBackupChannel(global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a BackupChannel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackupChannel(global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an existing BackupChannel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackupChannel(global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists BackupPlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse> ListBackupPlanBindings(global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve the details of a single BackupPlanBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.BackupPlanBinding> GetBackupPlanBinding(global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -553,6 +793,90 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRestorePlan(global::Google.Cloud.GkeBackup.V1.DeleteRestorePlanRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new RestoreChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRestoreChannel(global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RestoreChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse> ListRestoreChannels(global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve the details of a single RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.RestoreChannel> GetRestoreChannel(global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRestoreChannel(global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an existing RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRestoreChannel(global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RestorePlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse> ListRestorePlanBindings(global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve the details of a single RestorePlanBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.RestorePlanBinding> GetRestorePlanBinding(global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -921,6 +1245,342 @@ namespace Google.Cloud.GkeBackup.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupPlanAsync(global::Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupPlan, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new BackupChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackupChannel(global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new BackupChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackupChannel(global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new BackupChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new BackupChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Lists BackupChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse ListBackupChannels(global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupChannels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BackupChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse ListBackupChannels(global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupChannels, null, options, request);
+      }
+      /// <summary>
+      /// Lists BackupChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse> ListBackupChannelsAsync(global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupChannelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BackupChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse> ListBackupChannelsAsync(global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupChannels, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.BackupChannel GetBackupChannel(global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.BackupChannel GetBackupChannel(global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.BackupChannel> GetBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.BackupChannel> GetBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Update a BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupChannel(global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupChannel(global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Update a BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackupChannel(global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackupChannel(global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing BackupChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupChannelAsync(global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupChannel, null, options, request);
+      }
+      /// <summary>
+      /// Lists BackupPlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse ListBackupPlanBindings(global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupPlanBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BackupPlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse ListBackupPlanBindings(global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupPlanBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists BackupPlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse> ListBackupPlanBindingsAsync(global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupPlanBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BackupPlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse> ListBackupPlanBindingsAsync(global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupPlanBindings, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupPlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.BackupPlanBinding GetBackupPlanBinding(global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupPlanBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupPlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.BackupPlanBinding GetBackupPlanBinding(global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupPlanBinding, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupPlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.BackupPlanBinding> GetBackupPlanBindingAsync(global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupPlanBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single BackupPlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.BackupPlanBinding> GetBackupPlanBindingAsync(global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupPlanBinding, null, options, request);
       }
       /// <summary>
       /// Creates a Backup for the given BackupPlan.
@@ -1499,6 +2159,342 @@ namespace Google.Cloud.GkeBackup.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRestorePlan, null, options, request);
       }
       /// <summary>
+      /// Creates a new RestoreChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreChannel(global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreChannel(global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreChannel in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse ListRestoreChannels(global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreChannels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse ListRestoreChannels(global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRestoreChannels, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse> ListRestoreChannelsAsync(global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreChannelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreChannels in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse> ListRestoreChannelsAsync(global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRestoreChannels, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.RestoreChannel GetRestoreChannel(global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.RestoreChannel GetRestoreChannel(global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.RestoreChannel> GetRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.RestoreChannel> GetRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Update a RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRestoreChannel(global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRestoreChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRestoreChannel(global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Update a RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRestoreChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreChannel(global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreChannel(global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing RestoreChannel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreChannelAsync(global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRestoreChannel, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestorePlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse ListRestorePlanBindings(global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestorePlanBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestorePlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse ListRestorePlanBindings(global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRestorePlanBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestorePlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse> ListRestorePlanBindingsAsync(global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestorePlanBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestorePlanBindings in a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse> ListRestorePlanBindingsAsync(global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRestorePlanBindings, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestorePlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.RestorePlanBinding GetRestorePlanBinding(global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestorePlanBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestorePlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.RestorePlanBinding GetRestorePlanBinding(global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRestorePlanBinding, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestorePlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.RestorePlanBinding> GetRestorePlanBindingAsync(global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestorePlanBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the details of a single RestorePlanBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.RestorePlanBinding> GetRestorePlanBindingAsync(global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRestorePlanBinding, null, options, request);
+      }
+      /// <summary>
       /// Creates a new Restore for the given RestorePlan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1901,6 +2897,13 @@ namespace Google.Cloud.GkeBackup.V1 {
           .AddMethod(__Method_GetBackupPlan, serviceImpl.GetBackupPlan)
           .AddMethod(__Method_UpdateBackupPlan, serviceImpl.UpdateBackupPlan)
           .AddMethod(__Method_DeleteBackupPlan, serviceImpl.DeleteBackupPlan)
+          .AddMethod(__Method_CreateBackupChannel, serviceImpl.CreateBackupChannel)
+          .AddMethod(__Method_ListBackupChannels, serviceImpl.ListBackupChannels)
+          .AddMethod(__Method_GetBackupChannel, serviceImpl.GetBackupChannel)
+          .AddMethod(__Method_UpdateBackupChannel, serviceImpl.UpdateBackupChannel)
+          .AddMethod(__Method_DeleteBackupChannel, serviceImpl.DeleteBackupChannel)
+          .AddMethod(__Method_ListBackupPlanBindings, serviceImpl.ListBackupPlanBindings)
+          .AddMethod(__Method_GetBackupPlanBinding, serviceImpl.GetBackupPlanBinding)
           .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
@@ -1913,6 +2916,13 @@ namespace Google.Cloud.GkeBackup.V1 {
           .AddMethod(__Method_GetRestorePlan, serviceImpl.GetRestorePlan)
           .AddMethod(__Method_UpdateRestorePlan, serviceImpl.UpdateRestorePlan)
           .AddMethod(__Method_DeleteRestorePlan, serviceImpl.DeleteRestorePlan)
+          .AddMethod(__Method_CreateRestoreChannel, serviceImpl.CreateRestoreChannel)
+          .AddMethod(__Method_ListRestoreChannels, serviceImpl.ListRestoreChannels)
+          .AddMethod(__Method_GetRestoreChannel, serviceImpl.GetRestoreChannel)
+          .AddMethod(__Method_UpdateRestoreChannel, serviceImpl.UpdateRestoreChannel)
+          .AddMethod(__Method_DeleteRestoreChannel, serviceImpl.DeleteRestoreChannel)
+          .AddMethod(__Method_ListRestorePlanBindings, serviceImpl.ListRestorePlanBindings)
+          .AddMethod(__Method_GetRestorePlanBinding, serviceImpl.GetRestorePlanBinding)
           .AddMethod(__Method_CreateRestore, serviceImpl.CreateRestore)
           .AddMethod(__Method_ListRestores, serviceImpl.ListRestores)
           .AddMethod(__Method_GetRestore, serviceImpl.GetRestore)
@@ -1935,6 +2945,13 @@ namespace Google.Cloud.GkeBackup.V1 {
       serviceBinder.AddMethod(__Method_GetBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetBackupPlanRequest, global::Google.Cloud.GkeBackup.V1.BackupPlan>(serviceImpl.GetBackupPlan));
       serviceBinder.AddMethod(__Method_UpdateBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.UpdateBackupPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupPlan));
       serviceBinder.AddMethod(__Method_DeleteBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPlan));
+      serviceBinder.AddMethod(__Method_CreateBackupChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupChannel));
+      serviceBinder.AddMethod(__Method_ListBackupChannels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse>(serviceImpl.ListBackupChannels));
+      serviceBinder.AddMethod(__Method_GetBackupChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetBackupChannelRequest, global::Google.Cloud.GkeBackup.V1.BackupChannel>(serviceImpl.GetBackupChannel));
+      serviceBinder.AddMethod(__Method_UpdateBackupChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupChannel));
+      serviceBinder.AddMethod(__Method_DeleteBackupChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupChannel));
+      serviceBinder.AddMethod(__Method_ListBackupPlanBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse>(serviceImpl.ListBackupPlanBindings));
+      serviceBinder.AddMethod(__Method_GetBackupPlanBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest, global::Google.Cloud.GkeBackup.V1.BackupPlanBinding>(serviceImpl.GetBackupPlanBinding));
       serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListBackupsRequest, global::Google.Cloud.GkeBackup.V1.ListBackupsResponse>(serviceImpl.ListBackups));
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetBackupRequest, global::Google.Cloud.GkeBackup.V1.Backup>(serviceImpl.GetBackup));
@@ -1947,6 +2964,13 @@ namespace Google.Cloud.GkeBackup.V1 {
       serviceBinder.AddMethod(__Method_GetRestorePlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetRestorePlanRequest, global::Google.Cloud.GkeBackup.V1.RestorePlan>(serviceImpl.GetRestorePlan));
       serviceBinder.AddMethod(__Method_UpdateRestorePlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.UpdateRestorePlanRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRestorePlan));
       serviceBinder.AddMethod(__Method_DeleteRestorePlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.DeleteRestorePlanRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRestorePlan));
+      serviceBinder.AddMethod(__Method_CreateRestoreChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRestoreChannel));
+      serviceBinder.AddMethod(__Method_ListRestoreChannels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest, global::Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse>(serviceImpl.ListRestoreChannels));
+      serviceBinder.AddMethod(__Method_GetRestoreChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest, global::Google.Cloud.GkeBackup.V1.RestoreChannel>(serviceImpl.GetRestoreChannel));
+      serviceBinder.AddMethod(__Method_UpdateRestoreChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRestoreChannel));
+      serviceBinder.AddMethod(__Method_DeleteRestoreChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRestoreChannel));
+      serviceBinder.AddMethod(__Method_ListRestorePlanBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest, global::Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse>(serviceImpl.ListRestorePlanBindings));
+      serviceBinder.AddMethod(__Method_GetRestorePlanBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest, global::Google.Cloud.GkeBackup.V1.RestorePlanBinding>(serviceImpl.GetRestorePlanBinding));
       serviceBinder.AddMethod(__Method_CreateRestore, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.CreateRestoreRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRestore));
       serviceBinder.AddMethod(__Method_ListRestores, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListRestoresRequest, global::Google.Cloud.GkeBackup.V1.ListRestoresResponse>(serviceImpl.ListRestores));
       serviceBinder.AddMethod(__Method_GetRestore, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetRestoreRequest, global::Google.Cloud.GkeBackup.V1.Restore>(serviceImpl.GetRestore));

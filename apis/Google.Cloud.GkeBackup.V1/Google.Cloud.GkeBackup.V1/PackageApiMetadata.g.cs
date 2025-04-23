@@ -83,11 +83,15 @@ namespace Google.Cloud.GkeBackup.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return BackupReflection.Descriptor;
+            yield return BackupChannelReflection.Descriptor;
             yield return BackupPlanReflection.Descriptor;
+            yield return BackupPlanBindingReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return GkebackupReflection.Descriptor;
             yield return RestoreReflection.Descriptor;
+            yield return RestoreChannelReflection.Descriptor;
             yield return RestorePlanReflection.Descriptor;
+            yield return RestorePlanBindingReflection.Descriptor;
             yield return VolumeReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;
             yield return gciv::OptionsReflection.Descriptor;

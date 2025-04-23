@@ -28,7 +28,7 @@ namespace Google.Cloud.GkeBackup.V1 {
             "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xl",
             "L2Nsb3VkL2drZWJhY2t1cC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8ihg4KBkJhY2t1cBIRCgRuYW1lGAEgASgJ",
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8ivg4KBkJhY2t1cBIRCgRuYW1lGAEgASgJ",
             "QgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
             "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoG",
@@ -55,29 +55,30 @@ namespace Google.Cloud.GkeBackup.V1 {
             "AxIRCgRldGFnGBggASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YGSABKAlCA+BB",
             "ARIWCglwb2RfY291bnQYGiABKAVCA+BBAxIlChhjb25maWdfYmFja3VwX3Np",
             "emVfYnl0ZXMYGyABKANCA+BBAxIcCg9wZXJtaXNzaXZlX21vZGUYHCABKAhC",
-            "A+BBAxq2AgoPQ2x1c3Rlck1ldGFkYXRhEhQKB2NsdXN0ZXIYASABKAlCA+BB",
-            "AxIYCgtrOHNfdmVyc2lvbhgCIAEoCUID4EEDEmoKE2JhY2t1cF9jcmRfdmVy",
-            "c2lvbnMYAyADKAsySC5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1",
-            "cC5DbHVzdGVyTWV0YWRhdGEuQmFja3VwQ3JkVmVyc2lvbnNFbnRyeUID4EED",
-            "EhoKC2drZV92ZXJzaW9uGAQgASgJQgPgQQNIABIdCg5hbnRob3NfdmVyc2lv",
-            "bhgFIAEoCUID4EEDSAAaOAoWQmFja3VwQ3JkVmVyc2lvbnNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhIKEHBsYXRmb3JtX3ZlcnNp",
-            "b24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASJmCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFU",
-            "SU5HEAESDwoLSU5fUFJPR1JFU1MQAhINCglTVUNDRUVERUQQAxIKCgZGQUlM",
-            "RUQQBBIMCghERUxFVElORxAFOnjqQXUKH2drZWJhY2t1cC5nb29nbGVhcGlz",
-            "LmNvbS9CYWNrdXASUnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3VwX3BsYW59L2JhY2t1cHMve2Jh",
-            "Y2t1cH1CDgoMYmFja3VwX3Njb3BlQsIBCh1jb20uZ29vZ2xlLmNsb3VkLmdr",
-            "ZWJhY2t1cC52MUILQmFja3VwUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9na2ViYWNrdXAvYXBpdjEvZ2tlYmFja3VwcGI7Z2tlYmFja3VwcGKqAhlH",
-            "b29nbGUuQ2xvdWQuR2tlQmFja3VwLlYxygIZR29vZ2xlXENsb3VkXEdrZUJh",
-            "Y2t1cFxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkdrZUJhY2t1cDo6VjFiBnByb3Rv",
-            "Mw=="));
+            "A+BBAxIaCg1zYXRpc2ZpZXNfcHpzGB0gASgIQgPgQQMSGgoNc2F0aXNmaWVz",
+            "X3B6aRgeIAEoCEID4EEDGrYCCg9DbHVzdGVyTWV0YWRhdGESFAoHY2x1c3Rl",
+            "chgBIAEoCUID4EEDEhgKC2s4c192ZXJzaW9uGAIgASgJQgPgQQMSagoTYmFj",
+            "a3VwX2NyZF92ZXJzaW9ucxgDIAMoCzJILmdvb2dsZS5jbG91ZC5na2ViYWNr",
+            "dXAudjEuQmFja3VwLkNsdXN0ZXJNZXRhZGF0YS5CYWNrdXBDcmRWZXJzaW9u",
+            "c0VudHJ5QgPgQQMSGgoLZ2tlX3ZlcnNpb24YBCABKAlCA+BBA0gAEh0KDmFu",
+            "dGhvc192ZXJzaW9uGAUgASgJQgPgQQNIABo4ChZCYWNrdXBDcmRWZXJzaW9u",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCEgoQcGxh",
+            "dGZvcm1fdmVyc2lvbhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBImYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASDAoIQ1JFQVRJTkcQARIPCgtJTl9QUk9HUkVTUxACEg0KCVNVQ0NFRURF",
+            "RBADEgoKBkZBSUxFRBAEEgwKCERFTEVUSU5HEAU6eOpBdQofZ2tlYmFja3Vw",
+            "Lmdvb2dsZWFwaXMuY29tL0JhY2t1cBJScHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2JhY2t1cFBsYW5zL3tiYWNrdXBfcGxhbn0v",
+            "YmFja3Vwcy97YmFja3VwfUIOCgxiYWNrdXBfc2NvcGVCwgEKHWNvbS5nb29n",
+            "bGUuY2xvdWQuZ2tlYmFja3VwLnYxQgtCYWNrdXBQcm90b1ABWjtjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2Vi",
+            "YWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVc",
+            "Q2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3Vw",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup), global::Google.Cloud.GkeBackup.V1.Backup.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Manual", "Labels", "DeleteLockDays", "DeleteLockExpireTime", "RetainDays", "RetainExpireTime", "EncryptionKey", "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "ContainsVolumeData", "ContainsSecrets", "ClusterMetadata", "State", "StateReason", "CompleteTime", "ResourceCount", "VolumeCount", "SizeBytes", "Etag", "Description", "PodCount", "ConfigBackupSizeBytes", "PermissiveMode" }, new[]{ "BackupScope" }, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata), global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata.Parser, new[]{ "Cluster", "K8SVersion", "BackupCrdVersions", "GkeVersion", "AnthosVersion" }, new[]{ "PlatformVersion" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup), global::Google.Cloud.GkeBackup.V1.Backup.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Manual", "Labels", "DeleteLockDays", "DeleteLockExpireTime", "RetainDays", "RetainExpireTime", "EncryptionKey", "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "ContainsVolumeData", "ContainsSecrets", "ClusterMetadata", "State", "StateReason", "CompleteTime", "ResourceCount", "VolumeCount", "SizeBytes", "Etag", "Description", "PodCount", "ConfigBackupSizeBytes", "PermissiveMode", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "BackupScope" }, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata), global::Google.Cloud.GkeBackup.V1.Backup.Types.ClusterMetadata.Parser, new[]{ "Cluster", "K8SVersion", "BackupCrdVersions", "GkeVersion", "AnthosVersion" }, new[]{ "PlatformVersion" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, })
           }));
     }
@@ -151,6 +152,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       podCount_ = other.podCount_;
       configBackupSizeBytes_ = other.configBackupSizeBytes_;
       permissiveMode_ = other.permissiveMode_;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       switch (other.BackupScopeCase) {
         case BackupScopeOneofCase.AllNamespaces:
           AllNamespaces = other.AllNamespaces;
@@ -501,7 +504,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string stateReason_ = "";
     /// <summary>
     /// Output only. Human-readable description of why the backup is in the current
-    /// `state`.
+    /// `state`. This field is only meant for human readability and should not be
+    /// used programmatically as this field is not guaranteed to be consistent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -662,6 +666,36 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 29;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. [Output Only] Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 30;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. [Output Only] Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     private object backupScope_;
     /// <summary>Enum of possible cases for the "backup_scope" oneof.</summary>
     public enum BackupScopeOneofCase {
@@ -727,6 +761,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (PodCount != other.PodCount) return false;
       if (ConfigBackupSizeBytes != other.ConfigBackupSizeBytes) return false;
       if (PermissiveMode != other.PermissiveMode) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (BackupScopeCase != other.BackupScopeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -763,6 +799,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (PodCount != 0) hash ^= PodCount.GetHashCode();
       if (ConfigBackupSizeBytes != 0L) hash ^= ConfigBackupSizeBytes.GetHashCode();
       if (PermissiveMode != false) hash ^= PermissiveMode.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) backupScopeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -891,6 +929,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(224, 1);
         output.WriteBool(PermissiveMode);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1010,6 +1056,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(224, 1);
         output.WriteBool(PermissiveMode);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1100,6 +1154,12 @@ namespace Google.Cloud.GkeBackup.V1 {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(ConfigBackupSizeBytes);
       }
       if (PermissiveMode != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -1207,6 +1267,12 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (other.PermissiveMode != false) {
         PermissiveMode = other.PermissiveMode;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       switch (other.BackupScopeCase) {
         case BackupScopeOneofCase.AllNamespaces:
@@ -1384,6 +1450,14 @@ namespace Google.Cloud.GkeBackup.V1 {
             PermissiveMode = input.ReadBool();
             break;
           }
+          case 232: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 240: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1540,6 +1614,14 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 224: {
             PermissiveMode = input.ReadBool();
+            break;
+          }
+          case 232: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 240: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

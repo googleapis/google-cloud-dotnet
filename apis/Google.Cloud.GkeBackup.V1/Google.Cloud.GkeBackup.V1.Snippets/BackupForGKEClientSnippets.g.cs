@@ -903,6 +903,1250 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateBackupChannel</summary>
+        public void CreateBackupChannelRequestObject()
+        {
+            // Snippet: CreateBackupChannel(CreateBackupChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            CreateBackupChannelRequest request = new CreateBackupChannelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupChannel = new BackupChannel(),
+                BackupChannelId = "",
+            };
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = backupForGKEClient.CreateBackupChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceCreateBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupChannelAsync</summary>
+        public async Task CreateBackupChannelRequestObjectAsync()
+        {
+            // Snippet: CreateBackupChannelAsync(CreateBackupChannelRequest, CallSettings)
+            // Additional: CreateBackupChannelAsync(CreateBackupChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupChannelRequest request = new CreateBackupChannelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupChannel = new BackupChannel(),
+                BackupChannelId = "",
+            };
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = await backupForGKEClient.CreateBackupChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceCreateBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupChannel</summary>
+        public void CreateBackupChannel()
+        {
+            // Snippet: CreateBackupChannel(string, BackupChannel, string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupChannel backupChannel = new BackupChannel();
+            string backupChannelId = "";
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = backupForGKEClient.CreateBackupChannel(parent, backupChannel, backupChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceCreateBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupChannelAsync</summary>
+        public async Task CreateBackupChannelAsync()
+        {
+            // Snippet: CreateBackupChannelAsync(string, BackupChannel, string, CallSettings)
+            // Additional: CreateBackupChannelAsync(string, BackupChannel, string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupChannel backupChannel = new BackupChannel();
+            string backupChannelId = "";
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = await backupForGKEClient.CreateBackupChannelAsync(parent, backupChannel, backupChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceCreateBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupChannel</summary>
+        public void CreateBackupChannelResourceNames()
+        {
+            // Snippet: CreateBackupChannel(LocationName, BackupChannel, string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupChannel backupChannel = new BackupChannel();
+            string backupChannelId = "";
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = backupForGKEClient.CreateBackupChannel(parent, backupChannel, backupChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceCreateBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupChannelAsync</summary>
+        public async Task CreateBackupChannelResourceNamesAsync()
+        {
+            // Snippet: CreateBackupChannelAsync(LocationName, BackupChannel, string, CallSettings)
+            // Additional: CreateBackupChannelAsync(LocationName, BackupChannel, string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupChannel backupChannel = new BackupChannel();
+            string backupChannelId = "";
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = await backupForGKEClient.CreateBackupChannelAsync(parent, backupChannel, backupChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceCreateBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupChannels</summary>
+        public void ListBackupChannelsRequestObject()
+        {
+            // Snippet: ListBackupChannels(ListBackupChannelsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            ListBackupChannelsRequest request = new ListBackupChannelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupChannelsResponse, BackupChannel> response = backupForGKEClient.ListBackupChannels(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupChannel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupChannel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupChannelsAsync</summary>
+        public async Task ListBackupChannelsRequestObjectAsync()
+        {
+            // Snippet: ListBackupChannelsAsync(ListBackupChannelsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupChannelsRequest request = new ListBackupChannelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> response = backupForGKEClient.ListBackupChannelsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupChannel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupChannel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupChannels</summary>
+        public void ListBackupChannels()
+        {
+            // Snippet: ListBackupChannels(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBackupChannelsResponse, BackupChannel> response = backupForGKEClient.ListBackupChannels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupChannel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupChannel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupChannelsAsync</summary>
+        public async Task ListBackupChannelsAsync()
+        {
+            // Snippet: ListBackupChannelsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> response = backupForGKEClient.ListBackupChannelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupChannel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupChannel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupChannels</summary>
+        public void ListBackupChannelsResourceNames()
+        {
+            // Snippet: ListBackupChannels(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBackupChannelsResponse, BackupChannel> response = backupForGKEClient.ListBackupChannels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupChannel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupChannel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupChannelsAsync</summary>
+        public async Task ListBackupChannelsResourceNamesAsync()
+        {
+            // Snippet: ListBackupChannelsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> response = backupForGKEClient.ListBackupChannelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupChannel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupChannel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupChannel</summary>
+        public void GetBackupChannelRequestObject()
+        {
+            // Snippet: GetBackupChannel(GetBackupChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            GetBackupChannelRequest request = new GetBackupChannelRequest
+            {
+                BackupChannelName = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]"),
+            };
+            // Make the request
+            BackupChannel response = backupForGKEClient.GetBackupChannel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupChannelAsync</summary>
+        public async Task GetBackupChannelRequestObjectAsync()
+        {
+            // Snippet: GetBackupChannelAsync(GetBackupChannelRequest, CallSettings)
+            // Additional: GetBackupChannelAsync(GetBackupChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupChannelRequest request = new GetBackupChannelRequest
+            {
+                BackupChannelName = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]"),
+            };
+            // Make the request
+            BackupChannel response = await backupForGKEClient.GetBackupChannelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupChannel</summary>
+        public void GetBackupChannel()
+        {
+            // Snippet: GetBackupChannel(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]";
+            // Make the request
+            BackupChannel response = backupForGKEClient.GetBackupChannel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupChannelAsync</summary>
+        public async Task GetBackupChannelAsync()
+        {
+            // Snippet: GetBackupChannelAsync(string, CallSettings)
+            // Additional: GetBackupChannelAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]";
+            // Make the request
+            BackupChannel response = await backupForGKEClient.GetBackupChannelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupChannel</summary>
+        public void GetBackupChannelResourceNames()
+        {
+            // Snippet: GetBackupChannel(BackupChannelName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            BackupChannelName name = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]");
+            // Make the request
+            BackupChannel response = backupForGKEClient.GetBackupChannel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupChannelAsync</summary>
+        public async Task GetBackupChannelResourceNamesAsync()
+        {
+            // Snippet: GetBackupChannelAsync(BackupChannelName, CallSettings)
+            // Additional: GetBackupChannelAsync(BackupChannelName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupChannelName name = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]");
+            // Make the request
+            BackupChannel response = await backupForGKEClient.GetBackupChannelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupChannel</summary>
+        public void UpdateBackupChannelRequestObject()
+        {
+            // Snippet: UpdateBackupChannel(UpdateBackupChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupChannelRequest request = new UpdateBackupChannelRequest
+            {
+                BackupChannel = new BackupChannel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = backupForGKEClient.UpdateBackupChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceUpdateBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupChannelAsync</summary>
+        public async Task UpdateBackupChannelRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupChannelAsync(UpdateBackupChannelRequest, CallSettings)
+            // Additional: UpdateBackupChannelAsync(UpdateBackupChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupChannelRequest request = new UpdateBackupChannelRequest
+            {
+                BackupChannel = new BackupChannel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = await backupForGKEClient.UpdateBackupChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceUpdateBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupChannel</summary>
+        public void UpdateBackupChannel()
+        {
+            // Snippet: UpdateBackupChannel(BackupChannel, FieldMask, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            BackupChannel backupChannel = new BackupChannel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = backupForGKEClient.UpdateBackupChannel(backupChannel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceUpdateBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupChannelAsync</summary>
+        public async Task UpdateBackupChannelAsync()
+        {
+            // Snippet: UpdateBackupChannelAsync(BackupChannel, FieldMask, CallSettings)
+            // Additional: UpdateBackupChannelAsync(BackupChannel, FieldMask, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupChannel backupChannel = new BackupChannel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupChannel, OperationMetadata> response = await backupForGKEClient.UpdateBackupChannelAsync(backupChannel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceUpdateBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupChannel</summary>
+        public void DeleteBackupChannelRequestObject()
+        {
+            // Snippet: DeleteBackupChannel(DeleteBackupChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupChannelRequest request = new DeleteBackupChannelRequest
+            {
+                BackupChannelName = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]"),
+                Etag = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupForGKEClient.DeleteBackupChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceDeleteBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupChannelAsync</summary>
+        public async Task DeleteBackupChannelRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupChannelAsync(DeleteBackupChannelRequest, CallSettings)
+            // Additional: DeleteBackupChannelAsync(DeleteBackupChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupChannelRequest request = new DeleteBackupChannelRequest
+            {
+                BackupChannelName = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]"),
+                Etag = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupForGKEClient.DeleteBackupChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceDeleteBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupChannel</summary>
+        public void DeleteBackupChannel()
+        {
+            // Snippet: DeleteBackupChannel(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupForGKEClient.DeleteBackupChannel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceDeleteBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupChannelAsync</summary>
+        public async Task DeleteBackupChannelAsync()
+        {
+            // Snippet: DeleteBackupChannelAsync(string, CallSettings)
+            // Additional: DeleteBackupChannelAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupForGKEClient.DeleteBackupChannelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceDeleteBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupChannel</summary>
+        public void DeleteBackupChannelResourceNames()
+        {
+            // Snippet: DeleteBackupChannel(BackupChannelName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            BackupChannelName name = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupForGKEClient.DeleteBackupChannel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceDeleteBackupChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupChannelAsync</summary>
+        public async Task DeleteBackupChannelResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupChannelAsync(BackupChannelName, CallSettings)
+            // Additional: DeleteBackupChannelAsync(BackupChannelName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupChannelName name = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupForGKEClient.DeleteBackupChannelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceDeleteBackupChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanBindings</summary>
+        public void ListBackupPlanBindingsRequestObject()
+        {
+            // Snippet: ListBackupPlanBindings(ListBackupPlanBindingsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            ListBackupPlanBindingsRequest request = new ListBackupPlanBindingsRequest
+            {
+                ParentAsBackupChannelName = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> response = backupForGKEClient.ListBackupPlanBindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanBindingsAsync</summary>
+        public async Task ListBackupPlanBindingsRequestObjectAsync()
+        {
+            // Snippet: ListBackupPlanBindingsAsync(ListBackupPlanBindingsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupPlanBindingsRequest request = new ListBackupPlanBindingsRequest
+            {
+                ParentAsBackupChannelName = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> response = backupForGKEClient.ListBackupPlanBindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupPlanBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupPlanBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanBindings</summary>
+        public void ListBackupPlanBindings()
+        {
+            // Snippet: ListBackupPlanBindings(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]";
+            // Make the request
+            PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> response = backupForGKEClient.ListBackupPlanBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanBindingsAsync</summary>
+        public async Task ListBackupPlanBindingsAsync()
+        {
+            // Snippet: ListBackupPlanBindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> response = backupForGKEClient.ListBackupPlanBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupPlanBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupPlanBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanBindings</summary>
+        public void ListBackupPlanBindingsResourceNames()
+        {
+            // Snippet: ListBackupPlanBindings(BackupChannelName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            BackupChannelName parent = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]");
+            // Make the request
+            PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> response = backupForGKEClient.ListBackupPlanBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanBindingsAsync</summary>
+        public async Task ListBackupPlanBindingsResourceNamesAsync()
+        {
+            // Snippet: ListBackupPlanBindingsAsync(BackupChannelName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupChannelName parent = BackupChannelName.FromProjectLocationBackupChannel("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> response = backupForGKEClient.ListBackupPlanBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupPlanBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupPlanBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanBinding</summary>
+        public void GetBackupPlanBindingRequestObject()
+        {
+            // Snippet: GetBackupPlanBinding(GetBackupPlanBindingRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            GetBackupPlanBindingRequest request = new GetBackupPlanBindingRequest
+            {
+                BackupPlanBindingName = BackupPlanBindingName.FromProjectLocationBackupChannelBackupPlanBinding("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]", "[BACKUP_PLAN_BINDING]"),
+            };
+            // Make the request
+            BackupPlanBinding response = backupForGKEClient.GetBackupPlanBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanBindingAsync</summary>
+        public async Task GetBackupPlanBindingRequestObjectAsync()
+        {
+            // Snippet: GetBackupPlanBindingAsync(GetBackupPlanBindingRequest, CallSettings)
+            // Additional: GetBackupPlanBindingAsync(GetBackupPlanBindingRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupPlanBindingRequest request = new GetBackupPlanBindingRequest
+            {
+                BackupPlanBindingName = BackupPlanBindingName.FromProjectLocationBackupChannelBackupPlanBinding("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]", "[BACKUP_PLAN_BINDING]"),
+            };
+            // Make the request
+            BackupPlanBinding response = await backupForGKEClient.GetBackupPlanBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanBinding</summary>
+        public void GetBackupPlanBinding()
+        {
+            // Snippet: GetBackupPlanBinding(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]/backupPlanBindings/[BACKUP_PLAN_BINDING]";
+            // Make the request
+            BackupPlanBinding response = backupForGKEClient.GetBackupPlanBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanBindingAsync</summary>
+        public async Task GetBackupPlanBindingAsync()
+        {
+            // Snippet: GetBackupPlanBindingAsync(string, CallSettings)
+            // Additional: GetBackupPlanBindingAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupChannels/[BACKUP_CHANNEL]/backupPlanBindings/[BACKUP_PLAN_BINDING]";
+            // Make the request
+            BackupPlanBinding response = await backupForGKEClient.GetBackupPlanBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanBinding</summary>
+        public void GetBackupPlanBindingResourceNames()
+        {
+            // Snippet: GetBackupPlanBinding(BackupPlanBindingName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            BackupPlanBindingName name = BackupPlanBindingName.FromProjectLocationBackupChannelBackupPlanBinding("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]", "[BACKUP_PLAN_BINDING]");
+            // Make the request
+            BackupPlanBinding response = backupForGKEClient.GetBackupPlanBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanBindingAsync</summary>
+        public async Task GetBackupPlanBindingResourceNamesAsync()
+        {
+            // Snippet: GetBackupPlanBindingAsync(BackupPlanBindingName, CallSettings)
+            // Additional: GetBackupPlanBindingAsync(BackupPlanBindingName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanBindingName name = BackupPlanBindingName.FromProjectLocationBackupChannelBackupPlanBinding("[PROJECT]", "[LOCATION]", "[BACKUP_CHANNEL]", "[BACKUP_PLAN_BINDING]");
+            // Make the request
+            BackupPlanBinding response = await backupForGKEClient.GetBackupPlanBindingAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBackup</summary>
         public void CreateBackupRequestObject()
         {
@@ -1110,6 +2354,7 @@ namespace GoogleCSharpSnippets
                 ParentAsBackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
                 Filter = "",
                 OrderBy = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListBackupsResponse, Backup> response = backupForGKEClient.ListBackups(request);
@@ -1160,6 +2405,7 @@ namespace GoogleCSharpSnippets
                 ParentAsBackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
                 Filter = "",
                 OrderBy = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupForGKEClient.ListBackupsAsync(request);
@@ -3021,6 +4267,1248 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreChannel</summary>
+        public void CreateRestoreChannelRequestObject()
+        {
+            // Snippet: CreateRestoreChannel(CreateRestoreChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            CreateRestoreChannelRequest request = new CreateRestoreChannelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                RestoreChannel = new RestoreChannel(),
+                RestoreChannelId = "",
+            };
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = backupForGKEClient.CreateRestoreChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceCreateRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreChannelAsync</summary>
+        public async Task CreateRestoreChannelRequestObjectAsync()
+        {
+            // Snippet: CreateRestoreChannelAsync(CreateRestoreChannelRequest, CallSettings)
+            // Additional: CreateRestoreChannelAsync(CreateRestoreChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateRestoreChannelRequest request = new CreateRestoreChannelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                RestoreChannel = new RestoreChannel(),
+                RestoreChannelId = "",
+            };
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = await backupForGKEClient.CreateRestoreChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceCreateRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreChannel</summary>
+        public void CreateRestoreChannel()
+        {
+            // Snippet: CreateRestoreChannel(string, RestoreChannel, string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RestoreChannel restoreChannel = new RestoreChannel();
+            string restoreChannelId = "";
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = backupForGKEClient.CreateRestoreChannel(parent, restoreChannel, restoreChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceCreateRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreChannelAsync</summary>
+        public async Task CreateRestoreChannelAsync()
+        {
+            // Snippet: CreateRestoreChannelAsync(string, RestoreChannel, string, CallSettings)
+            // Additional: CreateRestoreChannelAsync(string, RestoreChannel, string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RestoreChannel restoreChannel = new RestoreChannel();
+            string restoreChannelId = "";
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = await backupForGKEClient.CreateRestoreChannelAsync(parent, restoreChannel, restoreChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceCreateRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreChannel</summary>
+        public void CreateRestoreChannelResourceNames()
+        {
+            // Snippet: CreateRestoreChannel(LocationName, RestoreChannel, string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RestoreChannel restoreChannel = new RestoreChannel();
+            string restoreChannelId = "";
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = backupForGKEClient.CreateRestoreChannel(parent, restoreChannel, restoreChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceCreateRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreChannelAsync</summary>
+        public async Task CreateRestoreChannelResourceNamesAsync()
+        {
+            // Snippet: CreateRestoreChannelAsync(LocationName, RestoreChannel, string, CallSettings)
+            // Additional: CreateRestoreChannelAsync(LocationName, RestoreChannel, string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RestoreChannel restoreChannel = new RestoreChannel();
+            string restoreChannelId = "";
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = await backupForGKEClient.CreateRestoreChannelAsync(parent, restoreChannel, restoreChannelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceCreateRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreChannels</summary>
+        public void ListRestoreChannelsRequestObject()
+        {
+            // Snippet: ListRestoreChannels(ListRestoreChannelsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            ListRestoreChannelsRequest request = new ListRestoreChannelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> response = backupForGKEClient.ListRestoreChannels(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreChannel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreChannel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreChannelsAsync</summary>
+        public async Task ListRestoreChannelsRequestObjectAsync()
+        {
+            // Snippet: ListRestoreChannelsAsync(ListRestoreChannelsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRestoreChannelsRequest request = new ListRestoreChannelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> response = backupForGKEClient.ListRestoreChannelsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RestoreChannel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRestoreChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreChannel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreChannels</summary>
+        public void ListRestoreChannels()
+        {
+            // Snippet: ListRestoreChannels(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> response = backupForGKEClient.ListRestoreChannels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreChannel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreChannel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreChannelsAsync</summary>
+        public async Task ListRestoreChannelsAsync()
+        {
+            // Snippet: ListRestoreChannelsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> response = backupForGKEClient.ListRestoreChannelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RestoreChannel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRestoreChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreChannel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreChannels</summary>
+        public void ListRestoreChannelsResourceNames()
+        {
+            // Snippet: ListRestoreChannels(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> response = backupForGKEClient.ListRestoreChannels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreChannel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreChannel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreChannelsAsync</summary>
+        public async Task ListRestoreChannelsResourceNamesAsync()
+        {
+            // Snippet: ListRestoreChannelsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> response = backupForGKEClient.ListRestoreChannelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RestoreChannel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRestoreChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreChannel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreChannel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreChannel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreChannel</summary>
+        public void GetRestoreChannelRequestObject()
+        {
+            // Snippet: GetRestoreChannel(GetRestoreChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            GetRestoreChannelRequest request = new GetRestoreChannelRequest
+            {
+                RestoreChannelName = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]"),
+            };
+            // Make the request
+            RestoreChannel response = backupForGKEClient.GetRestoreChannel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreChannelAsync</summary>
+        public async Task GetRestoreChannelRequestObjectAsync()
+        {
+            // Snippet: GetRestoreChannelAsync(GetRestoreChannelRequest, CallSettings)
+            // Additional: GetRestoreChannelAsync(GetRestoreChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRestoreChannelRequest request = new GetRestoreChannelRequest
+            {
+                RestoreChannelName = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]"),
+            };
+            // Make the request
+            RestoreChannel response = await backupForGKEClient.GetRestoreChannelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreChannel</summary>
+        public void GetRestoreChannel()
+        {
+            // Snippet: GetRestoreChannel(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]";
+            // Make the request
+            RestoreChannel response = backupForGKEClient.GetRestoreChannel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreChannelAsync</summary>
+        public async Task GetRestoreChannelAsync()
+        {
+            // Snippet: GetRestoreChannelAsync(string, CallSettings)
+            // Additional: GetRestoreChannelAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]";
+            // Make the request
+            RestoreChannel response = await backupForGKEClient.GetRestoreChannelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreChannel</summary>
+        public void GetRestoreChannelResourceNames()
+        {
+            // Snippet: GetRestoreChannel(RestoreChannelName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            RestoreChannelName name = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]");
+            // Make the request
+            RestoreChannel response = backupForGKEClient.GetRestoreChannel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreChannelAsync</summary>
+        public async Task GetRestoreChannelResourceNamesAsync()
+        {
+            // Snippet: GetRestoreChannelAsync(RestoreChannelName, CallSettings)
+            // Additional: GetRestoreChannelAsync(RestoreChannelName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreChannelName name = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]");
+            // Make the request
+            RestoreChannel response = await backupForGKEClient.GetRestoreChannelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreChannel</summary>
+        public void UpdateRestoreChannelRequestObject()
+        {
+            // Snippet: UpdateRestoreChannel(UpdateRestoreChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            UpdateRestoreChannelRequest request = new UpdateRestoreChannelRequest
+            {
+                RestoreChannel = new RestoreChannel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = backupForGKEClient.UpdateRestoreChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceUpdateRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreChannelAsync</summary>
+        public async Task UpdateRestoreChannelRequestObjectAsync()
+        {
+            // Snippet: UpdateRestoreChannelAsync(UpdateRestoreChannelRequest, CallSettings)
+            // Additional: UpdateRestoreChannelAsync(UpdateRestoreChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRestoreChannelRequest request = new UpdateRestoreChannelRequest
+            {
+                RestoreChannel = new RestoreChannel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = await backupForGKEClient.UpdateRestoreChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceUpdateRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreChannel</summary>
+        public void UpdateRestoreChannel()
+        {
+            // Snippet: UpdateRestoreChannel(RestoreChannel, FieldMask, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            RestoreChannel restoreChannel = new RestoreChannel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = backupForGKEClient.UpdateRestoreChannel(restoreChannel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceUpdateRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreChannelAsync</summary>
+        public async Task UpdateRestoreChannelAsync()
+        {
+            // Snippet: UpdateRestoreChannelAsync(RestoreChannel, FieldMask, CallSettings)
+            // Additional: UpdateRestoreChannelAsync(RestoreChannel, FieldMask, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreChannel restoreChannel = new RestoreChannel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<RestoreChannel, OperationMetadata> response = await backupForGKEClient.UpdateRestoreChannelAsync(restoreChannel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreChannel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreChannel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreChannel, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceUpdateRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreChannel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreChannel</summary>
+        public void DeleteRestoreChannelRequestObject()
+        {
+            // Snippet: DeleteRestoreChannel(DeleteRestoreChannelRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            DeleteRestoreChannelRequest request = new DeleteRestoreChannelRequest
+            {
+                RestoreChannelName = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupForGKEClient.DeleteRestoreChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceDeleteRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreChannelAsync</summary>
+        public async Task DeleteRestoreChannelRequestObjectAsync()
+        {
+            // Snippet: DeleteRestoreChannelAsync(DeleteRestoreChannelRequest, CallSettings)
+            // Additional: DeleteRestoreChannelAsync(DeleteRestoreChannelRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRestoreChannelRequest request = new DeleteRestoreChannelRequest
+            {
+                RestoreChannelName = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupForGKEClient.DeleteRestoreChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceDeleteRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreChannel</summary>
+        public void DeleteRestoreChannel()
+        {
+            // Snippet: DeleteRestoreChannel(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupForGKEClient.DeleteRestoreChannel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceDeleteRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreChannelAsync</summary>
+        public async Task DeleteRestoreChannelAsync()
+        {
+            // Snippet: DeleteRestoreChannelAsync(string, CallSettings)
+            // Additional: DeleteRestoreChannelAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupForGKEClient.DeleteRestoreChannelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceDeleteRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreChannel</summary>
+        public void DeleteRestoreChannelResourceNames()
+        {
+            // Snippet: DeleteRestoreChannel(RestoreChannelName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            RestoreChannelName name = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupForGKEClient.DeleteRestoreChannel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupForGKEClient.PollOnceDeleteRestoreChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreChannelAsync</summary>
+        public async Task DeleteRestoreChannelResourceNamesAsync()
+        {
+            // Snippet: DeleteRestoreChannelAsync(RestoreChannelName, CallSettings)
+            // Additional: DeleteRestoreChannelAsync(RestoreChannelName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreChannelName name = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupForGKEClient.DeleteRestoreChannelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupForGKEClient.PollOnceDeleteRestoreChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestorePlanBindings</summary>
+        public void ListRestorePlanBindingsRequestObject()
+        {
+            // Snippet: ListRestorePlanBindings(ListRestorePlanBindingsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            ListRestorePlanBindingsRequest request = new ListRestorePlanBindingsRequest
+            {
+                ParentAsRestoreChannelName = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> response = backupForGKEClient.ListRestorePlanBindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestorePlanBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestorePlanBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestorePlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestorePlanBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestorePlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestorePlanBindingsAsync</summary>
+        public async Task ListRestorePlanBindingsRequestObjectAsync()
+        {
+            // Snippet: ListRestorePlanBindingsAsync(ListRestorePlanBindingsRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRestorePlanBindingsRequest request = new ListRestorePlanBindingsRequest
+            {
+                ParentAsRestoreChannelName = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> response = backupForGKEClient.ListRestorePlanBindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RestorePlanBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRestorePlanBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestorePlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestorePlanBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestorePlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestorePlanBindings</summary>
+        public void ListRestorePlanBindings()
+        {
+            // Snippet: ListRestorePlanBindings(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]";
+            // Make the request
+            PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> response = backupForGKEClient.ListRestorePlanBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestorePlanBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestorePlanBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestorePlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestorePlanBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestorePlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestorePlanBindingsAsync</summary>
+        public async Task ListRestorePlanBindingsAsync()
+        {
+            // Snippet: ListRestorePlanBindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]";
+            // Make the request
+            PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> response = backupForGKEClient.ListRestorePlanBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RestorePlanBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRestorePlanBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestorePlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestorePlanBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestorePlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestorePlanBindings</summary>
+        public void ListRestorePlanBindingsResourceNames()
+        {
+            // Snippet: ListRestorePlanBindings(RestoreChannelName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            RestoreChannelName parent = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]");
+            // Make the request
+            PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> response = backupForGKEClient.ListRestorePlanBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestorePlanBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestorePlanBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestorePlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestorePlanBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestorePlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestorePlanBindingsAsync</summary>
+        public async Task ListRestorePlanBindingsResourceNamesAsync()
+        {
+            // Snippet: ListRestorePlanBindingsAsync(RestoreChannelName, string, int?, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreChannelName parent = RestoreChannelName.FromProjectLocationRestoreChannel("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]");
+            // Make the request
+            PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> response = backupForGKEClient.ListRestorePlanBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RestorePlanBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRestorePlanBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestorePlanBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestorePlanBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestorePlanBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestorePlanBinding</summary>
+        public void GetRestorePlanBindingRequestObject()
+        {
+            // Snippet: GetRestorePlanBinding(GetRestorePlanBindingRequest, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            GetRestorePlanBindingRequest request = new GetRestorePlanBindingRequest
+            {
+                RestorePlanBindingName = RestorePlanBindingName.FromProjectLocationRestoreChannelRestorePlanBinding("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]", "[RESTORE_PLAN_BINDING]"),
+            };
+            // Make the request
+            RestorePlanBinding response = backupForGKEClient.GetRestorePlanBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestorePlanBindingAsync</summary>
+        public async Task GetRestorePlanBindingRequestObjectAsync()
+        {
+            // Snippet: GetRestorePlanBindingAsync(GetRestorePlanBindingRequest, CallSettings)
+            // Additional: GetRestorePlanBindingAsync(GetRestorePlanBindingRequest, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRestorePlanBindingRequest request = new GetRestorePlanBindingRequest
+            {
+                RestorePlanBindingName = RestorePlanBindingName.FromProjectLocationRestoreChannelRestorePlanBinding("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]", "[RESTORE_PLAN_BINDING]"),
+            };
+            // Make the request
+            RestorePlanBinding response = await backupForGKEClient.GetRestorePlanBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestorePlanBinding</summary>
+        public void GetRestorePlanBinding()
+        {
+            // Snippet: GetRestorePlanBinding(string, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]/restorePlanBindings/[RESTORE_PLAN_BINDING]";
+            // Make the request
+            RestorePlanBinding response = backupForGKEClient.GetRestorePlanBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestorePlanBindingAsync</summary>
+        public async Task GetRestorePlanBindingAsync()
+        {
+            // Snippet: GetRestorePlanBindingAsync(string, CallSettings)
+            // Additional: GetRestorePlanBindingAsync(string, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreChannels/[RESTORE_CHANNEL]/restorePlanBindings/[RESTORE_PLAN_BINDING]";
+            // Make the request
+            RestorePlanBinding response = await backupForGKEClient.GetRestorePlanBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestorePlanBinding</summary>
+        public void GetRestorePlanBindingResourceNames()
+        {
+            // Snippet: GetRestorePlanBinding(RestorePlanBindingName, CallSettings)
+            // Create client
+            BackupForGKEClient backupForGKEClient = BackupForGKEClient.Create();
+            // Initialize request argument(s)
+            RestorePlanBindingName name = RestorePlanBindingName.FromProjectLocationRestoreChannelRestorePlanBinding("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]", "[RESTORE_PLAN_BINDING]");
+            // Make the request
+            RestorePlanBinding response = backupForGKEClient.GetRestorePlanBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestorePlanBindingAsync</summary>
+        public async Task GetRestorePlanBindingResourceNamesAsync()
+        {
+            // Snippet: GetRestorePlanBindingAsync(RestorePlanBindingName, CallSettings)
+            // Additional: GetRestorePlanBindingAsync(RestorePlanBindingName, CancellationToken)
+            // Create client
+            BackupForGKEClient backupForGKEClient = await BackupForGKEClient.CreateAsync();
+            // Initialize request argument(s)
+            RestorePlanBindingName name = RestorePlanBindingName.FromProjectLocationRestoreChannelRestorePlanBinding("[PROJECT]", "[LOCATION]", "[RESTORE_CHANNEL]", "[RESTORE_PLAN_BINDING]");
+            // Make the request
+            RestorePlanBinding response = await backupForGKEClient.GetRestorePlanBindingAsync(name);
             // End snippet
         }
 

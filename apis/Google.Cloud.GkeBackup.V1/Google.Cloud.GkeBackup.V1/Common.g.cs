@@ -55,7 +55,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   }
   #region Messages
   /// <summary>
-  /// A list of Kubernetes Namespaces
+  /// A list of Kubernetes Namespaces.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Namespaces : pb::IMessage<Namespaces>
@@ -108,7 +108,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> namespaces_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of Kubernetes Namespaces
+    /// Optional. A list of Kubernetes Namespaces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -312,7 +312,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string stateReason_ = "";
     /// <summary>
     /// Output only. Human-readable description of why RestorePlan is in the
-    /// current `state`
+    /// current `state`. This field is only meant for human readability and should
+    /// not be used programmatically as this field is not guaranteed to be
+    /// consistent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
