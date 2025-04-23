@@ -491,7 +491,7 @@ namespace Google.Cloud.Parallelstore.V1 {
     public const int DaosVersionFieldNumber = 9;
     private string daosVersion_ = "";
     /// <summary>
-    /// Deprecated 'daos_version' field.
+    /// Output only. Deprecated 'daos_version' field.
     /// Output only. The version of DAOS software running in the instance.
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -7558,7 +7558,7 @@ namespace Google.Cloud.Parallelstore.V1 {
     public const int ObjectsFailedFieldNumber = 7;
     private long objectsFailed_;
     /// <summary>
-    /// Objects that failed to write to the data destination.
+    /// Objects that are failed to write to the data destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7573,7 +7573,7 @@ namespace Google.Cloud.Parallelstore.V1 {
     public const int BytesFailedFieldNumber = 8;
     private long bytesFailed_;
     /// <summary>
-    /// Number of Bytes that failed to be written to the data destination.
+    /// Bytes that are failed to write to the data destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
