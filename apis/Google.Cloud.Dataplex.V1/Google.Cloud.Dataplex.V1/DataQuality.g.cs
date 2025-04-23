@@ -802,6 +802,8 @@ namespace Google.Cloud.Dataplex.V1 {
             /// Optional. The BigQuery table to export DataQualityScan results to.
             /// Format:
             /// //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+            /// or
+            /// projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
