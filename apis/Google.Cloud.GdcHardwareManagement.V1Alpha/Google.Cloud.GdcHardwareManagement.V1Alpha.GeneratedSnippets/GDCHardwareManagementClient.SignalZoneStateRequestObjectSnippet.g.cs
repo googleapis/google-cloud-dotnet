@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 StateSignal = SignalZoneStateRequest.Types.StateSignal.Unspecified,
                 ProvisioningStateSignal = SignalZoneStateRequest.Types.ProvisioningStateSignal.Unspecified,
+                Step = "",
+                Details = "",
             };
             // Make the request
             Operation<Zone, OperationMetadata> response = gDCHardwareManagementClient.SignalZoneState(request);
