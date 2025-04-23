@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            SessionName parent = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName parent = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             PagedEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEvents(parent);
 

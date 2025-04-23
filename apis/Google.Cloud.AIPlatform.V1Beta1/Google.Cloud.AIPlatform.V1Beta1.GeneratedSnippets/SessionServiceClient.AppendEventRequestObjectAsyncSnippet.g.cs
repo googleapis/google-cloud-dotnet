@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppendEventRequest request = new AppendEventRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
                 Event = new SessionEvent(),
             };
             // Make the request

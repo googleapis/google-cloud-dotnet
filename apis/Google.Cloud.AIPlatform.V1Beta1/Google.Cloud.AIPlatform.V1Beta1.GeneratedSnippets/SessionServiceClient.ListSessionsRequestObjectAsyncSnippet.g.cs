@@ -18,7 +18,6 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1beta1_generated_SessionService_ListSessions_async]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
     using System;
     using System.Linq;
@@ -41,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Filter = "",
                 OrderBy = "",
             };

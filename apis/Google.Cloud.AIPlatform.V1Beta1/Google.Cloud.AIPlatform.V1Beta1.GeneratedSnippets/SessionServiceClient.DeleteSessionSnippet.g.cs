@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = sessionServiceClient.DeleteSession(name);
 

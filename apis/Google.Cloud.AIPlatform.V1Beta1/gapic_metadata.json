@@ -1477,6 +1477,18 @@
         "grpc": {
           "libraryClient": "ModelGardenServiceClient",
           "rpcs": {
+            "AcceptPublisherModelEula": {
+              "methods": [
+                "AcceptPublisherModelEula",
+                "AcceptPublisherModelEulaAsync"
+              ]
+            },
+            "CheckPublisherModelEulaAcceptance": {
+              "methods": [
+                "CheckPublisherModelEulaAcceptance",
+                "CheckPublisherModelEulaAcceptanceAsync"
+              ]
+            },
             "Deploy": {
               "methods": [
                 "Deploy",

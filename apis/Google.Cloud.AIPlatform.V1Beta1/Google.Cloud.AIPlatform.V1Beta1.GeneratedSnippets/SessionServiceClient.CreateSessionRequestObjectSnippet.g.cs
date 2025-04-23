@@ -17,7 +17,6 @@
 namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1beta1_generated_SessionService_CreateSession_sync]
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
 
@@ -38,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateSessionRequest request = new CreateSessionRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Session = new Session(),
             };
             // Make the request

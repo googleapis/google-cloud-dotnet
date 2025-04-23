@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_SessionService_GetSession_async]
+    // [START aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedSessionServiceClientSnippets
+    public sealed partial class GeneratedModelGardenServiceClientSnippets
     {
-        /// <summary>Snippet for GetSessionAsync</summary>
+        /// <summary>Snippet for AcceptPublisherModelEula</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,18 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetSessionRequestObjectAsync()
+        public void AcceptPublisherModelEulaRequestObject()
         {
             // Create client
-            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
             // Initialize request argument(s)
-            GetSessionRequest request = new GetSessionRequest
+            AcceptPublisherModelEulaRequest request = new AcceptPublisherModelEulaRequest
             {
-                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PublisherModelAsPublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
             };
             // Make the request
-            Session response = await sessionServiceClient.GetSessionAsync(request);
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.AcceptPublisherModelEula(request);
         }
     }
-    // [END aiplatform_v1beta1_generated_SessionService_GetSession_async]
+    // [END aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_sync]
 }

@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames2]
+    // [START aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedSessionServiceClientSnippets
     {
-        /// <summary>Snippet for CreateSession</summary>
+        /// <summary>Snippet for CreateSessionAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,25 +31,25 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateSessionResourceNames2()
+        public async Task CreateSessionResourceNamesAsync()
         {
             // Create client
-            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
             ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
             Session session = new Session();
             // Make the request
-            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session);
+            Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(parent, session);
 
             // Poll until the returned long-running operation is complete
-            Operation<Session, CreateSessionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Session, CreateSessionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Session result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = sessionServiceClient.PollOnceCreateSession(operationName);
+            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = await sessionServiceClient.PollOnceCreateSessionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -57,5 +58,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames2]
+    // [END aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames]
 }

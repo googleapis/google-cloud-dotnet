@@ -16,15 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames1]
+    // [START aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedSessionServiceClientSnippets
     {
-        /// <summary>Snippet for ListSessions</summary>
+        /// <summary>Snippet for ListSessionsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +33,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListSessionsResourceNames1()
+        public async Task ListSessionsResourceNamesAsync()
         {
             // Create client
-            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ReasoningEngineName parent = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]");
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessions(parent);
+            PagedAsyncEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            await response.ForEachAsync((Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -58,11 +59,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Session item in singlePage)
@@ -74,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames1]
+    // [END aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames]
 }

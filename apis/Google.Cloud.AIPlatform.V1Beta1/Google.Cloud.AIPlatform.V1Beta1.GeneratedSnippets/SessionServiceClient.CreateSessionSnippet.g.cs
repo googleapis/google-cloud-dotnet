@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
             Session session = new Session();
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session);

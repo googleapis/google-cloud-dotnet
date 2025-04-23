@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -344,8 +343,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -354,8 +352,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -364,8 +361,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -400,12 +396,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             lro::Operation<Session, CreateSessionOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSessionOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
+        /// Format:
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
         /// </param>
         /// <param name="session">
@@ -421,12 +416,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
+        /// Format:
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
         /// </param>
         /// <param name="session">
@@ -442,12 +436,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
+        /// Format:
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
         /// </param>
         /// <param name="session">
@@ -459,71 +452,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             CreateSessionAsync(parent, session, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
-        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
-        /// </param>
-        /// <param name="session">
-        /// Required. The session to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Session, CreateSessionOperationMetadata> CreateSession(gagr::LocationName parent, Session session, gaxgrpc::CallSettings callSettings = null) =>
-            CreateSession(new CreateSessionRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Session = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
-        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
-        /// </param>
-        /// <param name="session">
-        /// Required. The session to create.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Session, CreateSessionOperationMetadata>> CreateSessionAsync(gagr::LocationName parent, Session session, gaxgrpc::CallSettings callSettings = null) =>
-            CreateSessionAsync(new CreateSessionRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Session = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
-        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
-        /// </param>
-        /// <param name="session">
-        /// Required. The session to create.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Session, CreateSessionOperationMetadata>> CreateSessionAsync(gagr::LocationName parent, Session session, st::CancellationToken cancellationToken) =>
-            CreateSessionAsync(parent, session, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
+        /// Format:
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
         /// </param>
         /// <param name="session">
@@ -539,12 +472,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
+        /// Format:
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
         /// </param>
         /// <param name="session">
@@ -560,12 +492,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to create the session in.
-        /// Format: `projects/{project}/locations/{location}` or
+        /// Format:
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
         /// </param>
         /// <param name="session">
@@ -704,7 +635,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -714,7 +645,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -724,7 +655,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to list sessions from.
@@ -760,7 +691,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to list sessions from.
@@ -796,79 +727,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location to list sessions from.
-        /// Format:
-        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListSessionsRequest request = new ListSessionsRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListSessions(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location to list sessions from.
-        /// Format:
-        /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
-        {
-            ListSessionsRequest request = new ListSessionsRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-            };
-            if (pageToken != null)
-            {
-                request.PageToken = pageToken;
-            }
-            if (pageSize != null)
-            {
-                request.PageSize = pageSize.Value;
-            }
-            return ListSessionsAsync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to list sessions from.
@@ -904,7 +763,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the location to list sessions from.
@@ -1087,7 +946,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="name">
         /// Required. The resource name of the session.
         /// Format:
-        /// `projects/{project}/locations/{location}/sessions/{session}` or
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1105,7 +963,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="name">
         /// Required. The resource name of the session.
         /// Format:
-        /// `projects/{project}/locations/{location}/sessions/{session}` or
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1123,7 +980,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="name">
         /// Required. The resource name of the session.
         /// Format:
-        /// `projects/{project}/locations/{location}/sessions/{session}` or
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1138,7 +994,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="name">
         /// Required. The resource name of the session.
         /// Format:
-        /// `projects/{project}/locations/{location}/sessions/{session}` or
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1156,7 +1011,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="name">
         /// Required. The resource name of the session.
         /// Format:
-        /// `projects/{project}/locations/{location}/sessions/{session}` or
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1174,7 +1028,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="name">
         /// Required. The resource name of the session.
         /// Format:
-        /// `projects/{project}/locations/{location}/sessions/{session}` or
         /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1588,8 +1441,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public override lro::OperationsClient CreateSessionOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1601,8 +1453,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1641,7 +1492,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1654,7 +1505,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-        /// project and location.
+        /// reasoning engine.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -79,6 +79,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.DeployPublisherModelRequest> __Marshaller_google_cloud_aiplatform_v1beta1_DeployPublisherModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.DeployPublisherModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ExportPublisherModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest> __Marshaller_google_cloud_aiplatform_v1beta1_CheckPublisherModelEulaAcceptanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> __Marshaller_google_cloud_aiplatform_v1beta1_PublisherModelEulaAcceptance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest> __Marshaller_google_cloud_aiplatform_v1beta1_AcceptPublisherModelEulaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GetPublisherModelRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModel> __Method_GetPublisherModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GetPublisherModelRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModel>(
@@ -119,6 +125,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "ExportPublisherModel",
         __Marshaller_google_cloud_aiplatform_v1beta1_ExportPublisherModelRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> __Method_CheckPublisherModelEulaAcceptance = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CheckPublisherModelEulaAcceptance",
+        __Marshaller_google_cloud_aiplatform_v1beta1_CheckPublisherModelEulaAcceptanceRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_PublisherModelEulaAcceptance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> __Method_AcceptPublisherModelEula = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AcceptPublisherModelEula",
+        __Marshaller_google_cloud_aiplatform_v1beta1_AcceptPublisherModelEulaRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_PublisherModelEulaAcceptance);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -187,6 +209,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportPublisherModel(global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Checks the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptance(global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Accepts the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> AcceptPublisherModelEula(global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -464,6 +510,102 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportPublisherModel, null, options, request);
       }
+      /// <summary>
+      /// Checks the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance CheckPublisherModelEulaAcceptance(global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckPublisherModelEulaAcceptance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Checks the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance CheckPublisherModelEulaAcceptance(global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CheckPublisherModelEulaAcceptance, null, options, request);
+      }
+      /// <summary>
+      /// Checks the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckPublisherModelEulaAcceptanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Checks the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CheckPublisherModelEulaAcceptance, null, options, request);
+      }
+      /// <summary>
+      /// Accepts the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance AcceptPublisherModelEula(global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcceptPublisherModelEula(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Accepts the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance AcceptPublisherModelEula(global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AcceptPublisherModelEula, null, options, request);
+      }
+      /// <summary>
+      /// Accepts the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcceptPublisherModelEulaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Accepts the EULA acceptance status of a publisher model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AcceptPublisherModelEula, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ModelGardenServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -482,7 +624,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_ListPublisherModels, serviceImpl.ListPublisherModels)
           .AddMethod(__Method_Deploy, serviceImpl.Deploy)
           .AddMethod(__Method_DeployPublisherModel, serviceImpl.DeployPublisherModel)
-          .AddMethod(__Method_ExportPublisherModel, serviceImpl.ExportPublisherModel).Build();
+          .AddMethod(__Method_ExportPublisherModel, serviceImpl.ExportPublisherModel)
+          .AddMethod(__Method_CheckPublisherModelEulaAcceptance, serviceImpl.CheckPublisherModelEulaAcceptance)
+          .AddMethod(__Method_AcceptPublisherModelEula, serviceImpl.AcceptPublisherModelEula).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -497,6 +641,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_Deploy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeployRequest, global::Google.LongRunning.Operation>(serviceImpl.Deploy));
       serviceBinder.AddMethod(__Method_DeployPublisherModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeployPublisherModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployPublisherModel));
       serviceBinder.AddMethod(__Method_ExportPublisherModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportPublisherModel));
+      serviceBinder.AddMethod(__Method_CheckPublisherModelEulaAcceptance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>(serviceImpl.CheckPublisherModelEulaAcceptance));
+      serviceBinder.AddMethod(__Method_AcceptPublisherModelEula, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>(serviceImpl.AcceptPublisherModelEula));
     }
 
   }

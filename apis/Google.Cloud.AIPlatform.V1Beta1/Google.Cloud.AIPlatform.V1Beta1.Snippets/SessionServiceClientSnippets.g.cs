@@ -17,7 +17,6 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -37,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateSessionRequest request = new CreateSessionRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Session = new Session(),
             };
             // Make the request
@@ -71,7 +70,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateSessionRequest request = new CreateSessionRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Session = new Session(),
             };
             // Make the request
@@ -102,7 +101,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
             Session session = new Session();
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session);
@@ -133,7 +132,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
             Session session = new Session();
             // Make the request
             Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(parent, session);
@@ -157,68 +156,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSession</summary>
-        public void CreateSessionResourceNames1()
-        {
-            // Snippet: CreateSession(LocationName, Session, CallSettings)
-            // Create client
-            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Session session = new Session();
-            // Make the request
-            Operation<Session, CreateSessionOperationMetadata> response = sessionServiceClient.CreateSession(parent, session);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Session, CreateSessionOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            Session result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = sessionServiceClient.PollOnceCreateSession(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Session retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateSessionAsync</summary>
-        public async Task CreateSessionResourceNames1Async()
-        {
-            // Snippet: CreateSessionAsync(LocationName, Session, CallSettings)
-            // Additional: CreateSessionAsync(LocationName, Session, CancellationToken)
-            // Create client
-            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Session session = new Session();
-            // Make the request
-            Operation<Session, CreateSessionOperationMetadata> response = await sessionServiceClient.CreateSessionAsync(parent, session);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Session, CreateSessionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            Session result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Session, CreateSessionOperationMetadata> retrievedResponse = await sessionServiceClient.PollOnceCreateSessionAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Session retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateSession</summary>
-        public void CreateSessionResourceNames2()
+        public void CreateSessionResourceNames()
         {
             // Snippet: CreateSession(ReasoningEngineName, Session, CallSettings)
             // Create client
@@ -248,7 +186,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSessionAsync</summary>
-        public async Task CreateSessionResourceNames2Async()
+        public async Task CreateSessionResourceNamesAsync()
         {
             // Snippet: CreateSessionAsync(ReasoningEngineName, Session, CallSettings)
             // Additional: CreateSessionAsync(ReasoningEngineName, Session, CancellationToken)
@@ -287,7 +225,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             Session response = sessionServiceClient.GetSession(request);
@@ -304,7 +242,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             Session response = await sessionServiceClient.GetSessionAsync(request);
@@ -318,7 +256,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             Session response = sessionServiceClient.GetSession(name);
             // End snippet
@@ -332,7 +270,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             Session response = await sessionServiceClient.GetSessionAsync(name);
             // End snippet
@@ -345,7 +283,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName name = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             Session response = sessionServiceClient.GetSession(name);
             // End snippet
@@ -359,7 +297,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName name = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             Session response = await sessionServiceClient.GetSessionAsync(name);
             // End snippet
@@ -374,7 +312,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -424,7 +362,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSessionsRequest request = new ListSessionsRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -472,7 +410,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
             // Make the request
             PagedEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessions(parent);
 
@@ -517,7 +455,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessionsAsync(parent);
 
@@ -556,97 +494,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListSessions</summary>
-        public void ListSessionsResourceNames1()
-        {
-            // Snippet: ListSessions(LocationName, string, int?, CallSettings)
-            // Create client
-            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessions(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Session item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListSessionsAsync</summary>
-        public async Task ListSessionsResourceNames1Async()
-        {
-            // Snippet: ListSessionsAsync(LocationName, string, int?, CallSettings)
-            // Create client
-            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessionsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (Session item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListSessions</summary>
-        public void ListSessionsResourceNames2()
+        public void ListSessionsResourceNames()
         {
             // Snippet: ListSessions(ReasoningEngineName, string, int?, CallSettings)
             // Create client
@@ -691,7 +539,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListSessionsAsync</summary>
-        public async Task ListSessionsResourceNames2Async()
+        public async Task ListSessionsResourceNamesAsync()
         {
             // Snippet: ListSessionsAsync(ReasoningEngineName, string, int?, CallSettings)
             // Create client
@@ -808,7 +656,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = sessionServiceClient.DeleteSession(request);
@@ -841,7 +689,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = await sessionServiceClient.DeleteSessionAsync(request);
@@ -871,7 +719,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = sessionServiceClient.DeleteSession(name);
 
@@ -901,7 +749,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = await sessionServiceClient.DeleteSessionAsync(name);
 
@@ -930,7 +778,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName name = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = sessionServiceClient.DeleteSession(name);
 
@@ -960,7 +808,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName name = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = await sessionServiceClient.DeleteSessionAsync(name);
 
@@ -991,7 +839,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListEventsRequest request = new ListEventsRequest
             {
-                ParentAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ParentAsSessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             PagedEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEvents(request);
@@ -1039,7 +887,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListEventsRequest request = new ListEventsRequest
             {
-                ParentAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ParentAsSessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEventsAsync(request);
@@ -1085,7 +933,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             PagedEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEvents(parent);
 
@@ -1130,7 +978,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             PagedAsyncEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEventsAsync(parent);
 
@@ -1175,7 +1023,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            SessionName parent = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName parent = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             PagedEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEvents(parent);
 
@@ -1220,7 +1068,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName parent = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName parent = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             // Make the request
             PagedAsyncEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEventsAsync(parent);
 
@@ -1267,7 +1115,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppendEventRequest request = new AppendEventRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
                 Event = new SessionEvent(),
             };
             // Make the request
@@ -1285,7 +1133,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppendEventRequest request = new AppendEventRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
                 Event = new SessionEvent(),
             };
             // Make the request
@@ -1300,7 +1148,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             SessionEvent @event = new SessionEvent();
             // Make the request
             AppendEventResponse response = sessionServiceClient.AppendEvent(name, @event);
@@ -1315,7 +1163,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             SessionEvent @event = new SessionEvent();
             // Make the request
             AppendEventResponse response = await sessionServiceClient.AppendEventAsync(name, @event);
@@ -1329,7 +1177,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName name = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             SessionEvent @event = new SessionEvent();
             // Make the request
             AppendEventResponse response = sessionServiceClient.AppendEvent(name, @event);
@@ -1344,7 +1192,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]");
+            SessionName name = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]");
             SessionEvent @event = new SessionEvent();
             // Make the request
             AppendEventResponse response = await sessionServiceClient.AppendEventAsync(name, @event);

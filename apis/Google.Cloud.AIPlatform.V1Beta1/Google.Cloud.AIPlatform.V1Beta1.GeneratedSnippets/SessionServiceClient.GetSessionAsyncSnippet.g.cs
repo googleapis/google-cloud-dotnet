@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]/sessions/[SESSION]";
             // Make the request
             Session response = await sessionServiceClient.GetSessionAsync(name);
         }

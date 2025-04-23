@@ -61260,6 +61260,612 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_CheckPublisherModelEulaAcceptance_sync",
+      "title": "CheckPublisherModelEulaAcceptanceRequestObject",
+      "description": "Snippet for CheckPublisherModelEulaAcceptance",
+      "file": "ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckPublisherModelEulaAcceptance",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.CheckPublisherModelEulaAcceptance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "CheckPublisherModelEulaAcceptance",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.CheckPublisherModelEulaAcceptance",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_CheckPublisherModelEulaAcceptance_async",
+      "title": "CheckPublisherModelEulaAcceptanceRequestObjectAsync",
+      "description": "Snippet for CheckPublisherModelEulaAcceptanceAsync",
+      "file": "ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckPublisherModelEulaAcceptanceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "CheckPublisherModelEulaAcceptance",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.CheckPublisherModelEulaAcceptance",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_CheckPublisherModelEulaAcceptance_sync_flattened",
+      "title": "CheckPublisherModelEulaAcceptance",
+      "description": "Snippet for CheckPublisherModelEulaAcceptance",
+      "file": "ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckPublisherModelEulaAcceptance",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.CheckPublisherModelEulaAcceptance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "CheckPublisherModelEulaAcceptance",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.CheckPublisherModelEulaAcceptance",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_CheckPublisherModelEulaAcceptance_async_flattened",
+      "title": "CheckPublisherModelEulaAcceptanceAsync",
+      "description": "Snippet for CheckPublisherModelEulaAcceptanceAsync",
+      "file": "ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckPublisherModelEulaAcceptanceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "CheckPublisherModelEulaAcceptance",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.CheckPublisherModelEulaAcceptance",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_CheckPublisherModelEulaAcceptance_sync_flattened_resourceNames",
+      "title": "CheckPublisherModelEulaAcceptanceResourceNames",
+      "description": "Snippet for CheckPublisherModelEulaAcceptance",
+      "file": "ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckPublisherModelEulaAcceptance",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.CheckPublisherModelEulaAcceptance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelName",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "CheckPublisherModelEulaAcceptance",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.CheckPublisherModelEulaAcceptance",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_CheckPublisherModelEulaAcceptance_async_flattened_resourceNames",
+      "title": "CheckPublisherModelEulaAcceptanceResourceNamesAsync",
+      "description": "Snippet for CheckPublisherModelEulaAcceptanceAsync",
+      "file": "ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckPublisherModelEulaAcceptanceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelName",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "CheckPublisherModelEulaAcceptance",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.CheckPublisherModelEulaAcceptance",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_sync",
+      "title": "AcceptPublisherModelEulaRequestObject",
+      "description": "Snippet for AcceptPublisherModelEula",
+      "file": "ModelGardenServiceClient.AcceptPublisherModelEulaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcceptPublisherModelEula",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.AcceptPublisherModelEula",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "AcceptPublisherModelEula",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_async",
+      "title": "AcceptPublisherModelEulaRequestObjectAsync",
+      "description": "Snippet for AcceptPublisherModelEulaAsync",
+      "file": "ModelGardenServiceClient.AcceptPublisherModelEulaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcceptPublisherModelEulaAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.AcceptPublisherModelEulaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "AcceptPublisherModelEula",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_sync_flattened",
+      "title": "AcceptPublisherModelEula",
+      "description": "Snippet for AcceptPublisherModelEula",
+      "file": "ModelGardenServiceClient.AcceptPublisherModelEulaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcceptPublisherModelEula",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.AcceptPublisherModelEula",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "AcceptPublisherModelEula",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_async_flattened",
+      "title": "AcceptPublisherModelEulaAsync",
+      "description": "Snippet for AcceptPublisherModelEulaAsync",
+      "file": "ModelGardenServiceClient.AcceptPublisherModelEulaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcceptPublisherModelEulaAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.AcceptPublisherModelEulaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "AcceptPublisherModelEula",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_sync_flattened_resourceNames",
+      "title": "AcceptPublisherModelEulaResourceNames",
+      "description": "Snippet for AcceptPublisherModelEula",
+      "file": "ModelGardenServiceClient.AcceptPublisherModelEulaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcceptPublisherModelEula",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.AcceptPublisherModelEula",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelName",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "AcceptPublisherModelEula",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_AcceptPublisherModelEula_async_flattened_resourceNames",
+      "title": "AcceptPublisherModelEulaResourceNamesAsync",
+      "description": "Snippet for AcceptPublisherModelEulaAsync",
+      "file": "ModelGardenServiceClient.AcceptPublisherModelEulaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AcceptPublisherModelEulaAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.AcceptPublisherModelEulaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelName",
+            "name": "publisherModel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "AcceptPublisherModelEula",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_ModelMonitoringService_CreateModelMonitor_sync",
       "title": "CreateModelMonitorRequestObject",
       "description": "Snippet for CreateModelMonitor",
@@ -86161,12 +86767,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 62,
           "type": "FULL"
         },
         {
-          "start": 36,
-          "end": 61,
+          "start": 35,
+          "end": 60,
           "type": "SHORT"
         }
       ]
@@ -86210,12 +86816,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 63,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 62,
+          "start": 36,
+          "end": 61,
           "type": "SHORT"
         }
       ]
@@ -86324,113 +86930,10 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames1",
-      "title": "CreateSessionResourceNames1",
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames",
+      "title": "CreateSessionResourceNames",
       "description": "Snippet for CreateSession",
-      "file": "SessionServiceClient.CreateSessionResourceNames1Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSession",
-        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSession",
-        "parameters": [
-          {
-            "type": "Google.Api.Gax.ResourceNames.LocationName",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
-            "name": "session"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>",
-        "client": {
-          "shortName": "SessionServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSession",
-          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
-          "service": {
-            "shortName": "SessionService",
-            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 60,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 58,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames1",
-      "title": "CreateSessionResourceNames1Async",
-      "description": "Snippet for CreateSessionAsync",
-      "file": "SessionServiceClient.CreateSessionResourceNames1AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateSessionAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSessionAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Api.Gax.ResourceNames.LocationName",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
-            "name": "session"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>>",
-        "client": {
-          "shortName": "SessionServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
-        },
-        "method": {
-          "shortName": "CreateSession",
-          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
-          "service": {
-            "shortName": "SessionService",
-            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 61,
-          "type": "FULL"
-        },
-        {
-          "start": 37,
-          "end": 59,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames2",
-      "title": "CreateSessionResourceNames2",
-      "description": "Snippet for CreateSession",
-      "file": "SessionServiceClient.CreateSessionResourceNames2Snippet.g.cs",
+      "file": "SessionServiceClient.CreateSessionResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateSession",
@@ -86478,10 +86981,10 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames2",
-      "title": "CreateSessionResourceNames2Async",
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames",
+      "title": "CreateSessionResourceNamesAsync",
       "description": "Snippet for CreateSessionAsync",
-      "file": "SessionServiceClient.CreateSessionResourceNames2AsyncSnippet.g.cs",
+      "file": "SessionServiceClient.CreateSessionResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateSessionAsync",
@@ -86854,12 +87357,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 79,
+          "start": 36,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -86903,12 +87406,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 39,
-          "end": 81,
+          "start": 38,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -87025,121 +87528,10 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames1",
-      "title": "ListSessionsResourceNames1",
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames",
+      "title": "ListSessionsResourceNames",
       "description": "Snippet for ListSessions",
-      "file": "SessionServiceClient.ListSessionsResourceNames1Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSessions",
-        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessions",
-        "parameters": [
-          {
-            "type": "Google.Api.Gax.ResourceNames.LocationName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
-        "client": {
-          "shortName": "SessionServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
-        },
-        "method": {
-          "shortName": "ListSessions",
-          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
-          "service": {
-            "shortName": "SessionService",
-            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 76,
-          "type": "FULL"
-        },
-        {
-          "start": 37,
-          "end": 74,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames1",
-      "title": "ListSessionsResourceNames1Async",
-      "description": "Snippet for ListSessionsAsync",
-      "file": "SessionServiceClient.ListSessionsResourceNames1AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListSessionsAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessionsAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Api.Gax.ResourceNames.LocationName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
-        "client": {
-          "shortName": "SessionServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
-        },
-        "method": {
-          "shortName": "ListSessions",
-          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
-          "service": {
-            "shortName": "SessionService",
-            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 78,
-          "type": "FULL"
-        },
-        {
-          "start": 39,
-          "end": 76,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames2",
-      "title": "ListSessionsResourceNames2",
-      "description": "Snippet for ListSessions",
-      "file": "SessionServiceClient.ListSessionsResourceNames2Snippet.g.cs",
+      "file": "SessionServiceClient.ListSessionsResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListSessions",
@@ -87191,10 +87583,10 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames2",
-      "title": "ListSessionsResourceNames2Async",
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames",
+      "title": "ListSessionsResourceNamesAsync",
       "description": "Snippet for ListSessionsAsync",
-      "file": "SessionServiceClient.ListSessionsResourceNames2AsyncSnippet.g.cs",
+      "file": "SessionServiceClient.ListSessionsResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListSessionsAsync",

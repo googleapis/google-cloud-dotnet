@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListEventsRequest request = new ListEventsRequest
             {
-                ParentAsSessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                ParentAsSessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEventsAsync(request);

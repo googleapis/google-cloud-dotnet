@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetSessionRequest request = new GetSessionRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             Session response = sessionServiceClient.GetSession(request);

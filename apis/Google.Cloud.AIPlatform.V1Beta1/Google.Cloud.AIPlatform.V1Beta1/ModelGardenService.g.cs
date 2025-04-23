@@ -112,43 +112,65 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "4EECEkkKC2Rlc3RpbmF0aW9uGAIgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxh",
             "dGZvcm0udjFiZXRhMS5HY3NEZXN0aW5hdGlvbkID4EECEjkKBnBhcmVudBgD",
             "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24qoQEKElB1Ymxpc2hlck1vZGVsVmlldxIkCiBQVUJMSVNIRVJfTU9ERUxf",
-            "VklFV19VTlNQRUNJRklFRBAAEh4KGlBVQkxJU0hFUl9NT0RFTF9WSUVXX0JB",
-            "U0lDEAESHQoZUFVCTElTSEVSX01PREVMX1ZJRVdfRlVMTBACEiYKIlBVQkxJ",
-            "U0hFUl9NT0RFTF9WRVJTSU9OX1ZJRVdfQkFTSUMQAzLWCQoSTW9kZWxHYXJk",
-            "ZW5TZXJ2aWNlErUBChFHZXRQdWJsaXNoZXJNb2RlbBI5Lmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2V0UHVibGlzaGVyTW9kZWxSZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QdWJsaXNoZXJN",
-            "b2RlbCI02kEEbmFtZYLT5JMCJxIlL3YxYmV0YTEve25hbWU9cHVibGlzaGVy",
-            "cy8qL21vZGVscy8qfRLIAQoTTGlzdFB1Ymxpc2hlck1vZGVscxI7Lmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuTGlzdFB1Ymxpc2hlck1vZGVs",
-            "c1JlcXVlc3QaPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkxp",
-            "c3RQdWJsaXNoZXJNb2RlbHNSZXNwb25zZSI22kEGcGFyZW50gtPkkwInEiUv",
-            "djFiZXRhMS97cGFyZW50PXB1Ymxpc2hlcnMvKn0vbW9kZWxzEsQBCgZEZXBs",
-            "b3kSLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveVJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImvKQSkKDkRl",
-            "cGxveVJlc3BvbnNlEhdEZXBsb3lPcGVyYXRpb25NZXRhZGF0YYLT5JMCOSI0",
-            "L3YxYmV0YTEve2Rlc3RpbmF0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "OmRlcGxveToBKhKOAgoURGVwbG95UHVibGlzaGVyTW9kZWwSPC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveVB1Ymxpc2hlck1vZGVs",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24imAGIAgHK",
-            "QUUKHERlcGxveVB1Ymxpc2hlck1vZGVsUmVzcG9uc2USJURlcGxveVB1Ymxp",
-            "c2hlck1vZGVsT3BlcmF0aW9uTWV0YWRhdGGC0+STAkciQi92MWJldGExL3tk",
-            "ZXN0aW5hdGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpkZXBsb3lQdWJs",
-            "aXNoZXJNb2RlbDoBKhKVAgoURXhwb3J0UHVibGlzaGVyTW9kZWwSPC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkV4cG9ydFB1Ymxpc2hlck1v",
-            "ZGVsUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwHK",
-            "QUUKHEV4cG9ydFB1Ymxpc2hlck1vZGVsUmVzcG9uc2USJUV4cG9ydFB1Ymxp",
-            "c2hlck1vZGVsT3BlcmF0aW9uTWV0YWRhdGGC0+STAlEiTC92MWJldGExL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0ve25hbWU9cHVibGlzaGVy",
-            "cy8qL21vZGVscy8qfTpleHBvcnQ6ASoaTcpBGWFpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
-            "b3VkLXBsYXRmb3JtQu4BCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMUIXTW9kZWxHYXJkZW5TZXJ2aWNlUHJvdG9QAVpDY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBi",
-            "O2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0",
-            "YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xl",
-            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "b24iugEKKENoZWNrUHVibGlzaGVyTW9kZWxFdWxhQWNjZXB0YW5jZVJlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSSQoPcHVibGlzaGVyX21vZGVs",
+            "GAIgASgJQjDgQQL6QSoKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUHVi",
+            "bGlzaGVyTW9kZWwisQEKH0FjY2VwdFB1Ymxpc2hlck1vZGVsRXVsYVJlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSSQoPcHVibGlzaGVyX21vZGVs",
+            "GAIgASgJQjDgQQL6QSoKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUHVi",
+            "bGlzaGVyTW9kZWwicwocUHVibGlzaGVyTW9kZWxFdWxhQWNjZXB0YW5jZRIW",
+            "Cg5wcm9qZWN0X251bWJlchgBIAEoAxIXCg9wdWJsaXNoZXJfbW9kZWwYAiAB",
+            "KAkSIgoacHVibGlzaGVyX21vZGVsX2V1bGFfYWNrZWQYAyABKAgqoQEKElB1",
+            "Ymxpc2hlck1vZGVsVmlldxIkCiBQVUJMSVNIRVJfTU9ERUxfVklFV19VTlNQ",
+            "RUNJRklFRBAAEh4KGlBVQkxJU0hFUl9NT0RFTF9WSUVXX0JBU0lDEAESHQoZ",
+            "UFVCTElTSEVSX01PREVMX1ZJRVdfRlVMTBACEiYKIlBVQkxJU0hFUl9NT0RF",
+            "TF9WRVJTSU9OX1ZJRVdfQkFTSUMQAzLVDQoSTW9kZWxHYXJkZW5TZXJ2aWNl",
+            "ErUBChFHZXRQdWJsaXNoZXJNb2RlbBI5Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuR2V0UHVibGlzaGVyTW9kZWxSZXF1ZXN0Gi8uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QdWJsaXNoZXJNb2RlbCI02kEE",
+            "bmFtZYLT5JMCJxIlL3YxYmV0YTEve25hbWU9cHVibGlzaGVycy8qL21vZGVs",
+            "cy8qfRLIAQoTTGlzdFB1Ymxpc2hlck1vZGVscxI7Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxYmV0YTEuTGlzdFB1Ymxpc2hlck1vZGVsc1JlcXVlc3Qa",
+            "PC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkxpc3RQdWJsaXNo",
+            "ZXJNb2RlbHNSZXNwb25zZSI22kEGcGFyZW50gtPkkwInEiUvdjFiZXRhMS97",
+            "cGFyZW50PXB1Ymxpc2hlcnMvKn0vbW9kZWxzEsQBCgZEZXBsb3kSLi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlcGxveVJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImvKQSkKDkRlcGxveVJlc3Bv",
+            "bnNlEhdEZXBsb3lPcGVyYXRpb25NZXRhZGF0YYLT5JMCOSI0L3YxYmV0YTEv",
+            "e2Rlc3RpbmF0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyp9OmRlcGxveToB",
+            "KhKOAgoURGVwbG95UHVibGlzaGVyTW9kZWwSPC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExLkRlcGxveVB1Ymxpc2hlck1vZGVsUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24imAGIAgHKQUUKHERlcGxv",
+            "eVB1Ymxpc2hlck1vZGVsUmVzcG9uc2USJURlcGxveVB1Ymxpc2hlck1vZGVs",
+            "T3BlcmF0aW9uTWV0YWRhdGGC0+STAkciQi92MWJldGExL3tkZXN0aW5hdGlv",
+            "bj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpkZXBsb3lQdWJsaXNoZXJNb2Rl",
+            "bDoBKhKVAgoURXhwb3J0UHVibGlzaGVyTW9kZWwSPC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkV4cG9ydFB1Ymxpc2hlck1vZGVsUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwHKQUUKHEV4cG9y",
+            "dFB1Ymxpc2hlck1vZGVsUmVzcG9uc2USJUV4cG9ydFB1Ymxpc2hlck1vZGVs",
+            "T3BlcmF0aW9uTWV0YWRhdGGC0+STAlEiTC92MWJldGExL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0ve25hbWU9cHVibGlzaGVycy8qL21vZGVs",
+            "cy8qfTpleHBvcnQ6ASoShQIKIUNoZWNrUHVibGlzaGVyTW9kZWxFdWxhQWNj",
+            "ZXB0YW5jZRJJLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQ2hl",
+            "Y2tQdWJsaXNoZXJNb2RlbEV1bGFBY2NlcHRhbmNlUmVxdWVzdBo9Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUHVibGlzaGVyTW9kZWxFdWxh",
+            "QWNjZXB0YW5jZSJW2kEWcGFyZW50LHB1Ymxpc2hlcl9tb2RlbILT5JMCNyIy",
+            "L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9tb2RlbEdhcmRlbkV1bGE6",
+            "Y2hlY2s6ASoS9AEKGEFjY2VwdFB1Ymxpc2hlck1vZGVsRXVsYRJALmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQWNjZXB0UHVibGlzaGVyTW9k",
+            "ZWxFdWxhUmVxdWVzdBo9Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuUHVibGlzaGVyTW9kZWxFdWxhQWNjZXB0YW5jZSJX2kEWcGFyZW50LHB1",
+            "Ymxpc2hlcl9tb2RlbILT5JMCOCIzL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0",
+            "cy8qfS9tb2RlbEdhcmRlbkV1bGE6YWNjZXB0OgEqGk3KQRlhaXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1wbGF0Zm9ybULuAQojY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTFCF01vZGVsR2FyZGVuU2VydmljZVByb3RvUAFaQ2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
+            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
+            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
+            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OperationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -165,7 +187,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployPublisherModelOperationMetadata), global::Google.Cloud.AIPlatform.V1Beta1.DeployPublisherModelOperationMetadata.Parser, new[]{ "GenericMetadata", "PublisherModel", "Destination", "ProjectNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelResponse), global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelResponse.Parser, new[]{ "PublisherModel", "DestinationUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelOperationMetadata), global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest), global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest.Parser, new[]{ "Name", "Destination", "Parent" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest), global::Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest.Parser, new[]{ "Name", "Destination", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest), global::Google.Cloud.AIPlatform.V1Beta1.CheckPublisherModelEulaAcceptanceRequest.Parser, new[]{ "Parent", "PublisherModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest), global::Google.Cloud.AIPlatform.V1Beta1.AcceptPublisherModelEulaRequest.Parser, new[]{ "Parent", "PublisherModel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance), global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelEulaAcceptance.Parser, new[]{ "ProjectNumber", "PublisherModel", "PublisherModelEulaAcked" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5122,6 +5147,765 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 26: {
             Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ModelGardenService.CheckPublisherModelEula][].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CheckPublisherModelEulaAcceptanceRequest : pb::IMessage<CheckPublisherModelEulaAcceptanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CheckPublisherModelEulaAcceptanceRequest> _parser = new pb::MessageParser<CheckPublisherModelEulaAcceptanceRequest>(() => new CheckPublisherModelEulaAcceptanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CheckPublisherModelEulaAcceptanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CheckPublisherModelEulaAcceptanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CheckPublisherModelEulaAcceptanceRequest(CheckPublisherModelEulaAcceptanceRequest other) : this() {
+      parent_ = other.parent_;
+      publisherModel_ = other.publisherModel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CheckPublisherModelEulaAcceptanceRequest Clone() {
+      return new CheckPublisherModelEulaAcceptanceRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The project requesting access for named model. The format is
+    /// `projects/{project}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "publisher_model" field.</summary>
+    public const int PublisherModelFieldNumber = 2;
+    private string publisherModel_ = "";
+    /// <summary>
+    /// Required. The name of the PublisherModel resource.
+    /// Format:
+    /// `publishers/{publisher}/models/{publisher_model}`, or
+    /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublisherModel {
+      get { return publisherModel_; }
+      set {
+        publisherModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CheckPublisherModelEulaAcceptanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CheckPublisherModelEulaAcceptanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PublisherModel != other.PublisherModel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PublisherModel.Length != 0) hash ^= PublisherModel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PublisherModel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherModel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CheckPublisherModelEulaAcceptanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PublisherModel.Length != 0) {
+        PublisherModel = other.PublisherModel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ModelGardenService.AcceptPublisherModelEula][google.cloud.aiplatform.v1beta1.ModelGardenService.AcceptPublisherModelEula].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AcceptPublisherModelEulaRequest : pb::IMessage<AcceptPublisherModelEulaRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AcceptPublisherModelEulaRequest> _parser = new pb::MessageParser<AcceptPublisherModelEulaRequest>(() => new AcceptPublisherModelEulaRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AcceptPublisherModelEulaRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AcceptPublisherModelEulaRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AcceptPublisherModelEulaRequest(AcceptPublisherModelEulaRequest other) : this() {
+      parent_ = other.parent_;
+      publisherModel_ = other.publisherModel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AcceptPublisherModelEulaRequest Clone() {
+      return new AcceptPublisherModelEulaRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The project requesting access for named model. The format is
+    /// `projects/{project}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "publisher_model" field.</summary>
+    public const int PublisherModelFieldNumber = 2;
+    private string publisherModel_ = "";
+    /// <summary>
+    /// Required. The name of the PublisherModel resource.
+    /// Format:
+    /// `publishers/{publisher}/models/{publisher_model}`, or
+    /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublisherModel {
+      get { return publisherModel_; }
+      set {
+        publisherModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AcceptPublisherModelEulaRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AcceptPublisherModelEulaRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PublisherModel != other.PublisherModel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PublisherModel.Length != 0) hash ^= PublisherModel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PublisherModel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherModel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AcceptPublisherModelEulaRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PublisherModel.Length != 0) {
+        PublisherModel = other.PublisherModel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [ModelGardenService.UpdatePublisherModelEula][].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PublisherModelEulaAcceptance : pb::IMessage<PublisherModelEulaAcceptance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PublisherModelEulaAcceptance> _parser = new pb::MessageParser<PublisherModelEulaAcceptance>(() => new PublisherModelEulaAcceptance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PublisherModelEulaAcceptance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PublisherModelEulaAcceptance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PublisherModelEulaAcceptance(PublisherModelEulaAcceptance other) : this() {
+      projectNumber_ = other.projectNumber_;
+      publisherModel_ = other.publisherModel_;
+      publisherModelEulaAcked_ = other.publisherModelEulaAcked_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PublisherModelEulaAcceptance Clone() {
+      return new PublisherModelEulaAcceptance(this);
+    }
+
+    /// <summary>Field number for the "project_number" field.</summary>
+    public const int ProjectNumberFieldNumber = 1;
+    private long projectNumber_;
+    /// <summary>
+    /// The project number requesting access for named model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ProjectNumber {
+      get { return projectNumber_; }
+      set {
+        projectNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "publisher_model" field.</summary>
+    public const int PublisherModelFieldNumber = 2;
+    private string publisherModel_ = "";
+    /// <summary>
+    /// The publisher model resource name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublisherModel {
+      get { return publisherModel_; }
+      set {
+        publisherModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "publisher_model_eula_acked" field.</summary>
+    public const int PublisherModelEulaAckedFieldNumber = 3;
+    private bool publisherModelEulaAcked_;
+    /// <summary>
+    /// The EULA content acceptance status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PublisherModelEulaAcked {
+      get { return publisherModelEulaAcked_; }
+      set {
+        publisherModelEulaAcked_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PublisherModelEulaAcceptance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PublisherModelEulaAcceptance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectNumber != other.ProjectNumber) return false;
+      if (PublisherModel != other.PublisherModel) return false;
+      if (PublisherModelEulaAcked != other.PublisherModelEulaAcked) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectNumber != 0L) hash ^= ProjectNumber.GetHashCode();
+      if (PublisherModel.Length != 0) hash ^= PublisherModel.GetHashCode();
+      if (PublisherModelEulaAcked != false) hash ^= PublisherModelEulaAcked.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ProjectNumber != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(ProjectNumber);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (PublisherModelEulaAcked != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(PublisherModelEulaAcked);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectNumber != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(ProjectNumber);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (PublisherModelEulaAcked != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(PublisherModelEulaAcked);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectNumber != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ProjectNumber);
+      }
+      if (PublisherModel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherModel);
+      }
+      if (PublisherModelEulaAcked != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PublisherModelEulaAcceptance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectNumber != 0L) {
+        ProjectNumber = other.ProjectNumber;
+      }
+      if (other.PublisherModel.Length != 0) {
+        PublisherModel = other.PublisherModel;
+      }
+      if (other.PublisherModelEulaAcked != false) {
+        PublisherModelEulaAcked = other.PublisherModelEulaAcked;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ProjectNumber = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+          case 24: {
+            PublisherModelEulaAcked = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ProjectNumber = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+          case 24: {
+            PublisherModelEulaAcked = input.ReadBool();
             break;
           }
         }
