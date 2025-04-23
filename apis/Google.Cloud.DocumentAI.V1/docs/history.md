@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.20.0, released 2025-04-23
+
+### New features
+
+- Added a field for enabling returning images and bounding boxes from layout parser processor ([commit 237192a](https://github.com/googleapis/google-cloud-dotnet/commit/237192a2a612fbb9f6a09a6cc4f3726f07f96c8c))
+
 ## Version 3.19.0, released 2024-10-29
 
 ### New features
