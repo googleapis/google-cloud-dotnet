@@ -1,0 +1,246 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.financialservices.v1",
+  "libraryPackage": "Google.Cloud.FinancialServices.V1",
+  "services": {
+    "AML": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AMLClient",
+          "rpcs": {
+            "CreateBacktestResult": {
+              "methods": [
+                "CreateBacktestResult",
+                "CreateBacktestResultAsync"
+              ]
+            },
+            "CreateDataset": {
+              "methods": [
+                "CreateDataset",
+                "CreateDatasetAsync"
+              ]
+            },
+            "CreateEngineConfig": {
+              "methods": [
+                "CreateEngineConfig",
+                "CreateEngineConfigAsync"
+              ]
+            },
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "CreateModel": {
+              "methods": [
+                "CreateModel",
+                "CreateModelAsync"
+              ]
+            },
+            "CreatePredictionResult": {
+              "methods": [
+                "CreatePredictionResult",
+                "CreatePredictionResultAsync"
+              ]
+            },
+            "DeleteBacktestResult": {
+              "methods": [
+                "DeleteBacktestResult",
+                "DeleteBacktestResultAsync"
+              ]
+            },
+            "DeleteDataset": {
+              "methods": [
+                "DeleteDataset",
+                "DeleteDatasetAsync"
+              ]
+            },
+            "DeleteEngineConfig": {
+              "methods": [
+                "DeleteEngineConfig",
+                "DeleteEngineConfigAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteModel": {
+              "methods": [
+                "DeleteModel",
+                "DeleteModelAsync"
+              ]
+            },
+            "DeletePredictionResult": {
+              "methods": [
+                "DeletePredictionResult",
+                "DeletePredictionResultAsync"
+              ]
+            },
+            "ExportBacktestResultMetadata": {
+              "methods": [
+                "ExportBacktestResultMetadata",
+                "ExportBacktestResultMetadataAsync"
+              ]
+            },
+            "ExportEngineConfigMetadata": {
+              "methods": [
+                "ExportEngineConfigMetadata",
+                "ExportEngineConfigMetadataAsync"
+              ]
+            },
+            "ExportModelMetadata": {
+              "methods": [
+                "ExportModelMetadata",
+                "ExportModelMetadataAsync"
+              ]
+            },
+            "ExportPredictionResultMetadata": {
+              "methods": [
+                "ExportPredictionResultMetadata",
+                "ExportPredictionResultMetadataAsync"
+              ]
+            },
+            "ExportRegisteredParties": {
+              "methods": [
+                "ExportRegisteredParties",
+                "ExportRegisteredPartiesAsync"
+              ]
+            },
+            "GetBacktestResult": {
+              "methods": [
+                "GetBacktestResult",
+                "GetBacktestResultAsync"
+              ]
+            },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
+            "GetEngineConfig": {
+              "methods": [
+                "GetEngineConfig",
+                "GetEngineConfigAsync"
+              ]
+            },
+            "GetEngineVersion": {
+              "methods": [
+                "GetEngineVersion",
+                "GetEngineVersionAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "GetModel": {
+              "methods": [
+                "GetModel",
+                "GetModelAsync"
+              ]
+            },
+            "GetPredictionResult": {
+              "methods": [
+                "GetPredictionResult",
+                "GetPredictionResultAsync"
+              ]
+            },
+            "ImportRegisteredParties": {
+              "methods": [
+                "ImportRegisteredParties",
+                "ImportRegisteredPartiesAsync"
+              ]
+            },
+            "ListBacktestResults": {
+              "methods": [
+                "ListBacktestResults",
+                "ListBacktestResultsAsync"
+              ]
+            },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "ListEngineConfigs": {
+              "methods": [
+                "ListEngineConfigs",
+                "ListEngineConfigsAsync"
+              ]
+            },
+            "ListEngineVersions": {
+              "methods": [
+                "ListEngineVersions",
+                "ListEngineVersionsAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "ListModels": {
+              "methods": [
+                "ListModels",
+                "ListModelsAsync"
+              ]
+            },
+            "ListPredictionResults": {
+              "methods": [
+                "ListPredictionResults",
+                "ListPredictionResultsAsync"
+              ]
+            },
+            "UpdateBacktestResult": {
+              "methods": [
+                "UpdateBacktestResult",
+                "UpdateBacktestResultAsync"
+              ]
+            },
+            "UpdateDataset": {
+              "methods": [
+                "UpdateDataset",
+                "UpdateDatasetAsync"
+              ]
+            },
+            "UpdateEngineConfig": {
+              "methods": [
+                "UpdateEngineConfig",
+                "UpdateEngineConfigAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateModel": {
+              "methods": [
+                "UpdateModel",
+                "UpdateModelAsync"
+              ]
+            },
+            "UpdatePredictionResult": {
+              "methods": [
+                "UpdatePredictionResult",
+                "UpdatePredictionResultAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
