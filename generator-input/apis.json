@@ -4656,13 +4656,13 @@
       "protoPath": "google/cloud/secrets/v1beta1",
       "productName": "Secret Manager",
       "productUrl": "https://cloud.google.com/secret-manager",
-      "version": "3.0.0-beta05",
+      "version": "3.0.0-beta06",
       "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Secret Manager API version v1beta1.",
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0"
+        "Google.Cloud.Iam.V1": "3.4.0",
+        "Google.Cloud.Location": "2.3.0"
       },
       "tags": [
         "secret",
