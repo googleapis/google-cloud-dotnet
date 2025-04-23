@@ -3980,6 +3980,7 @@
             "id": "Google.Cloud.FinancialServices.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "44de556476ec59fbf90f122674b6c91f3f5e60ec",
             "apiPaths": [
                 "google/cloud/financialservices/v1"
             ],
