@@ -1423,6 +1423,2024 @@
       ]
     },
     {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackupChannel_sync",
+      "title": "CreateBackupChannelRequestObject",
+      "description": "Snippet for CreateBackupChannel",
+      "file": "BackupForGKEClient.CreateBackupChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackupChannel_async",
+      "title": "CreateBackupChannelRequestObjectAsync",
+      "description": "Snippet for CreateBackupChannelAsync",
+      "file": "BackupForGKEClient.CreateBackupChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackupChannel_sync_flattened",
+      "title": "CreateBackupChannel",
+      "description": "Snippet for CreateBackupChannel",
+      "file": "BackupForGKEClient.CreateBackupChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannel",
+            "name": "backupChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "backupChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackupChannel_async_flattened",
+      "title": "CreateBackupChannelAsync",
+      "description": "Snippet for CreateBackupChannelAsync",
+      "file": "BackupForGKEClient.CreateBackupChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannel",
+            "name": "backupChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "backupChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackupChannel_sync_flattened_resourceNames",
+      "title": "CreateBackupChannelResourceNames",
+      "description": "Snippet for CreateBackupChannel",
+      "file": "BackupForGKEClient.CreateBackupChannelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannel",
+            "name": "backupChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "backupChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackupChannel_async_flattened_resourceNames",
+      "title": "CreateBackupChannelResourceNamesAsync",
+      "description": "Snippet for CreateBackupChannelAsync",
+      "file": "BackupForGKEClient.CreateBackupChannelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannel",
+            "name": "backupChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "backupChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupChannels_sync",
+      "title": "ListBackupChannelsRequestObject",
+      "description": "Snippet for ListBackupChannels",
+      "file": "BackupForGKEClient.ListBackupChannelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupChannels",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupChannels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse, Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupChannels_async",
+      "title": "ListBackupChannelsRequestObjectAsync",
+      "description": "Snippet for ListBackupChannelsAsync",
+      "file": "BackupForGKEClient.ListBackupChannelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupChannelsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupChannelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse, Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupChannels_sync_flattened",
+      "title": "ListBackupChannels",
+      "description": "Snippet for ListBackupChannels",
+      "file": "BackupForGKEClient.ListBackupChannelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupChannels",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupChannels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse, Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupChannels_async_flattened",
+      "title": "ListBackupChannelsAsync",
+      "description": "Snippet for ListBackupChannelsAsync",
+      "file": "BackupForGKEClient.ListBackupChannelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupChannelsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupChannelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse, Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupChannels_sync_flattened_resourceNames",
+      "title": "ListBackupChannelsResourceNames",
+      "description": "Snippet for ListBackupChannels",
+      "file": "BackupForGKEClient.ListBackupChannelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupChannels",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupChannels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse, Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupChannels_async_flattened_resourceNames",
+      "title": "ListBackupChannelsResourceNamesAsync",
+      "description": "Snippet for ListBackupChannelsAsync",
+      "file": "BackupForGKEClient.ListBackupChannelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupChannelsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupChannelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupChannelsResponse, Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupChannel_sync",
+      "title": "GetBackupChannelRequestObject",
+      "description": "Snippet for GetBackupChannel",
+      "file": "BackupForGKEClient.GetBackupChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.BackupChannel",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupChannel_async",
+      "title": "GetBackupChannelRequestObjectAsync",
+      "description": "Snippet for GetBackupChannelAsync",
+      "file": "BackupForGKEClient.GetBackupChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupChannel_sync_flattened",
+      "title": "GetBackupChannel",
+      "description": "Snippet for GetBackupChannel",
+      "file": "BackupForGKEClient.GetBackupChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.BackupChannel",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupChannel_async_flattened",
+      "title": "GetBackupChannelAsync",
+      "description": "Snippet for GetBackupChannelAsync",
+      "file": "BackupForGKEClient.GetBackupChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupChannel_sync_flattened_resourceNames",
+      "title": "GetBackupChannelResourceNames",
+      "description": "Snippet for GetBackupChannel",
+      "file": "BackupForGKEClient.GetBackupChannelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.BackupChannel",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupChannel_async_flattened_resourceNames",
+      "title": "GetBackupChannelResourceNamesAsync",
+      "description": "Snippet for GetBackupChannelAsync",
+      "file": "BackupForGKEClient.GetBackupChannelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateBackupChannel_sync",
+      "title": "UpdateBackupChannelRequestObject",
+      "description": "Snippet for UpdateBackupChannel",
+      "file": "BackupForGKEClient.UpdateBackupChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateBackupChannel_async",
+      "title": "UpdateBackupChannelRequestObjectAsync",
+      "description": "Snippet for UpdateBackupChannelAsync",
+      "file": "BackupForGKEClient.UpdateBackupChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateBackupChannel_sync_flattened",
+      "title": "UpdateBackupChannel",
+      "description": "Snippet for UpdateBackupChannel",
+      "file": "BackupForGKEClient.UpdateBackupChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannel",
+            "name": "backupChannel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateBackupChannel_async_flattened",
+      "title": "UpdateBackupChannelAsync",
+      "description": "Snippet for UpdateBackupChannelAsync",
+      "file": "BackupForGKEClient.UpdateBackupChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannel",
+            "name": "backupChannel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteBackupChannel_sync",
+      "title": "DeleteBackupChannelRequestObject",
+      "description": "Snippet for DeleteBackupChannel",
+      "file": "BackupForGKEClient.DeleteBackupChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteBackupChannel_async",
+      "title": "DeleteBackupChannelRequestObjectAsync",
+      "description": "Snippet for DeleteBackupChannelAsync",
+      "file": "BackupForGKEClient.DeleteBackupChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteBackupChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteBackupChannel_sync_flattened",
+      "title": "DeleteBackupChannel",
+      "description": "Snippet for DeleteBackupChannel",
+      "file": "BackupForGKEClient.DeleteBackupChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteBackupChannel_async_flattened",
+      "title": "DeleteBackupChannelAsync",
+      "description": "Snippet for DeleteBackupChannelAsync",
+      "file": "BackupForGKEClient.DeleteBackupChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteBackupChannel_sync_flattened_resourceNames",
+      "title": "DeleteBackupChannelResourceNames",
+      "description": "Snippet for DeleteBackupChannel",
+      "file": "BackupForGKEClient.DeleteBackupChannelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteBackupChannel_async_flattened_resourceNames",
+      "title": "DeleteBackupChannelResourceNamesAsync",
+      "description": "Snippet for DeleteBackupChannelAsync",
+      "file": "BackupForGKEClient.DeleteBackupChannelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteBackupChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupPlanBindings_sync",
+      "title": "ListBackupPlanBindingsRequestObject",
+      "description": "Snippet for ListBackupPlanBindings",
+      "file": "BackupForGKEClient.ListBackupPlanBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanBindings",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlanBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse, Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupPlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupPlanBindings_async",
+      "title": "ListBackupPlanBindingsRequestObjectAsync",
+      "description": "Snippet for ListBackupPlanBindingsAsync",
+      "file": "BackupForGKEClient.ListBackupPlanBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanBindingsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlanBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse, Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupPlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupPlanBindings_sync_flattened",
+      "title": "ListBackupPlanBindings",
+      "description": "Snippet for ListBackupPlanBindings",
+      "file": "BackupForGKEClient.ListBackupPlanBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanBindings",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlanBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse, Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupPlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupPlanBindings_async_flattened",
+      "title": "ListBackupPlanBindingsAsync",
+      "description": "Snippet for ListBackupPlanBindingsAsync",
+      "file": "BackupForGKEClient.ListBackupPlanBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanBindingsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlanBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse, Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupPlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupPlanBindings_sync_flattened_resourceNames",
+      "title": "ListBackupPlanBindingsResourceNames",
+      "description": "Snippet for ListBackupPlanBindings",
+      "file": "BackupForGKEClient.ListBackupPlanBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanBindings",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlanBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse, Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupPlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListBackupPlanBindings_async_flattened_resourceNames",
+      "title": "ListBackupPlanBindingsResourceNamesAsync",
+      "description": "Snippet for ListBackupPlanBindingsAsync",
+      "file": "BackupForGKEClient.ListBackupPlanBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanBindingsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlanBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlanBindingsResponse, Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListBackupPlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupPlanBinding_sync",
+      "title": "GetBackupPlanBindingRequestObject",
+      "description": "Snippet for GetBackupPlanBinding",
+      "file": "BackupForGKEClient.GetBackupPlanBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanBinding",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.BackupPlanBinding",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupPlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupPlanBinding_async",
+      "title": "GetBackupPlanBindingRequestObjectAsync",
+      "description": "Snippet for GetBackupPlanBindingAsync",
+      "file": "BackupForGKEClient.GetBackupPlanBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanBindingAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupPlanBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupPlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupPlanBinding_sync_flattened",
+      "title": "GetBackupPlanBinding",
+      "description": "Snippet for GetBackupPlanBinding",
+      "file": "BackupForGKEClient.GetBackupPlanBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanBinding",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.BackupPlanBinding",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupPlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupPlanBinding_async_flattened",
+      "title": "GetBackupPlanBindingAsync",
+      "description": "Snippet for GetBackupPlanBindingAsync",
+      "file": "BackupForGKEClient.GetBackupPlanBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanBindingAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupPlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupPlanBinding_sync_flattened_resourceNames",
+      "title": "GetBackupPlanBindingResourceNames",
+      "description": "Snippet for GetBackupPlanBinding",
+      "file": "BackupForGKEClient.GetBackupPlanBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanBinding",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.BackupPlanBinding",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupPlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupPlanBinding_async_flattened_resourceNames",
+      "title": "GetBackupPlanBindingResourceNamesAsync",
+      "description": "Snippet for GetBackupPlanBindingAsync",
+      "file": "BackupForGKEClient.GetBackupPlanBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanBindingAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupPlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupPlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateBackup_sync",
       "title": "CreateBackupRequestObject",
       "description": "Snippet for CreateBackup",
@@ -1779,12 +3797,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 78,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -1828,12 +3846,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 80,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -4848,6 +6866,2024 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateRestoreChannel_sync",
+      "title": "CreateRestoreChannelRequestObject",
+      "description": "Snippet for CreateRestoreChannel",
+      "file": "BackupForGKEClient.CreateRestoreChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateRestoreChannel_async",
+      "title": "CreateRestoreChannelRequestObjectAsync",
+      "description": "Snippet for CreateRestoreChannelAsync",
+      "file": "BackupForGKEClient.CreateRestoreChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateRestoreChannel_sync_flattened",
+      "title": "CreateRestoreChannel",
+      "description": "Snippet for CreateRestoreChannel",
+      "file": "BackupForGKEClient.CreateRestoreChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+            "name": "restoreChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateRestoreChannel_async_flattened",
+      "title": "CreateRestoreChannelAsync",
+      "description": "Snippet for CreateRestoreChannelAsync",
+      "file": "BackupForGKEClient.CreateRestoreChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+            "name": "restoreChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateRestoreChannel_sync_flattened_resourceNames",
+      "title": "CreateRestoreChannelResourceNames",
+      "description": "Snippet for CreateRestoreChannel",
+      "file": "BackupForGKEClient.CreateRestoreChannelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+            "name": "restoreChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_CreateRestoreChannel_async_flattened_resourceNames",
+      "title": "CreateRestoreChannelResourceNamesAsync",
+      "description": "Snippet for CreateRestoreChannelAsync",
+      "file": "BackupForGKEClient.CreateRestoreChannelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+            "name": "restoreChannel"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreChannelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.CreateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestoreChannels_sync",
+      "title": "ListRestoreChannelsRequestObject",
+      "description": "Snippet for ListRestoreChannels",
+      "file": "BackupForGKEClient.ListRestoreChannelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreChannels",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoreChannels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse, Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestoreChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestoreChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestoreChannels_async",
+      "title": "ListRestoreChannelsRequestObjectAsync",
+      "description": "Snippet for ListRestoreChannelsAsync",
+      "file": "BackupForGKEClient.ListRestoreChannelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreChannelsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoreChannelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestoreChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse, Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestoreChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestoreChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestoreChannels_sync_flattened",
+      "title": "ListRestoreChannels",
+      "description": "Snippet for ListRestoreChannels",
+      "file": "BackupForGKEClient.ListRestoreChannelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreChannels",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoreChannels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse, Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestoreChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestoreChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestoreChannels_async_flattened",
+      "title": "ListRestoreChannelsAsync",
+      "description": "Snippet for ListRestoreChannelsAsync",
+      "file": "BackupForGKEClient.ListRestoreChannelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreChannelsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoreChannelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse, Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestoreChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestoreChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestoreChannels_sync_flattened_resourceNames",
+      "title": "ListRestoreChannelsResourceNames",
+      "description": "Snippet for ListRestoreChannels",
+      "file": "BackupForGKEClient.ListRestoreChannelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreChannels",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoreChannels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse, Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestoreChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestoreChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestoreChannels_async_flattened_resourceNames",
+      "title": "ListRestoreChannelsResourceNamesAsync",
+      "description": "Snippet for ListRestoreChannelsAsync",
+      "file": "BackupForGKEClient.ListRestoreChannelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreChannelsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoreChannelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestoreChannelsResponse, Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestoreChannels",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestoreChannels",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestoreChannel_sync",
+      "title": "GetRestoreChannelRequestObject",
+      "description": "Snippet for GetRestoreChannel",
+      "file": "BackupForGKEClient.GetRestoreChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestoreChannel_async",
+      "title": "GetRestoreChannelRequestObjectAsync",
+      "description": "Snippet for GetRestoreChannelAsync",
+      "file": "BackupForGKEClient.GetRestoreChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestoreChannel_sync_flattened",
+      "title": "GetRestoreChannel",
+      "description": "Snippet for GetRestoreChannel",
+      "file": "BackupForGKEClient.GetRestoreChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestoreChannel_async_flattened",
+      "title": "GetRestoreChannelAsync",
+      "description": "Snippet for GetRestoreChannelAsync",
+      "file": "BackupForGKEClient.GetRestoreChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestoreChannel_sync_flattened_resourceNames",
+      "title": "GetRestoreChannelResourceNames",
+      "description": "Snippet for GetRestoreChannel",
+      "file": "BackupForGKEClient.GetRestoreChannelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestoreChannel_async_flattened_resourceNames",
+      "title": "GetRestoreChannelResourceNamesAsync",
+      "description": "Snippet for GetRestoreChannelAsync",
+      "file": "BackupForGKEClient.GetRestoreChannelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestoreChannel>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateRestoreChannel_sync",
+      "title": "UpdateRestoreChannelRequestObject",
+      "description": "Snippet for UpdateRestoreChannel",
+      "file": "BackupForGKEClient.UpdateRestoreChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateRestoreChannel_async",
+      "title": "UpdateRestoreChannelRequestObjectAsync",
+      "description": "Snippet for UpdateRestoreChannelAsync",
+      "file": "BackupForGKEClient.UpdateRestoreChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateRestoreChannel_sync_flattened",
+      "title": "UpdateRestoreChannel",
+      "description": "Snippet for UpdateRestoreChannel",
+      "file": "BackupForGKEClient.UpdateRestoreChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+            "name": "restoreChannel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_UpdateRestoreChannel_async_flattened",
+      "title": "UpdateRestoreChannelAsync",
+      "description": "Snippet for UpdateRestoreChannelAsync",
+      "file": "BackupForGKEClient.UpdateRestoreChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannel",
+            "name": "restoreChannel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestoreChannel, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.UpdateRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteRestoreChannel_sync",
+      "title": "DeleteRestoreChannelRequestObject",
+      "description": "Snippet for DeleteRestoreChannel",
+      "file": "BackupForGKEClient.DeleteRestoreChannelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteRestoreChannel_async",
+      "title": "DeleteRestoreChannelRequestObjectAsync",
+      "description": "Snippet for DeleteRestoreChannelAsync",
+      "file": "BackupForGKEClient.DeleteRestoreChannelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteRestoreChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteRestoreChannel_sync_flattened",
+      "title": "DeleteRestoreChannel",
+      "description": "Snippet for DeleteRestoreChannel",
+      "file": "BackupForGKEClient.DeleteRestoreChannelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteRestoreChannel_async_flattened",
+      "title": "DeleteRestoreChannelAsync",
+      "description": "Snippet for DeleteRestoreChannelAsync",
+      "file": "BackupForGKEClient.DeleteRestoreChannelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteRestoreChannel_sync_flattened_resourceNames",
+      "title": "DeleteRestoreChannelResourceNames",
+      "description": "Snippet for DeleteRestoreChannel",
+      "file": "BackupForGKEClient.DeleteRestoreChannelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreChannel",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_DeleteRestoreChannel_async_flattened_resourceNames",
+      "title": "DeleteRestoreChannelResourceNamesAsync",
+      "description": "Snippet for DeleteRestoreChannelAsync",
+      "file": "BackupForGKEClient.DeleteRestoreChannelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreChannelAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreChannelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreChannel",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.DeleteRestoreChannel",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestorePlanBindings_sync",
+      "title": "ListRestorePlanBindingsRequestObject",
+      "description": "Snippet for ListRestorePlanBindings",
+      "file": "BackupForGKEClient.ListRestorePlanBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestorePlanBindings",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlanBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse, Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestorePlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestorePlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestorePlanBindings_async",
+      "title": "ListRestorePlanBindingsRequestObjectAsync",
+      "description": "Snippet for ListRestorePlanBindingsAsync",
+      "file": "BackupForGKEClient.ListRestorePlanBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestorePlanBindingsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlanBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse, Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestorePlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestorePlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestorePlanBindings_sync_flattened",
+      "title": "ListRestorePlanBindings",
+      "description": "Snippet for ListRestorePlanBindings",
+      "file": "BackupForGKEClient.ListRestorePlanBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestorePlanBindings",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlanBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse, Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestorePlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestorePlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestorePlanBindings_async_flattened",
+      "title": "ListRestorePlanBindingsAsync",
+      "description": "Snippet for ListRestorePlanBindingsAsync",
+      "file": "BackupForGKEClient.ListRestorePlanBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestorePlanBindingsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlanBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse, Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestorePlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestorePlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestorePlanBindings_sync_flattened_resourceNames",
+      "title": "ListRestorePlanBindingsResourceNames",
+      "description": "Snippet for ListRestorePlanBindings",
+      "file": "BackupForGKEClient.ListRestorePlanBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestorePlanBindings",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlanBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse, Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestorePlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestorePlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_ListRestorePlanBindings_async_flattened_resourceNames",
+      "title": "ListRestorePlanBindingsResourceNamesAsync",
+      "description": "Snippet for ListRestorePlanBindingsAsync",
+      "file": "BackupForGKEClient.ListRestorePlanBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestorePlanBindingsAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlanBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlanBindingsResponse, Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "ListRestorePlanBindings",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.ListRestorePlanBindings",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestorePlanBinding_sync",
+      "title": "GetRestorePlanBindingRequestObject",
+      "description": "Snippet for GetRestorePlanBinding",
+      "file": "BackupForGKEClient.GetRestorePlanBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestorePlanBinding",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.RestorePlanBinding",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestorePlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestorePlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestorePlanBinding_async",
+      "title": "GetRestorePlanBindingRequestObjectAsync",
+      "description": "Snippet for GetRestorePlanBindingAsync",
+      "file": "BackupForGKEClient.GetRestorePlanBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestorePlanBindingAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestorePlanBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestorePlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestorePlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestorePlanBinding_sync_flattened",
+      "title": "GetRestorePlanBinding",
+      "description": "Snippet for GetRestorePlanBinding",
+      "file": "BackupForGKEClient.GetRestorePlanBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestorePlanBinding",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.RestorePlanBinding",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestorePlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestorePlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestorePlanBinding_async_flattened",
+      "title": "GetRestorePlanBindingAsync",
+      "description": "Snippet for GetRestorePlanBindingAsync",
+      "file": "BackupForGKEClient.GetRestorePlanBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestorePlanBindingAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestorePlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestorePlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestorePlanBinding_sync_flattened_resourceNames",
+      "title": "GetRestorePlanBindingResourceNames",
+      "description": "Snippet for GetRestorePlanBinding",
+      "file": "BackupForGKEClient.GetRestorePlanBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestorePlanBinding",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.RestorePlanBinding",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestorePlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestorePlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetRestorePlanBinding_async_flattened_resourceNames",
+      "title": "GetRestorePlanBindingResourceNamesAsync",
+      "description": "Snippet for GetRestorePlanBindingAsync",
+      "file": "BackupForGKEClient.GetRestorePlanBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestorePlanBindingAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestorePlanBinding>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetRestorePlanBinding",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetRestorePlanBinding",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

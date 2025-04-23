@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 ParentAsBackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
                 Filter = "",
                 OrderBy = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupForGKEClient.ListBackupsAsync(request);

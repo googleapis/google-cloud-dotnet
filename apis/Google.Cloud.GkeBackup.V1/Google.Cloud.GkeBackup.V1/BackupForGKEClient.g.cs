@@ -58,6 +58,16 @@ namespace Google.Cloud.GkeBackup.V1
             UpdateBackupPlanOperationsSettings = existing.UpdateBackupPlanOperationsSettings.Clone();
             DeleteBackupPlanSettings = existing.DeleteBackupPlanSettings;
             DeleteBackupPlanOperationsSettings = existing.DeleteBackupPlanOperationsSettings.Clone();
+            CreateBackupChannelSettings = existing.CreateBackupChannelSettings;
+            CreateBackupChannelOperationsSettings = existing.CreateBackupChannelOperationsSettings.Clone();
+            ListBackupChannelsSettings = existing.ListBackupChannelsSettings;
+            GetBackupChannelSettings = existing.GetBackupChannelSettings;
+            UpdateBackupChannelSettings = existing.UpdateBackupChannelSettings;
+            UpdateBackupChannelOperationsSettings = existing.UpdateBackupChannelOperationsSettings.Clone();
+            DeleteBackupChannelSettings = existing.DeleteBackupChannelSettings;
+            DeleteBackupChannelOperationsSettings = existing.DeleteBackupChannelOperationsSettings.Clone();
+            ListBackupPlanBindingsSettings = existing.ListBackupPlanBindingsSettings;
+            GetBackupPlanBindingSettings = existing.GetBackupPlanBindingSettings;
             CreateBackupSettings = existing.CreateBackupSettings;
             CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
             ListBackupsSettings = existing.ListBackupsSettings;
@@ -76,6 +86,16 @@ namespace Google.Cloud.GkeBackup.V1
             UpdateRestorePlanOperationsSettings = existing.UpdateRestorePlanOperationsSettings.Clone();
             DeleteRestorePlanSettings = existing.DeleteRestorePlanSettings;
             DeleteRestorePlanOperationsSettings = existing.DeleteRestorePlanOperationsSettings.Clone();
+            CreateRestoreChannelSettings = existing.CreateRestoreChannelSettings;
+            CreateRestoreChannelOperationsSettings = existing.CreateRestoreChannelOperationsSettings.Clone();
+            ListRestoreChannelsSettings = existing.ListRestoreChannelsSettings;
+            GetRestoreChannelSettings = existing.GetRestoreChannelSettings;
+            UpdateRestoreChannelSettings = existing.UpdateRestoreChannelSettings;
+            UpdateRestoreChannelOperationsSettings = existing.UpdateRestoreChannelOperationsSettings.Clone();
+            DeleteRestoreChannelSettings = existing.DeleteRestoreChannelSettings;
+            DeleteRestoreChannelOperationsSettings = existing.DeleteRestoreChannelOperationsSettings.Clone();
+            ListRestorePlanBindingsSettings = existing.ListRestorePlanBindingsSettings;
+            GetRestorePlanBindingSettings = existing.GetRestorePlanBindingSettings;
             CreateRestoreSettings = existing.CreateRestoreSettings;
             CreateRestoreOperationsSettings = existing.CreateRestoreOperationsSettings.Clone();
             ListRestoresSettings = existing.ListRestoresSettings;
@@ -219,6 +239,168 @@ namespace Google.Cloud.GkeBackup.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.CreateBackupChannel</c> and <c>BackupForGKEClient.CreateBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupForGKEClient.CreateBackupChannel</c> and
+        /// <c>BackupForGKEClient.CreateBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBackupChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.ListBackupChannels</c> and <c>BackupForGKEClient.ListBackupChannelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupChannelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.GetBackupChannel</c> and <c>BackupForGKEClient.GetBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.UpdateBackupChannel</c> and <c>BackupForGKEClient.UpdateBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupForGKEClient.UpdateBackupChannel</c> and
+        /// <c>BackupForGKEClient.UpdateBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.DeleteBackupChannel</c> and <c>BackupForGKEClient.DeleteBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupForGKEClient.DeleteBackupChannel</c> and
+        /// <c>BackupForGKEClient.DeleteBackupChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.ListBackupPlanBindings</c> and <c>BackupForGKEClient.ListBackupPlanBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupPlanBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.GetBackupPlanBinding</c> and <c>BackupForGKEClient.GetBackupPlanBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupPlanBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -507,6 +689,169 @@ namespace Google.Cloud.GkeBackup.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.CreateRestoreChannel</c> and <c>BackupForGKEClient.CreateRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRestoreChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupForGKEClient.CreateRestoreChannel</c> and
+        /// <c>BackupForGKEClient.CreateRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateRestoreChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.ListRestoreChannels</c> and <c>BackupForGKEClient.ListRestoreChannelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRestoreChannelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.GetRestoreChannel</c> and <c>BackupForGKEClient.GetRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRestoreChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.UpdateRestoreChannel</c> and <c>BackupForGKEClient.UpdateRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRestoreChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupForGKEClient.UpdateRestoreChannel</c> and
+        /// <c>BackupForGKEClient.UpdateRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRestoreChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.DeleteRestoreChannel</c> and <c>BackupForGKEClient.DeleteRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRestoreChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupForGKEClient.DeleteRestoreChannel</c> and
+        /// <c>BackupForGKEClient.DeleteRestoreChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteRestoreChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.ListRestorePlanBindings</c> and <c>BackupForGKEClient.ListRestorePlanBindingsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRestorePlanBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.GetRestorePlanBinding</c> and <c>BackupForGKEClient.GetRestorePlanBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRestorePlanBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1600,6 +1945,1041 @@ namespace Google.Cloud.GkeBackup.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPlanAsync(BackupPlanName name, st::CancellationToken cancellationToken) =>
             DeleteBackupPlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> CreateBackupChannel(CreateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(CreateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(CreateBackupChannelRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBackupChannel</c>.</summary>
+        public virtual lro::OperationsClient CreateBackupChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateBackupChannel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> PollOnceCreateBackupChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupChannel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBackupChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> PollOnceCreateBackupChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupChannel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the BackupChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="backupChannel">
+        /// Required. The BackupChannel resource object to create.
+        /// </param>
+        /// <param name="backupChannelId">
+        /// Optional. The client-provided short name for the BackupChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of BackupChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> CreateBackupChannel(string parent, BackupChannel backupChannel, string backupChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupChannel(new CreateBackupChannelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupChannel = gax::GaxPreconditions.CheckNotNull(backupChannel, nameof(backupChannel)),
+                BackupChannelId = backupChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the BackupChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="backupChannel">
+        /// Required. The BackupChannel resource object to create.
+        /// </param>
+        /// <param name="backupChannelId">
+        /// Optional. The client-provided short name for the BackupChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of BackupChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(string parent, BackupChannel backupChannel, string backupChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupChannelAsync(new CreateBackupChannelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupChannel = gax::GaxPreconditions.CheckNotNull(backupChannel, nameof(backupChannel)),
+                BackupChannelId = backupChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the BackupChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="backupChannel">
+        /// Required. The BackupChannel resource object to create.
+        /// </param>
+        /// <param name="backupChannelId">
+        /// Optional. The client-provided short name for the BackupChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of BackupChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(string parent, BackupChannel backupChannel, string backupChannelId, st::CancellationToken cancellationToken) =>
+            CreateBackupChannelAsync(parent, backupChannel, backupChannelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the BackupChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="backupChannel">
+        /// Required. The BackupChannel resource object to create.
+        /// </param>
+        /// <param name="backupChannelId">
+        /// Optional. The client-provided short name for the BackupChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of BackupChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> CreateBackupChannel(gagr::LocationName parent, BackupChannel backupChannel, string backupChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupChannel(new CreateBackupChannelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupChannel = gax::GaxPreconditions.CheckNotNull(backupChannel, nameof(backupChannel)),
+                BackupChannelId = backupChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the BackupChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="backupChannel">
+        /// Required. The BackupChannel resource object to create.
+        /// </param>
+        /// <param name="backupChannelId">
+        /// Optional. The client-provided short name for the BackupChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of BackupChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(gagr::LocationName parent, BackupChannel backupChannel, string backupChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupChannelAsync(new CreateBackupChannelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupChannel = gax::GaxPreconditions.CheckNotNull(backupChannel, nameof(backupChannel)),
+                BackupChannelId = backupChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the BackupChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="backupChannel">
+        /// Required. The BackupChannel resource object to create.
+        /// </param>
+        /// <param name="backupChannelId">
+        /// Optional. The client-provided short name for the BackupChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of BackupChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(gagr::LocationName parent, BackupChannel backupChannel, string backupChannelId, st::CancellationToken cancellationToken) =>
+            CreateBackupChannelAsync(parent, backupChannel, backupChannelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupChannel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannels(ListBackupChannelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupChannel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannelsAsync(ListBackupChannelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the BackupChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupChannel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupChannelsRequest request = new ListBackupChannelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupChannels(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the BackupChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupChannel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupChannelsRequest request = new ListBackupChannelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupChannelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the BackupChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupChannel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupChannelsRequest request = new ListBackupChannelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupChannels(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the BackupChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupChannel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupChannelsRequest request = new ListBackupChannelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupChannelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupChannel GetBackupChannel(GetBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupChannel> GetBackupChannelAsync(GetBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupChannel> GetBackupChannelAsync(GetBackupChannelRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupChannel GetBackupChannel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupChannel(new GetBackupChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupChannel> GetBackupChannelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupChannelAsync(new GetBackupChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupChannel> GetBackupChannelAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupChannel GetBackupChannel(BackupChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupChannel(new GetBackupChannelRequest
+            {
+                BackupChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupChannel> GetBackupChannelAsync(BackupChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupChannelAsync(new GetBackupChannelRequest
+            {
+                BackupChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupChannel> GetBackupChannelAsync(BackupChannelName name, st::CancellationToken cancellationToken) =>
+            GetBackupChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> UpdateBackupChannel(UpdateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> UpdateBackupChannelAsync(UpdateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> UpdateBackupChannelAsync(UpdateBackupChannelRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackupChannel</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBackupChannel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> PollOnceUpdateBackupChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupChannel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> PollOnceUpdateBackupChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupChannel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="backupChannel">
+        /// Required. A new version of the BackupChannel resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. This is used to specify the fields to be overwritten in the
+        /// BackupChannel targeted for update. The values for each of these
+        /// updated fields will be taken from the `backup_channel` provided
+        /// with this request. Field names are relative to the root of the resource
+        /// (e.g., `description`, `labels`, etc.)
+        /// If no `update_mask` is provided, all fields in `backup_channel` will
+        /// be written to the target BackupChannel resource. Note that
+        /// OUTPUT_ONLY and IMMUTABLE fields in `backup_channel` are ignored and
+        /// are not used to update the target BackupChannel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupChannel, OperationMetadata> UpdateBackupChannel(BackupChannel backupChannel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupChannel(new UpdateBackupChannelRequest
+            {
+                BackupChannel = gax::GaxPreconditions.CheckNotNull(backupChannel, nameof(backupChannel)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="backupChannel">
+        /// Required. A new version of the BackupChannel resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. This is used to specify the fields to be overwritten in the
+        /// BackupChannel targeted for update. The values for each of these
+        /// updated fields will be taken from the `backup_channel` provided
+        /// with this request. Field names are relative to the root of the resource
+        /// (e.g., `description`, `labels`, etc.)
+        /// If no `update_mask` is provided, all fields in `backup_channel` will
+        /// be written to the target BackupChannel resource. Note that
+        /// OUTPUT_ONLY and IMMUTABLE fields in `backup_channel` are ignored and
+        /// are not used to update the target BackupChannel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> UpdateBackupChannelAsync(BackupChannel backupChannel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupChannelAsync(new UpdateBackupChannelRequest
+            {
+                BackupChannel = gax::GaxPreconditions.CheckNotNull(backupChannel, nameof(backupChannel)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="backupChannel">
+        /// Required. A new version of the BackupChannel resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. This is used to specify the fields to be overwritten in the
+        /// BackupChannel targeted for update. The values for each of these
+        /// updated fields will be taken from the `backup_channel` provided
+        /// with this request. Field names are relative to the root of the resource
+        /// (e.g., `description`, `labels`, etc.)
+        /// If no `update_mask` is provided, all fields in `backup_channel` will
+        /// be written to the target BackupChannel resource. Note that
+        /// OUTPUT_ONLY and IMMUTABLE fields in `backup_channel` are ignored and
+        /// are not used to update the target BackupChannel.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupChannel, OperationMetadata>> UpdateBackupChannelAsync(BackupChannel backupChannel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupChannelAsync(backupChannel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupChannel(DeleteBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(DeleteBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(DeleteBackupChannelRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackupChannel</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackupChannel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBackupChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackupChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBackupChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupChannel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupChannel(new DeleteBackupChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupChannelAsync(new DeleteBackupChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupChannel(BackupChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupChannel(new DeleteBackupChannelRequest
+            {
+                BackupChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(BackupChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupChannelAsync(new DeleteBackupChannelRequest
+            {
+                BackupChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupChannel name.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(BackupChannelName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindings(ListBackupPlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindingsAsync(ListBackupPlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BackupChannel that contains the BackupPlanBindings to list.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanBindingsRequest request = new ListBackupPlanBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BackupChannel that contains the BackupPlanBindings to list.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanBindingsRequest request = new ListBackupPlanBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BackupChannel that contains the BackupPlanBindings to list.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindings(BackupChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanBindingsRequest request = new ListBackupPlanBindingsRequest
+            {
+                ParentAsBackupChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The BackupChannel that contains the BackupPlanBindings to list.
+        /// Format: `projects/*/locations/*/backupChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindingsAsync(BackupChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanBindingsRequest request = new ListBackupPlanBindingsRequest
+            {
+                ParentAsBackupChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPlanBinding GetBackupPlanBinding(GetBackupPlanBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(GetBackupPlanBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(GetBackupPlanBindingRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupPlanBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupPlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/backupChannels/*/backupPlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPlanBinding GetBackupPlanBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanBinding(new GetBackupPlanBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupPlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/backupChannels/*/backupPlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanBindingAsync(new GetBackupPlanBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupPlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/backupChannels/*/backupPlanBindings/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupPlanBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupPlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/backupChannels/*/backupPlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPlanBinding GetBackupPlanBinding(BackupPlanBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanBinding(new GetBackupPlanBindingRequest
+            {
+                BackupPlanBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupPlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/backupChannels/*/backupPlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(BackupPlanBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanBindingAsync(new GetBackupPlanBindingRequest
+            {
+                BackupPlanBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified BackupPlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/backupChannels/*/backupPlanBindings/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(BackupPlanBindingName name, st::CancellationToken cancellationToken) =>
+            GetBackupPlanBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a Backup for the given BackupPlan.
@@ -3374,6 +4754,1044 @@ namespace Google.Cloud.GkeBackup.V1
             DeleteRestorePlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> CreateRestoreChannel(CreateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(CreateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(CreateRestoreChannelRequest request, st::CancellationToken cancellationToken) =>
+            CreateRestoreChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateRestoreChannel</c>.</summary>
+        public virtual lro::OperationsClient CreateRestoreChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateRestoreChannel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> PollOnceCreateRestoreChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreChannel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRestoreChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> PollOnceCreateRestoreChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreChannel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the RestoreChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="restoreChannel">
+        /// Required. The RestoreChannel resource object to create.
+        /// </param>
+        /// <param name="restoreChannelId">
+        /// Optional. The client-provided short name for the RestoreChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of RestoreChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> CreateRestoreChannel(string parent, RestoreChannel restoreChannel, string restoreChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreChannel(new CreateRestoreChannelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreChannel = gax::GaxPreconditions.CheckNotNull(restoreChannel, nameof(restoreChannel)),
+                RestoreChannelId = restoreChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the RestoreChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="restoreChannel">
+        /// Required. The RestoreChannel resource object to create.
+        /// </param>
+        /// <param name="restoreChannelId">
+        /// Optional. The client-provided short name for the RestoreChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of RestoreChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(string parent, RestoreChannel restoreChannel, string restoreChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreChannelAsync(new CreateRestoreChannelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreChannel = gax::GaxPreconditions.CheckNotNull(restoreChannel, nameof(restoreChannel)),
+                RestoreChannelId = restoreChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the RestoreChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="restoreChannel">
+        /// Required. The RestoreChannel resource object to create.
+        /// </param>
+        /// <param name="restoreChannelId">
+        /// Optional. The client-provided short name for the RestoreChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of RestoreChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(string parent, RestoreChannel restoreChannel, string restoreChannelId, st::CancellationToken cancellationToken) =>
+            CreateRestoreChannelAsync(parent, restoreChannel, restoreChannelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the RestoreChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="restoreChannel">
+        /// Required. The RestoreChannel resource object to create.
+        /// </param>
+        /// <param name="restoreChannelId">
+        /// Optional. The client-provided short name for the RestoreChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of RestoreChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> CreateRestoreChannel(gagr::LocationName parent, RestoreChannel restoreChannel, string restoreChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreChannel(new CreateRestoreChannelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreChannel = gax::GaxPreconditions.CheckNotNull(restoreChannel, nameof(restoreChannel)),
+                RestoreChannelId = restoreChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the RestoreChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="restoreChannel">
+        /// Required. The RestoreChannel resource object to create.
+        /// </param>
+        /// <param name="restoreChannelId">
+        /// Optional. The client-provided short name for the RestoreChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of RestoreChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(gagr::LocationName parent, RestoreChannel restoreChannel, string restoreChannelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreChannelAsync(new CreateRestoreChannelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreChannel = gax::GaxPreconditions.CheckNotNull(restoreChannel, nameof(restoreChannel)),
+                RestoreChannelId = restoreChannelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location within which to create the RestoreChannel.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="restoreChannel">
+        /// Required. The RestoreChannel resource object to create.
+        /// </param>
+        /// <param name="restoreChannelId">
+        /// Optional. The client-provided short name for the RestoreChannel resource.
+        /// This name must:
+        /// 
+        /// - be between 1 and 63 characters long (inclusive)
+        /// - consist of only lower-case ASCII letters, numbers, and dashes
+        /// - start with a lower-case letter
+        /// - end with a lower-case letter or number
+        /// - be unique within the set of RestoreChannels in this location
+        /// If the user does not provide a name, a uuid will be used as the name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(gagr::LocationName parent, RestoreChannel restoreChannel, string restoreChannelId, st::CancellationToken cancellationToken) =>
+            CreateRestoreChannelAsync(parent, restoreChannel, restoreChannelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannels(ListRestoreChannelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannelsAsync(ListRestoreChannelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the RestoreChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreChannelsRequest request = new ListRestoreChannelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreChannels(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the RestoreChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreChannelsRequest request = new ListRestoreChannelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreChannelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the RestoreChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreChannelsRequest request = new ListRestoreChannelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreChannels(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location that contains the RestoreChannels to list.
+        /// Format: `projects/*/locations/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreChannelsRequest request = new ListRestoreChannelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreChannelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreChannel GetRestoreChannel(GetRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreChannel> GetRestoreChannelAsync(GetRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreChannel> GetRestoreChannelAsync(GetRestoreChannelRequest request, st::CancellationToken cancellationToken) =>
+            GetRestoreChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreChannel GetRestoreChannel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreChannel(new GetRestoreChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreChannel> GetRestoreChannelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreChannelAsync(new GetRestoreChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreChannel> GetRestoreChannelAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRestoreChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreChannel GetRestoreChannel(RestoreChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreChannel(new GetRestoreChannelRequest
+            {
+                RestoreChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreChannel> GetRestoreChannelAsync(RestoreChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreChannelAsync(new GetRestoreChannelRequest
+            {
+                RestoreChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreChannel> GetRestoreChannelAsync(RestoreChannelName name, st::CancellationToken cancellationToken) =>
+            GetRestoreChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> UpdateRestoreChannel(UpdateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> UpdateRestoreChannelAsync(UpdateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> UpdateRestoreChannelAsync(UpdateRestoreChannelRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRestoreChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRestoreChannel</c>.</summary>
+        public virtual lro::OperationsClient UpdateRestoreChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRestoreChannel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> PollOnceUpdateRestoreChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreChannel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRestoreChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRestoreChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> PollOnceUpdateRestoreChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreChannel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRestoreChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="restoreChannel">
+        /// Required. A new version of the RestoreChannel resource that contains
+        /// updated fields. This may be sparsely populated if an `update_mask` is
+        /// provided.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. This is used to specify the fields to be overwritten in the
+        /// RestoreChannel targeted for update. The values for each of these
+        /// updated fields will be taken from the `restore_channel` provided
+        /// with this request. Field names are relative to the root of the resource
+        /// (e.g., `description`, `destination_project_id`, etc.)
+        /// If no `update_mask` is provided, all fields in `restore_channel` will
+        /// be written to the target RestoreChannel resource. Note that
+        /// OUTPUT_ONLY and IMMUTABLE fields in `restore_channel` are ignored and
+        /// are not used to update the target RestoreChannel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreChannel, OperationMetadata> UpdateRestoreChannel(RestoreChannel restoreChannel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRestoreChannel(new UpdateRestoreChannelRequest
+            {
+                RestoreChannel = gax::GaxPreconditions.CheckNotNull(restoreChannel, nameof(restoreChannel)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="restoreChannel">
+        /// Required. A new version of the RestoreChannel resource that contains
+        /// updated fields. This may be sparsely populated if an `update_mask` is
+        /// provided.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. This is used to specify the fields to be overwritten in the
+        /// RestoreChannel targeted for update. The values for each of these
+        /// updated fields will be taken from the `restore_channel` provided
+        /// with this request. Field names are relative to the root of the resource
+        /// (e.g., `description`, `destination_project_id`, etc.)
+        /// If no `update_mask` is provided, all fields in `restore_channel` will
+        /// be written to the target RestoreChannel resource. Note that
+        /// OUTPUT_ONLY and IMMUTABLE fields in `restore_channel` are ignored and
+        /// are not used to update the target RestoreChannel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> UpdateRestoreChannelAsync(RestoreChannel restoreChannel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRestoreChannelAsync(new UpdateRestoreChannelRequest
+            {
+                RestoreChannel = gax::GaxPreconditions.CheckNotNull(restoreChannel, nameof(restoreChannel)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="restoreChannel">
+        /// Required. A new version of the RestoreChannel resource that contains
+        /// updated fields. This may be sparsely populated if an `update_mask` is
+        /// provided.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. This is used to specify the fields to be overwritten in the
+        /// RestoreChannel targeted for update. The values for each of these
+        /// updated fields will be taken from the `restore_channel` provided
+        /// with this request. Field names are relative to the root of the resource
+        /// (e.g., `description`, `destination_project_id`, etc.)
+        /// If no `update_mask` is provided, all fields in `restore_channel` will
+        /// be written to the target RestoreChannel resource. Note that
+        /// OUTPUT_ONLY and IMMUTABLE fields in `restore_channel` are ignored and
+        /// are not used to update the target RestoreChannel.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> UpdateRestoreChannelAsync(RestoreChannel restoreChannel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateRestoreChannelAsync(restoreChannel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreChannel(DeleteRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(DeleteRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(DeleteRestoreChannelRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRestoreChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreChannel</c>.</summary>
+        public virtual lro::OperationsClient DeleteRestoreChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteRestoreChannel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteRestoreChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRestoreChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteRestoreChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreChannel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreChannel(new DeleteRestoreChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreChannelAsync(new DeleteRestoreChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreChannel(RestoreChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreChannel(new DeleteRestoreChannelRequest
+            {
+                RestoreChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(RestoreChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreChannelAsync(new DeleteRestoreChannelRequest
+            {
+                RestoreChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestoreChannel name.
+        /// Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(RestoreChannelName name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindings(ListRestorePlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindingsAsync(ListRestorePlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The RestoreChannel that contains the ListRestorePlanBindings to
+        /// list. Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlanBindingsRequest request = new ListRestorePlanBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlanBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The RestoreChannel that contains the ListRestorePlanBindings to
+        /// list. Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlanBindingsRequest request = new ListRestorePlanBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlanBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The RestoreChannel that contains the ListRestorePlanBindings to
+        /// list. Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindings(RestoreChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlanBindingsRequest request = new ListRestorePlanBindingsRequest
+            {
+                ParentAsRestoreChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlanBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The RestoreChannel that contains the ListRestorePlanBindings to
+        /// list. Format: `projects/*/locations/*/restoreChannels/*`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindingsAsync(RestoreChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestorePlanBindingsRequest request = new ListRestorePlanBindingsRequest
+            {
+                ParentAsRestoreChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestorePlanBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestorePlanBinding GetRestorePlanBinding(GetRestorePlanBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(GetRestorePlanBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(GetRestorePlanBindingRequest request, st::CancellationToken cancellationToken) =>
+            GetRestorePlanBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestorePlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/restoreChannels/*/restorePlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestorePlanBinding GetRestorePlanBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestorePlanBinding(new GetRestorePlanBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestorePlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/restoreChannels/*/restorePlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestorePlanBindingAsync(new GetRestorePlanBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestorePlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/restoreChannels/*/restorePlanBindings/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRestorePlanBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestorePlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/restoreChannels/*/restorePlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestorePlanBinding GetRestorePlanBinding(RestorePlanBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestorePlanBinding(new GetRestorePlanBindingRequest
+            {
+                RestorePlanBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestorePlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/restoreChannels/*/restorePlanBindings/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(RestorePlanBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestorePlanBindingAsync(new GetRestorePlanBindingRequest
+            {
+                RestorePlanBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Fully qualified RestorePlanBinding name.
+        /// Format:
+        /// `projects/*/locations/*/restoreChannels/*/restorePlanBindings/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(RestorePlanBindingName name, st::CancellationToken cancellationToken) =>
+            GetRestorePlanBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a new Restore for the given RestorePlan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4525,6 +6943,20 @@ namespace Google.Cloud.GkeBackup.V1
 
         private readonly gaxgrpc::ApiCall<DeleteBackupPlanRequest, lro::Operation> _callDeleteBackupPlan;
 
+        private readonly gaxgrpc::ApiCall<CreateBackupChannelRequest, lro::Operation> _callCreateBackupChannel;
+
+        private readonly gaxgrpc::ApiCall<ListBackupChannelsRequest, ListBackupChannelsResponse> _callListBackupChannels;
+
+        private readonly gaxgrpc::ApiCall<GetBackupChannelRequest, BackupChannel> _callGetBackupChannel;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupChannelRequest, lro::Operation> _callUpdateBackupChannel;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupChannelRequest, lro::Operation> _callDeleteBackupChannel;
+
+        private readonly gaxgrpc::ApiCall<ListBackupPlanBindingsRequest, ListBackupPlanBindingsResponse> _callListBackupPlanBindings;
+
+        private readonly gaxgrpc::ApiCall<GetBackupPlanBindingRequest, BackupPlanBinding> _callGetBackupPlanBinding;
+
         private readonly gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> _callCreateBackup;
 
         private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
@@ -4548,6 +6980,20 @@ namespace Google.Cloud.GkeBackup.V1
         private readonly gaxgrpc::ApiCall<UpdateRestorePlanRequest, lro::Operation> _callUpdateRestorePlan;
 
         private readonly gaxgrpc::ApiCall<DeleteRestorePlanRequest, lro::Operation> _callDeleteRestorePlan;
+
+        private readonly gaxgrpc::ApiCall<CreateRestoreChannelRequest, lro::Operation> _callCreateRestoreChannel;
+
+        private readonly gaxgrpc::ApiCall<ListRestoreChannelsRequest, ListRestoreChannelsResponse> _callListRestoreChannels;
+
+        private readonly gaxgrpc::ApiCall<GetRestoreChannelRequest, RestoreChannel> _callGetRestoreChannel;
+
+        private readonly gaxgrpc::ApiCall<UpdateRestoreChannelRequest, lro::Operation> _callUpdateRestoreChannel;
+
+        private readonly gaxgrpc::ApiCall<DeleteRestoreChannelRequest, lro::Operation> _callDeleteRestoreChannel;
+
+        private readonly gaxgrpc::ApiCall<ListRestorePlanBindingsRequest, ListRestorePlanBindingsResponse> _callListRestorePlanBindings;
+
+        private readonly gaxgrpc::ApiCall<GetRestorePlanBindingRequest, RestorePlanBinding> _callGetRestorePlanBinding;
 
         private readonly gaxgrpc::ApiCall<CreateRestoreRequest, lro::Operation> _callCreateRestore;
 
@@ -4583,12 +7029,18 @@ namespace Google.Cloud.GkeBackup.V1
             CreateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanOperationsSettings, logger);
             UpdateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanOperationsSettings, logger);
             DeleteBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanOperationsSettings, logger);
+            CreateBackupChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupChannelOperationsSettings, logger);
+            UpdateBackupChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupChannelOperationsSettings, logger);
+            DeleteBackupChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupChannelOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
             CreateRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestorePlanOperationsSettings, logger);
             UpdateRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestorePlanOperationsSettings, logger);
             DeleteRestorePlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestorePlanOperationsSettings, logger);
+            CreateRestoreChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreChannelOperationsSettings, logger);
+            UpdateRestoreChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreChannelOperationsSettings, logger);
+            DeleteRestoreChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreChannelOperationsSettings, logger);
             CreateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreOperationsSettings, logger);
             UpdateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreOperationsSettings, logger);
             DeleteRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreOperationsSettings, logger);
@@ -4609,6 +7061,27 @@ namespace Google.Cloud.GkeBackup.V1
             _callDeleteBackupPlan = clientHelper.BuildApiCall<DeleteBackupPlanRequest, lro::Operation>("DeleteBackupPlan", grpcClient.DeleteBackupPlanAsync, grpcClient.DeleteBackupPlan, effectiveSettings.DeleteBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackupPlan);
             Modify_DeleteBackupPlanApiCall(ref _callDeleteBackupPlan);
+            _callCreateBackupChannel = clientHelper.BuildApiCall<CreateBackupChannelRequest, lro::Operation>("CreateBackupChannel", grpcClient.CreateBackupChannelAsync, grpcClient.CreateBackupChannel, effectiveSettings.CreateBackupChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackupChannel);
+            Modify_CreateBackupChannelApiCall(ref _callCreateBackupChannel);
+            _callListBackupChannels = clientHelper.BuildApiCall<ListBackupChannelsRequest, ListBackupChannelsResponse>("ListBackupChannels", grpcClient.ListBackupChannelsAsync, grpcClient.ListBackupChannels, effectiveSettings.ListBackupChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupChannels);
+            Modify_ListBackupChannelsApiCall(ref _callListBackupChannels);
+            _callGetBackupChannel = clientHelper.BuildApiCall<GetBackupChannelRequest, BackupChannel>("GetBackupChannel", grpcClient.GetBackupChannelAsync, grpcClient.GetBackupChannel, effectiveSettings.GetBackupChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupChannel);
+            Modify_GetBackupChannelApiCall(ref _callGetBackupChannel);
+            _callUpdateBackupChannel = clientHelper.BuildApiCall<UpdateBackupChannelRequest, lro::Operation>("UpdateBackupChannel", grpcClient.UpdateBackupChannelAsync, grpcClient.UpdateBackupChannel, effectiveSettings.UpdateBackupChannelSettings).WithGoogleRequestParam("backup_channel.name", request => request.BackupChannel?.Name);
+            Modify_ApiCall(ref _callUpdateBackupChannel);
+            Modify_UpdateBackupChannelApiCall(ref _callUpdateBackupChannel);
+            _callDeleteBackupChannel = clientHelper.BuildApiCall<DeleteBackupChannelRequest, lro::Operation>("DeleteBackupChannel", grpcClient.DeleteBackupChannelAsync, grpcClient.DeleteBackupChannel, effectiveSettings.DeleteBackupChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackupChannel);
+            Modify_DeleteBackupChannelApiCall(ref _callDeleteBackupChannel);
+            _callListBackupPlanBindings = clientHelper.BuildApiCall<ListBackupPlanBindingsRequest, ListBackupPlanBindingsResponse>("ListBackupPlanBindings", grpcClient.ListBackupPlanBindingsAsync, grpcClient.ListBackupPlanBindings, effectiveSettings.ListBackupPlanBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupPlanBindings);
+            Modify_ListBackupPlanBindingsApiCall(ref _callListBackupPlanBindings);
+            _callGetBackupPlanBinding = clientHelper.BuildApiCall<GetBackupPlanBindingRequest, BackupPlanBinding>("GetBackupPlanBinding", grpcClient.GetBackupPlanBindingAsync, grpcClient.GetBackupPlanBinding, effectiveSettings.GetBackupPlanBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupPlanBinding);
+            Modify_GetBackupPlanBindingApiCall(ref _callGetBackupPlanBinding);
             _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>("CreateBackup", grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackup);
             Modify_CreateBackupApiCall(ref _callCreateBackup);
@@ -4645,6 +7118,27 @@ namespace Google.Cloud.GkeBackup.V1
             _callDeleteRestorePlan = clientHelper.BuildApiCall<DeleteRestorePlanRequest, lro::Operation>("DeleteRestorePlan", grpcClient.DeleteRestorePlanAsync, grpcClient.DeleteRestorePlan, effectiveSettings.DeleteRestorePlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRestorePlan);
             Modify_DeleteRestorePlanApiCall(ref _callDeleteRestorePlan);
+            _callCreateRestoreChannel = clientHelper.BuildApiCall<CreateRestoreChannelRequest, lro::Operation>("CreateRestoreChannel", grpcClient.CreateRestoreChannelAsync, grpcClient.CreateRestoreChannel, effectiveSettings.CreateRestoreChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRestoreChannel);
+            Modify_CreateRestoreChannelApiCall(ref _callCreateRestoreChannel);
+            _callListRestoreChannels = clientHelper.BuildApiCall<ListRestoreChannelsRequest, ListRestoreChannelsResponse>("ListRestoreChannels", grpcClient.ListRestoreChannelsAsync, grpcClient.ListRestoreChannels, effectiveSettings.ListRestoreChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRestoreChannels);
+            Modify_ListRestoreChannelsApiCall(ref _callListRestoreChannels);
+            _callGetRestoreChannel = clientHelper.BuildApiCall<GetRestoreChannelRequest, RestoreChannel>("GetRestoreChannel", grpcClient.GetRestoreChannelAsync, grpcClient.GetRestoreChannel, effectiveSettings.GetRestoreChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRestoreChannel);
+            Modify_GetRestoreChannelApiCall(ref _callGetRestoreChannel);
+            _callUpdateRestoreChannel = clientHelper.BuildApiCall<UpdateRestoreChannelRequest, lro::Operation>("UpdateRestoreChannel", grpcClient.UpdateRestoreChannelAsync, grpcClient.UpdateRestoreChannel, effectiveSettings.UpdateRestoreChannelSettings).WithGoogleRequestParam("restore_channel.name", request => request.RestoreChannel?.Name);
+            Modify_ApiCall(ref _callUpdateRestoreChannel);
+            Modify_UpdateRestoreChannelApiCall(ref _callUpdateRestoreChannel);
+            _callDeleteRestoreChannel = clientHelper.BuildApiCall<DeleteRestoreChannelRequest, lro::Operation>("DeleteRestoreChannel", grpcClient.DeleteRestoreChannelAsync, grpcClient.DeleteRestoreChannel, effectiveSettings.DeleteRestoreChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRestoreChannel);
+            Modify_DeleteRestoreChannelApiCall(ref _callDeleteRestoreChannel);
+            _callListRestorePlanBindings = clientHelper.BuildApiCall<ListRestorePlanBindingsRequest, ListRestorePlanBindingsResponse>("ListRestorePlanBindings", grpcClient.ListRestorePlanBindingsAsync, grpcClient.ListRestorePlanBindings, effectiveSettings.ListRestorePlanBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRestorePlanBindings);
+            Modify_ListRestorePlanBindingsApiCall(ref _callListRestorePlanBindings);
+            _callGetRestorePlanBinding = clientHelper.BuildApiCall<GetRestorePlanBindingRequest, RestorePlanBinding>("GetRestorePlanBinding", grpcClient.GetRestorePlanBindingAsync, grpcClient.GetRestorePlanBinding, effectiveSettings.GetRestorePlanBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRestorePlanBinding);
+            Modify_GetRestorePlanBindingApiCall(ref _callGetRestorePlanBinding);
             _callCreateRestore = clientHelper.BuildApiCall<CreateRestoreRequest, lro::Operation>("CreateRestore", grpcClient.CreateRestoreAsync, grpcClient.CreateRestore, effectiveSettings.CreateRestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRestore);
             Modify_CreateRestoreApiCall(ref _callCreateRestore);
@@ -4684,6 +7178,20 @@ namespace Google.Cloud.GkeBackup.V1
 
         partial void Modify_DeleteBackupPlanApiCall(ref gaxgrpc::ApiCall<DeleteBackupPlanRequest, lro::Operation> call);
 
+        partial void Modify_CreateBackupChannelApiCall(ref gaxgrpc::ApiCall<CreateBackupChannelRequest, lro::Operation> call);
+
+        partial void Modify_ListBackupChannelsApiCall(ref gaxgrpc::ApiCall<ListBackupChannelsRequest, ListBackupChannelsResponse> call);
+
+        partial void Modify_GetBackupChannelApiCall(ref gaxgrpc::ApiCall<GetBackupChannelRequest, BackupChannel> call);
+
+        partial void Modify_UpdateBackupChannelApiCall(ref gaxgrpc::ApiCall<UpdateBackupChannelRequest, lro::Operation> call);
+
+        partial void Modify_DeleteBackupChannelApiCall(ref gaxgrpc::ApiCall<DeleteBackupChannelRequest, lro::Operation> call);
+
+        partial void Modify_ListBackupPlanBindingsApiCall(ref gaxgrpc::ApiCall<ListBackupPlanBindingsRequest, ListBackupPlanBindingsResponse> call);
+
+        partial void Modify_GetBackupPlanBindingApiCall(ref gaxgrpc::ApiCall<GetBackupPlanBindingRequest, BackupPlanBinding> call);
+
         partial void Modify_CreateBackupApiCall(ref gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> call);
 
         partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
@@ -4707,6 +7215,20 @@ namespace Google.Cloud.GkeBackup.V1
         partial void Modify_UpdateRestorePlanApiCall(ref gaxgrpc::ApiCall<UpdateRestorePlanRequest, lro::Operation> call);
 
         partial void Modify_DeleteRestorePlanApiCall(ref gaxgrpc::ApiCall<DeleteRestorePlanRequest, lro::Operation> call);
+
+        partial void Modify_CreateRestoreChannelApiCall(ref gaxgrpc::ApiCall<CreateRestoreChannelRequest, lro::Operation> call);
+
+        partial void Modify_ListRestoreChannelsApiCall(ref gaxgrpc::ApiCall<ListRestoreChannelsRequest, ListRestoreChannelsResponse> call);
+
+        partial void Modify_GetRestoreChannelApiCall(ref gaxgrpc::ApiCall<GetRestoreChannelRequest, RestoreChannel> call);
+
+        partial void Modify_UpdateRestoreChannelApiCall(ref gaxgrpc::ApiCall<UpdateRestoreChannelRequest, lro::Operation> call);
+
+        partial void Modify_DeleteRestoreChannelApiCall(ref gaxgrpc::ApiCall<DeleteRestoreChannelRequest, lro::Operation> call);
+
+        partial void Modify_ListRestorePlanBindingsApiCall(ref gaxgrpc::ApiCall<ListRestorePlanBindingsRequest, ListRestorePlanBindingsResponse> call);
+
+        partial void Modify_GetRestorePlanBindingApiCall(ref gaxgrpc::ApiCall<GetRestorePlanBindingRequest, RestorePlanBinding> call);
 
         partial void Modify_CreateRestoreApiCall(ref gaxgrpc::ApiCall<CreateRestoreRequest, lro::Operation> call);
 
@@ -4745,6 +7267,20 @@ namespace Google.Cloud.GkeBackup.V1
 
         partial void Modify_DeleteBackupPlanRequest(ref DeleteBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateBackupChannelRequest(ref CreateBackupChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupChannelsRequest(ref ListBackupChannelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupChannelRequest(ref GetBackupChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupChannelRequest(ref UpdateBackupChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupChannelRequest(ref DeleteBackupChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupPlanBindingsRequest(ref ListBackupPlanBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupPlanBindingRequest(ref GetBackupPlanBindingRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateBackupRequest(ref CreateBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
@@ -4768,6 +7304,20 @@ namespace Google.Cloud.GkeBackup.V1
         partial void Modify_UpdateRestorePlanRequest(ref UpdateRestorePlanRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRestorePlanRequest(ref DeleteRestorePlanRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRestoreChannelRequest(ref CreateRestoreChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRestoreChannelsRequest(ref ListRestoreChannelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRestoreChannelRequest(ref GetRestoreChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRestoreChannelRequest(ref UpdateRestoreChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRestoreChannelRequest(ref DeleteRestoreChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRestorePlanBindingsRequest(ref ListRestorePlanBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRestorePlanBindingRequest(ref GetRestorePlanBindingRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateRestoreRequest(ref CreateRestoreRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4912,6 +7462,183 @@ namespace Google.Cloud.GkeBackup.V1
         {
             Modify_DeleteBackupPlanRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackupPlan.Async(request, callSettings).ConfigureAwait(false), DeleteBackupPlanOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateBackupChannel</c>.</summary>
+        public override lro::OperationsClient CreateBackupChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupChannel, OperationMetadata> CreateBackupChannel(CreateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupChannel, OperationMetadata>(_callCreateBackupChannel.Sync(request, callSettings), CreateBackupChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new BackupChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupChannel, OperationMetadata>> CreateBackupChannelAsync(CreateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupChannel, OperationMetadata>(await _callCreateBackupChannel.Async(request, callSettings).ConfigureAwait(false), CreateBackupChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupChannel"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannels(ListBackupChannelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupChannelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupChannelsRequest, ListBackupChannelsResponse, BackupChannel>(_callListBackupChannels, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupChannel"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupChannelsResponse, BackupChannel> ListBackupChannelsAsync(ListBackupChannelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupChannelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupChannelsRequest, ListBackupChannelsResponse, BackupChannel>(_callListBackupChannels, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupChannel GetBackupChannel(GetBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupChannelRequest(ref request, ref callSettings);
+            return _callGetBackupChannel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupChannel> GetBackupChannelAsync(GetBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupChannelRequest(ref request, ref callSettings);
+            return _callGetBackupChannel.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBackupChannel</c>.</summary>
+        public override lro::OperationsClient UpdateBackupChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupChannel, OperationMetadata> UpdateBackupChannel(UpdateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupChannel, OperationMetadata>(_callUpdateBackupChannel.Sync(request, callSettings), UpdateBackupChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupChannel, OperationMetadata>> UpdateBackupChannelAsync(UpdateBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupChannel, OperationMetadata>(await _callUpdateBackupChannel.Async(request, callSettings).ConfigureAwait(false), UpdateBackupChannelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackupChannel</c>.</summary>
+        public override lro::OperationsClient DeleteBackupChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupChannel(DeleteBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBackupChannel.Sync(request, callSettings), DeleteBackupChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an existing BackupChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupChannelAsync(DeleteBackupChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackupChannel.Async(request, callSettings).ConfigureAwait(false), DeleteBackupChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindings(ListBackupPlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupPlanBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupPlanBindingsRequest, ListBackupPlanBindingsResponse, BackupPlanBinding>(_callListBackupPlanBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanBinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupPlanBindingsResponse, BackupPlanBinding> ListBackupPlanBindingsAsync(ListBackupPlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupPlanBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupPlanBindingsRequest, ListBackupPlanBindingsResponse, BackupPlanBinding>(_callListBackupPlanBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupPlanBinding GetBackupPlanBinding(GetBackupPlanBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupPlanBindingRequest(ref request, ref callSettings);
+            return _callGetBackupPlanBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single BackupPlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupPlanBinding> GetBackupPlanBindingAsync(GetBackupPlanBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupPlanBindingRequest(ref request, ref callSettings);
+            return _callGetBackupPlanBinding.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateBackup</c>.</summary>
@@ -5220,6 +7947,183 @@ namespace Google.Cloud.GkeBackup.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteRestorePlan.Async(request, callSettings).ConfigureAwait(false), DeleteRestorePlanOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>CreateRestoreChannel</c>.</summary>
+        public override lro::OperationsClient CreateRestoreChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreChannel, OperationMetadata> CreateRestoreChannel(CreateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreChannel, OperationMetadata>(_callCreateRestoreChannel.Sync(request, callSettings), CreateRestoreChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new RestoreChannel in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> CreateRestoreChannelAsync(CreateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreChannel, OperationMetadata>(await _callCreateRestoreChannel.Async(request, callSettings).ConfigureAwait(false), CreateRestoreChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannels(ListRestoreChannelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreChannelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRestoreChannelsRequest, ListRestoreChannelsResponse, RestoreChannel>(_callListRestoreChannels, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreChannels in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreChannel"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRestoreChannelsResponse, RestoreChannel> ListRestoreChannelsAsync(ListRestoreChannelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreChannelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRestoreChannelsRequest, ListRestoreChannelsResponse, RestoreChannel>(_callListRestoreChannels, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RestoreChannel GetRestoreChannel(GetRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreChannelRequest(ref request, ref callSettings);
+            return _callGetRestoreChannel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RestoreChannel> GetRestoreChannelAsync(GetRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreChannelRequest(ref request, ref callSettings);
+            return _callGetRestoreChannel.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateRestoreChannel</c>.</summary>
+        public override lro::OperationsClient UpdateRestoreChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreChannel, OperationMetadata> UpdateRestoreChannel(UpdateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRestoreChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreChannel, OperationMetadata>(_callUpdateRestoreChannel.Sync(request, callSettings), UpdateRestoreChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreChannel, OperationMetadata>> UpdateRestoreChannelAsync(UpdateRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRestoreChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreChannel, OperationMetadata>(await _callUpdateRestoreChannel.Async(request, callSettings).ConfigureAwait(false), UpdateRestoreChannelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreChannel</c>.</summary>
+        public override lro::OperationsClient DeleteRestoreChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreChannel(DeleteRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteRestoreChannel.Sync(request, callSettings), DeleteRestoreChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an existing RestoreChannel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreChannelAsync(DeleteRestoreChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteRestoreChannel.Async(request, callSettings).ConfigureAwait(false), DeleteRestoreChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindings(ListRestorePlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestorePlanBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRestorePlanBindingsRequest, ListRestorePlanBindingsResponse, RestorePlanBinding>(_callListRestorePlanBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestorePlanBindings in a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestorePlanBinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRestorePlanBindingsResponse, RestorePlanBinding> ListRestorePlanBindingsAsync(ListRestorePlanBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestorePlanBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRestorePlanBindingsRequest, ListRestorePlanBindingsResponse, RestorePlanBinding>(_callListRestorePlanBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RestorePlanBinding GetRestorePlanBinding(GetRestorePlanBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestorePlanBindingRequest(ref request, ref callSettings);
+            return _callGetRestorePlanBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the details of a single RestorePlanBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RestorePlanBinding> GetRestorePlanBindingAsync(GetRestorePlanBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestorePlanBindingRequest(ref request, ref callSettings);
+            return _callGetRestorePlanBinding.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>CreateRestore</c>.</summary>
         public override lro::OperationsClient CreateRestoreOperationsClient { get; }
 
@@ -5426,6 +8330,14 @@ namespace Google.Cloud.GkeBackup.V1
     {
     }
 
+    public partial class ListBackupChannelsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupPlanBindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBackupsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5435,6 +8347,14 @@ namespace Google.Cloud.GkeBackup.V1
     }
 
     public partial class ListRestorePlansRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRestoreChannelsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRestorePlanBindingsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5450,6 +8370,22 @@ namespace Google.Cloud.GkeBackup.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BackupPlan> GetEnumerator() => BackupPlans.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupChannelsResponse : gaxgrpc::IPageResponse<BackupChannel>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupChannel> GetEnumerator() => BackupChannels.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupPlanBindingsResponse : gaxgrpc::IPageResponse<BackupPlanBinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupPlanBinding> GetEnumerator() => BackupPlanBindings.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -5474,6 +8410,22 @@ namespace Google.Cloud.GkeBackup.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<RestorePlan> GetEnumerator() => RestorePlans.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRestoreChannelsResponse : gaxgrpc::IPageResponse<RestoreChannel>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RestoreChannel> GetEnumerator() => RestoreChannels.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRestorePlanBindingsResponse : gaxgrpc::IPageResponse<RestorePlanBinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RestorePlanBinding> GetEnumerator() => RestorePlanBindings.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -580,6 +580,78 @@ namespace Google.Cloud.GkeBackup.V1
         }
     }
 
+    public partial class CreateBackupChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupChannelsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::BackupChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::BackupChannelName BackupChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::BackupChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBackupChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::BackupChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::BackupChannelName BackupChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::BackupChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupPlanBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="BackupChannelName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public BackupChannelName ParentAsBackupChannelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BackupChannelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupPlanBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::BackupPlanBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::BackupPlanBindingName BackupPlanBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::BackupPlanBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateBackupRequest
     {
         /// <summary>
@@ -694,6 +766,78 @@ namespace Google.Cloud.GkeBackup.V1
         public gcgv::RestorePlanName RestorePlanName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::RestorePlanName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateRestoreChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListRestoreChannelsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetRestoreChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::RestoreChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::RestoreChannelName RestoreChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::RestoreChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteRestoreChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::RestoreChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::RestoreChannelName RestoreChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::RestoreChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListRestorePlanBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="RestoreChannelName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RestoreChannelName ParentAsRestoreChannelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RestoreChannelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetRestorePlanBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::RestorePlanBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::RestorePlanBindingName RestorePlanBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::RestorePlanBindingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
