@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.8.0, released 2025-04-23
+
+### New features
+
+- Add managed constraints new fields (e.g. parameter) ([commit 9030f87](https://github.com/googleapis/google-cloud-dotnet/commit/9030f87e6b6cebd588b23b86ba9e24eb1ae11141))
+
+### Documentation improvements
+
+- Updated comments ([commit 9030f87](https://github.com/googleapis/google-cloud-dotnet/commit/9030f87e6b6cebd588b23b86ba9e24eb1ae11141))
+
 ## Version 2.7.0, released 2024-09-26
 
 ### New features
