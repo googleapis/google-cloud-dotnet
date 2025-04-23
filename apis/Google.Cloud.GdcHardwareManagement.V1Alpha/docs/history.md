@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-alpha05, released 2025-04-23
+
+### New features
+
+- Accept status updates in the SignalZoneState method ([commit 7e53181](https://github.com/googleapis/google-cloud-dotnet/commit/7e5318134552ebc36ee215f64aabe7b3804a8c1e))
+- Expose the allowed hardware count for each SKU ([commit 7e53181](https://github.com/googleapis/google-cloud-dotnet/commit/7e5318134552ebc36ee215f64aabe7b3804a8c1e))
+- Add deployment type and installation dates to orders ([commit 7e53181](https://github.com/googleapis/google-cloud-dotnet/commit/7e5318134552ebc36ee215f64aabe7b3804a8c1e))
+
+### Documentation improvements
+
+- Make billing_id an output-only field ([commit 7e53181](https://github.com/googleapis/google-cloud-dotnet/commit/7e5318134552ebc36ee215f64aabe7b3804a8c1e))
+
 ## Version 1.0.0-alpha04, released 2024-11-18
 
 ### New features
