@@ -52,13 +52,12 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
             "bGljYXMYASADKAsyPS5nb29nbGUuY2xvdWQuc2VjcmV0cy52MWJldGExLlJl",
             "cGxpY2F0aW9uLlVzZXJNYW5hZ2VkLlJlcGxpY2FCA+BBAhobCgdSZXBsaWNh",
             "EhAKCGxvY2F0aW9uGAEgASgJQg0KC3JlcGxpY2F0aW9uIh0KDVNlY3JldFBh",
-            "eWxvYWQSDAoEZGF0YRgBIAEoDELxAQomY29tLmdvb2dsZS5jbG91ZC5zZWNy",
+            "eWxvYWQSDAoEZGF0YRgBIAEoDELuAQomY29tLmdvb2dsZS5jbG91ZC5zZWNy",
             "ZXRtYW5hZ2VyLnYxYmV0YTFCDlJlc291cmNlc1Byb3RvUAFaOmNsb3VkLmdv",
             "b2dsZS5jb20vZ28vc2VjcmV0cy9hcGl2MWJldGExL3NlY3JldHNwYjtzZWNy",
-            "ZXRzcGL4AQGiAgNHU02qAiJHb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5W",
-            "MUJldGExygIiR29vZ2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjFiZXRhMeoC",
-            "JUdvb2dsZTo6Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYmV0YTFiBnByb3Rv",
-            "Mw=="));
+            "ZXRzcGKiAgNHU02qAiJHb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5WMUJl",
+            "dGExygIiR29vZ2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjFiZXRhMeoCJUdv",
+            "b2dsZTo6Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -74,11 +73,12 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// A [Secret][google.cloud.secrets.v1beta1.Secret] is a logical secret whose value and versions can
-  /// be accessed.
+  /// A [Secret][google.cloud.secrets.v1beta1.Secret] is a logical secret whose
+  /// value and versions can be accessed.
   ///
-  /// A [Secret][google.cloud.secrets.v1beta1.Secret] is made up of zero or more [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] that
-  /// represent the secret data.
+  /// A [Secret][google.cloud.secrets.v1beta1.Secret] is made up of zero or more
+  /// [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion] that represent
+  /// the secret data.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Secret : pb::IMessage<Secret>
@@ -132,7 +132,9 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the [Secret][google.cloud.secrets.v1beta1.Secret] in the format `projects/*/secrets/*`.
+    /// Output only. The resource name of the
+    /// [Secret][google.cloud.secrets.v1beta1.Secret] in the format
+    /// `projects/*/secrets/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,7 +149,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int ReplicationFieldNumber = 2;
     private global::Google.Cloud.SecretManager.V1Beta1.Replication replication_;
     /// <summary>
-    /// Required. Immutable. The replication policy of the secret data attached to the [Secret][google.cloud.secrets.v1beta1.Secret].
+    /// Required. Immutable. The replication policy of the secret data attached to
+    /// the [Secret][google.cloud.secrets.v1beta1.Secret].
     ///
     /// The replication policy cannot be changed after the Secret has been created.
     /// </summary>
@@ -164,7 +167,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int CreateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the [Secret][google.cloud.secrets.v1beta1.Secret] was created.
+    /// Output only. The time at which the
+    /// [Secret][google.cloud.secrets.v1beta1.Secret] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -467,11 +471,13 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the
-    /// format `projects/*/secrets/*/versions/*`.
+    /// Output only. The resource name of the
+    /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] in the format
+    /// `projects/*/secrets/*/versions/*`.
     ///
-    /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] IDs in a [Secret][google.cloud.secrets.v1beta1.Secret] start at 1 and
-    /// are incremented for each subsequent version of the secret.
+    /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] IDs in a
+    /// [Secret][google.cloud.secrets.v1beta1.Secret] start at 1 and are
+    /// incremented for each subsequent version of the secret.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -486,7 +492,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int CreateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] was created.
+    /// Output only. The time at which the
+    /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -501,9 +508,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int DestroyTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp destroyTime_;
     /// <summary>
-    /// Output only. The time this [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] was destroyed.
-    /// Only present if [state][google.cloud.secrets.v1beta1.SecretVersion.state] is
-    /// [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED].
+    /// Output only. The time this
+    /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] was destroyed.
+    /// Only present if [state][google.cloud.secrets.v1beta1.SecretVersion.state]
+    /// is [DESTROYED][google.cloud.secrets.v1beta1.SecretVersion.State.DESTROYED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -518,7 +526,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     public const int StateFieldNumber = 4;
     private global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State state_ = global::Google.Cloud.SecretManager.V1Beta1.SecretVersion.Types.State.Unspecified;
     /// <summary>
-    /// Output only. The current state of the [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+    /// Output only. The current state of the
+    /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -756,7 +765,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The state of a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion], indicating if it can be accessed.
+      /// The state of a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion],
+      /// indicating if it can be accessed.
       /// </summary>
       public enum State {
         /// <summary>
@@ -764,18 +774,22 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] may be accessed.
+        /// The [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] may be
+        /// accessed.
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
-        /// The [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] may not be accessed, but the secret data
-        /// is still available and can be placed back into the [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED]
+        /// The [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] may not
+        /// be accessed, but the secret data is still available and can be placed
+        /// back into the
+        /// [ENABLED][google.cloud.secrets.v1beta1.SecretVersion.State.ENABLED]
         /// state.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
         /// <summary>
-        /// The [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] is destroyed and the secret data is no longer
-        /// stored. A version may not leave this state once entered.
+        /// The [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion] is
+        /// destroyed and the secret data is no longer stored. A version may not
+        /// leave this state once entered.
         /// </summary>
         [pbr::OriginalName("DESTROYED")] Destroyed = 3,
       }
@@ -844,7 +858,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     /// <summary>Field number for the "automatic" field.</summary>
     public const int AutomaticFieldNumber = 1;
     /// <summary>
-    /// The [Secret][google.cloud.secrets.v1beta1.Secret] will automatically be replicated without any restrictions.
+    /// The [Secret][google.cloud.secrets.v1beta1.Secret] will automatically be
+    /// replicated without any restrictions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -859,7 +874,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     /// <summary>Field number for the "user_managed" field.</summary>
     public const int UserManagedFieldNumber = 2;
     /// <summary>
-    /// The [Secret][google.cloud.secrets.v1beta1.Secret] will only be replicated into the locations specified.
+    /// The [Secret][google.cloud.secrets.v1beta1.Secret] will only be replicated
+    /// into the locations specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1084,7 +1100,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// A replication policy that replicates the [Secret][google.cloud.secrets.v1beta1.Secret] payload without any
+      /// A replication policy that replicates the
+      /// [Secret][google.cloud.secrets.v1beta1.Secret] payload without any
       /// restrictions.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1241,8 +1258,10 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
       }
 
       /// <summary>
-      /// A replication policy that replicates the [Secret][google.cloud.secrets.v1beta1.Secret] payload into the
-      /// locations specified in [Secret.replication.user_managed.replicas][]
+      /// A replication policy that replicates the
+      /// [Secret][google.cloud.secrets.v1beta1.Secret] payload into the locations
+      /// specified in
+      /// [Replication.UserManaged.replicas][google.cloud.secrets.v1beta1.Replication.UserManaged.replicas]
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UserManaged : pb::IMessage<UserManaged>
@@ -1295,7 +1314,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica> replicas_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1Beta1.Replication.Types.UserManaged.Types.Replica>();
         /// <summary>
-        /// Required. The list of Replicas for this [Secret][google.cloud.secrets.v1beta1.Secret].
+        /// Required. The list of Replicas for this
+        /// [Secret][google.cloud.secrets.v1beta1.Secret].
         ///
         /// Cannot be empty.
         /// </summary>
@@ -1432,7 +1452,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Represents a Replica for this [Secret][google.cloud.secrets.v1beta1.Secret].
+          /// Represents a Replica for this
+          /// [Secret][google.cloud.secrets.v1beta1.Secret].
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Replica : pb::IMessage<Replica>
@@ -1640,7 +1661,8 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
 
   /// <summary>
   /// A secret payload resource in the Secret Manager API. This contains the
-  /// sensitive secret data that is associated with a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
+  /// sensitive secret data that is associated with a
+  /// [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretPayload : pb::IMessage<SecretPayload>
