@@ -2801,7 +2801,7 @@
     },
     {
       "id": "Google.Cloud.GkeBackup.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Backup for GKE",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke",
@@ -2812,7 +2812,7 @@
         "backup"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0",
         "Google.LongRunning": "3.3.0"
       },
