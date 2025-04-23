@@ -3356,6 +3356,32 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Lustre.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Managed Lustre",
+      "productUrl": "https://cloud.google.com/managed-lustre/docs",
+      "description": "Recommended Google client library to access the Google Cloud Managed Lustre API, which delivers a high-performance, fully managed parallel file system optimized for AI and HPC applications.",
+      "tags": [
+        "hpc",
+        "file-system",
+        "storage",
+        "performance",
+        "distributed"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/lustre/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "lustre",
+      "serviceConfigFile": "lustre_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ManagedIdentities.V1",
       "generator": "micro",
       "protoPath": "google/cloud/managedidentities/v1",
