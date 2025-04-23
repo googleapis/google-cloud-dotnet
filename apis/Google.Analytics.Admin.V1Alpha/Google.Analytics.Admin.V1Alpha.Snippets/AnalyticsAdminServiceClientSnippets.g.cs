@@ -16214,5 +16214,703 @@ namespace GoogleCSharpSnippets
             await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateReportingDataAnnotation</summary>
+        public void CreateReportingDataAnnotationRequestObject()
+        {
+            // Snippet: CreateReportingDataAnnotation(CreateReportingDataAnnotationRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateReportingDataAnnotationRequest request = new CreateReportingDataAnnotationRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                ReportingDataAnnotation = new ReportingDataAnnotation(),
+            };
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.CreateReportingDataAnnotation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReportingDataAnnotationAsync</summary>
+        public async Task CreateReportingDataAnnotationRequestObjectAsync()
+        {
+            // Snippet: CreateReportingDataAnnotationAsync(CreateReportingDataAnnotationRequest, CallSettings)
+            // Additional: CreateReportingDataAnnotationAsync(CreateReportingDataAnnotationRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateReportingDataAnnotationRequest request = new CreateReportingDataAnnotationRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                ReportingDataAnnotation = new ReportingDataAnnotation(),
+            };
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.CreateReportingDataAnnotationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReportingDataAnnotation</summary>
+        public void CreateReportingDataAnnotation()
+        {
+            // Snippet: CreateReportingDataAnnotation(string, ReportingDataAnnotation, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            ReportingDataAnnotation reportingDataAnnotation = new ReportingDataAnnotation();
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.CreateReportingDataAnnotation(parent, reportingDataAnnotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReportingDataAnnotationAsync</summary>
+        public async Task CreateReportingDataAnnotationAsync()
+        {
+            // Snippet: CreateReportingDataAnnotationAsync(string, ReportingDataAnnotation, CallSettings)
+            // Additional: CreateReportingDataAnnotationAsync(string, ReportingDataAnnotation, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            ReportingDataAnnotation reportingDataAnnotation = new ReportingDataAnnotation();
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.CreateReportingDataAnnotationAsync(parent, reportingDataAnnotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReportingDataAnnotation</summary>
+        public void CreateReportingDataAnnotationResourceNames()
+        {
+            // Snippet: CreateReportingDataAnnotation(PropertyName, ReportingDataAnnotation, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            ReportingDataAnnotation reportingDataAnnotation = new ReportingDataAnnotation();
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.CreateReportingDataAnnotation(parent, reportingDataAnnotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReportingDataAnnotationAsync</summary>
+        public async Task CreateReportingDataAnnotationResourceNamesAsync()
+        {
+            // Snippet: CreateReportingDataAnnotationAsync(PropertyName, ReportingDataAnnotation, CallSettings)
+            // Additional: CreateReportingDataAnnotationAsync(PropertyName, ReportingDataAnnotation, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            ReportingDataAnnotation reportingDataAnnotation = new ReportingDataAnnotation();
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.CreateReportingDataAnnotationAsync(parent, reportingDataAnnotation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingDataAnnotation</summary>
+        public void GetReportingDataAnnotationRequestObject()
+        {
+            // Snippet: GetReportingDataAnnotation(GetReportingDataAnnotationRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetReportingDataAnnotationRequest request = new GetReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]"),
+            };
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.GetReportingDataAnnotation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingDataAnnotationAsync</summary>
+        public async Task GetReportingDataAnnotationRequestObjectAsync()
+        {
+            // Snippet: GetReportingDataAnnotationAsync(GetReportingDataAnnotationRequest, CallSettings)
+            // Additional: GetReportingDataAnnotationAsync(GetReportingDataAnnotationRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetReportingDataAnnotationRequest request = new GetReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]"),
+            };
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.GetReportingDataAnnotationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingDataAnnotation</summary>
+        public void GetReportingDataAnnotation()
+        {
+            // Snippet: GetReportingDataAnnotation(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingDataAnnotations/[REPORTING_DATA_ANNOTATION]";
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.GetReportingDataAnnotation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingDataAnnotationAsync</summary>
+        public async Task GetReportingDataAnnotationAsync()
+        {
+            // Snippet: GetReportingDataAnnotationAsync(string, CallSettings)
+            // Additional: GetReportingDataAnnotationAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingDataAnnotations/[REPORTING_DATA_ANNOTATION]";
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.GetReportingDataAnnotationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingDataAnnotation</summary>
+        public void GetReportingDataAnnotationResourceNames()
+        {
+            // Snippet: GetReportingDataAnnotation(ReportingDataAnnotationName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportingDataAnnotationName name = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]");
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.GetReportingDataAnnotation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingDataAnnotationAsync</summary>
+        public async Task GetReportingDataAnnotationResourceNamesAsync()
+        {
+            // Snippet: GetReportingDataAnnotationAsync(ReportingDataAnnotationName, CallSettings)
+            // Additional: GetReportingDataAnnotationAsync(ReportingDataAnnotationName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportingDataAnnotationName name = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]");
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.GetReportingDataAnnotationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReportingDataAnnotations</summary>
+        public void ListReportingDataAnnotationsRequestObject()
+        {
+            // Snippet: ListReportingDataAnnotations(ListReportingDataAnnotationsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListReportingDataAnnotationsRequest request = new ListReportingDataAnnotationsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> response = analyticsAdminServiceClient.ListReportingDataAnnotations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReportingDataAnnotation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReportingDataAnnotationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReportingDataAnnotation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReportingDataAnnotation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReportingDataAnnotation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReportingDataAnnotationsAsync</summary>
+        public async Task ListReportingDataAnnotationsRequestObjectAsync()
+        {
+            // Snippet: ListReportingDataAnnotationsAsync(ListReportingDataAnnotationsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListReportingDataAnnotationsRequest request = new ListReportingDataAnnotationsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> response = analyticsAdminServiceClient.ListReportingDataAnnotationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReportingDataAnnotation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReportingDataAnnotationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReportingDataAnnotation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReportingDataAnnotation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReportingDataAnnotation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReportingDataAnnotations</summary>
+        public void ListReportingDataAnnotations()
+        {
+            // Snippet: ListReportingDataAnnotations(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> response = analyticsAdminServiceClient.ListReportingDataAnnotations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReportingDataAnnotation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReportingDataAnnotationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReportingDataAnnotation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReportingDataAnnotation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReportingDataAnnotation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReportingDataAnnotationsAsync</summary>
+        public async Task ListReportingDataAnnotationsAsync()
+        {
+            // Snippet: ListReportingDataAnnotationsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> response = analyticsAdminServiceClient.ListReportingDataAnnotationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReportingDataAnnotation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReportingDataAnnotationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReportingDataAnnotation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReportingDataAnnotation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReportingDataAnnotation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReportingDataAnnotations</summary>
+        public void ListReportingDataAnnotationsResourceNames()
+        {
+            // Snippet: ListReportingDataAnnotations(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> response = analyticsAdminServiceClient.ListReportingDataAnnotations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReportingDataAnnotation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReportingDataAnnotationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReportingDataAnnotation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReportingDataAnnotation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReportingDataAnnotation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReportingDataAnnotationsAsync</summary>
+        public async Task ListReportingDataAnnotationsResourceNamesAsync()
+        {
+            // Snippet: ListReportingDataAnnotationsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> response = analyticsAdminServiceClient.ListReportingDataAnnotationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReportingDataAnnotation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReportingDataAnnotationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReportingDataAnnotation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReportingDataAnnotation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReportingDataAnnotation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingDataAnnotation</summary>
+        public void UpdateReportingDataAnnotationRequestObject()
+        {
+            // Snippet: UpdateReportingDataAnnotation(UpdateReportingDataAnnotationRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateReportingDataAnnotationRequest request = new UpdateReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotation = new ReportingDataAnnotation(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.UpdateReportingDataAnnotation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingDataAnnotationAsync</summary>
+        public async Task UpdateReportingDataAnnotationRequestObjectAsync()
+        {
+            // Snippet: UpdateReportingDataAnnotationAsync(UpdateReportingDataAnnotationRequest, CallSettings)
+            // Additional: UpdateReportingDataAnnotationAsync(UpdateReportingDataAnnotationRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateReportingDataAnnotationRequest request = new UpdateReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotation = new ReportingDataAnnotation(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.UpdateReportingDataAnnotationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingDataAnnotation</summary>
+        public void UpdateReportingDataAnnotation()
+        {
+            // Snippet: UpdateReportingDataAnnotation(ReportingDataAnnotation, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportingDataAnnotation reportingDataAnnotation = new ReportingDataAnnotation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReportingDataAnnotation response = analyticsAdminServiceClient.UpdateReportingDataAnnotation(reportingDataAnnotation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingDataAnnotationAsync</summary>
+        public async Task UpdateReportingDataAnnotationAsync()
+        {
+            // Snippet: UpdateReportingDataAnnotationAsync(ReportingDataAnnotation, FieldMask, CallSettings)
+            // Additional: UpdateReportingDataAnnotationAsync(ReportingDataAnnotation, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportingDataAnnotation reportingDataAnnotation = new ReportingDataAnnotation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReportingDataAnnotation response = await analyticsAdminServiceClient.UpdateReportingDataAnnotationAsync(reportingDataAnnotation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReportingDataAnnotation</summary>
+        public void DeleteReportingDataAnnotationRequestObject()
+        {
+            // Snippet: DeleteReportingDataAnnotation(DeleteReportingDataAnnotationRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteReportingDataAnnotationRequest request = new DeleteReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteReportingDataAnnotation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReportingDataAnnotationAsync</summary>
+        public async Task DeleteReportingDataAnnotationRequestObjectAsync()
+        {
+            // Snippet: DeleteReportingDataAnnotationAsync(DeleteReportingDataAnnotationRequest, CallSettings)
+            // Additional: DeleteReportingDataAnnotationAsync(DeleteReportingDataAnnotationRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteReportingDataAnnotationRequest request = new DeleteReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteReportingDataAnnotationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReportingDataAnnotation</summary>
+        public void DeleteReportingDataAnnotation()
+        {
+            // Snippet: DeleteReportingDataAnnotation(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingDataAnnotations/[REPORTING_DATA_ANNOTATION]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteReportingDataAnnotation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReportingDataAnnotationAsync</summary>
+        public async Task DeleteReportingDataAnnotationAsync()
+        {
+            // Snippet: DeleteReportingDataAnnotationAsync(string, CallSettings)
+            // Additional: DeleteReportingDataAnnotationAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingDataAnnotations/[REPORTING_DATA_ANNOTATION]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteReportingDataAnnotationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReportingDataAnnotation</summary>
+        public void DeleteReportingDataAnnotationResourceNames()
+        {
+            // Snippet: DeleteReportingDataAnnotation(ReportingDataAnnotationName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportingDataAnnotationName name = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteReportingDataAnnotation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReportingDataAnnotationAsync</summary>
+        public async Task DeleteReportingDataAnnotationResourceNamesAsync()
+        {
+            // Snippet: DeleteReportingDataAnnotationAsync(ReportingDataAnnotationName, CallSettings)
+            // Additional: DeleteReportingDataAnnotationAsync(ReportingDataAnnotationName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportingDataAnnotationName name = ReportingDataAnnotationName.FromPropertyReportingDataAnnotation("[PROPERTY]", "[REPORTING_DATA_ANNOTATION]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteReportingDataAnnotationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUserDeletion</summary>
+        public void SubmitUserDeletionRequestObject()
+        {
+            // Snippet: SubmitUserDeletion(SubmitUserDeletionRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubmitUserDeletionRequest request = new SubmitUserDeletionRequest
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                UserId = "",
+            };
+            // Make the request
+            SubmitUserDeletionResponse response = analyticsAdminServiceClient.SubmitUserDeletion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUserDeletionAsync</summary>
+        public async Task SubmitUserDeletionRequestObjectAsync()
+        {
+            // Snippet: SubmitUserDeletionAsync(SubmitUserDeletionRequest, CallSettings)
+            // Additional: SubmitUserDeletionAsync(SubmitUserDeletionRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitUserDeletionRequest request = new SubmitUserDeletionRequest
+            {
+                PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                UserId = "",
+            };
+            // Make the request
+            SubmitUserDeletionResponse response = await analyticsAdminServiceClient.SubmitUserDeletionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUserDeletion</summary>
+        public void SubmitUserDeletion()
+        {
+            // Snippet: SubmitUserDeletion(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]";
+            // Make the request
+            SubmitUserDeletionResponse response = analyticsAdminServiceClient.SubmitUserDeletion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUserDeletionAsync</summary>
+        public async Task SubmitUserDeletionAsync()
+        {
+            // Snippet: SubmitUserDeletionAsync(string, CallSettings)
+            // Additional: SubmitUserDeletionAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]";
+            // Make the request
+            SubmitUserDeletionResponse response = await analyticsAdminServiceClient.SubmitUserDeletionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUserDeletion</summary>
+        public void SubmitUserDeletionResourceNames()
+        {
+            // Snippet: SubmitUserDeletion(PropertyName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName name = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            SubmitUserDeletionResponse response = analyticsAdminServiceClient.SubmitUserDeletion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitUserDeletionAsync</summary>
+        public async Task SubmitUserDeletionResourceNamesAsync()
+        {
+            // Snippet: SubmitUserDeletionAsync(PropertyName, CallSettings)
+            // Additional: SubmitUserDeletionAsync(PropertyName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName name = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            SubmitUserDeletionResponse response = await analyticsAdminServiceClient.SubmitUserDeletionAsync(name);
+            // End snippet
+        }
     }
 }
