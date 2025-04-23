@@ -116,27 +116,36 @@ namespace Google.Maps.AreaInsights.V1 {
     ///
     /// When this insight is specified ComputeInsights returns the number of
     /// places that match the specified filter criteria.
+    ///
+    /// Example request:
     /// ```
-    /// For example if the request is:
-    /// ComputeInsightsRequest {
-    ///   insights: INSIGHT_COUNT
-    ///   filter {
-    ///     location_filter {region: &lt;PlaceId of state of CA>}
-    ///     type_filter {included_types: "restaurant"}
-    ///     operating_status: OPERATING_STATUS_OPERATIONAL
-    ///     price_levels: PRICE_LEVEL_FREE
-    ///     price_levels: PRICE_LEVEL_INEXPENSIVE
-    ///     min_rating: 4.0
+    /// {
+    ///   "insights": ["INSIGHT_COUNT"],
+    ///   "filter": {
+    ///     "locationFilter": {
+    ///       "region": {
+    ///         "place": "places/ChIJPV4oX_65j4ARVW8IJ6IJUYs"
+    ///       }
+    ///     },
+    ///     "typeFilter": {
+    ///       "includedTypes": ["restaurant"]
+    ///     },
+    ///     "operatingStatus": ["OPERATING_STATUS_OPERATIONAL"],
+    ///     "priceLevels": [
+    ///       "PRICE_LEVEL_FREE",
+    ///       "PRICE_LEVEL_INEXPENSIVE"
+    ///     ],
+    ///     "ratingFilter": {
+    ///       "minRating": 4.0
+    ///     }
     ///   }
     /// }
-    ///
-    /// The method will return the count of restaurants in California that are
-    /// operational, with price level free or inexpensive and have an average
-    /// rating of at least 4 starts.
+    /// ```
     ///
     /// Example response:
-    /// ComputeInsightsResponse {
-    ///   count: &lt;number of places>
+    /// ```
+    /// {
+    ///   "count": 1234
     /// }
     /// ```
     /// </summary>
@@ -144,31 +153,42 @@ namespace Google.Maps.AreaInsights.V1 {
     /// <summary>
     /// Return Places
     ///
-    /// When this insight is specified ComputeInsights returns Places
+    /// When this insight is specified ComputeInsights returns places IDs
     /// that match the specified filter criteria.
+    ///
+    /// Example request:
     /// ```
-    /// For example if the request is:
-    /// ComputeInsightsRequest {
-    ///   insights: INSIGHT_PLACES
-    ///   filter {
-    ///     location_filter {region: &lt;PlaceId of state of CA>}
-    ///     type_filter {included_types: "restaurant"}
-    ///     operating_status: OPERATING_STATUS_OPERATIONAL
-    ///     price_levels: PRICE_LEVEL_FREE
-    ///     price_levels: PRICE_LEVEL_INEXPENSIVE
-    ///     min_rating: 4.0
+    /// {
+    ///   "insights": ["INSIGHT_PLACES"],
+    ///   "filter": {
+    ///     "locationFilter": {
+    ///       "region": {
+    ///         "place": "places/ChIJPV4oX_65j4ARVW8IJ6IJUYs"
+    ///       }
+    ///     },
+    ///     "typeFilter": {
+    ///       "includedTypes": ["restaurant"]
+    ///     },
+    ///     "operatingStatus": ["OPERATING_STATUS_OPERATIONAL"],
+    ///     "priceLevels": [
+    ///       "PRICE_LEVEL_FREE",
+    ///       "PRICE_LEVEL_INEXPENSIVE"
+    ///     ],
+    ///     "ratingFilter": {
+    ///       "minRating": 4.0
+    ///     }
     ///   }
     /// }
-    ///
-    /// The method will return list of places of restaurants in
-    /// California that are operational, with price level free or inexpensive and
-    /// have an average rating of at least 4 stars.
+    /// ```
     ///
     /// Example response:
-    /// ComputeInsightsResponse {
-    ///   place_insights { place: "places/ABC" }
-    ///   place_insights { place: "places/PQR" }
-    ///   place_insights { place: "places/XYZ" }
+    /// ```
+    /// {
+    ///   "placeInsights": [
+    ///     {"place": "places/ABC"},
+    ///     {"place": "places/PQR"},
+    ///     {"place": "places/XYZ"}
+    ///   ]
     /// }
     /// ```
     /// </summary>
@@ -180,7 +200,7 @@ namespace Google.Maps.AreaInsights.V1 {
   /// </summary>
   public enum OperatingStatus {
     /// <summary>
-    /// Not Specified.
+    /// Not specified. This value should not be used.
     /// </summary>
     [pbr::OriginalName("OPERATING_STATUS_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -192,7 +212,7 @@ namespace Google.Maps.AreaInsights.V1 {
     /// </summary>
     [pbr::OriginalName("OPERATING_STATUS_PERMANENTLY_CLOSED")] PermanentlyClosed = 3,
     /// <summary>
-    /// The Place is temporarily closed and expected to reopen in the future.
+    /// The place is temporarily closed and expected to reopen in the future.
     /// </summary>
     [pbr::OriginalName("OPERATING_STATUS_TEMPORARILY_CLOSED")] TemporarilyClosed = 4,
   }
@@ -202,7 +222,7 @@ namespace Google.Maps.AreaInsights.V1 {
   /// </summary>
   public enum PriceLevel {
     /// <summary>
-    /// Place price level is unspecified or unknown.
+    /// Not specified. This value should not be used.
     /// </summary>
     [pbr::OriginalName("PRICE_LEVEL_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -761,8 +781,8 @@ namespace Google.Maps.AreaInsights.V1 {
     public const int PlaceFieldNumber = 1;
     private string place_ = "";
     /// <summary>
-    /// The resource name of a place. This resource name can be used to retrieve
-    /// details about the place using the [Places
+    /// The unique identifier of the place. This resource name can be used to
+    /// retrieve details about the place using the [Places
     /// API](https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places/get).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1013,7 +1033,7 @@ namespace Google.Maps.AreaInsights.V1 {
     private readonly pbc::RepeatedField<global::Google.Maps.AreaInsights.V1.PriceLevel> priceLevels_ = new pbc::RepeatedField<global::Google.Maps.AreaInsights.V1.PriceLevel>();
     /// <summary>
     /// Optional. Restricts results to places whose price level is included on this
-    /// list. If price_level is not set, all price levels are included in the
+    /// list. If `price_levels` is not set, all price levels are included in the
     /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1710,8 +1730,9 @@ namespace Google.Maps.AreaInsights.V1 {
         /// <summary>Field number for the "place" field.</summary>
         public const int PlaceFieldNumber = 2;
         /// <summary>
-        /// The Place resource name of the center of the circle. Only point places
-        /// are supported.
+        /// **Format:**  Must be in the format `places/PLACE_ID`, where `PLACE_ID`
+        /// is the unique identifier of a place. For example:
+        /// `places/ChIJgUbEo8cfqokR5lP9_Wh_DaM`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2029,7 +2050,7 @@ namespace Google.Maps.AreaInsights.V1 {
         /// <summary>Field number for the "place" field.</summary>
         public const int PlaceFieldNumber = 1;
         /// <summary>
-        /// The Place resource name of a region.
+        /// The unique identifier of a specific geographic region.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
