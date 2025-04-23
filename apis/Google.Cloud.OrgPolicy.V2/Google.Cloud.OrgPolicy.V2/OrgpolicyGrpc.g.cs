@@ -370,10 +370,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Gets a custom constraint.
+      /// Gets a custom or managed constraint.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// custom constraint does not exist.
+      /// custom or managed constraint does not exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1018,10 +1018,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomConstraint, null, options, request);
       }
       /// <summary>
-      /// Gets a custom constraint.
+      /// Gets a custom or managed constraint.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// custom constraint does not exist.
+      /// custom or managed constraint does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1034,10 +1034,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return GetCustomConstraint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a custom constraint.
+      /// Gets a custom or managed constraint.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// custom constraint does not exist.
+      /// custom or managed constraint does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1048,10 +1048,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomConstraint, null, options, request);
       }
       /// <summary>
-      /// Gets a custom constraint.
+      /// Gets a custom or managed constraint.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// custom constraint does not exist.
+      /// custom or managed constraint does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1064,10 +1064,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return GetCustomConstraintAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a custom constraint.
+      /// Gets a custom or managed constraint.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// custom constraint does not exist.
+      /// custom or managed constraint does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

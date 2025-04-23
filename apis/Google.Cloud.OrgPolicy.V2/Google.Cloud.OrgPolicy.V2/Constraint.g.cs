@@ -26,48 +26,80 @@ namespace Google.Cloud.OrgPolicy.V2 {
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvb3JncG9saWN5L3YyL2NvbnN0cmFpbnQucHJvdG8S",
             "GWdvb2dsZS5jbG91ZC5vcmdwb2xpY3kudjIaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i0QUKCkNvbnN0cmFpbnQS",
-            "EQoEbmFtZRgBIAEoCUID4EEFEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgtk",
-            "ZXNjcmlwdGlvbhgDIAEoCRJTChJjb25zdHJhaW50X2RlZmF1bHQYBCABKA4y",
-            "Ny5nb29nbGUuY2xvdWQub3JncG9saWN5LnYyLkNvbnN0cmFpbnQuQ29uc3Ry",
-            "YWludERlZmF1bHQSTwoPbGlzdF9jb25zdHJhaW50GAUgASgLMjQuZ29vZ2xl",
-            "LmNsb3VkLm9yZ3BvbGljeS52Mi5Db25zdHJhaW50Lkxpc3RDb25zdHJhaW50",
-            "SAASVQoSYm9vbGVhbl9jb25zdHJhaW50GAYgASgLMjcuZ29vZ2xlLmNsb3Vk",
-            "Lm9yZ3BvbGljeS52Mi5Db25zdHJhaW50LkJvb2xlYW5Db25zdHJhaW50SAAS",
-            "GAoQc3VwcG9ydHNfZHJ5X3J1bhgHIAEoCBo9Cg5MaXN0Q29uc3RyYWludBIT",
-            "CgtzdXBwb3J0c19pbhgBIAEoCBIWCg5zdXBwb3J0c191bmRlchgCIAEoCBoT",
-            "ChFCb29sZWFuQ29uc3RyYWludCJMChFDb25zdHJhaW50RGVmYXVsdBIiCh5D",
-            "T05TVFJBSU5UX0RFRkFVTFRfVU5TUEVDSUZJRUQQABIJCgVBTExPVxABEggK",
-            "BERFTlkQAjq4AepBtAEKI29yZ3BvbGljeS5nb29nbGVhcGlzLmNvbS9Db25z",
-            "dHJhaW50Eitwcm9qZWN0cy97cHJvamVjdH0vY29uc3RyYWludHMve2NvbnN0",
-            "cmFpbnR9Eilmb2xkZXJzL3tmb2xkZXJ9L2NvbnN0cmFpbnRzL3tjb25zdHJh",
-            "aW50fRI1b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9jb25zdHJhaW50",
-            "cy97Y29uc3RyYWludH1CEQoPY29uc3RyYWludF90eXBlIvcEChBDdXN0b21D",
-            "b25zdHJhaW50EhEKBG5hbWUYASABKAlCA+BBBRIbCg5yZXNvdXJjZV90eXBl",
-            "cxgCIAMoCUID4EEFEkwKDG1ldGhvZF90eXBlcxgDIAMoDjI2Lmdvb2dsZS5j",
-            "bG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5NZXRob2RUeXBl",
-            "EhEKCWNvbmRpdGlvbhgEIAEoCRJLCgthY3Rpb25fdHlwZRgFIAEoDjI2Lmdv",
-            "b2dsZS5jbG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5BY3Rp",
-            "b25UeXBlEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgH",
-            "IAEoCRI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAyJwCgpNZXRob2RUeXBlEhsKF01FVEhPRF9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAESCgoGVVBEQVRFEAISCgoGREVMRVRF",
-            "EAMSEAoMUkVNT1ZFX0dSQU5UEAQSDwoLR09WRVJOX1RBR1MQBSI+CgpBY3Rp",
-            "b25UeXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQ",
-            "ARIICgRERU5ZEAI6cupBbwopb3JncG9saWN5Lmdvb2dsZWFwaXMuY29tL0N1",
-            "c3RvbUNvbnN0cmFpbnQSQm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0v",
-            "Y3VzdG9tQ29uc3RyYWludHMve2N1c3RvbV9jb25zdHJhaW50fULGAQodY29t",
-            "Lmdvb2dsZS5jbG91ZC5vcmdwb2xpY3kudjJCD0NvbnN0cmFpbnRQcm90b1AB",
-            "WjtjbG91ZC5nb29nbGUuY29tL2dvL29yZ3BvbGljeS9hcGl2Mi9vcmdwb2xp",
-            "Y3lwYjtvcmdwb2xpY3lwYqoCGUdvb2dsZS5DbG91ZC5PcmdQb2xpY3kuVjLK",
-            "AhlHb29nbGVcQ2xvdWRcT3JnUG9saWN5XFYy6gIcR29vZ2xlOjpDbG91ZDo6",
-            "T3JnUG9saWN5OjpWMmIGcHJvdG8z"));
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHGdv",
+            "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8i+g8KCkNvbnN0cmFpbnQSEQoEbmFtZRgBIAEoCUID",
+            "4EEFEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEo",
+            "CRJTChJjb25zdHJhaW50X2RlZmF1bHQYBCABKA4yNy5nb29nbGUuY2xvdWQu",
+            "b3JncG9saWN5LnYyLkNvbnN0cmFpbnQuQ29uc3RyYWludERlZmF1bHQSTwoP",
+            "bGlzdF9jb25zdHJhaW50GAUgASgLMjQuZ29vZ2xlLmNsb3VkLm9yZ3BvbGlj",
+            "eS52Mi5Db25zdHJhaW50Lkxpc3RDb25zdHJhaW50SAASVQoSYm9vbGVhbl9j",
+            "b25zdHJhaW50GAYgASgLMjcuZ29vZ2xlLmNsb3VkLm9yZ3BvbGljeS52Mi5D",
+            "b25zdHJhaW50LkJvb2xlYW5Db25zdHJhaW50SAASGAoQc3VwcG9ydHNfZHJ5",
+            "X3J1bhgHIAEoCBIdChVlcXVpdmFsZW50X2NvbnN0cmFpbnQYCCABKAkSGwoT",
+            "c3VwcG9ydHNfc2ltdWxhdGlvbhgJIAEoCBo9Cg5MaXN0Q29uc3RyYWludBIT",
+            "CgtzdXBwb3J0c19pbhgBIAEoCBIWCg5zdXBwb3J0c191bmRlchgCIAEoCBqC",
+            "CQoaQ3VzdG9tQ29uc3RyYWludERlZmluaXRpb24SFgoOcmVzb3VyY2VfdHlw",
+            "ZXMYASADKAkSYQoMbWV0aG9kX3R5cGVzGAIgAygOMksuZ29vZ2xlLmNsb3Vk",
+            "Lm9yZ3BvbGljeS52Mi5Db25zdHJhaW50LkN1c3RvbUNvbnN0cmFpbnREZWZp",
+            "bml0aW9uLk1ldGhvZFR5cGUSEQoJY29uZGl0aW9uGAMgASgJEmAKC2FjdGlv",
+            "bl90eXBlGAQgASgOMksuZ29vZ2xlLmNsb3VkLm9yZ3BvbGljeS52Mi5Db25z",
+            "dHJhaW50LkN1c3RvbUNvbnN0cmFpbnREZWZpbml0aW9uLkFjdGlvblR5cGUS",
+            "ZAoKcGFyYW1ldGVycxgFIAMoCzJQLmdvb2dsZS5jbG91ZC5vcmdwb2xpY3ku",
+            "djIuQ29uc3RyYWludC5DdXN0b21Db25zdHJhaW50RGVmaW5pdGlvbi5QYXJh",
+            "bWV0ZXJzRW50cnka3AMKCVBhcmFtZXRlchJdCgR0eXBlGAEgASgOMk8uZ29v",
+            "Z2xlLmNsb3VkLm9yZ3BvbGljeS52Mi5Db25zdHJhaW50LkN1c3RvbUNvbnN0",
+            "cmFpbnREZWZpbml0aW9uLlBhcmFtZXRlci5UeXBlEi0KDWRlZmF1bHRfdmFs",
+            "dWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSGQoRdmFsaWRfdmFs",
+            "dWVzX2V4cHIYAyABKAkSZQoIbWV0YWRhdGEYBCABKAsyUy5nb29nbGUuY2xv",
+            "dWQub3JncG9saWN5LnYyLkNvbnN0cmFpbnQuQ3VzdG9tQ29uc3RyYWludERl",
+            "ZmluaXRpb24uUGFyYW1ldGVyLk1ldGFkYXRhEl0KBGl0ZW0YBSABKA4yTy5n",
+            "b29nbGUuY2xvdWQub3JncG9saWN5LnYyLkNvbnN0cmFpbnQuQ3VzdG9tQ29u",
+            "c3RyYWludERlZmluaXRpb24uUGFyYW1ldGVyLlR5cGUaHwoITWV0YWRhdGES",
+            "EwoLZGVzY3JpcHRpb24YASABKAkiPwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCAoETElTVBABEgoKBlNUUklORxACEgsKB0JPT0xFQU4QAxp9Cg9Q",
+            "YXJhbWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJElkKBXZhbHVlGAIgASgLMkou",
+            "Z29vZ2xlLmNsb3VkLm9yZ3BvbGljeS52Mi5Db25zdHJhaW50LkN1c3RvbUNv",
+            "bnN0cmFpbnREZWZpbml0aW9uLlBhcmFtZXRlcjoCOAEicAoKTWV0aG9kVHlw",
+            "ZRIbChdNRVRIT0RfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkNSRUFURRABEgoK",
+            "BlVQREFURRACEgoKBkRFTEVURRADEhAKDFJFTU9WRV9HUkFOVBAEEg8KC0dP",
+            "VkVSTl9UQUdTEAUiPgoKQWN0aW9uVHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEgkKBUFMTE9XEAESCAoEREVOWRACGnsKEUJvb2xlYW5Db25z",
+            "dHJhaW50EmYKHGN1c3RvbV9jb25zdHJhaW50X2RlZmluaXRpb24YASABKAsy",
+            "QC5nb29nbGUuY2xvdWQub3JncG9saWN5LnYyLkNvbnN0cmFpbnQuQ3VzdG9t",
+            "Q29uc3RyYWludERlZmluaXRpb24iTAoRQ29uc3RyYWludERlZmF1bHQSIgoe",
+            "Q09OU1RSQUlOVF9ERUZBVUxUX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQARII",
+            "CgRERU5ZEAI6uAHqQbQBCiNvcmdwb2xpY3kuZ29vZ2xlYXBpcy5jb20vQ29u",
+            "c3RyYWludBIrcHJvamVjdHMve3Byb2plY3R9L2NvbnN0cmFpbnRzL3tjb25z",
+            "dHJhaW50fRIpZm9sZGVycy97Zm9sZGVyfS9jb25zdHJhaW50cy97Y29uc3Ry",
+            "YWludH0SNW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vY29uc3RyYWlu",
+            "dHMve2NvbnN0cmFpbnR9QhEKD2NvbnN0cmFpbnRfdHlwZSL3BAoQQ3VzdG9t",
+            "Q29uc3RyYWludBIRCgRuYW1lGAEgASgJQgPgQQUSGwoOcmVzb3VyY2VfdHlw",
+            "ZXMYAiADKAlCA+BBBRJMCgxtZXRob2RfdHlwZXMYAyADKA4yNi5nb29nbGUu",
+            "Y2xvdWQub3JncG9saWN5LnYyLkN1c3RvbUNvbnN0cmFpbnQuTWV0aG9kVHlw",
+            "ZRIRCgljb25kaXRpb24YBCABKAkSSwoLYWN0aW9uX3R5cGUYBSABKA4yNi5n",
+            "b29nbGUuY2xvdWQub3JncG9saWN5LnYyLkN1c3RvbUNvbnN0cmFpbnQuQWN0",
+            "aW9uVHlwZRIUCgxkaXNwbGF5X25hbWUYBiABKAkSEwoLZGVzY3JpcHRpb24Y",
+            "ByABKAkSNAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMicAoKTWV0aG9kVHlwZRIbChdNRVRIT0RfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgoKBkNSRUFURRABEgoKBlVQREFURRACEgoKBkRFTEVU",
+            "RRADEhAKDFJFTU9WRV9HUkFOVBAEEg8KC0dPVkVSTl9UQUdTEAUiPgoKQWN0",
+            "aW9uVHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEgkKBUFMTE9X",
+            "EAESCAoEREVOWRACOnLqQW8KKW9yZ3BvbGljeS5nb29nbGVhcGlzLmNvbS9D",
+            "dXN0b21Db25zdHJhaW50EkJvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
+            "L2N1c3RvbUNvbnN0cmFpbnRzL3tjdXN0b21fY29uc3RyYWludH1CxgEKHWNv",
+            "bS5nb29nbGUuY2xvdWQub3JncG9saWN5LnYyQg9Db25zdHJhaW50UHJvdG9Q",
+            "AVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9vcmdwb2xpY3kvYXBpdjIvb3JncG9s",
+            "aWN5cGI7b3JncG9saWN5cGKqAhlHb29nbGUuQ2xvdWQuT3JnUG9saWN5LlYy",
+            "ygIZR29vZ2xlXENsb3VkXE9yZ1BvbGljeVxWMuoCHEdvb2dsZTo6Q2xvdWQ6",
+            "Ok9yZ1BvbGljeTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint), global::Google.Cloud.OrgPolicy.V2.Constraint.Parser, new[]{ "Name", "DisplayName", "Description", "ConstraintDefault", "ListConstraint", "BooleanConstraint", "SupportsDryRun" }, new[]{ "ConstraintType" }, new[]{ typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.ConstraintDefault) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.ListConstraint), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.ListConstraint.Parser, new[]{ "SupportsIn", "SupportsUnder" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.BooleanConstraint), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.BooleanConstraint.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint), global::Google.Cloud.OrgPolicy.V2.Constraint.Parser, new[]{ "Name", "DisplayName", "Description", "ConstraintDefault", "ListConstraint", "BooleanConstraint", "SupportsDryRun", "EquivalentConstraint", "SupportsSimulation" }, new[]{ "ConstraintType" }, new[]{ typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.ConstraintDefault) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.ListConstraint), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.ListConstraint.Parser, new[]{ "SupportsIn", "SupportsUnder" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Parser, new[]{ "ResourceTypes", "MethodTypes", "Condition", "ActionType", "Parameters" }, null, new[]{ typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.MethodType), typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Parser, new[]{ "Type", "DefaultValue", "ValidValuesExpr", "Metadata", "Item" }, null, new[]{ typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata.Parser, new[]{ "Description" }, null, null, null, null)}),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.Constraint.Types.BooleanConstraint), global::Google.Cloud.OrgPolicy.V2.Constraint.Types.BooleanConstraint.Parser, new[]{ "CustomConstraintDefinition" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OrgPolicy.V2.CustomConstraint), global::Google.Cloud.OrgPolicy.V2.CustomConstraint.Parser, new[]{ "Name", "ResourceTypes", "MethodTypes", "Condition", "ActionType", "DisplayName", "Description", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.OrgPolicy.V2.CustomConstraint.Types.MethodType), typeof(global::Google.Cloud.OrgPolicy.V2.CustomConstraint.Types.ActionType) }, null, null)
           }));
     }
@@ -84,8 +116,8 @@ namespace Google.Cloud.OrgPolicy.V2 {
   /// organization by setting a policy that includes constraints at different
   /// locations in the organization's resource hierarchy. Policies are inherited
   /// down the resource hierarchy from higher levels, but can also be overridden.
-  /// For details about the inheritance rules please read about
-  /// [`policies`][google.cloud.OrgPolicy.v2.Policy].
+  /// For details about the inheritance rules, see
+  /// [`Policy`][google.cloud.orgpolicy.v2.Policy].
   ///
   /// Constraints have a default behavior determined by the `constraint_default`
   /// field, which is the enforcement behavior that is used in the absence of a
@@ -131,6 +163,8 @@ namespace Google.Cloud.OrgPolicy.V2 {
       description_ = other.description_;
       constraintDefault_ = other.constraintDefault_;
       supportsDryRun_ = other.supportsDryRun_;
+      equivalentConstraint_ = other.equivalentConstraint_;
+      supportsSimulation_ = other.supportsSimulation_;
       switch (other.ConstraintTypeCase) {
         case ConstraintTypeOneofCase.ListConstraint:
           ListConstraint = other.ListConstraint.Clone();
@@ -224,7 +258,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
     /// <summary>Field number for the "list_constraint" field.</summary>
     public const int ListConstraintFieldNumber = 5;
     /// <summary>
-    /// Defines this constraint as being a ListConstraint.
+    /// Defines this constraint as being a list constraint.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -239,7 +273,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
     /// <summary>Field number for the "boolean_constraint" field.</summary>
     public const int BooleanConstraintFieldNumber = 6;
     /// <summary>
-    /// Defines this constraint as being a BooleanConstraint.
+    /// Defines this constraint as being a boolean constraint.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,6 +297,37 @@ namespace Google.Cloud.OrgPolicy.V2 {
       get { return supportsDryRun_; }
       set {
         supportsDryRun_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "equivalent_constraint" field.</summary>
+    public const int EquivalentConstraintFieldNumber = 8;
+    private string equivalentConstraint_ = "";
+    /// <summary>
+    /// Managed constraint and canned constraint sometimes can have
+    /// equivalents. This field is used to store the equivalent constraint name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EquivalentConstraint {
+      get { return equivalentConstraint_; }
+      set {
+        equivalentConstraint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "supports_simulation" field.</summary>
+    public const int SupportsSimulationFieldNumber = 9;
+    private bool supportsSimulation_;
+    /// <summary>
+    /// Shows if simulation is supported for this constraint or not.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SupportsSimulation {
+      get { return supportsSimulation_; }
+      set {
+        supportsSimulation_ = value;
       }
     }
 
@@ -309,6 +374,8 @@ namespace Google.Cloud.OrgPolicy.V2 {
       if (!object.Equals(ListConstraint, other.ListConstraint)) return false;
       if (!object.Equals(BooleanConstraint, other.BooleanConstraint)) return false;
       if (SupportsDryRun != other.SupportsDryRun) return false;
+      if (EquivalentConstraint != other.EquivalentConstraint) return false;
+      if (SupportsSimulation != other.SupportsSimulation) return false;
       if (ConstraintTypeCase != other.ConstraintTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -324,6 +391,8 @@ namespace Google.Cloud.OrgPolicy.V2 {
       if (constraintTypeCase_ == ConstraintTypeOneofCase.ListConstraint) hash ^= ListConstraint.GetHashCode();
       if (constraintTypeCase_ == ConstraintTypeOneofCase.BooleanConstraint) hash ^= BooleanConstraint.GetHashCode();
       if (SupportsDryRun != false) hash ^= SupportsDryRun.GetHashCode();
+      if (EquivalentConstraint.Length != 0) hash ^= EquivalentConstraint.GetHashCode();
+      if (SupportsSimulation != false) hash ^= SupportsSimulation.GetHashCode();
       hash ^= (int) constraintTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -371,6 +440,14 @@ namespace Google.Cloud.OrgPolicy.V2 {
         output.WriteRawTag(56);
         output.WriteBool(SupportsDryRun);
       }
+      if (EquivalentConstraint.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(EquivalentConstraint);
+      }
+      if (SupportsSimulation != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(SupportsSimulation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -409,6 +486,14 @@ namespace Google.Cloud.OrgPolicy.V2 {
         output.WriteRawTag(56);
         output.WriteBool(SupportsDryRun);
       }
+      if (EquivalentConstraint.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(EquivalentConstraint);
+      }
+      if (SupportsSimulation != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(SupportsSimulation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -440,6 +525,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
       if (SupportsDryRun != false) {
         size += 1 + 1;
       }
+      if (EquivalentConstraint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EquivalentConstraint);
+      }
+      if (SupportsSimulation != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -466,6 +557,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
       if (other.SupportsDryRun != false) {
         SupportsDryRun = other.SupportsDryRun;
+      }
+      if (other.EquivalentConstraint.Length != 0) {
+        EquivalentConstraint = other.EquivalentConstraint;
+      }
+      if (other.SupportsSimulation != false) {
+        SupportsSimulation = other.SupportsSimulation;
       }
       switch (other.ConstraintTypeCase) {
         case ConstraintTypeOneofCase.ListConstraint:
@@ -535,6 +632,14 @@ namespace Google.Cloud.OrgPolicy.V2 {
             SupportsDryRun = input.ReadBool();
             break;
           }
+          case 66: {
+            EquivalentConstraint = input.ReadString();
+            break;
+          }
+          case 72: {
+            SupportsSimulation = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -588,6 +693,14 @@ namespace Google.Cloud.OrgPolicy.V2 {
             SupportsDryRun = input.ReadBool();
             break;
           }
+          case 66: {
+            EquivalentConstraint = input.ReadString();
+            break;
+          }
+          case 72: {
+            SupportsSimulation = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -607,7 +720,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
       public enum ConstraintDefault {
         /// <summary>
         /// This is only used for distinguishing unset values and should never be
-        /// used.
+        /// used. Results in an error.
         /// </summary>
         [pbr::OriginalName("CONSTRAINT_DEFAULT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -623,8 +736,9 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// A constraint that allows or disallows a list of string values, which are
-      /// configured by an Organization Policy administrator with a policy.
+      /// A constraint type that allows or disallows a list of string values, which
+      /// are configured in the
+      /// [`PolicyRule`][google.cloud.orgpolicy.v2.PolicySpec.PolicyRule].
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ListConstraint : pb::IMessage<ListConstraint>
@@ -865,11 +979,1018 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// A constraint that is either enforced or not.
+      /// Custom constraint definition. Defines this as a managed constraint.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CustomConstraintDefinition : pb::IMessage<CustomConstraintDefinition>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CustomConstraintDefinition> _parser = new pb::MessageParser<CustomConstraintDefinition>(() => new CustomConstraintDefinition());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CustomConstraintDefinition> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.OrgPolicy.V2.Constraint.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomConstraintDefinition() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomConstraintDefinition(CustomConstraintDefinition other) : this() {
+          resourceTypes_ = other.resourceTypes_.Clone();
+          methodTypes_ = other.methodTypes_.Clone();
+          condition_ = other.condition_;
+          actionType_ = other.actionType_;
+          parameters_ = other.parameters_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomConstraintDefinition Clone() {
+          return new CustomConstraintDefinition(this);
+        }
+
+        /// <summary>Field number for the "resource_types" field.</summary>
+        public const int ResourceTypesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_resourceTypes_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> resourceTypes_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The resource instance type on which this policy applies. Format will be
+        /// of the form : `&lt;service name>/&lt;type>` Example:
+        ///
+        ///  * `compute.googleapis.com/Instance`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ResourceTypes {
+          get { return resourceTypes_; }
+        }
+
+        /// <summary>Field number for the "method_types" field.</summary>
+        public const int MethodTypesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.MethodType> _repeated_methodTypes_codec
+            = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.MethodType) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.MethodType> methodTypes_ = new pbc::RepeatedField<global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.MethodType>();
+        /// <summary>
+        /// All the operations being applied for this constraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.MethodType> MethodTypes {
+          get { return methodTypes_; }
+        }
+
+        /// <summary>Field number for the "condition" field.</summary>
+        public const int ConditionFieldNumber = 3;
+        private string condition_ = "";
+        /// <summary>
+        /// Org policy condition/expression. For example:
+        /// `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+        /// `resource.management.auto_upgrade == true`
+        ///
+        /// The max length of the condition is 1000 characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Condition {
+          get { return condition_; }
+          set {
+            condition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "action_type" field.</summary>
+        public const int ActionTypeFieldNumber = 4;
+        private global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType actionType_ = global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType.Unspecified;
+        /// <summary>
+        /// Allow or deny type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType ActionType {
+          get { return actionType_; }
+          set {
+            actionType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "parameters" field.</summary>
+        public const int ParametersFieldNumber = 5;
+        private static readonly pbc::MapField<string, global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter>.Codec _map_parameters_codec
+            = new pbc::MapField<string, global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Parser), 42);
+        private readonly pbc::MapField<string, global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter> parameters_ = new pbc::MapField<string, global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter>();
+        /// <summary>
+        /// Stores the structure of
+        /// [`Parameters`][google.cloud.orgpolicy.v2.Constraint.CustomConstraintDefinition.Parameter]
+        /// used by the constraint condition. The key of `map` represents the name of
+        /// the parameter.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter> Parameters {
+          get { return parameters_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CustomConstraintDefinition);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CustomConstraintDefinition other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!resourceTypes_.Equals(other.resourceTypes_)) return false;
+          if(!methodTypes_.Equals(other.methodTypes_)) return false;
+          if (Condition != other.Condition) return false;
+          if (ActionType != other.ActionType) return false;
+          if (!Parameters.Equals(other.Parameters)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= resourceTypes_.GetHashCode();
+          hash ^= methodTypes_.GetHashCode();
+          if (Condition.Length != 0) hash ^= Condition.GetHashCode();
+          if (ActionType != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType.Unspecified) hash ^= ActionType.GetHashCode();
+          hash ^= Parameters.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          resourceTypes_.WriteTo(output, _repeated_resourceTypes_codec);
+          methodTypes_.WriteTo(output, _repeated_methodTypes_codec);
+          if (Condition.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Condition);
+          }
+          if (ActionType != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ActionType);
+          }
+          parameters_.WriteTo(output, _map_parameters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          resourceTypes_.WriteTo(ref output, _repeated_resourceTypes_codec);
+          methodTypes_.WriteTo(ref output, _repeated_methodTypes_codec);
+          if (Condition.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Condition);
+          }
+          if (ActionType != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ActionType);
+          }
+          parameters_.WriteTo(ref output, _map_parameters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += resourceTypes_.CalculateSize(_repeated_resourceTypes_codec);
+          size += methodTypes_.CalculateSize(_repeated_methodTypes_codec);
+          if (Condition.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Condition);
+          }
+          if (ActionType != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActionType);
+          }
+          size += parameters_.CalculateSize(_map_parameters_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CustomConstraintDefinition other) {
+          if (other == null) {
+            return;
+          }
+          resourceTypes_.Add(other.resourceTypes_);
+          methodTypes_.Add(other.methodTypes_);
+          if (other.Condition.Length != 0) {
+            Condition = other.Condition;
+          }
+          if (other.ActionType != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType.Unspecified) {
+            ActionType = other.ActionType;
+          }
+          parameters_.MergeFrom(other.parameters_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                resourceTypes_.AddEntriesFrom(input, _repeated_resourceTypes_codec);
+                break;
+              }
+              case 18:
+              case 16: {
+                methodTypes_.AddEntriesFrom(input, _repeated_methodTypes_codec);
+                break;
+              }
+              case 26: {
+                Condition = input.ReadString();
+                break;
+              }
+              case 32: {
+                ActionType = (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                parameters_.AddEntriesFrom(input, _map_parameters_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                resourceTypes_.AddEntriesFrom(ref input, _repeated_resourceTypes_codec);
+                break;
+              }
+              case 18:
+              case 16: {
+                methodTypes_.AddEntriesFrom(ref input, _repeated_methodTypes_codec);
+                break;
+              }
+              case 26: {
+                Condition = input.ReadString();
+                break;
+              }
+              case 32: {
+                ActionType = (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.ActionType) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                parameters_.AddEntriesFrom(ref input, _map_parameters_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the CustomConstraintDefinition message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The operation for which this constraint will be applied. To apply this
+          /// constraint only when creating new resources, the `method_types` should be
+          /// `CREATE` only. To apply this constraint when creating or deleting
+          /// resources, the `method_types` should be `CREATE` and `DELETE`.
+          ///
+          /// `UPDATE`-only custom constraints are not supported. Use `CREATE` or
+          /// `CREATE, UPDATE`.
+          /// </summary>
+          public enum MethodType {
+            /// <summary>
+            /// This is only used for distinguishing unset values and should never be
+            /// used. Results in an error.
+            /// </summary>
+            [pbr::OriginalName("METHOD_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Constraint applied when creating the resource.
+            /// </summary>
+            [pbr::OriginalName("CREATE")] Create = 1,
+            /// <summary>
+            /// Constraint applied when updating the resource.
+            /// </summary>
+            [pbr::OriginalName("UPDATE")] Update = 2,
+            /// <summary>
+            /// Constraint applied when deleting the resource.
+            /// Not currently supported.
+            /// </summary>
+            [pbr::OriginalName("DELETE")] Delete = 3,
+            /// <summary>
+            /// Constraint applied when removing an IAM grant.
+            /// </summary>
+            [pbr::OriginalName("REMOVE_GRANT")] RemoveGrant = 4,
+            /// <summary>
+            /// Constraint applied when enforcing forced tagging.
+            /// </summary>
+            [pbr::OriginalName("GOVERN_TAGS")] GovernTags = 5,
+          }
+
+          /// <summary>
+          /// Allow or deny type.
+          /// </summary>
+          public enum ActionType {
+            /// <summary>
+            /// This is only used for distinguishing unset values and should never be
+            /// used. Results in an error.
+            /// </summary>
+            [pbr::OriginalName("ACTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Allowed action type.
+            /// </summary>
+            [pbr::OriginalName("ALLOW")] Allow = 1,
+            /// <summary>
+            /// Deny action type.
+            /// </summary>
+            [pbr::OriginalName("DENY")] Deny = 2,
+          }
+
+          /// <summary>
+          /// Defines a parameter structure.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Parameter : pb::IMessage<Parameter>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Parameter> _parser = new pb::MessageParser<Parameter>(() => new Parameter());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Parameter> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Parameter() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Parameter(Parameter other) : this() {
+              type_ = other.type_;
+              defaultValue_ = other.defaultValue_ != null ? other.defaultValue_.Clone() : null;
+              validValuesExpr_ = other.validValuesExpr_;
+              metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
+              item_ = other.item_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Parameter Clone() {
+              return new Parameter(this);
+            }
+
+            /// <summary>Field number for the "type" field.</summary>
+            public const int TypeFieldNumber = 1;
+            private global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type type_ = global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified;
+            /// <summary>
+            /// Type of the parameter.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type Type {
+              get { return type_; }
+              set {
+                type_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "default_value" field.</summary>
+            public const int DefaultValueFieldNumber = 2;
+            private global::Google.Protobuf.WellKnownTypes.Value defaultValue_;
+            /// <summary>
+            /// Sets the value of the parameter in an assignment if no value is given.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Value DefaultValue {
+              get { return defaultValue_; }
+              set {
+                defaultValue_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "valid_values_expr" field.</summary>
+            public const int ValidValuesExprFieldNumber = 3;
+            private string validValuesExpr_ = "";
+            /// <summary>
+            /// Provides a CEL expression to specify the acceptable parameter values
+            /// during assignment.
+            /// For example, parameterName in ("parameterValue1", "parameterValue2")
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ValidValuesExpr {
+              get { return validValuesExpr_; }
+              set {
+                validValuesExpr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "metadata" field.</summary>
+            public const int MetadataFieldNumber = 4;
+            private global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata metadata_;
+            /// <summary>
+            /// Defines subproperties primarily used by the UI to display user-friendly
+            /// information.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata Metadata {
+              get { return metadata_; }
+              set {
+                metadata_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "item" field.</summary>
+            public const int ItemFieldNumber = 5;
+            private global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type item_ = global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified;
+            /// <summary>
+            /// Determines the parameter's value structure.
+            /// For example, `LIST&lt;STRING>` can be specified by defining `type: LIST`,
+            /// and `item: STRING`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type Item {
+              get { return item_; }
+              set {
+                item_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Parameter);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Parameter other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Type != other.Type) return false;
+              if (!object.Equals(DefaultValue, other.DefaultValue)) return false;
+              if (ValidValuesExpr != other.ValidValuesExpr) return false;
+              if (!object.Equals(Metadata, other.Metadata)) return false;
+              if (Item != other.Item) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Type != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+              if (defaultValue_ != null) hash ^= DefaultValue.GetHashCode();
+              if (ValidValuesExpr.Length != 0) hash ^= ValidValuesExpr.GetHashCode();
+              if (metadata_ != null) hash ^= Metadata.GetHashCode();
+              if (Item != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) hash ^= Item.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Type != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) Type);
+              }
+              if (defaultValue_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(DefaultValue);
+              }
+              if (ValidValuesExpr.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(ValidValuesExpr);
+              }
+              if (metadata_ != null) {
+                output.WriteRawTag(34);
+                output.WriteMessage(Metadata);
+              }
+              if (Item != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                output.WriteRawTag(40);
+                output.WriteEnum((int) Item);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Type != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) Type);
+              }
+              if (defaultValue_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(DefaultValue);
+              }
+              if (ValidValuesExpr.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(ValidValuesExpr);
+              }
+              if (metadata_ != null) {
+                output.WriteRawTag(34);
+                output.WriteMessage(Metadata);
+              }
+              if (Item != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                output.WriteRawTag(40);
+                output.WriteEnum((int) Item);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Type != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+              }
+              if (defaultValue_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultValue);
+              }
+              if (ValidValuesExpr.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ValidValuesExpr);
+              }
+              if (metadata_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+              }
+              if (Item != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Item);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Parameter other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Type != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                Type = other.Type;
+              }
+              if (other.defaultValue_ != null) {
+                if (defaultValue_ == null) {
+                  DefaultValue = new global::Google.Protobuf.WellKnownTypes.Value();
+                }
+                DefaultValue.MergeFrom(other.DefaultValue);
+              }
+              if (other.ValidValuesExpr.Length != 0) {
+                ValidValuesExpr = other.ValidValuesExpr;
+              }
+              if (other.metadata_ != null) {
+                if (metadata_ == null) {
+                  Metadata = new global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata();
+                }
+                Metadata.MergeFrom(other.Metadata);
+              }
+              if (other.Item != global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type.Unspecified) {
+                Item = other.Item;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    Type = (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type) input.ReadEnum();
+                    break;
+                  }
+                  case 18: {
+                    if (defaultValue_ == null) {
+                      DefaultValue = new global::Google.Protobuf.WellKnownTypes.Value();
+                    }
+                    input.ReadMessage(DefaultValue);
+                    break;
+                  }
+                  case 26: {
+                    ValidValuesExpr = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    if (metadata_ == null) {
+                      Metadata = new global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata();
+                    }
+                    input.ReadMessage(Metadata);
+                    break;
+                  }
+                  case 40: {
+                    Item = (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Type = (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type) input.ReadEnum();
+                    break;
+                  }
+                  case 18: {
+                    if (defaultValue_ == null) {
+                      DefaultValue = new global::Google.Protobuf.WellKnownTypes.Value();
+                    }
+                    input.ReadMessage(DefaultValue);
+                    break;
+                  }
+                  case 26: {
+                    ValidValuesExpr = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    if (metadata_ == null) {
+                      Metadata = new global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Metadata();
+                    }
+                    input.ReadMessage(Metadata);
+                    break;
+                  }
+                  case 40: {
+                    Item = (global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Types.Type) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the Parameter message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// All valid types of parameter.
+              /// </summary>
+              public enum Type {
+                /// <summary>
+                /// This is only used for distinguishing unset values and should never be
+                /// used. Results in an error.
+                /// </summary>
+                [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// List parameter type.
+                /// </summary>
+                [pbr::OriginalName("LIST")] List = 1,
+                /// <summary>
+                /// String parameter type.
+                /// </summary>
+                [pbr::OriginalName("STRING")] String = 2,
+                /// <summary>
+                /// Boolean parameter type.
+                /// </summary>
+                [pbr::OriginalName("BOOLEAN")] Boolean = 3,
+              }
+
+              /// <summary>
+              /// Defines Metadata structure.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Metadata : pb::IMessage<Metadata>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Metadata> _parser = new pb::MessageParser<Metadata>(() => new Metadata());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Metadata> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition.Types.Parameter.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Metadata() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Metadata(Metadata other) : this() {
+                  description_ = other.description_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Metadata Clone() {
+                  return new Metadata(this);
+                }
+
+                /// <summary>Field number for the "description" field.</summary>
+                public const int DescriptionFieldNumber = 1;
+                private string description_ = "";
+                /// <summary>
+                /// Detailed description of what this `parameter` is and use of it.
+                /// Mutable.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Description {
+                  get { return description_; }
+                  set {
+                    description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Metadata);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Metadata other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Description != other.Description) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Description.Length != 0) hash ^= Description.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Description.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Description);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Description.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Description);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Description.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Metadata other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Description.Length != 0) {
+                    Description = other.Description;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Description = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Description = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// A constraint type is enforced or not enforced, which is configured in the
+      /// [`PolicyRule`][google.cloud.orgpolicy.v2.PolicySpec.PolicyRule].
       ///
-      /// For example, a constraint `constraints/compute.disableSerialPortAccess`.
-      /// If it is enforced on a VM instance, serial port connections will not be
-      /// opened to that instance.
+      /// If `customConstraintDefinition` is defined, this constraint is a managed
+      /// constraint.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BooleanConstraint : pb::IMessage<BooleanConstraint>
@@ -886,7 +2007,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.OrgPolicy.V2.Constraint.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.OrgPolicy.V2.Constraint.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -906,6 +2027,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BooleanConstraint(BooleanConstraint other) : this() {
+          customConstraintDefinition_ = other.customConstraintDefinition_ != null ? other.customConstraintDefinition_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -913,6 +2035,21 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BooleanConstraint Clone() {
           return new BooleanConstraint(this);
+        }
+
+        /// <summary>Field number for the "custom_constraint_definition" field.</summary>
+        public const int CustomConstraintDefinitionFieldNumber = 1;
+        private global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition customConstraintDefinition_;
+        /// <summary>
+        /// Custom constraint definition. Defines this as a managed constraint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition CustomConstraintDefinition {
+          get { return customConstraintDefinition_; }
+          set {
+            customConstraintDefinition_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -930,6 +2067,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (!object.Equals(CustomConstraintDefinition, other.CustomConstraintDefinition)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -937,6 +2075,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (customConstraintDefinition_ != null) hash ^= CustomConstraintDefinition.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -955,6 +2094,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
+          if (customConstraintDefinition_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CustomConstraintDefinition);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -965,6 +2108,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (customConstraintDefinition_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CustomConstraintDefinition);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -975,6 +2122,9 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (customConstraintDefinition_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomConstraintDefinition);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -986,6 +2136,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
         public void MergeFrom(BooleanConstraint other) {
           if (other == null) {
             return;
+          }
+          if (other.customConstraintDefinition_ != null) {
+            if (customConstraintDefinition_ == null) {
+              CustomConstraintDefinition = new global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition();
+            }
+            CustomConstraintDefinition.MergeFrom(other.CustomConstraintDefinition);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1002,6 +2158,13 @@ namespace Google.Cloud.OrgPolicy.V2 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 10: {
+                if (customConstraintDefinition_ == null) {
+                  CustomConstraintDefinition = new global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition();
+                }
+                input.ReadMessage(CustomConstraintDefinition);
+                break;
+              }
             }
           }
         #endif
@@ -1017,6 +2180,13 @@ namespace Google.Cloud.OrgPolicy.V2 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
+              case 10: {
+                if (customConstraintDefinition_ == null) {
+                  CustomConstraintDefinition = new global::Google.Cloud.OrgPolicy.V2.Constraint.Types.CustomConstraintDefinition();
+                }
+                input.ReadMessage(CustomConstraintDefinition);
+                break;
+              }
             }
           }
         }
@@ -1119,7 +2289,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
     private readonly pbc::RepeatedField<string> resourceTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Immutable. The resource instance type on which this policy applies. Format
-    /// will be of the form : `&lt;canonical service name>/&lt;type>` Example:
+    /// will be of the form : `&lt;service name>/&lt;type>` Example:
     ///
     ///  * `compute.googleapis.com/Instance`.
     /// </summary>
@@ -1147,7 +2317,8 @@ namespace Google.Cloud.OrgPolicy.V2 {
     public const int ConditionFieldNumber = 4;
     private string condition_ = "";
     /// <summary>
-    /// Org policy condition/expression. For example:
+    /// A Common Expression Language (CEL) condition which is used in the
+    /// evaluation of the constraint. For example:
     /// `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
     /// `resource.management.auto_upgrade == true`
     ///
@@ -1215,7 +2386,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
     /// <summary>
     /// Output only. The last time this custom constraint was updated. This
     /// represents the last time that the `CreateCustomConstraint` or
-    /// `UpdateCustomConstraint` RPC was called
+    /// `UpdateCustomConstraint` methods were called.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1523,16 +2694,17 @@ namespace Google.Cloud.OrgPolicy.V2 {
     public static partial class Types {
       /// <summary>
       /// The operation for which this constraint will be applied. To apply this
-      /// constraint only when creating new VMs, the `method_types` should be
+      /// constraint only when creating new resources, the `method_types` should be
       /// `CREATE` only. To apply this constraint when creating or deleting
-      /// VMs, the `method_types` should be `CREATE` and `DELETE`.
+      /// resources, the `method_types` should be `CREATE` and `DELETE`.
       ///
       /// `UPDATE` only custom constraints are not supported. Use `CREATE` or
       /// `CREATE, UPDATE`.
       /// </summary>
       public enum MethodType {
         /// <summary>
-        /// Unspecified. Results in an error.
+        /// This is only used for distinguishing unset values and should never be
+        /// used. Results in an error.
         /// </summary>
         [pbr::OriginalName("METHOD_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -1545,7 +2717,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [pbr::OriginalName("UPDATE")] Update = 2,
         /// <summary>
         /// Constraint applied when deleting the resource.
-        /// Not supported yet.
+        /// Not currently supported.
         /// </summary>
         [pbr::OriginalName("DELETE")] Delete = 3,
         /// <summary>
@@ -1563,7 +2735,8 @@ namespace Google.Cloud.OrgPolicy.V2 {
       /// </summary>
       public enum ActionType {
         /// <summary>
-        /// Unspecified. Results in an error.
+        /// This is only used for distinguishing unset values and should never be
+        /// used. Results in an error.
         /// </summary>
         [pbr::OriginalName("ACTION_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
