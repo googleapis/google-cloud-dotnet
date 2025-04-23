@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.16.0, released 2025-04-23
+
+### New features
+
+- Add field `template_migration_enabled_time` to `.google.cloud.datacatalog.v1.MigrationConfig` ([commit 73c0722](https://github.com/googleapis/google-cloud-dotnet/commit/73c0722ef48ffe5c3ed668a1176ee153abfd98c7))
+
+### Documentation improvements
+
+- A comment for field `sql_resource` in message `.google.cloud.datacatalog.v1.LookupEntryRequest` is changed ([commit cb21a9f](https://github.com/googleapis/google-cloud-dotnet/commit/cb21a9f0d4751fa0d03f3b2f1020a0b900b56fb7))
+
 ## Version 2.15.0, released 2025-03-17
 
 ### New features
