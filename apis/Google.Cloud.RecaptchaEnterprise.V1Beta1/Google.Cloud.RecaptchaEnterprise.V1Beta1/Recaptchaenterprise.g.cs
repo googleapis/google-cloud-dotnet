@@ -137,47 +137,47 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "AQoNSW52YWxpZFJlYXNvbhIeChpJTlZBTElEX1JFQVNPTl9VTlNQRUNJRklF",
             "RBAAEhoKFlVOS05PV05fSU5WQUxJRF9SRUFTT04QARINCglNQUxGT1JNRUQQ",
             "AhILCgdFWFBJUkVEEAMSCAoERFVQRRAEEhUKDVNJVEVfTUlTTUFUQ0gQBRoC",
-            "CAESCwoHTUlTU0lORxAGEhEKDUJST1dTRVJfRVJST1IQByKfBAoZRnJhdWRQ",
-            "cmV2ZW50aW9uQXNzZXNzbWVudBIYChB0cmFuc2FjdGlvbl9yaXNrGAEgASgC",
-            "En4KGXN0b2xlbl9pbnN0cnVtZW50X3ZlcmRpY3QYAiABKAsyWy5nb29nbGUu",
-            "Y2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkZyYXVkUHJldmVu",
-            "dGlvbkFzc2Vzc21lbnQuU3RvbGVuSW5zdHJ1bWVudFZlcmRpY3QSdAoUY2Fy",
-            "ZF90ZXN0aW5nX3ZlcmRpY3QYAyABKAsyVi5nb29nbGUuY2xvdWQucmVjYXB0",
-            "Y2hhZW50ZXJwcmlzZS52MWJldGExLkZyYXVkUHJldmVudGlvbkFzc2Vzc21l",
-            "bnQuQ2FyZFRlc3RpbmdWZXJkaWN0EnwKGGJlaGF2aW9yYWxfdHJ1c3RfdmVy",
-            "ZGljdBgEIAEoCzJaLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNl",
-            "LnYxYmV0YTEuRnJhdWRQcmV2ZW50aW9uQXNzZXNzbWVudC5CZWhhdmlvcmFs",
-            "VHJ1c3RWZXJkaWN0GicKF1N0b2xlbkluc3RydW1lbnRWZXJkaWN0EgwKBHJp",
-            "c2sYASABKAIaIgoSQ2FyZFRlc3RpbmdWZXJkaWN0EgwKBHJpc2sYASABKAIa",
-            "JwoWQmVoYXZpb3JhbFRydXN0VmVyZGljdBINCgV0cnVzdBgBIAEoAiK7AgoZ",
-            "QWNjb3VudERlZmVuZGVyQXNzZXNzbWVudBJoCgZsYWJlbHMYASADKA4yWC5n",
-            "b29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFjY291",
-            "bnREZWZlbmRlckFzc2Vzc21lbnQuQWNjb3VudERlZmVuZGVyTGFiZWwiswEK",
-            "FEFjY291bnREZWZlbmRlckxhYmVsEiYKIkFDQ09VTlRfREVGRU5ERVJfTEFC",
-            "RUxfVU5TUEVDSUZJRUQQABIRCg1QUk9GSUxFX01BVENIEAESHQoZU1VTUElD",
-            "SU9VU19MT0dJTl9BQ1RJVklUWRACEh8KG1NVU1BJQ0lPVVNfQUNDT1VOVF9D",
-            "UkVBVElPThADEiAKHFJFTEFURURfQUNDT1VOVFNfTlVNQkVSX0hJR0gQBDLN",
-            "BAohUmVjYXB0Y2hhRW50ZXJwcmlzZVNlcnZpY2VWMUJldGExEt0BChBDcmVh",
-            "dGVBc3Nlc3NtZW50EkEuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJp",
-            "c2UudjFiZXRhMS5DcmVhdGVBc3Nlc3NtZW50UmVxdWVzdBo0Lmdvb2dsZS5j",
-            "bG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQXNzZXNzbWVudCJQ",
-            "2kERcGFyZW50LGFzc2Vzc21lbnSC0+STAjYiKC92MWJldGExL3twYXJlbnQ9",
-            "cHJvamVjdHMvKn0vYXNzZXNzbWVudHM6CmFzc2Vzc21lbnQS7wEKEkFubm90",
-            "YXRlQXNzZXNzbWVudBJDLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnBy",
-            "aXNlLnYxYmV0YTEuQW5ub3RhdGVBc3Nlc3NtZW50UmVxdWVzdBpELmdvb2ds",
-            "ZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQW5ub3RhdGVB",
-            "c3Nlc3NtZW50UmVzcG9uc2UiTtpBD25hbWUsYW5ub3RhdGlvboLT5JMCNiIx",
-            "L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9hc3Nlc3NtZW50cy8qfTphbm5v",
-            "dGF0ZToBKhpWykEicmVjYXB0Y2hhZW50ZXJwcmlzZS5nb29nbGVhcGlzLmNv",
-            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm1CsgIKJmNvbS5nb29nbGUucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJl",
-            "dGExQhhSZWNhcHRjaGFFbnRlcnByaXNlUHJvdG9QAVphY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9yZWNhcHRjaGFlbnRlcnByaXNlL3YyL2FwaXYxYmV0YTEvcmVj",
-            "YXB0Y2hhZW50ZXJwcmlzZXBiO3JlY2FwdGNoYWVudGVycHJpc2VwYqICBEdD",
-            "UkWqAihHb29nbGUuQ2xvdWQuUmVjYXB0Y2hhRW50ZXJwcmlzZS5WMUJldGEx",
-            "ygIoR29vZ2xlXENsb3VkXFJlY2FwdGNoYUVudGVycHJpc2VcVjFiZXRhMeoC",
-            "K0dvb2dsZTo6Q2xvdWQ6OlJlY2FwdGNoYUVudGVycHJpc2U6OlYxYmV0YTFi",
-            "BnByb3RvMw=="));
+            "CAESCwoHTUlTU0lORxAGEhEKDUJST1dTRVJfRVJST1IQByLEBAoZRnJhdWRQ",
+            "cmV2ZW50aW9uQXNzZXNzbWVudBIdChB0cmFuc2FjdGlvbl9yaXNrGAEgASgC",
+            "QgPgQQMSgwEKGXN0b2xlbl9pbnN0cnVtZW50X3ZlcmRpY3QYAiABKAsyWy5n",
+            "b29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkZyYXVk",
+            "UHJldmVudGlvbkFzc2Vzc21lbnQuU3RvbGVuSW5zdHJ1bWVudFZlcmRpY3RC",
+            "A+BBAxJ5ChRjYXJkX3Rlc3RpbmdfdmVyZGljdBgDIAEoCzJWLmdvb2dsZS5j",
+            "bG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuRnJhdWRQcmV2ZW50",
+            "aW9uQXNzZXNzbWVudC5DYXJkVGVzdGluZ1ZlcmRpY3RCA+BBAxKBAQoYYmVo",
+            "YXZpb3JhbF90cnVzdF92ZXJkaWN0GAQgASgLMlouZ29vZ2xlLmNsb3VkLnJl",
+            "Y2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5GcmF1ZFByZXZlbnRpb25Bc3Nl",
+            "c3NtZW50LkJlaGF2aW9yYWxUcnVzdFZlcmRpY3RCA+BBAxosChdTdG9sZW5J",
+            "bnN0cnVtZW50VmVyZGljdBIRCgRyaXNrGAEgASgCQgPgQQMaJwoSQ2FyZFRl",
+            "c3RpbmdWZXJkaWN0EhEKBHJpc2sYASABKAJCA+BBAxosChZCZWhhdmlvcmFs",
+            "VHJ1c3RWZXJkaWN0EhIKBXRydXN0GAEgASgCQgPgQQMiuwIKGUFjY291bnRE",
+            "ZWZlbmRlckFzc2Vzc21lbnQSaAoGbGFiZWxzGAEgAygOMlguZ29vZ2xlLmNs",
+            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5BY2NvdW50RGVmZW5k",
+            "ZXJBc3Nlc3NtZW50LkFjY291bnREZWZlbmRlckxhYmVsIrMBChRBY2NvdW50",
+            "RGVmZW5kZXJMYWJlbBImCiJBQ0NPVU5UX0RFRkVOREVSX0xBQkVMX1VOU1BF",
+            "Q0lGSUVEEAASEQoNUFJPRklMRV9NQVRDSBABEh0KGVNVU1BJQ0lPVVNfTE9H",
+            "SU5fQUNUSVZJVFkQAhIfChtTVVNQSUNJT1VTX0FDQ09VTlRfQ1JFQVRJT04Q",
+            "AxIgChxSRUxBVEVEX0FDQ09VTlRTX05VTUJFUl9ISUdIEAQyzQQKIVJlY2Fw",
+            "dGNoYUVudGVycHJpc2VTZXJ2aWNlVjFCZXRhMRLdAQoQQ3JlYXRlQXNzZXNz",
+            "bWVudBJBLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0",
+            "YTEuQ3JlYXRlQXNzZXNzbWVudFJlcXVlc3QaNC5nb29nbGUuY2xvdWQucmVj",
+            "YXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFzc2Vzc21lbnQiUNpBEXBhcmVu",
+            "dCxhc3Nlc3NtZW50gtPkkwI2IigvdjFiZXRhMS97cGFyZW50PXByb2plY3Rz",
+            "Lyp9L2Fzc2Vzc21lbnRzOgphc3Nlc3NtZW50Eu8BChJBbm5vdGF0ZUFzc2Vz",
+            "c21lbnQSQy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJl",
+            "dGExLkFubm90YXRlQXNzZXNzbWVudFJlcXVlc3QaRC5nb29nbGUuY2xvdWQu",
+            "cmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFubm90YXRlQXNzZXNzbWVu",
+            "dFJlc3BvbnNlIk7aQQ9uYW1lLGFubm90YXRpb26C0+STAjYiMS92MWJldGEx",
+            "L3tuYW1lPXByb2plY3RzLyovYXNzZXNzbWVudHMvKn06YW5ub3RhdGU6ASoa",
+            "VspBInJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrIC",
+            "CiZjb20uZ29vZ2xlLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMUIYUmVj",
+            "YXB0Y2hhRW50ZXJwcmlzZVByb3RvUAFaYWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "cmVjYXB0Y2hhZW50ZXJwcmlzZS92Mi9hcGl2MWJldGExL3JlY2FwdGNoYWVu",
+            "dGVycHJpc2VwYjtyZWNhcHRjaGFlbnRlcnByaXNlcGKiAgRHQ1JFqgIoR29v",
+            "Z2xlLkNsb3VkLlJlY2FwdGNoYUVudGVycHJpc2UuVjFCZXRhMcoCKEdvb2ds",
+            "ZVxDbG91ZFxSZWNhcHRjaGFFbnRlcnByaXNlXFYxYmV0YTHqAitHb29nbGU6",
+            "OkNsb3VkOjpSZWNhcHRjaGFFbnRlcnByaXNlOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -5537,8 +5537,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int TransactionRiskFieldNumber = 1;
     private float transactionRisk_;
     /// <summary>
-    /// Probability (0-1) of this transaction being fraudulent. Summarizes the
-    /// combined risk of attack vectors below.
+    /// Output only. Probability (0-1) of this transaction being fraudulent.
+    /// Summarizes the combined risk of attack vectors below.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5553,7 +5553,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int StolenInstrumentVerdictFieldNumber = 2;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.StolenInstrumentVerdict stolenInstrumentVerdict_;
     /// <summary>
-    /// Assessment of this transaction for risk of a stolen instrument.
+    /// Output only. Assessment of this transaction for risk of a stolen
+    /// instrument.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5568,8 +5569,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int CardTestingVerdictFieldNumber = 3;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict cardTestingVerdict_;
     /// <summary>
-    /// Assessment of this transaction for risk of being part of a card testing
-    /// attack.
+    /// Output only. Assessment of this transaction for risk of being part of a
+    /// card testing attack.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5584,7 +5585,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int BehavioralTrustVerdictFieldNumber = 4;
     private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict behavioralTrustVerdict_;
     /// <summary>
-    /// Assessment of this transaction for behavioral trust.
+    /// Output only. Assessment of this transaction for behavioral trust.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5883,8 +5884,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         public const int RiskFieldNumber = 1;
         private float risk_;
         /// <summary>
-        /// Probability (0-1) of this transaction being executed with a stolen
-        /// instrument.
+        /// Output only. Probability (0-1) of this transaction being executed with a
+        /// stolen instrument.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6081,8 +6082,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         public const int RiskFieldNumber = 1;
         private float risk_;
         /// <summary>
-        /// Probability (0-1) of this transaction attempt being part of a card
-        /// testing attack.
+        /// Output only. Probability (0-1) of this transaction attempt being part of
+        /// a card testing attack.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6278,8 +6279,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         public const int TrustFieldNumber = 1;
         private float trust_;
         /// <summary>
-        /// Probability (0-1) of this transaction attempt being executed in a
-        /// behaviorally trustworthy way.
+        /// Output only. Probability (0-1) of this transaction attempt being executed
+        /// in a behaviorally trustworthy way.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
