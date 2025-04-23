@@ -511,6 +511,24 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest> __Marshaller_google_analytics_admin_v1alpha_CreateReportingDataAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> __Marshaller_google_analytics_admin_v1alpha_ReportingDataAnnotation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest> __Marshaller_google_analytics_admin_v1alpha_GetReportingDataAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest> __Marshaller_google_analytics_admin_v1alpha_ListReportingDataAnnotationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse> __Marshaller_google_analytics_admin_v1alpha_ListReportingDataAnnotationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateReportingDataAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteReportingDataAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest> __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -1711,6 +1729,54 @@ namespace Google.Analytics.Admin.V1Alpha {
         "DeleteSubpropertyEventFilter",
         __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> __Method_CreateReportingDataAnnotation = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateReportingDataAnnotation",
+        __Marshaller_google_analytics_admin_v1alpha_CreateReportingDataAnnotationRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ReportingDataAnnotation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> __Method_GetReportingDataAnnotation = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReportingDataAnnotation",
+        __Marshaller_google_analytics_admin_v1alpha_GetReportingDataAnnotationRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ReportingDataAnnotation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest, global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse> __Method_ListReportingDataAnnotations = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest, global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListReportingDataAnnotations",
+        __Marshaller_google_analytics_admin_v1alpha_ListReportingDataAnnotationsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListReportingDataAnnotationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> __Method_UpdateReportingDataAnnotation = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateReportingDataAnnotation",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateReportingDataAnnotationRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ReportingDataAnnotation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteReportingDataAnnotation = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteReportingDataAnnotation",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteReportingDataAnnotationRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> __Method_SubmitUserDeletion = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SubmitUserDeletion",
+        __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -3637,6 +3703,78 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> CreateReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup a single Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> GetReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all Reporting Data Annotations on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse> ListReportingDataAnnotations(global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> UpdateReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submits a request for user deletion for a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> SubmitUserDeletion(global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -11346,6 +11484,294 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
       }
+      /// <summary>
+      /// Creates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation CreateReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateReportingDataAnnotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation CreateReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> CreateReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateReportingDataAnnotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> CreateReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Lookup a single Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation GetReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetReportingDataAnnotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup a single Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation GetReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Lookup a single Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> GetReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetReportingDataAnnotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup a single Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> GetReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// List all Reporting Data Annotations on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse ListReportingDataAnnotations(global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListReportingDataAnnotations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all Reporting Data Annotations on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse ListReportingDataAnnotations(global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListReportingDataAnnotations, null, options, request);
+      }
+      /// <summary>
+      /// List all Reporting Data Annotations on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse> ListReportingDataAnnotationsAsync(global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListReportingDataAnnotationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all Reporting Data Annotations on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse> ListReportingDataAnnotationsAsync(global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListReportingDataAnnotations, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation UpdateReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateReportingDataAnnotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation UpdateReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateReportingDataAnnotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteReportingDataAnnotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReportingDataAnnotation(global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteReportingDataAnnotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Reporting Data Annotation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReportingDataAnnotationAsync(global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteReportingDataAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// Submits a request for user deletion for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse SubmitUserDeletion(global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitUserDeletion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a request for user deletion for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse SubmitUserDeletion(global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SubmitUserDeletion, null, options, request);
+      }
+      /// <summary>
+      /// Submits a request for user deletion for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> SubmitUserDeletionAsync(global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitUserDeletionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a request for user deletion for a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> SubmitUserDeletionAsync(global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SubmitUserDeletion, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -11509,7 +11935,13 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_GetSubpropertyEventFilter, serviceImpl.GetSubpropertyEventFilter)
           .AddMethod(__Method_ListSubpropertyEventFilters, serviceImpl.ListSubpropertyEventFilters)
           .AddMethod(__Method_UpdateSubpropertyEventFilter, serviceImpl.UpdateSubpropertyEventFilter)
-          .AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl.DeleteSubpropertyEventFilter).Build();
+          .AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl.DeleteSubpropertyEventFilter)
+          .AddMethod(__Method_CreateReportingDataAnnotation, serviceImpl.CreateReportingDataAnnotation)
+          .AddMethod(__Method_GetReportingDataAnnotation, serviceImpl.GetReportingDataAnnotation)
+          .AddMethod(__Method_ListReportingDataAnnotations, serviceImpl.ListReportingDataAnnotations)
+          .AddMethod(__Method_UpdateReportingDataAnnotation, serviceImpl.UpdateReportingDataAnnotation)
+          .AddMethod(__Method_DeleteReportingDataAnnotation, serviceImpl.DeleteReportingDataAnnotation)
+          .AddMethod(__Method_SubmitUserDeletion, serviceImpl.SubmitUserDeletion).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -11669,6 +12101,12 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_ListSubpropertyEventFilters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse>(serviceImpl.ListSubpropertyEventFilters));
       serviceBinder.AddMethod(__Method_UpdateSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.UpdateSubpropertyEventFilter));
       serviceBinder.AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_CreateReportingDataAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(serviceImpl.CreateReportingDataAnnotation));
+      serviceBinder.AddMethod(__Method_GetReportingDataAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(serviceImpl.GetReportingDataAnnotation));
+      serviceBinder.AddMethod(__Method_ListReportingDataAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsRequest, global::Google.Analytics.Admin.V1Alpha.ListReportingDataAnnotationsResponse>(serviceImpl.ListReportingDataAnnotations));
+      serviceBinder.AddMethod(__Method_UpdateReportingDataAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(serviceImpl.UpdateReportingDataAnnotation));
+      serviceBinder.AddMethod(__Method_DeleteReportingDataAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReportingDataAnnotation));
+      serviceBinder.AddMethod(__Method_SubmitUserDeletion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse>(serviceImpl.SubmitUserDeletion));
     }
 
   }

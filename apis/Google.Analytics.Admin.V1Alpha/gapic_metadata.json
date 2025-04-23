@@ -196,6 +196,12 @@
                 "CreatePropertyAsync"
               ]
             },
+            "CreateReportingDataAnnotation": {
+              "methods": [
+                "CreateReportingDataAnnotation",
+                "CreateReportingDataAnnotationAsync"
+              ]
+            },
             "CreateRollupProperty": {
               "methods": [
                 "CreateRollupProperty",
@@ -338,6 +344,12 @@
               "methods": [
                 "DeleteProperty",
                 "DeletePropertyAsync"
+              ]
+            },
+            "DeleteReportingDataAnnotation": {
+              "methods": [
+                "DeleteReportingDataAnnotation",
+                "DeleteReportingDataAnnotationAsync"
               ]
             },
             "DeleteRollupPropertySourceLink": {
@@ -532,6 +544,12 @@
                 "GetPropertyAsync"
               ]
             },
+            "GetReportingDataAnnotation": {
+              "methods": [
+                "GetReportingDataAnnotation",
+                "GetReportingDataAnnotationAsync"
+              ]
+            },
             "GetRollupPropertySourceLink": {
               "methods": [
                 "GetRollupPropertySourceLink",
@@ -694,6 +712,12 @@
                 "ListPropertiesAsync"
               ]
             },
+            "ListReportingDataAnnotations": {
+              "methods": [
+                "ListReportingDataAnnotations",
+                "ListReportingDataAnnotationsAsync"
+              ]
+            },
             "ListRollupPropertySourceLinks": {
               "methods": [
                 "ListRollupPropertySourceLinks",
@@ -752,6 +776,12 @@
               "methods": [
                 "SetAutomatedGa4ConfigurationOptOut",
                 "SetAutomatedGa4ConfigurationOptOutAsync"
+              ]
+            },
+            "SubmitUserDeletion": {
+              "methods": [
+                "SubmitUserDeletion",
+                "SubmitUserDeletionAsync"
               ]
             },
             "UpdateAccessBinding": {
@@ -890,6 +920,12 @@
               "methods": [
                 "UpdateProperty",
                 "UpdatePropertyAsync"
+              ]
+            },
+            "UpdateReportingDataAnnotation": {
+              "methods": [
+                "UpdateReportingDataAnnotation",
+                "UpdateReportingDataAnnotationAsync"
               ]
             },
             "UpdateSKAdNetworkConversionValueSchema": {

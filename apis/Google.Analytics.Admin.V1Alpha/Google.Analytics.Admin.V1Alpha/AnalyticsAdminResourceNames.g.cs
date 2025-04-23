@@ -1593,4 +1593,66 @@ namespace Google.Analytics.Admin.V1Alpha
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateReportingDataAnnotationRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetReportingDataAnnotationRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::ReportingDataAnnotationName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::ReportingDataAnnotationName ReportingDataAnnotationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ReportingDataAnnotationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListReportingDataAnnotationsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteReportingDataAnnotationRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::ReportingDataAnnotationName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::ReportingDataAnnotationName ReportingDataAnnotationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ReportingDataAnnotationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SubmitUserDeletionRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::PropertyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::PropertyName PropertyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::PropertyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

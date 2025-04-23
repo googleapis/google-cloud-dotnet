@@ -198,6 +198,12 @@ namespace Google.Analytics.Admin.V1Alpha
             ListSubpropertyEventFiltersSettings = existing.ListSubpropertyEventFiltersSettings;
             UpdateSubpropertyEventFilterSettings = existing.UpdateSubpropertyEventFilterSettings;
             DeleteSubpropertyEventFilterSettings = existing.DeleteSubpropertyEventFilterSettings;
+            CreateReportingDataAnnotationSettings = existing.CreateReportingDataAnnotationSettings;
+            GetReportingDataAnnotationSettings = existing.GetReportingDataAnnotationSettings;
+            ListReportingDataAnnotationsSettings = existing.ListReportingDataAnnotationsSettings;
+            UpdateReportingDataAnnotationSettings = existing.UpdateReportingDataAnnotationSettings;
+            DeleteReportingDataAnnotationSettings = existing.DeleteReportingDataAnnotationSettings;
+            SubmitUserDeletionSettings = existing.SubmitUserDeletionSettings;
             OnCopy(existing);
         }
 
@@ -3312,6 +3318,138 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSubpropertyEventFilterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateReportingDataAnnotation</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateReportingDataAnnotationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateReportingDataAnnotationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetReportingDataAnnotation</c> and
+        /// <c>AnalyticsAdminServiceClient.GetReportingDataAnnotationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetReportingDataAnnotationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListReportingDataAnnotations</c> and
+        /// <c>AnalyticsAdminServiceClient.ListReportingDataAnnotationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListReportingDataAnnotationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateReportingDataAnnotation</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateReportingDataAnnotationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateReportingDataAnnotationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteReportingDataAnnotation</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteReportingDataAnnotationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteReportingDataAnnotationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.SubmitUserDeletion</c> and
+        /// <c>AnalyticsAdminServiceClient.SubmitUserDeletionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SubmitUserDeletionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -19977,6 +20115,740 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName name, st::CancellationToken cancellationToken) =>
             DeleteSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation CreateReportingDataAnnotation(CreateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(CreateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(CreateReportingDataAnnotationRequest request, st::CancellationToken cancellationToken) =>
+            CreateReportingDataAnnotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a Reporting Data Annotation.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation CreateReportingDataAnnotation(string parent, ReportingDataAnnotation reportingDataAnnotation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReportingDataAnnotation(new CreateReportingDataAnnotationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ReportingDataAnnotation = gax::GaxPreconditions.CheckNotNull(reportingDataAnnotation, nameof(reportingDataAnnotation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a Reporting Data Annotation.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(string parent, ReportingDataAnnotation reportingDataAnnotation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReportingDataAnnotationAsync(new CreateReportingDataAnnotationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ReportingDataAnnotation = gax::GaxPreconditions.CheckNotNull(reportingDataAnnotation, nameof(reportingDataAnnotation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a Reporting Data Annotation.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(string parent, ReportingDataAnnotation reportingDataAnnotation, st::CancellationToken cancellationToken) =>
+            CreateReportingDataAnnotationAsync(parent, reportingDataAnnotation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a Reporting Data Annotation.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation CreateReportingDataAnnotation(PropertyName parent, ReportingDataAnnotation reportingDataAnnotation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReportingDataAnnotation(new CreateReportingDataAnnotationRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ReportingDataAnnotation = gax::GaxPreconditions.CheckNotNull(reportingDataAnnotation, nameof(reportingDataAnnotation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a Reporting Data Annotation.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(PropertyName parent, ReportingDataAnnotation reportingDataAnnotation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateReportingDataAnnotationAsync(new CreateReportingDataAnnotationRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ReportingDataAnnotation = gax::GaxPreconditions.CheckNotNull(reportingDataAnnotation, nameof(reportingDataAnnotation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a Reporting Data Annotation.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(PropertyName parent, ReportingDataAnnotation reportingDataAnnotation, st::CancellationToken cancellationToken) =>
+            CreateReportingDataAnnotationAsync(parent, reportingDataAnnotation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation GetReportingDataAnnotation(GetReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(GetReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(GetReportingDataAnnotationRequest request, st::CancellationToken cancellationToken) =>
+            GetReportingDataAnnotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to lookup.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reportingDataAnnotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation GetReportingDataAnnotation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingDataAnnotation(new GetReportingDataAnnotationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to lookup.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reportingDataAnnotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingDataAnnotationAsync(new GetReportingDataAnnotationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to lookup.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reportingDataAnnotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetReportingDataAnnotationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to lookup.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reportingDataAnnotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation GetReportingDataAnnotation(ReportingDataAnnotationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingDataAnnotation(new GetReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to lookup.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reportingDataAnnotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(ReportingDataAnnotationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingDataAnnotationAsync(new GetReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to lookup.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reportingDataAnnotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(ReportingDataAnnotationName name, st::CancellationToken cancellationToken) =>
+            GetReportingDataAnnotationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotations(ListReportingDataAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotationsAsync(ListReportingDataAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportingDataAnnotationsRequest request = new ListReportingDataAnnotationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportingDataAnnotations(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportingDataAnnotationsRequest request = new ListReportingDataAnnotationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportingDataAnnotationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotations(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportingDataAnnotationsRequest request = new ListReportingDataAnnotationsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportingDataAnnotations(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotationsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReportingDataAnnotationsRequest request = new ListReportingDataAnnotationsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReportingDataAnnotationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation UpdateReportingDataAnnotation(UpdateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(UpdateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(UpdateReportingDataAnnotationRequest request, st::CancellationToken cancellationToken) =>
+            UpdateReportingDataAnnotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingDataAnnotation UpdateReportingDataAnnotation(ReportingDataAnnotation reportingDataAnnotation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReportingDataAnnotation(new UpdateReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotation = gax::GaxPreconditions.CheckNotNull(reportingDataAnnotation, nameof(reportingDataAnnotation)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(ReportingDataAnnotation reportingDataAnnotation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReportingDataAnnotationAsync(new UpdateReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotation = gax::GaxPreconditions.CheckNotNull(reportingDataAnnotation, nameof(reportingDataAnnotation)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="reportingDataAnnotation">
+        /// Required. The Reporting Data Annotation to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(ReportingDataAnnotation reportingDataAnnotation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateReportingDataAnnotationAsync(reportingDataAnnotation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReportingDataAnnotation(DeleteReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReportingDataAnnotationAsync(DeleteReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReportingDataAnnotationAsync(DeleteReportingDataAnnotationRequest request, st::CancellationToken cancellationToken) =>
+            DeleteReportingDataAnnotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to delete.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reporting_data_annotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReportingDataAnnotation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReportingDataAnnotation(new DeleteReportingDataAnnotationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to delete.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reporting_data_annotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReportingDataAnnotationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReportingDataAnnotationAsync(new DeleteReportingDataAnnotationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to delete.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reporting_data_annotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReportingDataAnnotationAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteReportingDataAnnotationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to delete.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reporting_data_annotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReportingDataAnnotation(ReportingDataAnnotationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReportingDataAnnotation(new DeleteReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to delete.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reporting_data_annotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReportingDataAnnotationAsync(ReportingDataAnnotationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReportingDataAnnotationAsync(new DeleteReportingDataAnnotationRequest
+            {
+                ReportingDataAnnotationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Reporting Data Annotation to delete.
+        /// Format:
+        /// properties/property_id/reportingDataAnnotations/reporting_data_annotation
+        /// Example: properties/123/reportingDataAnnotations/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReportingDataAnnotationAsync(ReportingDataAnnotationName name, st::CancellationToken cancellationToken) =>
+            DeleteReportingDataAnnotationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubmitUserDeletionResponse SubmitUserDeletion(SubmitUserDeletionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(SubmitUserDeletionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(SubmitUserDeletionRequest request, st::CancellationToken cancellationToken) =>
+            SubmitUserDeletionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the property to submit user deletion for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubmitUserDeletionResponse SubmitUserDeletion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUserDeletion(new SubmitUserDeletionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the property to submit user deletion for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUserDeletionAsync(new SubmitUserDeletionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the property to submit user deletion for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(string name, st::CancellationToken cancellationToken) =>
+            SubmitUserDeletionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the property to submit user deletion for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubmitUserDeletionResponse SubmitUserDeletion(PropertyName name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUserDeletion(new SubmitUserDeletionRequest
+            {
+                PropertyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the property to submit user deletion for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(PropertyName name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUserDeletionAsync(new SubmitUserDeletionRequest
+            {
+                PropertyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the property to submit user deletion for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(PropertyName name, st::CancellationToken cancellationToken) =>
+            SubmitUserDeletionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -20284,6 +21156,18 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<UpdateSubpropertyEventFilterRequest, SubpropertyEventFilter> _callUpdateSubpropertyEventFilter;
 
         private readonly gaxgrpc::ApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty> _callDeleteSubpropertyEventFilter;
+
+        private readonly gaxgrpc::ApiCall<CreateReportingDataAnnotationRequest, ReportingDataAnnotation> _callCreateReportingDataAnnotation;
+
+        private readonly gaxgrpc::ApiCall<GetReportingDataAnnotationRequest, ReportingDataAnnotation> _callGetReportingDataAnnotation;
+
+        private readonly gaxgrpc::ApiCall<ListReportingDataAnnotationsRequest, ListReportingDataAnnotationsResponse> _callListReportingDataAnnotations;
+
+        private readonly gaxgrpc::ApiCall<UpdateReportingDataAnnotationRequest, ReportingDataAnnotation> _callUpdateReportingDataAnnotation;
+
+        private readonly gaxgrpc::ApiCall<DeleteReportingDataAnnotationRequest, wkt::Empty> _callDeleteReportingDataAnnotation;
+
+        private readonly gaxgrpc::ApiCall<SubmitUserDeletionRequest, SubmitUserDeletionResponse> _callSubmitUserDeletion;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -20761,6 +21645,24 @@ namespace Google.Analytics.Admin.V1Alpha
             _callDeleteSubpropertyEventFilter = clientHelper.BuildApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty>("DeleteSubpropertyEventFilter", grpcClient.DeleteSubpropertyEventFilterAsync, grpcClient.DeleteSubpropertyEventFilter, effectiveSettings.DeleteSubpropertyEventFilterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSubpropertyEventFilter);
             Modify_DeleteSubpropertyEventFilterApiCall(ref _callDeleteSubpropertyEventFilter);
+            _callCreateReportingDataAnnotation = clientHelper.BuildApiCall<CreateReportingDataAnnotationRequest, ReportingDataAnnotation>("CreateReportingDataAnnotation", grpcClient.CreateReportingDataAnnotationAsync, grpcClient.CreateReportingDataAnnotation, effectiveSettings.CreateReportingDataAnnotationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateReportingDataAnnotation);
+            Modify_CreateReportingDataAnnotationApiCall(ref _callCreateReportingDataAnnotation);
+            _callGetReportingDataAnnotation = clientHelper.BuildApiCall<GetReportingDataAnnotationRequest, ReportingDataAnnotation>("GetReportingDataAnnotation", grpcClient.GetReportingDataAnnotationAsync, grpcClient.GetReportingDataAnnotation, effectiveSettings.GetReportingDataAnnotationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetReportingDataAnnotation);
+            Modify_GetReportingDataAnnotationApiCall(ref _callGetReportingDataAnnotation);
+            _callListReportingDataAnnotations = clientHelper.BuildApiCall<ListReportingDataAnnotationsRequest, ListReportingDataAnnotationsResponse>("ListReportingDataAnnotations", grpcClient.ListReportingDataAnnotationsAsync, grpcClient.ListReportingDataAnnotations, effectiveSettings.ListReportingDataAnnotationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListReportingDataAnnotations);
+            Modify_ListReportingDataAnnotationsApiCall(ref _callListReportingDataAnnotations);
+            _callUpdateReportingDataAnnotation = clientHelper.BuildApiCall<UpdateReportingDataAnnotationRequest, ReportingDataAnnotation>("UpdateReportingDataAnnotation", grpcClient.UpdateReportingDataAnnotationAsync, grpcClient.UpdateReportingDataAnnotation, effectiveSettings.UpdateReportingDataAnnotationSettings).WithGoogleRequestParam("reporting_data_annotation.name", request => request.ReportingDataAnnotation?.Name);
+            Modify_ApiCall(ref _callUpdateReportingDataAnnotation);
+            Modify_UpdateReportingDataAnnotationApiCall(ref _callUpdateReportingDataAnnotation);
+            _callDeleteReportingDataAnnotation = clientHelper.BuildApiCall<DeleteReportingDataAnnotationRequest, wkt::Empty>("DeleteReportingDataAnnotation", grpcClient.DeleteReportingDataAnnotationAsync, grpcClient.DeleteReportingDataAnnotation, effectiveSettings.DeleteReportingDataAnnotationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteReportingDataAnnotation);
+            Modify_DeleteReportingDataAnnotationApiCall(ref _callDeleteReportingDataAnnotation);
+            _callSubmitUserDeletion = clientHelper.BuildApiCall<SubmitUserDeletionRequest, SubmitUserDeletionResponse>("SubmitUserDeletion", grpcClient.SubmitUserDeletionAsync, grpcClient.SubmitUserDeletion, effectiveSettings.SubmitUserDeletionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSubmitUserDeletion);
+            Modify_SubmitUserDeletionApiCall(ref _callSubmitUserDeletion);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -21066,6 +21968,18 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty> call);
 
+        partial void Modify_CreateReportingDataAnnotationApiCall(ref gaxgrpc::ApiCall<CreateReportingDataAnnotationRequest, ReportingDataAnnotation> call);
+
+        partial void Modify_GetReportingDataAnnotationApiCall(ref gaxgrpc::ApiCall<GetReportingDataAnnotationRequest, ReportingDataAnnotation> call);
+
+        partial void Modify_ListReportingDataAnnotationsApiCall(ref gaxgrpc::ApiCall<ListReportingDataAnnotationsRequest, ListReportingDataAnnotationsResponse> call);
+
+        partial void Modify_UpdateReportingDataAnnotationApiCall(ref gaxgrpc::ApiCall<UpdateReportingDataAnnotationRequest, ReportingDataAnnotation> call);
+
+        partial void Modify_DeleteReportingDataAnnotationApiCall(ref gaxgrpc::ApiCall<DeleteReportingDataAnnotationRequest, wkt::Empty> call);
+
+        partial void Modify_SubmitUserDeletionApiCall(ref gaxgrpc::ApiCall<SubmitUserDeletionRequest, SubmitUserDeletionResponse> call);
+
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsAdminService client</summary>
@@ -21370,6 +22284,18 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateSubpropertyEventFilterRequest(ref UpdateSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSubpropertyEventFilterRequest(ref DeleteSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateReportingDataAnnotationRequest(ref CreateReportingDataAnnotationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetReportingDataAnnotationRequest(ref GetReportingDataAnnotationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListReportingDataAnnotationsRequest(ref ListReportingDataAnnotationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateReportingDataAnnotationRequest(ref UpdateReportingDataAnnotationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteReportingDataAnnotationRequest(ref DeleteReportingDataAnnotationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SubmitUserDeletionRequest(ref SubmitUserDeletionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -25214,6 +26140,150 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_DeleteSubpropertyEventFilterRequest(ref request, ref callSettings);
             return _callDeleteSubpropertyEventFilter.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReportingDataAnnotation CreateReportingDataAnnotation(CreateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callCreateReportingDataAnnotation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReportingDataAnnotation> CreateReportingDataAnnotationAsync(CreateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callCreateReportingDataAnnotation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReportingDataAnnotation GetReportingDataAnnotation(GetReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callGetReportingDataAnnotation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup a single Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReportingDataAnnotation> GetReportingDataAnnotationAsync(GetReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callGetReportingDataAnnotation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotations(ListReportingDataAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReportingDataAnnotationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListReportingDataAnnotationsRequest, ListReportingDataAnnotationsResponse, ReportingDataAnnotation>(_callListReportingDataAnnotations, request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Reporting Data Annotations on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportingDataAnnotation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListReportingDataAnnotationsResponse, ReportingDataAnnotation> ListReportingDataAnnotationsAsync(ListReportingDataAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReportingDataAnnotationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReportingDataAnnotationsRequest, ListReportingDataAnnotationsResponse, ReportingDataAnnotation>(_callListReportingDataAnnotations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReportingDataAnnotation UpdateReportingDataAnnotation(UpdateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callUpdateReportingDataAnnotation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReportingDataAnnotation> UpdateReportingDataAnnotationAsync(UpdateReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callUpdateReportingDataAnnotation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteReportingDataAnnotation(DeleteReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReportingDataAnnotationRequest(ref request, ref callSettings);
+            _callDeleteReportingDataAnnotation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Reporting Data Annotation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteReportingDataAnnotationAsync(DeleteReportingDataAnnotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReportingDataAnnotationRequest(ref request, ref callSettings);
+            return _callDeleteReportingDataAnnotation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SubmitUserDeletionResponse SubmitUserDeletion(SubmitUserDeletionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitUserDeletionRequest(ref request, ref callSettings);
+            return _callSubmitUserDeletion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Submits a request for user deletion for a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(SubmitUserDeletionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitUserDeletionRequest(ref request, ref callSettings);
+            return _callSubmitUserDeletion.Async(request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -25321,6 +26391,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListSubpropertyEventFiltersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListReportingDataAnnotationsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -25539,6 +26613,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<SubpropertyEventFilter> GetEnumerator() => SubpropertyEventFilters.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListReportingDataAnnotationsResponse : gaxgrpc::IPageResponse<ReportingDataAnnotation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ReportingDataAnnotation> GetEnumerator() => ReportingDataAnnotations.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
