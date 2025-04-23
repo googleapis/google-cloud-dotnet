@@ -1,5 +1,29 @@
 # Version history
 
+## Version 2.0.0-alpha23, released 2025-04-23
+
+### Bug fixes
+
+- **BREAKING CHANGE** Change an existing value KEY_EVENT = 32 to KEY_EVENT = 30 in enum `ChangeHistoryResourceType`. ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- **BREAKING CHANGE** Rename an existing field `key_event` to `reporting_data_annotation` in `ChangeHistoryChange`. ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+
+### New features
+
+- Add the `CreateReportingDataAnnotation` method ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `GetReportingDataAnnotation` method ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `ListReportingDataAnnotations` method ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `UpdateReportingDataAnnotation` method ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `DeleteReportingDataAnnotation` method ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `SubmitUserDeletion` method ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `REPORTING_DATA_ANNOTATION` resource type to the `ChangeHistoryResourceType` enum ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add the `ReportingDataAnnotation` type ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Add `key_event`, `reporting_data_annotation` fields to the `ChangeHistoryResource` resource ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+
+### Documentation improvements
+
+- Announce the deprecation of the `sharing_with_google_any_sales_enabled` field of the `DataSharingSettings` type ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+- Update the documentation of `sharing_with_google_support_enabled`, `sharing_with_google_assigned_sales_enabled`, 'sharing_with_google_products_enabled', 'sharing_with_others_enabled' fields of the `DataSharingSettings` type ([commit 429adae](https://github.com/googleapis/google-cloud-dotnet/commit/429adaec6d69ba6a4ab415fb18b86a18472d1917))
+
 ## Version 2.0.0-alpha22, released 2025-03-10
 
 ### New features

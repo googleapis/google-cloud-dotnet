@@ -46,7 +46,7 @@
     },
     {
       "id": "Google.Analytics.Admin.V1Alpha",
-      "version": "2.0.0-alpha22",
+      "version": "2.0.0-alpha23",
       "type": "grpc",
       "productName": "Analytics Admin",
       "productUrl": "https://developers.google.com/analytics",
