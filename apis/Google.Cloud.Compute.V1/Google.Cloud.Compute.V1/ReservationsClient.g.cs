@@ -54,6 +54,8 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
+            PerformMaintenanceSettings = existing.PerformMaintenanceSettings;
+            PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
             ResizeSettings = existing.ResizeSettings;
             ResizeOperationsSettings = existing.ResizeOperationsSettings.Clone();
             SetIamPolicySettings = existing.SetIamPolicySettings;
@@ -208,6 +210,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationsClient.PerformMaintenance</c> and <c>ReservationsClient.PerformMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PerformMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ReservationsClient.PerformMaintenance</c> and
+        /// <c>ReservationsClient.PerformMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PerformMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ReservationsClient.Resize</c>
@@ -1020,6 +1052,132 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PerformMaintenance(PerformMaintenanceReservationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceReservationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceReservationRequest request, st::CancellationToken cancellationToken) =>
+            PerformMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PerformMaintenance</c>.</summary>
+        public virtual lro::OperationsClient PerformMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PerformMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePerformMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PerformMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PerformMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePerformMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PerformMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="reservation">
+        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationsPerformMaintenanceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PerformMaintenance(string project, string zone, string reservation, ReservationsPerformMaintenanceRequest reservationsPerformMaintenanceRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            PerformMaintenance(new PerformMaintenanceReservationRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Reservation = gax::GaxPreconditions.CheckNotNullOrEmpty(reservation, nameof(reservation)),
+                ReservationsPerformMaintenanceRequestResource = gax::GaxPreconditions.CheckNotNull(reservationsPerformMaintenanceRequestResource, nameof(reservationsPerformMaintenanceRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="reservation">
+        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationsPerformMaintenanceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string reservation, ReservationsPerformMaintenanceRequest reservationsPerformMaintenanceRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            PerformMaintenanceAsync(new PerformMaintenanceReservationRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Reservation = gax::GaxPreconditions.CheckNotNullOrEmpty(reservation, nameof(reservation)),
+                ReservationsPerformMaintenanceRequestResource = gax::GaxPreconditions.CheckNotNull(reservationsPerformMaintenanceRequestResource, nameof(reservationsPerformMaintenanceRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="reservation">
+        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationsPerformMaintenanceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string reservation, ReservationsPerformMaintenanceRequest reservationsPerformMaintenanceRequestResource, st::CancellationToken cancellationToken) =>
+            PerformMaintenanceAsync(project, zone, reservation, reservationsPerformMaintenanceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1486,6 +1644,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListReservationsRequest, ReservationList> _callList;
 
+        private readonly gaxgrpc::ApiCall<PerformMaintenanceReservationRequest, Operation> _callPerformMaintenance;
+
         private readonly gaxgrpc::ApiCall<ResizeReservationRequest, Operation> _callResize;
 
         private readonly gaxgrpc::ApiCall<SetIamPolicyReservationRequest, Policy> _callSetIamPolicy;
@@ -1511,6 +1671,7 @@ namespace Google.Cloud.Compute.V1
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
             ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResizeOperationsSettings, logger);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateOperationsSettings, logger);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListReservationsRequest, ReservationAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
@@ -1531,6 +1692,9 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListReservationsRequest, ReservationList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callPerformMaintenance = clientHelper.BuildApiCall<PerformMaintenanceReservationRequest, Operation>("PerformMaintenance", grpcClient.PerformMaintenanceAsync, grpcClient.PerformMaintenance, effectiveSettings.PerformMaintenanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("reservation", request => request.Reservation);
+            Modify_ApiCall(ref _callPerformMaintenance);
+            Modify_PerformMaintenanceApiCall(ref _callPerformMaintenance);
             _callResize = clientHelper.BuildApiCall<ResizeReservationRequest, Operation>("Resize", grpcClient.ResizeAsync, grpcClient.Resize, effectiveSettings.ResizeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("reservation", request => request.Reservation);
             Modify_ApiCall(ref _callResize);
             Modify_ResizeApiCall(ref _callResize);
@@ -1560,6 +1724,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListReservationsRequest, ReservationList> call);
 
+        partial void Modify_PerformMaintenanceApiCall(ref gaxgrpc::ApiCall<PerformMaintenanceReservationRequest, Operation> call);
+
         partial void Modify_ResizeApiCall(ref gaxgrpc::ApiCall<ResizeReservationRequest, Operation> call);
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<SetIamPolicyReservationRequest, Policy> call);
@@ -1584,6 +1750,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_InsertReservationRequest(ref InsertReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReservationsRequest(ref ListReservationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PerformMaintenanceReservationRequest(ref PerformMaintenanceReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ResizeReservationRequest(ref ResizeReservationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1755,6 +1923,39 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListReservationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReservationsRequest, ReservationList, Reservation>(_callList, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>PerformMaintenance</c>.</summary>
+        public override lro::OperationsClient PerformMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PerformMaintenance(PerformMaintenanceReservationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PerformMaintenanceReservationRequest(ref request, ref callSettings);
+            Operation response = _callPerformMaintenance.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Perform maintenance on an extended reservation
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceReservationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PerformMaintenanceReservationRequest(ref request, ref callSettings);
+            Operation response = await _callPerformMaintenance.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Resize</c>.</summary>

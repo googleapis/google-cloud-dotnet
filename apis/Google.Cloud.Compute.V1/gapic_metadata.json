@@ -2083,6 +2083,12 @@
                 "SetIamPolicyAsync"
               ]
             },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
+            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
@@ -4202,6 +4208,33 @@
         }
       }
     },
+    "ReservationBlocks": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReservationBlocksClient",
+          "rpcs": {
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "PerformMaintenance": {
+              "methods": [
+                "PerformMaintenance",
+                "PerformMaintenanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Reservations": {
       "clients": {
         "grpc": {
@@ -4241,6 +4274,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "PerformMaintenance": {
+              "methods": [
+                "PerformMaintenance",
+                "PerformMaintenanceAsync"
               ]
             },
             "Resize": {
