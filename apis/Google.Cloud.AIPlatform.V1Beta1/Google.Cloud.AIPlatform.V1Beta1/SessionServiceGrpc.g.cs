@@ -155,8 +155,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public abstract partial class SessionServiceBase
     {
       /// <summary>
-      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -182,7 +181,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
       /// <summary>
       /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// reasoning engine.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -272,8 +271,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
 
       /// <summary>
-      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -286,8 +284,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return CreateSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -298,8 +295,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSession, null, options, request);
       }
       /// <summary>
-      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -312,8 +308,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return CreateSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// Creates a new [Session][google.cloud.aiplatform.v1beta1.Session].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -377,7 +372,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// reasoning engine.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -391,7 +386,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// reasoning engine.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -403,7 +398,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// reasoning engine.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -417,7 +412,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Lists [Sessions][google.cloud.aiplatform.v1beta1.Session] in a given
-      /// project and location.
+      /// reasoning engine.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

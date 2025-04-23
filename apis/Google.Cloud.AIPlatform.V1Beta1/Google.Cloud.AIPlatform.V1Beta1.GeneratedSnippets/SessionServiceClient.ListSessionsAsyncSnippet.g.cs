@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/reasoningEngines/[REASONING_ENGINE]";
             // Make the request
             PagedAsyncEnumerable<ListSessionsResponse, Session> response = sessionServiceClient.ListSessionsAsync(parent);
 

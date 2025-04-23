@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -56,6 +57,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             DeployPublisherModelOperationsSettings = existing.DeployPublisherModelOperationsSettings.Clone();
             ExportPublisherModelSettings = existing.ExportPublisherModelSettings;
             ExportPublisherModelOperationsSettings = existing.ExportPublisherModelOperationsSettings.Clone();
+            CheckPublisherModelEulaAcceptanceSettings = existing.CheckPublisherModelEulaAcceptanceSettings;
+            AcceptPublisherModelEulaSettings = existing.AcceptPublisherModelEulaSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -180,6 +183,32 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelGardenServiceClient.CheckPublisherModelEulaAcceptance</c> and
+        /// <c>ModelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CheckPublisherModelEulaAcceptanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelGardenServiceClient.AcceptPublisherModelEula</c> and
+        /// <c>ModelGardenServiceClient.AcceptPublisherModelEulaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AcceptPublisherModelEulaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -719,6 +748,308 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>> PollOnceExportPublisherModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportPublisherModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelEulaAcceptance CheckPublisherModelEulaAcceptance(CheckPublisherModelEulaAcceptanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(CheckPublisherModelEulaAcceptanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(CheckPublisherModelEulaAcceptanceRequest request, st::CancellationToken cancellationToken) =>
+            CheckPublisherModelEulaAcceptanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelEulaAcceptance CheckPublisherModelEulaAcceptance(string parent, string publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            CheckPublisherModelEulaAcceptance(new CheckPublisherModelEulaAcceptanceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PublisherModel = gax::GaxPreconditions.CheckNotNullOrEmpty(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(string parent, string publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            CheckPublisherModelEulaAcceptanceAsync(new CheckPublisherModelEulaAcceptanceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PublisherModel = gax::GaxPreconditions.CheckNotNullOrEmpty(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(string parent, string publisherModel, st::CancellationToken cancellationToken) =>
+            CheckPublisherModelEulaAcceptanceAsync(parent, publisherModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelEulaAcceptance CheckPublisherModelEulaAcceptance(gagr::ProjectName parent, PublisherModelName publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            CheckPublisherModelEulaAcceptance(new CheckPublisherModelEulaAcceptanceRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PublisherModelAsPublisherModelName = gax::GaxPreconditions.CheckNotNull(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(gagr::ProjectName parent, PublisherModelName publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            CheckPublisherModelEulaAcceptanceAsync(new CheckPublisherModelEulaAcceptanceRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PublisherModelAsPublisherModelName = gax::GaxPreconditions.CheckNotNull(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(gagr::ProjectName parent, PublisherModelName publisherModel, st::CancellationToken cancellationToken) =>
+            CheckPublisherModelEulaAcceptanceAsync(parent, publisherModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelEulaAcceptance AcceptPublisherModelEula(AcceptPublisherModelEulaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(AcceptPublisherModelEulaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(AcceptPublisherModelEulaRequest request, st::CancellationToken cancellationToken) =>
+            AcceptPublisherModelEulaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelEulaAcceptance AcceptPublisherModelEula(string parent, string publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptPublisherModelEula(new AcceptPublisherModelEulaRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PublisherModel = gax::GaxPreconditions.CheckNotNullOrEmpty(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(string parent, string publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptPublisherModelEulaAsync(new AcceptPublisherModelEulaRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PublisherModel = gax::GaxPreconditions.CheckNotNullOrEmpty(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(string parent, string publisherModel, st::CancellationToken cancellationToken) =>
+            AcceptPublisherModelEulaAsync(parent, publisherModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelEulaAcceptance AcceptPublisherModelEula(gagr::ProjectName parent, PublisherModelName publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptPublisherModelEula(new AcceptPublisherModelEulaRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PublisherModelAsPublisherModelName = gax::GaxPreconditions.CheckNotNull(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(gagr::ProjectName parent, PublisherModelName publisherModel, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptPublisherModelEulaAsync(new AcceptPublisherModelEulaRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PublisherModelAsPublisherModelName = gax::GaxPreconditions.CheckNotNull(publisherModel, nameof(publisherModel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project requesting access for named model. The format is
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="publisherModel">
+        /// Required. The name of the PublisherModel resource.
+        /// Format:
+        /// `publishers/{publisher}/models/{publisher_model}`, or
+        /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(gagr::ProjectName parent, PublisherModelName publisherModel, st::CancellationToken cancellationToken) =>
+            AcceptPublisherModelEulaAsync(parent, publisherModel, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ModelGardenService client wrapper implementation, for convenient use.</summary>
@@ -738,6 +1069,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning restore CS0612
 
         private readonly gaxgrpc::ApiCall<ExportPublisherModelRequest, lro::Operation> _callExportPublisherModel;
+
+        private readonly gaxgrpc::ApiCall<CheckPublisherModelEulaAcceptanceRequest, PublisherModelEulaAcceptance> _callCheckPublisherModelEulaAcceptance;
+
+        private readonly gaxgrpc::ApiCall<AcceptPublisherModelEulaRequest, PublisherModelEulaAcceptance> _callAcceptPublisherModelEula;
 
         /// <summary>
         /// Constructs a client wrapper for the ModelGardenService service, with the specified gRPC client and settings.
@@ -776,6 +1111,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callExportPublisherModel = clientHelper.BuildApiCall<ExportPublisherModelRequest, lro::Operation>("ExportPublisherModel", grpcClient.ExportPublisherModelAsync, grpcClient.ExportPublisherModel, effectiveSettings.ExportPublisherModelSettings).WithGoogleRequestParam("parent", request => request.Parent).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportPublisherModel);
             Modify_ExportPublisherModelApiCall(ref _callExportPublisherModel);
+            _callCheckPublisherModelEulaAcceptance = clientHelper.BuildApiCall<CheckPublisherModelEulaAcceptanceRequest, PublisherModelEulaAcceptance>("CheckPublisherModelEulaAcceptance", grpcClient.CheckPublisherModelEulaAcceptanceAsync, grpcClient.CheckPublisherModelEulaAcceptance, effectiveSettings.CheckPublisherModelEulaAcceptanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCheckPublisherModelEulaAcceptance);
+            Modify_CheckPublisherModelEulaAcceptanceApiCall(ref _callCheckPublisherModelEulaAcceptance);
+            _callAcceptPublisherModelEula = clientHelper.BuildApiCall<AcceptPublisherModelEulaRequest, PublisherModelEulaAcceptance>("AcceptPublisherModelEula", grpcClient.AcceptPublisherModelEulaAsync, grpcClient.AcceptPublisherModelEula, effectiveSettings.AcceptPublisherModelEulaSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callAcceptPublisherModelEula);
+            Modify_AcceptPublisherModelEulaApiCall(ref _callAcceptPublisherModelEula);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -792,6 +1133,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning restore CS0612
 
         partial void Modify_ExportPublisherModelApiCall(ref gaxgrpc::ApiCall<ExportPublisherModelRequest, lro::Operation> call);
+
+        partial void Modify_CheckPublisherModelEulaAcceptanceApiCall(ref gaxgrpc::ApiCall<CheckPublisherModelEulaAcceptanceRequest, PublisherModelEulaAcceptance> call);
+
+        partial void Modify_AcceptPublisherModelEulaApiCall(ref gaxgrpc::ApiCall<AcceptPublisherModelEulaRequest, PublisherModelEulaAcceptance> call);
 
         partial void OnConstruction(ModelGardenService.ModelGardenServiceClient grpcClient, ModelGardenServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -815,6 +1160,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning restore CS0612
 
         partial void Modify_ExportPublisherModelRequest(ref ExportPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CheckPublisherModelEulaAcceptanceRequest(ref CheckPublisherModelEulaAcceptanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AcceptPublisherModelEulaRequest(ref AcceptPublisherModelEulaRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a Model Garden publisher model.
@@ -953,6 +1302,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ExportPublisherModelRequest(ref request, ref callSettings);
             return new lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>(await _callExportPublisherModel.Async(request, callSettings).ConfigureAwait(false), ExportPublisherModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PublisherModelEulaAcceptance CheckPublisherModelEulaAcceptance(CheckPublisherModelEulaAcceptanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckPublisherModelEulaAcceptanceRequest(ref request, ref callSettings);
+            return _callCheckPublisherModelEulaAcceptance.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Checks the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PublisherModelEulaAcceptance> CheckPublisherModelEulaAcceptanceAsync(CheckPublisherModelEulaAcceptanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckPublisherModelEulaAcceptanceRequest(ref request, ref callSettings);
+            return _callCheckPublisherModelEulaAcceptance.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PublisherModelEulaAcceptance AcceptPublisherModelEula(AcceptPublisherModelEulaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AcceptPublisherModelEulaRequest(ref request, ref callSettings);
+            return _callAcceptPublisherModelEula.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Accepts the EULA acceptance status of a publisher model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PublisherModelEulaAcceptance> AcceptPublisherModelEulaAsync(AcceptPublisherModelEulaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AcceptPublisherModelEulaRequest(ref request, ref callSettings);
+            return _callAcceptPublisherModelEula.Async(request, callSettings);
         }
     }
 

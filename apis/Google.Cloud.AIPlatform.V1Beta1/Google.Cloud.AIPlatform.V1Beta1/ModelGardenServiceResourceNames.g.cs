@@ -182,4 +182,46 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class CheckPublisherModelEulaAcceptanceRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PublisherModelName"/>-typed view over the <see cref="PublisherModel"/> resource name property.
+        /// </summary>
+        public PublisherModelName PublisherModelAsPublisherModelName
+        {
+            get => string.IsNullOrEmpty(PublisherModel) ? null : PublisherModelName.Parse(PublisherModel, allowUnparsed: true);
+            set => PublisherModel = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AcceptPublisherModelEulaRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PublisherModelName"/>-typed view over the <see cref="PublisherModel"/> resource name property.
+        /// </summary>
+        public PublisherModelName PublisherModelAsPublisherModelName
+        {
+            get => string.IsNullOrEmpty(PublisherModel) ? null : PublisherModelName.Parse(PublisherModel, allowUnparsed: true);
+            set => PublisherModel = value?.ToString() ?? "";
+        }
+    }
 }

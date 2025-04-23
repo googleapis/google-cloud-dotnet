@@ -544,5 +544,191 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CheckPublisherModelEulaAcceptance</summary>
+        public void CheckPublisherModelEulaAcceptanceRequestObject()
+        {
+            // Snippet: CheckPublisherModelEulaAcceptance(CheckPublisherModelEulaAcceptanceRequest, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            CheckPublisherModelEulaAcceptanceRequest request = new CheckPublisherModelEulaAcceptanceRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PublisherModelAsPublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
+            };
+            // Make the request
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.CheckPublisherModelEulaAcceptance(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckPublisherModelEulaAcceptanceAsync</summary>
+        public async Task CheckPublisherModelEulaAcceptanceRequestObjectAsync()
+        {
+            // Snippet: CheckPublisherModelEulaAcceptanceAsync(CheckPublisherModelEulaAcceptanceRequest, CallSettings)
+            // Additional: CheckPublisherModelEulaAcceptanceAsync(CheckPublisherModelEulaAcceptanceRequest, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CheckPublisherModelEulaAcceptanceRequest request = new CheckPublisherModelEulaAcceptanceRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PublisherModelAsPublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
+            };
+            // Make the request
+            PublisherModelEulaAcceptance response = await modelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckPublisherModelEulaAcceptance</summary>
+        public void CheckPublisherModelEulaAcceptance()
+        {
+            // Snippet: CheckPublisherModelEulaAcceptance(string, string, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string publisherModel = "publishers/[PUBLISHER]/models/[MODEL]";
+            // Make the request
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.CheckPublisherModelEulaAcceptance(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckPublisherModelEulaAcceptanceAsync</summary>
+        public async Task CheckPublisherModelEulaAcceptanceAsync()
+        {
+            // Snippet: CheckPublisherModelEulaAcceptanceAsync(string, string, CallSettings)
+            // Additional: CheckPublisherModelEulaAcceptanceAsync(string, string, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string publisherModel = "publishers/[PUBLISHER]/models/[MODEL]";
+            // Make the request
+            PublisherModelEulaAcceptance response = await modelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckPublisherModelEulaAcceptance</summary>
+        public void CheckPublisherModelEulaAcceptanceResourceNames()
+        {
+            // Snippet: CheckPublisherModelEulaAcceptance(ProjectName, PublisherModelName, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            PublisherModelName publisherModel = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]");
+            // Make the request
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.CheckPublisherModelEulaAcceptance(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckPublisherModelEulaAcceptanceAsync</summary>
+        public async Task CheckPublisherModelEulaAcceptanceResourceNamesAsync()
+        {
+            // Snippet: CheckPublisherModelEulaAcceptanceAsync(ProjectName, PublisherModelName, CallSettings)
+            // Additional: CheckPublisherModelEulaAcceptanceAsync(ProjectName, PublisherModelName, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            PublisherModelName publisherModel = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]");
+            // Make the request
+            PublisherModelEulaAcceptance response = await modelGardenServiceClient.CheckPublisherModelEulaAcceptanceAsync(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptPublisherModelEula</summary>
+        public void AcceptPublisherModelEulaRequestObject()
+        {
+            // Snippet: AcceptPublisherModelEula(AcceptPublisherModelEulaRequest, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            AcceptPublisherModelEulaRequest request = new AcceptPublisherModelEulaRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PublisherModelAsPublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
+            };
+            // Make the request
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.AcceptPublisherModelEula(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptPublisherModelEulaAsync</summary>
+        public async Task AcceptPublisherModelEulaRequestObjectAsync()
+        {
+            // Snippet: AcceptPublisherModelEulaAsync(AcceptPublisherModelEulaRequest, CallSettings)
+            // Additional: AcceptPublisherModelEulaAsync(AcceptPublisherModelEulaRequest, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AcceptPublisherModelEulaRequest request = new AcceptPublisherModelEulaRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                PublisherModelAsPublisherModelName = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]"),
+            };
+            // Make the request
+            PublisherModelEulaAcceptance response = await modelGardenServiceClient.AcceptPublisherModelEulaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptPublisherModelEula</summary>
+        public void AcceptPublisherModelEula()
+        {
+            // Snippet: AcceptPublisherModelEula(string, string, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string publisherModel = "publishers/[PUBLISHER]/models/[MODEL]";
+            // Make the request
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.AcceptPublisherModelEula(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptPublisherModelEulaAsync</summary>
+        public async Task AcceptPublisherModelEulaAsync()
+        {
+            // Snippet: AcceptPublisherModelEulaAsync(string, string, CallSettings)
+            // Additional: AcceptPublisherModelEulaAsync(string, string, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string publisherModel = "publishers/[PUBLISHER]/models/[MODEL]";
+            // Make the request
+            PublisherModelEulaAcceptance response = await modelGardenServiceClient.AcceptPublisherModelEulaAsync(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptPublisherModelEula</summary>
+        public void AcceptPublisherModelEulaResourceNames()
+        {
+            // Snippet: AcceptPublisherModelEula(ProjectName, PublisherModelName, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            PublisherModelName publisherModel = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]");
+            // Make the request
+            PublisherModelEulaAcceptance response = modelGardenServiceClient.AcceptPublisherModelEula(parent, publisherModel);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptPublisherModelEulaAsync</summary>
+        public async Task AcceptPublisherModelEulaResourceNamesAsync()
+        {
+            // Snippet: AcceptPublisherModelEulaAsync(ProjectName, PublisherModelName, CallSettings)
+            // Additional: AcceptPublisherModelEulaAsync(ProjectName, PublisherModelName, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            PublisherModelName publisherModel = PublisherModelName.FromPublisherModel("[PUBLISHER]", "[MODEL]");
+            // Make the request
+            PublisherModelEulaAcceptance response = await modelGardenServiceClient.AcceptPublisherModelEulaAsync(parent, publisherModel);
+            // End snippet
+        }
     }
 }

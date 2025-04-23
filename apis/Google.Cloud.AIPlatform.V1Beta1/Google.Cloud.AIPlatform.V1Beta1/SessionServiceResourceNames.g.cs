@@ -15,8 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gagr = Google.Api.Gax.ResourceNames;
-using gax = Google.Api.Gax;
 using gcav = Google.Cloud.AIPlatform.V1Beta1;
 
 namespace Google.Cloud.AIPlatform.V1Beta1
@@ -24,44 +22,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     public partial class CreateSessionRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gagr::LocationName ParentAsLocationName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="ReasoningEngineName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ReasoningEngineName ParentAsReasoningEngineName
         {
             get => string.IsNullOrEmpty(Parent) ? null : ReasoningEngineName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gax::IResourceName ParentAsResourceName
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(Parent))
-                {
-                    return null;
-                }
-                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
-                {
-                    return location;
-                }
-                if (ReasoningEngineName.TryParse(Parent, out ReasoningEngineName reasoningEngine))
-                {
-                    return reasoningEngine;
-                }
-                return gax::UnparsedResourceName.Parse(Parent);
-            }
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -81,44 +46,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     public partial class ListSessionsRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gagr::LocationName ParentAsLocationName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
         /// <see cref="ReasoningEngineName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ReasoningEngineName ParentAsReasoningEngineName
         {
             get => string.IsNullOrEmpty(Parent) ? null : ReasoningEngineName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gax::IResourceName ParentAsResourceName
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(Parent))
-                {
-                    return null;
-                }
-                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
-                {
-                    return location;
-                }
-                if (ReasoningEngineName.TryParse(Parent, out ReasoningEngineName reasoningEngine))
-                {
-                    return reasoningEngine;
-                }
-                return gax::UnparsedResourceName.Parse(Parent);
-            }
             set => Parent = value?.ToString() ?? "";
         }
     }

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DeleteSessionRequest request = new DeleteSessionRequest
             {
-                SessionName = SessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                SessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = sessionServiceClient.DeleteSession(request);

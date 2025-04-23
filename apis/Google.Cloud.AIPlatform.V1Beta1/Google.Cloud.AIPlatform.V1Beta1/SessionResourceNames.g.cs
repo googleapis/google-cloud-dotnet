@@ -31,18 +31,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project}/locations/{location}/sessions/{session}</c>.
-            /// </summary>
-            ProjectLocationSession = 1,
-
-            /// <summary>
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>.
             /// </summary>
-            ProjectLocationReasoningEngineSession = 2,
+            ProjectLocationReasoningEngineSession = 1,
         }
-
-        private static gax::PathTemplate s_projectLocationSession = new gax::PathTemplate("projects/{project}/locations/{location}/sessions/{session}");
 
         private static gax::PathTemplate s_projectLocationReasoningEngineSession = new gax::PathTemplate("projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}");
 
@@ -53,17 +46,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </returns>
         public static SessionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
             new SessionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="SessionName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="SessionName"/> constructed from the provided ids.</returns>
-        public static SessionName FromProjectLocationSession(string projectId, string locationId, string sessionId) =>
-            new SessionName(ResourceNameType.ProjectLocationSession, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)));
 
         /// <summary>
         /// Creates a <see cref="SessionName"/> with the pattern
@@ -79,31 +61,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}</c>.
+        /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="SessionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}</c>.
+        /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>.
         /// </returns>
-        public static string Format(string projectId, string locationId, string sessionId) =>
-            FormatProjectLocationSession(projectId, locationId, sessionId);
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="SessionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="SessionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}</c>.
-        /// </returns>
-        public static string FormatProjectLocationSession(string projectId, string locationId, string sessionId) =>
-            s_projectLocationSession.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)));
+        public static string Format(string projectId, string locationId, string reasoningEngineId, string sessionId) =>
+            FormatProjectLocationReasoningEngineSession(projectId, locationId, reasoningEngineId, sessionId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionName"/> with pattern
@@ -124,7 +93,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/sessions/{session}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>
@@ -143,7 +111,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/sessions/{session}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>
@@ -168,7 +135,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/sessions/{session}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>
@@ -190,7 +156,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/sessions/{session}</c></description></item>
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>
@@ -213,11 +178,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectLocationSession.TryParseName(sessionName, out resourceName))
-            {
-                result = FromProjectLocationSession(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
             if (s_projectLocationReasoningEngineSession.TryParseName(sessionName, out resourceName))
             {
                 result = FromProjectLocationReasoningEngineSession(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
@@ -247,12 +207,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="SessionName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}</c>
+        /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
-        public SessionName(string projectId, string locationId, string sessionId) : this(ResourceNameType.ProjectLocationSession, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)))
+        public SessionName(string projectId, string locationId, string reasoningEngineId, string sessionId) : this(ResourceNameType.ProjectLocationReasoningEngineSession, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), reasoningEngineId: gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)))
         {
         }
 
@@ -266,23 +227,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>ReasoningEngine</c> ID. May be <c>null</c>, depending on which resource name is contained by this
-        /// instance.
+        /// The <c>ReasoningEngine</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
         /// </summary>
         public string ReasoningEngineId { get; }
 
         /// <summary>
-        /// The <c>Session</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Session</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string SessionId { get; }
 
@@ -296,7 +257,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectLocationSession: return s_projectLocationSession.Expand(ProjectId, LocationId, SessionId);
                 case ResourceNameType.ProjectLocationReasoningEngineSession: return s_projectLocationReasoningEngineSession.Expand(ProjectId, LocationId, ReasoningEngineId, SessionId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
@@ -341,20 +301,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>.
-            /// </summary>
-            ProjectLocationSessionEvent = 1,
-
-            /// <summary>
-            /// A resource name with pattern
             /// <c>
             /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
             /// .
             /// </summary>
-            ProjectLocationReasoningEngineSessionEvent = 2,
+            ProjectLocationReasoningEngineSessionEvent = 1,
         }
-
-        private static gax::PathTemplate s_projectLocationSessionEvent = new gax::PathTemplate("projects/{project}/locations/{location}/sessions/{session}/events/{event}");
 
         private static gax::PathTemplate s_projectLocationReasoningEngineSessionEvent = new gax::PathTemplate("projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}");
 
@@ -366,18 +318,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </returns>
         public static SessionEventName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
             new SessionEventName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>
-        /// Creates a <see cref="SessionEventName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="eventId">The <c>Event</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="SessionEventName"/> constructed from the provided ids.</returns>
-        public static SessionEventName FromProjectLocationSessionEvent(string projectId, string locationId, string sessionId, string eventId) =>
-            new SessionEventName(ResourceNameType.ProjectLocationSessionEvent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), eventId: gax::GaxPreconditions.CheckNotNullOrEmpty(eventId, nameof(eventId)));
 
         /// <summary>
         /// Creates a <see cref="SessionEventName"/> with the pattern
@@ -396,33 +336,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionEventName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>.
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
+        /// .
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="eventId">The <c>Event</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="SessionEventName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>.
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
+        /// .
         /// </returns>
-        public static string Format(string projectId, string locationId, string sessionId, string eventId) =>
-            FormatProjectLocationSessionEvent(projectId, locationId, sessionId, eventId);
-
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="SessionEventName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>.
-        /// </summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="eventId">The <c>Event</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="SessionEventName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>.
-        /// </returns>
-        public static string FormatProjectLocationSessionEvent(string projectId, string locationId, string sessionId, string eventId) =>
-            s_projectLocationSessionEvent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(eventId, nameof(eventId)));
+        public static string Format(string projectId, string locationId, string reasoningEngineId, string sessionId, string eventId) =>
+            FormatProjectLocationReasoningEngineSessionEvent(projectId, locationId, reasoningEngineId, sessionId, eventId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionEventName"/> with pattern
@@ -449,9 +379,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c></description>
-        /// </item>
-        /// <item>
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
@@ -470,9 +397,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c></description>
-        /// </item>
         /// <item>
         /// <description>
         /// <c>
@@ -499,9 +423,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c></description>
-        /// </item>
-        /// <item>
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
@@ -525,9 +446,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c></description>
-        /// </item>
-        /// <item>
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
@@ -550,11 +468,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             gax::GaxPreconditions.CheckNotNull(sessionEventName, nameof(sessionEventName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectLocationSessionEvent.TryParseName(sessionEventName, out resourceName))
-            {
-                result = FromProjectLocationSessionEvent(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
-                return true;
-            }
             if (s_projectLocationReasoningEngineSessionEvent.TryParseName(sessionEventName, out resourceName))
             {
                 result = FromProjectLocationReasoningEngineSessionEvent(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
@@ -585,13 +498,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="SessionEventName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/sessions/{session}/events/{event}</c>
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="eventId">The <c>Event</c> ID. Must not be <c>null</c> or empty.</param>
-        public SessionEventName(string projectId, string locationId, string sessionId, string eventId) : this(ResourceNameType.ProjectLocationSessionEvent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), eventId: gax::GaxPreconditions.CheckNotNullOrEmpty(eventId, nameof(eventId)))
+        public SessionEventName(string projectId, string locationId, string reasoningEngineId, string sessionId, string eventId) : this(ResourceNameType.ProjectLocationReasoningEngineSessionEvent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), reasoningEngineId: gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)), eventId: gax::GaxPreconditions.CheckNotNullOrEmpty(eventId, nameof(eventId)))
         {
         }
 
@@ -605,28 +520,28 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Event</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Event</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string EventId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>ReasoningEngine</c> ID. May be <c>null</c>, depending on which resource name is contained by this
-        /// instance.
+        /// The <c>ReasoningEngine</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
         /// </summary>
         public string ReasoningEngineId { get; }
 
         /// <summary>
-        /// The <c>Session</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// The <c>Session</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
         public string SessionId { get; }
 
@@ -640,7 +555,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectLocationSessionEvent: return s_projectLocationSessionEvent.Expand(ProjectId, LocationId, SessionId, EventId);
                 case ResourceNameType.ProjectLocationReasoningEngineSessionEvent: return s_projectLocationReasoningEngineSessionEvent.Expand(ProjectId, LocationId, ReasoningEngineId, SessionId, EventId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
