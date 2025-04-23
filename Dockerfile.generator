@@ -26,9 +26,14 @@ COPY Directory.Packages.props .
 COPY global.json .
 COPY tools tools
 COPY toolversions.sh .
+COPY generator-input/tweaks tweaks
 
 # Build our tooling (which provides the entry point)
 RUN dotnet build tools/Google.Cloud.Tools.ReleaseManager -c Release
+
+# Build the Bigtable client generator as well, so we don't need to
+# use the network to run it when generating.
+RUN dotnet build tweaks/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.GenerateClient -c Release
 
 # Install protobuf, the gRPC plugin and GAPIC generator, ready to run
 RUN bash -c 'source toolversions.sh && install_protoc && install_microgenerator && install_grpc'
@@ -40,6 +45,10 @@ COPY --from=build /src/packages/Google.Protobuf.Tools.* protobuf
 COPY --from=build /src/packages/Grpc.Tools.* grpc
 COPY --from=build /src/gapic-generator-csharp/Google.Api.Generator/bin/Release/*/* gapic
 COPY --from=build /src/tools/Google.Cloud.Tools.ReleaseManager/bin/Release/* ReleaseManager
+COPY --from=build \
+  /src/tweaks/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.GenerateClient/bin/Release/* \
+  Google.Cloud.Bigtable.V2.GenerateClient
+
 # Copy the tool configuration from the local source
 COPY .config .
 
