@@ -2359,10 +2359,10 @@ namespace Google.Cloud.OrgPolicy.V2
             UpdateCustomConstraintAsync(customConstraint, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2371,10 +2371,10 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2383,10 +2383,10 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2395,14 +2395,14 @@ namespace Google.Cloud.OrgPolicy.V2
             GetCustomConstraintAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the custom constraint. See the custom constraint
-        /// entry for naming requirements.
+        /// Required. Resource name of the custom or managed constraint. See the custom
+        /// constraint entry for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2413,14 +2413,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the custom constraint. See the custom constraint
-        /// entry for naming requirements.
+        /// Required. Resource name of the custom or managed constraint. See the custom
+        /// constraint entry for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2431,14 +2431,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the custom constraint. See the custom constraint
-        /// entry for naming requirements.
+        /// Required. Resource name of the custom or managed constraint. See the custom
+        /// constraint entry for naming requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2446,14 +2446,14 @@ namespace Google.Cloud.OrgPolicy.V2
             GetCustomConstraintAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the custom constraint. See the custom constraint
-        /// entry for naming requirements.
+        /// Required. Resource name of the custom or managed constraint. See the custom
+        /// constraint entry for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2464,14 +2464,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the custom constraint. See the custom constraint
-        /// entry for naming requirements.
+        /// Required. Resource name of the custom or managed constraint. See the custom
+        /// constraint entry for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2482,14 +2482,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the custom constraint. See the custom constraint
-        /// entry for naming requirements.
+        /// Required. Resource name of the custom or managed constraint. See the custom
+        /// constraint entry for naming requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3254,10 +3254,10 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3269,10 +3269,10 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Gets a custom constraint.
+        /// Gets a custom or managed constraint.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// custom constraint does not exist.
+        /// custom or managed constraint does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

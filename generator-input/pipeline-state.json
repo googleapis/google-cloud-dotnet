@@ -2263,7 +2263,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-26T08:20:28Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "c759e924aa786f3df0e64499daf97d46a27edb31",
             "apiPaths": [
                 "google/cloud/orgpolicy/v2"
             ],
