@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.7.0, released 2025-04-23
+
+### New features
+
+- Adding new BackupChannel, RestoreChannel, BackupPlanBinding and RestorePlanBinding ([commit 0ae7a96](https://github.com/googleapis/google-cloud-dotnet/commit/0ae7a9678d9a731ecb4b2dd219f3b8bb05e9e97e))
+- Generation of new cross project APIs ([commit 0ae7a96](https://github.com/googleapis/google-cloud-dotnet/commit/0ae7a9678d9a731ecb4b2dd219f3b8bb05e9e97e))
+- Adding `last_successful_backup_time` field in BackupPlan ([commit 0ae7a96](https://github.com/googleapis/google-cloud-dotnet/commit/0ae7a9678d9a731ecb4b2dd219f3b8bb05e9e97e))
+- Adding `VALIDATING` enum in state field of restore.proto ([commit 0ae7a96](https://github.com/googleapis/google-cloud-dotnet/commit/0ae7a9678d9a731ecb4b2dd219f3b8bb05e9e97e))
+- Adding `CLEANED_UP` enum in state field of volume.proto ([commit 0ae7a96](https://github.com/googleapis/google-cloud-dotnet/commit/0ae7a9678d9a731ecb4b2dd219f3b8bb05e9e97e))
+
+### Documentation improvements
+
+- Minor documentation fixes ([commit 0ae7a96](https://github.com/googleapis/google-cloud-dotnet/commit/0ae7a9678d9a731ecb4b2dd219f3b8bb05e9e97e))
+
 ## Version 2.6.0, released 2024-06-04
 
 ### New features
