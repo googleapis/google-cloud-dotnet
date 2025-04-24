@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Maps.AreaInsights.V1 {
   /// <summary>
-  /// Service definition for the Places Insights API.
+  /// Service definition for the Places Aggregate RPC.
   /// </summary>
   public static partial class AreaInsights
   {
@@ -87,9 +87,7 @@ namespace Google.Maps.AreaInsights.V1 {
     public abstract partial class AreaInsightsBase
     {
       /// <summary>
-      /// Compute Insights RPC
-      ///
-      /// This method lets you retrieve insights about areas using a variaty of
+      /// This method lets you retrieve insights about areas using a variety of
       /// filter such as: area, place type, operating status, price level
       /// and ratings. Currently "count" and "places" insights are supported. With
       /// "count" insights you can answer questions such as "How many restaurant are
@@ -138,9 +136,7 @@ namespace Google.Maps.AreaInsights.V1 {
       }
 
       /// <summary>
-      /// Compute Insights RPC
-      ///
-      /// This method lets you retrieve insights about areas using a variaty of
+      /// This method lets you retrieve insights about areas using a variety of
       /// filter such as: area, place type, operating status, price level
       /// and ratings. Currently "count" and "places" insights are supported. With
       /// "count" insights you can answer questions such as "How many restaurant are
@@ -161,9 +157,7 @@ namespace Google.Maps.AreaInsights.V1 {
         return ComputeInsights(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Compute Insights RPC
-      ///
-      /// This method lets you retrieve insights about areas using a variaty of
+      /// This method lets you retrieve insights about areas using a variety of
       /// filter such as: area, place type, operating status, price level
       /// and ratings. Currently "count" and "places" insights are supported. With
       /// "count" insights you can answer questions such as "How many restaurant are
@@ -182,9 +176,7 @@ namespace Google.Maps.AreaInsights.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ComputeInsights, null, options, request);
       }
       /// <summary>
-      /// Compute Insights RPC
-      ///
-      /// This method lets you retrieve insights about areas using a variaty of
+      /// This method lets you retrieve insights about areas using a variety of
       /// filter such as: area, place type, operating status, price level
       /// and ratings. Currently "count" and "places" insights are supported. With
       /// "count" insights you can answer questions such as "How many restaurant are
@@ -205,9 +197,7 @@ namespace Google.Maps.AreaInsights.V1 {
         return ComputeInsightsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Compute Insights RPC
-      ///
-      /// This method lets you retrieve insights about areas using a variaty of
+      /// This method lets you retrieve insights about areas using a variety of
       /// filter such as: area, place type, operating status, price level
       /// and ratings. Currently "count" and "places" insights are supported. With
       /// "count" insights you can answer questions such as "How many restaurant are
