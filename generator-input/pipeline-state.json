@@ -3998,6 +3998,17 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Lustre.V1/Google.Cloud.Lustre.V1"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.Ordertracking.V1Beta",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/ordertracking/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.Ordertracking.V1Beta/Google.Shopping.Merchant.Ordertracking.V1Beta"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
