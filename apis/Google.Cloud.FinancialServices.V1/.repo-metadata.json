@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.FinancialServices.V1",
-  "release_level": "unreleased",
+  "release_level": "preview",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.FinancialServices.V1/latest",
   "library_type": "GAPIC_AUTO",
   "language": "dotnet",
