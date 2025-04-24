@@ -1,0 +1,1810 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Lustre.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.lustre.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ListInstances_sync",
+      "title": "ListInstancesRequestObject",
+      "description": "Snippet for ListInstances",
+      "file": "LustreClient.ListInstancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Lustre.V1.ListInstancesResponse, Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.lustre.v1.Lustre.ListInstances",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ListInstances_async",
+      "title": "ListInstancesRequestObjectAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "LustreClient.ListInstancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Lustre.V1.ListInstancesResponse, Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.lustre.v1.Lustre.ListInstances",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ListInstances_sync_flattened",
+      "title": "ListInstances",
+      "description": "Snippet for ListInstances",
+      "file": "LustreClient.ListInstancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Lustre.V1.ListInstancesResponse, Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.lustre.v1.Lustre.ListInstances",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ListInstances_async_flattened",
+      "title": "ListInstancesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "LustreClient.ListInstancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Lustre.V1.ListInstancesResponse, Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.lustre.v1.Lustre.ListInstances",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ListInstances_sync_flattened_resourceNames",
+      "title": "ListInstancesResourceNames",
+      "description": "Snippet for ListInstances",
+      "file": "LustreClient.ListInstancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Lustre.V1.ListInstancesResponse, Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.lustre.v1.Lustre.ListInstances",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ListInstances_async_flattened_resourceNames",
+      "title": "ListInstancesResourceNamesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "LustreClient.ListInstancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Lustre.V1.ListInstancesResponse, Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.lustre.v1.Lustre.ListInstances",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_GetInstance_sync",
+      "title": "GetInstanceRequestObject",
+      "description": "Snippet for GetInstance",
+      "file": "LustreClient.GetInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Lustre.V1.Instance",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.GetInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_GetInstance_async",
+      "title": "GetInstanceRequestObjectAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "LustreClient.GetInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.GetInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_GetInstance_sync_flattened",
+      "title": "GetInstance",
+      "description": "Snippet for GetInstance",
+      "file": "LustreClient.GetInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Lustre.V1.Instance",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.GetInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_GetInstance_async_flattened",
+      "title": "GetInstanceAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "LustreClient.GetInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.GetInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_GetInstance_sync_flattened_resourceNames",
+      "title": "GetInstanceResourceNames",
+      "description": "Snippet for GetInstance",
+      "file": "LustreClient.GetInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Lustre.V1.Instance",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.GetInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_GetInstance_async_flattened_resourceNames",
+      "title": "GetInstanceResourceNamesAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "LustreClient.GetInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Lustre.V1.Instance>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.GetInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_CreateInstance_sync",
+      "title": "CreateInstanceRequestObject",
+      "description": "Snippet for CreateInstance",
+      "file": "LustreClient.CreateInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.CreateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_CreateInstance_async",
+      "title": "CreateInstanceRequestObjectAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "LustreClient.CreateInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.CreateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_CreateInstance_sync_flattened",
+      "title": "CreateInstance",
+      "description": "Snippet for CreateInstance",
+      "file": "LustreClient.CreateInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Lustre.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.CreateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_CreateInstance_async_flattened",
+      "title": "CreateInstanceAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "LustreClient.CreateInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Lustre.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.CreateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_CreateInstance_sync_flattened_resourceNames",
+      "title": "CreateInstanceResourceNames",
+      "description": "Snippet for CreateInstance",
+      "file": "LustreClient.CreateInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Lustre.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.CreateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_CreateInstance_async_flattened_resourceNames",
+      "title": "CreateInstanceResourceNamesAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "LustreClient.CreateInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Lustre.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.CreateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_UpdateInstance_sync",
+      "title": "UpdateInstanceRequestObject",
+      "description": "Snippet for UpdateInstance",
+      "file": "LustreClient.UpdateInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.UpdateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_UpdateInstance_async",
+      "title": "UpdateInstanceRequestObjectAsync",
+      "description": "Snippet for UpdateInstanceAsync",
+      "file": "LustreClient.UpdateInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.UpdateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.UpdateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_UpdateInstance_sync_flattened",
+      "title": "UpdateInstance",
+      "description": "Snippet for UpdateInstance",
+      "file": "LustreClient.UpdateInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.UpdateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_UpdateInstance_async_flattened",
+      "title": "UpdateInstanceAsync",
+      "description": "Snippet for UpdateInstanceAsync",
+      "file": "LustreClient.UpdateInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.UpdateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.Instance, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.UpdateInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_DeleteInstance_sync",
+      "title": "DeleteInstanceRequestObject",
+      "description": "Snippet for DeleteInstance",
+      "file": "LustreClient.DeleteInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.DeleteInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_DeleteInstance_async",
+      "title": "DeleteInstanceRequestObjectAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "LustreClient.DeleteInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.DeleteInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_DeleteInstance_sync_flattened",
+      "title": "DeleteInstance",
+      "description": "Snippet for DeleteInstance",
+      "file": "LustreClient.DeleteInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.DeleteInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_DeleteInstance_async_flattened",
+      "title": "DeleteInstanceAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "LustreClient.DeleteInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.DeleteInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_DeleteInstance_sync_flattened_resourceNames",
+      "title": "DeleteInstanceResourceNames",
+      "description": "Snippet for DeleteInstance",
+      "file": "LustreClient.DeleteInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Lustre.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.DeleteInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_DeleteInstance_async_flattened_resourceNames",
+      "title": "DeleteInstanceResourceNamesAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "LustreClient.DeleteInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Lustre.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.lustre.v1.Lustre.DeleteInstance",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ImportData_sync",
+      "title": "ImportDataRequestObject",
+      "description": "Snippet for ImportData",
+      "file": "LustreClient.ImportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ImportDataResponse, Google.Cloud.Lustre.V1.ImportDataMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ImportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ImportData_async",
+      "title": "ImportDataRequestObjectAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "LustreClient.ImportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ImportDataResponse, Google.Cloud.Lustre.V1.ImportDataMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ImportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ImportData_sync_flattened",
+      "title": "ImportData",
+      "description": "Snippet for ImportData",
+      "file": "LustreClient.ImportDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ImportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ImportDataResponse, Google.Cloud.Lustre.V1.ImportDataMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ImportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ImportData_async_flattened",
+      "title": "ImportDataAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "LustreClient.ImportDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ImportDataResponse, Google.Cloud.Lustre.V1.ImportDataMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ImportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ImportData_sync_flattened_resourceNames",
+      "title": "ImportDataResourceNames",
+      "description": "Snippet for ImportData",
+      "file": "LustreClient.ImportDataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ImportDataResponse, Google.Cloud.Lustre.V1.ImportDataMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ImportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ImportData_async_flattened_resourceNames",
+      "title": "ImportDataResourceNamesAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "LustreClient.ImportDataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ImportDataResponse, Google.Cloud.Lustre.V1.ImportDataMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ImportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ExportData_sync",
+      "title": "ExportDataRequestObject",
+      "description": "Snippet for ExportData",
+      "file": "LustreClient.ExportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ExportDataResponse, Google.Cloud.Lustre.V1.ExportDataMetadata>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ExportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "lustre_v1_generated_Lustre_ExportData_async",
+      "title": "ExportDataRequestObjectAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "LustreClient.ExportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.Lustre.V1.LustreClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Lustre.V1.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Lustre.V1.ExportDataResponse, Google.Cloud.Lustre.V1.ExportDataMetadata>>",
+        "client": {
+          "shortName": "LustreClient",
+          "fullName": "Google.Cloud.Lustre.V1.LustreClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.lustre.v1.Lustre.ExportData",
+          "service": {
+            "shortName": "Lustre",
+            "fullName": "google.cloud.lustre.v1.Lustre"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

@@ -3992,6 +3992,7 @@
             "id": "Google.Cloud.Lustre.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "c6b8b89c8d623f69e7f2175c3658f74534d7f2fd",
             "apiPaths": [
                 "google/cloud/lustre/v1"
             ],

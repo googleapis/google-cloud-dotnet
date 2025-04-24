@@ -1,0 +1,68 @@
+// Copyright 2025 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+namespace GoogleCSharpSnippets
+{
+    // [START lustre_v1_generated_Lustre_ExportData_async]
+    using Google.Cloud.Lustre.V1;
+    using Google.LongRunning;
+    using System.Threading.Tasks;
+
+    public sealed partial class GeneratedLustreClientSnippets
+    {
+        /// <summary>Snippet for ExportDataAsync</summary>
+        /// <remarks>
+        /// This snippet has been automatically generated and should be regarded as a code template only.
+        /// It will require modifications to work:
+        /// - It may require correct/in-range values for request initialization.
+        /// - It may require specifying regional endpoints when creating the service client as shown in
+        ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
+        /// </remarks>
+        public async Task ExportDataRequestObjectAsync()
+        {
+            // Create client
+            LustreClient lustreClient = await LustreClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportDataRequest request = new ExportDataRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                LustrePath = new LustrePath(),
+                GcsPath = new GcsPath(),
+                RequestId = "",
+                ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+            };
+            // Make the request
+            Operation<ExportDataResponse, ExportDataMetadata> response = await lustreClient.ExportDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDataResponse, ExportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDataResponse, ExportDataMetadata> retrievedResponse = await lustreClient.PollOnceExportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDataResponse retrievedResult = retrievedResponse.Result;
+            }
+        }
+    }
+    // [END lustre_v1_generated_Lustre_ExportData_async]
+}
