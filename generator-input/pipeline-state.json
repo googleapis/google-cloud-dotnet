@@ -3896,7 +3896,7 @@
             "id": "Google.Cloud.StorageBatchOperations.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "220b029b715f3d7ed165f025acf22b85a912c696",
+            "lastGeneratedCommit": "889c45795a8ec97eae3bfc9c903db698621c540c",
             "apiPaths": [
                 "google/cloud/storagebatchoperations/v1"
             ],
