@@ -2079,7 +2079,7 @@
     },
     {
       "id": "Google.Cloud.DeveloperConnect.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Developer Connect",
       "productUrl": "https://cloud.google.com/developer-connect/docs/overview",
@@ -2099,8 +2099,7 @@
       "shortName": "developerconnect",
       "serviceConfigFile": "developerconnect_v1.yaml",
       "transport": "grpc+rest",
-      "restNumericEnums": true,
-      "blockRelease": "See b/342251668"
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.DeviceStreaming.V1",
