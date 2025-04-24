@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.lustre.v1",
+  "libraryPackage": "Google.Cloud.Lustre.V1",
+  "services": {
+    "Lustre": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LustreClient",
+          "rpcs": {
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "ExportData": {
+              "methods": [
+                "ExportData",
+                "ExportDataAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "ImportData": {
+              "methods": [
+                "ImportData",
+                "ImportDataAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
