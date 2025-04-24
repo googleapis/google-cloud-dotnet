@@ -28,7 +28,7 @@ namespace Google.Cloud.Chronicle.V1 {
             "b29nbGUuY2xvdWQuY2hyb25pY2xlLnYxGhxnb29nbGUvYXBpL2Fubm90YXRp",
             "b25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90byKYAQoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEDOnnqQXYKIWNo",
+            "cm90byKYAQoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEIOnnqQXYKIWNo",
             "cm9uaWNsZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3By",
             "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFu",
             "Y2V9KglpbnN0YW5jZXMyCGluc3RhbmNlIk0KEkdldEluc3RhbmNlUmVxdWVz",
@@ -107,7 +107,7 @@ namespace Google.Cloud.Chronicle.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of this instance.
+    /// Identifier. The resource name of this instance.
     /// Format: `projects/{project}/locations/{location}/instances/{instance}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
