@@ -114,25 +114,26 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "ZG1pbi5nb29nbGVhcGlzLmNvbS9Ib3RUYWJsZXQSUnByb2plY3RzL3twcm9q",
             "ZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0v",
             "aG90VGFibGV0cy97aG90X3RhYmxldH0qCmhvdFRhYmxldHMyCWhvdFRhYmxl",
-            "dCLYAQoLTG9naWNhbFZpZXcSEQoEbmFtZRgBIAEoCUID4EEIEhIKBXF1ZXJ5",
-            "GAIgASgJQgPgQQISEQoEZXRhZxgDIAEoCUID4EEBOo4B6kGKAQooYmlndGFi",
-            "bGVhZG1pbi5nb29nbGVhcGlzLmNvbS9Mb2dpY2FsVmlldxJDcHJvamVjdHMv",
-            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2xvZ2ljYWxWaWV3cy97",
-            "bG9naWNhbF92aWV3fSoMbG9naWNhbFZpZXdzMgtsb2dpY2FsVmlldyKWAgoQ",
-            "TWF0ZXJpYWxpemVkVmlldxIRCgRuYW1lGAEgASgJQgPgQQgSFQoFcXVlcnkY",
-            "AiABKAlCBuBBAuBBBRIRCgRldGFnGAMgASgJQgPgQQESGwoTZGVsZXRpb25f",
-            "cHJvdGVjdGlvbhgGIAEoCDqnAepBowEKLWJpZ3RhYmxlYWRtaW4uZ29vZ2xl",
-            "YXBpcy5jb20vTWF0ZXJpYWxpemVkVmlldxJNcHJvamVjdHMve3Byb2plY3R9",
-            "L2luc3RhbmNlcy97aW5zdGFuY2V9L21hdGVyaWFsaXplZFZpZXdzL3ttYXRl",
-            "cmlhbGl6ZWRfdmlld30qEW1hdGVyaWFsaXplZFZpZXdzMhBtYXRlcmlhbGl6",
-            "ZWRWaWV3QssCChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyQg1JbnN0",
-            "YW5jZVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYWRt",
-            "aW4vYXBpdjIvYWRtaW5wYjthZG1pbnBiqgIeR29vZ2xlLkNsb3VkLkJpZ3Rh",
-            "YmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy",
-            "6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OkFkbWluOjpWMupBeAohY2xv",
-            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5n",
-            "fS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
+            "dCL6AQoLTG9naWNhbFZpZXcSEQoEbmFtZRgBIAEoCUID4EEIEhIKBXF1ZXJ5",
+            "GAIgASgJQgPgQQISEQoEZXRhZxgDIAEoCUID4EEBEiAKE2RlbGV0aW9uX3By",
+            "b3RlY3Rpb24YBiABKAhCA+BBATqOAepBigEKKGJpZ3RhYmxlYWRtaW4uZ29v",
+            "Z2xlYXBpcy5jb20vTG9naWNhbFZpZXcSQ3Byb2plY3RzL3twcm9qZWN0fS9p",
+            "bnN0YW5jZXMve2luc3RhbmNlfS9sb2dpY2FsVmlld3Mve2xvZ2ljYWxfdmll",
+            "d30qDGxvZ2ljYWxWaWV3czILbG9naWNhbFZpZXcilgIKEE1hdGVyaWFsaXpl",
+            "ZFZpZXcSEQoEbmFtZRgBIAEoCUID4EEIEhUKBXF1ZXJ5GAIgASgJQgbgQQLg",
+            "QQUSEQoEZXRhZxgDIAEoCUID4EEBEhsKE2RlbGV0aW9uX3Byb3RlY3Rpb24Y",
+            "BiABKAg6pwHqQaMBCi1iaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL01h",
+            "dGVyaWFsaXplZFZpZXcSTXByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMv",
+            "e2luc3RhbmNlfS9tYXRlcmlhbGl6ZWRWaWV3cy97bWF0ZXJpYWxpemVkX3Zp",
+            "ZXd9KhFtYXRlcmlhbGl6ZWRWaWV3czIQbWF0ZXJpYWxpemVkVmlld0LLAgoc",
+            "Y29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1AB",
+            "WjhjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3RhYmxlL2FkbWluL2FwaXYyL2Fk",
+            "bWlucGI7YWRtaW5wYqoCHkdvb2dsZS5DbG91ZC5CaWd0YWJsZS5BZG1pbi5W",
+            "MsoCHkdvb2dsZVxDbG91ZFxCaWd0YWJsZVxBZG1pblxWMuoCIkdvb2dsZTo6",
+            "Q2xvdWQ6OkJpZ3RhYmxlOjpBZG1pbjo6VjLqQXgKIWNsb3Vka21zLmdvb2ds",
+            "ZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5",
+            "cy97Y3J5cHRvX2tleX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -147,7 +148,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Parser, new[]{ "ComputeBillingOwner" }, new[]{ "ComputeBillingOwner" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.HotTablet), global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser, new[]{ "Name", "TableName", "StartTime", "EndTime", "StartKey", "EndKey", "NodeCpuUsagePercent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.LogicalView), global::Google.Cloud.Bigtable.Admin.V2.LogicalView.Parser, new[]{ "Name", "Query", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.LogicalView), global::Google.Cloud.Bigtable.Admin.V2.LogicalView.Parser, new[]{ "Name", "Query", "Etag", "DeletionProtection" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.MaterializedView), global::Google.Cloud.Bigtable.Admin.V2.MaterializedView.Parser, new[]{ "Name", "Query", "Etag", "DeletionProtection" }, null, null, null, null)
           }));
     }
@@ -4754,6 +4755,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       name_ = other.name_;
       query_ = other.query_;
       etag_ = other.etag_;
+      deletionProtection_ = other.deletionProtection_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4813,6 +4815,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "deletion_protection" field.</summary>
+    public const int DeletionProtectionFieldNumber = 6;
+    private bool deletionProtection_;
+    /// <summary>
+    /// Optional. Set to true to make the LogicalView protected against deletion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DeletionProtection {
+      get { return deletionProtection_; }
+      set {
+        deletionProtection_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4831,6 +4848,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Name != other.Name) return false;
       if (Query != other.Query) return false;
       if (Etag != other.Etag) return false;
+      if (DeletionProtection != other.DeletionProtection) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4841,6 +4859,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Query.Length != 0) hash ^= Query.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (DeletionProtection != false) hash ^= DeletionProtection.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4871,6 +4890,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(26);
         output.WriteString(Etag);
       }
+      if (DeletionProtection != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(DeletionProtection);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4893,6 +4916,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(26);
         output.WriteString(Etag);
       }
+      if (DeletionProtection != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(DeletionProtection);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4911,6 +4938,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (DeletionProtection != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4932,6 +4962,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.DeletionProtection != false) {
+        DeletionProtection = other.DeletionProtection;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4960,6 +4993,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             Etag = input.ReadString();
             break;
           }
+          case 48: {
+            DeletionProtection = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4985,6 +5022,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 26: {
             Etag = input.ReadString();
+            break;
+          }
+          case 48: {
+            DeletionProtection = input.ReadBool();
             break;
           }
         }
