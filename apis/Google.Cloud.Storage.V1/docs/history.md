@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.12.0, released 2025-04-24
+
+### New features
+
+- Added MoveObject methods
+
 ## Version 4.11.0, released 2025-03-10
 
 ### New features
