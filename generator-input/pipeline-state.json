@@ -4007,6 +4007,7 @@
         "google/cloud/securityposture/v1",
         "google/cloud/telcoautomation/v1alpha1",
         "google/shopping/merchant/productstudio/v1alpha",
-        "google/cloud/licensemanager/v1"
+        "google/cloud/licensemanager/v1",
+        "google/cloud/redis/cluster/v1beta1"
     ]
 }

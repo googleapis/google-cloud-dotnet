@@ -204,7 +204,6 @@
     "apis/Google.Cloud.RecommendationEngine.V1Beta1/Google.Cloud.RecommendationEngine.V1Beta1/**",
     "apis/Google.Cloud.Recommender.V1/Google.Cloud.Recommender.V1/**",
     "apis/Google.Cloud.Redis.Cluster.V1/Google.Cloud.Redis.Cluster.V1/**",
-    "apis/Google.Cloud.Redis.Cluster.V1Beta1/Google.Cloud.Redis.Cluster.V1Beta1/**",
     "apis/Google.Cloud.Redis.V1/Google.Cloud.Redis.V1/**",
     "apis/Google.Cloud.Redis.V1Beta1/Google.Cloud.Redis.V1Beta1/**",
     "apis/Google.Cloud.ResourceManager.V3/Google.Cloud.ResourceManager.V3/**",
