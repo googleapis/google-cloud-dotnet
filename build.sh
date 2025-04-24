@@ -167,6 +167,11 @@ then
     then
       continue
     fi
+    if [[ ! -d "apis/$api" ]]
+    then
+      log_build_action "Skipping missing API $api; may be configured but not generated, or recently deleted"
+      continue
+    fi
     dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- create-clients $api
   done
   log_build_action "(End) Client creation tests"
