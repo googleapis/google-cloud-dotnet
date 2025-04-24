@@ -2104,7 +2104,7 @@
     },
     {
       "id": "Google.Cloud.DeviceStreaming.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Device Streaming",
       "productUrl": "https://cloud.google.com/device-streaming/docs",
