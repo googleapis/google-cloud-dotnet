@@ -5354,7 +5354,7 @@
     },
     {
       "id": "Google.Cloud.StorageBatchOperations.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Storage Batch Operations",
       "productUrl": "https://cloud.google.com/storage/docs/batch-operations/overview",
