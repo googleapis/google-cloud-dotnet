@@ -84,6 +84,11 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerDbType DateTimeToConfiguredSpannerType { get; private set; }
 
         /// <summary>
+        /// The configured SpannerDbType for the Interval CLR type.
+        /// </summary>
+        internal SpannerDbType IntervalToConfiguredSpannerType { get; private set; }
+
+        /// <summary>
         /// The configured CLR type for the Date SpannerDbType.
         /// </summary>
         internal System.Type DateToConfiguredClrType { get; private set; }
@@ -141,6 +146,7 @@ namespace Google.Cloud.Spanner.Data
             SingleToConfiguredSpannerType = SpannerDbType.Float32;
             DecimalToConfiguredSpannerType = SpannerDbType.Numeric;
             DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
+            IntervalToConfiguredSpannerType = SpannerDbType.Interval;
         }
 
         internal void SetSpannerToClrTypeDefaults()

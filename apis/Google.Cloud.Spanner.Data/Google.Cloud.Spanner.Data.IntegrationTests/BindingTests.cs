@@ -312,7 +312,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         [Fact]
         public async Task BindIntervalEmptyArray() =>  await TestBindNonNull(
-            SpannerDbType.Interval,
+            SpannerDbType.ArrayOf(SpannerDbType.Interval),
             new Interval[] { });
 
         [SkippableFact] //"b/348711708

@@ -47,7 +47,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  TimestampValue,
                  JsonValue,
                  DateValue,
-                 IntervalValue,
                  {MaybeEmptyOnProduction("ProtobufValueValue,", skipProtobufValue)/* b/348711708 */}
                  ProtobufDurationValue,
                  ProtobufRectangleValue,
@@ -116,7 +115,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             TimestampValue                      TIMESTAMP,
                             JsonValue                           JSON,
                             DateValue                           DATE,
-                            IntervalValue                       Interval,
                             ProtobufValueValue                  {Value.Descriptor.FullName},
                             ProtobufDurationValue               {Duration.Descriptor.FullName},
                             ProtobufRectangleValue              {Rectangle.Descriptor.FullName},

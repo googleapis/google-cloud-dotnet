@@ -409,6 +409,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 return PgNumeric;
             }
+            if (type == typeof(Interval)) {
+                return Interval;
+            }
             if (type == typeof(string))
             {
                 return String;
