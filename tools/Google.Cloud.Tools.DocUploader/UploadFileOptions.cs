@@ -29,7 +29,7 @@ public class UploadFileOptions
     [Option("staging-bucket", Default = "docs-resources", HelpText = "The bucket to upload the staged documentation to.")]
     public string StagingBucket { get; set; }
 
-    [Option("credentials", Required = true, HelpText = "Path to the credentials file to use for Google Cloud Storage.")]
+    [Option("credentials", Required = false, HelpText = "Path to the credentials file to use for Google Cloud Storage.")]
     public string Credentials { get; set; }
 
     [Option("metadata-file", Required = false, HelpText = "Path to the docs.metadata file. The path must be relative to the CWD.")]
