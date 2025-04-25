@@ -1,6 +1,13 @@
 # Version history
 
+## Version 4.13.0, released 2025-04-25
+
+This is effectively a re-release of 4.12.0 to fix the release
+pipeline. (There will never be a NuGet package for 4.12.0.)
+
 ## Version 4.12.0, released 2025-04-24
+
+Note: this release failed, and is replaced by 4.13.0.
 
 ### New features
 
