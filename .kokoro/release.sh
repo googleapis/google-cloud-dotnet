@@ -16,6 +16,10 @@ source $SCRIPT_DIR/populatesecrets.sh
 
 git config --global core.longpaths true
 
+# We don't clone the repo anymore, we release in place.
+# But Kokoro is not fetching submodules when cloning the repo itself.
+git submodule update --init --recursive
+
 # Only populate secrets if we have to.
 # Else, we assume secrets have already been populated by the caller.
 populatesecrets=true
@@ -39,6 +43,11 @@ export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-accoun
 DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
 GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-cloud-nuget-api-key)"
 GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-apis-nuget-api-key)"
+
+if [[ $COMMITTISH_OVERRIDE != "" ]]
+then
+    git checkout $COMMITTISH_OVERRIDE
+fi
 
 # Build the release and run the tests.
 ./buildrelease.sh
