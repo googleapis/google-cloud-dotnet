@@ -49,16 +49,11 @@ devsite://dotnet/Google.Cloud.Datastore.V1,\
 devsite://dotnet/Google.Cloud.Storage.V1 \
   --language dotnet 
 
-if [[ $SERVICE_ACCOUNT_JSON != "" ]]
-then
-  dotnet docuploader upload \
-    --documentation-path . \
-    --credentials $SERVICE_ACCOUNT_JSON \
-    --staging-bucket $DEVSITE_STAGING_BUCKET \
-    --destination-prefix docfx
-else
-  echo 'Service account JSON file not specified; skipping upload'
-fi
+dotnet docuploader upload \
+  --documentation-path . \
+  --credentials $SERVICE_ACCOUNT_JSON \
+  --staging-bucket $DEVSITE_STAGING_BUCKET \
+  --destination-prefix docfx
 
 cd ../..
 

@@ -2,17 +2,26 @@
 
 set -e
 
-if [[ -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5" ]]
+if [[ -z "$1" || -z "$2" || -z "$3" || -z "$4" ]]
 then
   echo "Usage: uploaddocs.sh <nupkg directory> <docs output directory> <service account json> <googleapis.dev staging bucket> <devsite staging bucket>"
+  echo "or: uploaddocs.sh <nupkg directory> <docs output directory> <googleapis.dev staging bucket> <devsite staging bucket>"
   exit 1
 fi
 
 declare -r NUPKG_DIR=$1
 declare -r DOCS_OUTPUT_DIR=$2
-declare -r SERVICE_ACCOUNT_JSON=$(realpath $3)
-declare -r GOOGLEAPIS_DEV_STAGING_BUCKET=$4
-declare -r DEVSITE_STAGING_BUCKET=$5
+
+if [[ -z "$5" ]]
+then
+  declare -r SERVICE_ACCOUNT_JSON=""
+  declare -r GOOGLEAPIS_DEV_STAGING_BUCKET=$3
+  declare -r DEVSITE_STAGING_BUCKET=$4
+else
+  declare -r SERVICE_ACCOUNT_JSON=$(realpath $3)
+  declare -r GOOGLEAPIS_DEV_STAGING_BUCKET=$4
+  declare -r DEVSITE_STAGING_BUCKET=$5
+fi
 
 for nupkg in $NUPKG_DIR/*.nupkg
 do

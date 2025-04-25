@@ -87,7 +87,9 @@ Metadata GetMetadataFromJsonFile(string metadataFilePath)
 void UploadFile(MemoryStream memoryStream, string destination, string bucketName, string credentialsPath)
 {
     // Create a new Storage client.
-    var client = StorageClient.Create(GoogleCredential.FromFile(credentialsPath));
+    StorageClient client = string.IsNullOrWhiteSpace(credentialsPath)
+        ? StorageClient.Create()
+        : StorageClient.Create(GoogleCredential.FromFile(credentialsPath));
     client.UploadObject(bucketName, destination, null, memoryStream);
 }
 
