@@ -6521,6 +6521,23 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Shopping.Merchant.Issueresolution.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Merchant",
+      "productUrl": "https://developers.google.com/merchant/api",
+      "description": "Programmatically manage your Merchant Center Accounts.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/shopping/merchant/issueresolution/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "merchantapi",
+      "serviceConfigFile": "merchantapi_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Shopping.Merchant.Lfp.V1Beta",
       "version": "1.0.0-beta03",
       "type": "grpc",
