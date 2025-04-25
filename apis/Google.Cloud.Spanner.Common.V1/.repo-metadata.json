@@ -3,5 +3,6 @@
   "release_level": "stable",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.Common.V1/latest",
   "library_type": "OTHER",
-  "language": "dotnet"
+  "language": "dotnet",
+  "api_shortname": "spanner"
 }

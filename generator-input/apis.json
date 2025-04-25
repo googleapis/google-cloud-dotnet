@@ -1187,6 +1187,7 @@
       "type": "other",
       "version": "3.2.0",
       "description": "Common code used by Bigtable V2 APIs",
+      "shortName": "bigtable",
       "tags": [
         "Bigtable"
       ],
@@ -5099,6 +5100,7 @@
       "version": "5.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
+      "shortName": "spanner",
       "description": "Google ADO.NET Provider for Google Cloud Spanner.",
       "tags": [
         "Spanner",
@@ -5134,6 +5136,7 @@
       "type": "other",
       "version": "5.0.0",
       "description": "Common resource names used by all Spanner V1 APIs",
+      "shortName": "spanner",
       "tags": [
         "Spanner"
       ],
