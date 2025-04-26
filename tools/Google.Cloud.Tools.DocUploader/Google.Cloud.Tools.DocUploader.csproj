@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" />
-    <PackageReference Include="Google.Cloud.Storage.V1" VersionOverride="4.11.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" VersionOverride="4.13.0" />
     <PackageReference Include="Google.Protobuf" />
     <PackageReference Include="SharpCompress" />
   </ItemGroup>
