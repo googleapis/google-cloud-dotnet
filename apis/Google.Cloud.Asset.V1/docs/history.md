@@ -1,5 +1,25 @@
 # Version history
 
+## Version 3.13.0, released 2025-04-28
+
+### New features
+
+- A new message `ResourceOwners` is added ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A new value `REMOVE_GRANT` is added to enum `MethodType` ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A new value `GOVERN_TAGS` is added to enum `MethodType` ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A new message `AssetEnrichment` is added ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A new field `enrichments` is added to message `.google.cloud.asset.v1.ResourceSearchResult` ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+
+### Documentation improvements
+
+- A comment for field `service_account_impersonation_analysis` in message `.google.cloud.asset.v1.AnalyzeIamPolicyResponse` is changed ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A comment for field `consolidated_policy` in message `.google.cloud.asset.v1.AnalyzeOrgPoliciesResponse` is changed ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A comment for field `policy_bundle` in message `.google.cloud.asset.v1.AnalyzeOrgPoliciesResponse` is changed ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A comment for field `policy_bundle` in message `.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse` is changed ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A comment for field `policy_bundle` in message `.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse` is changed ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- A comment for field `attached_resource` in message `.google.cloud.asset.v1.EffectiveTagDetails` is changed ([commit f8d84ba](https://github.com/googleapis/google-cloud-dotnet/commit/f8d84babb77910cc432d74e149ea243fa4741d7d))
+- Comments are clarified for certain fields in messages `QueryAssetsResponse` and `ResourceSearchResult` ([commit dabdcad](https://github.com/googleapis/google-cloud-dotnet/commit/dabdcadfd6dd65693b9059d775d5919951109556))
+
 ## Version 3.12.0, released 2024-05-13
 
 ### New features
