@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta25, released 2025-04-28
+
+### New features
+
+- Added config options to enable image annotation ([commit 7e02ca8](https://github.com/googleapis/google-cloud-dotnet/commit/7e02ca8c5f7fe43124026f9550cc00e002e9409c))
+- Add image block and blob asset in Document proto ([commit 2d344c0](https://github.com/googleapis/google-cloud-dotnet/commit/2d344c0f62d7a544101870aba929cea850e23b43))
+
 ## Version 2.0.0-beta24, released 2025-03-24
 
 ### New features
