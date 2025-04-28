@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.12.0</Version>
+    <Version>3.13.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Asset Inventory API (v1).</Description>
@@ -10,11 +10,11 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
-    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.4.0, 4.0.0)" />
     <PackageReference Include="Google.Cloud.OrgPolicy.V1" VersionOverride="[3.2.0, 4.0.0)" />
-    <PackageReference Include="Google.Cloud.OsConfig.V1" VersionOverride="[2.3.0, 3.0.0)" />
-    <PackageReference Include="Google.Identity.AccessContextManager.V1" VersionOverride="[2.4.0, 3.0.0)" />
-    <PackageReference Include="Google.LongRunning" VersionOverride="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.OsConfig.V1" VersionOverride="[2.4.0, 3.0.0)" />
+    <PackageReference Include="Google.Identity.AccessContextManager.V1" VersionOverride="[2.5.0, 3.0.0)" />
+    <PackageReference Include="Google.LongRunning" VersionOverride="[3.3.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
