@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.26.0, released 2025-04-28
+
+### New features
+
+- Add deletion_protection support for LVs ([commit 1fd088c](https://github.com/googleapis/google-cloud-dotnet/commit/1fd088c1e42f8cfba8d32bc2e90a44bfc1515db0))
+
 ## Version 3.25.0, released 2025-03-17
 
 ### New features
