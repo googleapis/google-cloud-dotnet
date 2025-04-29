@@ -58,6 +58,9 @@ namespace GoogleCSharpSnippets
                 Entity = "",
                 ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
                 TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
+                LanguageCode = "",
+                RegionCode = "",
+                PlaceId = "",
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -129,6 +132,9 @@ namespace GoogleCSharpSnippets
                 Entity = "",
                 ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
                 TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
+                LanguageCode = "",
+                RegionCode = "",
+                PlaceId = "",
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
