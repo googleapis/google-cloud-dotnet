@@ -4010,6 +4010,17 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.IssueResolution.V1Beta/Google.Shopping.Merchant.IssueResolution.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.OrderTracking.V1Beta",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/ordertracking/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.OrderTracking.V1Beta/Google.Shopping.Merchant.OrderTracking.V1Beta"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
