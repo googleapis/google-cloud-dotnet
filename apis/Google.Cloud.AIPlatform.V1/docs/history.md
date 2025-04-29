@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.26.0, released 2025-04-29
+
+### New features
+
+- Adding ThinkingConfig to v1 client library ([commit cb44e6e](https://github.com/googleapis/google-cloud-dotnet/commit/cb44e6e4235d928bdddf3a46172367ccc726da5b))
+- Model Registry Model Checkpoint API ([commit b698c85](https://github.com/googleapis/google-cloud-dotnet/commit/b698c85f1cc0379dd5703887cfaa52fcee11139a))
+
 ## Version 3.25.0, released 2025-03-31
 
 ### New features
