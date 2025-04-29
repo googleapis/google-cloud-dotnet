@@ -28,7 +28,7 @@ if [[ "$3" != "" ]]
 then
   declare -r SERVICE_ACCOUNT_JSON=$3
 else
-  declare -r SERVICE_ACCOUNT_JSON=""
+  declare -r SERVICE_ACCOUNT_JSON=adc
 fi
 
 set -eu -o pipefail
