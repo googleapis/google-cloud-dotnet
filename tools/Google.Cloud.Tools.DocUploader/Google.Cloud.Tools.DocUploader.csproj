@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <Version>0.2.2</Version>
+    <Version>0.2.3</Version>
     <Description>Tool used by Google .NET release processes for documentation. While there is nothing "secret" in this package, it is unlikely to be useful to other developers. It is only published as a matter of convenience for other Google .NET repositories.</Description>
     <ToolCommandName>docuploader</ToolCommandName>
   </PropertyGroup>
