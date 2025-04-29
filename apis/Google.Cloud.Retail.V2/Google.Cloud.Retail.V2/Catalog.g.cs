@@ -504,8 +504,8 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute] can be
     /// pre-loaded by using
-    /// [CatalogService.AddCatalogAttribute][google.cloud.retail.v2.CatalogService.AddCatalogAttribute],
-    /// [CatalogService.ImportCatalogAttributes][], or
+    /// [CatalogService.AddCatalogAttribute][google.cloud.retail.v2.CatalogService.AddCatalogAttribute]
+    /// or
     /// [CatalogService.UpdateAttributesConfig][google.cloud.retail.v2.CatalogService.UpdateAttributesConfig]
     /// APIs. This field is `False` for pre-loaded
     /// [CatalogAttribute][google.cloud.retail.v2.CatalogAttribute]s.

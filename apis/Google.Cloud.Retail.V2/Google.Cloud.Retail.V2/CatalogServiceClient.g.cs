@@ -753,14 +753,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -794,14 +795,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -835,14 +837,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -876,14 +879,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -923,14 +927,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -970,14 +975,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -1014,14 +1020,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -1061,14 +1068,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -1108,14 +1116,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -2088,14 +2097,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 
@@ -2132,14 +2142,15 @@ namespace Google.Cloud.Retail.V2
         /// 
         /// Using multiple branches can be useful when developers would like
         /// to have a staging branch to test and verify for future usage. When it
-        /// becomes ready, developers switch on the staging branch using this API while
-        /// keeping using `projects/*/locations/*/catalogs/*/branches/default_branch`
-        /// as [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
+        /// becomes ready, developers switch on the staging branch using this API
+        /// while keeping using
+        /// `projects/*/locations/*/catalogs/*/branches/default_branch` as
+        /// [SearchRequest.branch][google.cloud.retail.v2.SearchRequest.branch] to
         /// route the traffic to this staging branch.
         /// 
         /// CAUTION: If you have live predict/search traffic, switching the default
-        /// branch could potentially cause outages if the ID space of the new branch is
-        /// very different from the old one.
+        /// branch could potentially cause outages if the ID space of the new branch
+        /// is very different from the old one.
         /// 
         /// More specifically:
         /// 

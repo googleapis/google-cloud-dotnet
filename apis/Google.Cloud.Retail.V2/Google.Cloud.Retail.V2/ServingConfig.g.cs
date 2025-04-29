@@ -182,7 +182,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Required when
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -214,7 +214,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -241,7 +241,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -258,7 +258,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -290,7 +290,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -311,7 +311,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -331,7 +331,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -352,7 +352,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -373,7 +373,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -395,7 +395,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -416,7 +416,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -438,7 +438,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -464,7 +464,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -509,7 +509,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -544,7 +544,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Can only be set if
     /// [solution_types][google.cloud.retail.v2.ServingConfig.solution_types] is
-    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2main.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
     ///
     /// Notice that if both
     /// [ServingConfig.personalization_spec][google.cloud.retail.v2.ServingConfig.personalization_spec]

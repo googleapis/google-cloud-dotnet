@@ -34,7 +34,7 @@ namespace Google.Cloud.Retail.V2 {
             "cm0SDQoFdmFsdWUYASABKAkSEgoKZnVsbF9tYXRjaBgCIAEoCBppCglUaW1l",
             "UmFuZ2USLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wIqUMCgRSdWxlEkAKDGJvb3N0X2FjdGlvbhgCIAEoCzIoLmdv",
+            "VGltZXN0YW1wIuoNCgRSdWxlEkAKDGJvb3N0X2FjdGlvbhgCIAEoCzIoLmdv",
             "b2dsZS5jbG91ZC5yZXRhaWwudjIuUnVsZS5Cb29zdEFjdGlvbkgAEkYKD3Jl",
             "ZGlyZWN0X2FjdGlvbhgDIAEoCzIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
             "UnVsZS5SZWRpcmVjdEFjdGlvbkgAElMKFm9uZXdheV9zeW5vbnltc19hY3Rp",
@@ -51,77 +51,92 @@ namespace Google.Cloud.Retail.V2 {
             "Zm9yY2VfcmV0dXJuX2ZhY2V0X2FjdGlvbhgMIAEoCzIzLmdvb2dsZS5jbG91",
             "ZC5yZXRhaWwudjIuUnVsZS5Gb3JjZVJldHVybkZhY2V0QWN0aW9uSAASTQoT",
             "cmVtb3ZlX2ZhY2V0X2FjdGlvbhgNIAEoCzIuLmdvb2dsZS5jbG91ZC5yZXRh",
-            "aWwudjIuUnVsZS5SZW1vdmVGYWNldEFjdGlvbkgAEjkKCWNvbmRpdGlvbhgB",
-            "IAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ29uZGl0aW9uQgPgQQIa",
-            "NQoLQm9vc3RBY3Rpb24SDQoFYm9vc3QYASABKAISFwoPcHJvZHVjdHNfZmls",
-            "dGVyGAIgASgJGh4KDEZpbHRlckFjdGlvbhIOCgZmaWx0ZXIYASABKAkaJgoO",
-            "UmVkaXJlY3RBY3Rpb24SFAoMcmVkaXJlY3RfdXJpGAEgASgJGigKFFR3b3dh",
-            "eVN5bm9ueW1zQWN0aW9uEhAKCHN5bm9ueW1zGAEgAygJGlMKFE9uZXdheVN5",
-            "bm9ueW1zQWN0aW9uEhMKC3F1ZXJ5X3Rlcm1zGAMgAygJEhAKCHN5bm9ueW1z",
-            "GAQgAygJEhQKDG9uZXdheV90ZXJtcxgCIAMoCRpaChREb05vdEFzc29jaWF0",
-            "ZUFjdGlvbhITCgtxdWVyeV90ZXJtcxgCIAMoCRIeChZkb19ub3RfYXNzb2Np",
-            "YXRlX3Rlcm1zGAMgAygJEg0KBXRlcm1zGAEgAygJGlAKEVJlcGxhY2VtZW50",
-            "QWN0aW9uEhMKC3F1ZXJ5X3Rlcm1zGAIgAygJEhgKEHJlcGxhY2VtZW50X3Rl",
-            "cm0YAyABKAkSDAoEdGVybRgBIAEoCRokCgxJZ25vcmVBY3Rpb24SFAoMaWdu",
-            "b3JlX3Rlcm1zGAEgAygJGs4BChZGb3JjZVJldHVybkZhY2V0QWN0aW9uEm8K",
-            "GmZhY2V0X3Bvc2l0aW9uX2FkanVzdG1lbnRzGAEgAygLMksuZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52Mi5SdWxlLkZvcmNlUmV0dXJuRmFjZXRBY3Rpb24uRmFj",
-            "ZXRQb3NpdGlvbkFkanVzdG1lbnQaQwoXRmFjZXRQb3NpdGlvbkFkanVzdG1l",
-            "bnQSFgoOYXR0cmlidXRlX25hbWUYASABKAkSEAoIcG9zaXRpb24YAiABKAUa",
-            "LAoRUmVtb3ZlRmFjZXRBY3Rpb24SFwoPYXR0cmlidXRlX25hbWVzGAEgAygJ",
-            "QggKBmFjdGlvbiIvCghBdWRpZW5jZRIPCgdnZW5kZXJzGAEgAygJEhIKCmFn",
-            "ZV9ncm91cHMYAiADKAkiMwoJQ29sb3JJbmZvEhYKDmNvbG9yX2ZhbWlsaWVz",
-            "GAEgAygJEg4KBmNvbG9ycxgCIAMoCSKGAQoPQ3VzdG9tQXR0cmlidXRlEgwK",
-            "BHRleHQYASADKAkSDwoHbnVtYmVycxgCIAMoARIbCgpzZWFyY2hhYmxlGAMg",
-            "ASgIQgIYAUgAiAEBEhoKCWluZGV4YWJsZRgEIAEoCEICGAFIAYgBAUINCgtf",
-            "c2VhcmNoYWJsZUIMCgpfaW5kZXhhYmxlIjIKD0Z1bGZpbGxtZW50SW5mbxIM",
-            "CgR0eXBlGAEgASgJEhEKCXBsYWNlX2lkcxgCIAMoCSI4CgVJbWFnZRIQCgN1",
-            "cmkYASABKAlCA+BBAhIOCgZoZWlnaHQYAiABKAUSDQoFd2lkdGgYAyABKAUi",
-            "eAoISW50ZXJ2YWwSEQoHbWluaW11bRgBIAEoAUgAEhsKEWV4Y2x1c2l2ZV9t",
-            "aW5pbXVtGAIgASgBSAASEQoHbWF4aW11bRgDIAEoAUgBEhsKEWV4Y2x1c2l2",
-            "ZV9tYXhpbXVtGAQgASgBSAFCBQoDbWluQgUKA21heCKJAwoJUHJpY2VJbmZv",
-            "EhUKDWN1cnJlbmN5X2NvZGUYASABKAkSDQoFcHJpY2UYAiABKAISFgoOb3Jp",
-            "Z2luYWxfcHJpY2UYAyABKAISDAoEY29zdBgEIAEoAhI4ChRwcmljZV9lZmZl",
-            "Y3RpdmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "NQoRcHJpY2VfZXhwaXJlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEkYKC3ByaWNlX3JhbmdlGAcgASgLMiwuZ29vZ2xlLmNsb3Vk",
-            "LnJldGFpbC52Mi5QcmljZUluZm8uUHJpY2VSYW5nZUID4EEDGncKClByaWNl",
-            "UmFuZ2USLwoFcHJpY2UYASABKAsyIC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LkludGVydmFsEjgKDm9yaWdpbmFsX3ByaWNlGAIgASgLMiAuZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52Mi5JbnRlcnZhbCJQCgZSYXRpbmcSFAoMcmF0aW5nX2Nv",
-            "dW50GAEgASgFEhYKDmF2ZXJhZ2VfcmF0aW5nGAIgASgCEhgKEHJhdGluZ19o",
-            "aXN0b2dyYW0YAyADKAUiYAoIVXNlckluZm8SDwoHdXNlcl9pZBgBIAEoCRIS",
-            "CgppcF9hZGRyZXNzGAIgASgJEhIKCnVzZXJfYWdlbnQYAyABKAkSGwoTZGly",
-            "ZWN0X3VzZXJfcmVxdWVzdBgEIAEoCCKhAgoOTG9jYWxJbnZlbnRvcnkSEAoI",
-            "cGxhY2VfaWQYASABKAkSNQoKcHJpY2VfaW5mbxgCIAEoCzIhLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuUHJpY2VJbmZvEkoKCmF0dHJpYnV0ZXMYAyADKAsy",
-            "Ni5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkxvY2FsSW52ZW50b3J5LkF0dHJp",
-            "YnV0ZXNFbnRyeRIeChFmdWxmaWxsbWVudF90eXBlcxgEIAMoCUID4EEEGloK",
-            "D0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSNgoFdmFsdWUYAiABKAsy",
-            "Jy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkN1c3RvbUF0dHJpYnV0ZToCOAEq",
-            "hgEKFEF0dHJpYnV0ZUNvbmZpZ0xldmVsEiYKIkFUVFJJQlVURV9DT05GSUdf",
-            "TEVWRUxfVU5TUEVDSUZJRUQQABIiCh5QUk9EVUNUX0xFVkVMX0FUVFJJQlVU",
-            "RV9DT05GSUcQARIiCh5DQVRBTE9HX0xFVkVMX0FUVFJJQlVURV9DT05GSUcQ",
-            "AippCgxTb2x1dGlvblR5cGUSHQoZU09MVVRJT05fVFlQRV9VTlNQRUNJRklF",
-            "RBAAEiAKHFNPTFVUSU9OX1RZUEVfUkVDT01NRU5EQVRJT04QARIYChRTT0xV",
-            "VElPTl9UWVBFX1NFQVJDSBACKqEBCh5SZWNvbW1lbmRhdGlvbnNGaWx0ZXJp",
-            "bmdPcHRpb24SMAosUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19PUFRJT05f",
-            "VU5TUEVDSUZJRUQQABImCiJSRUNPTU1FTkRBVElPTlNfRklMVEVSSU5HX0RJ",
-            "U0FCTEVEEAESJQohUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19FTkFCTEVE",
-            "EAMqiwEKFVNlYXJjaFNvbHV0aW9uVXNlQ2FzZRIoCiRTRUFSQ0hfU09MVVRJ",
-            "T05fVVNFX0NBU0VfVU5TUEVDSUZJRUQQABIjCh9TRUFSQ0hfU09MVVRJT05f",
-            "VVNFX0NBU0VfU0VBUkNIEAESIwofU0VBUkNIX1NPTFVUSU9OX1VTRV9DQVNF",
-            "X0JST1dTRRACQrYBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52MkILQ29t",
-            "bW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9yZXRhaWwvYXBpdjIv",
-            "cmV0YWlscGI7cmV0YWlscGKiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0",
-            "YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xv",
-            "dWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "aWwudjIuUnVsZS5SZW1vdmVGYWNldEFjdGlvbkgAEjwKCnBpbl9hY3Rpb24Y",
+            "DiABKAsyJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlJ1bGUuUGluQWN0aW9u",
+            "SAASOQoJY29uZGl0aW9uGAEgASgLMiEuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "Mi5Db25kaXRpb25CA+BBAho1CgtCb29zdEFjdGlvbhINCgVib29zdBgBIAEo",
+            "AhIXCg9wcm9kdWN0c19maWx0ZXIYAiABKAkaHgoMRmlsdGVyQWN0aW9uEg4K",
+            "BmZpbHRlchgBIAEoCRomCg5SZWRpcmVjdEFjdGlvbhIUCgxyZWRpcmVjdF91",
+            "cmkYASABKAkaKAoUVHdvd2F5U3lub255bXNBY3Rpb24SEAoIc3lub255bXMY",
+            "ASADKAkaUwoUT25ld2F5U3lub255bXNBY3Rpb24SEwoLcXVlcnlfdGVybXMY",
+            "AyADKAkSEAoIc3lub255bXMYBCADKAkSFAoMb25ld2F5X3Rlcm1zGAIgAygJ",
+            "GloKFERvTm90QXNzb2NpYXRlQWN0aW9uEhMKC3F1ZXJ5X3Rlcm1zGAIgAygJ",
+            "Eh4KFmRvX25vdF9hc3NvY2lhdGVfdGVybXMYAyADKAkSDQoFdGVybXMYASAD",
+            "KAkaUAoRUmVwbGFjZW1lbnRBY3Rpb24SEwoLcXVlcnlfdGVybXMYAiADKAkS",
+            "GAoQcmVwbGFjZW1lbnRfdGVybRgDIAEoCRIMCgR0ZXJtGAEgASgJGiQKDEln",
+            "bm9yZUFjdGlvbhIUCgxpZ25vcmVfdGVybXMYASADKAkazgEKFkZvcmNlUmV0",
+            "dXJuRmFjZXRBY3Rpb24SbwoaZmFjZXRfcG9zaXRpb25fYWRqdXN0bWVudHMY",
+            "ASADKAsySy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlJ1bGUuRm9yY2VSZXR1",
+            "cm5GYWNldEFjdGlvbi5GYWNldFBvc2l0aW9uQWRqdXN0bWVudBpDChdGYWNl",
+            "dFBvc2l0aW9uQWRqdXN0bWVudBIWCg5hdHRyaWJ1dGVfbmFtZRgBIAEoCRIQ",
+            "Cghwb3NpdGlvbhgCIAEoBRosChFSZW1vdmVGYWNldEFjdGlvbhIXCg9hdHRy",
+            "aWJ1dGVfbmFtZXMYASADKAkahAEKCVBpbkFjdGlvbhJICgdwaW5fbWFwGAEg",
+            "AygLMjIuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5SdWxlLlBpbkFjdGlvbi5Q",
+            "aW5NYXBFbnRyeUID4EECGi0KC1Bpbk1hcEVudHJ5EgsKA2tleRgBIAEoAxIN",
+            "CgV2YWx1ZRgCIAEoCToCOAFCCAoGYWN0aW9uIi8KCEF1ZGllbmNlEg8KB2dl",
+            "bmRlcnMYASADKAkSEgoKYWdlX2dyb3VwcxgCIAMoCSIzCglDb2xvckluZm8S",
+            "FgoOY29sb3JfZmFtaWxpZXMYASADKAkSDgoGY29sb3JzGAIgAygJIoYBCg9D",
+            "dXN0b21BdHRyaWJ1dGUSDAoEdGV4dBgBIAMoCRIPCgdudW1iZXJzGAIgAygB",
+            "EhsKCnNlYXJjaGFibGUYAyABKAhCAhgBSACIAQESGgoJaW5kZXhhYmxlGAQg",
+            "ASgIQgIYAUgBiAEBQg0KC19zZWFyY2hhYmxlQgwKCl9pbmRleGFibGUiMgoP",
+            "RnVsZmlsbG1lbnRJbmZvEgwKBHR5cGUYASABKAkSEQoJcGxhY2VfaWRzGAIg",
+            "AygJIjgKBUltYWdlEhAKA3VyaRgBIAEoCUID4EECEg4KBmhlaWdodBgCIAEo",
+            "BRINCgV3aWR0aBgDIAEoBSJ4CghJbnRlcnZhbBIRCgdtaW5pbXVtGAEgASgB",
+            "SAASGwoRZXhjbHVzaXZlX21pbmltdW0YAiABKAFIABIRCgdtYXhpbXVtGAMg",
+            "ASgBSAESGwoRZXhjbHVzaXZlX21heGltdW0YBCABKAFIAUIFCgNtaW5CBQoD",
+            "bWF4IokDCglQcmljZUluZm8SFQoNY3VycmVuY3lfY29kZRgBIAEoCRINCgVw",
+            "cmljZRgCIAEoAhIWCg5vcmlnaW5hbF9wcmljZRgDIAEoAhIMCgRjb3N0GAQg",
+            "ASgCEjgKFHByaWNlX2VmZmVjdGl2ZV90aW1lGAUgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBI1ChFwcmljZV9leHBpcmVfdGltZRgGIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASRgoLcHJpY2VfcmFuZ2UYByAB",
+            "KAsyLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByaWNlSW5mby5QcmljZVJh",
+            "bmdlQgPgQQMadwoKUHJpY2VSYW5nZRIvCgVwcmljZRgBIAEoCzIgLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuSW50ZXJ2YWwSOAoOb3JpZ2luYWxfcHJpY2UY",
+            "AiABKAsyIC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkludGVydmFsIlAKBlJh",
+            "dGluZxIUCgxyYXRpbmdfY291bnQYASABKAUSFgoOYXZlcmFnZV9yYXRpbmcY",
+            "AiABKAISGAoQcmF0aW5nX2hpc3RvZ3JhbRgDIAMoBSJgCghVc2VySW5mbxIP",
+            "Cgd1c2VyX2lkGAEgASgJEhIKCmlwX2FkZHJlc3MYAiABKAkSEgoKdXNlcl9h",
+            "Z2VudBgDIAEoCRIbChNkaXJlY3RfdXNlcl9yZXF1ZXN0GAQgASgIIrACCg5M",
+            "b2NhbEludmVudG9yeRIVCghwbGFjZV9pZBgBIAEoCUID4EEBEjoKCnByaWNl",
+            "X2luZm8YAiABKAsyIS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByaWNlSW5m",
+            "b0ID4EEBEk8KCmF0dHJpYnV0ZXMYAyADKAsyNi5nb29nbGUuY2xvdWQucmV0",
+            "YWlsLnYyLkxvY2FsSW52ZW50b3J5LkF0dHJpYnV0ZXNFbnRyeUID4EEBEh4K",
+            "EWZ1bGZpbGxtZW50X3R5cGVzGAQgAygJQgPgQQEaWgoPQXR0cmlidXRlc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRI2CgV2YWx1ZRgCIAEoCzInLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuQ3VzdG9tQXR0cmlidXRlOgI4ASK/AwoSUGluQ29udHJv",
+            "bE1ldGFkYXRhElgKEGFsbF9tYXRjaGVkX3BpbnMYASADKAsyPi5nb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLlBpbkNvbnRyb2xNZXRhZGF0YS5BbGxNYXRjaGVk",
+            "UGluc0VudHJ5ElEKDGRyb3BwZWRfcGlucxgCIAMoCzI7Lmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuUGluQ29udHJvbE1ldGFkYXRhLkRyb3BwZWRQaW5zRW50",
+            "cnkaIQoLUHJvZHVjdFBpbnMSEgoKcHJvZHVjdF9pZBgBIAMoCRptChNBbGxN",
+            "YXRjaGVkUGluc0VudHJ5EgsKA2tleRgBIAEoAxJFCgV2YWx1ZRgCIAEoCzI2",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUGluQ29udHJvbE1ldGFkYXRhLlBy",
+            "b2R1Y3RQaW5zOgI4ARpqChBEcm9wcGVkUGluc0VudHJ5EgsKA2tleRgBIAEo",
+            "AxJFCgV2YWx1ZRgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUGlu",
+            "Q29udHJvbE1ldGFkYXRhLlByb2R1Y3RQaW5zOgI4ASqGAQoUQXR0cmlidXRl",
+            "Q29uZmlnTGV2ZWwSJgoiQVRUUklCVVRFX0NPTkZJR19MRVZFTF9VTlNQRUNJ",
+            "RklFRBAAEiIKHlBST0RVQ1RfTEVWRUxfQVRUUklCVVRFX0NPTkZJRxABEiIK",
+            "HkNBVEFMT0dfTEVWRUxfQVRUUklCVVRFX0NPTkZJRxACKmkKDFNvbHV0aW9u",
+            "VHlwZRIdChlTT0xVVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASIAocU09MVVRJ",
+            "T05fVFlQRV9SRUNPTU1FTkRBVElPThABEhgKFFNPTFVUSU9OX1RZUEVfU0VB",
+            "UkNIEAIqoQEKHlJlY29tbWVuZGF0aW9uc0ZpbHRlcmluZ09wdGlvbhIwCixS",
+            "RUNPTU1FTkRBVElPTlNfRklMVEVSSU5HX09QVElPTl9VTlNQRUNJRklFRBAA",
+            "EiYKIlJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfRElTQUJMRUQQARIlCiFS",
+            "RUNPTU1FTkRBVElPTlNfRklMVEVSSU5HX0VOQUJMRUQQAyqLAQoVU2VhcmNo",
+            "U29sdXRpb25Vc2VDYXNlEigKJFNFQVJDSF9TT0xVVElPTl9VU0VfQ0FTRV9V",
+            "TlNQRUNJRklFRBAAEiMKH1NFQVJDSF9TT0xVVElPTl9VU0VfQ0FTRV9TRUFS",
+            "Q0gQARIjCh9TRUFSQ0hfU09MVVRJT05fVVNFX0NBU0VfQlJPV1NFEAJCtgEK",
+            "GmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQgtDb21tb25Qcm90b1ABWjJj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3JldGFpbC9hcGl2Mi9yZXRhaWxwYjtyZXRh",
+            "aWxwYqICBlJFVEFJTKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29n",
+            "bGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpW",
+            "MmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Retail.V2.AttributeConfigLevel), typeof(global::Google.Cloud.Retail.V2.SolutionType), typeof(global::Google.Cloud.Retail.V2.RecommendationsFilteringOption), typeof(global::Google.Cloud.Retail.V2.SearchSolutionUseCase), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition), global::Google.Cloud.Retail.V2.Condition.Parser, new[]{ "QueryTerms", "ActiveTimeRange", "PageCategories" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm), global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm.Parser, new[]{ "Value", "FullMatch" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.TimeRange), global::Google.Cloud.Retail.V2.Condition.Types.TimeRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule), global::Google.Cloud.Retail.V2.Rule.Parser, new[]{ "BoostAction", "RedirectAction", "OnewaySynonymsAction", "DoNotAssociateAction", "ReplacementAction", "IgnoreAction", "FilterAction", "TwowaySynonymsAction", "ForceReturnFacetAction", "RemoveFacetAction", "Condition" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.BoostAction), global::Google.Cloud.Retail.V2.Rule.Types.BoostAction.Parser, new[]{ "Boost", "ProductsFilter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule), global::Google.Cloud.Retail.V2.Rule.Parser, new[]{ "BoostAction", "RedirectAction", "OnewaySynonymsAction", "DoNotAssociateAction", "ReplacementAction", "IgnoreAction", "FilterAction", "TwowaySynonymsAction", "ForceReturnFacetAction", "RemoveFacetAction", "PinAction", "Condition" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.BoostAction), global::Google.Cloud.Retail.V2.Rule.Types.BoostAction.Parser, new[]{ "Boost", "ProductsFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.FilterAction), global::Google.Cloud.Retail.V2.Rule.Types.FilterAction.Parser, new[]{ "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.RedirectAction), global::Google.Cloud.Retail.V2.Rule.Types.RedirectAction.Parser, new[]{ "RedirectUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.TwowaySynonymsAction), global::Google.Cloud.Retail.V2.Rule.Types.TwowaySynonymsAction.Parser, new[]{ "Synonyms" }, null, null, null, null),
@@ -130,7 +145,8 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.ReplacementAction), global::Google.Cloud.Retail.V2.Rule.Types.ReplacementAction.Parser, new[]{ "QueryTerms", "ReplacementTerm", "Term" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.IgnoreAction), global::Google.Cloud.Retail.V2.Rule.Types.IgnoreAction.Parser, new[]{ "IgnoreTerms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction), global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Parser, new[]{ "FacetPositionAdjustments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment), global::Google.Cloud.Retail.V2.Rule.Types.ForceReturnFacetAction.Types.FacetPositionAdjustment.Parser, new[]{ "AttributeName", "Position" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction), global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction.Parser, new[]{ "AttributeNames" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction), global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction.Parser, new[]{ "AttributeNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.PinAction), global::Google.Cloud.Retail.V2.Rule.Types.PinAction.Parser, new[]{ "PinMap" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Audience), global::Google.Cloud.Retail.V2.Audience.Parser, new[]{ "Genders", "AgeGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ColorInfo), global::Google.Cloud.Retail.V2.ColorInfo.Parser, new[]{ "ColorFamilies", "Colors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CustomAttribute), global::Google.Cloud.Retail.V2.CustomAttribute.Parser, new[]{ "Text", "Numbers", "Searchable", "Indexable" }, new[]{ "Searchable", "Indexable" }, null, null, null),
@@ -140,7 +156,9 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PriceInfo), global::Google.Cloud.Retail.V2.PriceInfo.Parser, new[]{ "CurrencyCode", "Price", "OriginalPrice", "Cost", "PriceEffectiveTime", "PriceExpireTime", "PriceRange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PriceInfo.Types.PriceRange), global::Google.Cloud.Retail.V2.PriceInfo.Types.PriceRange.Parser, new[]{ "Price", "OriginalPrice" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rating), global::Google.Cloud.Retail.V2.Rating.Parser, new[]{ "RatingCount", "AverageRating", "RatingHistogram" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserInfo), global::Google.Cloud.Retail.V2.UserInfo.Parser, new[]{ "UserId", "IpAddress", "UserAgent", "DirectUserRequest" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.LocalInventory), global::Google.Cloud.Retail.V2.LocalInventory.Parser, new[]{ "PlaceId", "PriceInfo", "Attributes", "FulfillmentTypes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.LocalInventory), global::Google.Cloud.Retail.V2.LocalInventory.Parser, new[]{ "PlaceId", "PriceInfo", "Attributes", "FulfillmentTypes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PinControlMetadata), global::Google.Cloud.Retail.V2.PinControlMetadata.Parser, new[]{ "AllMatchedPins", "DroppedPins" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins), global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins.Parser, new[]{ "ProductId" }, null, null, null, null),
+            null, null, })
           }));
     }
     #endregion
@@ -163,7 +181,7 @@ namespace Google.Cloud.Retail.V2 {
     [pbr::OriginalName("PRODUCT_LEVEL_ATTRIBUTE_CONFIG")] ProductLevelAttributeConfig = 1,
     /// <summary>
     /// At this level, we honor the attribute configurations set in
-    /// [CatalogConfig.attribute_configs][].
+    /// `CatalogConfig.attribute_configs`.
     /// </summary>
     [pbr::OriginalName("CATALOG_LEVEL_ATTRIBUTE_CONFIG")] CatalogLevelAttributeConfig = 2,
   }
@@ -1064,6 +1082,9 @@ namespace Google.Cloud.Retail.V2 {
         case ActionOneofCase.RemoveFacetAction:
           RemoveFacetAction = other.RemoveFacetAction.Clone();
           break;
+        case ActionOneofCase.PinAction:
+          PinAction = other.PinAction.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1226,6 +1247,22 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "pin_action" field.</summary>
+    public const int PinActionFieldNumber = 14;
+    /// <summary>
+    /// Pins one or more specified products to a specific position in the
+    /// results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.Rule.Types.PinAction PinAction {
+      get { return actionCase_ == ActionOneofCase.PinAction ? (global::Google.Cloud.Retail.V2.Rule.Types.PinAction) action_ : null; }
+      set {
+        action_ = value;
+        actionCase_ = value == null ? ActionOneofCase.None : ActionOneofCase.PinAction;
+      }
+    }
+
     /// <summary>Field number for the "condition" field.</summary>
     public const int ConditionFieldNumber = 1;
     private global::Google.Cloud.Retail.V2.Condition condition_;
@@ -1256,6 +1293,7 @@ namespace Google.Cloud.Retail.V2 {
       TwowaySynonymsAction = 11,
       ForceReturnFacetAction = 12,
       RemoveFacetAction = 13,
+      PinAction = 14,
     }
     private ActionOneofCase actionCase_ = ActionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1296,6 +1334,7 @@ namespace Google.Cloud.Retail.V2 {
       if (!object.Equals(TwowaySynonymsAction, other.TwowaySynonymsAction)) return false;
       if (!object.Equals(ForceReturnFacetAction, other.ForceReturnFacetAction)) return false;
       if (!object.Equals(RemoveFacetAction, other.RemoveFacetAction)) return false;
+      if (!object.Equals(PinAction, other.PinAction)) return false;
       if (!object.Equals(Condition, other.Condition)) return false;
       if (ActionCase != other.ActionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1315,6 +1354,7 @@ namespace Google.Cloud.Retail.V2 {
       if (actionCase_ == ActionOneofCase.TwowaySynonymsAction) hash ^= TwowaySynonymsAction.GetHashCode();
       if (actionCase_ == ActionOneofCase.ForceReturnFacetAction) hash ^= ForceReturnFacetAction.GetHashCode();
       if (actionCase_ == ActionOneofCase.RemoveFacetAction) hash ^= RemoveFacetAction.GetHashCode();
+      if (actionCase_ == ActionOneofCase.PinAction) hash ^= PinAction.GetHashCode();
       if (condition_ != null) hash ^= Condition.GetHashCode();
       hash ^= (int) actionCase_;
       if (_unknownFields != null) {
@@ -1379,6 +1419,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(106);
         output.WriteMessage(RemoveFacetAction);
       }
+      if (actionCase_ == ActionOneofCase.PinAction) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PinAction);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1433,6 +1477,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(106);
         output.WriteMessage(RemoveFacetAction);
       }
+      if (actionCase_ == ActionOneofCase.PinAction) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PinAction);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1472,6 +1520,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (actionCase_ == ActionOneofCase.RemoveFacetAction) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveFacetAction);
+      }
+      if (actionCase_ == ActionOneofCase.PinAction) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PinAction);
       }
       if (condition_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
@@ -1554,6 +1605,12 @@ namespace Google.Cloud.Retail.V2 {
             RemoveFacetAction = new global::Google.Cloud.Retail.V2.Rule.Types.RemoveFacetAction();
           }
           RemoveFacetAction.MergeFrom(other.RemoveFacetAction);
+          break;
+        case ActionOneofCase.PinAction:
+          if (PinAction == null) {
+            PinAction = new global::Google.Cloud.Retail.V2.Rule.Types.PinAction();
+          }
+          PinAction.MergeFrom(other.PinAction);
           break;
       }
 
@@ -1669,6 +1726,15 @@ namespace Google.Cloud.Retail.V2 {
             RemoveFacetAction = subBuilder;
             break;
           }
+          case 114: {
+            global::Google.Cloud.Retail.V2.Rule.Types.PinAction subBuilder = new global::Google.Cloud.Retail.V2.Rule.Types.PinAction();
+            if (actionCase_ == ActionOneofCase.PinAction) {
+              subBuilder.MergeFrom(PinAction);
+            }
+            input.ReadMessage(subBuilder);
+            PinAction = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1779,6 +1845,15 @@ namespace Google.Cloud.Retail.V2 {
             }
             input.ReadMessage(subBuilder);
             RemoveFacetAction = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.Retail.V2.Rule.Types.PinAction subBuilder = new global::Google.Cloud.Retail.V2.Rule.Types.PinAction();
+            if (actionCase_ == ActionOneofCase.PinAction) {
+              subBuilder.MergeFrom(PinAction);
+            }
+            input.ReadMessage(subBuilder);
+            PinAction = subBuilder;
             break;
           }
         }
@@ -4292,6 +4367,227 @@ namespace Google.Cloud.Retail.V2 {
 
       }
 
+      /// <summary>
+      /// Pins one or more specified products to a specific position in the
+      /// results.
+      ///
+      /// * Rule Condition:
+      ///   Must specify non-empty
+      ///   [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms]
+      ///   (for search only) or
+      ///   [Condition.page_categories][google.cloud.retail.v2.Condition.page_categories]
+      ///   (for browse only), but can't specify both.
+      ///
+      /// * Action Input: mapping of `[pin_position, product_id]` pairs (pin position
+      /// uses 1-based indexing).
+      ///
+      /// * Action Result: Will pin products with matching ids to the position
+      /// specified in the final result order.
+      ///
+      /// Example: Suppose the query is `shoes`, the
+      /// [Condition.query_terms][google.cloud.retail.v2.Condition.query_terms] is
+      /// `shoes` and the pin_map has `{1, "pid1"}`, then product with `pid1` will be
+      /// pinned to the top position in the final results.
+      ///
+      /// If multiple PinActions are matched to a single request the actions will
+      /// be processed from most to least recently updated.
+      ///
+      /// Pins to positions larger than the max allowed page size of 120 are not
+      /// allowed.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PinAction : pb::IMessage<PinAction>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PinAction> _parser = new pb::MessageParser<PinAction>(() => new PinAction());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PinAction> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.Rule.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PinAction() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PinAction(PinAction other) : this() {
+          pinMap_ = other.pinMap_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PinAction Clone() {
+          return new PinAction(this);
+        }
+
+        /// <summary>Field number for the "pin_map" field.</summary>
+        public const int PinMapFieldNumber = 1;
+        private static readonly pbc::MapField<long, string>.Codec _map_pinMap_codec
+            = new pbc::MapField<long, string>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForString(18, ""), 10);
+        private readonly pbc::MapField<long, string> pinMap_ = new pbc::MapField<long, string>();
+        /// <summary>
+        /// Required. A map of positions to product_ids.
+        ///
+        /// Partial matches per action are allowed, if a certain position in the map
+        /// is already filled that `[position, product_id]` pair will be ignored
+        /// but the rest may still be applied. This case will only occur if multiple
+        /// pin actions are matched to a single request, as the map guarantees that
+        /// pin positions are unique within the same action.
+        ///
+        /// Duplicate product_ids are not permitted within a single pin map.
+        ///
+        /// The max size of this map is 120, equivalent to the max [request page
+        /// size](https://cloud.google.com/retail/docs/reference/rest/v2/projects.locations.catalogs.placements/search#request-body).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<long, string> PinMap {
+          get { return pinMap_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PinAction);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PinAction other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!PinMap.Equals(other.PinMap)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= PinMap.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          pinMap_.WriteTo(output, _map_pinMap_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          pinMap_.WriteTo(ref output, _map_pinMap_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += pinMap_.CalculateSize(_map_pinMap_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PinAction other) {
+          if (other == null) {
+            return;
+          }
+          pinMap_.MergeFrom(other.pinMap_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                pinMap_.AddEntriesFrom(input, _map_pinMap_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                pinMap_.AddEntriesFrom(ref input, _map_pinMap_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -4592,9 +4888,9 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The standard color families. Strongly recommended to use the following
     /// standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple",
-    /// "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and
-    /// "Mixed". Normally it is expected to have only 1 color family. May consider
-    /// using single "Mixed" instead of multiple values.
+    /// "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed".
+    /// Normally it is expected to have only 1 color family. May consider using
+    /// single "Mixed" instead of multiple values.
     ///
     /// A maximum of 5 values are allowed. Each value must be a UTF-8 encoded
     /// string with a length limit of 128 characters. Otherwise, an
@@ -4603,6 +4899,10 @@ namespace Google.Cloud.Retail.V2 {
     /// Google Merchant Center property
     /// [color](https://support.google.com/merchants/answer/6324487). Schema.org
     /// property [Product.color](https://schema.org/color).
+    ///
+    /// The colorFamilies field as a system attribute is not a required field but
+    /// strongly recommended to be specified. Google Search models treat this field
+    /// as more important than a custom product attribute when specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5402,9 +5702,10 @@ namespace Google.Cloud.Retail.V2 {
 
   /// <summary>
   /// [Product][google.cloud.retail.v2.Product] image. Recommendations AI and
-  /// Retail Search do not use product images to improve prediction and search
-  /// results. However, product images can be returned in results, and are shown in
-  /// prediction or search previews in the console.
+  /// Retail Search use product images to improve prediction and search results.
+  /// Product images can be returned in results, and are shown in prediction or
+  /// search previews in the console. Please try to provide correct product images
+  /// and avoid using images with size too small.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
@@ -7315,9 +7616,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int UserAgentFieldNumber = 3;
     private string userAgent_ = "";
     /// <summary>
-    /// User agent as included in the HTTP header. Required for getting
-    /// [SearchResponse.sponsored_results][google.cloud.retail.v2.SearchResponse.sponsored_results].
-    ///
+    /// User agent as included in the HTTP header.
     /// The field must be a UTF-8 encoded string with a length limit of 1,000
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
@@ -7621,7 +7920,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int PlaceIdFieldNumber = 1;
     private string placeId_ = "";
     /// <summary>
-    /// The place ID for the current set of inventory information.
+    /// Optional. The place ID for the current set of inventory information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7636,7 +7935,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int PriceInfoFieldNumber = 2;
     private global::Google.Cloud.Retail.V2.PriceInfo priceInfo_;
     /// <summary>
-    /// Product price and cost information.
+    /// Optional. Product price and cost information.
     ///
     /// Google Merchant Center property
     /// [price](https://support.google.com/merchants/answer/6324371).
@@ -7656,8 +7955,8 @@ namespace Google.Cloud.Retail.V2 {
         = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.CustomAttribute.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute> attributes_ = new pbc::MapField<string, global::Google.Cloud.Retail.V2.CustomAttribute>();
     /// <summary>
-    /// Additional local inventory attributes, for example, store name, promotion
-    /// tags, etc.
+    /// Optional. Additional local inventory attributes, for example, store name,
+    /// promotion tags, etc.
     ///
     /// This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
     /// error is returned:
@@ -7687,7 +7986,7 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> fulfillmentTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Input only. Supported fulfillment types. Valid fulfillment type values
+    /// Optional. Supported fulfillment types. Valid fulfillment type values
     /// include commonly used types (such as pickup in store and same day
     /// delivery), and custom types. Customers have to map custom types to their
     /// display names before rendering UI.
@@ -7907,6 +8206,415 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for pinning to be returned in the response.
+  /// This is used for distinguishing between applied vs dropped pins.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PinControlMetadata : pb::IMessage<PinControlMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PinControlMetadata> _parser = new pb::MessageParser<PinControlMetadata>(() => new PinControlMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PinControlMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Retail.V2.CommonReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PinControlMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PinControlMetadata(PinControlMetadata other) : this() {
+      allMatchedPins_ = other.allMatchedPins_.Clone();
+      droppedPins_ = other.droppedPins_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PinControlMetadata Clone() {
+      return new PinControlMetadata(this);
+    }
+
+    /// <summary>Field number for the "all_matched_pins" field.</summary>
+    public const int AllMatchedPinsFieldNumber = 1;
+    private static readonly pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins>.Codec _map_allMatchedPins_codec
+        = new pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins.Parser), 10);
+    private readonly pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins> allMatchedPins_ = new pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins>();
+    /// <summary>
+    /// Map of all matched pins, keyed by pin position.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins> AllMatchedPins {
+      get { return allMatchedPins_; }
+    }
+
+    /// <summary>Field number for the "dropped_pins" field.</summary>
+    public const int DroppedPinsFieldNumber = 2;
+    private static readonly pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins>.Codec _map_droppedPins_codec
+        = new pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins.Parser), 18);
+    private readonly pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins> droppedPins_ = new pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins>();
+    /// <summary>
+    /// Map of pins that were dropped due to overlap with other matching pins,
+    /// keyed by pin position.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<long, global::Google.Cloud.Retail.V2.PinControlMetadata.Types.ProductPins> DroppedPins {
+      get { return droppedPins_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PinControlMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PinControlMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!AllMatchedPins.Equals(other.AllMatchedPins)) return false;
+      if (!DroppedPins.Equals(other.DroppedPins)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= AllMatchedPins.GetHashCode();
+      hash ^= DroppedPins.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      allMatchedPins_.WriteTo(output, _map_allMatchedPins_codec);
+      droppedPins_.WriteTo(output, _map_droppedPins_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      allMatchedPins_.WriteTo(ref output, _map_allMatchedPins_codec);
+      droppedPins_.WriteTo(ref output, _map_droppedPins_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += allMatchedPins_.CalculateSize(_map_allMatchedPins_codec);
+      size += droppedPins_.CalculateSize(_map_droppedPins_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PinControlMetadata other) {
+      if (other == null) {
+        return;
+      }
+      allMatchedPins_.MergeFrom(other.allMatchedPins_);
+      droppedPins_.MergeFrom(other.droppedPins_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            allMatchedPins_.AddEntriesFrom(input, _map_allMatchedPins_codec);
+            break;
+          }
+          case 18: {
+            droppedPins_.AddEntriesFrom(input, _map_droppedPins_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            allMatchedPins_.AddEntriesFrom(ref input, _map_allMatchedPins_codec);
+            break;
+          }
+          case 18: {
+            droppedPins_.AddEntriesFrom(ref input, _map_droppedPins_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PinControlMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// List of product ids which have associated pins.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ProductPins : pb::IMessage<ProductPins>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ProductPins> _parser = new pb::MessageParser<ProductPins>(() => new ProductPins());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ProductPins> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Retail.V2.PinControlMetadata.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProductPins() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProductPins(ProductPins other) : this() {
+          productId_ = other.productId_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProductPins Clone() {
+          return new ProductPins(this);
+        }
+
+        /// <summary>Field number for the "product_id" field.</summary>
+        public const int ProductIdFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_productId_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> productId_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// List of product ids which have associated pins.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ProductId {
+          get { return productId_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ProductPins);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ProductPins other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!productId_.Equals(other.productId_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= productId_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          productId_.WriteTo(output, _repeated_productId_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          productId_.WriteTo(ref output, _repeated_productId_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += productId_.CalculateSize(_repeated_productId_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ProductPins other) {
+          if (other == null) {
+            return;
+          }
+          productId_.Add(other.productId_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                productId_.AddEntriesFrom(input, _repeated_productId_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                productId_.AddEntriesFrom(ref input, _repeated_productId_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

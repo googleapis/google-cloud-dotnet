@@ -62,6 +62,9 @@ namespace GoogleCSharpSnippets
                 Entity = "",
                 ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
                 TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
+                LanguageCode = "",
+                RegionCode = "",
+                PlaceId = "",
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);

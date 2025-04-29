@@ -441,9 +441,6 @@ namespace Google.Cloud.Retail.V2 {
     public const int PartitionDateFieldNumber = 6;
     /// <summary>
     /// BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
-    ///
-    /// Only supported in
-    /// [ImportProductsRequest][google.cloud.retail.v2.ImportProductsRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
