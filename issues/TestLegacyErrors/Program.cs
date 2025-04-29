@@ -1,6 +1,7 @@
 ﻿using Google.Cloud.Compute.V1;
 using Grpc.Core;
 using lro = Google.LongRunning;
+using Google.Api.Gax.Grpc;
 
 // Run program `dotnet run project-id={your-project-id} zone={your-zone} disk-name={your-disk-name}`
 namespace test_legacy_errors
@@ -86,22 +87,12 @@ namespace test_legacy_errors
             catch (RpcException e)
             {
                 Console.WriteLine("Got Exception!!");
-                Console.WriteLine($"Status(StatusCode = {e.StatusCode}, Detail =  {e.Message}");
-                Console.WriteLine($"Status = {e.Status}");
+                Console.WriteLine($"Rpc Status: {e.GetRpcStatus()}");
+                Console.WriteLine($"Error Info: {e.GetErrorInfo()}");
+                // GetAllStatusDetails() should be available Google.Api.Gax v4.11.0 onwards
+                // Console.WriteLine($"Error Details: {e.GetAllStatusDetails()}");
 
-                Console.WriteLine("Printing Metadata of exception...");
-                foreach (var entry in e.Trailers)
-                {
-                    string key = entry.Key;
-                    var value = entry.IsBinary ? "" : entry.Value;
-                    if (entry.IsBinary)
-                    {
-                        // Encoding ref: https://grpc.github.io/grpc/csharp/api/Grpc.Core.Metadata.Entry.html#Grpc_Core_Metadata_Entry_ValueBytes
-                        value = System.Text.Encoding.ASCII.GetString(entry.ValueBytes);
-                    }
-
-                    Console.WriteLine($"Key: {key} , Value: {value}");
-                }
+                Console.WriteLine($"Inner Exception: {e.InnerException}");
             }
         }
 
