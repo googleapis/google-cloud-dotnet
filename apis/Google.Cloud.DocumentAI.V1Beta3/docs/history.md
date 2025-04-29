@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta26, released 2025-04-29
+
+### New features
+
+- Added config options to enable table annotation and image extraction ([commit 59ee2dd](https://github.com/googleapis/google-cloud-dotnet/commit/59ee2ddef12ebb1f2d866a578feee1cb6e2c0542))
+
 ## Version 2.0.0-beta25, released 2025-04-28
 
 ### New features
