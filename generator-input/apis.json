@@ -6521,6 +6521,26 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Merchant",
+      "productUrl": "https://developers.google.com/merchant/api",
+      "description": "Recommended Google client library to access the Merchant Issue Resolution API (v1beta).",
+      "tags": [
+        "shopping",
+        "issues"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/shopping/merchant/issueresolution/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "merchantapi",
+      "serviceConfigFile": "merchantapi_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Shopping.Merchant.Lfp.V1Beta",
       "version": "1.0.0-beta03",
       "type": "grpc",
