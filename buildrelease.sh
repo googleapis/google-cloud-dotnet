@@ -30,6 +30,11 @@ cd $(dirname $0)
 # but it makes debugging work more reliably for PDBs in packages.
 export DeterministicSourcePaths=true
 
+# Make sure that SourceLink uses the GitHub repo, even if that's not where
+# our origin remote points at.
+git remote add github https://github.com/googleapis/google-cloud-dotnet.git
+export GitRepositoryRemoteName=github
+
 # Turn the multi-line output of git tag into space-separated list of projects
 projects=$(git tag --points-at HEAD | sed 's/-.*//g' | awk -vORS=\  '{print $1}' | sed 's/ $//')
 
@@ -74,6 +79,10 @@ fi
 
 # TODO: Make builddocs.sh cope with being run from any directory.
 (cd docs && ./builddocs.sh $projects)
+
+# Remove the github remote so that if there are multiple iterations
+# against the same clone, the "git remote add" earlier will work.
+git remote remove github
 
 echo "Release build and docs complete for the following projects:"
 for project in $projects
