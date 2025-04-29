@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta26, released 2025-04-29
+
+### Bug fixes
+
+- **BREAKING CHANGE** Removed support for session resource paths that do not include reasoning engine ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+
+### New features
+
+- Adding ThinkingConfig to v1beta1 client library ([commit fa3ad70](https://github.com/googleapis/google-cloud-dotnet/commit/fa3ad706c7956fa7f1c2fe1ebb512876d1210c15))
+- Add Model Garden EULA(End User License Agreement) related APIs ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+- Model Registry Model Checkpoint API ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+- Deprecated EventActions.transfer_to_agent and replaced with EventActions.transfer_agent ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+
 ## Version 1.0.0-beta25, released 2025-04-14
 
 ### New features
