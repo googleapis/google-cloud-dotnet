@@ -14,7 +14,7 @@ declare -r DOCS_OUTPUT_DIR=$2
 
 if [[ -z "$5" ]]
 then
-  declare -r SERVICE_ACCOUNT_JSON=""
+  declare -r SERVICE_ACCOUNT_JSON=adc
   declare -r GOOGLEAPIS_DEV_STAGING_BUCKET=$3
   declare -r DEVSITE_STAGING_BUCKET=$4
 else

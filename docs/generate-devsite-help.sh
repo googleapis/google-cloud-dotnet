@@ -15,7 +15,7 @@ if [[ "$2" != "" ]]
 then
   declare -r SERVICE_ACCOUNT_JSON=$2
 else
-  declare -r SERVICE_ACCOUNT_JSON=""
+  declare -r SERVICE_ACCOUNT_JSON=adc
 fi
 
 declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
