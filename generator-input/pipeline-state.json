@@ -1929,7 +1929,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-24T16:28:24Z",
-            "lastGeneratedCommit": "9eee08a64ae74996275e914db69dec1e022bdce7",
+            "lastGeneratedCommit": "a80b45b4fc1fa94a18efff40b91e1a0f75ed6d5f",
             "apiPaths": [
                 "google/cloud/managedkafka/v1"
             ],
