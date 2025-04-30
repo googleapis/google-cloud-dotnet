@@ -3460,6 +3460,7 @@ namespace GoogleCSharpSnippets
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 TuningValidationAssessmentConfig = new AssessDataRequest.Types.TuningValidationAssessmentConfig(),
                 GeminiTemplateConfig = new GeminiTemplateConfig(),
+                GeminiRequestReadConfig = new GeminiRequestReadConfig(),
             };
             // Make the request
             Operation<AssessDataResponse, AssessDataOperationMetadata> response = datasetServiceClient.AssessData(request);
@@ -3495,6 +3496,7 @@ namespace GoogleCSharpSnippets
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 TuningValidationAssessmentConfig = new AssessDataRequest.Types.TuningValidationAssessmentConfig(),
                 GeminiTemplateConfig = new GeminiTemplateConfig(),
+                GeminiRequestReadConfig = new GeminiRequestReadConfig(),
             };
             // Make the request
             Operation<AssessDataResponse, AssessDataOperationMetadata> response = await datasetServiceClient.AssessDataAsync(request);
@@ -3528,6 +3530,7 @@ namespace GoogleCSharpSnippets
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 GeminiTemplateConfig = new GeminiTemplateConfig(),
+                GeminiRequestReadConfig = new GeminiRequestReadConfig(),
             };
             // Make the request
             Operation<AssembleDataResponse, AssembleDataOperationMetadata> response = datasetServiceClient.AssembleData(request);
@@ -3562,6 +3565,7 @@ namespace GoogleCSharpSnippets
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 GeminiTemplateConfig = new GeminiTemplateConfig(),
+                GeminiRequestReadConfig = new GeminiRequestReadConfig(),
             };
             // Make the request
             Operation<AssembleDataResponse, AssembleDataOperationMetadata> response = await datasetServiceClient.AssembleDataAsync(request);
