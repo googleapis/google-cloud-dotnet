@@ -202,19 +202,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZXZhbE1ldGFkYXRhEjIKJWdvb2dsZV9zZWFyY2hfZHluYW1pY19yZXRyaWV2",
             "YWxfc2NvcmUYAiABKAJCA+BBASJmChJNb2RhbGl0eVRva2VuQ291bnQSOwoI",
             "bW9kYWxpdHkYASABKA4yKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLk1vZGFsaXR5EhMKC3Rva2VuX2NvdW50GAIgASgFKtcBCgxIYXJtQ2F0",
+            "dGExLk1vZGFsaXR5EhMKC3Rva2VuX2NvdW50GAIgASgFKtsBCgxIYXJtQ2F0",
             "ZWdvcnkSHQoZSEFSTV9DQVRFR09SWV9VTlNQRUNJRklFRBAAEh0KGUhBUk1f",
             "Q0FURUdPUllfSEFURV9TUEVFQ0gQARIjCh9IQVJNX0NBVEVHT1JZX0RBTkdF",
             "Uk9VU19DT05URU5UEAISHAoYSEFSTV9DQVRFR09SWV9IQVJBU1NNRU5UEAMS",
-            "IwofSEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVBAEEiEKHUhBUk1f",
-            "Q0FURUdPUllfQ0lWSUNfSU5URUdSSVRZEAUqXQoITW9kYWxpdHkSGAoUTU9E",
-            "QUxJVFlfVU5TUEVDSUZJRUQQABIICgRURVhUEAESCQoFSU1BR0UQAhIJCgVW",
-            "SURFTxADEgkKBUFVRElPEAQSDAoIRE9DVU1FTlQQBULjAQojY29tLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDENvbnRlbnRQcm90b1ABWkNj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBs",
-            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
-            "cm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHq",
-            "AiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "IwofSEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVBAEEiUKHUhBUk1f",
+            "Q0FURUdPUllfQ0lWSUNfSU5URUdSSVRZEAUaAggBKl0KCE1vZGFsaXR5EhgK",
+            "FE1PREFMSVRZX1VOU1BFQ0lGSUVEEAASCAoEVEVYVBABEgkKBUlNQUdFEAIS",
+            "CQoFVklERU8QAxIJCgVBVURJTxAEEgwKCERPQ1VNRU5UEAVC4wEKI2NvbS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQgxDb250ZW50UHJvdG9Q",
+            "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEv",
+            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJl",
+            "dGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1Beta1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -276,8 +277,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// </summary>
     [pbr::OriginalName("HARM_CATEGORY_SEXUALLY_EXPLICIT")] SexuallyExplicit = 4,
     /// <summary>
+    /// Deprecated: Election filter is not longer supported.
     /// The harm category is civic integrity.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("HARM_CATEGORY_CIVIC_INTEGRITY")] CivicIntegrity = 5,
   }
 
