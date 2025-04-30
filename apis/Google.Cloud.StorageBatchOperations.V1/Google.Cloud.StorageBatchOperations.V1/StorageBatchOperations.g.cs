@@ -161,7 +161,7 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Format: projects/{project_id}/locations/{location_id} .
+    /// Required. Format: projects/{project_id}/locations/global.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -768,7 +768,7 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. `name` of the job to retrieve.
-    /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+    /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1298,7 +1298,7 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The `name` of the job to cancel.
-    /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+    /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1539,7 +1539,7 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The `name` of the job to delete.
-    /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+    /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1940,7 +1940,7 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     private string operation_ = "";
     /// <summary>
     /// Output only. The unique operation resource name.
-    /// Format: projects/{project}/locations/{location}/operations/{operation}.
+    /// Format: projects/{project}/locations/global/operations/{operation}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
