@@ -26,8 +26,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9vcGVuYXBpLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byLT",
-            "BgoNT3BlbkFwaVNjaGVtYRIzCgR0eXBlGAEgASgOMiAuZ29vZ2xlLmNsb3Vk",
+            "ZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byKF",
+            "CAoNT3BlbkFwaVNjaGVtYRIzCgR0eXBlGAEgASgOMiAuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuVHlwZUID4EEBEhMKBmZvcm1hdBgHIAEoCUID4EEB",
             "EhIKBXRpdGxlGBggASgJQgPgQQESGAoLZGVzY3JpcHRpb24YCCABKAlCA+BB",
             "ARIVCghudWxsYWJsZRgGIAEoCEID4EEBEiwKB2RlZmF1bHQYFyABKAsyFi5n",
@@ -43,20 +43,24 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZW5ndGgYEiABKANCA+BBARIXCgptYXhfbGVuZ3RoGBMgASgDQgPgQQESFAoH",
             "cGF0dGVybhgUIAEoCUID4EEBEiwKB2V4YW1wbGUYBCABKAsyFi5nb29nbGUu",
             "cHJvdG9idWYuVmFsdWVCA+BBARI+CgZhbnlfb2YYCyADKAsyKS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5PcGVuQXBpU2NoZW1hQgPgQQEaXAoPUHJv",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5PcGVuQXBpU2NoZW1hQgPgQQESEAoDcmVm",
+            "GBsgASgJQgPgQQESRgoEZGVmcxgcIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLk9wZW5BcGlTY2hlbWEuRGVmc0VudHJ5QgPgQQEaXAoPUHJv",
             "cGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRI4CgV2YWx1ZRgCIAEoCzIpLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk9wZW5BcGlTY2hlbWE6AjgBKmUK",
-            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNUUklORxABEgoKBk5V",
-            "TUJFUhACEgsKB0lOVEVHRVIQAxILCgdCT09MRUFOEAQSCQoFQVJSQVkQBRIK",
-            "CgZPQkpFQ1QQBkLKAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "QgxPcGVuQXBpUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRm",
-            "b3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUu",
-            "Q2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3Jt",
-            "XFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk9wZW5BcGlTY2hlbWE6AjgBGlYK",
+            "CURlZnNFbnRyeRILCgNrZXkYASABKAkSOAoFdmFsdWUYAiABKAsyKS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5PcGVuQXBpU2NoZW1hOgI4ASplCgRU",
+            "eXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZTVFJJTkcQARIKCgZOVU1C",
+            "RVIQAhILCgdJTlRFR0VSEAMSCwoHQk9PTEVBThAEEgkKBUFSUkFZEAUSCgoG",
+            "T0JKRUNUEAZCygEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIM",
+            "T3BlbkFwaVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9y",
+            "bS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNs",
+            "b3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
+            "MeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.Type), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "PropertyOrdering", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example", "AnyOf" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "PropertyOrdering", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example", "AnyOf", "Ref", "Defs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -164,6 +168,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       pattern_ = other.pattern_;
       example_ = other.example_ != null ? other.example_.Clone() : null;
       anyOf_ = other.anyOf_.Clone();
+      ref_ = other.ref_;
+      defs_ = other.defs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -516,6 +522,56 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return anyOf_; }
     }
 
+    /// <summary>Field number for the "ref" field.</summary>
+    public const int RefFieldNumber = 27;
+    private string ref_ = "";
+    /// <summary>
+    /// Optional. Allows indirect references between schema nodes. The value should
+    /// be a valid reference to a child of the root `defs`.
+    ///
+    /// For example, the following schema defines a reference to a schema node
+    /// named "Pet":
+    ///
+    /// type: object
+    /// properties:
+    ///   pet:
+    ///     ref: #/defs/Pet
+    /// defs:
+    ///   Pet:
+    ///     type: object
+    ///     properties:
+    ///       name:
+    ///         type: string
+    ///
+    /// The value of the "pet" property is a reference to the schema node
+    /// named "Pet".
+    /// See details in
+    /// https://json-schema.org/understanding-json-schema/structuring
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Ref {
+      get { return ref_; }
+      set {
+        ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "defs" field.</summary>
+    public const int DefsFieldNumber = 28;
+    private static readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema>.Codec _map_defs_codec
+        = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.OpenApiSchema.Parser), 226);
+    private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema> defs_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema>();
+    /// <summary>
+    /// Optional. A map of definitions for use by `ref`
+    /// Only allowed at the root of the schema.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema> Defs {
+      get { return defs_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -553,6 +609,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Pattern != other.Pattern) return false;
       if (!object.Equals(Example, other.Example)) return false;
       if(!anyOf_.Equals(other.anyOf_)) return false;
+      if (Ref != other.Ref) return false;
+      if (!Defs.Equals(other.Defs)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -582,6 +640,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Pattern.Length != 0) hash ^= Pattern.GetHashCode();
       if (example_ != null) hash ^= Example.GetHashCode();
       hash ^= anyOf_.GetHashCode();
+      if (Ref.Length != 0) hash ^= Ref.GetHashCode();
+      hash ^= Defs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -673,6 +733,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(Title);
       }
       propertyOrdering_.WriteTo(output, _repeated_propertyOrdering_codec);
+      if (Ref.Length != 0) {
+        output.WriteRawTag(218, 1);
+        output.WriteString(Ref);
+      }
+      defs_.WriteTo(output, _map_defs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -756,6 +821,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(Title);
       }
       propertyOrdering_.WriteTo(ref output, _repeated_propertyOrdering_codec);
+      if (Ref.Length != 0) {
+        output.WriteRawTag(218, 1);
+        output.WriteString(Ref);
+      }
+      defs_.WriteTo(ref output, _map_defs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -822,6 +892,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Example);
       }
       size += anyOf_.CalculateSize(_repeated_anyOf_codec);
+      if (Ref.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Ref);
+      }
+      size += defs_.CalculateSize(_map_defs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -899,6 +973,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         Example.MergeFrom(other.Example);
       }
       anyOf_.Add(other.anyOf_);
+      if (other.Ref.Length != 0) {
+        Ref = other.Ref;
+      }
+      defs_.MergeFrom(other.defs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1011,6 +1089,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             propertyOrdering_.AddEntriesFrom(input, _repeated_propertyOrdering_codec);
             break;
           }
+          case 218: {
+            Ref = input.ReadString();
+            break;
+          }
+          case 226: {
+            defs_.AddEntriesFrom(input, _map_defs_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1121,6 +1207,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 202: {
             propertyOrdering_.AddEntriesFrom(ref input, _repeated_propertyOrdering_codec);
+            break;
+          }
+          case 218: {
+            Ref = input.ReadString();
+            break;
+          }
+          case 226: {
+            defs_.AddEntriesFrom(ref input, _map_defs_codec);
             break;
           }
         }

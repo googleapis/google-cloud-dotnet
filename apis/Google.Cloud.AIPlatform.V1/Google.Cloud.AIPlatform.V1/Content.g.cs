@@ -169,19 +169,19 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YXRhEjIKJWdvb2dsZV9zZWFyY2hfZHluYW1pY19yZXRyaWV2YWxfc2NvcmUY",
             "AiABKAJCA+BBASJhChJNb2RhbGl0eVRva2VuQ291bnQSNgoIbW9kYWxpdHkY",
             "ASABKA4yJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RhbGl0eRIT",
-            "Cgt0b2tlbl9jb3VudBgCIAEoBSrXAQoMSGFybUNhdGVnb3J5Eh0KGUhBUk1f",
+            "Cgt0b2tlbl9jb3VudBgCIAEoBSrbAQoMSGFybUNhdGVnb3J5Eh0KGUhBUk1f",
             "Q0FURUdPUllfVU5TUEVDSUZJRUQQABIdChlIQVJNX0NBVEVHT1JZX0hBVEVf",
             "U1BFRUNIEAESIwofSEFSTV9DQVRFR09SWV9EQU5HRVJPVVNfQ09OVEVOVBAC",
             "EhwKGEhBUk1fQ0FURUdPUllfSEFSQVNTTUVOVBADEiMKH0hBUk1fQ0FURUdP",
-            "UllfU0VYVUFMTFlfRVhQTElDSVQQBBIhCh1IQVJNX0NBVEVHT1JZX0NJVklD",
-            "X0lOVEVHUklUWRAFKl0KCE1vZGFsaXR5EhgKFE1PREFMSVRZX1VOU1BFQ0lG",
-            "SUVEEAASCAoEVEVYVBABEgkKBUlNQUdFEAISCQoFVklERU8QAxIJCgVBVURJ",
-            "TxAEEgwKCERPQ1VNRU5UEAVCygEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MUIMQ29udGVudFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "YWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIa",
-            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
-            "cm90bzM="));
+            "UllfU0VYVUFMTFlfRVhQTElDSVQQBBIlCh1IQVJNX0NBVEVHT1JZX0NJVklD",
+            "X0lOVEVHUklUWRAFGgIIASpdCghNb2RhbGl0eRIYChRNT0RBTElUWV9VTlNQ",
+            "RUNJRklFRBAAEggKBFRFWFQQARIJCgVJTUFHRRACEgkKBVZJREVPEAMSCQoF",
+            "QVVESU8QBBIMCghET0NVTUVOVBAFQsoBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCDENvbnRlbnRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
+            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
+            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
+            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -239,8 +239,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// </summary>
     [pbr::OriginalName("HARM_CATEGORY_SEXUALLY_EXPLICIT")] SexuallyExplicit = 4,
     /// <summary>
+    /// Deprecated: Election filter is not longer supported.
     /// The harm category is civic integrity.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("HARM_CATEGORY_CIVIC_INTEGRITY")] CivicIntegrity = 5,
   }
 
