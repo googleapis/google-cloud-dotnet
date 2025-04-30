@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.shopping.merchant.issueresolution.v1beta",
+  "libraryPackage": "Google.Shopping.Merchant.IssueResolution.V1Beta",
+  "services": {
+    "IssueResolutionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "IssueResolutionServiceClient",
+          "rpcs": {
+            "RenderAccountIssues": {
+              "methods": [
+                "RenderAccountIssues",
+                "RenderAccountIssuesAsync"
+              ]
+            },
+            "RenderProductIssues": {
+              "methods": [
+                "RenderProductIssues",
+                "RenderProductIssuesAsync"
+              ]
+            },
+            "TriggerAction": {
+              "methods": [
+                "TriggerAction",
+                "TriggerActionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

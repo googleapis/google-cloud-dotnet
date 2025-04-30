@@ -295,6 +295,7 @@
     "apis/Google.Shopping.Merchant.Conversions.V1Beta/Google.Shopping.Merchant.Conversions.V1Beta/**",
     "apis/Google.Shopping.Merchant.DataSources.V1Beta/Google.Shopping.Merchant.DataSources.V1Beta/**",
     "apis/Google.Shopping.Merchant.Inventories.V1Beta/Google.Shopping.Merchant.Inventories.V1Beta/**",
+    "apis/Google.Shopping.Merchant.IssueResolution.V1Beta/Google.Shopping.Merchant.IssueResolution.V1Beta/**",
     "apis/Google.Shopping.Merchant.Lfp.V1Beta/Google.Shopping.Merchant.Lfp.V1Beta/**",
     "apis/Google.Shopping.Merchant.Notifications.V1Beta/Google.Shopping.Merchant.Notifications.V1Beta/**",
     "apis/Google.Shopping.Merchant.Products.V1Beta/Google.Shopping.Merchant.Products.V1Beta/**",
