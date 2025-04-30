@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.27.0, released 2025-04-30
+
+### New features
+
+- allow customers to set encryption_spec for context caching
+- new fields `ref` and `defs` are added to message `.google.cloud.aiplatform.v1.Schema`
+
+### Documentation improvements
+
+- Deprecate election category HARM_CATEGORY_CIVIC_INTEGRITY
+
 ## Version 3.26.0, released 2025-04-29
 
 ### New features
