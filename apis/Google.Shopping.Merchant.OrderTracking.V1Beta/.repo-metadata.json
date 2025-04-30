@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Shopping.Merchant.OrderTracking.V1Beta",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Shopping.Merchant.OrderTracking.V1Beta/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "merchantapi"
+}
