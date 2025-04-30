@@ -255,10 +255,10 @@
         },
         {
             "id": "Google.Cloud.AIPlatform.V1Beta1",
-            "currentVersion": "1.0.0-beta25",
+            "currentVersion": "1.0.0-beta26",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-14T17:22:21Z",
+            "releaseTimestamp": "2025-04-29T06:42:25Z",
             "lastGeneratedCommit": "e3b25afbe0dc8581a27a7a540de6795b7d6ae244",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
@@ -269,10 +269,10 @@
         },
         {
             "id": "Google.Cloud.AIPlatform.V1",
-            "currentVersion": "3.25.0",
+            "currentVersion": "3.26.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-31T16:10:46Z",
+            "releaseTimestamp": "2025-04-29T08:30:31Z",
             "lastGeneratedCommit": "6670755f1f03c6a5a2486806af97195216c18965",
             "apiPaths": [
                 "google/cloud/aiplatform/v1"
@@ -409,10 +409,10 @@
         },
         {
             "id": "Google.Cloud.Asset.V1",
-            "currentVersion": "3.12.0",
+            "currentVersion": "3.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T18:02:21Z",
+            "releaseTimestamp": "2025-04-28T17:36:29Z",
             "lastGeneratedCommit": "261895f1d8ced9564f4cf872f7f4f9a1f4c615d3",
             "apiPaths": [
                 "google/cloud/asset/v1"
@@ -741,10 +741,10 @@
         },
         {
             "id": "Google.Cloud.Bigtable.Admin.V2",
-            "currentVersion": "3.25.0",
+            "currentVersion": "3.26.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-17T18:54:21Z",
+            "releaseTimestamp": "2025-04-28T17:42:24Z",
             "lastGeneratedCommit": "98297c5f6e3404e9f07040cd8d711d0e2ab1d3e7",
             "apiPaths": [
                 "google/bigtable/admin/v2"
@@ -1391,10 +1391,9 @@
         },
         {
             "id": "Google.Cloud.DocumentAI.V1Beta3",
-            "currentVersion": "2.0.0-beta24",
+            "currentVersion": "2.0.0-beta26",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-24T16:22:32Z",
             "lastGeneratedCommit": "8dab79f366047de6a32cfc45f80123089138554e",
             "apiPaths": [
                 "google/cloud/documentai/v1beta3"
@@ -2987,10 +2986,10 @@
         },
         {
             "id": "Google.Cloud.Storage.V1",
-            "currentVersion": "4.12.0",
+            "currentVersion": "4.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-24T08:56:31Z",
+            "releaseTimestamp": "2025-04-25T08:34:24Z",
             "lastGeneratedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "sourcePaths": [
                 "apis/Google.Cloud.Storage.V1/Google.Cloud.Storage.V1"
