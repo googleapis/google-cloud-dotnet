@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta27, released 2025-04-30
+
+### New features
+
+- add gemini_request_read_config field to AssembleDataRequest and AssessDataRequest in aiplatform v1beta
+- allow customers to set encryption_spec for context caching
+- new fields `ref` and `defs` are added to message `.google.cloud.aiplatform.v1beta1.Schema`
+
+### Documentation improvements
+
+- fix comment for field_mapping field in GeminiTemplateConfig
+- Deprecate election category HARM_CATEGORY_CIVIC_INTEGRITY
+
 ## Version 1.0.0-beta26, released 2025-04-29
 
 ### Bug fixes
