@@ -187,7 +187,8 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta {
         = pb::FieldCodec.ForMessage(26, global::Google.Shopping.Merchant.Lfp.V1Beta.LfpMerchantState.Types.LfpStoreState.Parser);
     private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Lfp.V1Beta.LfpMerchantState.Types.LfpStoreState> storeStates_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Lfp.V1Beta.LfpMerchantState.Types.LfpStoreState>();
     /// <summary>
-    /// Output only. The state per store from the specified merchant.
+    /// Output only. The state per store from the specified merchant. The field
+    /// will be absent if the merchant has no stores submitted through LFP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,7 +200,8 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta {
     public const int InventoryStatsFieldNumber = 4;
     private global::Google.Shopping.Merchant.Lfp.V1Beta.LfpMerchantState.Types.InventoryStats inventoryStats_;
     /// <summary>
-    /// The inventory statistics for the merchant.
+    /// The inventory statistics for the merchant. The field will be absent if the
+    /// merchant has no inventory submitted through LFP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
