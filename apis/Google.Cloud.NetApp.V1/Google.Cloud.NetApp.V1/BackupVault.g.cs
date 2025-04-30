@@ -28,44 +28,54 @@ namespace Google.Cloud.NetApp.V1 {
             "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xl",
             "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8ihAQKC0JhY2t1cFZhdWx0EhEKBG5hbWUYASABKAlC",
+            "aW1lc3RhbXAucHJvdG8iyQcKC0JhY2t1cFZhdWx0EhEKBG5hbWUYASABKAlC",
             "A+BBCBI9CgVzdGF0ZRgCIAEoDjIpLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEu",
             "QmFja3VwVmF1bHQuU3RhdGVCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgtkZXNjcmlwdGlv",
             "bhgEIAEoCRI/CgZsYWJlbHMYBSADKAsyLy5nb29nbGUuY2xvdWQubmV0YXBw",
-            "LnYxLkJhY2t1cFZhdWx0LkxhYmVsc0VudHJ5Gi0KC0xhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXgoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISDAoI",
-            "REVMRVRJTkcQAxIJCgVFUlJPUhAEEgwKCFVQREFUSU5HEAU6hwHqQYMBCiFu",
-            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSQ3Byb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBWYXVsdHMve2Jh",
-            "Y2t1cF92YXVsdH0qDGJhY2t1cFZhdWx0czILYmFja3VwVmF1bHQiUAoVR2V0",
-            "QmFja3VwVmF1bHRSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0Ip0BChdMaXN0QmFja3Vw",
-            "VmF1bHRzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0YXBw",
-            "Lmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0EhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJEg4KBmZp",
-            "bHRlchgFIAEoCSKEAQoYTGlzdEJhY2t1cFZhdWx0c1Jlc3BvbnNlEjoKDWJh",
-            "Y2t1cF92YXVsdHMYASADKAsyIy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJh",
-            "Y2t1cFZhdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNo",
-            "YWJsZRgDIAMoCSKzAQoYQ3JlYXRlQmFja3VwVmF1bHRSZXF1ZXN0EjkKBnBh",
-            "cmVudBgBIAEoCUIp4EEC+kEjEiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFj",
-            "a3VwVmF1bHQSHAoPYmFja3VwX3ZhdWx0X2lkGAIgASgJQgPgQQISPgoMYmFj",
-            "a3VwX3ZhdWx0GAMgASgLMiMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5CYWNr",
-            "dXBWYXVsdEID4EECIlMKGERlbGV0ZUJhY2t1cFZhdWx0UmVxdWVzdBI3CgRu",
-            "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNr",
-            "dXBWYXVsdCKQAQoYVXBkYXRlQmFja3VwVmF1bHRSZXF1ZXN0EjQKC3VwZGF0",
-            "ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEC",
-            "Ej4KDGJhY2t1cF92YXVsdBgCIAEoCzIjLmdvb2dsZS5jbG91ZC5uZXRhcHAu",
-            "djEuQmFja3VwVmF1bHRCA+BBAkKyAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRh",
-            "cHAudjFCEEJhY2t1cFZhdWx0UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xv",
-            "dWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2ds",
-            "ZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "LnYxLkJhY2t1cFZhdWx0LkxhYmVsc0VudHJ5ElMKEWJhY2t1cF92YXVsdF90",
+            "eXBlGAYgASgOMjMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5CYWNrdXBWYXVs",
+            "dC5CYWNrdXBWYXVsdFR5cGVCA+BBARJACg1zb3VyY2VfcmVnaW9uGAcgASgJ",
+            "QingQQP6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJA",
+            "Cg1iYWNrdXBfcmVnaW9uGAggASgJQingQQH6QSMKIWxvY2F0aW9ucy5nb29n",
+            "bGVhcGlzLmNvbS9Mb2NhdGlvbhJGChNzb3VyY2VfYmFja3VwX3ZhdWx0GAkg",
+            "ASgJQingQQP6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVs",
+            "dBJLChhkZXN0aW5hdGlvbl9iYWNrdXBfdmF1bHQYCiABKAlCKeBBA/pBIwoh",
+            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0Gi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXgoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZ",
+            "EAISDAoIREVMRVRJTkcQAxIJCgVFUlJPUhAEEgwKCFVQREFUSU5HEAUiVQoP",
+            "QmFja3VwVmF1bHRUeXBlEiEKHUJBQ0tVUF9WQVVMVF9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJSU5fUkVHSU9OEAESEAoMQ1JPU1NfUkVHSU9OEAI6hwHqQYMB",
+            "CiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSQ3Byb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBWYXVsdHMv",
+            "e2JhY2t1cF92YXVsdH0qDGJhY2t1cFZhdWx0czILYmFja3VwVmF1bHQiUAoV",
+            "R2V0QmFja3VwVmF1bHRSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwoh",
+            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0Ip0BChdMaXN0QmFj",
+            "a3VwVmF1bHRzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0",
+            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0EhEKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJEg4K",
+            "BmZpbHRlchgFIAEoCSKEAQoYTGlzdEJhY2t1cFZhdWx0c1Jlc3BvbnNlEjoK",
+            "DWJhY2t1cF92YXVsdHMYASADKAsyIy5nb29nbGUuY2xvdWQubmV0YXBwLnYx",
+            "LkJhY2t1cFZhdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJl",
+            "YWNoYWJsZRgDIAMoCSKzAQoYQ3JlYXRlQmFja3VwVmF1bHRSZXF1ZXN0EjkK",
+            "BnBhcmVudBgBIAEoCUIp4EEC+kEjEiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20v",
+            "QmFja3VwVmF1bHQSHAoPYmFja3VwX3ZhdWx0X2lkGAIgASgJQgPgQQISPgoM",
+            "YmFja3VwX3ZhdWx0GAMgASgLMiMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5C",
+            "YWNrdXBWYXVsdEID4EECIlMKGERlbGV0ZUJhY2t1cFZhdWx0UmVxdWVzdBI3",
+            "CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9C",
+            "YWNrdXBWYXVsdCKQAQoYVXBkYXRlQmFja3VwVmF1bHRSZXF1ZXN0EjQKC3Vw",
+            "ZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID",
+            "4EECEj4KDGJhY2t1cF92YXVsdBgCIAEoCzIjLmdvb2dsZS5jbG91ZC5uZXRh",
+            "cHAudjEuQmFja3VwVmF1bHRCA+BBAkKyAQoaY29tLmdvb2dsZS5jbG91ZC5u",
+            "ZXRhcHAudjFCEEJhY2t1cFZhdWx0UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUu",
+            "Q2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdv",
+            "b2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault), global::Google.Cloud.NetApp.V1.BackupVault.Parser, new[]{ "Name", "State", "CreateTime", "Description", "Labels" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault), global::Google.Cloud.NetApp.V1.BackupVault.Parser, new[]{ "Name", "State", "CreateTime", "Description", "Labels", "BackupVaultType", "SourceRegion", "BackupRegion", "SourceBackupVault", "DestinationBackupVault" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.State), typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest), global::Google.Cloud.NetApp.V1.GetBackupVaultRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest), global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse), global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse.Parser, new[]{ "BackupVaults", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -121,6 +131,11 @@ namespace Google.Cloud.NetApp.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       description_ = other.description_;
       labels_ = other.labels_.Clone();
+      backupVaultType_ = other.backupVaultType_;
+      sourceRegion_ = other.sourceRegion_;
+      backupRegion_ = other.backupRegion_;
+      sourceBackupVault_ = other.sourceBackupVault_;
+      destinationBackupVault_ = other.destinationBackupVault_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -206,6 +221,88 @@ namespace Google.Cloud.NetApp.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "backup_vault_type" field.</summary>
+    public const int BackupVaultTypeFieldNumber = 6;
+    private global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType backupVaultType_ = global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType.Unspecified;
+    /// <summary>
+    /// Optional. Type of backup vault to be created.
+    /// Default is IN_REGION.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType BackupVaultType {
+      get { return backupVaultType_; }
+      set {
+        backupVaultType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source_region" field.</summary>
+    public const int SourceRegionFieldNumber = 7;
+    private string sourceRegion_ = "";
+    /// <summary>
+    /// Output only. Region in which the backup vault is created.
+    /// Format: `projects/{project_id}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceRegion {
+      get { return sourceRegion_; }
+      set {
+        sourceRegion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "backup_region" field.</summary>
+    public const int BackupRegionFieldNumber = 8;
+    private string backupRegion_ = "";
+    /// <summary>
+    /// Optional. Region where the backups are stored.
+    /// Format: `projects/{project_id}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackupRegion {
+      get { return backupRegion_; }
+      set {
+        backupRegion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_backup_vault" field.</summary>
+    public const int SourceBackupVaultFieldNumber = 9;
+    private string sourceBackupVault_ = "";
+    /// <summary>
+    /// Output only. Name of the Backup vault created in source region.
+    /// Format:
+    /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceBackupVault {
+      get { return sourceBackupVault_; }
+      set {
+        sourceBackupVault_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "destination_backup_vault" field.</summary>
+    public const int DestinationBackupVaultFieldNumber = 10;
+    private string destinationBackupVault_ = "";
+    /// <summary>
+    /// Output only. Name of the Backup vault created in backup region.
+    /// Format:
+    /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationBackupVault {
+      get { return destinationBackupVault_; }
+      set {
+        destinationBackupVault_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -226,6 +323,11 @@ namespace Google.Cloud.NetApp.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Description != other.Description) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (BackupVaultType != other.BackupVaultType) return false;
+      if (SourceRegion != other.SourceRegion) return false;
+      if (BackupRegion != other.BackupRegion) return false;
+      if (SourceBackupVault != other.SourceBackupVault) return false;
+      if (DestinationBackupVault != other.DestinationBackupVault) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -238,6 +340,11 @@ namespace Google.Cloud.NetApp.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (BackupVaultType != global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType.Unspecified) hash ^= BackupVaultType.GetHashCode();
+      if (SourceRegion.Length != 0) hash ^= SourceRegion.GetHashCode();
+      if (BackupRegion.Length != 0) hash ^= BackupRegion.GetHashCode();
+      if (SourceBackupVault.Length != 0) hash ^= SourceBackupVault.GetHashCode();
+      if (DestinationBackupVault.Length != 0) hash ^= DestinationBackupVault.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -273,6 +380,26 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteString(Description);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (BackupVaultType != global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) BackupVaultType);
+      }
+      if (SourceRegion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SourceRegion);
+      }
+      if (BackupRegion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(BackupRegion);
+      }
+      if (SourceBackupVault.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(SourceBackupVault);
+      }
+      if (DestinationBackupVault.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DestinationBackupVault);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -300,6 +427,26 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteString(Description);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (BackupVaultType != global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) BackupVaultType);
+      }
+      if (SourceRegion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SourceRegion);
+      }
+      if (BackupRegion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(BackupRegion);
+      }
+      if (SourceBackupVault.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(SourceBackupVault);
+      }
+      if (DestinationBackupVault.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DestinationBackupVault);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -323,6 +470,21 @@ namespace Google.Cloud.NetApp.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (BackupVaultType != global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BackupVaultType);
+      }
+      if (SourceRegion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceRegion);
+      }
+      if (BackupRegion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupRegion);
+      }
+      if (SourceBackupVault.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceBackupVault);
+      }
+      if (DestinationBackupVault.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationBackupVault);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -351,6 +513,21 @@ namespace Google.Cloud.NetApp.V1 {
         Description = other.Description;
       }
       labels_.MergeFrom(other.labels_);
+      if (other.BackupVaultType != global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType.Unspecified) {
+        BackupVaultType = other.BackupVaultType;
+      }
+      if (other.SourceRegion.Length != 0) {
+        SourceRegion = other.SourceRegion;
+      }
+      if (other.BackupRegion.Length != 0) {
+        BackupRegion = other.BackupRegion;
+      }
+      if (other.SourceBackupVault.Length != 0) {
+        SourceBackupVault = other.SourceBackupVault;
+      }
+      if (other.DestinationBackupVault.Length != 0) {
+        DestinationBackupVault = other.DestinationBackupVault;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -387,6 +564,26 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 42: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 48: {
+            BackupVaultType = (global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            SourceRegion = input.ReadString();
+            break;
+          }
+          case 66: {
+            BackupRegion = input.ReadString();
+            break;
+          }
+          case 74: {
+            SourceBackupVault = input.ReadString();
+            break;
+          }
+          case 82: {
+            DestinationBackupVault = input.ReadString();
             break;
           }
         }
@@ -427,6 +624,26 @@ namespace Google.Cloud.NetApp.V1 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 48: {
+            BackupVaultType = (global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            SourceRegion = input.ReadString();
+            break;
+          }
+          case 66: {
+            BackupRegion = input.ReadString();
+            break;
+          }
+          case 74: {
+            SourceBackupVault = input.ReadString();
+            break;
+          }
+          case 82: {
+            DestinationBackupVault = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -465,6 +682,24 @@ namespace Google.Cloud.NetApp.V1 {
         /// BackupVault is being updated.
         /// </summary>
         [pbr::OriginalName("UPDATING")] Updating = 5,
+      }
+
+      /// <summary>
+      /// Backup Vault Type.
+      /// </summary>
+      public enum BackupVaultType {
+        /// <summary>
+        /// BackupVault type not set.
+        /// </summary>
+        [pbr::OriginalName("BACKUP_VAULT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// BackupVault type is IN_REGION.
+        /// </summary>
+        [pbr::OriginalName("IN_REGION")] InRegion = 1,
+        /// <summary>
+        /// BackupVault type is CROSS_REGION.
+        /// </summary>
+        [pbr::OriginalName("CROSS_REGION")] CrossRegion = 2,
       }
 
     }
