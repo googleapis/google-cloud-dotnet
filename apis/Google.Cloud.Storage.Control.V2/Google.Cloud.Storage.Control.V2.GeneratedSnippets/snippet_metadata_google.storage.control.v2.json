@@ -3017,6 +3017,1976 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_sync",
+      "title": "CreateAnywhereCacheRequestObject",
+      "description": "Snippet for CreateAnywhereCache",
+      "file": "StorageControlClient.CreateAnywhereCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_async",
+      "title": "CreateAnywhereCacheRequestObjectAsync",
+      "description": "Snippet for CreateAnywhereCacheAsync",
+      "file": "StorageControlClient.CreateAnywhereCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_sync_flattened",
+      "title": "CreateAnywhereCache",
+      "description": "Snippet for CreateAnywhereCache",
+      "file": "StorageControlClient.CreateAnywhereCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateAnywhereCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+            "name": "anywhereCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_async_flattened",
+      "title": "CreateAnywhereCacheAsync",
+      "description": "Snippet for CreateAnywhereCacheAsync",
+      "file": "StorageControlClient.CreateAnywhereCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+            "name": "anywhereCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_sync_flattened_resourceNames",
+      "title": "CreateAnywhereCacheResourceNames",
+      "description": "Snippet for CreateAnywhereCache",
+      "file": "StorageControlClient.CreateAnywhereCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+            "name": "anywhereCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_async_flattened_resourceNames",
+      "title": "CreateAnywhereCacheResourceNamesAsync",
+      "description": "Snippet for CreateAnywhereCacheAsync",
+      "file": "StorageControlClient.CreateAnywhereCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+            "name": "anywhereCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.CreateAnywhereCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateAnywhereCache_sync",
+      "title": "UpdateAnywhereCacheRequestObject",
+      "description": "Snippet for UpdateAnywhereCache",
+      "file": "StorageControlClient.UpdateAnywhereCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateAnywhereCache_async",
+      "title": "UpdateAnywhereCacheRequestObjectAsync",
+      "description": "Snippet for UpdateAnywhereCacheAsync",
+      "file": "StorageControlClient.UpdateAnywhereCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateAnywhereCache_sync_flattened",
+      "title": "UpdateAnywhereCache",
+      "description": "Snippet for UpdateAnywhereCache",
+      "file": "StorageControlClient.UpdateAnywhereCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+            "name": "anywhereCache"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateAnywhereCache_async_flattened",
+      "title": "UpdateAnywhereCacheAsync",
+      "description": "Snippet for UpdateAnywhereCacheAsync",
+      "file": "StorageControlClient.UpdateAnywhereCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+            "name": "anywhereCache"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.AnywhereCache, Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableAnywhereCache_sync",
+      "title": "DisableAnywhereCacheRequestObject",
+      "description": "Snippet for DisableAnywhereCache",
+      "file": "StorageControlClient.DisableAnywhereCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableAnywhereCache_async",
+      "title": "DisableAnywhereCacheRequestObjectAsync",
+      "description": "Snippet for DisableAnywhereCacheAsync",
+      "file": "StorageControlClient.DisableAnywhereCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableAnywhereCache_sync_flattened",
+      "title": "DisableAnywhereCache",
+      "description": "Snippet for DisableAnywhereCache",
+      "file": "StorageControlClient.DisableAnywhereCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableAnywhereCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableAnywhereCache_async_flattened",
+      "title": "DisableAnywhereCacheAsync",
+      "description": "Snippet for DisableAnywhereCacheAsync",
+      "file": "StorageControlClient.DisableAnywhereCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableAnywhereCache_sync_flattened_resourceNames",
+      "title": "DisableAnywhereCacheResourceNames",
+      "description": "Snippet for DisableAnywhereCache",
+      "file": "StorageControlClient.DisableAnywhereCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableAnywhereCache_async_flattened_resourceNames",
+      "title": "DisableAnywhereCacheResourceNamesAsync",
+      "description": "Snippet for DisableAnywhereCacheAsync",
+      "file": "StorageControlClient.DisableAnywhereCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_PauseAnywhereCache_sync",
+      "title": "PauseAnywhereCacheRequestObject",
+      "description": "Snippet for PauseAnywhereCache",
+      "file": "StorageControlClient.PauseAnywhereCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.PauseAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "PauseAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.PauseAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_PauseAnywhereCache_async",
+      "title": "PauseAnywhereCacheRequestObjectAsync",
+      "description": "Snippet for PauseAnywhereCacheAsync",
+      "file": "StorageControlClient.PauseAnywhereCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.PauseAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "PauseAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.PauseAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_PauseAnywhereCache_sync_flattened",
+      "title": "PauseAnywhereCache",
+      "description": "Snippet for PauseAnywhereCache",
+      "file": "StorageControlClient.PauseAnywhereCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.PauseAnywhereCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "PauseAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.PauseAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_PauseAnywhereCache_async_flattened",
+      "title": "PauseAnywhereCacheAsync",
+      "description": "Snippet for PauseAnywhereCacheAsync",
+      "file": "StorageControlClient.PauseAnywhereCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.PauseAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "PauseAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.PauseAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_PauseAnywhereCache_sync_flattened_resourceNames",
+      "title": "PauseAnywhereCacheResourceNames",
+      "description": "Snippet for PauseAnywhereCache",
+      "file": "StorageControlClient.PauseAnywhereCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.PauseAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "PauseAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.PauseAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_PauseAnywhereCache_async_flattened_resourceNames",
+      "title": "PauseAnywhereCacheResourceNamesAsync",
+      "description": "Snippet for PauseAnywhereCacheAsync",
+      "file": "StorageControlClient.PauseAnywhereCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.PauseAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "PauseAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.PauseAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ResumeAnywhereCache_sync",
+      "title": "ResumeAnywhereCacheRequestObject",
+      "description": "Snippet for ResumeAnywhereCache",
+      "file": "StorageControlClient.ResumeAnywhereCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ResumeAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ResumeAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.ResumeAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ResumeAnywhereCache_async",
+      "title": "ResumeAnywhereCacheRequestObjectAsync",
+      "description": "Snippet for ResumeAnywhereCacheAsync",
+      "file": "StorageControlClient.ResumeAnywhereCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ResumeAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ResumeAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.ResumeAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ResumeAnywhereCache_sync_flattened",
+      "title": "ResumeAnywhereCache",
+      "description": "Snippet for ResumeAnywhereCache",
+      "file": "StorageControlClient.ResumeAnywhereCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ResumeAnywhereCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ResumeAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.ResumeAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ResumeAnywhereCache_async_flattened",
+      "title": "ResumeAnywhereCacheAsync",
+      "description": "Snippet for ResumeAnywhereCacheAsync",
+      "file": "StorageControlClient.ResumeAnywhereCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ResumeAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ResumeAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.ResumeAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ResumeAnywhereCache_sync_flattened_resourceNames",
+      "title": "ResumeAnywhereCacheResourceNames",
+      "description": "Snippet for ResumeAnywhereCache",
+      "file": "StorageControlClient.ResumeAnywhereCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ResumeAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ResumeAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.ResumeAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ResumeAnywhereCache_async_flattened_resourceNames",
+      "title": "ResumeAnywhereCacheResourceNamesAsync",
+      "description": "Snippet for ResumeAnywhereCacheAsync",
+      "file": "StorageControlClient.ResumeAnywhereCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ResumeAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ResumeAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.ResumeAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetAnywhereCache_sync",
+      "title": "GetAnywhereCacheRequestObject",
+      "description": "Snippet for GetAnywhereCache",
+      "file": "StorageControlClient.GetAnywhereCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetAnywhereCache_async",
+      "title": "GetAnywhereCacheRequestObjectAsync",
+      "description": "Snippet for GetAnywhereCacheAsync",
+      "file": "StorageControlClient.GetAnywhereCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetAnywhereCache_sync_flattened",
+      "title": "GetAnywhereCache",
+      "description": "Snippet for GetAnywhereCache",
+      "file": "StorageControlClient.GetAnywhereCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetAnywhereCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetAnywhereCache_async_flattened",
+      "title": "GetAnywhereCacheAsync",
+      "description": "Snippet for GetAnywhereCacheAsync",
+      "file": "StorageControlClient.GetAnywhereCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetAnywhereCache_sync_flattened_resourceNames",
+      "title": "GetAnywhereCacheResourceNames",
+      "description": "Snippet for GetAnywhereCache",
+      "file": "StorageControlClient.GetAnywhereCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnywhereCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetAnywhereCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.AnywhereCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetAnywhereCache_async_flattened_resourceNames",
+      "title": "GetAnywhereCacheResourceNamesAsync",
+      "description": "Snippet for GetAnywhereCacheAsync",
+      "file": "StorageControlClient.GetAnywhereCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnywhereCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetAnywhereCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.AnywhereCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetAnywhereCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetAnywhereCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListAnywhereCaches_sync",
+      "title": "ListAnywhereCachesRequestObject",
+      "description": "Snippet for ListAnywhereCaches",
+      "file": "StorageControlClient.ListAnywhereCachesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnywhereCaches",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListAnywhereCaches",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse, Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListAnywhereCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListAnywhereCaches_async",
+      "title": "ListAnywhereCachesRequestObjectAsync",
+      "description": "Snippet for ListAnywhereCachesAsync",
+      "file": "StorageControlClient.ListAnywhereCachesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnywhereCachesAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListAnywhereCachesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse, Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListAnywhereCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListAnywhereCaches_sync_flattened",
+      "title": "ListAnywhereCaches",
+      "description": "Snippet for ListAnywhereCaches",
+      "file": "StorageControlClient.ListAnywhereCachesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnywhereCaches",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListAnywhereCaches",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse, Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListAnywhereCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListAnywhereCaches_async_flattened",
+      "title": "ListAnywhereCachesAsync",
+      "description": "Snippet for ListAnywhereCachesAsync",
+      "file": "StorageControlClient.ListAnywhereCachesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnywhereCachesAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListAnywhereCachesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse, Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListAnywhereCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListAnywhereCaches_sync_flattened_resourceNames",
+      "title": "ListAnywhereCachesResourceNames",
+      "description": "Snippet for ListAnywhereCaches",
+      "file": "StorageControlClient.ListAnywhereCachesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnywhereCaches",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListAnywhereCaches",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse, Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListAnywhereCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListAnywhereCaches_async_flattened_resourceNames",
+      "title": "ListAnywhereCachesResourceNamesAsync",
+      "description": "Snippet for ListAnywhereCachesAsync",
+      "file": "StorageControlClient.ListAnywhereCachesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnywhereCachesAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListAnywhereCachesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse, Google.Cloud.Storage.Control.V2.AnywhereCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListAnywhereCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
