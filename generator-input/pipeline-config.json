@@ -1,5 +1,13 @@
 {
   "commands": {
+    "build-library": {
+      "environmentVariables": [
+        {
+          "name": "SOURCELINK_REPO",
+          "defaultValue": "https://github.com/googleapis/google-cloud-dotnet"
+        }
+      ]
+    },
     "integration-test-library": {
       "environmentVariables": [
         {
@@ -8,6 +16,10 @@
         },
         {
           "name": "INTEGRATION_TEST_SERVICE_ACCOUNT_JSON"
+        },
+        {
+          "name": "SOURCELINK_REPO",
+          "defaultValue": "https://github.com/googleapis/google-cloud-dotnet"
         }
       ]
     },
@@ -16,6 +28,10 @@
         {
           "name": "DOCS_METADATA_REPO",
           "defaultValue": "googleapis/google-cloud-dotnet"
+        },
+        {
+          "name": "SOURCELINK_REPO",
+          "defaultValue": "https://github.com/googleapis/google-cloud-dotnet"
         }
       ]
     }
