@@ -28,6 +28,8 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
     {
         MaybeSaveServiceAccount();
         var repoRoot = options.RequireOption(options.RepoRoot);
+        using var _ = SourceLinkFixer.Create(repoRoot);
+
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);

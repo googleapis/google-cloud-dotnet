@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Google.Protobuf.WellKnownTypes;
+using LibGit2Sharp;
 using Newtonsoft.Json;
 using SharpCompress.Archives;
 using SharpCompress.Archives.Tar;
@@ -30,10 +31,16 @@ internal class PackageLibraryCommand : IContainerCommand
     public int Execute(ContainerOptions options)
     {
         var repoRoot = options.RequireOption(options.RepoRoot);
+        using var _ = SourceLinkFixer.Create(repoRoot);
+
         var outputDirectory = options.RequireOption(options.Output);
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
+
+        // Add a remote to use 
+        using var repo = new Repository(repoRoot);
+        repo.Network.Remotes.Add("github", "https://");
 
         foreach (var api in apis)
         {
@@ -50,8 +57,10 @@ internal class PackageLibraryCommand : IContainerCommand
             // but pass the full filename in.
             Processes.RunDotnet(repoRoot, "generate-sbom", Path.Combine(outputDirectory, $"{api.Id}.{api.Version}.nupkg"));
         }
+        Console.WriteLine("Building documentation");
         Processes.RunBashScript(Path.Combine(repoRoot, "docs"), "builddocs.sh", apis.Select(api => api.Id));
 
+        Console.WriteLine("Packaging documentation");
         foreach (var api in apis)
         {
             PackageDocumentation(rootLayout, api, outputDirectory);
