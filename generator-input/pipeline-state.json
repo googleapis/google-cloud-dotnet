@@ -3991,9 +3991,12 @@
         },
         {
             "id": "Google.Cloud.Lustre.V1",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2025-05-01T06:49:00Z",
             "lastGeneratedCommit": "c6b8b89c8d623f69e7f2175c3658f74534d7f2fd",
+            "lastReleasedCommit": "c6b8b89c8d623f69e7f2175c3658f74534d7f2fd",
             "apiPaths": [
                 "google/cloud/lustre/v1"
             ],
