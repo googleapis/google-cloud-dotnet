@@ -12,8 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Storage.V1;
+using Google.Cloud.Tools.Common;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
@@ -22,22 +26,109 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// </summary>
 public sealed class PublishLibraryCommand : IContainerCommand
 {
+    private const string NuGetApiKeyEnvPrefix = "NUGET_API_KEY_";
+    private const string DocsBucketEnvPrefix = "DOCS_BUCKET_";
+
     public int Execute(ContainerOptions options)
     {
-        // We don't look at the library ID or version, because we just use the files
-        // already created.
         var packageOutput = options.RequireOption(options.PackageOutput);
+        // Load everything first, so we've definitely got everything we need
+        // before we actually publish anything.
+        var nugetPackages = NuGetPackage.LoadPackages(packageOutput);
+        var documentationBundles = DocumentationBundle.LoadBundles(packageOutput);
 
-        var nugetPackages = Directory.GetFiles(packageOutput, "*.nupkg");
-        foreach (var nugetPackage in nugetPackages)
-        {
-            Console.WriteLine($"Would publish {Path.GetFileName(nugetPackage)} to NuGet");
-        }
-        var docsPackages = Directory.GetFiles(packageOutput, "*.tar.gz");
-        foreach (var docsPackage in docsPackages)
-        {
-            Console.WriteLine($"Would upload {Path.GetFileName(docsPackage)}");
-        }
+        nugetPackages.ForEach(pkg => pkg.Push());
+        documentationBundles.ForEach(bundle => bundle.Upload());
         return 0;
+    }
+
+    private static string GetRequiredEnvironmentVariable(string name)
+    {
+        string value = Environment.GetEnvironmentVariable(name);
+        if (string.IsNullOrEmpty(value))
+        {
+            throw new Exception($"Expected environment variable '{value}'");
+        }
+        return value;
+    }
+
+
+    private sealed class DocumentationBundle
+    {
+        private readonly string _file;
+        private readonly string _destinationObject;
+        private readonly string _bucket;
+
+        private DocumentationBundle(string file, string destinationObject, string bucket)
+        {
+            _file = file;
+            _destinationObject = destinationObject;
+            _bucket = bucket;
+        }
+
+        internal static List<DocumentationBundle> LoadBundles(string packageOutput)
+        {
+            var bundles = Directory.GetFiles(packageOutput, "*.tar.gz");
+            var list = new List<DocumentationBundle>();
+            foreach (var bundle in bundles)
+            {
+                // We use the start of the name to determine which site this
+                // bundle is to be uploaded to, and then replace that start with
+                // "dotnet" to get the destination object name.
+                var name = Path.GetFileName(bundle);
+                var bits = name.Split('-');
+
+                var site = bits[0]; // e.g. googleapisdev or devsite
+                var siteUpper = site.ToUpperInvariant();
+                var bucket = GetRequiredEnvironmentVariable($"{DocsBucketEnvPrefix}_{siteUpper}");
+                
+                bits[0] = "dotnet";
+                var destinationObject = string.Join("", bits);
+
+                list.Add(new(bundle, destinationObject, bucket));
+            }
+            return list;
+        }
+
+        internal void Upload()
+        {
+            using var client = StorageClient.Create();
+            using var bundleStream = File.OpenRead(_file);
+            client.UploadObject(_bucket, _destinationObject, null, bundleStream);
+            Console.WriteLine($"Uploaded {_destinationObject}");
+        }
+    }
+
+    private sealed class NuGetPackage
+    {
+        private readonly string _apiKey;
+        private readonly string _file;
+
+        private NuGetPackage(string apiKey, string file)
+        {
+            _apiKey = apiKey;
+            _file = file;
+        }
+
+        internal static List<NuGetPackage> LoadPackages(string packageOutput)
+        {
+            var packageOwner = File.ReadAllText(Path.Combine(packageOutput, PackageLibraryCommand.PackageOwnerFile));
+            var packages  = Directory.GetFiles(packageOutput, "*.nupkg");
+            string envName = $"{NuGetApiKeyEnvPrefix}_{packageOwner.ToUpperInvariant().Replace("-", "_")}";
+            var apiKey = GetRequiredEnvironmentVariable($"{NuGetApiKeyEnvPrefix}_{packageOwner.ToUpperInvariant().Replace("-", "_")}");
+            return packages.Select(p => new NuGetPackage(apiKey, p)).ToList();
+        }
+
+        internal void Push()
+        {
+            Console.WriteLine($"Pushing {Path.GetFileName(_file)}.");
+            Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
+                "nuget",
+                "push",
+                "-s", "https://api.nuget.org/v3/index.json",
+                "-k", _apiKey,
+                _file);
+            Console.WriteLine($"Pushed {Path.GetFileName(_file)} successfully.");
+        }
     }
 }

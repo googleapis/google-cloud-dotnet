@@ -25,8 +25,15 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
+/// <summary>
+/// Packages a library (which may contain a set of packages) ready for publication.
+/// Note that all information required for later publication must be included here,
+/// as we don't have repo context at publication time.
+/// </summary>
 internal class PackageLibraryCommand : IContainerCommand
 {
+    internal const string PackageOwnerFile = "package-owner.txt";
+
     public int Execute(ContainerOptions options)
     {
         var repoRoot = options.RequireOption(options.RepoRoot);
@@ -36,6 +43,9 @@ internal class PackageLibraryCommand : IContainerCommand
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
+
+        // We assume all the packages in the library are for the same owner.
+        File.WriteAllText(Path.Combine(outputDirectory, PackageOwnerFile), apis.First().EffectivePackageOwner);
 
         foreach (var api in apis)
         {
@@ -118,6 +128,8 @@ internal class PackageLibraryCommand : IContainerCommand
             Language = "dotnet",
             GithubRepository = Environment.GetEnvironmentVariable("DOCS_METADATA_REPO") ?? ""
         };
+        // The output prefix will be used later on to work out which bucket to write to.
+        // The output prefix will be replaced (on upload) by "dotnet" to create the appropriate file for processing.
         var json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
         File.WriteAllText("docs.metadata.json", json);
         using var tgz = File.Create(Path.Combine(outputDirectory, $"{outputPrefix}-{api.Id}-{api.Version}.tar.gz"));
