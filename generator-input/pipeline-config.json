@@ -64,16 +64,8 @@
           "secretName": "docs-bucket-googleapisdev"
         },
         {
-          "name": "DOCS_CREDENTIALS_GOOGLEAPISDEV",
-          "defaultValue": "adc"
-        },
-        {
           "name": "DOCS_BUCKET_DEVSITE",
           "secretName": "docs-bucket-devsite"
-        },
-        {
-          "name": "DOCS_CREDENTIALS_DEVSITE",
-          "defaultValue": "adc"
         }
       ]
     }
