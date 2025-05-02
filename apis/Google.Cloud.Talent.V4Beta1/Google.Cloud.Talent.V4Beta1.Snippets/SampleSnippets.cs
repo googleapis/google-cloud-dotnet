@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 
         public SampleSnippets(TalentFixture fixture) => _fixture = fixture;
 
-        [Fact]
+        [Fact(Skip = "Requires additional set-up")]
         public void CreateCompany()
         {
             string projectId = _fixture.ProjectId;
@@ -48,7 +48,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End sample
         }
 
-        [Fact]
+        [Fact(Skip = "Requires additional set-up")]
         public void CreateJob()
         {
             string projectId = _fixture.ProjectId;
