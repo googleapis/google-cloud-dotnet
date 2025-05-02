@@ -2,6 +2,7 @@
   {
     "method": "ListDocuments",
     "client": "DocumentServiceClient",
+    "skip": "Requires additional resources to be set up",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store/branches/default_branch"
     }
@@ -9,6 +10,7 @@
   {
     "method": "ListSchemas",
     "client": "SchemaServiceClient",
+    "skip": "Requires additional resources to be set up",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store"
     }
@@ -16,6 +18,7 @@
   {
     "method": "CompleteQuery",
     "client": "CompletionServiceClient",
+    "skip": "Requires additional resources to be set up",
     "arguments": {
       "request": {
         "dataStore": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store",
