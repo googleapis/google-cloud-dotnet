@@ -14,7 +14,6 @@
 
 using Google.Cloud.Tools.Common;
 using Google.Protobuf.WellKnownTypes;
-using LibGit2Sharp;
 using Newtonsoft.Json;
 using SharpCompress.Archives;
 using SharpCompress.Archives.Tar;
@@ -37,10 +36,6 @@ internal class PackageLibraryCommand : IContainerCommand
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
-
-        // Add a remote to use 
-        using var repo = new Repository(repoRoot);
-        repo.Network.Remotes.Add("github", "https://");
 
         foreach (var api in apis)
         {
