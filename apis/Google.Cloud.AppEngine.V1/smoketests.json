@@ -2,6 +2,7 @@
   {
     "method": "ListServices",
     "client": "ServicesClient",
+    "skip": "Requires AppEngine app",
     "arguments": {
       "request": {
         "parent": "apps/${PROJECT_ID}"

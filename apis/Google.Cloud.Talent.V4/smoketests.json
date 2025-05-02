@@ -2,6 +2,7 @@
   {
     "method": "ListTenants",
     "client": "TenantServiceClient",
+    "skip": "Requires additional set-up",
     "arguments": {
       "parent": "projects/${PROJECT_ID}"
     }

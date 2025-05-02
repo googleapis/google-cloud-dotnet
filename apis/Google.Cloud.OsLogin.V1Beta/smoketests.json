@@ -2,6 +2,7 @@
   {
     "client": "OsLoginServiceClient",
     "method": "GetLoginProfile",
+    "skip": "Requires service account",
     "arguments": {
       "name": "users/${SERVICE_ACCOUNT_ID}"
     }
