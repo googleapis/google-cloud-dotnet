@@ -22,6 +22,12 @@
      -->
     <PackageReference Include="Grpc.Net.Client" VersionOverride="2.66.0" />
 
+    <!--
+      - Used to publish documentation. It doesn't matter if this ends up being fairly stale,
+      - so long as that doesn't cause other dependency conflicts.
+      -->
+    <PackageReference Include="Google.Cloud.Storage.V1" VersionOverride="4.13.0" />
+    
     <PackageReference Include="SharpCompress" />
   </ItemGroup>
 
