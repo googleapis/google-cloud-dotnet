@@ -28,7 +28,6 @@ public sealed class PublishLibraryCommand : IContainerCommand
 {
     private const string NuGetApiKeyEnvPrefix = "NUGET_API_KEY_";
     private const string DocsBucketEnvPrefix = "DOCS_BUCKET_";
-    private const string DocsCredentialsEnvPrefix = "DOCS_CREDENTIALS_";
 
     public int Execute(ContainerOptions options)
     {
@@ -58,14 +57,12 @@ public sealed class PublishLibraryCommand : IContainerCommand
     {
         private readonly string _file;
         private readonly string _destinationObject;
-        private readonly string _jsonCredentials;
         private readonly string _bucket;
 
-        private DocumentationBundle(string file, string destinationObject, string jsonCredentials, string bucket)
+        private DocumentationBundle(string file, string destinationObject, string bucket)
         {
             _file = file;
             _destinationObject = destinationObject;
-            _jsonCredentials = jsonCredentials;
             _bucket = bucket;
         }
 
@@ -84,23 +81,18 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 var site = bits[0]; // e.g. googleapis or devsite
                 var siteUpper = site.ToUpperInvariant();
                 var bucket = GetRequiredEnvironmentVariable($"{DocsBucketEnvPrefix}_{siteUpper}");
-                var credentials = GetRequiredEnvironmentVariable($"{DocsCredentialsEnvPrefix}_{siteUpper}");
-               
+                
                 bits[0] = "dotnet";
                 var destinationObject = string.Join("", bits);
 
-                list.Add(new(bundle, destinationObject, credentials, bucket));
+                list.Add(new(bundle, destinationObject, bucket));
             }
             return list;
         }
 
         internal void Upload()
         {
-            using var client = new StorageClientBuilder
-            {
-                // Special value "adc" means "just upload using the Application Default Credentials"
-                JsonCredentials = _jsonCredentials == "adc" ? null : _jsonCredentials,
-            }.Build();
+            using var client = StorageClient.Create();
             using var bundleStream = File.OpenRead(_file);
             client.UploadObject(_bucket, _destinationObject, null, bundleStream);
             Console.WriteLine($"Uploaded {_destinationObject}");
