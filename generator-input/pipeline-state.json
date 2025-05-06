@@ -911,7 +911,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-16T16:46:26Z",
-            "lastGeneratedCommit": "554575ee8d01d277344ec704e0561e9abc7f57f3",
+            "lastGeneratedCommit": "7ab5d0f5e87ed25778eeb8318e89cdad4d67ed6c",
             "apiPaths": [
                 "google/cloud/cloudcontrolspartner/v1"
             ],

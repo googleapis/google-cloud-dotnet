@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.CloudControlsPartner.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -1309,6 +1310,256 @@ namespace GoogleCSharpSnippets
             PartnerName name = PartnerName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
             Partner response = await cloudControlsPartnerCoreClient.GetPartnerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomer</summary>
+        public void CreateCustomerRequestObject()
+        {
+            // Snippet: CreateCustomer(CreateCustomerRequest, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            CreateCustomerRequest request = new CreateCustomerRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                Customer = new Customer(),
+                CustomerId = "",
+            };
+            // Make the request
+            Customer response = cloudControlsPartnerCoreClient.CreateCustomer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerAsync</summary>
+        public async Task CreateCustomerRequestObjectAsync()
+        {
+            // Snippet: CreateCustomerAsync(CreateCustomerRequest, CallSettings)
+            // Additional: CreateCustomerAsync(CreateCustomerRequest, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCustomerRequest request = new CreateCustomerRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                Customer = new Customer(),
+                CustomerId = "",
+            };
+            // Make the request
+            Customer response = await cloudControlsPartnerCoreClient.CreateCustomerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomer</summary>
+        public void CreateCustomer()
+        {
+            // Snippet: CreateCustomer(string, Customer, string, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            Customer customer = new Customer();
+            string customerId = "";
+            // Make the request
+            Customer response = cloudControlsPartnerCoreClient.CreateCustomer(parent, customer, customerId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerAsync</summary>
+        public async Task CreateCustomerAsync()
+        {
+            // Snippet: CreateCustomerAsync(string, Customer, string, CallSettings)
+            // Additional: CreateCustomerAsync(string, Customer, string, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            Customer customer = new Customer();
+            string customerId = "";
+            // Make the request
+            Customer response = await cloudControlsPartnerCoreClient.CreateCustomerAsync(parent, customer, customerId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomer</summary>
+        public void CreateCustomerResourceNames()
+        {
+            // Snippet: CreateCustomer(OrganizationLocationName, Customer, string, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            Customer customer = new Customer();
+            string customerId = "";
+            // Make the request
+            Customer response = cloudControlsPartnerCoreClient.CreateCustomer(parent, customer, customerId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomerAsync</summary>
+        public async Task CreateCustomerResourceNamesAsync()
+        {
+            // Snippet: CreateCustomerAsync(OrganizationLocationName, Customer, string, CallSettings)
+            // Additional: CreateCustomerAsync(OrganizationLocationName, Customer, string, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            Customer customer = new Customer();
+            string customerId = "";
+            // Make the request
+            Customer response = await cloudControlsPartnerCoreClient.CreateCustomerAsync(parent, customer, customerId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomer</summary>
+        public void UpdateCustomerRequestObject()
+        {
+            // Snippet: UpdateCustomer(UpdateCustomerRequest, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            UpdateCustomerRequest request = new UpdateCustomerRequest
+            {
+                Customer = new Customer(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Customer response = cloudControlsPartnerCoreClient.UpdateCustomer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerAsync</summary>
+        public async Task UpdateCustomerRequestObjectAsync()
+        {
+            // Snippet: UpdateCustomerAsync(UpdateCustomerRequest, CallSettings)
+            // Additional: UpdateCustomerAsync(UpdateCustomerRequest, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCustomerRequest request = new UpdateCustomerRequest
+            {
+                Customer = new Customer(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Customer response = await cloudControlsPartnerCoreClient.UpdateCustomerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomer</summary>
+        public void UpdateCustomer()
+        {
+            // Snippet: UpdateCustomer(Customer, FieldMask, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            Customer customer = new Customer();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Customer response = cloudControlsPartnerCoreClient.UpdateCustomer(customer, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerAsync</summary>
+        public async Task UpdateCustomerAsync()
+        {
+            // Snippet: UpdateCustomerAsync(Customer, FieldMask, CallSettings)
+            // Additional: UpdateCustomerAsync(Customer, FieldMask, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            Customer customer = new Customer();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Customer response = await cloudControlsPartnerCoreClient.UpdateCustomerAsync(customer, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomer</summary>
+        public void DeleteCustomerRequestObject()
+        {
+            // Snippet: DeleteCustomer(DeleteCustomerRequest, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            DeleteCustomerRequest request = new DeleteCustomerRequest
+            {
+                CustomerName = CustomerName.FromOrganizationLocationCustomer("[ORGANIZATION]", "[LOCATION]", "[CUSTOMER]"),
+            };
+            // Make the request
+            cloudControlsPartnerCoreClient.DeleteCustomer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerAsync</summary>
+        public async Task DeleteCustomerRequestObjectAsync()
+        {
+            // Snippet: DeleteCustomerAsync(DeleteCustomerRequest, CallSettings)
+            // Additional: DeleteCustomerAsync(DeleteCustomerRequest, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCustomerRequest request = new DeleteCustomerRequest
+            {
+                CustomerName = CustomerName.FromOrganizationLocationCustomer("[ORGANIZATION]", "[LOCATION]", "[CUSTOMER]"),
+            };
+            // Make the request
+            await cloudControlsPartnerCoreClient.DeleteCustomerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomer</summary>
+        public void DeleteCustomer()
+        {
+            // Snippet: DeleteCustomer(string, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/customers/[CUSTOMER]";
+            // Make the request
+            cloudControlsPartnerCoreClient.DeleteCustomer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerAsync</summary>
+        public async Task DeleteCustomerAsync()
+        {
+            // Snippet: DeleteCustomerAsync(string, CallSettings)
+            // Additional: DeleteCustomerAsync(string, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/customers/[CUSTOMER]";
+            // Make the request
+            await cloudControlsPartnerCoreClient.DeleteCustomerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomer</summary>
+        public void DeleteCustomerResourceNames()
+        {
+            // Snippet: DeleteCustomer(CustomerName, CallSettings)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = CloudControlsPartnerCoreClient.Create();
+            // Initialize request argument(s)
+            CustomerName name = CustomerName.FromOrganizationLocationCustomer("[ORGANIZATION]", "[LOCATION]", "[CUSTOMER]");
+            // Make the request
+            cloudControlsPartnerCoreClient.DeleteCustomer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerAsync</summary>
+        public async Task DeleteCustomerResourceNamesAsync()
+        {
+            // Snippet: DeleteCustomerAsync(CustomerName, CallSettings)
+            // Additional: DeleteCustomerAsync(CustomerName, CancellationToken)
+            // Create client
+            CloudControlsPartnerCoreClient cloudControlsPartnerCoreClient = await CloudControlsPartnerCoreClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomerName name = CustomerName.FromOrganizationLocationCustomer("[ORGANIZATION]", "[LOCATION]", "[CUSTOMER]");
+            // Make the request
+            await cloudControlsPartnerCoreClient.DeleteCustomerAsync(name);
             // End snippet
         }
     }
