@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2025-05-06
+
+### New features
+
+- Add Anywhere cache control APIs
+
+### Documentation improvements
+
+- Added comments for Anywhere cache messages
+
 ## Version 1.2.0, released 2025-03-17
 
 No API surface changes; no dependency updates. This is a no-op release.
