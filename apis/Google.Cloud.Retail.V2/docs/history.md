@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.13.0, released 2025-05-06
+
+### New features
+
+- add language_code, region_code and place_id to SearchRequest
+- add pin_control_metadata to SearchResponse
+
+### Documentation improvements
+
+- keep the API doc up-to-date with recent changes
+
 ## Version 2.12.0, released 2024-10-14
 
 ### New features
