@@ -5760,6 +5760,969 @@
       ]
     },
     {
+      "regionTag": "chat_v1_generated_ChatService_CreateCustomEmoji_sync",
+      "title": "CreateCustomEmojiRequestObject",
+      "description": "Snippet for CreateCustomEmoji",
+      "file": "ChatServiceClient.CreateCustomEmojiRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateCustomEmoji",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CreateCustomEmojiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.CustomEmoji",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.CreateCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateCustomEmoji_async",
+      "title": "CreateCustomEmojiRequestObjectAsync",
+      "description": "Snippet for CreateCustomEmojiAsync",
+      "file": "ChatServiceClient.CreateCustomEmojiRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CreateCustomEmojiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.CreateCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateCustomEmoji_sync_flattened",
+      "title": "CreateCustomEmoji",
+      "description": "Snippet for CreateCustomEmoji",
+      "file": "ChatServiceClient.CreateCustomEmojiSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateCustomEmoji",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CustomEmoji",
+            "name": "customEmoji"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.CustomEmoji",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.CreateCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_CreateCustomEmoji_async_flattened",
+      "title": "CreateCustomEmojiAsync",
+      "description": "Snippet for CreateCustomEmojiAsync",
+      "file": "ChatServiceClient.CreateCustomEmojiAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.CreateCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CustomEmoji",
+            "name": "customEmoji"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.CreateCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetCustomEmoji_sync",
+      "title": "GetCustomEmojiRequestObject",
+      "description": "Snippet for GetCustomEmoji",
+      "file": "ChatServiceClient.GetCustomEmojiRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetCustomEmoji",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetCustomEmojiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.CustomEmoji",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.GetCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetCustomEmoji_async",
+      "title": "GetCustomEmojiRequestObjectAsync",
+      "description": "Snippet for GetCustomEmojiAsync",
+      "file": "ChatServiceClient.GetCustomEmojiRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetCustomEmojiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.GetCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetCustomEmoji_sync_flattened",
+      "title": "GetCustomEmoji",
+      "description": "Snippet for GetCustomEmoji",
+      "file": "ChatServiceClient.GetCustomEmojiSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetCustomEmoji",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.CustomEmoji",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.GetCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetCustomEmoji_async_flattened",
+      "title": "GetCustomEmojiAsync",
+      "description": "Snippet for GetCustomEmojiAsync",
+      "file": "ChatServiceClient.GetCustomEmojiAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.GetCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetCustomEmoji_sync_flattened_resourceNames",
+      "title": "GetCustomEmojiResourceNames",
+      "description": "Snippet for GetCustomEmoji",
+      "file": "ChatServiceClient.GetCustomEmojiResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetCustomEmoji",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CustomEmojiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.CustomEmoji",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.GetCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetCustomEmoji_async_flattened_resourceNames",
+      "title": "GetCustomEmojiResourceNamesAsync",
+      "description": "Snippet for GetCustomEmojiAsync",
+      "file": "ChatServiceClient.GetCustomEmojiResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CustomEmojiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.GetCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListCustomEmojis_sync",
+      "title": "ListCustomEmojisRequestObject",
+      "description": "Snippet for ListCustomEmojis",
+      "file": "ChatServiceClient.ListCustomEmojisRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomEmojis",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListCustomEmojis",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListCustomEmojisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListCustomEmojisResponse, Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomEmojis",
+          "fullName": "google.chat.v1.ChatService.ListCustomEmojis",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListCustomEmojis_async",
+      "title": "ListCustomEmojisRequestObjectAsync",
+      "description": "Snippet for ListCustomEmojisAsync",
+      "file": "ChatServiceClient.ListCustomEmojisRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomEmojisAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListCustomEmojisAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ListCustomEmojisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListCustomEmojisResponse, Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomEmojis",
+          "fullName": "google.chat.v1.ChatService.ListCustomEmojis",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListCustomEmojis_sync_flattened",
+      "title": "ListCustomEmojis",
+      "description": "Snippet for ListCustomEmojis",
+      "file": "ChatServiceClient.ListCustomEmojisSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomEmojis",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListCustomEmojis",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.ListCustomEmojisResponse, Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomEmojis",
+          "fullName": "google.chat.v1.ChatService.ListCustomEmojis",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 73,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 71,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_ListCustomEmojis_async_flattened",
+      "title": "ListCustomEmojisAsync",
+      "description": "Snippet for ListCustomEmojisAsync",
+      "file": "ChatServiceClient.ListCustomEmojisAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomEmojisAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.ListCustomEmojisAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.ListCustomEmojisResponse, Google.Apps.Chat.V1.CustomEmoji>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomEmojis",
+          "fullName": "google.chat.v1.ChatService.ListCustomEmojis",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteCustomEmoji_sync",
+      "title": "DeleteCustomEmojiRequestObject",
+      "description": "Snippet for DeleteCustomEmoji",
+      "file": "ChatServiceClient.DeleteCustomEmojiRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteCustomEmoji",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.DeleteCustomEmojiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.DeleteCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteCustomEmoji_async",
+      "title": "DeleteCustomEmojiRequestObjectAsync",
+      "description": "Snippet for DeleteCustomEmojiAsync",
+      "file": "ChatServiceClient.DeleteCustomEmojiRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.DeleteCustomEmojiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.DeleteCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteCustomEmoji_sync_flattened",
+      "title": "DeleteCustomEmoji",
+      "description": "Snippet for DeleteCustomEmoji",
+      "file": "ChatServiceClient.DeleteCustomEmojiSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteCustomEmoji",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.DeleteCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteCustomEmoji_async_flattened",
+      "title": "DeleteCustomEmojiAsync",
+      "description": "Snippet for DeleteCustomEmojiAsync",
+      "file": "ChatServiceClient.DeleteCustomEmojiAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.DeleteCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteCustomEmoji_sync_flattened_resourceNames",
+      "title": "DeleteCustomEmojiResourceNames",
+      "description": "Snippet for DeleteCustomEmoji",
+      "file": "ChatServiceClient.DeleteCustomEmojiResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomEmoji",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteCustomEmoji",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CustomEmojiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.DeleteCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_DeleteCustomEmoji_async_flattened_resourceNames",
+      "title": "DeleteCustomEmojiResourceNamesAsync",
+      "description": "Snippet for DeleteCustomEmojiAsync",
+      "file": "ChatServiceClient.DeleteCustomEmojiResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomEmojiAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.DeleteCustomEmojiAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.CustomEmojiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomEmoji",
+          "fullName": "google.chat.v1.ChatService.DeleteCustomEmoji",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_sync",
       "title": "GetSpaceReadStateRequestObject",
       "description": "Snippet for GetSpaceReadState",

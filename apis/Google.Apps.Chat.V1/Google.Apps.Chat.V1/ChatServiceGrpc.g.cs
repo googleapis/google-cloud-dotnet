@@ -139,6 +139,18 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.DeleteReactionRequest> __Marshaller_google_chat_v1_DeleteReactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.DeleteReactionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.CreateCustomEmojiRequest> __Marshaller_google_chat_v1_CreateCustomEmojiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.CreateCustomEmojiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.CustomEmoji> __Marshaller_google_chat_v1_CustomEmoji = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.CustomEmoji.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetCustomEmojiRequest> __Marshaller_google_chat_v1_GetCustomEmojiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetCustomEmojiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListCustomEmojisRequest> __Marshaller_google_chat_v1_ListCustomEmojisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListCustomEmojisRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListCustomEmojisResponse> __Marshaller_google_chat_v1_ListCustomEmojisResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListCustomEmojisResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest> __Marshaller_google_chat_v1_DeleteCustomEmojiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest> __Marshaller_google_chat_v1_GetSpaceReadStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetSpaceReadStateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SpaceReadState> __Marshaller_google_chat_v1_SpaceReadState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SpaceReadState.Parser));
@@ -353,6 +365,38 @@ namespace Google.Apps.Chat.V1 {
         __ServiceName,
         "DeleteReaction",
         __Marshaller_google_chat_v1_DeleteReactionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.CreateCustomEmojiRequest, global::Google.Apps.Chat.V1.CustomEmoji> __Method_CreateCustomEmoji = new grpc::Method<global::Google.Apps.Chat.V1.CreateCustomEmojiRequest, global::Google.Apps.Chat.V1.CustomEmoji>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomEmoji",
+        __Marshaller_google_chat_v1_CreateCustomEmojiRequest,
+        __Marshaller_google_chat_v1_CustomEmoji);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.GetCustomEmojiRequest, global::Google.Apps.Chat.V1.CustomEmoji> __Method_GetCustomEmoji = new grpc::Method<global::Google.Apps.Chat.V1.GetCustomEmojiRequest, global::Google.Apps.Chat.V1.CustomEmoji>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCustomEmoji",
+        __Marshaller_google_chat_v1_GetCustomEmojiRequest,
+        __Marshaller_google_chat_v1_CustomEmoji);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.ListCustomEmojisRequest, global::Google.Apps.Chat.V1.ListCustomEmojisResponse> __Method_ListCustomEmojis = new grpc::Method<global::Google.Apps.Chat.V1.ListCustomEmojisRequest, global::Google.Apps.Chat.V1.ListCustomEmojisResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCustomEmojis",
+        __Marshaller_google_chat_v1_ListCustomEmojisRequest,
+        __Marshaller_google_chat_v1_ListCustomEmojisResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomEmoji = new grpc::Method<global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCustomEmoji",
+        __Marshaller_google_chat_v1_DeleteCustomEmojiRequest,
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1085,6 +1129,98 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReaction(global::Google.Apps.Chat.V1.DeleteReactionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.CustomEmoji> CreateCustomEmoji(global::Google.Apps.Chat.V1.CreateCustomEmojiRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns details about a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.CustomEmoji> GetCustomEmoji(global::Google.Apps.Chat.V1.GetCustomEmojiRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists custom emojis visible to the authenticated user.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ListCustomEmojisResponse> ListCustomEmojis(global::Google.Apps.Chat.V1.ListCustomEmojisRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a custom emoji. By default, users can only delete custom emoji they
+      /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+      /// assigned by the administrator can delete any custom emoji in the
+      /// organization. See [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149).
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomEmoji(global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3931,6 +4067,374 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteReaction, null, options, request);
       }
       /// <summary>
+      /// Creates a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.CustomEmoji CreateCustomEmoji(global::Google.Apps.Chat.V1.CreateCustomEmojiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomEmoji(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.CustomEmoji CreateCustomEmoji(global::Google.Apps.Chat.V1.CreateCustomEmojiRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomEmoji, null, options, request);
+      }
+      /// <summary>
+      /// Creates a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.CustomEmoji> CreateCustomEmojiAsync(global::Google.Apps.Chat.V1.CreateCustomEmojiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomEmojiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.CustomEmoji> CreateCustomEmojiAsync(global::Google.Apps.Chat.V1.CreateCustomEmojiRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomEmoji, null, options, request);
+      }
+      /// <summary>
+      /// Returns details about a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.CustomEmoji GetCustomEmoji(global::Google.Apps.Chat.V1.GetCustomEmojiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomEmoji(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details about a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.CustomEmoji GetCustomEmoji(global::Google.Apps.Chat.V1.GetCustomEmojiRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCustomEmoji, null, options, request);
+      }
+      /// <summary>
+      /// Returns details about a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.CustomEmoji> GetCustomEmojiAsync(global::Google.Apps.Chat.V1.GetCustomEmojiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomEmojiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details about a custom emoji.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.CustomEmoji> GetCustomEmojiAsync(global::Google.Apps.Chat.V1.GetCustomEmojiRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCustomEmoji, null, options, request);
+      }
+      /// <summary>
+      /// Lists custom emojis visible to the authenticated user.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.ListCustomEmojisResponse ListCustomEmojis(global::Google.Apps.Chat.V1.ListCustomEmojisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomEmojis(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists custom emojis visible to the authenticated user.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.ListCustomEmojisResponse ListCustomEmojis(global::Google.Apps.Chat.V1.ListCustomEmojisRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCustomEmojis, null, options, request);
+      }
+      /// <summary>
+      /// Lists custom emojis visible to the authenticated user.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ListCustomEmojisResponse> ListCustomEmojisAsync(global::Google.Apps.Chat.V1.ListCustomEmojisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomEmojisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists custom emojis visible to the authenticated user.
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ListCustomEmojisResponse> ListCustomEmojisAsync(global::Google.Apps.Chat.V1.ListCustomEmojisRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCustomEmojis, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a custom emoji. By default, users can only delete custom emoji they
+      /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+      /// assigned by the administrator can delete any custom emoji in the
+      /// organization. See [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149).
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomEmoji(global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomEmoji(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a custom emoji. By default, users can only delete custom emoji they
+      /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+      /// assigned by the administrator can delete any custom emoji in the
+      /// organization. See [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149).
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomEmoji(global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomEmoji, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a custom emoji. By default, users can only delete custom emoji they
+      /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+      /// assigned by the administrator can delete any custom emoji in the
+      /// organization. See [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149).
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomEmojiAsync(global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomEmojiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a custom emoji. By default, users can only delete custom emoji they
+      /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+      /// assigned by the administrator can delete any custom emoji in the
+      /// organization. See [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149).
+      ///
+      /// Custom emojis are only available for Google Workspace accounts, and the
+      /// administrator must turn custom emojis on for the organization. For more
+      /// information, see [Learn about custom emojis in Google
+      /// Chat](https://support.google.com/chat/answer/12800149) and
+      /// [Manage custom emoji
+      /// permissions](https://support.google.com/a/answer/12850085).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomEmojiAsync(global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomEmoji, null, options, request);
+      }
+      /// <summary>
       /// Returns details about a user's read state within a space, used to identify
       /// read and unread messages. For an example, see [Get details about a user's
       /// space read
@@ -4528,6 +5032,10 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_CreateReaction, serviceImpl.CreateReaction)
           .AddMethod(__Method_ListReactions, serviceImpl.ListReactions)
           .AddMethod(__Method_DeleteReaction, serviceImpl.DeleteReaction)
+          .AddMethod(__Method_CreateCustomEmoji, serviceImpl.CreateCustomEmoji)
+          .AddMethod(__Method_GetCustomEmoji, serviceImpl.GetCustomEmoji)
+          .AddMethod(__Method_ListCustomEmojis, serviceImpl.ListCustomEmojis)
+          .AddMethod(__Method_DeleteCustomEmoji, serviceImpl.DeleteCustomEmoji)
           .AddMethod(__Method_GetSpaceReadState, serviceImpl.GetSpaceReadState)
           .AddMethod(__Method_UpdateSpaceReadState, serviceImpl.UpdateSpaceReadState)
           .AddMethod(__Method_GetThreadReadState, serviceImpl.GetThreadReadState)
@@ -4568,6 +5076,10 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_CreateReaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateReactionRequest, global::Google.Apps.Chat.V1.Reaction>(serviceImpl.CreateReaction));
       serviceBinder.AddMethod(__Method_ListReactions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListReactionsRequest, global::Google.Apps.Chat.V1.ListReactionsResponse>(serviceImpl.ListReactions));
       serviceBinder.AddMethod(__Method_DeleteReaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteReactionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReaction));
+      serviceBinder.AddMethod(__Method_CreateCustomEmoji, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateCustomEmojiRequest, global::Google.Apps.Chat.V1.CustomEmoji>(serviceImpl.CreateCustomEmoji));
+      serviceBinder.AddMethod(__Method_GetCustomEmoji, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetCustomEmojiRequest, global::Google.Apps.Chat.V1.CustomEmoji>(serviceImpl.GetCustomEmoji));
+      serviceBinder.AddMethod(__Method_ListCustomEmojis, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListCustomEmojisRequest, global::Google.Apps.Chat.V1.ListCustomEmojisResponse>(serviceImpl.ListCustomEmojis));
+      serviceBinder.AddMethod(__Method_DeleteCustomEmoji, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteCustomEmojiRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCustomEmoji));
       serviceBinder.AddMethod(__Method_GetSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.GetSpaceReadState));
       serviceBinder.AddMethod(__Method_UpdateSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.UpdateSpaceReadState));
       serviceBinder.AddMethod(__Method_GetThreadReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState>(serviceImpl.GetThreadReadState));

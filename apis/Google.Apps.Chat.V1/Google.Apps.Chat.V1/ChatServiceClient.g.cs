@@ -70,6 +70,10 @@ namespace Google.Apps.Chat.V1
             CreateReactionSettings = existing.CreateReactionSettings;
             ListReactionsSettings = existing.ListReactionsSettings;
             DeleteReactionSettings = existing.DeleteReactionSettings;
+            CreateCustomEmojiSettings = existing.CreateCustomEmojiSettings;
+            GetCustomEmojiSettings = existing.GetCustomEmojiSettings;
+            ListCustomEmojisSettings = existing.ListCustomEmojisSettings;
+            DeleteCustomEmojiSettings = existing.DeleteCustomEmojiSettings;
             GetSpaceReadStateSettings = existing.GetSpaceReadStateSettings;
             UpdateSpaceReadStateSettings = existing.UpdateSpaceReadStateSettings;
             GetThreadReadStateSettings = existing.GetThreadReadStateSettings;
@@ -516,6 +520,78 @@ namespace Google.Apps.Chat.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.CreateCustomEmoji</c> and <c>ChatServiceClient.CreateCustomEmojiAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomEmojiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetCustomEmoji</c> and <c>ChatServiceClient.GetCustomEmojiAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCustomEmojiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.ListCustomEmojis</c> and <c>ChatServiceClient.ListCustomEmojisAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomEmojisSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.DeleteCustomEmoji</c> and <c>ChatServiceClient.DeleteCustomEmojiAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomEmojiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ChatServiceClient.GetSpaceReadState</c> and <c>ChatServiceClient.GetSpaceReadStateAsync</c>.
         /// </summary>
         /// <remarks>
@@ -721,6 +797,8 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.bot</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.customemojis</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.customemojis.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.delete</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.import</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.memberships</description></item>
@@ -748,6 +826,8 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.admin.spaces",
             "https://www.googleapis.com/auth/chat.admin.spaces.readonly",
             "https://www.googleapis.com/auth/chat.bot",
+            "https://www.googleapis.com/auth/chat.customemojis",
+            "https://www.googleapis.com/auth/chat.customemojis.readonly",
             "https://www.googleapis.com/auth/chat.delete",
             "https://www.googleapis.com/auth/chat.import",
             "https://www.googleapis.com/auth/chat.memberships",
@@ -6441,6 +6521,742 @@ namespace Google.Apps.Chat.V1
             DeleteReactionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji CreateCustomEmoji(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CreateCustomEmojiRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomEmojiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="customEmoji">
+        /// Required. The custom emoji to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji CreateCustomEmoji(CustomEmoji customEmoji, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomEmoji(new CreateCustomEmojiRequest
+            {
+                CustomEmoji = gax::GaxPreconditions.CheckNotNull(customEmoji, nameof(customEmoji)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="customEmoji">
+        /// Required. The custom emoji to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CustomEmoji customEmoji, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomEmojiAsync(new CreateCustomEmojiRequest
+            {
+                CustomEmoji = gax::GaxPreconditions.CheckNotNull(customEmoji, nameof(customEmoji)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="customEmoji">
+        /// Required. The custom emoji to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CustomEmoji customEmoji, st::CancellationToken cancellationToken) =>
+            CreateCustomEmojiAsync(customEmoji, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji GetCustomEmoji(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(GetCustomEmojiRequest request, st::CancellationToken cancellationToken) =>
+            GetCustomEmojiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji GetCustomEmoji(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmoji(new GetCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmojiAsync(new GetCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji GetCustomEmoji(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmoji(new GetCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmojiAsync(new GetCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(CustomEmojiName name, st::CancellationToken cancellationToken) =>
+            GetCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojis(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojisAsync(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojis(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomEmojisRequest request = new ListCustomEmojisRequest { };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomEmojis(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojisAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomEmojisRequest request = new ListCustomEmojisRequest { };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomEmojisAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomEmoji(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(DeleteCustomEmojiRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomEmojiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomEmoji(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmoji(new DeleteCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmojiAsync(new DeleteCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomEmoji(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmoji(new DeleteCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmojiAsync(new DeleteCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(CustomEmojiName name, st::CancellationToken cancellationToken) =>
+            DeleteCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns details about a user's read state within a space, used to identify
         /// read and unread messages. For an example, see [Get details about a user's
         /// space read
@@ -8206,6 +9022,14 @@ namespace Google.Apps.Chat.V1
 
         private readonly gaxgrpc::ApiCall<DeleteReactionRequest, wkt::Empty> _callDeleteReaction;
 
+        private readonly gaxgrpc::ApiCall<CreateCustomEmojiRequest, CustomEmoji> _callCreateCustomEmoji;
+
+        private readonly gaxgrpc::ApiCall<GetCustomEmojiRequest, CustomEmoji> _callGetCustomEmoji;
+
+        private readonly gaxgrpc::ApiCall<ListCustomEmojisRequest, ListCustomEmojisResponse> _callListCustomEmojis;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomEmojiRequest, wkt::Empty> _callDeleteCustomEmoji;
+
         private readonly gaxgrpc::ApiCall<GetSpaceReadStateRequest, SpaceReadState> _callGetSpaceReadState;
 
         private readonly gaxgrpc::ApiCall<UpdateSpaceReadStateRequest, SpaceReadState> _callUpdateSpaceReadState;
@@ -8307,6 +9131,18 @@ namespace Google.Apps.Chat.V1
             _callDeleteReaction = clientHelper.BuildApiCall<DeleteReactionRequest, wkt::Empty>("DeleteReaction", grpcClient.DeleteReactionAsync, grpcClient.DeleteReaction, effectiveSettings.DeleteReactionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteReaction);
             Modify_DeleteReactionApiCall(ref _callDeleteReaction);
+            _callCreateCustomEmoji = clientHelper.BuildApiCall<CreateCustomEmojiRequest, CustomEmoji>("CreateCustomEmoji", grpcClient.CreateCustomEmojiAsync, grpcClient.CreateCustomEmoji, effectiveSettings.CreateCustomEmojiSettings);
+            Modify_ApiCall(ref _callCreateCustomEmoji);
+            Modify_CreateCustomEmojiApiCall(ref _callCreateCustomEmoji);
+            _callGetCustomEmoji = clientHelper.BuildApiCall<GetCustomEmojiRequest, CustomEmoji>("GetCustomEmoji", grpcClient.GetCustomEmojiAsync, grpcClient.GetCustomEmoji, effectiveSettings.GetCustomEmojiSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCustomEmoji);
+            Modify_GetCustomEmojiApiCall(ref _callGetCustomEmoji);
+            _callListCustomEmojis = clientHelper.BuildApiCall<ListCustomEmojisRequest, ListCustomEmojisResponse>("ListCustomEmojis", grpcClient.ListCustomEmojisAsync, grpcClient.ListCustomEmojis, effectiveSettings.ListCustomEmojisSettings);
+            Modify_ApiCall(ref _callListCustomEmojis);
+            Modify_ListCustomEmojisApiCall(ref _callListCustomEmojis);
+            _callDeleteCustomEmoji = clientHelper.BuildApiCall<DeleteCustomEmojiRequest, wkt::Empty>("DeleteCustomEmoji", grpcClient.DeleteCustomEmojiAsync, grpcClient.DeleteCustomEmoji, effectiveSettings.DeleteCustomEmojiSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCustomEmoji);
+            Modify_DeleteCustomEmojiApiCall(ref _callDeleteCustomEmoji);
             _callGetSpaceReadState = clientHelper.BuildApiCall<GetSpaceReadStateRequest, SpaceReadState>("GetSpaceReadState", grpcClient.GetSpaceReadStateAsync, grpcClient.GetSpaceReadState, effectiveSettings.GetSpaceReadStateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpaceReadState);
             Modify_GetSpaceReadStateApiCall(ref _callGetSpaceReadState);
@@ -8381,6 +9217,14 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_DeleteReactionApiCall(ref gaxgrpc::ApiCall<DeleteReactionRequest, wkt::Empty> call);
 
+        partial void Modify_CreateCustomEmojiApiCall(ref gaxgrpc::ApiCall<CreateCustomEmojiRequest, CustomEmoji> call);
+
+        partial void Modify_GetCustomEmojiApiCall(ref gaxgrpc::ApiCall<GetCustomEmojiRequest, CustomEmoji> call);
+
+        partial void Modify_ListCustomEmojisApiCall(ref gaxgrpc::ApiCall<ListCustomEmojisRequest, ListCustomEmojisResponse> call);
+
+        partial void Modify_DeleteCustomEmojiApiCall(ref gaxgrpc::ApiCall<DeleteCustomEmojiRequest, wkt::Empty> call);
+
         partial void Modify_GetSpaceReadStateApiCall(ref gaxgrpc::ApiCall<GetSpaceReadStateRequest, SpaceReadState> call);
 
         partial void Modify_UpdateSpaceReadStateApiCall(ref gaxgrpc::ApiCall<UpdateSpaceReadStateRequest, SpaceReadState> call);
@@ -8447,6 +9291,14 @@ namespace Google.Apps.Chat.V1
         partial void Modify_ListReactionsRequest(ref ListReactionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteReactionRequest(ref DeleteReactionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCustomEmojiRequest(ref CreateCustomEmojiRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCustomEmojiRequest(ref GetCustomEmojiRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomEmojisRequest(ref ListCustomEmojisRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomEmojiRequest(ref DeleteCustomEmojiRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSpaceReadStateRequest(ref GetSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9799,6 +10651,190 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomEmoji CreateCustomEmoji(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomEmojiRequest(ref request, ref callSettings);
+            return _callCreateCustomEmoji.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomEmoji> CreateCustomEmojiAsync(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomEmojiRequest(ref request, ref callSettings);
+            return _callCreateCustomEmoji.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomEmoji GetCustomEmoji(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomEmojiRequest(ref request, ref callSettings);
+            return _callGetCustomEmoji.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomEmoji> GetCustomEmojiAsync(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomEmojiRequest(ref request, ref callSettings);
+            return _callGetCustomEmoji.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojis(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomEmojisRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCustomEmojisRequest, ListCustomEmojisResponse, CustomEmoji>(_callListCustomEmojis, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojisAsync(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomEmojisRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomEmojisRequest, ListCustomEmojisResponse, CustomEmoji>(_callListCustomEmojis, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteCustomEmoji(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomEmojiRequest(ref request, ref callSettings);
+            _callDeleteCustomEmoji.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteCustomEmojiAsync(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomEmojiRequest(ref request, ref callSettings);
+            return _callDeleteCustomEmoji.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Returns details about a user's read state within a space, used to identify
         /// read and unread messages. For an example, see [Get details about a user's
         /// space read
@@ -10099,6 +11135,10 @@ namespace Google.Apps.Chat.V1
     {
     }
 
+    public partial class ListCustomEmojisRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSpaceEventsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -10139,6 +11179,14 @@ namespace Google.Apps.Chat.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Reaction> GetEnumerator() => Reactions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCustomEmojisResponse : gaxgrpc::IPageResponse<CustomEmoji>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CustomEmoji> GetEnumerator() => CustomEmojis.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
