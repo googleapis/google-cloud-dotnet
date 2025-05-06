@@ -2059,7 +2059,7 @@
       "protoPath": "google/devtools/containeranalysis/v1",
       "productName": "Google Container Analysis",
       "productUrl": "https://cloud.google.com/container-registry/docs/container-analysis/",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Container Analysis API.",
       "tags": [
@@ -6762,7 +6762,7 @@
       "protoPath": "grafeas/v1",
       "productName": "Grafeas",
       "productUrl": "https://grafeas.io/",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended client library to access Grafeas, an open artifact metadata API to audit and govern your software supply chain.",
       "tags": [
