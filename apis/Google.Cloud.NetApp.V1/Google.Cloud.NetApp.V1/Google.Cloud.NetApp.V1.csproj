@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.8.0</Version>
+    <Version>1.9.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud NetApp Volumes API, which is a fully-managed, cloud-based data storage service that provides advanced data management capabilities and highly scalable performance with global availability.</Description>

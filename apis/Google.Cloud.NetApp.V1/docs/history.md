@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.9.0, released 2025-05-06
+
+### New features
+
+- add `volume_region` and `backup_region` to backup `Backup` message
+- add `source_region`, `backup_region`, `source_backup_vault`, `destination_backup_vault`, `backupVault_type` (of new enum type `BackupVaultType`) to `BackupVault` message
+
+### Documentation improvements
+
+- A comment for field `cooling_threshold_days` in message `.google.cloud.netapp.v1.TieringPolicy` is changed
+
 ## Version 1.8.0, released 2025-02-03
 
 ### New features
