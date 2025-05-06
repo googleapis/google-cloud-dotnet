@@ -47,4 +47,21 @@ public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
     /// If set, the <see cref="IGoogleCloudConsoleLogAugmenter.AugmentFormattedLogEntry" /> will be called for each formatted entry.
     /// </summary>
     public IGoogleCloudConsoleLogAugmenter LogAugmenter { get; set; }
+
+    /// <summary>
+    /// When set to <c>true</c>, the following types are emitted as JSON numbers instead of strings,
+    /// for format parameters and scopes (including key/value pairs within compound scope objects):
+    /// <list type="bullet">
+    /// <item><see cref="byte"/></item>
+    /// <item><see cref="sbyte"/></item>
+    /// <item><see cref="short"/></item>
+    /// <item><see cref="ushort"/></item>
+    /// <item><see cref="int"/></item>
+    /// <item><see cref="uint"/></item>
+    /// <item><see cref="float"/> (when not infinite or not-a-number)</item>
+    /// <item><see cref="double"/> (when not infinite or not-a-number)</item>
+    /// </list>
+    /// </summary>
+    /// <remarks>Defaults to <c>false</c>.</remarks>
+    public bool EmitNumericTypes { get; set; }
 }
