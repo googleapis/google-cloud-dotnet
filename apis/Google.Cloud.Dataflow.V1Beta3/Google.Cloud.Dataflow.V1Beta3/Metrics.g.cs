@@ -26,104 +26,145 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           string.Concat(
             "CiVnb29nbGUvZGF0YWZsb3cvdjFiZXRhMy9tZXRyaWNzLnByb3RvEhdnb29n",
             "bGUuZGF0YWZsb3cudjFiZXRhMxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
-            "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aHGdvb2dsZS9wcm90b2J1",
-            "Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8isQEKFE1ldHJpY1N0cnVjdHVyZWROYW1lEg4KBm9yaWdpbhgBIAEoCRIM",
-            "CgRuYW1lGAIgASgJEksKB2NvbnRleHQYAyADKAsyOi5nb29nbGUuZGF0YWZs",
-            "b3cudjFiZXRhMy5NZXRyaWNTdHJ1Y3R1cmVkTmFtZS5Db250ZXh0RW50cnka",
-            "LgoMQ29udGV4dEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEiwAMKDE1ldHJpY1VwZGF0ZRI7CgRuYW1lGAEgASgLMi0uZ29vZ2xlLmRh",
-            "dGFmbG93LnYxYmV0YTMuTWV0cmljU3RydWN0dXJlZE5hbWUSDAoEa2luZBgC",
-            "IAEoCRISCgpjdW11bGF0aXZlGAMgASgIEiYKBnNjYWxhchgEIAEoCzIWLmdv",
-            "b2dsZS5wcm90b2J1Zi5WYWx1ZRIoCghtZWFuX3N1bRgFIAEoCzIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5WYWx1ZRIqCgptZWFuX2NvdW50GAYgASgLMhYuZ29vZ2xl",
-            "LnByb3RvYnVmLlZhbHVlEiMKA3NldBgHIAEoCzIWLmdvb2dsZS5wcm90b2J1",
-            "Zi5WYWx1ZRIsCgxkaXN0cmlidXRpb24YCyABKAsyFi5nb29nbGUucHJvdG9i",
-            "dWYuVmFsdWUSJQoFZ2F1Z2UYDCABKAsyFi5nb29nbGUucHJvdG9idWYuVmFs",
-            "dWUSKAoIaW50ZXJuYWwYCCABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUS",
-            "LwoLdXBkYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wInwKFEdldEpvYk1ldHJpY3NSZXF1ZXN0EhIKCnByb2plY3RfaWQYASAB",
-            "KAkSDgoGam9iX2lkGAIgASgJEi4KCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGxvY2F0aW9uGAQgASgJInUKCkpv",
-            "Yk1ldHJpY3MSLwoLbWV0cmljX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEjYKB21ldHJpY3MYAiADKAsyJS5nb29nbGUuZGF0YWZs",
-            "b3cudjFiZXRhMy5NZXRyaWNVcGRhdGUifAodR2V0Sm9iRXhlY3V0aW9uRGV0",
-            "YWlsc1JlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIOCgZqb2JfaWQYAiAB",
-            "KAkSEAoIbG9jYXRpb24YAyABKAkSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YBSABKAkiuAEKElByb2dyZXNzVGltZXNlcmllcxIYChBjdXJy",
-            "ZW50X3Byb2dyZXNzGAEgASgBEkYKC2RhdGFfcG9pbnRzGAIgAygLMjEuZ29v",
-            "Z2xlLmRhdGFmbG93LnYxYmV0YTMuUHJvZ3Jlc3NUaW1lc2VyaWVzLlBvaW50",
-            "GkAKBVBvaW50EigKBHRpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEg0KBXZhbHVlGAIgASgBIq0CCgxTdGFnZVN1bW1hcnkSEAoIc3Rh",
-            "Z2VfaWQYASABKAkSNgoFc3RhdGUYAiABKA4yJy5nb29nbGUuZGF0YWZsb3cu",
-            "djFiZXRhMy5FeGVjdXRpb25TdGF0ZRIuCgpzdGFydF90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgEIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPQoIcHJvZ3Jlc3MYBSABKAsy",
-            "Ky5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5Qcm9ncmVzc1RpbWVzZXJpZXMS",
-            "NgoHbWV0cmljcxgGIAMoCzIlLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLk1l",
-            "dHJpY1VwZGF0ZSJlChNKb2JFeGVjdXRpb25EZXRhaWxzEjUKBnN0YWdlcxgB",
-            "IAMoCzIlLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLlN0YWdlU3VtbWFyeRIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki7gEKH0dldFN0YWdlRXhlY3V0aW9u",
-            "RGV0YWlsc1JlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIOCgZqb2JfaWQY",
-            "AiABKAkSEAoIbG9jYXRpb24YAyABKAkSEAoIc3RhZ2VfaWQYBCABKAkSEQoJ",
-            "cGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAkSLgoKc3RhcnRf",
-            "dGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
-            "X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIsMCCg9X",
-            "b3JrSXRlbURldGFpbHMSDwoHdGFza19pZBgBIAEoCRISCgphdHRlbXB0X2lk",
-            "GAIgASgJEi4KCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEiwKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBI2CgVzdGF0ZRgFIAEoDjInLmdvb2dsZS5kYXRhZmxvdy52",
-            "MWJldGEzLkV4ZWN1dGlvblN0YXRlEj0KCHByb2dyZXNzGAYgASgLMisuZ29v",
-            "Z2xlLmRhdGFmbG93LnYxYmV0YTMuUHJvZ3Jlc3NUaW1lc2VyaWVzEjYKB21l",
-            "dHJpY3MYByADKAsyJS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5NZXRyaWNV",
-            "cGRhdGUiYgoNV29ya2VyRGV0YWlscxITCgt3b3JrZXJfbmFtZRgBIAEoCRI8",
-            "Cgp3b3JrX2l0ZW1zGAIgAygLMiguZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMu",
-            "V29ya0l0ZW1EZXRhaWxzImkKFVN0YWdlRXhlY3V0aW9uRGV0YWlscxI3Cgd3",
-            "b3JrZXJzGAEgAygLMiYuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuV29ya2Vy",
-            "RGV0YWlscxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqxQEKDkV4ZWN1dGlv",
-            "blN0YXRlEhsKF0VYRUNVVElPTl9TVEFURV9VTktOT1dOEAASHwobRVhFQ1VU",
-            "SU9OX1NUQVRFX05PVF9TVEFSVEVEEAESGwoXRVhFQ1VUSU9OX1NUQVRFX1JV",
-            "Tk5JTkcQAhIdChlFWEVDVVRJT05fU1RBVEVfU1VDQ0VFREVEEAMSGgoWRVhF",
-            "Q1VUSU9OX1NUQVRFX0ZBSUxFRBAEEh0KGUVYRUNVVElPTl9TVEFURV9DQU5D",
-            "RUxMRUQQBTKfBwoOTWV0cmljc1YxQmV0YTMS6QEKDUdldEpvYk1ldHJpY3MS",
-            "LS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5HZXRKb2JNZXRyaWNzUmVxdWVz",
-            "dBojLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkpvYk1ldHJpY3MigwGC0+ST",
-            "An0SRi92MWIzL3Byb2plY3RzL3twcm9qZWN0X2lkfS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9qb2JzL3tqb2JfaWR9L21ldHJpY3NaMxIxL3YxYjMvcHJvamVj",
-            "dHMve3Byb2plY3RfaWR9L2pvYnMve2pvYl9pZH0vbWV0cmljcxLXAQoWR2V0",
-            "Sm9iRXhlY3V0aW9uRGV0YWlscxI2Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEz",
-            "LkdldEpvYkV4ZWN1dGlvbkRldGFpbHNSZXF1ZXN0GiwuZ29vZ2xlLmRhdGFm",
-            "bG93LnYxYmV0YTMuSm9iRXhlY3V0aW9uRGV0YWlscyJXgtPkkwJREk8vdjFi",
-            "My9wcm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "am9icy97am9iX2lkfS9leGVjdXRpb25EZXRhaWxzEu8BChhHZXRTdGFnZUV4",
-            "ZWN1dGlvbkRldGFpbHMSOC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5HZXRT",
-            "dGFnZUV4ZWN1dGlvbkRldGFpbHNSZXF1ZXN0Gi4uZ29vZ2xlLmRhdGFmbG93",
-            "LnYxYmV0YTMuU3RhZ2VFeGVjdXRpb25EZXRhaWxzImmC0+STAmMSYS92MWIz",
-            "L3Byb2plY3RzL3twcm9qZWN0X2lkfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9q",
-            "b2JzL3tqb2JfaWR9L3N0YWdlcy97c3RhZ2VfaWR9L2V4ZWN1dGlvbkRldGFp",
-            "bHMa1AHKQRdkYXRhZmxvdy5nb29nbGVhcGlzLmNvbdJBtgFodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUucmVhZG9ubHksaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC91c2VyaW5mby5lbWFpbELPAQobY29t",
-            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzQgxNZXRyaWNzUHJvdG9QAVo9Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhZmxvdy9hcGl2MWJldGEzL2RhdGFmbG93",
-            "cGI7ZGF0YWZsb3dwYqoCHUdvb2dsZS5DbG91ZC5EYXRhZmxvdy5WMUJldGEz",
-            "ygIdR29vZ2xlXENsb3VkXERhdGFmbG93XFYxYmV0YTPqAiBHb29nbGU6OkNs",
-            "b3VkOjpEYXRhZmxvdzo6VjFiZXRhM2IGcHJvdG8z"));
+            "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aHmdvb2dsZS9wcm90b2J1",
+            "Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKxAQoUTWV0cmlj",
+            "U3RydWN0dXJlZE5hbWUSDgoGb3JpZ2luGAEgASgJEgwKBG5hbWUYAiABKAkS",
+            "SwoHY29udGV4dBgDIAMoCzI6Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLk1l",
+            "dHJpY1N0cnVjdHVyZWROYW1lLkNvbnRleHRFbnRyeRouCgxDb250ZXh0RW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLmAwoMTWV0cmlj",
+            "VXBkYXRlEjsKBG5hbWUYASABKAsyLS5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
+            "My5NZXRyaWNTdHJ1Y3R1cmVkTmFtZRIMCgRraW5kGAIgASgJEhIKCmN1bXVs",
+            "YXRpdmUYAyABKAgSJgoGc2NhbGFyGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVm",
+            "LlZhbHVlEigKCG1lYW5fc3VtGAUgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZh",
+            "bHVlEioKCm1lYW5fY291bnQYBiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFs",
+            "dWUSIwoDc2V0GAcgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEiQKBHRy",
+            "aWUYDSABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSLAoMZGlzdHJpYnV0",
+            "aW9uGAsgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEiUKBWdhdWdlGAwg",
+            "ASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEigKCGludGVybmFsGAggASgL",
+            "MhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEi8KC3VwZGF0ZV90aW1lGAkgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJ8ChRHZXRKb2JNZXRyaWNz",
+            "UmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEg4KBmpvYl9pZBgCIAEoCRIu",
+            "CgpzdGFydF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIQCghsb2NhdGlvbhgEIAEoCSJ1CgpKb2JNZXRyaWNzEi8KC21ldHJpY190",
+            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CgdtZXRy",
+            "aWNzGAIgAygLMiUuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuTWV0cmljVXBk",
+            "YXRlInwKHUdldEpvYkV4ZWN1dGlvbkRldGFpbHNSZXF1ZXN0EhIKCnByb2pl",
+            "Y3RfaWQYASABKAkSDgoGam9iX2lkGAIgASgJEhAKCGxvY2F0aW9uGAMgASgJ",
+            "EhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJIrgBChJQ",
+            "cm9ncmVzc1RpbWVzZXJpZXMSGAoQY3VycmVudF9wcm9ncmVzcxgBIAEoARJG",
+            "CgtkYXRhX3BvaW50cxgCIAMoCzIxLmdvb2dsZS5kYXRhZmxvdy52MWJldGEz",
+            "LlByb2dyZXNzVGltZXNlcmllcy5Qb2ludBpACgVQb2ludBIoCgR0aW1lGAEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgV2YWx1ZRgCIAEo",
+            "ASLuAgoNU3RyYWdnbGVySW5mbxIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJCCgZjYXVzZXMYAiADKAsyMi5nb29n",
+            "bGUuZGF0YWZsb3cudjFiZXRhMy5TdHJhZ2dsZXJJbmZvLkNhdXNlc0VudHJ5",
+            "GnsKFlN0cmFnZ2xlckRlYnVnZ2luZ0luZm8SPwoHaG90X2tleRgBIAEoCzIs",
+            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkhvdEtleURlYnVnZ2luZ0luZm9I",
+            "AEIgCh5zdHJhZ2dsZXJfZGVidWdnaW5nX2luZm9fdmFsdWUabAoLQ2F1c2Vz",
+            "RW50cnkSCwoDa2V5GAEgASgJEkwKBXZhbHVlGAIgASgLMj0uZ29vZ2xlLmRh",
+            "dGFmbG93LnYxYmV0YTMuU3RyYWdnbGVySW5mby5TdHJhZ2dsZXJEZWJ1Z2dp",
+            "bmdJbmZvOgI4ASL7AQoWU3RyZWFtaW5nU3RyYWdnbGVySW5mbxIuCgpzdGFy",
+            "dF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghl",
+            "bmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoL",
+            "d29ya2VyX25hbWUYAyABKAkSNQoSZGF0YV93YXRlcm1hcmtfbGFnGAQgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjcKFHN5c3RlbV93YXRlcm1h",
+            "cmtfbGFnGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIrABCglT",
+            "dHJhZ2dsZXISQQoPYmF0Y2hfc3RyYWdnbGVyGAEgASgLMiYuZ29vZ2xlLmRh",
+            "dGFmbG93LnYxYmV0YTMuU3RyYWdnbGVySW5mb0gAEk4KE3N0cmVhbWluZ19z",
+            "dHJhZ2dsZXIYAiABKAsyLy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdHJl",
+            "YW1pbmdTdHJhZ2dsZXJJbmZvSABCEAoOc3RyYWdnbGVyX2luZm8ixgIKE0hv",
+            "dEtleURlYnVnZ2luZ0luZm8SXAoRZGV0ZWN0ZWRfaG90X2tleXMYASADKAsy",
+            "QS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5Ib3RLZXlEZWJ1Z2dpbmdJbmZv",
+            "LkRldGVjdGVkSG90S2V5c0VudHJ5GmAKCkhvdEtleUluZm8SLgoLaG90X2tl",
+            "eV9hZ2UYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SCwoDa2V5",
+            "GAIgASgJEhUKDWtleV90cnVuY2F0ZWQYAyABKAgabwoURGV0ZWN0ZWRIb3RL",
+            "ZXlzRW50cnkSCwoDa2V5GAEgASgEEkYKBXZhbHVlGAIgASgLMjcuZ29vZ2xl",
+            "LmRhdGFmbG93LnYxYmV0YTMuSG90S2V5RGVidWdnaW5nSW5mby5Ib3RLZXlJ",
+            "bmZvOgI4ASKPAgoQU3RyYWdnbGVyU3VtbWFyeRIdChV0b3RhbF9zdHJhZ2ds",
+            "ZXJfY291bnQYASABKAMSYQoVc3RyYWdnbGVyX2NhdXNlX2NvdW50GAIgAygL",
+            "MkIuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuU3RyYWdnbGVyU3VtbWFyeS5T",
+            "dHJhZ2dsZXJDYXVzZUNvdW50RW50cnkSPQoRcmVjZW50X3N0cmFnZ2xlcnMY",
+            "AyADKAsyIi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdHJhZ2dsZXIaOgoY",
+            "U3RyYWdnbGVyQ2F1c2VDb3VudEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoAzoCOAEi8wIKDFN0YWdlU3VtbWFyeRIQCghzdGFnZV9pZBgBIAEo",
+            "CRI2CgVzdGF0ZRgCIAEoDjInLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkV4",
+            "ZWN1dGlvblN0YXRlEi4KCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBI9Cghwcm9ncmVzcxgFIAEoCzIrLmdvb2dsZS5k",
+            "YXRhZmxvdy52MWJldGEzLlByb2dyZXNzVGltZXNlcmllcxI2CgdtZXRyaWNz",
+            "GAYgAygLMiUuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuTWV0cmljVXBkYXRl",
+            "EkQKEXN0cmFnZ2xlcl9zdW1tYXJ5GAcgASgLMikuZ29vZ2xlLmRhdGFmbG93",
+            "LnYxYmV0YTMuU3RyYWdnbGVyU3VtbWFyeSJlChNKb2JFeGVjdXRpb25EZXRh",
+            "aWxzEjUKBnN0YWdlcxgBIAMoCzIlLmdvb2dsZS5kYXRhZmxvdy52MWJldGEz",
+            "LlN0YWdlU3VtbWFyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki7gEKH0dl",
+            "dFN0YWdlRXhlY3V0aW9uRGV0YWlsc1JlcXVlc3QSEgoKcHJvamVjdF9pZBgB",
+            "IAEoCRIOCgZqb2JfaWQYAiABKAkSEAoIbG9jYXRpb24YAyABKAkSEAoIc3Rh",
+            "Z2VfaWQYBCABKAkSEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "BiABKAkSLgoKc3RhcnRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLAoIZW5kX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIoMDCg9Xb3JrSXRlbURldGFpbHMSDwoHdGFza19pZBgBIAEo",
+            "CRISCgphdHRlbXB0X2lkGAIgASgJEi4KCnN0YXJ0X3RpbWUYAyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CgVzdGF0ZRgFIAEoDjInLmdv",
+            "b2dsZS5kYXRhZmxvdy52MWJldGEzLkV4ZWN1dGlvblN0YXRlEj0KCHByb2dy",
+            "ZXNzGAYgASgLMisuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuUHJvZ3Jlc3NU",
+            "aW1lc2VyaWVzEjYKB21ldHJpY3MYByADKAsyJS5nb29nbGUuZGF0YWZsb3cu",
+            "djFiZXRhMy5NZXRyaWNVcGRhdGUSPgoOc3RyYWdnbGVyX2luZm8YCCABKAsy",
+            "Ji5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdHJhZ2dsZXJJbmZvImIKDVdv",
+            "cmtlckRldGFpbHMSEwoLd29ya2VyX25hbWUYASABKAkSPAoKd29ya19pdGVt",
+            "cxgCIAMoCzIoLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtJdGVtRGV0",
+            "YWlscyJpChVTdGFnZUV4ZWN1dGlvbkRldGFpbHMSNwoHd29ya2VycxgBIAMo",
+            "CzImLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtlckRldGFpbHMSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJKsUBCg5FeGVjdXRpb25TdGF0ZRIbChdF",
+            "WEVDVVRJT05fU1RBVEVfVU5LTk9XThAAEh8KG0VYRUNVVElPTl9TVEFURV9O",
+            "T1RfU1RBUlRFRBABEhsKF0VYRUNVVElPTl9TVEFURV9SVU5OSU5HEAISHQoZ",
+            "RVhFQ1VUSU9OX1NUQVRFX1NVQ0NFRURFRBADEhoKFkVYRUNVVElPTl9TVEFU",
+            "RV9GQUlMRUQQBBIdChlFWEVDVVRJT05fU1RBVEVfQ0FOQ0VMTEVEEAUyvQYK",
+            "Dk1ldHJpY3NWMUJldGEzEukBCg1HZXRKb2JNZXRyaWNzEi0uZ29vZ2xlLmRh",
+            "dGFmbG93LnYxYmV0YTMuR2V0Sm9iTWV0cmljc1JlcXVlc3QaIy5nb29nbGUu",
+            "ZGF0YWZsb3cudjFiZXRhMy5Kb2JNZXRyaWNzIoMBgtPkkwJ9EkYvdjFiMy9w",
+            "cm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9i",
+            "cy97am9iX2lkfS9tZXRyaWNzWjMSMS92MWIzL3Byb2plY3RzL3twcm9qZWN0",
+            "X2lkfS9qb2JzL3tqb2JfaWR9L21ldHJpY3MS1wEKFkdldEpvYkV4ZWN1dGlv",
+            "bkRldGFpbHMSNi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5HZXRKb2JFeGVj",
+            "dXRpb25EZXRhaWxzUmVxdWVzdBosLmdvb2dsZS5kYXRhZmxvdy52MWJldGEz",
+            "LkpvYkV4ZWN1dGlvbkRldGFpbHMiV4LT5JMCURJPL3YxYjMvcHJvamVjdHMv",
+            "e3Byb2plY3RfaWR9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMve2pvYl9p",
+            "ZH0vZXhlY3V0aW9uRGV0YWlscxLvAQoYR2V0U3RhZ2VFeGVjdXRpb25EZXRh",
+            "aWxzEjguZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuR2V0U3RhZ2VFeGVjdXRp",
+            "b25EZXRhaWxzUmVxdWVzdBouLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLlN0",
+            "YWdlRXhlY3V0aW9uRGV0YWlscyJpgtPkkwJjEmEvdjFiMy9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9iX2lk",
+            "fS9zdGFnZXMve3N0YWdlX2lkfS9leGVjdXRpb25EZXRhaWxzGnPKQRdkYXRh",
+            "Zmxvdy5nb29nbGVhcGlzLmNvbdJBVmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jb21wdXRlQs8BChtjb20uZ29vZ2xlLmRhdGFmbG93LnYx",
+            "YmV0YTNCDE1ldHJpY3NQcm90b1ABWj1jbG91ZC5nb29nbGUuY29tL2dvL2Rh",
+            "dGFmbG93L2FwaXYxYmV0YTMvZGF0YWZsb3dwYjtkYXRhZmxvd3BiqgIdR29v",
+            "Z2xlLkNsb3VkLkRhdGFmbG93LlYxQmV0YTPKAh1Hb29nbGVcQ2xvdWRcRGF0",
+            "YWZsb3dcVjFiZXRhM+oCIEdvb2dsZTo6Q2xvdWQ6OkRhdGFmbG93OjpWMWJl",
+            "dGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.ExecutionState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.MetricStructuredName), global::Google.Cloud.Dataflow.V1Beta3.MetricStructuredName.Parser, new[]{ "Origin", "Name", "Context" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.MetricUpdate), global::Google.Cloud.Dataflow.V1Beta3.MetricUpdate.Parser, new[]{ "Name", "Kind", "Cumulative", "Scalar", "MeanSum", "MeanCount", "Set", "Distribution", "Gauge", "Internal", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.MetricUpdate), global::Google.Cloud.Dataflow.V1Beta3.MetricUpdate.Parser, new[]{ "Name", "Kind", "Cumulative", "Scalar", "MeanSum", "MeanCount", "Set", "Trie", "Distribution", "Gauge", "Internal", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.GetJobMetricsRequest), global::Google.Cloud.Dataflow.V1Beta3.GetJobMetricsRequest.Parser, new[]{ "ProjectId", "JobId", "StartTime", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.JobMetrics), global::Google.Cloud.Dataflow.V1Beta3.JobMetrics.Parser, new[]{ "MetricTime", "Metrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.GetJobExecutionDetailsRequest), global::Google.Cloud.Dataflow.V1Beta3.GetJobExecutionDetailsRequest.Parser, new[]{ "ProjectId", "JobId", "Location", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ProgressTimeseries), global::Google.Cloud.Dataflow.V1Beta3.ProgressTimeseries.Parser, new[]{ "CurrentProgress", "DataPoints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ProgressTimeseries.Types.Point), global::Google.Cloud.Dataflow.V1Beta3.ProgressTimeseries.Types.Point.Parser, new[]{ "Time", "Value" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StageSummary), global::Google.Cloud.Dataflow.V1Beta3.StageSummary.Parser, new[]{ "StageId", "State", "StartTime", "EndTime", "Progress", "Metrics" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo), global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Parser, new[]{ "StartTime", "Causes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo), global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo.Parser, new[]{ "HotKey" }, new[]{ "StragglerDebuggingInfoValue" }, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo), global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo.Parser, new[]{ "StartTime", "EndTime", "WorkerName", "DataWatermarkLag", "SystemWatermarkLag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Straggler), global::Google.Cloud.Dataflow.V1Beta3.Straggler.Parser, new[]{ "BatchStraggler", "StreamingStraggler" }, new[]{ "StragglerInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo), global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Parser, new[]{ "DetectedHotKeys" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo), global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo.Parser, new[]{ "HotKeyAge", "Key", "KeyTruncated" }, null, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary), global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary.Parser, new[]{ "TotalStragglerCount", "StragglerCauseCount", "RecentStragglers" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StageSummary), global::Google.Cloud.Dataflow.V1Beta3.StageSummary.Parser, new[]{ "StageId", "State", "StartTime", "EndTime", "Progress", "Metrics", "StragglerSummary" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.JobExecutionDetails), global::Google.Cloud.Dataflow.V1Beta3.JobExecutionDetails.Parser, new[]{ "Stages", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.GetStageExecutionDetailsRequest), global::Google.Cloud.Dataflow.V1Beta3.GetStageExecutionDetailsRequest.Parser, new[]{ "ProjectId", "JobId", "Location", "StageId", "PageSize", "PageToken", "StartTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkItemDetails), global::Google.Cloud.Dataflow.V1Beta3.WorkItemDetails.Parser, new[]{ "TaskId", "AttemptId", "StartTime", "EndTime", "State", "Progress", "Metrics" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkItemDetails), global::Google.Cloud.Dataflow.V1Beta3.WorkItemDetails.Parser, new[]{ "TaskId", "AttemptId", "StartTime", "EndTime", "State", "Progress", "Metrics", "StragglerInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkerDetails), global::Google.Cloud.Dataflow.V1Beta3.WorkerDetails.Parser, new[]{ "WorkerName", "WorkItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StageExecutionDetails), global::Google.Cloud.Dataflow.V1Beta3.StageExecutionDetails.Parser, new[]{ "Workers", "NextPageToken" }, null, null, null, null)
           }));
@@ -439,6 +480,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
 
   /// <summary>
   /// Describes the state of a metric.
+  /// Next ID: 14
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricUpdate : pb::IMessage<MetricUpdate>
@@ -482,6 +524,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       meanSum_ = other.meanSum_ != null ? other.meanSum_.Clone() : null;
       meanCount_ = other.meanCount_ != null ? other.meanCount_.Clone() : null;
       set_ = other.set_ != null ? other.set_.Clone() : null;
+      trie_ = other.trie_ != null ? other.trie_.Clone() : null;
       distribution_ = other.distribution_ != null ? other.distribution_.Clone() : null;
       gauge_ = other.gauge_ != null ? other.gauge_.Clone() : null;
       internal_ = other.internal_ != null ? other.internal_.Clone() : null;
@@ -606,8 +649,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     /// <summary>
     /// Worker-computed aggregate value for the "Set" aggregation kind.  The only
     /// possible value type is a list of Values whose type can be Long, Double,
-    /// or String, according to the metric's type.  All Values in the list must
-    /// be of the same type.
+    /// String, or BoundedTrie according to the metric's type.  All Values in the
+    /// list must be of the same type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -615,6 +658,22 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       get { return set_; }
       set {
         set_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "trie" field.</summary>
+    public const int TrieFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Value trie_;
+    /// <summary>
+    /// Worker-computed aggregate value for the "Trie" aggregation kind.  The only
+    /// possible value type is a BoundedTrieNode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Value Trie {
+      get { return trie_; }
+      set {
+        trie_ = value;
       }
     }
 
@@ -705,6 +764,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (!object.Equals(MeanSum, other.MeanSum)) return false;
       if (!object.Equals(MeanCount, other.MeanCount)) return false;
       if (!object.Equals(Set, other.Set)) return false;
+      if (!object.Equals(Trie, other.Trie)) return false;
       if (!object.Equals(Distribution, other.Distribution)) return false;
       if (!object.Equals(Gauge, other.Gauge)) return false;
       if (!object.Equals(Internal, other.Internal)) return false;
@@ -723,6 +783,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (meanSum_ != null) hash ^= MeanSum.GetHashCode();
       if (meanCount_ != null) hash ^= MeanCount.GetHashCode();
       if (set_ != null) hash ^= Set.GetHashCode();
+      if (trie_ != null) hash ^= Trie.GetHashCode();
       if (distribution_ != null) hash ^= Distribution.GetHashCode();
       if (gauge_ != null) hash ^= Gauge.GetHashCode();
       if (internal_ != null) hash ^= Internal.GetHashCode();
@@ -789,6 +850,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(98);
         output.WriteMessage(Gauge);
       }
+      if (trie_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Trie);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -843,6 +908,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(98);
         output.WriteMessage(Gauge);
       }
+      if (trie_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Trie);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -873,6 +942,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (set_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Set);
+      }
+      if (trie_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Trie);
       }
       if (distribution_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distribution);
@@ -933,6 +1005,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           Set = new global::Google.Protobuf.WellKnownTypes.Value();
         }
         Set.MergeFrom(other.Set);
+      }
+      if (other.trie_ != null) {
+        if (trie_ == null) {
+          Trie = new global::Google.Protobuf.WellKnownTypes.Value();
+        }
+        Trie.MergeFrom(other.Trie);
       }
       if (other.distribution_ != null) {
         if (distribution_ == null) {
@@ -1044,6 +1122,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             input.ReadMessage(Gauge);
             break;
           }
+          case 106: {
+            if (trie_ == null) {
+              Trie = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            input.ReadMessage(Trie);
+            break;
+          }
         }
       }
     #endif
@@ -1128,6 +1213,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
               Gauge = new global::Google.Protobuf.WellKnownTypes.Value();
             }
             input.ReadMessage(Gauge);
+            break;
+          }
+          case 106: {
+            if (trie_ == null) {
+              Trie = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            input.ReadMessage(Trie);
             break;
           }
         }
@@ -1468,7 +1560,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// JobMetrics contains a collection of metrics describing the detailed progress
   /// of a Dataflow job. Metrics correspond to user-defined and system-defined
-  /// metrics in the job.
+  /// metrics in the job. For more information, see [Dataflow job metrics]
+  /// (https://cloud.google.com/dataflow/docs/guides/using-monitoring-intf).
   ///
   /// This resource captures only the most recent values of each metric;
   /// time-series data can be queried for them (under the same metric names)
@@ -2548,6 +2641,1915 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   }
 
   /// <summary>
+  /// Information useful for straggler identification and debugging.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StragglerInfo : pb::IMessage<StragglerInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StragglerInfo> _parser = new pb::MessageParser<StragglerInfo>(() => new StragglerInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StragglerInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerInfo(StragglerInfo other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      causes_ = other.causes_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerInfo Clone() {
+      return new StragglerInfo(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time when the work item attempt became a straggler.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "causes" field.</summary>
+    public const int CausesFieldNumber = 2;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo>.Codec _map_causes_codec
+        = new pbc::MapField<string, global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo.Parser), 18);
+    private readonly pbc::MapField<string, global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo> causes_ = new pbc::MapField<string, global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo>();
+    /// <summary>
+    /// The straggler causes, keyed by the string representation of the
+    /// StragglerCause enum and contains specialized debugging information for each
+    /// straggler cause.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Types.StragglerDebuggingInfo> Causes {
+      get { return causes_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StragglerInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StragglerInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!Causes.Equals(other.Causes)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      hash ^= Causes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      causes_.WriteTo(output, _map_causes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      causes_.WriteTo(ref output, _map_causes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      size += causes_.CalculateSize(_map_causes_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StragglerInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      causes_.MergeFrom(other.causes_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            causes_.AddEntriesFrom(input, _map_causes_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            causes_.AddEntriesFrom(ref input, _map_causes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the StragglerInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Information useful for debugging a straggler. Each type will provide
+      /// specialized debugging information relevant for a particular cause.
+      /// The StragglerDebuggingInfo will be 1:1 mapping to the StragglerCause enum.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StragglerDebuggingInfo : pb::IMessage<StragglerDebuggingInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StragglerDebuggingInfo> _parser = new pb::MessageParser<StragglerDebuggingInfo>(() => new StragglerDebuggingInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StragglerDebuggingInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StragglerDebuggingInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StragglerDebuggingInfo(StragglerDebuggingInfo other) : this() {
+          switch (other.StragglerDebuggingInfoValueCase) {
+            case StragglerDebuggingInfoValueOneofCase.HotKey:
+              HotKey = other.HotKey.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StragglerDebuggingInfo Clone() {
+          return new StragglerDebuggingInfo(this);
+        }
+
+        /// <summary>Field number for the "hot_key" field.</summary>
+        public const int HotKeyFieldNumber = 1;
+        /// <summary>
+        /// Hot key debugging details.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo HotKey {
+          get { return stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey ? (global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo) stragglerDebuggingInfoValue_ : null; }
+          set {
+            stragglerDebuggingInfoValue_ = value;
+            stragglerDebuggingInfoValueCase_ = value == null ? StragglerDebuggingInfoValueOneofCase.None : StragglerDebuggingInfoValueOneofCase.HotKey;
+          }
+        }
+
+        private object stragglerDebuggingInfoValue_;
+        /// <summary>Enum of possible cases for the "straggler_debugging_info_value" oneof.</summary>
+        public enum StragglerDebuggingInfoValueOneofCase {
+          None = 0,
+          HotKey = 1,
+        }
+        private StragglerDebuggingInfoValueOneofCase stragglerDebuggingInfoValueCase_ = StragglerDebuggingInfoValueOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StragglerDebuggingInfoValueOneofCase StragglerDebuggingInfoValueCase {
+          get { return stragglerDebuggingInfoValueCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStragglerDebuggingInfoValue() {
+          stragglerDebuggingInfoValueCase_ = StragglerDebuggingInfoValueOneofCase.None;
+          stragglerDebuggingInfoValue_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StragglerDebuggingInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StragglerDebuggingInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(HotKey, other.HotKey)) return false;
+          if (StragglerDebuggingInfoValueCase != other.StragglerDebuggingInfoValueCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey) hash ^= HotKey.GetHashCode();
+          hash ^= (int) stragglerDebuggingInfoValueCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey) {
+            output.WriteRawTag(10);
+            output.WriteMessage(HotKey);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey) {
+            output.WriteRawTag(10);
+            output.WriteMessage(HotKey);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(HotKey);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StragglerDebuggingInfo other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.StragglerDebuggingInfoValueCase) {
+            case StragglerDebuggingInfoValueOneofCase.HotKey:
+              if (HotKey == null) {
+                HotKey = new global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo();
+              }
+              HotKey.MergeFrom(other.HotKey);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo subBuilder = new global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo();
+                if (stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey) {
+                  subBuilder.MergeFrom(HotKey);
+                }
+                input.ReadMessage(subBuilder);
+                HotKey = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo subBuilder = new global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo();
+                if (stragglerDebuggingInfoValueCase_ == StragglerDebuggingInfoValueOneofCase.HotKey) {
+                  subBuilder.MergeFrom(HotKey);
+                }
+                input.ReadMessage(subBuilder);
+                HotKey = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Information useful for streaming straggler identification and debugging.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamingStragglerInfo : pb::IMessage<StreamingStragglerInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamingStragglerInfo> _parser = new pb::MessageParser<StreamingStragglerInfo>(() => new StreamingStragglerInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamingStragglerInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamingStragglerInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamingStragglerInfo(StreamingStragglerInfo other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      workerName_ = other.workerName_;
+      dataWatermarkLag_ = other.dataWatermarkLag_ != null ? other.dataWatermarkLag_.Clone() : null;
+      systemWatermarkLag_ = other.systemWatermarkLag_ != null ? other.systemWatermarkLag_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamingStragglerInfo Clone() {
+      return new StreamingStragglerInfo(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Start time of this straggler.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// End time of this straggler.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "worker_name" field.</summary>
+    public const int WorkerNameFieldNumber = 3;
+    private string workerName_ = "";
+    /// <summary>
+    /// Name of the worker where the straggler was detected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WorkerName {
+      get { return workerName_; }
+      set {
+        workerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_watermark_lag" field.</summary>
+    public const int DataWatermarkLagFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Duration dataWatermarkLag_;
+    /// <summary>
+    /// The event-time watermark lag at the time of the straggler detection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration DataWatermarkLag {
+      get { return dataWatermarkLag_; }
+      set {
+        dataWatermarkLag_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "system_watermark_lag" field.</summary>
+    public const int SystemWatermarkLagFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Duration systemWatermarkLag_;
+    /// <summary>
+    /// The system watermark lag at the time of the straggler detection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration SystemWatermarkLag {
+      get { return systemWatermarkLag_; }
+      set {
+        systemWatermarkLag_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamingStragglerInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamingStragglerInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (WorkerName != other.WorkerName) return false;
+      if (!object.Equals(DataWatermarkLag, other.DataWatermarkLag)) return false;
+      if (!object.Equals(SystemWatermarkLag, other.SystemWatermarkLag)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (WorkerName.Length != 0) hash ^= WorkerName.GetHashCode();
+      if (dataWatermarkLag_ != null) hash ^= DataWatermarkLag.GetHashCode();
+      if (systemWatermarkLag_ != null) hash ^= SystemWatermarkLag.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (WorkerName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WorkerName);
+      }
+      if (dataWatermarkLag_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DataWatermarkLag);
+      }
+      if (systemWatermarkLag_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SystemWatermarkLag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (WorkerName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WorkerName);
+      }
+      if (dataWatermarkLag_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DataWatermarkLag);
+      }
+      if (systemWatermarkLag_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SystemWatermarkLag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (WorkerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerName);
+      }
+      if (dataWatermarkLag_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataWatermarkLag);
+      }
+      if (systemWatermarkLag_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SystemWatermarkLag);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamingStragglerInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.WorkerName.Length != 0) {
+        WorkerName = other.WorkerName;
+      }
+      if (other.dataWatermarkLag_ != null) {
+        if (dataWatermarkLag_ == null) {
+          DataWatermarkLag = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        DataWatermarkLag.MergeFrom(other.DataWatermarkLag);
+      }
+      if (other.systemWatermarkLag_ != null) {
+        if (systemWatermarkLag_ == null) {
+          SystemWatermarkLag = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        SystemWatermarkLag.MergeFrom(other.SystemWatermarkLag);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            WorkerName = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (dataWatermarkLag_ == null) {
+              DataWatermarkLag = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DataWatermarkLag);
+            break;
+          }
+          case 42: {
+            if (systemWatermarkLag_ == null) {
+              SystemWatermarkLag = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(SystemWatermarkLag);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            WorkerName = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (dataWatermarkLag_ == null) {
+              DataWatermarkLag = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DataWatermarkLag);
+            break;
+          }
+          case 42: {
+            if (systemWatermarkLag_ == null) {
+              SystemWatermarkLag = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(SystemWatermarkLag);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Information for a straggler.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Straggler : pb::IMessage<Straggler>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Straggler> _parser = new pb::MessageParser<Straggler>(() => new Straggler());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Straggler> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Straggler() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Straggler(Straggler other) : this() {
+      switch (other.StragglerInfoCase) {
+        case StragglerInfoOneofCase.BatchStraggler:
+          BatchStraggler = other.BatchStraggler.Clone();
+          break;
+        case StragglerInfoOneofCase.StreamingStraggler:
+          StreamingStraggler = other.StreamingStraggler.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Straggler Clone() {
+      return new Straggler(this);
+    }
+
+    /// <summary>Field number for the "batch_straggler" field.</summary>
+    public const int BatchStragglerFieldNumber = 1;
+    /// <summary>
+    /// Batch straggler identification and debugging information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo BatchStraggler {
+      get { return stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler ? (global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo) stragglerInfo_ : null; }
+      set {
+        stragglerInfo_ = value;
+        stragglerInfoCase_ = value == null ? StragglerInfoOneofCase.None : StragglerInfoOneofCase.BatchStraggler;
+      }
+    }
+
+    /// <summary>Field number for the "streaming_straggler" field.</summary>
+    public const int StreamingStragglerFieldNumber = 2;
+    /// <summary>
+    /// Streaming straggler identification and debugging information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo StreamingStraggler {
+      get { return stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler ? (global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo) stragglerInfo_ : null; }
+      set {
+        stragglerInfo_ = value;
+        stragglerInfoCase_ = value == null ? StragglerInfoOneofCase.None : StragglerInfoOneofCase.StreamingStraggler;
+      }
+    }
+
+    private object stragglerInfo_;
+    /// <summary>Enum of possible cases for the "straggler_info" oneof.</summary>
+    public enum StragglerInfoOneofCase {
+      None = 0,
+      BatchStraggler = 1,
+      StreamingStraggler = 2,
+    }
+    private StragglerInfoOneofCase stragglerInfoCase_ = StragglerInfoOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerInfoOneofCase StragglerInfoCase {
+      get { return stragglerInfoCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStragglerInfo() {
+      stragglerInfoCase_ = StragglerInfoOneofCase.None;
+      stragglerInfo_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Straggler);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Straggler other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(BatchStraggler, other.BatchStraggler)) return false;
+      if (!object.Equals(StreamingStraggler, other.StreamingStraggler)) return false;
+      if (StragglerInfoCase != other.StragglerInfoCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler) hash ^= BatchStraggler.GetHashCode();
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler) hash ^= StreamingStraggler.GetHashCode();
+      hash ^= (int) stragglerInfoCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BatchStraggler);
+      }
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StreamingStraggler);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BatchStraggler);
+      }
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StreamingStraggler);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BatchStraggler);
+      }
+      if (stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingStraggler);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Straggler other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.StragglerInfoCase) {
+        case StragglerInfoOneofCase.BatchStraggler:
+          if (BatchStraggler == null) {
+            BatchStraggler = new global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo();
+          }
+          BatchStraggler.MergeFrom(other.BatchStraggler);
+          break;
+        case StragglerInfoOneofCase.StreamingStraggler:
+          if (StreamingStraggler == null) {
+            StreamingStraggler = new global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo();
+          }
+          StreamingStraggler.MergeFrom(other.StreamingStraggler);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo subBuilder = new global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo();
+            if (stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler) {
+              subBuilder.MergeFrom(BatchStraggler);
+            }
+            input.ReadMessage(subBuilder);
+            BatchStraggler = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo subBuilder = new global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo();
+            if (stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler) {
+              subBuilder.MergeFrom(StreamingStraggler);
+            }
+            input.ReadMessage(subBuilder);
+            StreamingStraggler = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo subBuilder = new global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo();
+            if (stragglerInfoCase_ == StragglerInfoOneofCase.BatchStraggler) {
+              subBuilder.MergeFrom(BatchStraggler);
+            }
+            input.ReadMessage(subBuilder);
+            BatchStraggler = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo subBuilder = new global::Google.Cloud.Dataflow.V1Beta3.StreamingStragglerInfo();
+            if (stragglerInfoCase_ == StragglerInfoOneofCase.StreamingStraggler) {
+              subBuilder.MergeFrom(StreamingStraggler);
+            }
+            input.ReadMessage(subBuilder);
+            StreamingStraggler = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Information useful for debugging a hot key detection.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class HotKeyDebuggingInfo : pb::IMessage<HotKeyDebuggingInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HotKeyDebuggingInfo> _parser = new pb::MessageParser<HotKeyDebuggingInfo>(() => new HotKeyDebuggingInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HotKeyDebuggingInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HotKeyDebuggingInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HotKeyDebuggingInfo(HotKeyDebuggingInfo other) : this() {
+      detectedHotKeys_ = other.detectedHotKeys_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HotKeyDebuggingInfo Clone() {
+      return new HotKeyDebuggingInfo(this);
+    }
+
+    /// <summary>Field number for the "detected_hot_keys" field.</summary>
+    public const int DetectedHotKeysFieldNumber = 1;
+    private static readonly pbc::MapField<ulong, global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo>.Codec _map_detectedHotKeys_codec
+        = new pbc::MapField<ulong, global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo>.Codec(pb::FieldCodec.ForUInt64(8, 0UL), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo.Parser), 10);
+    private readonly pbc::MapField<ulong, global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo> detectedHotKeys_ = new pbc::MapField<ulong, global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo>();
+    /// <summary>
+    /// Debugging information for each detected hot key. Keyed by a hash of the
+    /// key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<ulong, global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Types.HotKeyInfo> DetectedHotKeys {
+      get { return detectedHotKeys_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HotKeyDebuggingInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HotKeyDebuggingInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!DetectedHotKeys.Equals(other.DetectedHotKeys)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= DetectedHotKeys.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      detectedHotKeys_.WriteTo(output, _map_detectedHotKeys_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      detectedHotKeys_.WriteTo(ref output, _map_detectedHotKeys_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += detectedHotKeys_.CalculateSize(_map_detectedHotKeys_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HotKeyDebuggingInfo other) {
+      if (other == null) {
+        return;
+      }
+      detectedHotKeys_.MergeFrom(other.detectedHotKeys_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            detectedHotKeys_.AddEntriesFrom(input, _map_detectedHotKeys_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            detectedHotKeys_.AddEntriesFrom(ref input, _map_detectedHotKeys_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the HotKeyDebuggingInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Information about a hot key.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class HotKeyInfo : pb::IMessage<HotKeyInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HotKeyInfo> _parser = new pb::MessageParser<HotKeyInfo>(() => new HotKeyInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<HotKeyInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataflow.V1Beta3.HotKeyDebuggingInfo.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HotKeyInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HotKeyInfo(HotKeyInfo other) : this() {
+          hotKeyAge_ = other.hotKeyAge_ != null ? other.hotKeyAge_.Clone() : null;
+          key_ = other.key_;
+          keyTruncated_ = other.keyTruncated_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HotKeyInfo Clone() {
+          return new HotKeyInfo(this);
+        }
+
+        /// <summary>Field number for the "hot_key_age" field.</summary>
+        public const int HotKeyAgeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Duration hotKeyAge_;
+        /// <summary>
+        /// The age of the hot key measured from when it was first detected.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration HotKeyAge {
+          get { return hotKeyAge_; }
+          set {
+            hotKeyAge_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 2;
+        private string key_ = "";
+        /// <summary>
+        /// A detected hot key that is causing limited parallelism. This field will
+        /// be populated only if the following flag is set to true:
+        /// "--enable_hot_key_logging".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Key {
+          get { return key_; }
+          set {
+            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "key_truncated" field.</summary>
+        public const int KeyTruncatedFieldNumber = 3;
+        private bool keyTruncated_;
+        /// <summary>
+        /// If true, then the above key is truncated and cannot be deserialized. This
+        /// occurs if the key above is populated and the key size is >5MB.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool KeyTruncated {
+          get { return keyTruncated_; }
+          set {
+            keyTruncated_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as HotKeyInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(HotKeyInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(HotKeyAge, other.HotKeyAge)) return false;
+          if (Key != other.Key) return false;
+          if (KeyTruncated != other.KeyTruncated) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (hotKeyAge_ != null) hash ^= HotKeyAge.GetHashCode();
+          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          if (KeyTruncated != false) hash ^= KeyTruncated.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (hotKeyAge_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(HotKeyAge);
+          }
+          if (Key.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Key);
+          }
+          if (KeyTruncated != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(KeyTruncated);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (hotKeyAge_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(HotKeyAge);
+          }
+          if (Key.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Key);
+          }
+          if (KeyTruncated != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(KeyTruncated);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (hotKeyAge_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(HotKeyAge);
+          }
+          if (Key.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+          }
+          if (KeyTruncated != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(HotKeyInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.hotKeyAge_ != null) {
+            if (hotKeyAge_ == null) {
+              HotKeyAge = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            HotKeyAge.MergeFrom(other.HotKeyAge);
+          }
+          if (other.Key.Length != 0) {
+            Key = other.Key;
+          }
+          if (other.KeyTruncated != false) {
+            KeyTruncated = other.KeyTruncated;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (hotKeyAge_ == null) {
+                  HotKeyAge = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(HotKeyAge);
+                break;
+              }
+              case 18: {
+                Key = input.ReadString();
+                break;
+              }
+              case 24: {
+                KeyTruncated = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (hotKeyAge_ == null) {
+                  HotKeyAge = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(HotKeyAge);
+                break;
+              }
+              case 18: {
+                Key = input.ReadString();
+                break;
+              }
+              case 24: {
+                KeyTruncated = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Summarized straggler identification details.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StragglerSummary : pb::IMessage<StragglerSummary>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StragglerSummary> _parser = new pb::MessageParser<StragglerSummary>(() => new StragglerSummary());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StragglerSummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerSummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerSummary(StragglerSummary other) : this() {
+      totalStragglerCount_ = other.totalStragglerCount_;
+      stragglerCauseCount_ = other.stragglerCauseCount_.Clone();
+      recentStragglers_ = other.recentStragglers_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StragglerSummary Clone() {
+      return new StragglerSummary(this);
+    }
+
+    /// <summary>Field number for the "total_straggler_count" field.</summary>
+    public const int TotalStragglerCountFieldNumber = 1;
+    private long totalStragglerCount_;
+    /// <summary>
+    /// The total count of stragglers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalStragglerCount {
+      get { return totalStragglerCount_; }
+      set {
+        totalStragglerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "straggler_cause_count" field.</summary>
+    public const int StragglerCauseCountFieldNumber = 2;
+    private static readonly pbc::MapField<string, long>.Codec _map_stragglerCauseCount_codec
+        = new pbc::MapField<string, long>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt64(16, 0L), 18);
+    private readonly pbc::MapField<string, long> stragglerCauseCount_ = new pbc::MapField<string, long>();
+    /// <summary>
+    /// Aggregated counts of straggler causes, keyed by the string representation
+    /// of the StragglerCause enum.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, long> StragglerCauseCount {
+      get { return stragglerCauseCount_; }
+    }
+
+    /// <summary>Field number for the "recent_stragglers" field.</summary>
+    public const int RecentStragglersFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataflow.V1Beta3.Straggler> _repeated_recentStragglers_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dataflow.V1Beta3.Straggler.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.Straggler> recentStragglers_ = new pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.Straggler>();
+    /// <summary>
+    /// The most recent stragglers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.Straggler> RecentStragglers {
+      get { return recentStragglers_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StragglerSummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StragglerSummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TotalStragglerCount != other.TotalStragglerCount) return false;
+      if (!StragglerCauseCount.Equals(other.StragglerCauseCount)) return false;
+      if(!recentStragglers_.Equals(other.recentStragglers_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TotalStragglerCount != 0L) hash ^= TotalStragglerCount.GetHashCode();
+      hash ^= StragglerCauseCount.GetHashCode();
+      hash ^= recentStragglers_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TotalStragglerCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TotalStragglerCount);
+      }
+      stragglerCauseCount_.WriteTo(output, _map_stragglerCauseCount_codec);
+      recentStragglers_.WriteTo(output, _repeated_recentStragglers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TotalStragglerCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TotalStragglerCount);
+      }
+      stragglerCauseCount_.WriteTo(ref output, _map_stragglerCauseCount_codec);
+      recentStragglers_.WriteTo(ref output, _repeated_recentStragglers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TotalStragglerCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalStragglerCount);
+      }
+      size += stragglerCauseCount_.CalculateSize(_map_stragglerCauseCount_codec);
+      size += recentStragglers_.CalculateSize(_repeated_recentStragglers_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StragglerSummary other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TotalStragglerCount != 0L) {
+        TotalStragglerCount = other.TotalStragglerCount;
+      }
+      stragglerCauseCount_.MergeFrom(other.stragglerCauseCount_);
+      recentStragglers_.Add(other.recentStragglers_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TotalStragglerCount = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            stragglerCauseCount_.AddEntriesFrom(input, _map_stragglerCauseCount_codec);
+            break;
+          }
+          case 26: {
+            recentStragglers_.AddEntriesFrom(input, _repeated_recentStragglers_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TotalStragglerCount = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            stragglerCauseCount_.AddEntriesFrom(ref input, _map_stragglerCauseCount_codec);
+            break;
+          }
+          case 26: {
+            recentStragglers_.AddEntriesFrom(ref input, _repeated_recentStragglers_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Information about a particular execution stage of a job.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2565,7 +4567,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2591,6 +4593,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       progress_ = other.progress_ != null ? other.progress_.Clone() : null;
       metrics_ = other.metrics_.Clone();
+      stragglerSummary_ = other.stragglerSummary_ != null ? other.stragglerSummary_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2693,6 +4696,21 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       get { return metrics_; }
     }
 
+    /// <summary>Field number for the "straggler_summary" field.</summary>
+    public const int StragglerSummaryFieldNumber = 7;
+    private global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary stragglerSummary_;
+    /// <summary>
+    /// Straggler summary for this stage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary StragglerSummary {
+      get { return stragglerSummary_; }
+      set {
+        stragglerSummary_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2714,6 +4732,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (!object.Equals(Progress, other.Progress)) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
+      if (!object.Equals(StragglerSummary, other.StragglerSummary)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2727,6 +4746,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (progress_ != null) hash ^= Progress.GetHashCode();
       hash ^= metrics_.GetHashCode();
+      if (stragglerSummary_ != null) hash ^= StragglerSummary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2766,6 +4786,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteMessage(Progress);
       }
       metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (stragglerSummary_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StragglerSummary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2797,6 +4821,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteMessage(Progress);
       }
       metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (stragglerSummary_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StragglerSummary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2823,6 +4851,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Progress);
       }
       size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (stragglerSummary_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StragglerSummary);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2860,6 +4891,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         Progress.MergeFrom(other.Progress);
       }
       metrics_.Add(other.metrics_);
+      if (other.stragglerSummary_ != null) {
+        if (stragglerSummary_ == null) {
+          StragglerSummary = new global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary();
+        }
+        StragglerSummary.MergeFrom(other.StragglerSummary);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2906,6 +4943,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 50: {
             metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 58: {
+            if (stragglerSummary_ == null) {
+              StragglerSummary = new global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary();
+            }
+            input.ReadMessage(StragglerSummary);
             break;
           }
         }
@@ -2956,6 +5000,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
             break;
           }
+          case 58: {
+            if (stragglerSummary_ == null) {
+              StragglerSummary = new global::Google.Cloud.Dataflow.V1Beta3.StragglerSummary();
+            }
+            input.ReadMessage(StragglerSummary);
+            break;
+          }
         }
       }
     }
@@ -2981,7 +5032,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3209,7 +5260,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3709,7 +5760,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3736,6 +5787,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       state_ = other.state_;
       progress_ = other.progress_ != null ? other.progress_.Clone() : null;
       metrics_ = other.metrics_.Clone();
+      stragglerInfo_ = other.stragglerInfo_ != null ? other.stragglerInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3852,6 +5904,21 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       get { return metrics_; }
     }
 
+    /// <summary>Field number for the "straggler_info" field.</summary>
+    public const int StragglerInfoFieldNumber = 8;
+    private global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo stragglerInfo_;
+    /// <summary>
+    /// Information about straggler detections for this work item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo StragglerInfo {
+      get { return stragglerInfo_; }
+      set {
+        stragglerInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3874,6 +5941,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (State != other.State) return false;
       if (!object.Equals(Progress, other.Progress)) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
+      if (!object.Equals(StragglerInfo, other.StragglerInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3888,6 +5956,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (State != global::Google.Cloud.Dataflow.V1Beta3.ExecutionState.Unknown) hash ^= State.GetHashCode();
       if (progress_ != null) hash ^= Progress.GetHashCode();
       hash ^= metrics_.GetHashCode();
+      if (stragglerInfo_ != null) hash ^= StragglerInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3931,6 +6000,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteMessage(Progress);
       }
       metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (stragglerInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(StragglerInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3966,6 +6039,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteMessage(Progress);
       }
       metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (stragglerInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(StragglerInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3995,6 +6072,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Progress);
       }
       size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (stragglerInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StragglerInfo);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4035,6 +6115,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         Progress.MergeFrom(other.Progress);
       }
       metrics_.Add(other.metrics_);
+      if (other.stragglerInfo_ != null) {
+        if (stragglerInfo_ == null) {
+          StragglerInfo = new global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo();
+        }
+        StragglerInfo.MergeFrom(other.StragglerInfo);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4085,6 +6171,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 58: {
             metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 66: {
+            if (stragglerInfo_ == null) {
+              StragglerInfo = new global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo();
+            }
+            input.ReadMessage(StragglerInfo);
             break;
           }
         }
@@ -4139,6 +6232,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
             break;
           }
+          case 66: {
+            if (stragglerInfo_ == null) {
+              StragglerInfo = new global::Google.Cloud.Dataflow.V1Beta3.StragglerInfo();
+            }
+            input.ReadMessage(StragglerInfo);
+            break;
+          }
         }
       }
     }
@@ -4164,7 +6264,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4389,7 +6489,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.MetricsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

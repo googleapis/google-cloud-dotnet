@@ -119,6 +119,7 @@ namespace GoogleCSharpSnippets
                 JobId = "",
                 Job = new Job(),
                 Location = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Job response = jobsV1Beta3Client.UpdateJob(request);
@@ -139,6 +140,7 @@ namespace GoogleCSharpSnippets
                 JobId = "",
                 Job = new Job(),
                 Location = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Job response = await jobsV1Beta3Client.UpdateJobAsync(request);
@@ -156,6 +158,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Filter = ListJobsRequest.Types.Filter.Unknown,
+                Name = "",
                 Location = "",
             };
             // Make the request
@@ -206,6 +209,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Filter = ListJobsRequest.Types.Filter.Unknown,
+                Name = "",
                 Location = "",
             };
             // Make the request
@@ -256,6 +260,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Filter = ListJobsRequest.Types.Filter.Unknown,
+                Name = "",
                 Location = "",
             };
             // Make the request
@@ -306,6 +311,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Filter = ListJobsRequest.Types.Filter.Unknown,
+                Name = "",
                 Location = "",
             };
             // Make the request

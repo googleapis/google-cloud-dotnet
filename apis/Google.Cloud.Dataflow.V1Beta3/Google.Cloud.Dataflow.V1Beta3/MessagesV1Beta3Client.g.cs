@@ -139,16 +139,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// <item><description>https://www.googleapis.com/auth/compute</description></item>
-        /// <item><description>https://www.googleapis.com/auth/compute.readonly</description></item>
-        /// <item><description>https://www.googleapis.com/auth/userinfo.email</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/compute",
-            "https://www.googleapis.com/auth/compute.readonly",
-            "https://www.googleapis.com/auth/userinfo.email",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
