@@ -30,17 +30,23 @@ namespace Grafeas.V1 {
             "ZAoIRW52ZWxvcGUSDwoHcGF5bG9hZBgBIAEoDBIUCgxwYXlsb2FkX3R5cGUY",
             "AiABKAkSMQoKc2lnbmF0dXJlcxgDIAMoCzIdLmdyYWZlYXMudjEuRW52ZWxv",
             "cGVTaWduYXR1cmUiLwoRRW52ZWxvcGVTaWduYXR1cmUSCwoDc2lnGAEgASgM",
-            "Eg0KBWtleWlkGAIgASgJIiEKDEZpbGVMb2NhdGlvbhIRCglmaWxlX3BhdGgY",
-            "ASABKAkiLwoHTGljZW5zZRISCgpleHByZXNzaW9uGAEgASgJEhAKCGNvbW1l",
-            "bnRzGAIgASgJIiwKBkRpZ2VzdBIMCgRhbGdvGAEgASgJEhQKDGRpZ2VzdF9i",
-            "eXRlcxgCIAEoDCrwAQoITm90ZUtpbmQSGQoVTk9URV9LSU5EX1VOU1BFQ0lG",
-            "SUVEEAASEQoNVlVMTkVSQUJJTElUWRABEgkKBUJVSUxEEAISCQoFSU1BR0UQ",
-            "AxILCgdQQUNLQUdFEAQSDgoKREVQTE9ZTUVOVBAFEg0KCURJU0NPVkVSWRAG",
-            "Eg8KC0FUVEVTVEFUSU9OEAcSCwoHVVBHUkFERRAIEg4KCkNPTVBMSUFOQ0UQ",
-            "CRIUChBEU1NFX0FUVEVTVEFUSU9OEAoSHAoYVlVMTkVSQUJJTElUWV9BU1NF",
-            "U1NNRU5UEAsSEgoOU0JPTV9SRUZFUkVOQ0UQDEJRCg1pby5ncmFmZWFzLnYx",
-            "UAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3Jh",
-            "ZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "Eg0KBWtleWlkGAIgASgJIlIKDEZpbGVMb2NhdGlvbhIRCglmaWxlX3BhdGgY",
+            "ASABKAkSLwoNbGF5ZXJfZGV0YWlscxgCIAEoCzIYLmdyYWZlYXMudjEuTGF5",
+            "ZXJEZXRhaWxzIkIKCUJhc2VJbWFnZRIMCgRuYW1lGAEgASgJEhIKCnJlcG9z",
+            "aXRvcnkYAiABKAkSEwoLbGF5ZXJfY291bnQYAyABKAUifQoMTGF5ZXJEZXRh",
+            "aWxzEg0KBWluZGV4GAEgASgFEg8KB2RpZmZfaWQYAiABKAkSEAoIY2hhaW5f",
+            "aWQYBSABKAkSDwoHY29tbWFuZBgDIAEoCRIqCgtiYXNlX2ltYWdlcxgEIAMo",
+            "CzIVLmdyYWZlYXMudjEuQmFzZUltYWdlIi8KB0xpY2Vuc2USEgoKZXhwcmVz",
+            "c2lvbhgBIAEoCRIQCghjb21tZW50cxgCIAEoCSIsCgZEaWdlc3QSDAoEYWxn",
+            "bxgBIAEoCRIUCgxkaWdlc3RfYnl0ZXMYAiABKAwq/AEKCE5vdGVLaW5kEhkK",
+            "FU5PVEVfS0lORF9VTlNQRUNJRklFRBAAEhEKDVZVTE5FUkFCSUxJVFkQARIJ",
+            "CgVCVUlMRBACEgkKBUlNQUdFEAMSCwoHUEFDS0FHRRAEEg4KCkRFUExPWU1F",
+            "TlQQBRINCglESVNDT1ZFUlkQBhIPCgtBVFRFU1RBVElPThAHEgsKB1VQR1JB",
+            "REUQCBIOCgpDT01QTElBTkNFEAkSFAoQRFNTRV9BVFRFU1RBVElPThAKEhwK",
+            "GFZVTE5FUkFCSUxJVFlfQVNTRVNTTUVOVBALEhIKDlNCT01fUkVGRVJFTkNF",
+            "EAwSCgoGU0VDUkVUEA1CUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVh",
+            "c6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.NoteKind), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,7 +54,9 @@ namespace Grafeas.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Signature), global::Grafeas.V1.Signature.Parser, new[]{ "Signature_", "PublicKeyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Envelope), global::Grafeas.V1.Envelope.Parser, new[]{ "Payload", "PayloadType", "Signatures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.EnvelopeSignature), global::Grafeas.V1.EnvelopeSignature.Parser, new[]{ "Sig", "Keyid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.FileLocation), global::Grafeas.V1.FileLocation.Parser, new[]{ "FilePath" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.FileLocation), global::Grafeas.V1.FileLocation.Parser, new[]{ "FilePath", "LayerDetails" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BaseImage), global::Grafeas.V1.BaseImage.Parser, new[]{ "Name", "Repository", "LayerCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.LayerDetails), global::Grafeas.V1.LayerDetails.Parser, new[]{ "Index", "DiffId", "ChainId", "Command", "BaseImages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.License), global::Grafeas.V1.License.Parser, new[]{ "Expression", "Comments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Digest), global::Grafeas.V1.Digest.Parser, new[]{ "Algo", "DigestBytes" }, null, null, null, null)
           }));
@@ -113,6 +121,10 @@ namespace Grafeas.V1 {
     /// This represents an SBOM Reference.
     /// </summary>
     [pbr::OriginalName("SBOM_REFERENCE")] SbomReference = 12,
+    /// <summary>
+    /// This represents a secret.
+    /// </summary>
+    [pbr::OriginalName("SECRET")] Secret = 13,
   }
 
   #endregion
@@ -1156,6 +1168,7 @@ namespace Grafeas.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FileLocation(FileLocation other) : this() {
       filePath_ = other.filePath_;
+      layerDetails_ = other.layerDetails_ != null ? other.layerDetails_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1181,6 +1194,22 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "layer_details" field.</summary>
+    public const int LayerDetailsFieldNumber = 2;
+    private global::Grafeas.V1.LayerDetails layerDetails_;
+    /// <summary>
+    /// Each package found in a file should have its own layer metadata (that is,
+    /// information from the origin layer of the package).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.LayerDetails LayerDetails {
+      get { return layerDetails_; }
+      set {
+        layerDetails_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1197,6 +1226,7 @@ namespace Grafeas.V1 {
         return true;
       }
       if (FilePath != other.FilePath) return false;
+      if (!object.Equals(LayerDetails, other.LayerDetails)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1205,6 +1235,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (FilePath.Length != 0) hash ^= FilePath.GetHashCode();
+      if (layerDetails_ != null) hash ^= LayerDetails.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1227,6 +1258,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteString(FilePath);
       }
+      if (layerDetails_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LayerDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1241,6 +1276,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteString(FilePath);
       }
+      if (layerDetails_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LayerDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1253,6 +1292,9 @@ namespace Grafeas.V1 {
       int size = 0;
       if (FilePath.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FilePath);
+      }
+      if (layerDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LayerDetails);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1268,6 +1310,12 @@ namespace Grafeas.V1 {
       }
       if (other.FilePath.Length != 0) {
         FilePath = other.FilePath;
+      }
+      if (other.layerDetails_ != null) {
+        if (layerDetails_ == null) {
+          LayerDetails = new global::Grafeas.V1.LayerDetails();
+        }
+        LayerDetails.MergeFrom(other.LayerDetails);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1288,6 +1336,13 @@ namespace Grafeas.V1 {
             FilePath = input.ReadString();
             break;
           }
+          case 18: {
+            if (layerDetails_ == null) {
+              LayerDetails = new global::Grafeas.V1.LayerDetails();
+            }
+            input.ReadMessage(LayerDetails);
+            break;
+          }
         }
       }
     #endif
@@ -1305,6 +1360,636 @@ namespace Grafeas.V1 {
             break;
           case 10: {
             FilePath = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (layerDetails_ == null) {
+              LayerDetails = new global::Grafeas.V1.LayerDetails();
+            }
+            input.ReadMessage(LayerDetails);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// BaseImage describes a base image of a container image.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BaseImage : pb::IMessage<BaseImage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BaseImage> _parser = new pb::MessageParser<BaseImage>(() => new BaseImage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BaseImage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grafeas.V1.CommonReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BaseImage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BaseImage(BaseImage other) : this() {
+      name_ = other.name_;
+      repository_ = other.repository_;
+      layerCount_ = other.layerCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BaseImage Clone() {
+      return new BaseImage(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The name of the base image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "repository" field.</summary>
+    public const int RepositoryFieldNumber = 2;
+    private string repository_ = "";
+    /// <summary>
+    /// The repository name in which the base image is from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Repository {
+      get { return repository_; }
+      set {
+        repository_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "layer_count" field.</summary>
+    public const int LayerCountFieldNumber = 3;
+    private int layerCount_;
+    /// <summary>
+    /// The number of layers that the base image is composed of.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LayerCount {
+      get { return layerCount_; }
+      set {
+        layerCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BaseImage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BaseImage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Repository != other.Repository) return false;
+      if (LayerCount != other.LayerCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Repository.Length != 0) hash ^= Repository.GetHashCode();
+      if (LayerCount != 0) hash ^= LayerCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Repository.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Repository);
+      }
+      if (LayerCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LayerCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Repository.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Repository);
+      }
+      if (LayerCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LayerCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Repository.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Repository);
+      }
+      if (LayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LayerCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BaseImage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Repository.Length != 0) {
+        Repository = other.Repository;
+      }
+      if (other.LayerCount != 0) {
+        LayerCount = other.LayerCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Repository = input.ReadString();
+            break;
+          }
+          case 24: {
+            LayerCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Repository = input.ReadString();
+            break;
+          }
+          case 24: {
+            LayerCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Details about the layer a package was found in.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LayerDetails : pb::IMessage<LayerDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LayerDetails> _parser = new pb::MessageParser<LayerDetails>(() => new LayerDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LayerDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grafeas.V1.CommonReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LayerDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LayerDetails(LayerDetails other) : this() {
+      index_ = other.index_;
+      diffId_ = other.diffId_;
+      chainId_ = other.chainId_;
+      command_ = other.command_;
+      baseImages_ = other.baseImages_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LayerDetails Clone() {
+      return new LayerDetails(this);
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 1;
+    private int index_;
+    /// <summary>
+    /// The index of the layer in the container image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "diff_id" field.</summary>
+    public const int DiffIdFieldNumber = 2;
+    private string diffId_ = "";
+    /// <summary>
+    /// The diff ID (typically a sha256 hash) of the layer in the container image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DiffId {
+      get { return diffId_; }
+      set {
+        diffId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "chain_id" field.</summary>
+    public const int ChainIdFieldNumber = 5;
+    private string chainId_ = "";
+    /// <summary>
+    /// The layer chain ID (sha256 hash) of the layer in the container image.
+    /// https://github.com/opencontainers/image-spec/blob/main/config.md#layer-chainid
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ChainId {
+      get { return chainId_; }
+      set {
+        chainId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "command" field.</summary>
+    public const int CommandFieldNumber = 3;
+    private string command_ = "";
+    /// <summary>
+    /// The layer build command that was used to build the layer. This may not be
+    /// found in all layers depending on how the container image is built.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Command {
+      get { return command_; }
+      set {
+        command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "base_images" field.</summary>
+    public const int BaseImagesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Grafeas.V1.BaseImage> _repeated_baseImages_codec
+        = pb::FieldCodec.ForMessage(34, global::Grafeas.V1.BaseImage.Parser);
+    private readonly pbc::RepeatedField<global::Grafeas.V1.BaseImage> baseImages_ = new pbc::RepeatedField<global::Grafeas.V1.BaseImage>();
+    /// <summary>
+    /// The base images the layer is found within.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Grafeas.V1.BaseImage> BaseImages {
+      get { return baseImages_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LayerDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LayerDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Index != other.Index) return false;
+      if (DiffId != other.DiffId) return false;
+      if (ChainId != other.ChainId) return false;
+      if (Command != other.Command) return false;
+      if(!baseImages_.Equals(other.baseImages_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (DiffId.Length != 0) hash ^= DiffId.GetHashCode();
+      if (ChainId.Length != 0) hash ^= ChainId.GetHashCode();
+      if (Command.Length != 0) hash ^= Command.GetHashCode();
+      hash ^= baseImages_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Index != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Index);
+      }
+      if (DiffId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DiffId);
+      }
+      if (Command.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Command);
+      }
+      baseImages_.WriteTo(output, _repeated_baseImages_codec);
+      if (ChainId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ChainId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Index != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Index);
+      }
+      if (DiffId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DiffId);
+      }
+      if (Command.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Command);
+      }
+      baseImages_.WriteTo(ref output, _repeated_baseImages_codec);
+      if (ChainId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ChainId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (DiffId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DiffId);
+      }
+      if (ChainId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChainId);
+      }
+      if (Command.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Command);
+      }
+      size += baseImages_.CalculateSize(_repeated_baseImages_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LayerDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      if (other.DiffId.Length != 0) {
+        DiffId = other.DiffId;
+      }
+      if (other.ChainId.Length != 0) {
+        ChainId = other.ChainId;
+      }
+      if (other.Command.Length != 0) {
+        Command = other.Command;
+      }
+      baseImages_.Add(other.baseImages_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            DiffId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Command = input.ReadString();
+            break;
+          }
+          case 34: {
+            baseImages_.AddEntriesFrom(input, _repeated_baseImages_codec);
+            break;
+          }
+          case 42: {
+            ChainId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Index = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            DiffId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Command = input.ReadString();
+            break;
+          }
+          case 34: {
+            baseImages_.AddEntriesFrom(ref input, _repeated_baseImages_codec);
+            break;
+          }
+          case 42: {
+            ChainId = input.ReadString();
             break;
           }
         }
@@ -1332,7 +2017,7 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.CommonReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Grafeas.V1.CommonReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1572,7 +2257,7 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.CommonReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Grafeas.V1.CommonReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

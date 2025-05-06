@@ -45,6 +45,7 @@ namespace Grafeas.V1
             yield return PackageReflection.Descriptor;
             yield return ProvenanceReflection.Descriptor;
             yield return SbomReflection.Descriptor;
+            yield return SecretReflection.Descriptor;
             yield return SeverityReflection.Descriptor;
             yield return SlsaProvenanceReflection.Descriptor;
             yield return SlsaProvenanceZeroTwoReflection.Descriptor;

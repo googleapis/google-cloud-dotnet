@@ -3858,7 +3858,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-03T07:13:23Z",
-            "lastGeneratedCommit": "7a92b96c2a981477d3be9fe71d24cbdd5cc5c5d5",
+            "lastGeneratedCommit": "079e5305050859d0e3a8c0768611283ee4863c07",
             "apiPaths": [
                 "google/devtools/containeranalysis/v1",
                 "grafeas/v1"
