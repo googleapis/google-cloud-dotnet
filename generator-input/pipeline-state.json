@@ -4027,6 +4027,17 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.OrderTracking.V1Beta/Google.Shopping.Merchant.OrderTracking.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.ModelArmor.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/modelarmor/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.ModelArmor.V1/Google.Cloud.ModelArmor.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
