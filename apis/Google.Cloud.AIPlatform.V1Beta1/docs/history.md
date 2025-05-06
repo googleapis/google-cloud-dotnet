@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta28, released 2025-05-06
+
+### New features
+
+- A new field `system_labels` is added to message `google.cloud.aiplatform.v1beta1.DeployRequest`
+
+### Documentation improvements
+
+- update an outdated URL
+
 ## Version 1.0.0-beta27, released 2025-04-30
 
 ### New features
