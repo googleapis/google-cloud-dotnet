@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.2.0, released 2025-05-06
+
+### New features
+
+- Enable partners to create, update and delete their customers
+- A new field `organization_domain` is added to message `Customer`
+
+### Documentation improvements
+
+- Mark the enum value `EkmSolution.VIRTRU` as deprecated
+
 ## Version 1.1.0, released 2024-09-16
 
 ### New features
