@@ -44,21 +44,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "LmNsb3VkLnRleHR0b3NwZWVjaC52MS5BdWRpb0NvbmZpZ0ID4EECElcKFmFk",
             "dmFuY2VkX3ZvaWNlX29wdGlvbnMYCCABKAsyMi5nb29nbGUuY2xvdWQudGV4",
             "dHRvc3BlZWNoLnYxLkFkdmFuY2VkVm9pY2VPcHRpb25zSACIAQFCGQoXX2Fk",
-            "dmFuY2VkX3ZvaWNlX29wdGlvbnMi2gIKGUN1c3RvbVByb251bmNpYXRpb25Q",
+            "dmFuY2VkX3ZvaWNlX29wdGlvbnMiogMKGUN1c3RvbVByb251bmNpYXRpb25Q",
             "YXJhbXMSEwoGcGhyYXNlGAEgASgJSACIAQESaAoRcGhvbmV0aWNfZW5jb2Rp",
             "bmcYAiABKA4ySC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkN1c3Rv",
             "bVByb251bmNpYXRpb25QYXJhbXMuUGhvbmV0aWNFbmNvZGluZ0gBiAEBEhoK",
-            "DXByb251bmNpYXRpb24YAyABKAlIAogBASJvChBQaG9uZXRpY0VuY29kaW5n",
-            "EiEKHVBIT05FVElDX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASGQoVUEhPTkVU",
-            "SUNfRU5DT0RJTkdfSVBBEAESHQoZUEhPTkVUSUNfRU5DT0RJTkdfWF9TQU1Q",
-            "QRACQgkKB19waHJhc2VCFAoSX3Bob25ldGljX2VuY29kaW5nQhAKDl9wcm9u",
-            "dW5jaWF0aW9uImcKFEN1c3RvbVByb251bmNpYXRpb25zEk8KDnByb251bmNp",
-            "YXRpb25zGAEgAygLMjcuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5D",
-            "dXN0b21Qcm9udW5jaWF0aW9uUGFyYW1zIpABChJNdWx0aVNwZWFrZXJNYXJr",
-            "dXASSQoFdHVybnMYASADKAsyNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNo",
-            "LnYxLk11bHRpU3BlYWtlck1hcmt1cC5UdXJuQgPgQQIaLwoEVHVybhIUCgdz",
-            "cGVha2VyGAEgASgJQgPgQQISEQoEdGV4dBgCIAEoCUID4EECIuoBCg5TeW50",
-            "aGVzaXNJbnB1dBIOCgR0ZXh0GAEgASgJSAASDgoEc3NtbBgCIAEoCUgAElAK",
+            "DXByb251bmNpYXRpb24YAyABKAlIAogBASK2AQoQUGhvbmV0aWNFbmNvZGlu",
+            "ZxIhCh1QSE9ORVRJQ19FTkNPRElOR19VTlNQRUNJRklFRBAAEhkKFVBIT05F",
+            "VElDX0VOQ09ESU5HX0lQQRABEh0KGVBIT05FVElDX0VOQ09ESU5HX1hfU0FN",
+            "UEEQAhInCiNQSE9ORVRJQ19FTkNPRElOR19KQVBBTkVTRV9ZT01JR0FOQRAD",
+            "EhwKGFBIT05FVElDX0VOQ09ESU5HX1BJTllJThAEQgkKB19waHJhc2VCFAoS",
+            "X3Bob25ldGljX2VuY29kaW5nQhAKDl9wcm9udW5jaWF0aW9uImcKFEN1c3Rv",
+            "bVByb251bmNpYXRpb25zEk8KDnByb251bmNpYXRpb25zGAEgAygLMjcuZ29v",
+            "Z2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5DdXN0b21Qcm9udW5jaWF0aW9u",
+            "UGFyYW1zIpABChJNdWx0aVNwZWFrZXJNYXJrdXASSQoFdHVybnMYASADKAsy",
+            "NS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLk11bHRpU3BlYWtlck1h",
+            "cmt1cC5UdXJuQgPgQQIaLwoEVHVybhIUCgdzcGVha2VyGAEgASgJQgPgQQIS",
+            "EQoEdGV4dBgCIAEoCUID4EECIvwBCg5TeW50aGVzaXNJbnB1dBIOCgR0ZXh0",
+            "GAEgASgJSAASEAoGbWFya3VwGAUgASgJSAASDgoEc3NtbBgCIAEoCUgAElAK",
             "FG11bHRpX3NwZWFrZXJfbWFya3VwGAQgASgLMjAuZ29vZ2xlLmNsb3VkLnRl",
             "eHR0b3NwZWVjaC52MS5NdWx0aVNwZWFrZXJNYXJrdXBIABJWChVjdXN0b21f",
             "cHJvbnVuY2lhdGlvbnMYAyABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
@@ -92,39 +94,39 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "MjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdBdWRp",
             "b0NvbmZpZ0ID4EEBElYKFWN1c3RvbV9wcm9udW5jaWF0aW9ucxgFIAEoCzIy",
             "Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuQ3VzdG9tUHJvbnVuY2lh",
-            "dGlvbnNCA+BBASI5ChdTdHJlYW1pbmdTeW50aGVzaXNJbnB1dBIOCgR0ZXh0",
-            "GAEgASgJSABCDgoMaW5wdXRfc291cmNlIs4BChpTdHJlYW1pbmdTeW50aGVz",
-            "aXplUmVxdWVzdBJTChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMjcuZ29vZ2xl",
-            "LmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdTeW50aGVzaXplQ29u",
-            "ZmlnSAASRgoFaW5wdXQYAiABKAsyNS5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
-            "ZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpc0lucHV0SABCEwoRc3RyZWFtaW5n",
-            "X3JlcXVlc3QiNAobU3RyZWFtaW5nU3ludGhlc2l6ZVJlc3BvbnNlEhUKDWF1",
-            "ZGlvX2NvbnRlbnQYASABKAwqVwoPU3NtbFZvaWNlR2VuZGVyEiEKHVNTTUxf",
-            "Vk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASCAoETUFMRRABEgoKBkZFTUFM",
-            "RRACEgsKB05FVVRSQUwQAypyCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VO",
-            "Q09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIHCgNNUDMQAhIM",
-            "CghPR0dfT1BVUxADEgkKBU1VTEFXEAUSCAoEQUxBVxAGEgcKA1BDTRAHMscE",
-            "CgxUZXh0VG9TcGVlY2gSkwEKCkxpc3RWb2ljZXMSLy5nb29nbGUuY2xvdWQu",
-            "dGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXF1ZXN0GjAuZ29vZ2xlLmNs",
-            "b3VkLnRleHR0b3NwZWVjaC52MS5MaXN0Vm9pY2VzUmVzcG9uc2UiItpBDWxh",
-            "bmd1YWdlX2NvZGWC0+STAgwSCi92MS92b2ljZXMSvAEKEFN5bnRoZXNpemVT",
-            "cGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNp",
-            "emVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52",
-            "MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiOdpBGGlucHV0LHZvaWNlLGF1",
-            "ZGlvX2NvbmZpZ4LT5JMCGCITL3YxL3RleHQ6c3ludGhlc2l6ZToBKhKQAQoT",
-            "U3RyZWFtaW5nU3ludGhlc2l6ZRI4Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVl",
-            "Y2gudjEuU3RyZWFtaW5nU3ludGhlc2l6ZVJlcXVlc3QaOS5nb29nbGUuY2xv",
-            "dWQudGV4dHRvc3BlZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpemVSZXNwb25z",
-            "ZSIAKAEwARpPykEbdGV4dHRvc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK8",
-            "AgogY29tLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFCEVRleHRUb1Nw",
-            "ZWVjaFByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdGV4dHRvc3BlZWNo",
-            "L2FwaXYxL3RleHR0b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBiogIEQ1RUU6oC",
-            "HEdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjHKAhxHb29nbGVcQ2xvdWRc",
-            "VGV4dFRvU3BlZWNoXFYx6gIfR29vZ2xlOjpDbG91ZDo6VGV4dFRvU3BlZWNo",
-            "OjpWMepBVQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEjZwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3ttb2Rl",
-            "bH1iBnByb3RvMw=="));
+            "dGlvbnNCA+BBASJLChdTdHJlYW1pbmdTeW50aGVzaXNJbnB1dBIOCgR0ZXh0",
+            "GAEgASgJSAASEAoGbWFya3VwGAUgASgJSABCDgoMaW5wdXRfc291cmNlIs4B",
+            "ChpTdHJlYW1pbmdTeW50aGVzaXplUmVxdWVzdBJTChBzdHJlYW1pbmdfY29u",
+            "ZmlnGAEgASgLMjcuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJl",
+            "YW1pbmdTeW50aGVzaXplQ29uZmlnSAASRgoFaW5wdXQYAiABKAsyNS5nb29n",
+            "bGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpc0lu",
+            "cHV0SABCEwoRc3RyZWFtaW5nX3JlcXVlc3QiNAobU3RyZWFtaW5nU3ludGhl",
+            "c2l6ZVJlc3BvbnNlEhUKDWF1ZGlvX2NvbnRlbnQYASABKAwqVwoPU3NtbFZv",
+            "aWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAAS",
+            "CAoETUFMRRABEgoKBkZFTUFMRRACEgsKB05FVVRSQUwQAypyCg1BdWRpb0Vu",
+            "Y29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElO",
+            "RUFSMTYQARIHCgNNUDMQAhIMCghPR0dfT1BVUxADEgkKBU1VTEFXEAUSCAoE",
+            "QUxBVxAGEgcKA1BDTRAHMscECgxUZXh0VG9TcGVlY2gSkwEKCkxpc3RWb2lj",
+            "ZXMSLy5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNS",
+            "ZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5MaXN0Vm9p",
+            "Y2VzUmVzcG9uc2UiItpBDWxhbmd1YWdlX2NvZGWC0+STAgwSCi92MS92b2lj",
+            "ZXMSvAEKEFN5bnRoZXNpemVTcGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRv",
+            "c3BlZWNoLnYxLlN5bnRoZXNpemVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNs",
+            "b3VkLnRleHR0b3NwZWVjaC52MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2Ui",
+            "OdpBGGlucHV0LHZvaWNlLGF1ZGlvX2NvbmZpZ4LT5JMCGCITL3YxL3RleHQ6",
+            "c3ludGhlc2l6ZToBKhKQAQoTU3RyZWFtaW5nU3ludGhlc2l6ZRI4Lmdvb2ds",
+            "ZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3RyZWFtaW5nU3ludGhlc2l6ZVJl",
+            "cXVlc3QaOS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN0cmVhbWlu",
+            "Z1N5bnRoZXNpemVSZXNwb25zZSIAKAEwARpPykEbdGV4dHRvc3BlZWNoLmdv",
+            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybUK8AgogY29tLmdvb2dsZS5jbG91ZC50ZXh0dG9z",
+            "cGVlY2gudjFCEVRleHRUb1NwZWVjaFByb3RvUAFaRGNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vdGV4dHRvc3BlZWNoL2FwaXYxL3RleHR0b3NwZWVjaHBiO3RleHR0",
+            "b3NwZWVjaHBiogIEQ1RUU6oCHEdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2gu",
+            "VjHKAhxHb29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYx6gIfR29vZ2xlOjpD",
+            "bG91ZDo6VGV4dFRvU3BlZWNoOjpWMepBVQobYXV0b21sLmdvb2dsZWFwaXMu",
+            "Y29tL01vZGVsEjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vbW9kZWxzL3ttb2RlbH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -136,7 +138,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams), global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams.Parser, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams.Types.PhoneticEncoding) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomPronunciations), global::Google.Cloud.TextToSpeech.V1.CustomPronunciations.Parser, new[]{ "Pronunciations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup), global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup.Parser, new[]{ "Turns" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup.Types.Turn), global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup.Types.Turn.Parser, new[]{ "Speaker", "Text" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1.SynthesisInput.Parser, new[]{ "Text", "Ssml", "MultiSpeakerMarkup", "CustomPronunciations" }, new[]{ "InputSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1.SynthesisInput.Parser, new[]{ "Text", "Markup", "Ssml", "MultiSpeakerMarkup", "CustomPronunciations" }, new[]{ "InputSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams), global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams.Parser, new[]{ "LanguageCode", "Name", "SsmlGender", "CustomVoice", "VoiceClone" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.AudioConfig), global::Google.Cloud.TextToSpeech.V1.AudioConfig.Parser, new[]{ "AudioEncoding", "SpeakingRate", "Pitch", "VolumeGainDb", "SampleRateHertz", "EffectsProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams), global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Parser, new[]{ "Model", "ReportedUsage" }, null, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Types.ReportedUsage) }, null, null),
@@ -144,7 +146,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse.Parser, new[]{ "AudioContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig), global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SpeakingRate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig.Parser, new[]{ "Voice", "StreamingAudioConfig", "CustomPronunciations" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput.Parser, new[]{ "Text" }, new[]{ "InputSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput.Parser, new[]{ "Text", "Markup" }, new[]{ "InputSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeRequest), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeRequest.Parser, new[]{ "StreamingConfig", "Input" }, new[]{ "StreamingRequest" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeResponse), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeResponse.Parser, new[]{ "AudioContent" }, null, null, null, null)
           }));
@@ -1833,6 +1835,31 @@ namespace Google.Cloud.TextToSpeech.V1 {
         /// https://en.wikipedia.org/wiki/X-SAMPA
         /// </summary>
         [pbr::OriginalName("PHONETIC_ENCODING_X_SAMPA")] XSampa = 2,
+        /// <summary>
+        /// For reading-to-pron conversion to work well, the `pronunciation` field
+        ///  should only contain Kanji, Hiragana, and Katakana.
+        ///
+        /// The pronunciation can also contain pitch accents.
+        /// The start of a pitch phrase is specified with `^` and the down-pitch
+        /// position is specified with `!`, for example:
+        ///
+        ///     phrase:端  pronunciation:^はし
+        ///     phrase:箸  pronunciation:^は!し
+        ///     phrase:橋  pronunciation:^はし!
+        ///
+        /// We currently only support the Tokyo dialect, which allows at most one
+        /// down-pitch per phrase (i.e. at most one `!` between `^`).
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_JAPANESE_YOMIGANA")] JapaneseYomigana = 3,
+        /// <summary>
+        /// Used to specify pronunciations for Mandarin words. See
+        /// https://en.wikipedia.org/wiki/Pinyin.
+        ///
+        /// For example: 朝阳, the pronunciation is "chao2 yang2". The number
+        /// represents the tone, and there is a space between syllables. Neutral
+        /// tones are represented by 5, for example 孩子 "hai2 zi5".
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_PINYIN")] Pinyin = 4,
       }
 
     }
@@ -2501,6 +2528,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
         case InputSourceOneofCase.Text:
           Text = other.Text;
           break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
+          break;
         case InputSourceOneofCase.Ssml:
           Ssml = other.Ssml;
           break;
@@ -2543,6 +2573,36 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearText() {
       if (HasText) {
+        ClearInputSource();
+      }
+    }
+
+    /// <summary>Field number for the "markup" field.</summary>
+    public const int MarkupFieldNumber = 5;
+    /// <summary>
+    /// Markup for HD voices specifically. This field may not be used with any
+    /// other voices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Markup {
+      get { return HasMarkup ? (string) inputSource_ : ""; }
+      set {
+        inputSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        inputSourceCase_ = InputSourceOneofCase.Markup;
+      }
+    }
+    /// <summary>Gets whether the "markup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMarkup {
+      get { return inputSourceCase_ == InputSourceOneofCase.Markup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "markup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMarkup() {
+      if (HasMarkup) {
         ClearInputSource();
       }
     }
@@ -2625,6 +2685,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public enum InputSourceOneofCase {
       None = 0,
       Text = 1,
+      Markup = 5,
       Ssml = 2,
       MultiSpeakerMarkup = 4,
     }
@@ -2658,6 +2719,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
         return true;
       }
       if (Text != other.Text) return false;
+      if (Markup != other.Markup) return false;
       if (Ssml != other.Ssml) return false;
       if (!object.Equals(MultiSpeakerMarkup, other.MultiSpeakerMarkup)) return false;
       if (!object.Equals(CustomPronunciations, other.CustomPronunciations)) return false;
@@ -2670,6 +2732,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasText) hash ^= Text.GetHashCode();
+      if (HasMarkup) hash ^= Markup.GetHashCode();
       if (HasSsml) hash ^= Ssml.GetHashCode();
       if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) hash ^= MultiSpeakerMarkup.GetHashCode();
       if (customPronunciations_ != null) hash ^= CustomPronunciations.GetHashCode();
@@ -2708,6 +2771,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(MultiSpeakerMarkup);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2734,6 +2801,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(MultiSpeakerMarkup);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2746,6 +2817,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       int size = 0;
       if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (HasMarkup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Markup);
       }
       if (HasSsml) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Ssml);
@@ -2777,6 +2851,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
           Text = other.Text;
+          break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
           break;
         case InputSourceOneofCase.Ssml:
           Ssml = other.Ssml;
@@ -2828,6 +2905,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             MultiSpeakerMarkup = subBuilder;
             break;
           }
+          case 42: {
+            Markup = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2865,6 +2946,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             }
             input.ReadMessage(subBuilder);
             MultiSpeakerMarkup = subBuilder;
+            break;
+          }
+          case 42: {
+            Markup = input.ReadString();
             break;
           }
         }
@@ -4974,6 +5059,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
         case InputSourceOneofCase.Text:
           Text = other.Text;
           break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5016,11 +5104,42 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "markup" field.</summary>
+    public const int MarkupFieldNumber = 5;
+    /// <summary>
+    /// Markup for HD voices specifically. This field may not be used with any
+    /// other voices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Markup {
+      get { return HasMarkup ? (string) inputSource_ : ""; }
+      set {
+        inputSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        inputSourceCase_ = InputSourceOneofCase.Markup;
+      }
+    }
+    /// <summary>Gets whether the "markup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMarkup {
+      get { return inputSourceCase_ == InputSourceOneofCase.Markup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "markup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMarkup() {
+      if (HasMarkup) {
+        ClearInputSource();
+      }
+    }
+
     private object inputSource_;
     /// <summary>Enum of possible cases for the "input_source" oneof.</summary>
     public enum InputSourceOneofCase {
       None = 0,
       Text = 1,
+      Markup = 5,
     }
     private InputSourceOneofCase inputSourceCase_ = InputSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5052,6 +5171,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
         return true;
       }
       if (Text != other.Text) return false;
+      if (Markup != other.Markup) return false;
       if (InputSourceCase != other.InputSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5061,6 +5181,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasText) hash ^= Text.GetHashCode();
+      if (HasMarkup) hash ^= Markup.GetHashCode();
       hash ^= (int) inputSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5084,6 +5205,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5098,6 +5223,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5110,6 +5239,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       int size = 0;
       if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (HasMarkup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Markup);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5126,6 +5258,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
           Text = other.Text;
+          break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
           break;
       }
 
@@ -5148,6 +5283,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             Text = input.ReadString();
             break;
           }
+          case 42: {
+            Markup = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -5165,6 +5304,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             break;
           case 10: {
             Text = input.ReadString();
+            break;
+          }
+          case 42: {
+            Markup = input.ReadString();
             break;
           }
         }
