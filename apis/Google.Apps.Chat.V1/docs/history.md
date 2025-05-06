@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2025-05-06
+
+### New features
+
+- A new method `customEmojis.create` is added
+- A new method `customEmojis.delete` is added
+- A new method `customEmojis.get` is added
+- A new method `customEmojis.list` is added
+
+### Documentation improvements
+
+- A comment for message `CustomEmoji` is changed
+- A comment for field `filter` in message `.google.chat.v1.ListReactionsRequest` is changed
+
 ## Version 1.0.0-beta13, released 2025-03-10
 
 ### New features
