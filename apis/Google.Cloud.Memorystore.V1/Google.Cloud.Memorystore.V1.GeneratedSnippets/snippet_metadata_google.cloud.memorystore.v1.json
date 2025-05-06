@@ -1708,6 +1708,2208 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_RescheduleMaintenance_sync",
+      "title": "RescheduleMaintenanceRequestObject",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "MemorystoreClient.RescheduleMaintenanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.RescheduleMaintenance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_RescheduleMaintenance_async",
+      "title": "RescheduleMaintenanceRequestObjectAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "MemorystoreClient.RescheduleMaintenanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.RescheduleMaintenance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_RescheduleMaintenance_sync_flattened",
+      "title": "RescheduleMaintenance",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "MemorystoreClient.RescheduleMaintenanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.RescheduleMaintenance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_RescheduleMaintenance_async_flattened",
+      "title": "RescheduleMaintenanceAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "MemorystoreClient.RescheduleMaintenanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.RescheduleMaintenance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_RescheduleMaintenance_sync_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNames",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "MemorystoreClient.RescheduleMaintenanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.RescheduleMaintenance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_RescheduleMaintenance_async_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNamesAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "MemorystoreClient.RescheduleMaintenanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.RescheduleMaintenance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackupCollections_sync",
+      "title": "ListBackupCollectionsRequestObject",
+      "description": "Snippet for ListBackupCollections",
+      "file": "MemorystoreClient.ListBackupCollectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupCollections",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupCollections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListBackupCollectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse, Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackupCollections",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackupCollections",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackupCollections_async",
+      "title": "ListBackupCollectionsRequestObjectAsync",
+      "description": "Snippet for ListBackupCollectionsAsync",
+      "file": "MemorystoreClient.ListBackupCollectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupCollectionsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupCollectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListBackupCollectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse, Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackupCollections",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackupCollections",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackupCollections_sync_flattened",
+      "title": "ListBackupCollections",
+      "description": "Snippet for ListBackupCollections",
+      "file": "MemorystoreClient.ListBackupCollectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupCollections",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupCollections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse, Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackupCollections",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackupCollections",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackupCollections_async_flattened",
+      "title": "ListBackupCollectionsAsync",
+      "description": "Snippet for ListBackupCollectionsAsync",
+      "file": "MemorystoreClient.ListBackupCollectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupCollectionsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupCollectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse, Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackupCollections",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackupCollections",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackupCollections_sync_flattened_resourceNames",
+      "title": "ListBackupCollectionsResourceNames",
+      "description": "Snippet for ListBackupCollections",
+      "file": "MemorystoreClient.ListBackupCollectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupCollections",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupCollections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse, Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackupCollections",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackupCollections",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackupCollections_async_flattened_resourceNames",
+      "title": "ListBackupCollectionsResourceNamesAsync",
+      "description": "Snippet for ListBackupCollectionsAsync",
+      "file": "MemorystoreClient.ListBackupCollectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupCollectionsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupCollectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListBackupCollectionsResponse, Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackupCollections",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackupCollections",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackupCollection_sync",
+      "title": "GetBackupCollectionRequestObject",
+      "description": "Snippet for GetBackupCollection",
+      "file": "MemorystoreClient.GetBackupCollectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupCollection",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetBackupCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.BackupCollection",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackupCollection",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackupCollection",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackupCollection_async",
+      "title": "GetBackupCollectionRequestObjectAsync",
+      "description": "Snippet for GetBackupCollectionAsync",
+      "file": "MemorystoreClient.GetBackupCollectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupCollectionAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetBackupCollectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackupCollection",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackupCollection",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackupCollection_sync_flattened",
+      "title": "GetBackupCollection",
+      "description": "Snippet for GetBackupCollection",
+      "file": "MemorystoreClient.GetBackupCollectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupCollection",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupCollection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.BackupCollection",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackupCollection",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackupCollection",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackupCollection_async_flattened",
+      "title": "GetBackupCollectionAsync",
+      "description": "Snippet for GetBackupCollectionAsync",
+      "file": "MemorystoreClient.GetBackupCollectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupCollectionAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackupCollection",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackupCollection",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackupCollection_sync_flattened_resourceNames",
+      "title": "GetBackupCollectionResourceNames",
+      "description": "Snippet for GetBackupCollection",
+      "file": "MemorystoreClient.GetBackupCollectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupCollection",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupCollection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupCollectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.BackupCollection",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackupCollection",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackupCollection",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackupCollection_async_flattened_resourceNames",
+      "title": "GetBackupCollectionResourceNamesAsync",
+      "description": "Snippet for GetBackupCollectionAsync",
+      "file": "MemorystoreClient.GetBackupCollectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupCollectionAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupCollectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupCollectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.BackupCollection>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackupCollection",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackupCollection",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackups_sync",
+      "title": "ListBackupsRequestObject",
+      "description": "Snippet for ListBackups",
+      "file": "MemorystoreClient.ListBackupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackups",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListBackupsResponse, Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackups",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackups_async",
+      "title": "ListBackupsRequestObjectAsync",
+      "description": "Snippet for ListBackupsAsync",
+      "file": "MemorystoreClient.ListBackupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListBackupsResponse, Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackups",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackups_sync_flattened",
+      "title": "ListBackups",
+      "description": "Snippet for ListBackups",
+      "file": "MemorystoreClient.ListBackupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackups",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListBackupsResponse, Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackups",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackups_async_flattened",
+      "title": "ListBackupsAsync",
+      "description": "Snippet for ListBackupsAsync",
+      "file": "MemorystoreClient.ListBackupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListBackupsResponse, Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackups",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackups_sync_flattened_resourceNames",
+      "title": "ListBackupsResourceNames",
+      "description": "Snippet for ListBackups",
+      "file": "MemorystoreClient.ListBackupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackups",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupCollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListBackupsResponse, Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackups",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListBackups_async_flattened_resourceNames",
+      "title": "ListBackupsResourceNamesAsync",
+      "description": "Snippet for ListBackupsAsync",
+      "file": "MemorystoreClient.ListBackupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListBackupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupCollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListBackupsResponse, Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListBackups",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackup_sync",
+      "title": "GetBackupRequestObject",
+      "description": "Snippet for GetBackup",
+      "file": "MemorystoreClient.GetBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.Backup",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackup_async",
+      "title": "GetBackupRequestObjectAsync",
+      "description": "Snippet for GetBackupAsync",
+      "file": "MemorystoreClient.GetBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackup_sync_flattened",
+      "title": "GetBackup",
+      "description": "Snippet for GetBackup",
+      "file": "MemorystoreClient.GetBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.Backup",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackup_async_flattened",
+      "title": "GetBackupAsync",
+      "description": "Snippet for GetBackupAsync",
+      "file": "MemorystoreClient.GetBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackup_sync_flattened_resourceNames",
+      "title": "GetBackupResourceNames",
+      "description": "Snippet for GetBackup",
+      "file": "MemorystoreClient.GetBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.Backup",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetBackup_async_flattened_resourceNames",
+      "title": "GetBackupResourceNamesAsync",
+      "description": "Snippet for GetBackupAsync",
+      "file": "MemorystoreClient.GetBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.Backup>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteBackup_sync",
+      "title": "DeleteBackupRequestObject",
+      "description": "Snippet for DeleteBackup",
+      "file": "MemorystoreClient.DeleteBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteBackup_async",
+      "title": "DeleteBackupRequestObjectAsync",
+      "description": "Snippet for DeleteBackupAsync",
+      "file": "MemorystoreClient.DeleteBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteBackup_sync_flattened",
+      "title": "DeleteBackup",
+      "description": "Snippet for DeleteBackup",
+      "file": "MemorystoreClient.DeleteBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteBackup_async_flattened",
+      "title": "DeleteBackupAsync",
+      "description": "Snippet for DeleteBackupAsync",
+      "file": "MemorystoreClient.DeleteBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteBackup_sync_flattened_resourceNames",
+      "title": "DeleteBackupResourceNames",
+      "description": "Snippet for DeleteBackup",
+      "file": "MemorystoreClient.DeleteBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteBackup_async_flattened_resourceNames",
+      "title": "DeleteBackupResourceNamesAsync",
+      "description": "Snippet for DeleteBackupAsync",
+      "file": "MemorystoreClient.DeleteBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ExportBackup_sync",
+      "title": "ExportBackupRequestObject",
+      "description": "Snippet for ExportBackup",
+      "file": "MemorystoreClient.ExportBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportBackup",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ExportBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ExportBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Backup, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ExportBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ExportBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ExportBackup_async",
+      "title": "ExportBackupRequestObjectAsync",
+      "description": "Snippet for ExportBackupAsync",
+      "file": "MemorystoreClient.ExportBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportBackupAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ExportBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ExportBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Backup, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ExportBackup",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ExportBackup",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_BackupInstance_sync",
+      "title": "BackupInstanceRequestObject",
+      "description": "Snippet for BackupInstance",
+      "file": "MemorystoreClient.BackupInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BackupInstance",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.BackupInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "BackupInstance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.BackupInstance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_BackupInstance_async",
+      "title": "BackupInstanceRequestObjectAsync",
+      "description": "Snippet for BackupInstanceAsync",
+      "file": "MemorystoreClient.BackupInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BackupInstanceAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.BackupInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.BackupInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "BackupInstance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.BackupInstance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_BackupInstance_sync_flattened",
+      "title": "BackupInstance",
+      "description": "Snippet for BackupInstance",
+      "file": "MemorystoreClient.BackupInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BackupInstance",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.BackupInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "BackupInstance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.BackupInstance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_BackupInstance_async_flattened",
+      "title": "BackupInstanceAsync",
+      "description": "Snippet for BackupInstanceAsync",
+      "file": "MemorystoreClient.BackupInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BackupInstanceAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.BackupInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "BackupInstance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.BackupInstance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_BackupInstance_sync_flattened_resourceNames",
+      "title": "BackupInstanceResourceNames",
+      "description": "Snippet for BackupInstance",
+      "file": "MemorystoreClient.BackupInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BackupInstance",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.BackupInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "BackupInstance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.BackupInstance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_BackupInstance_async_flattened_resourceNames",
+      "title": "BackupInstanceResourceNamesAsync",
+      "description": "Snippet for BackupInstanceAsync",
+      "file": "MemorystoreClient.BackupInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BackupInstanceAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.BackupInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "BackupInstance",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.BackupInstance",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
