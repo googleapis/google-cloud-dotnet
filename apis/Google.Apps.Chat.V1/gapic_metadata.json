@@ -16,6 +16,12 @@
                 "CompleteImportSpaceAsync"
               ]
             },
+            "CreateCustomEmoji": {
+              "methods": [
+                "CreateCustomEmoji",
+                "CreateCustomEmojiAsync"
+              ]
+            },
             "CreateMembership": {
               "methods": [
                 "CreateMembership",
@@ -38,6 +44,12 @@
               "methods": [
                 "CreateSpace",
                 "CreateSpaceAsync"
+              ]
+            },
+            "DeleteCustomEmoji": {
+              "methods": [
+                "DeleteCustomEmoji",
+                "DeleteCustomEmojiAsync"
               ]
             },
             "DeleteMembership": {
@@ -74,6 +86,12 @@
               "methods": [
                 "GetAttachment",
                 "GetAttachmentAsync"
+              ]
+            },
+            "GetCustomEmoji": {
+              "methods": [
+                "GetCustomEmoji",
+                "GetCustomEmojiAsync"
               ]
             },
             "GetMembership": {
@@ -116,6 +134,12 @@
               "methods": [
                 "GetThreadReadState",
                 "GetThreadReadStateAsync"
+              ]
+            },
+            "ListCustomEmojis": {
+              "methods": [
+                "ListCustomEmojis",
+                "ListCustomEmojisAsync"
               ]
             },
             "ListMemberships": {
