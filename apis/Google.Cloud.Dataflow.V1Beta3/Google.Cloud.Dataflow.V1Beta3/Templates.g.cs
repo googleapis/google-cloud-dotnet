@@ -26,180 +26,200 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           string.Concat(
             "Cidnb29nbGUvZGF0YWZsb3cvdjFiZXRhMy90ZW1wbGF0ZXMucHJvdG8SF2dv",
             "b2dsZS5kYXRhZmxvdy52MWJldGEzGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
-            "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxopZ29vZ2xlL2RhdGFm",
-            "bG93L3YxYmV0YTMvZW52aXJvbm1lbnQucHJvdG8aImdvb2dsZS9kYXRhZmxv",
-            "dy92MWJldGEzL2pvYnMucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3Rv",
-            "IkcKGkxhdW5jaEZsZXhUZW1wbGF0ZVJlc3BvbnNlEikKA2pvYhgBIAEoCzIc",
-            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkpvYiLlAQoNQ29udGFpbmVyU3Bl",
-            "YxINCgVpbWFnZRgBIAEoCRI7CghtZXRhZGF0YRgCIAEoCzIpLmdvb2dsZS5k",
-            "YXRhZmxvdy52MWJldGEzLlRlbXBsYXRlTWV0YWRhdGESMgoIc2RrX2luZm8Y",
-            "AyABKAsyIC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TREtJbmZvElQKE2Rl",
-            "ZmF1bHRfZW52aXJvbm1lbnQYBCABKAsyNy5nb29nbGUuZGF0YWZsb3cudjFi",
-            "ZXRhMy5GbGV4VGVtcGxhdGVSdW50aW1lRW52aXJvbm1lbnQi0gUKG0xhdW5j",
-            "aEZsZXhUZW1wbGF0ZVBhcmFtZXRlchIQCghqb2JfbmFtZRgBIAEoCRJACg5j",
-            "b250YWluZXJfc3BlYxgEIAEoCzImLmdvb2dsZS5kYXRhZmxvdy52MWJldGEz",
-            "LkNvbnRhaW5lclNwZWNIABIhChdjb250YWluZXJfc3BlY19nY3NfcGF0aBgF",
-            "IAEoCUgAElgKCnBhcmFtZXRlcnMYAiADKAsyRC5nb29nbGUuZGF0YWZsb3cu",
-            "djFiZXRhMy5MYXVuY2hGbGV4VGVtcGxhdGVQYXJhbWV0ZXIuUGFyYW1ldGVy",
-            "c0VudHJ5El8KDmxhdW5jaF9vcHRpb25zGAYgAygLMkcuZ29vZ2xlLmRhdGFm",
-            "bG93LnYxYmV0YTMuTGF1bmNoRmxleFRlbXBsYXRlUGFyYW1ldGVyLkxhdW5j",
-            "aE9wdGlvbnNFbnRyeRJMCgtlbnZpcm9ubWVudBgHIAEoCzI3Lmdvb2dsZS5k",
-            "YXRhZmxvdy52MWJldGEzLkZsZXhUZW1wbGF0ZVJ1bnRpbWVFbnZpcm9ubWVu",
-            "dBIOCgZ1cGRhdGUYCCABKAgScAoXdHJhbnNmb3JtX25hbWVfbWFwcGluZ3MY",
-            "CSADKAsyTy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MYXVuY2hGbGV4VGVt",
-            "cGxhdGVQYXJhbWV0ZXIuVHJhbnNmb3JtTmFtZU1hcHBpbmdzRW50cnkaMQoP",
-            "UGFyYW1ldGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEaNAoSTGF1bmNoT3B0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEaPAoaVHJhbnNmb3JtTmFtZU1hcHBpbmdzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIKCgh0ZW1wbGF0ZSKQBwoe",
-            "RmxleFRlbXBsYXRlUnVudGltZUVudmlyb25tZW50EhMKC251bV93b3JrZXJz",
-            "GAEgASgFEhMKC21heF93b3JrZXJzGAIgASgFEgwKBHpvbmUYAyABKAkSHQoV",
-            "c2VydmljZV9hY2NvdW50X2VtYWlsGAQgASgJEhUKDXRlbXBfbG9jYXRpb24Y",
-            "BSABKAkSFAoMbWFjaGluZV90eXBlGAYgASgJEh4KFmFkZGl0aW9uYWxfZXhw",
-            "ZXJpbWVudHMYByADKAkSDwoHbmV0d29yaxgIIAEoCRISCgpzdWJuZXR3b3Jr",
-            "GAkgASgJEnEKFmFkZGl0aW9uYWxfdXNlcl9sYWJlbHMYCiADKAsyUS5nb29n",
-            "bGUuZGF0YWZsb3cudjFiZXRhMy5GbGV4VGVtcGxhdGVSdW50aW1lRW52aXJv",
-            "bm1lbnQuQWRkaXRpb25hbFVzZXJMYWJlbHNFbnRyeRIUCgxrbXNfa2V5X25h",
-            "bWUYCyABKAkSTwoQaXBfY29uZmlndXJhdGlvbhgMIAEoDjI1Lmdvb2dsZS5k",
-            "YXRhZmxvdy52MWJldGEzLldvcmtlcklQQWRkcmVzc0NvbmZpZ3VyYXRpb24S",
-            "FQoNd29ya2VyX3JlZ2lvbhgNIAEoCRITCgt3b3JrZXJfem9uZRgOIAEoCRIf",
-            "ChdlbmFibGVfc3RyZWFtaW5nX2VuZ2luZRgPIAEoCBJICgtmbGV4cnNfZ29h",
-            "bBgQIAEoDjIzLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhSZXNvdXJj",
-            "ZVNjaGVkdWxpbmdHb2FsEhgKEHN0YWdpbmdfbG9jYXRpb24YESABKAkSGwoT",
-            "c2RrX2NvbnRhaW5lcl9pbWFnZRgSIAEoCRIUCgxkaXNrX3NpemVfZ2IYFCAB",
-            "KAUSTAoVYXV0b3NjYWxpbmdfYWxnb3JpdGhtGBUgASgOMi0uZ29vZ2xlLmRh",
-            "dGFmbG93LnYxYmV0YTMuQXV0b3NjYWxpbmdBbGdvcml0aG0SGAoQZHVtcF9o",
-            "ZWFwX29uX29vbRgWIAEoCBIjChtzYXZlX2hlYXBfZHVtcHNfdG9fZ2NzX3Bh",
-            "dGgYFyABKAkSHQoVbGF1bmNoZXJfbWFjaGluZV90eXBlGBggASgJGjsKGUFk",
-            "ZGl0aW9uYWxVc2VyTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASKoAQoZTGF1bmNoRmxleFRlbXBsYXRlUmVxdWVzdBISCgpw",
-            "cm9qZWN0X2lkGAEgASgJEk4KEGxhdW5jaF9wYXJhbWV0ZXIYAiABKAsyNC5n",
-            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5MYXVuY2hGbGV4VGVtcGxhdGVQYXJh",
-            "bWV0ZXISEAoIbG9jYXRpb24YAyABKAkSFQoNdmFsaWRhdGVfb25seRgEIAEo",
-            "CCLZBAoSUnVudGltZUVudmlyb25tZW50EhMKC251bV93b3JrZXJzGAsgASgF",
-            "EhMKC21heF93b3JrZXJzGAEgASgFEgwKBHpvbmUYAiABKAkSHQoVc2Vydmlj",
-            "ZV9hY2NvdW50X2VtYWlsGAMgASgJEhUKDXRlbXBfbG9jYXRpb24YBCABKAkS",
-            "IgoaYnlwYXNzX3RlbXBfZGlyX3ZhbGlkYXRpb24YBSABKAgSFAoMbWFjaGlu",
-            "ZV90eXBlGAYgASgJEh4KFmFkZGl0aW9uYWxfZXhwZXJpbWVudHMYByADKAkS",
-            "DwoHbmV0d29yaxgIIAEoCRISCgpzdWJuZXR3b3JrGAkgASgJEmUKFmFkZGl0",
-            "aW9uYWxfdXNlcl9sYWJlbHMYCiADKAsyRS5nb29nbGUuZGF0YWZsb3cudjFi",
-            "ZXRhMy5SdW50aW1lRW52aXJvbm1lbnQuQWRkaXRpb25hbFVzZXJMYWJlbHNF",
-            "bnRyeRIUCgxrbXNfa2V5X25hbWUYDCABKAkSTwoQaXBfY29uZmlndXJhdGlv",
-            "bhgOIAEoDjI1Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtlcklQQWRk",
-            "cmVzc0NvbmZpZ3VyYXRpb24SFQoNd29ya2VyX3JlZ2lvbhgPIAEoCRITCgt3",
-            "b3JrZXJfem9uZRgQIAEoCRIfChdlbmFibGVfc3RyZWFtaW5nX2VuZ2luZRgR",
-            "IAEoCBo7ChlBZGRpdGlvbmFsVXNlckxhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEitQIKEVBhcmFtZXRlck1ldGFkYXRhEgwK",
-            "BG5hbWUYASABKAkSDQoFbGFiZWwYAiABKAkSEQoJaGVscF90ZXh0GAMgASgJ",
-            "EhMKC2lzX29wdGlvbmFsGAQgASgIEg8KB3JlZ2V4ZXMYBSADKAkSOgoKcGFy",
-            "YW1fdHlwZRgGIAEoDjImLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLlBhcmFt",
-            "ZXRlclR5cGUSVwoPY3VzdG9tX21ldGFkYXRhGAcgAygLMj4uZ29vZ2xlLmRh",
-            "dGFmbG93LnYxYmV0YTMuUGFyYW1ldGVyTWV0YWRhdGEuQ3VzdG9tTWV0YWRh",
-            "dGFFbnRyeRo1ChNDdXN0b21NZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEidQoQVGVtcGxhdGVNZXRhZGF0YRIMCgRuYW1l",
-            "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEj4KCnBhcmFtZXRlcnMYAyAD",
-            "KAsyKi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5QYXJhbWV0ZXJNZXRhZGF0",
-            "YSKGAQoHU0RLSW5mbxI7CghsYW5ndWFnZRgBIAEoDjIpLmdvb2dsZS5kYXRh",
-            "Zmxvdy52MWJldGEzLlNES0luZm8uTGFuZ3VhZ2USDwoHdmVyc2lvbhgCIAEo",
-            "CSItCghMYW5ndWFnZRILCgdVTktOT1dOEAASCAoESkFWQRABEgoKBlBZVEhP",
-            "ThACIoUBCg9SdW50aW1lTWV0YWRhdGESMgoIc2RrX2luZm8YASABKAsyIC5n",
-            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5TREtJbmZvEj4KCnBhcmFtZXRlcnMY",
-            "AiADKAsyKi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5QYXJhbWV0ZXJNZXRh",
-            "ZGF0YSLGAgocQ3JlYXRlSm9iRnJvbVRlbXBsYXRlUmVxdWVzdBISCgpwcm9q",
-            "ZWN0X2lkGAEgASgJEhAKCGpvYl9uYW1lGAQgASgJEhIKCGdjc19wYXRoGAIg",
-            "ASgJSAASWQoKcGFyYW1ldGVycxgDIAMoCzJFLmdvb2dsZS5kYXRhZmxvdy52",
-            "MWJldGEzLkNyZWF0ZUpvYkZyb21UZW1wbGF0ZVJlcXVlc3QuUGFyYW1ldGVy",
-            "c0VudHJ5EkAKC2Vudmlyb25tZW50GAUgASgLMisuZ29vZ2xlLmRhdGFmbG93",
-            "LnYxYmV0YTMuUnVudGltZUVudmlyb25tZW50EhAKCGxvY2F0aW9uGAYgASgJ",
-            "GjEKD1BhcmFtZXRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBQgoKCHRlbXBsYXRlIsUBChJHZXRUZW1wbGF0ZVJlcXVlc3QSEgoK",
-            "cHJvamVjdF9pZBgBIAEoCRISCghnY3NfcGF0aBgCIAEoCUgAEkYKBHZpZXcY",
-            "AyABKA4yOC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5HZXRUZW1wbGF0ZVJl",
-            "cXVlc3QuVGVtcGxhdGVWaWV3EhAKCGxvY2F0aW9uGAQgASgJIiEKDFRlbXBs",
-            "YXRlVmlldxIRCg1NRVRBREFUQV9PTkxZEABCCgoIdGVtcGxhdGUivwIKE0dl",
-            "dFRlbXBsYXRlUmVzcG9uc2USIgoGc3RhdHVzGAEgASgLMhIuZ29vZ2xlLnJw",
-            "Yy5TdGF0dXMSOwoIbWV0YWRhdGEYAiABKAsyKS5nb29nbGUuZGF0YWZsb3cu",
-            "djFiZXRhMy5UZW1wbGF0ZU1ldGFkYXRhElAKDXRlbXBsYXRlX3R5cGUYAyAB",
-            "KA4yOS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5HZXRUZW1wbGF0ZVJlc3Bv",
-            "bnNlLlRlbXBsYXRlVHlwZRJCChBydW50aW1lX21ldGFkYXRhGAQgASgLMigu",
-            "Z29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuUnVudGltZU1ldGFkYXRhIjEKDFRl",
-            "bXBsYXRlVHlwZRILCgdVTktOT1dOEAASCgoGTEVHQUNZEAESCAoERkxFWBAC",
-            "IrIDChhMYXVuY2hUZW1wbGF0ZVBhcmFtZXRlcnMSEAoIam9iX25hbWUYASAB",
-            "KAkSVQoKcGFyYW1ldGVycxgCIAMoCzJBLmdvb2dsZS5kYXRhZmxvdy52MWJl",
-            "dGEzLkxhdW5jaFRlbXBsYXRlUGFyYW1ldGVycy5QYXJhbWV0ZXJzRW50cnkS",
-            "QAoLZW52aXJvbm1lbnQYAyABKAsyKy5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
-            "My5SdW50aW1lRW52aXJvbm1lbnQSDgoGdXBkYXRlGAQgASgIEmsKFnRyYW5z",
-            "Zm9ybV9uYW1lX21hcHBpbmcYBSADKAsySy5nb29nbGUuZGF0YWZsb3cudjFi",
-            "ZXRhMy5MYXVuY2hUZW1wbGF0ZVBhcmFtZXRlcnMuVHJhbnNmb3JtTmFtZU1h",
-            "cHBpbmdFbnRyeRoxCg9QYXJhbWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ARo7ChlUcmFuc2Zvcm1OYW1lTWFwcGluZ0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEilAIKFUxhdW5jaFRl",
-            "bXBsYXRlUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEhUKDXZhbGlkYXRl",
-            "X29ubHkYAiABKAgSEgoIZ2NzX3BhdGgYAyABKAlIABJQChBkeW5hbWljX3Rl",
-            "bXBsYXRlGAYgASgLMjQuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuRHluYW1p",
-            "Y1RlbXBsYXRlTGF1bmNoUGFyYW1zSAASTAoRbGF1bmNoX3BhcmFtZXRlcnMY",
-            "BCABKAsyMS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MYXVuY2hUZW1wbGF0",
-            "ZVBhcmFtZXRlcnMSEAoIbG9jYXRpb24YBSABKAlCCgoIdGVtcGxhdGUiQwoW",
-            "TGF1bmNoVGVtcGxhdGVSZXNwb25zZRIpCgNqb2IYASABKAsyHC5nb29nbGUu",
-            "ZGF0YWZsb3cudjFiZXRhMy5Kb2IivgEKGUludmFsaWRUZW1wbGF0ZVBhcmFt",
-            "ZXRlcnMSYwoUcGFyYW1ldGVyX3Zpb2xhdGlvbnMYASADKAsyRS5nb29nbGUu",
-            "ZGF0YWZsb3cudjFiZXRhMy5JbnZhbGlkVGVtcGxhdGVQYXJhbWV0ZXJzLlBh",
-            "cmFtZXRlclZpb2xhdGlvbho8ChJQYXJhbWV0ZXJWaW9sYXRpb24SEQoJcGFy",
-            "YW1ldGVyGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJIkkKG0R5bmFtaWNU",
-            "ZW1wbGF0ZUxhdW5jaFBhcmFtcxIQCghnY3NfcGF0aBgBIAEoCRIYChBzdGFn",
-            "aW5nX2xvY2F0aW9uGAIgASgJKs4BCg1QYXJhbWV0ZXJUeXBlEgsKB0RFRkFV",
-            "TFQQABIICgRURVhUEAESEwoPR0NTX1JFQURfQlVDS0VUEAISFAoQR0NTX1dS",
-            "SVRFX0JVQ0tFVBADEhEKDUdDU19SRUFEX0ZJTEUQBBISCg5HQ1NfV1JJVEVf",
-            "RklMRRAFEhMKD0dDU19SRUFEX0ZPTERFUhAGEhQKEEdDU19XUklURV9GT0xE",
-            "RVIQBxIQCgxQVUJTVUJfVE9QSUMQCBIXChNQVUJTVUJfU1VCU0NSSVBUSU9O",
-            "EAkywgcKEFRlbXBsYXRlc1NlcnZpY2US3wEKFUNyZWF0ZUpvYkZyb21UZW1w",
-            "bGF0ZRI1Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkNyZWF0ZUpvYkZyb21U",
-            "ZW1wbGF0ZVJlcXVlc3QaHC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5Kb2Ii",
-            "cYLT5JMCayI6L3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3RlbXBsYXRlczoBKloqIiUvdjFiMy9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH0vdGVtcGxhdGVzOgEqEpQCCg5MYXVuY2hUZW1wbGF0ZRIu",
-            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxhdW5jaFRlbXBsYXRlUmVxdWVz",
-            "dBovLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxhdW5jaFRlbXBsYXRlUmVz",
-            "cG9uc2UioAGC0+STApkBIkEvdjFiMy9wcm9qZWN0cy97cHJvamVjdF9pZH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vdGVtcGxhdGVzOmxhdW5jaDoRbGF1bmNo",
-            "X3BhcmFtZXRlcnNaQSIsL3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L3Rl",
-            "bXBsYXRlczpsYXVuY2g6EWxhdW5jaF9wYXJhbWV0ZXJzEt0BCgtHZXRUZW1w",
-            "bGF0ZRIrLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkdldFRlbXBsYXRlUmVx",
-            "dWVzdBosLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkdldFRlbXBsYXRlUmVz",
-            "cG9uc2Uic4LT5JMCbRI+L3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L3RlbXBsYXRlczpnZXRaKxIpL3YxYjMvcHJv",
-            "amVjdHMve3Byb2plY3RfaWR9L3RlbXBsYXRlczpnZXQa1AHKQRdkYXRhZmxv",
-            "dy5nb29nbGVhcGlzLmNvbdJBtgFodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY29tcHV0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2NvbXB1dGUucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC91c2VyaW5mby5lbWFpbDK/AwoURmxleFRlbXBsYXRlc1NlcnZp",
-            "Y2USzwEKEkxhdW5jaEZsZXhUZW1wbGF0ZRIyLmdvb2dsZS5kYXRhZmxvdy52",
-            "MWJldGEzLkxhdW5jaEZsZXhUZW1wbGF0ZVJlcXVlc3QaMy5nb29nbGUuZGF0",
-            "YWZsb3cudjFiZXRhMy5MYXVuY2hGbGV4VGVtcGxhdGVSZXNwb25zZSJQgtPk",
-            "kwJKIkUvdjFiMy9wcm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vZmxleFRlbXBsYXRlczpsYXVuY2g6ASoa1AHKQRdkYXRhZmxv",
-            "dy5nb29nbGVhcGlzLmNvbdJBtgFodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY29tcHV0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2NvbXB1dGUucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC91c2VyaW5mby5lbWFpbELRAQobY29tLmdvb2dsZS5kYXRhZmxv",
-            "dy52MWJldGEzQg5UZW1wbGF0ZXNQcm90b1ABWj1jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RhdGFmbG93L2FwaXYxYmV0YTMvZGF0YWZsb3dwYjtkYXRhZmxvd3Bi",
-            "qgIdR29vZ2xlLkNsb3VkLkRhdGFmbG93LlYxQmV0YTPKAh1Hb29nbGVcQ2xv",
-            "dWRcRGF0YWZsb3dcVjFiZXRhM+oCIEdvb2dsZTo6Q2xvdWQ6OkRhdGFmbG93",
-            "OjpWMWJldGEzYgZwcm90bzM="));
+            "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9m",
+            "aWVsZF9iZWhhdmlvci5wcm90bxopZ29vZ2xlL2RhdGFmbG93L3YxYmV0YTMv",
+            "ZW52aXJvbm1lbnQucHJvdG8aImdvb2dsZS9kYXRhZmxvdy92MWJldGEzL2pv",
+            "YnMucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIkcKGkxhdW5jaEZs",
+            "ZXhUZW1wbGF0ZVJlc3BvbnNlEikKA2pvYhgBIAEoCzIcLmdvb2dsZS5kYXRh",
+            "Zmxvdy52MWJldGEzLkpvYiLjAgoNQ29udGFpbmVyU3BlYxINCgVpbWFnZRgB",
+            "IAEoCRI7CghtZXRhZGF0YRgCIAEoCzIpLmdvb2dsZS5kYXRhZmxvdy52MWJl",
+            "dGEzLlRlbXBsYXRlTWV0YWRhdGESMgoIc2RrX2luZm8YAyABKAsyIC5nb29n",
+            "bGUuZGF0YWZsb3cudjFiZXRhMy5TREtJbmZvElQKE2RlZmF1bHRfZW52aXJv",
+            "bm1lbnQYBCABKAsyNy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5GbGV4VGVt",
+            "cGxhdGVSdW50aW1lRW52aXJvbm1lbnQSKwojaW1hZ2VfcmVwb3NpdG9yeV91",
+            "c2VybmFtZV9zZWNyZXRfaWQYBSABKAkSKwojaW1hZ2VfcmVwb3NpdG9yeV9w",
+            "YXNzd29yZF9zZWNyZXRfaWQYBiABKAkSIgoaaW1hZ2VfcmVwb3NpdG9yeV9j",
+            "ZXJ0X3BhdGgYByABKAki0gUKG0xhdW5jaEZsZXhUZW1wbGF0ZVBhcmFtZXRl",
+            "chIQCghqb2JfbmFtZRgBIAEoCRJACg5jb250YWluZXJfc3BlYxgEIAEoCzIm",
+            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkNvbnRhaW5lclNwZWNIABIhChdj",
+            "b250YWluZXJfc3BlY19nY3NfcGF0aBgFIAEoCUgAElgKCnBhcmFtZXRlcnMY",
+            "AiADKAsyRC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MYXVuY2hGbGV4VGVt",
+            "cGxhdGVQYXJhbWV0ZXIuUGFyYW1ldGVyc0VudHJ5El8KDmxhdW5jaF9vcHRp",
+            "b25zGAYgAygLMkcuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuTGF1bmNoRmxl",
+            "eFRlbXBsYXRlUGFyYW1ldGVyLkxhdW5jaE9wdGlvbnNFbnRyeRJMCgtlbnZp",
+            "cm9ubWVudBgHIAEoCzI3Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkZsZXhU",
+            "ZW1wbGF0ZVJ1bnRpbWVFbnZpcm9ubWVudBIOCgZ1cGRhdGUYCCABKAgScAoX",
+            "dHJhbnNmb3JtX25hbWVfbWFwcGluZ3MYCSADKAsyTy5nb29nbGUuZGF0YWZs",
+            "b3cudjFiZXRhMy5MYXVuY2hGbGV4VGVtcGxhdGVQYXJhbWV0ZXIuVHJhbnNm",
+            "b3JtTmFtZU1hcHBpbmdzRW50cnkaMQoPUGFyYW1ldGVyc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNAoSTGF1bmNoT3B0aW9uc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaPAoaVHJhbnNm",
+            "b3JtTmFtZU1hcHBpbmdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4AUIKCgh0ZW1wbGF0ZSKdCAoeRmxleFRlbXBsYXRlUnVudGltZUVu",
+            "dmlyb25tZW50EhMKC251bV93b3JrZXJzGAEgASgFEhMKC21heF93b3JrZXJz",
+            "GAIgASgFEgwKBHpvbmUYAyABKAkSHQoVc2VydmljZV9hY2NvdW50X2VtYWls",
+            "GAQgASgJEhUKDXRlbXBfbG9jYXRpb24YBSABKAkSFAoMbWFjaGluZV90eXBl",
+            "GAYgASgJEh4KFmFkZGl0aW9uYWxfZXhwZXJpbWVudHMYByADKAkSDwoHbmV0",
+            "d29yaxgIIAEoCRISCgpzdWJuZXR3b3JrGAkgASgJEnEKFmFkZGl0aW9uYWxf",
+            "dXNlcl9sYWJlbHMYCiADKAsyUS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5G",
+            "bGV4VGVtcGxhdGVSdW50aW1lRW52aXJvbm1lbnQuQWRkaXRpb25hbFVzZXJM",
+            "YWJlbHNFbnRyeRIUCgxrbXNfa2V5X25hbWUYCyABKAkSTwoQaXBfY29uZmln",
+            "dXJhdGlvbhgMIAEoDjI1Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLldvcmtl",
+            "cklQQWRkcmVzc0NvbmZpZ3VyYXRpb24SFQoNd29ya2VyX3JlZ2lvbhgNIAEo",
+            "CRITCgt3b3JrZXJfem9uZRgOIAEoCRIfChdlbmFibGVfc3RyZWFtaW5nX2Vu",
+            "Z2luZRgPIAEoCBJICgtmbGV4cnNfZ29hbBgQIAEoDjIzLmdvb2dsZS5kYXRh",
+            "Zmxvdy52MWJldGEzLkZsZXhSZXNvdXJjZVNjaGVkdWxpbmdHb2FsEhgKEHN0",
+            "YWdpbmdfbG9jYXRpb24YESABKAkSGwoTc2RrX2NvbnRhaW5lcl9pbWFnZRgS",
+            "IAEoCRIUCgxkaXNrX3NpemVfZ2IYFCABKAUSTAoVYXV0b3NjYWxpbmdfYWxn",
+            "b3JpdGhtGBUgASgOMi0uZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuQXV0b3Nj",
+            "YWxpbmdBbGdvcml0aG0SGAoQZHVtcF9oZWFwX29uX29vbRgWIAEoCBIjChtz",
+            "YXZlX2hlYXBfZHVtcHNfdG9fZ2NzX3BhdGgYFyABKAkSHQoVbGF1bmNoZXJf",
+            "bWFjaGluZV90eXBlGBggASgJEi4KJmVuYWJsZV9sYXVuY2hlcl92bV9zZXJp",
+            "YWxfcG9ydF9sb2dnaW5nGBkgASgIEkgKDnN0cmVhbWluZ19tb2RlGBogASgO",
+            "MiYuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuU3RyZWFtaW5nTW9kZUID4EEB",
+            "SACIAQEaOwoZQWRkaXRpb25hbFVzZXJMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQhEKD19zdHJlYW1pbmdfbW9kZSKoAQoZ",
+            "TGF1bmNoRmxleFRlbXBsYXRlUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJ",
+            "Ek4KEGxhdW5jaF9wYXJhbWV0ZXIYAiABKAsyNC5nb29nbGUuZGF0YWZsb3cu",
+            "djFiZXRhMy5MYXVuY2hGbGV4VGVtcGxhdGVQYXJhbWV0ZXISEAoIbG9jYXRp",
+            "b24YAyABKAkSFQoNdmFsaWRhdGVfb25seRgEIAEoCCLMBQoSUnVudGltZUVu",
+            "dmlyb25tZW50EhMKC251bV93b3JrZXJzGAsgASgFEhMKC21heF93b3JrZXJz",
+            "GAEgASgFEgwKBHpvbmUYAiABKAkSHQoVc2VydmljZV9hY2NvdW50X2VtYWls",
+            "GAMgASgJEhUKDXRlbXBfbG9jYXRpb24YBCABKAkSIgoaYnlwYXNzX3RlbXBf",
+            "ZGlyX3ZhbGlkYXRpb24YBSABKAgSFAoMbWFjaGluZV90eXBlGAYgASgJEh4K",
+            "FmFkZGl0aW9uYWxfZXhwZXJpbWVudHMYByADKAkSDwoHbmV0d29yaxgIIAEo",
+            "CRISCgpzdWJuZXR3b3JrGAkgASgJEmUKFmFkZGl0aW9uYWxfdXNlcl9sYWJl",
+            "bHMYCiADKAsyRS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5SdW50aW1lRW52",
+            "aXJvbm1lbnQuQWRkaXRpb25hbFVzZXJMYWJlbHNFbnRyeRIUCgxrbXNfa2V5",
+            "X25hbWUYDCABKAkSTwoQaXBfY29uZmlndXJhdGlvbhgOIAEoDjI1Lmdvb2ds",
+            "ZS5kYXRhZmxvdy52MWJldGEzLldvcmtlcklQQWRkcmVzc0NvbmZpZ3VyYXRp",
+            "b24SFQoNd29ya2VyX3JlZ2lvbhgPIAEoCRITCgt3b3JrZXJfem9uZRgQIAEo",
+            "CRIfChdlbmFibGVfc3RyZWFtaW5nX2VuZ2luZRgRIAEoCBIUCgxkaXNrX3Np",
+            "emVfZ2IYEiABKAUSSAoOc3RyZWFtaW5nX21vZGUYEyABKA4yJi5nb29nbGUu",
+            "ZGF0YWZsb3cudjFiZXRhMy5TdHJlYW1pbmdNb2RlQgPgQQFIAIgBARo7ChlB",
+            "ZGRpdGlvbmFsVXNlckxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAFCEQoPX3N0cmVhbWluZ19tb2RlIl8KG1BhcmFtZXRlck1l",
+            "dGFkYXRhRW51bU9wdGlvbhISCgV2YWx1ZRgBIAEoCUID4EECEhIKBWxhYmVs",
+            "GAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBASLzAwoRUGFy",
+            "YW1ldGVyTWV0YWRhdGESDAoEbmFtZRgBIAEoCRINCgVsYWJlbBgCIAEoCRIR",
+            "CgloZWxwX3RleHQYAyABKAkSEwoLaXNfb3B0aW9uYWwYBCABKAgSDwoHcmVn",
+            "ZXhlcxgFIAMoCRI6CgpwYXJhbV90eXBlGAYgASgOMiYuZ29vZ2xlLmRhdGFm",
+            "bG93LnYxYmV0YTMuUGFyYW1ldGVyVHlwZRJXCg9jdXN0b21fbWV0YWRhdGEY",
+            "ByADKAsyPi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5QYXJhbWV0ZXJNZXRh",
+            "ZGF0YS5DdXN0b21NZXRhZGF0YUVudHJ5EhIKCmdyb3VwX25hbWUYCCABKAkS",
+            "EwoLcGFyZW50X25hbWUYCSABKAkSHQoVcGFyZW50X3RyaWdnZXJfdmFsdWVz",
+            "GAogAygJEkoKDGVudW1fb3B0aW9ucxgLIAMoCzI0Lmdvb2dsZS5kYXRhZmxv",
+            "dy52MWJldGEzLlBhcmFtZXRlck1ldGFkYXRhRW51bU9wdGlvbhIVCg1kZWZh",
+            "dWx0X3ZhbHVlGAwgASgJEhEKCWhpZGRlbl91aRgNIAEoCBo1ChNDdXN0b21N",
+            "ZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "5wEKEFRlbXBsYXRlTWV0YWRhdGESDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlw",
+            "dGlvbhgCIAEoCRI+CgpwYXJhbWV0ZXJzGAMgAygLMiouZ29vZ2xlLmRhdGFm",
+            "bG93LnYxYmV0YTMuUGFyYW1ldGVyTWV0YWRhdGESEQoJc3RyZWFtaW5nGAUg",
+            "ASgIEh4KFnN1cHBvcnRzX2F0X2xlYXN0X29uY2UYBiABKAgSHQoVc3VwcG9y",
+            "dHNfZXhhY3RseV9vbmNlGAcgASgIEh4KFmRlZmF1bHRfc3RyZWFtaW5nX21v",
+            "ZGUYCCABKAkijgEKB1NES0luZm8SOwoIbGFuZ3VhZ2UYASABKA4yKS5nb29n",
+            "bGUuZGF0YWZsb3cudjFiZXRhMy5TREtJbmZvLkxhbmd1YWdlEg8KB3ZlcnNp",
+            "b24YAiABKAkiNQoITGFuZ3VhZ2USCwoHVU5LTk9XThAAEggKBEpBVkEQARIK",
+            "CgZQWVRIT04QAhIGCgJHTxADIoUBCg9SdW50aW1lTWV0YWRhdGESMgoIc2Rr",
+            "X2luZm8YASABKAsyIC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TREtJbmZv",
+            "Ej4KCnBhcmFtZXRlcnMYAiADKAsyKi5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
+            "My5QYXJhbWV0ZXJNZXRhZGF0YSLGAgocQ3JlYXRlSm9iRnJvbVRlbXBsYXRl",
+            "UmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEhAKCGpvYl9uYW1lGAQgASgJ",
+            "EhIKCGdjc19wYXRoGAIgASgJSAASWQoKcGFyYW1ldGVycxgDIAMoCzJFLmdv",
+            "b2dsZS5kYXRhZmxvdy52MWJldGEzLkNyZWF0ZUpvYkZyb21UZW1wbGF0ZVJl",
+            "cXVlc3QuUGFyYW1ldGVyc0VudHJ5EkAKC2Vudmlyb25tZW50GAUgASgLMisu",
+            "Z29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuUnVudGltZUVudmlyb25tZW50EhAK",
+            "CGxvY2F0aW9uGAYgASgJGjEKD1BhcmFtZXRlcnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCHRlbXBsYXRlIsUBChJHZXRUZW1w",
+            "bGF0ZVJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRISCghnY3NfcGF0aBgC",
+            "IAEoCUgAEkYKBHZpZXcYAyABKA4yOC5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
+            "My5HZXRUZW1wbGF0ZVJlcXVlc3QuVGVtcGxhdGVWaWV3EhAKCGxvY2F0aW9u",
+            "GAQgASgJIiEKDFRlbXBsYXRlVmlldxIRCg1NRVRBREFUQV9PTkxZEABCCgoI",
+            "dGVtcGxhdGUivwIKE0dldFRlbXBsYXRlUmVzcG9uc2USIgoGc3RhdHVzGAEg",
+            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSOwoIbWV0YWRhdGEYAiABKAsyKS5n",
+            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5UZW1wbGF0ZU1ldGFkYXRhElAKDXRl",
+            "bXBsYXRlX3R5cGUYAyABKA4yOS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5H",
+            "ZXRUZW1wbGF0ZVJlc3BvbnNlLlRlbXBsYXRlVHlwZRJCChBydW50aW1lX21l",
+            "dGFkYXRhGAQgASgLMiguZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuUnVudGlt",
+            "ZU1ldGFkYXRhIjEKDFRlbXBsYXRlVHlwZRILCgdVTktOT1dOEAASCgoGTEVH",
+            "QUNZEAESCAoERkxFWBACIrIDChhMYXVuY2hUZW1wbGF0ZVBhcmFtZXRlcnMS",
+            "EAoIam9iX25hbWUYASABKAkSVQoKcGFyYW1ldGVycxgCIAMoCzJBLmdvb2ds",
+            "ZS5kYXRhZmxvdy52MWJldGEzLkxhdW5jaFRlbXBsYXRlUGFyYW1ldGVycy5Q",
+            "YXJhbWV0ZXJzRW50cnkSQAoLZW52aXJvbm1lbnQYAyABKAsyKy5nb29nbGUu",
+            "ZGF0YWZsb3cudjFiZXRhMy5SdW50aW1lRW52aXJvbm1lbnQSDgoGdXBkYXRl",
+            "GAQgASgIEmsKFnRyYW5zZm9ybV9uYW1lX21hcHBpbmcYBSADKAsySy5nb29n",
+            "bGUuZGF0YWZsb3cudjFiZXRhMy5MYXVuY2hUZW1wbGF0ZVBhcmFtZXRlcnMu",
+            "VHJhbnNmb3JtTmFtZU1hcHBpbmdFbnRyeRoxCg9QYXJhbWV0ZXJzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo7ChlUcmFuc2Zvcm1O",
+            "YW1lTWFwcGluZ0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEilAIKFUxhdW5jaFRlbXBsYXRlUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEg",
+            "ASgJEhUKDXZhbGlkYXRlX29ubHkYAiABKAgSEgoIZ2NzX3BhdGgYAyABKAlI",
+            "ABJQChBkeW5hbWljX3RlbXBsYXRlGAYgASgLMjQuZ29vZ2xlLmRhdGFmbG93",
+            "LnYxYmV0YTMuRHluYW1pY1RlbXBsYXRlTGF1bmNoUGFyYW1zSAASTAoRbGF1",
+            "bmNoX3BhcmFtZXRlcnMYBCABKAsyMS5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
+            "My5MYXVuY2hUZW1wbGF0ZVBhcmFtZXRlcnMSEAoIbG9jYXRpb24YBSABKAlC",
+            "CgoIdGVtcGxhdGUiQwoWTGF1bmNoVGVtcGxhdGVSZXNwb25zZRIpCgNqb2IY",
+            "ASABKAsyHC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5Kb2IivgEKGUludmFs",
+            "aWRUZW1wbGF0ZVBhcmFtZXRlcnMSYwoUcGFyYW1ldGVyX3Zpb2xhdGlvbnMY",
+            "ASADKAsyRS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5JbnZhbGlkVGVtcGxh",
+            "dGVQYXJhbWV0ZXJzLlBhcmFtZXRlclZpb2xhdGlvbho8ChJQYXJhbWV0ZXJW",
+            "aW9sYXRpb24SEQoJcGFyYW1ldGVyGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIg",
+            "ASgJIkkKG0R5bmFtaWNUZW1wbGF0ZUxhdW5jaFBhcmFtcxIQCghnY3NfcGF0",
+            "aBgBIAEoCRIYChBzdGFnaW5nX2xvY2F0aW9uGAIgASgJKr0DCg1QYXJhbWV0",
+            "ZXJUeXBlEgsKB0RFRkFVTFQQABIICgRURVhUEAESEwoPR0NTX1JFQURfQlVD",
+            "S0VUEAISFAoQR0NTX1dSSVRFX0JVQ0tFVBADEhEKDUdDU19SRUFEX0ZJTEUQ",
+            "BBISCg5HQ1NfV1JJVEVfRklMRRAFEhMKD0dDU19SRUFEX0ZPTERFUhAGEhQK",
+            "EEdDU19XUklURV9GT0xERVIQBxIQCgxQVUJTVUJfVE9QSUMQCBIXChNQVUJT",
+            "VUJfU1VCU0NSSVBUSU9OEAkSEgoOQklHUVVFUllfVEFCTEUQChIXChNKQVZB",
+            "U0NSSVBUX1VERl9GSUxFEAsSEwoPU0VSVklDRV9BQ0NPVU5UEAwSEAoMTUFD",
+            "SElORV9UWVBFEA0SEAoMS01TX0tFWV9OQU1FEA4SEQoNV09SS0VSX1JFR0lP",
+            "ThAPEg8KC1dPUktFUl9aT05FEBASCwoHQk9PTEVBThAREggKBEVOVU0QEhIK",
+            "CgZOVU1CRVIQExITCgtLQUZLQV9UT1BJQxAUGgIIARIUChBLQUZLQV9SRUFE",
+            "X1RPUElDEBUSFQoRS0FGS0FfV1JJVEVfVE9QSUMQFjLgBgoQVGVtcGxhdGVz",
+            "U2VydmljZRLfAQoVQ3JlYXRlSm9iRnJvbVRlbXBsYXRlEjUuZ29vZ2xlLmRh",
+            "dGFmbG93LnYxYmV0YTMuQ3JlYXRlSm9iRnJvbVRlbXBsYXRlUmVxdWVzdBoc",
+            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkpvYiJxgtPkkwJrIjovdjFiMy9w",
+            "cm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdGVt",
+            "cGxhdGVzOgEqWioiJS92MWIzL3Byb2plY3RzL3twcm9qZWN0X2lkfS90ZW1w",
+            "bGF0ZXM6ASoSlAIKDkxhdW5jaFRlbXBsYXRlEi4uZ29vZ2xlLmRhdGFmbG93",
+            "LnYxYmV0YTMuTGF1bmNoVGVtcGxhdGVSZXF1ZXN0Gi8uZ29vZ2xlLmRhdGFm",
+            "bG93LnYxYmV0YTMuTGF1bmNoVGVtcGxhdGVSZXNwb25zZSKgAYLT5JMCmQEi",
+            "QS92MWIzL3Byb2plY3RzL3twcm9qZWN0X2lkfS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS90ZW1wbGF0ZXM6bGF1bmNoOhFsYXVuY2hfcGFyYW1ldGVyc1pBIiwv",
+            "djFiMy9wcm9qZWN0cy97cHJvamVjdF9pZH0vdGVtcGxhdGVzOmxhdW5jaDoR",
+            "bGF1bmNoX3BhcmFtZXRlcnMS3QEKC0dldFRlbXBsYXRlEisuZ29vZ2xlLmRh",
+            "dGFmbG93LnYxYmV0YTMuR2V0VGVtcGxhdGVSZXF1ZXN0GiwuZ29vZ2xlLmRh",
+            "dGFmbG93LnYxYmV0YTMuR2V0VGVtcGxhdGVSZXNwb25zZSJzgtPkkwJtEj4v",
+            "djFiMy9wcm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vdGVtcGxhdGVzOmdldForEikvdjFiMy9wcm9qZWN0cy97cHJvamVjdF9p",
+            "ZH0vdGVtcGxhdGVzOmdldBpzykEXZGF0YWZsb3cuZ29vZ2xlYXBpcy5jb23S",
+            "QVZodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZTLd",
+            "AgoURmxleFRlbXBsYXRlc1NlcnZpY2USzwEKEkxhdW5jaEZsZXhUZW1wbGF0",
+            "ZRIyLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxhdW5jaEZsZXhUZW1wbGF0",
+            "ZVJlcXVlc3QaMy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MYXVuY2hGbGV4",
+            "VGVtcGxhdGVSZXNwb25zZSJQgtPkkwJKIkUvdjFiMy9wcm9qZWN0cy97cHJv",
+            "amVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmxleFRlbXBsYXRlczps",
+            "YXVuY2g6ASoac8pBF2RhdGFmbG93Lmdvb2dsZWFwaXMuY29t0kFWaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGVC0QEKG2NvbS5n",
+            "b29nbGUuZGF0YWZsb3cudjFiZXRhM0IOVGVtcGxhdGVzUHJvdG9QAVo9Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhZmxvdy9hcGl2MWJldGEzL2RhdGFmbG93",
+            "cGI7ZGF0YWZsb3dwYqoCHUdvb2dsZS5DbG91ZC5EYXRhZmxvdy5WMUJldGEz",
+            "ygIdR29vZ2xlXENsb3VkXERhdGFmbG93XFYxYmV0YTPqAiBHb29nbGU6OkNs",
+            "b3VkOjpEYXRhZmxvdzo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.EnvironmentReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.JobsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.EnvironmentReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.JobsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.ParameterType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse), global::Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse.Parser, new[]{ "Job" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ContainerSpec), global::Google.Cloud.Dataflow.V1Beta3.ContainerSpec.Parser, new[]{ "Image", "Metadata", "SdkInfo", "DefaultEnvironment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ContainerSpec), global::Google.Cloud.Dataflow.V1Beta3.ContainerSpec.Parser, new[]{ "Image", "Metadata", "SdkInfo", "DefaultEnvironment", "ImageRepositoryUsernameSecretId", "ImageRepositoryPasswordSecretId", "ImageRepositoryCertPath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateParameter), global::Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateParameter.Parser, new[]{ "JobName", "ContainerSpec", "ContainerSpecGcsPath", "Parameters", "LaunchOptions", "Environment", "Update", "TransformNameMappings" }, new[]{ "Template" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment), global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment.Parser, new[]{ "NumWorkers", "MaxWorkers", "Zone", "ServiceAccountEmail", "TempLocation", "MachineType", "AdditionalExperiments", "Network", "Subnetwork", "AdditionalUserLabels", "KmsKeyName", "IpConfiguration", "WorkerRegion", "WorkerZone", "EnableStreamingEngine", "FlexrsGoal", "StagingLocation", "SdkContainerImage", "DiskSizeGb", "AutoscalingAlgorithm", "DumpHeapOnOom", "SaveHeapDumpsToGcsPath", "LauncherMachineType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment), global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment.Parser, new[]{ "NumWorkers", "MaxWorkers", "Zone", "ServiceAccountEmail", "TempLocation", "MachineType", "AdditionalExperiments", "Network", "Subnetwork", "AdditionalUserLabels", "KmsKeyName", "IpConfiguration", "WorkerRegion", "WorkerZone", "EnableStreamingEngine", "FlexrsGoal", "StagingLocation", "SdkContainerImage", "DiskSizeGb", "AutoscalingAlgorithm", "DumpHeapOnOom", "SaveHeapDumpsToGcsPath", "LauncherMachineType", "EnableLauncherVmSerialPortLogging", "StreamingMode" }, new[]{ "StreamingMode" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateRequest), global::Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateRequest.Parser, new[]{ "ProjectId", "LaunchParameter", "Location", "ValidateOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.RuntimeEnvironment), global::Google.Cloud.Dataflow.V1Beta3.RuntimeEnvironment.Parser, new[]{ "NumWorkers", "MaxWorkers", "Zone", "ServiceAccountEmail", "TempLocation", "BypassTempDirValidation", "MachineType", "AdditionalExperiments", "Network", "Subnetwork", "AdditionalUserLabels", "KmsKeyName", "IpConfiguration", "WorkerRegion", "WorkerZone", "EnableStreamingEngine" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadata), global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadata.Parser, new[]{ "Name", "Label", "HelpText", "IsOptional", "Regexes", "ParamType", "CustomMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.TemplateMetadata), global::Google.Cloud.Dataflow.V1Beta3.TemplateMetadata.Parser, new[]{ "Name", "Description", "Parameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.RuntimeEnvironment), global::Google.Cloud.Dataflow.V1Beta3.RuntimeEnvironment.Parser, new[]{ "NumWorkers", "MaxWorkers", "Zone", "ServiceAccountEmail", "TempLocation", "BypassTempDirValidation", "MachineType", "AdditionalExperiments", "Network", "Subnetwork", "AdditionalUserLabels", "KmsKeyName", "IpConfiguration", "WorkerRegion", "WorkerZone", "EnableStreamingEngine", "DiskSizeGb", "StreamingMode" }, new[]{ "StreamingMode" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption), global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption.Parser, new[]{ "Value", "Label", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadata), global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadata.Parser, new[]{ "Name", "Label", "HelpText", "IsOptional", "Regexes", "ParamType", "CustomMetadata", "GroupName", "ParentName", "ParentTriggerValues", "EnumOptions", "DefaultValue", "HiddenUi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.TemplateMetadata), global::Google.Cloud.Dataflow.V1Beta3.TemplateMetadata.Parser, new[]{ "Name", "Description", "Parameters", "Streaming", "SupportsAtLeastOnce", "SupportsExactlyOnce", "DefaultStreamingMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.SDKInfo), global::Google.Cloud.Dataflow.V1Beta3.SDKInfo.Parser, new[]{ "Language", "Version" }, null, new[]{ typeof(global::Google.Cloud.Dataflow.V1Beta3.SDKInfo.Types.Language) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.RuntimeMetadata), global::Google.Cloud.Dataflow.V1Beta3.RuntimeMetadata.Parser, new[]{ "SdkInfo", "Parameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.CreateJobFromTemplateRequest), global::Google.Cloud.Dataflow.V1Beta3.CreateJobFromTemplateRequest.Parser, new[]{ "ProjectId", "JobName", "GcsPath", "Parameters", "Environment", "Location" }, new[]{ "Template" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -260,6 +280,63 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     /// The parameter specifies a Pub/Sub Subscription.
     /// </summary>
     [pbr::OriginalName("PUBSUB_SUBSCRIPTION")] PubsubSubscription = 9,
+    /// <summary>
+    /// The parameter specifies a BigQuery table.
+    /// </summary>
+    [pbr::OriginalName("BIGQUERY_TABLE")] BigqueryTable = 10,
+    /// <summary>
+    /// The parameter specifies a JavaScript UDF in Cloud Storage.
+    /// </summary>
+    [pbr::OriginalName("JAVASCRIPT_UDF_FILE")] JavascriptUdfFile = 11,
+    /// <summary>
+    /// The parameter specifies a Service Account email.
+    /// </summary>
+    [pbr::OriginalName("SERVICE_ACCOUNT")] ServiceAccount = 12,
+    /// <summary>
+    /// The parameter specifies a Machine Type.
+    /// </summary>
+    [pbr::OriginalName("MACHINE_TYPE")] MachineType = 13,
+    /// <summary>
+    /// The parameter specifies a KMS Key name.
+    /// </summary>
+    [pbr::OriginalName("KMS_KEY_NAME")] KmsKeyName = 14,
+    /// <summary>
+    /// The parameter specifies a Worker Region.
+    /// </summary>
+    [pbr::OriginalName("WORKER_REGION")] WorkerRegion = 15,
+    /// <summary>
+    /// The parameter specifies a Worker Zone.
+    /// </summary>
+    [pbr::OriginalName("WORKER_ZONE")] WorkerZone = 16,
+    /// <summary>
+    /// The parameter specifies a boolean input.
+    /// </summary>
+    [pbr::OriginalName("BOOLEAN")] Boolean = 17,
+    /// <summary>
+    /// The parameter specifies an enum input.
+    /// </summary>
+    [pbr::OriginalName("ENUM")] Enum = 18,
+    /// <summary>
+    /// The parameter specifies a number input.
+    /// </summary>
+    [pbr::OriginalName("NUMBER")] Number = 19,
+    /// <summary>
+    /// Deprecated. Please use KAFKA_READ_TOPIC instead.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [pbr::OriginalName("KAFKA_TOPIC")] KafkaTopic = 20,
+    /// <summary>
+    /// The parameter specifies the fully-qualified name of an Apache Kafka topic.
+    /// This can be either a Google Managed Kafka topic or a non-managed Kafka
+    /// topic.
+    /// </summary>
+    [pbr::OriginalName("KAFKA_READ_TOPIC")] KafkaReadTopic = 21,
+    /// <summary>
+    /// The parameter specifies the fully-qualified name of an Apache Kafka topic.
+    /// This can be an existing Google Managed Kafka topic, the name for a new
+    /// Google Managed Kafka topic, or an existing non-managed Kafka topic.
+    /// </summary>
+    [pbr::OriginalName("KAFKA_WRITE_TOPIC")] KafkaWriteTopic = 22,
   }
 
   #endregion
@@ -513,6 +590,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       sdkInfo_ = other.sdkInfo_ != null ? other.sdkInfo_.Clone() : null;
       defaultEnvironment_ = other.defaultEnvironment_ != null ? other.defaultEnvironment_.Clone() : null;
+      imageRepositoryUsernameSecretId_ = other.imageRepositoryUsernameSecretId_;
+      imageRepositoryPasswordSecretId_ = other.imageRepositoryPasswordSecretId_;
+      imageRepositoryCertPath_ = other.imageRepositoryCertPath_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -582,6 +662,51 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "image_repository_username_secret_id" field.</summary>
+    public const int ImageRepositoryUsernameSecretIdFieldNumber = 5;
+    private string imageRepositoryUsernameSecretId_ = "";
+    /// <summary>
+    /// Secret Manager secret id for username to authenticate to private registry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageRepositoryUsernameSecretId {
+      get { return imageRepositoryUsernameSecretId_; }
+      set {
+        imageRepositoryUsernameSecretId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "image_repository_password_secret_id" field.</summary>
+    public const int ImageRepositoryPasswordSecretIdFieldNumber = 6;
+    private string imageRepositoryPasswordSecretId_ = "";
+    /// <summary>
+    /// Secret Manager secret id for password to authenticate to private registry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageRepositoryPasswordSecretId {
+      get { return imageRepositoryPasswordSecretId_; }
+      set {
+        imageRepositoryPasswordSecretId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "image_repository_cert_path" field.</summary>
+    public const int ImageRepositoryCertPathFieldNumber = 7;
+    private string imageRepositoryCertPath_ = "";
+    /// <summary>
+    /// Cloud Storage path to self-signed certificate of private registry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageRepositoryCertPath {
+      get { return imageRepositoryCertPath_; }
+      set {
+        imageRepositoryCertPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -601,6 +726,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!object.Equals(SdkInfo, other.SdkInfo)) return false;
       if (!object.Equals(DefaultEnvironment, other.DefaultEnvironment)) return false;
+      if (ImageRepositoryUsernameSecretId != other.ImageRepositoryUsernameSecretId) return false;
+      if (ImageRepositoryPasswordSecretId != other.ImageRepositoryPasswordSecretId) return false;
+      if (ImageRepositoryCertPath != other.ImageRepositoryCertPath) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -612,6 +740,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (sdkInfo_ != null) hash ^= SdkInfo.GetHashCode();
       if (defaultEnvironment_ != null) hash ^= DefaultEnvironment.GetHashCode();
+      if (ImageRepositoryUsernameSecretId.Length != 0) hash ^= ImageRepositoryUsernameSecretId.GetHashCode();
+      if (ImageRepositoryPasswordSecretId.Length != 0) hash ^= ImageRepositoryPasswordSecretId.GetHashCode();
+      if (ImageRepositoryCertPath.Length != 0) hash ^= ImageRepositoryCertPath.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -646,6 +777,18 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(DefaultEnvironment);
       }
+      if (ImageRepositoryUsernameSecretId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ImageRepositoryUsernameSecretId);
+      }
+      if (ImageRepositoryPasswordSecretId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ImageRepositoryPasswordSecretId);
+      }
+      if (ImageRepositoryCertPath.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ImageRepositoryCertPath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -672,6 +815,18 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(DefaultEnvironment);
       }
+      if (ImageRepositoryUsernameSecretId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ImageRepositoryUsernameSecretId);
+      }
+      if (ImageRepositoryPasswordSecretId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ImageRepositoryPasswordSecretId);
+      }
+      if (ImageRepositoryCertPath.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ImageRepositoryCertPath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -693,6 +848,15 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (defaultEnvironment_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultEnvironment);
+      }
+      if (ImageRepositoryUsernameSecretId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageRepositoryUsernameSecretId);
+      }
+      if (ImageRepositoryPasswordSecretId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageRepositoryPasswordSecretId);
+      }
+      if (ImageRepositoryCertPath.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageRepositoryCertPath);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -726,6 +890,15 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           DefaultEnvironment = new global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment();
         }
         DefaultEnvironment.MergeFrom(other.DefaultEnvironment);
+      }
+      if (other.ImageRepositoryUsernameSecretId.Length != 0) {
+        ImageRepositoryUsernameSecretId = other.ImageRepositoryUsernameSecretId;
+      }
+      if (other.ImageRepositoryPasswordSecretId.Length != 0) {
+        ImageRepositoryPasswordSecretId = other.ImageRepositoryPasswordSecretId;
+      }
+      if (other.ImageRepositoryCertPath.Length != 0) {
+        ImageRepositoryCertPath = other.ImageRepositoryCertPath;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -767,6 +940,18 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             input.ReadMessage(DefaultEnvironment);
             break;
           }
+          case 42: {
+            ImageRepositoryUsernameSecretId = input.ReadString();
+            break;
+          }
+          case 50: {
+            ImageRepositoryPasswordSecretId = input.ReadString();
+            break;
+          }
+          case 58: {
+            ImageRepositoryCertPath = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -805,6 +990,18 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
               DefaultEnvironment = new global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment();
             }
             input.ReadMessage(DefaultEnvironment);
+            break;
+          }
+          case 42: {
+            ImageRepositoryUsernameSecretId = input.ReadString();
+            break;
+          }
+          case 50: {
+            ImageRepositoryPasswordSecretId = input.ReadString();
+            break;
+          }
+          case 58: {
+            ImageRepositoryCertPath = input.ReadString();
             break;
           }
         }
@@ -1345,6 +1542,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   {
     private static readonly pb::MessageParser<FlexTemplateRuntimeEnvironment> _parser = new pb::MessageParser<FlexTemplateRuntimeEnvironment>(() => new FlexTemplateRuntimeEnvironment());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FlexTemplateRuntimeEnvironment> Parser { get { return _parser; } }
@@ -1372,6 +1570,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FlexTemplateRuntimeEnvironment(FlexTemplateRuntimeEnvironment other) : this() {
+      _hasBits0 = other._hasBits0;
       numWorkers_ = other.numWorkers_;
       maxWorkers_ = other.maxWorkers_;
       zone_ = other.zone_;
@@ -1395,6 +1594,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       dumpHeapOnOom_ = other.dumpHeapOnOom_;
       saveHeapDumpsToGcsPath_ = other.saveHeapDumpsToGcsPath_;
       launcherMachineType_ = other.launcherMachineType_;
+      enableLauncherVmSerialPortLogging_ = other.enableLauncherVmSerialPortLogging_;
+      streamingMode_ = other.streamingMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1738,9 +1939,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int DumpHeapOnOomFieldNumber = 22;
     private bool dumpHeapOnOom_;
     /// <summary>
-    /// If true, save a heap dump before killing a thread or process which is GC
-    /// thrashing or out of memory. The location of the heap file will either be
-    /// echoed back to the user, or the user will be given the opportunity to
+    /// If true, when processing time is spent almost entirely
+    /// on garbage collection (GC), saves a heap dump before ending the thread
+    /// or process. If false, ends the thread or process without saving a heap
+    /// dump. Does not save a heap dump when the Java Virtual Machine (JVM) has an
+    /// out of memory error during processing. The location of the heap file is
+    /// either echoed back to the user, or the user is given the opportunity to
     /// download the heap file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1756,9 +1960,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int SaveHeapDumpsToGcsPathFieldNumber = 23;
     private string saveHeapDumpsToGcsPath_ = "";
     /// <summary>
-    /// Cloud Storage bucket (directory) to upload heap dumps to the given
-    /// location. Enabling this implies that heap dumps should be generated on OOM
-    /// (dump_heap_on_oom is set to true).
+    /// Cloud Storage bucket (directory) to upload heap dumps to.
+    /// Enabling this field implies that `dump_heap_on_oom` is set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1783,6 +1986,57 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       set {
         launcherMachineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "enable_launcher_vm_serial_port_logging" field.</summary>
+    public const int EnableLauncherVmSerialPortLoggingFieldNumber = 25;
+    private bool enableLauncherVmSerialPortLogging_;
+    /// <summary>
+    /// If true serial port logging will be enabled for the launcher VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableLauncherVmSerialPortLogging {
+      get { return enableLauncherVmSerialPortLogging_; }
+      set {
+        enableLauncherVmSerialPortLogging_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "streaming_mode" field.</summary>
+    public const int StreamingModeFieldNumber = 26;
+    private readonly static global::Google.Cloud.Dataflow.V1Beta3.StreamingMode StreamingModeDefaultValue = global::Google.Cloud.Dataflow.V1Beta3.StreamingMode.Unspecified;
+
+    private global::Google.Cloud.Dataflow.V1Beta3.StreamingMode streamingMode_;
+    /// <summary>
+    /// Optional. Specifies the Streaming Engine message processing guarantees.
+    /// Reduces cost and latency but might result in duplicate messages committed
+    /// to storage. Designed to run simple mapping streaming ETL jobs at the lowest
+    /// cost. For example, Change Data Capture (CDC) to BigQuery is a canonical use
+    /// case. For more information, see
+    /// [Set the pipeline streaming
+    /// mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataflow.V1Beta3.StreamingMode StreamingMode {
+      get { if ((_hasBits0 & 1) != 0) { return streamingMode_; } else { return StreamingModeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        streamingMode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "streaming_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStreamingMode {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "streaming_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStreamingMode() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1823,6 +2077,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (DumpHeapOnOom != other.DumpHeapOnOom) return false;
       if (SaveHeapDumpsToGcsPath != other.SaveHeapDumpsToGcsPath) return false;
       if (LauncherMachineType != other.LauncherMachineType) return false;
+      if (EnableLauncherVmSerialPortLogging != other.EnableLauncherVmSerialPortLogging) return false;
+      if (StreamingMode != other.StreamingMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1853,6 +2109,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (DumpHeapOnOom != false) hash ^= DumpHeapOnOom.GetHashCode();
       if (SaveHeapDumpsToGcsPath.Length != 0) hash ^= SaveHeapDumpsToGcsPath.GetHashCode();
       if (LauncherMachineType.Length != 0) hash ^= LauncherMachineType.GetHashCode();
+      if (EnableLauncherVmSerialPortLogging != false) hash ^= EnableLauncherVmSerialPortLogging.GetHashCode();
+      if (HasStreamingMode) hash ^= StreamingMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1957,6 +2215,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(194, 1);
         output.WriteString(LauncherMachineType);
       }
+      if (EnableLauncherVmSerialPortLogging != false) {
+        output.WriteRawTag(200, 1);
+        output.WriteBool(EnableLauncherVmSerialPortLogging);
+      }
+      if (HasStreamingMode) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) StreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2053,6 +2319,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(194, 1);
         output.WriteString(LauncherMachineType);
       }
+      if (EnableLauncherVmSerialPortLogging != false) {
+        output.WriteRawTag(200, 1);
+        output.WriteBool(EnableLauncherVmSerialPortLogging);
+      }
+      if (HasStreamingMode) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) StreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2127,6 +2401,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (LauncherMachineType.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(LauncherMachineType);
+      }
+      if (EnableLauncherVmSerialPortLogging != false) {
+        size += 2 + 1;
+      }
+      if (HasStreamingMode) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) StreamingMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2204,6 +2484,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (other.LauncherMachineType.Length != 0) {
         LauncherMachineType = other.LauncherMachineType;
+      }
+      if (other.EnableLauncherVmSerialPortLogging != false) {
+        EnableLauncherVmSerialPortLogging = other.EnableLauncherVmSerialPortLogging;
+      }
+      if (other.HasStreamingMode) {
+        StreamingMode = other.StreamingMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2312,6 +2598,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             LauncherMachineType = input.ReadString();
             break;
           }
+          case 200: {
+            EnableLauncherVmSerialPortLogging = input.ReadBool();
+            break;
+          }
+          case 208: {
+            StreamingMode = (global::Google.Cloud.Dataflow.V1Beta3.StreamingMode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -2417,6 +2711,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 194: {
             LauncherMachineType = input.ReadString();
+            break;
+          }
+          case 200: {
+            EnableLauncherVmSerialPortLogging = input.ReadBool();
+            break;
+          }
+          case 208: {
+            StreamingMode = (global::Google.Cloud.Dataflow.V1Beta3.StreamingMode) input.ReadEnum();
             break;
           }
         }
@@ -2765,6 +3067,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   {
     private static readonly pb::MessageParser<RuntimeEnvironment> _parser = new pb::MessageParser<RuntimeEnvironment>(() => new RuntimeEnvironment());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RuntimeEnvironment> Parser { get { return _parser; } }
@@ -2792,6 +3095,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RuntimeEnvironment(RuntimeEnvironment other) : this() {
+      _hasBits0 = other._hasBits0;
       numWorkers_ = other.numWorkers_;
       maxWorkers_ = other.maxWorkers_;
       zone_ = other.zone_;
@@ -2808,6 +3112,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       workerRegion_ = other.workerRegion_;
       workerZone_ = other.workerZone_;
       enableStreamingEngine_ = other.enableStreamingEngine_;
+      diskSizeGb_ = other.diskSizeGb_;
+      streamingMode_ = other.streamingMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2821,7 +3127,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int NumWorkersFieldNumber = 11;
     private int numWorkers_;
     /// <summary>
-    /// The initial number of Google Compute Engine instnaces for the job.
+    /// Optional. The initial number of Google Compute Engine instances for the
+    /// job. The default value is 11.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2836,8 +3143,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int MaxWorkersFieldNumber = 1;
     private int maxWorkers_;
     /// <summary>
-    /// The maximum number of Google Compute Engine instances to be made
-    /// available to your pipeline during execution, from 1 to 1000.
+    /// Optional. The maximum number of Google Compute Engine instances to be made
+    /// available to your pipeline during execution, from 1 to 1000. The default
+    /// value is 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2852,7 +3160,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The Compute Engine [availability
+    /// Optional. The Compute Engine [availability
     /// zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones)
     /// for launching worker instances to run your pipeline.
     /// In the future, worker_zone will take precedence.
@@ -2870,7 +3178,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int ServiceAccountEmailFieldNumber = 3;
     private string serviceAccountEmail_ = "";
     /// <summary>
-    /// The email address of the service account to run the job as.
+    /// Optional. The email address of the service account to run the job as.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2885,7 +3193,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int TempLocationFieldNumber = 4;
     private string tempLocation_ = "";
     /// <summary>
-    /// The Cloud Storage path to use for temporary files.
+    /// Required. The Cloud Storage path to use for temporary files.
     /// Must be a valid Cloud Storage URL, beginning with `gs://`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2901,8 +3209,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int BypassTempDirValidationFieldNumber = 5;
     private bool bypassTempDirValidation_;
     /// <summary>
-    /// Whether to bypass the safety checks for the job's temporary directory.
-    /// Use with caution.
+    /// Optional. Whether to bypass the safety checks for the job's temporary
+    /// directory. Use with caution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2917,8 +3225,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int MachineTypeFieldNumber = 6;
     private string machineType_ = "";
     /// <summary>
-    /// The machine type to use for the job. Defaults to the value from the
-    /// template if not specified.
+    /// Optional. The machine type to use for the job. Defaults to the value from
+    /// the template if not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2935,7 +3243,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         = pb::FieldCodec.ForString(58);
     private readonly pbc::RepeatedField<string> additionalExperiments_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Additional experiment flags for the job, specified with the
+    /// Optional. Additional experiment flags for the job, specified with the
     /// `--experiments` option.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2948,7 +3256,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int NetworkFieldNumber = 8;
     private string network_ = "";
     /// <summary>
-    /// Network to which VMs will be assigned.  If empty or unspecified,
+    /// Optional. Network to which VMs will be assigned.  If empty or unspecified,
     /// the service will use the network "default".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2964,9 +3272,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int SubnetworkFieldNumber = 9;
     private string subnetwork_ = "";
     /// <summary>
-    /// Subnetwork to which VMs will be assigned, if desired. You can specify a
-    /// subnetwork using either a complete URL or an abbreviated path. Expected to
-    /// be of the form
+    /// Optional. Subnetwork to which VMs will be assigned, if desired. You can
+    /// specify a subnetwork using either a complete URL or an abbreviated path.
+    ///  Expected to be of the form
     /// "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK"
     /// or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in
     /// a Shared VPC network, you must use the complete URL.
@@ -2986,7 +3294,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 82);
     private readonly pbc::MapField<string, string> additionalUserLabels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Additional user labels to be specified for the job.
+    /// Optional. Additional user labels to be specified for the job.
     /// Keys and values should follow the restrictions specified in the [labeling
     /// restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions)
     /// page.
@@ -3003,7 +3311,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int KmsKeyNameFieldNumber = 12;
     private string kmsKeyName_ = "";
     /// <summary>
-    /// Name for the Cloud KMS key for the job.
+    /// Optional. Name for the Cloud KMS key for the job.
     /// Key format is:
     /// projects/&lt;project>/locations/&lt;location>/keyRings/&lt;keyring>/cryptoKeys/&lt;key>
     /// </summary>
@@ -3020,7 +3328,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int IpConfigurationFieldNumber = 14;
     private global::Google.Cloud.Dataflow.V1Beta3.WorkerIPAddressConfiguration ipConfiguration_ = global::Google.Cloud.Dataflow.V1Beta3.WorkerIPAddressConfiguration.WorkerIpUnspecified;
     /// <summary>
-    /// Configuration for VM IPs.
+    /// Optional. Configuration for VM IPs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3035,7 +3343,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int WorkerRegionFieldNumber = 15;
     private string workerRegion_ = "";
     /// <summary>
-    /// The Compute Engine region
+    /// Required. The Compute Engine region
     /// (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
     /// which worker processing should occur, e.g. "us-west1". Mutually exclusive
     /// with worker_zone. If neither worker_region nor worker_zone is specified,
@@ -3054,7 +3362,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int WorkerZoneFieldNumber = 16;
     private string workerZone_ = "";
     /// <summary>
-    /// The Compute Engine zone
+    /// Optional. The Compute Engine zone
     /// (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
     /// which worker processing should occur, e.g. "us-west1-a". Mutually exclusive
     /// with worker_region. If neither worker_region nor worker_zone is specified,
@@ -3074,7 +3382,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int EnableStreamingEngineFieldNumber = 17;
     private bool enableStreamingEngine_;
     /// <summary>
-    /// Whether to enable Streaming Engine for the job.
+    /// Optional. Whether to enable Streaming Engine for the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3083,6 +3391,58 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       set {
         enableStreamingEngine_ = value;
       }
+    }
+
+    /// <summary>Field number for the "disk_size_gb" field.</summary>
+    public const int DiskSizeGbFieldNumber = 18;
+    private int diskSizeGb_;
+    /// <summary>
+    /// Optional. The disk size, in gigabytes, to use on each remote Compute Engine
+    /// worker instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DiskSizeGb {
+      get { return diskSizeGb_; }
+      set {
+        diskSizeGb_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "streaming_mode" field.</summary>
+    public const int StreamingModeFieldNumber = 19;
+    private readonly static global::Google.Cloud.Dataflow.V1Beta3.StreamingMode StreamingModeDefaultValue = global::Google.Cloud.Dataflow.V1Beta3.StreamingMode.Unspecified;
+
+    private global::Google.Cloud.Dataflow.V1Beta3.StreamingMode streamingMode_;
+    /// <summary>
+    /// Optional. Specifies the Streaming Engine message processing guarantees.
+    /// Reduces cost and latency but might result in duplicate messages committed
+    /// to storage. Designed to run simple mapping streaming ETL jobs at the lowest
+    /// cost. For example, Change Data Capture (CDC) to BigQuery is a canonical use
+    /// case. For more information, see
+    /// [Set the pipeline streaming
+    /// mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataflow.V1Beta3.StreamingMode StreamingMode {
+      get { if ((_hasBits0 & 1) != 0) { return streamingMode_; } else { return StreamingModeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        streamingMode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "streaming_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStreamingMode {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "streaming_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStreamingMode() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3116,6 +3476,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (WorkerRegion != other.WorkerRegion) return false;
       if (WorkerZone != other.WorkerZone) return false;
       if (EnableStreamingEngine != other.EnableStreamingEngine) return false;
+      if (DiskSizeGb != other.DiskSizeGb) return false;
+      if (StreamingMode != other.StreamingMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3139,6 +3501,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (WorkerRegion.Length != 0) hash ^= WorkerRegion.GetHashCode();
       if (WorkerZone.Length != 0) hash ^= WorkerZone.GetHashCode();
       if (EnableStreamingEngine != false) hash ^= EnableStreamingEngine.GetHashCode();
+      if (DiskSizeGb != 0) hash ^= DiskSizeGb.GetHashCode();
+      if (HasStreamingMode) hash ^= StreamingMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3215,6 +3579,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(136, 1);
         output.WriteBool(EnableStreamingEngine);
       }
+      if (DiskSizeGb != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(DiskSizeGb);
+      }
+      if (HasStreamingMode) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) StreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3283,6 +3655,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(136, 1);
         output.WriteBool(EnableStreamingEngine);
       }
+      if (DiskSizeGb != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(DiskSizeGb);
+      }
+      if (HasStreamingMode) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) StreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3336,6 +3716,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (EnableStreamingEngine != false) {
         size += 2 + 1;
+      }
+      if (DiskSizeGb != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(DiskSizeGb);
+      }
+      if (HasStreamingMode) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) StreamingMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3392,6 +3778,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (other.EnableStreamingEngine != false) {
         EnableStreamingEngine = other.EnableStreamingEngine;
+      }
+      if (other.DiskSizeGb != 0) {
+        DiskSizeGb = other.DiskSizeGb;
+      }
+      if (other.HasStreamingMode) {
+        StreamingMode = other.StreamingMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3470,6 +3862,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 136: {
             EnableStreamingEngine = input.ReadBool();
+            break;
+          }
+          case 144: {
+            DiskSizeGb = input.ReadInt32();
+            break;
+          }
+          case 152: {
+            StreamingMode = (global::Google.Cloud.Dataflow.V1Beta3.StreamingMode) input.ReadEnum();
             break;
           }
         }
@@ -3551,6 +3951,290 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             EnableStreamingEngine = input.ReadBool();
             break;
           }
+          case 144: {
+            DiskSizeGb = input.ReadInt32();
+            break;
+          }
+          case 152: {
+            StreamingMode = (global::Google.Cloud.Dataflow.V1Beta3.StreamingMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ParameterMetadataEnumOption specifies the option shown in the enum form.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ParameterMetadataEnumOption : pb::IMessage<ParameterMetadataEnumOption>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ParameterMetadataEnumOption> _parser = new pb::MessageParser<ParameterMetadataEnumOption>(() => new ParameterMetadataEnumOption());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ParameterMetadataEnumOption> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParameterMetadataEnumOption() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParameterMetadataEnumOption(ParameterMetadataEnumOption other) : this() {
+      value_ = other.value_;
+      label_ = other.label_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParameterMetadataEnumOption Clone() {
+      return new ParameterMetadataEnumOption(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private string value_ = "";
+    /// <summary>
+    /// Required. The value of the enum option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Value {
+      get { return value_; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "label" field.</summary>
+    public const int LabelFieldNumber = 2;
+    private string label_ = "";
+    /// <summary>
+    /// Optional. The label to display for the enum option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Label {
+      get { return label_; }
+      set {
+        label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. The description to display for the enum option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ParameterMetadataEnumOption);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ParameterMetadataEnumOption other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Value != other.Value) return false;
+      if (Label != other.Label) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Value.Length != 0) hash ^= Value.GetHashCode();
+      if (Label.Length != 0) hash ^= Label.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Value.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Value);
+      }
+      if (Label.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Label);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Value.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Value);
+      }
+      if (Label.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Label);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Value.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      if (Label.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ParameterMetadataEnumOption other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Value.Length != 0) {
+        Value = other.Value;
+      }
+      if (other.Label.Length != 0) {
+        Label = other.Label;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Value = input.ReadString();
+            break;
+          }
+          case 18: {
+            Label = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Value = input.ReadString();
+            break;
+          }
+          case 18: {
+            Label = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3576,7 +4260,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3603,6 +4287,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       regexes_ = other.regexes_.Clone();
       paramType_ = other.paramType_;
       customMetadata_ = other.customMetadata_.Clone();
+      groupName_ = other.groupName_;
+      parentName_ = other.parentName_;
+      parentTriggerValues_ = other.parentTriggerValues_.Clone();
+      enumOptions_ = other.enumOptions_.Clone();
+      defaultValue_ = other.defaultValue_;
+      hiddenUi_ = other.hiddenUi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3716,6 +4406,105 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       get { return customMetadata_; }
     }
 
+    /// <summary>Field number for the "group_name" field.</summary>
+    public const int GroupNameFieldNumber = 8;
+    private string groupName_ = "";
+    /// <summary>
+    /// Optional. Specifies a group name for this parameter to be rendered under.
+    /// Group header text will be rendered exactly as specified in this field. Only
+    /// considered when parent_name is NOT provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GroupName {
+      get { return groupName_; }
+      set {
+        groupName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent_name" field.</summary>
+    public const int ParentNameFieldNumber = 9;
+    private string parentName_ = "";
+    /// <summary>
+    /// Optional. Specifies the name of the parent parameter. Used in conjunction
+    /// with 'parent_trigger_values' to make this parameter conditional (will only
+    /// be rendered conditionally). Should be mappable to a ParameterMetadata.name
+    /// field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ParentName {
+      get { return parentName_; }
+      set {
+        parentName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent_trigger_values" field.</summary>
+    public const int ParentTriggerValuesFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _repeated_parentTriggerValues_codec
+        = pb::FieldCodec.ForString(82);
+    private readonly pbc::RepeatedField<string> parentTriggerValues_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The value(s) of the 'parent_name' parameter which will trigger
+    /// this parameter to be shown. If left empty, ANY non-empty value in
+    /// parent_name will trigger this parameter to be shown. Only considered when
+    /// this parameter is conditional (when 'parent_name' has been provided).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ParentTriggerValues {
+      get { return parentTriggerValues_; }
+    }
+
+    /// <summary>Field number for the "enum_options" field.</summary>
+    public const int EnumOptionsFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption> _repeated_enumOptions_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption> enumOptions_ = new pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption>();
+    /// <summary>
+    /// Optional. The options shown when ENUM ParameterType is specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.ParameterMetadataEnumOption> EnumOptions {
+      get { return enumOptions_; }
+    }
+
+    /// <summary>Field number for the "default_value" field.</summary>
+    public const int DefaultValueFieldNumber = 12;
+    private string defaultValue_ = "";
+    /// <summary>
+    /// Optional. The default values will pre-populate the parameter with the
+    /// given value from the proto. If default_value is left empty, the parameter
+    /// will be populated with a default of the relevant type, e.g. false for a
+    /// boolean.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DefaultValue {
+      get { return defaultValue_; }
+      set {
+        defaultValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "hidden_ui" field.</summary>
+    public const int HiddenUiFieldNumber = 13;
+    private bool hiddenUi_;
+    /// <summary>
+    /// Optional. Whether the parameter should be hidden in the UI.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HiddenUi {
+      get { return hiddenUi_; }
+      set {
+        hiddenUi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3738,6 +4527,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if(!regexes_.Equals(other.regexes_)) return false;
       if (ParamType != other.ParamType) return false;
       if (!CustomMetadata.Equals(other.CustomMetadata)) return false;
+      if (GroupName != other.GroupName) return false;
+      if (ParentName != other.ParentName) return false;
+      if(!parentTriggerValues_.Equals(other.parentTriggerValues_)) return false;
+      if(!enumOptions_.Equals(other.enumOptions_)) return false;
+      if (DefaultValue != other.DefaultValue) return false;
+      if (HiddenUi != other.HiddenUi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3752,6 +4547,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       hash ^= regexes_.GetHashCode();
       if (ParamType != global::Google.Cloud.Dataflow.V1Beta3.ParameterType.Default) hash ^= ParamType.GetHashCode();
       hash ^= CustomMetadata.GetHashCode();
+      if (GroupName.Length != 0) hash ^= GroupName.GetHashCode();
+      if (ParentName.Length != 0) hash ^= ParentName.GetHashCode();
+      hash ^= parentTriggerValues_.GetHashCode();
+      hash ^= enumOptions_.GetHashCode();
+      if (DefaultValue.Length != 0) hash ^= DefaultValue.GetHashCode();
+      if (HiddenUi != false) hash ^= HiddenUi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3792,6 +4593,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteEnum((int) ParamType);
       }
       customMetadata_.WriteTo(output, _map_customMetadata_codec);
+      if (GroupName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(GroupName);
+      }
+      if (ParentName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ParentName);
+      }
+      parentTriggerValues_.WriteTo(output, _repeated_parentTriggerValues_codec);
+      enumOptions_.WriteTo(output, _repeated_enumOptions_codec);
+      if (DefaultValue.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DefaultValue);
+      }
+      if (HiddenUi != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(HiddenUi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3824,6 +4643,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteEnum((int) ParamType);
       }
       customMetadata_.WriteTo(ref output, _map_customMetadata_codec);
+      if (GroupName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(GroupName);
+      }
+      if (ParentName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ParentName);
+      }
+      parentTriggerValues_.WriteTo(ref output, _repeated_parentTriggerValues_codec);
+      enumOptions_.WriteTo(ref output, _repeated_enumOptions_codec);
+      if (DefaultValue.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DefaultValue);
+      }
+      if (HiddenUi != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(HiddenUi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3851,6 +4688,20 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ParamType);
       }
       size += customMetadata_.CalculateSize(_map_customMetadata_codec);
+      if (GroupName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GroupName);
+      }
+      if (ParentName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentName);
+      }
+      size += parentTriggerValues_.CalculateSize(_repeated_parentTriggerValues_codec);
+      size += enumOptions_.CalculateSize(_repeated_enumOptions_codec);
+      if (DefaultValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultValue);
+      }
+      if (HiddenUi != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3880,6 +4731,20 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         ParamType = other.ParamType;
       }
       customMetadata_.MergeFrom(other.customMetadata_);
+      if (other.GroupName.Length != 0) {
+        GroupName = other.GroupName;
+      }
+      if (other.ParentName.Length != 0) {
+        ParentName = other.ParentName;
+      }
+      parentTriggerValues_.Add(other.parentTriggerValues_);
+      enumOptions_.Add(other.enumOptions_);
+      if (other.DefaultValue.Length != 0) {
+        DefaultValue = other.DefaultValue;
+      }
+      if (other.HiddenUi != false) {
+        HiddenUi = other.HiddenUi;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3921,6 +4786,30 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 58: {
             customMetadata_.AddEntriesFrom(input, _map_customMetadata_codec);
+            break;
+          }
+          case 66: {
+            GroupName = input.ReadString();
+            break;
+          }
+          case 74: {
+            ParentName = input.ReadString();
+            break;
+          }
+          case 82: {
+            parentTriggerValues_.AddEntriesFrom(input, _repeated_parentTriggerValues_codec);
+            break;
+          }
+          case 90: {
+            enumOptions_.AddEntriesFrom(input, _repeated_enumOptions_codec);
+            break;
+          }
+          case 98: {
+            DefaultValue = input.ReadString();
+            break;
+          }
+          case 104: {
+            HiddenUi = input.ReadBool();
             break;
           }
         }
@@ -3966,6 +4855,30 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             customMetadata_.AddEntriesFrom(ref input, _map_customMetadata_codec);
             break;
           }
+          case 66: {
+            GroupName = input.ReadString();
+            break;
+          }
+          case 74: {
+            ParentName = input.ReadString();
+            break;
+          }
+          case 82: {
+            parentTriggerValues_.AddEntriesFrom(ref input, _repeated_parentTriggerValues_codec);
+            break;
+          }
+          case 90: {
+            enumOptions_.AddEntriesFrom(ref input, _repeated_enumOptions_codec);
+            break;
+          }
+          case 98: {
+            DefaultValue = input.ReadString();
+            break;
+          }
+          case 104: {
+            HiddenUi = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -3991,7 +4904,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4014,6 +4927,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       name_ = other.name_;
       description_ = other.description_;
       parameters_ = other.parameters_.Clone();
+      streaming_ = other.streaming_;
+      supportsAtLeastOnce_ = other.supportsAtLeastOnce_;
+      supportsExactlyOnce_ = other.supportsExactlyOnce_;
+      defaultStreamingMode_ = other.defaultStreamingMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4067,6 +4984,68 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       get { return parameters_; }
     }
 
+    /// <summary>Field number for the "streaming" field.</summary>
+    public const int StreamingFieldNumber = 5;
+    private bool streaming_;
+    /// <summary>
+    /// Optional. Indicates if the template is streaming or not.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Streaming {
+      get { return streaming_; }
+      set {
+        streaming_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "supports_at_least_once" field.</summary>
+    public const int SupportsAtLeastOnceFieldNumber = 6;
+    private bool supportsAtLeastOnce_;
+    /// <summary>
+    /// Optional. Indicates if the streaming template supports at least once mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SupportsAtLeastOnce {
+      get { return supportsAtLeastOnce_; }
+      set {
+        supportsAtLeastOnce_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "supports_exactly_once" field.</summary>
+    public const int SupportsExactlyOnceFieldNumber = 7;
+    private bool supportsExactlyOnce_;
+    /// <summary>
+    /// Optional. Indicates if the streaming template supports exactly once mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SupportsExactlyOnce {
+      get { return supportsExactlyOnce_; }
+      set {
+        supportsExactlyOnce_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_streaming_mode" field.</summary>
+    public const int DefaultStreamingModeFieldNumber = 8;
+    private string defaultStreamingMode_ = "";
+    /// <summary>
+    /// Optional. Indicates the default streaming mode for a streaming template.
+    /// Only valid if both supports_at_least_once and supports_exactly_once are
+    /// true. Possible values: UNSPECIFIED, EXACTLY_ONCE and AT_LEAST_ONCE
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DefaultStreamingMode {
+      get { return defaultStreamingMode_; }
+      set {
+        defaultStreamingMode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4085,6 +5064,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if(!parameters_.Equals(other.parameters_)) return false;
+      if (Streaming != other.Streaming) return false;
+      if (SupportsAtLeastOnce != other.SupportsAtLeastOnce) return false;
+      if (SupportsExactlyOnce != other.SupportsExactlyOnce) return false;
+      if (DefaultStreamingMode != other.DefaultStreamingMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4095,6 +5078,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= parameters_.GetHashCode();
+      if (Streaming != false) hash ^= Streaming.GetHashCode();
+      if (SupportsAtLeastOnce != false) hash ^= SupportsAtLeastOnce.GetHashCode();
+      if (SupportsExactlyOnce != false) hash ^= SupportsExactlyOnce.GetHashCode();
+      if (DefaultStreamingMode.Length != 0) hash ^= DefaultStreamingMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4122,6 +5109,22 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteString(Description);
       }
       parameters_.WriteTo(output, _repeated_parameters_codec);
+      if (Streaming != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Streaming);
+      }
+      if (SupportsAtLeastOnce != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(SupportsAtLeastOnce);
+      }
+      if (SupportsExactlyOnce != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(SupportsExactlyOnce);
+      }
+      if (DefaultStreamingMode.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DefaultStreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4141,6 +5144,22 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteString(Description);
       }
       parameters_.WriteTo(ref output, _repeated_parameters_codec);
+      if (Streaming != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Streaming);
+      }
+      if (SupportsAtLeastOnce != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(SupportsAtLeastOnce);
+      }
+      if (SupportsExactlyOnce != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(SupportsExactlyOnce);
+      }
+      if (DefaultStreamingMode.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DefaultStreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4158,6 +5177,18 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       size += parameters_.CalculateSize(_repeated_parameters_codec);
+      if (Streaming != false) {
+        size += 1 + 1;
+      }
+      if (SupportsAtLeastOnce != false) {
+        size += 1 + 1;
+      }
+      if (SupportsExactlyOnce != false) {
+        size += 1 + 1;
+      }
+      if (DefaultStreamingMode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultStreamingMode);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4177,6 +5208,18 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         Description = other.Description;
       }
       parameters_.Add(other.parameters_);
+      if (other.Streaming != false) {
+        Streaming = other.Streaming;
+      }
+      if (other.SupportsAtLeastOnce != false) {
+        SupportsAtLeastOnce = other.SupportsAtLeastOnce;
+      }
+      if (other.SupportsExactlyOnce != false) {
+        SupportsExactlyOnce = other.SupportsExactlyOnce;
+      }
+      if (other.DefaultStreamingMode.Length != 0) {
+        DefaultStreamingMode = other.DefaultStreamingMode;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4202,6 +5245,22 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 26: {
             parameters_.AddEntriesFrom(input, _repeated_parameters_codec);
+            break;
+          }
+          case 40: {
+            Streaming = input.ReadBool();
+            break;
+          }
+          case 48: {
+            SupportsAtLeastOnce = input.ReadBool();
+            break;
+          }
+          case 56: {
+            SupportsExactlyOnce = input.ReadBool();
+            break;
+          }
+          case 66: {
+            DefaultStreamingMode = input.ReadString();
             break;
           }
         }
@@ -4231,6 +5290,22 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             parameters_.AddEntriesFrom(ref input, _repeated_parameters_codec);
             break;
           }
+          case 40: {
+            Streaming = input.ReadBool();
+            break;
+          }
+          case 48: {
+            SupportsAtLeastOnce = input.ReadBool();
+            break;
+          }
+          case 56: {
+            SupportsExactlyOnce = input.ReadBool();
+            break;
+          }
+          case 66: {
+            DefaultStreamingMode = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4256,7 +5331,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4493,6 +5568,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         /// Python.
         /// </summary>
         [pbr::OriginalName("PYTHON")] Python = 2,
+        /// <summary>
+        /// Go.
+        /// </summary>
+        [pbr::OriginalName("GO")] Go = 3,
       }
 
     }
@@ -4518,7 +5597,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4752,7 +5831,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5194,7 +6273,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5577,7 +6656,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5931,7 +7010,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   }
 
   /// <summary>
-  /// Parameters to provide to the template being launched.
+  /// Parameters to provide to the template being launched. Note that the
+  /// [metadata in the pipeline code]
+  /// (https://cloud.google.com/dataflow/docs/guides/templates/creating-templates#metadata)
+  /// determines which runtime parameters are valid.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchTemplateParameters : pb::IMessage<LaunchTemplateParameters>
@@ -5948,7 +7030,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5987,6 +7069,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     private string jobName_ = "";
     /// <summary>
     /// Required. The job name to use for the created job.
+    ///
+    /// The name must match the regular expression
+    /// `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6293,7 +7378,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6369,9 +7454,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     /// <summary>Field number for the "gcs_path" field.</summary>
     public const int GcsPathFieldNumber = 3;
     /// <summary>
-    /// A Cloud Storage path to the template from which to create
+    /// A Cloud Storage path to the template to use to create
     /// the job.
-    /// Must be valid Cloud Storage URL, beginning with 'gs://'.
+    /// Must be valid Cloud Storage URL, beginning with `gs://`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6400,7 +7485,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     /// <summary>Field number for the "dynamic_template" field.</summary>
     public const int DynamicTemplateFieldNumber = 6;
     /// <summary>
-    /// Params for launching a dynamic template.
+    /// Parameters for launching a dynamic template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6416,7 +7501,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int LaunchParametersFieldNumber = 4;
     private global::Google.Cloud.Dataflow.V1Beta3.LaunchTemplateParameters launchParameters_;
     /// <summary>
-    /// The parameters of the template to launch. This should be part of the
+    /// The parameters of the template to launch. Part of the
     /// body of the POST request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6764,7 +7849,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6971,7 +8056,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7383,7 +8468,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   }
 
   /// <summary>
-  /// Params which should be passed when launching a dynamic template.
+  /// Parameters to pass when launching a dynamic template.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DynamicTemplateLaunchParams : pb::IMessage<DynamicTemplateLaunchParams>
@@ -7400,7 +8485,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dataflow.V1Beta3.TemplatesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7435,8 +8520,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int GcsPathFieldNumber = 1;
     private string gcsPath_ = "";
     /// <summary>
-    /// Path to dynamic template spec file on Cloud Storage.
-    /// The file must be a Json serialized DynamicTemplateFieSpec object.
+    /// Path to the dynamic template specification file on Cloud Storage.
+    /// The file must be a JSON serialized `DynamicTemplateFileSpec` object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

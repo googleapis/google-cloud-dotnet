@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dataflow_v1beta3_generated_JobsV1Beta3_UpdateJob_sync]
     using Google.Cloud.Dataflow.V1Beta3;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedJobsV1Beta3ClientSnippets
     {
@@ -40,6 +41,7 @@ namespace GoogleCSharpSnippets
                 JobId = "",
                 Job = new Job(),
                 Location = "",
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Job response = jobsV1Beta3Client.UpdateJob(request);

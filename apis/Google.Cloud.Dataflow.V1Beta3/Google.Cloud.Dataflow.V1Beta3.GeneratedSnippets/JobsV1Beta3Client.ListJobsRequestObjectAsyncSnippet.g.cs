@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Filter = ListJobsRequest.Types.Filter.Unknown,
+                Name = "",
                 Location = "",
             };
             // Make the request

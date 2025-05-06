@@ -111,7 +111,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public abstract partial class TemplatesServiceBase
     {
       /// <summary>
-      /// Creates a Cloud Dataflow job from a template.
+      /// Creates a Cloud Dataflow job from a template. Do not enter confidential
+      /// information when you supply string values using the API.
+      ///
+      /// To create a job, we recommend using `projects.locations.templates.create`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.create` is not recommended, because your job will
+      /// always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -123,7 +130,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
 
       /// <summary>
-      /// Launch a template.
+      /// Launches a template.
+      ///
+      /// To launch a template, we recommend using
+      /// `projects.locations.templates.launch` with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.launch` is not recommended, because jobs launched
+      /// from the template will always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -136,6 +149,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
 
       /// <summary>
       /// Get the template associated with a template.
+      ///
+      /// To get the template, we recommend using `projects.locations.templates.get`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.get` is not recommended, because only
+      /// templates that are running in `us-central1` are retrieved.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -176,7 +195,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
 
       /// <summary>
-      /// Creates a Cloud Dataflow job from a template.
+      /// Creates a Cloud Dataflow job from a template. Do not enter confidential
+      /// information when you supply string values using the API.
+      ///
+      /// To create a job, we recommend using `projects.locations.templates.create`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.create` is not recommended, because your job will
+      /// always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +215,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CreateJobFromTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a Cloud Dataflow job from a template.
+      /// Creates a Cloud Dataflow job from a template. Do not enter confidential
+      /// information when you supply string values using the API.
+      ///
+      /// To create a job, we recommend using `projects.locations.templates.create`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.create` is not recommended, because your job will
+      /// always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +233,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateJobFromTemplate, null, options, request);
       }
       /// <summary>
-      /// Creates a Cloud Dataflow job from a template.
+      /// Creates a Cloud Dataflow job from a template. Do not enter confidential
+      /// information when you supply string values using the API.
+      ///
+      /// To create a job, we recommend using `projects.locations.templates.create`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.create` is not recommended, because your job will
+      /// always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +253,14 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CreateJobFromTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a Cloud Dataflow job from a template.
+      /// Creates a Cloud Dataflow job from a template. Do not enter confidential
+      /// information when you supply string values using the API.
+      ///
+      /// To create a job, we recommend using `projects.locations.templates.create`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.create` is not recommended, because your job will
+      /// always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +271,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateJobFromTemplate, null, options, request);
       }
       /// <summary>
-      /// Launch a template.
+      /// Launches a template.
+      ///
+      /// To launch a template, we recommend using
+      /// `projects.locations.templates.launch` with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.launch` is not recommended, because jobs launched
+      /// from the template will always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +290,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return LaunchTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Launch a template.
+      /// Launches a template.
+      ///
+      /// To launch a template, we recommend using
+      /// `projects.locations.templates.launch` with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.launch` is not recommended, because jobs launched
+      /// from the template will always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -248,7 +307,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return CallInvoker.BlockingUnaryCall(__Method_LaunchTemplate, null, options, request);
       }
       /// <summary>
-      /// Launch a template.
+      /// Launches a template.
+      ///
+      /// To launch a template, we recommend using
+      /// `projects.locations.templates.launch` with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.launch` is not recommended, because jobs launched
+      /// from the template will always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -261,7 +326,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         return LaunchTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Launch a template.
+      /// Launches a template.
+      ///
+      /// To launch a template, we recommend using
+      /// `projects.locations.templates.launch` with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.launch` is not recommended, because jobs launched
+      /// from the template will always start in `us-central1`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -273,6 +344,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       /// <summary>
       /// Get the template associated with a template.
+      ///
+      /// To get the template, we recommend using `projects.locations.templates.get`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.get` is not recommended, because only
+      /// templates that are running in `us-central1` are retrieved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -286,6 +363,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       /// <summary>
       /// Get the template associated with a template.
+      ///
+      /// To get the template, we recommend using `projects.locations.templates.get`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.get` is not recommended, because only
+      /// templates that are running in `us-central1` are retrieved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -297,6 +380,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       /// <summary>
       /// Get the template associated with a template.
+      ///
+      /// To get the template, we recommend using `projects.locations.templates.get`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.get` is not recommended, because only
+      /// templates that are running in `us-central1` are retrieved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -310,6 +399,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       /// <summary>
       /// Get the template associated with a template.
+      ///
+      /// To get the template, we recommend using `projects.locations.templates.get`
+      /// with a [regional endpoint]
+      /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+      /// `projects.templates.get` is not recommended, because only
+      /// templates that are running in `us-central1` are retrieved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -352,7 +447,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
 
   }
   /// <summary>
-  /// Provides a service for Flex templates. This feature is not ready yet.
+  /// Provides a service for Flex templates.
   /// </summary>
   public static partial class FlexTemplatesService
   {
