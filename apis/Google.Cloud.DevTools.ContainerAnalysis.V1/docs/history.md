@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.9.0, released 2025-05-06
+
+### New features
+
+- Support for Secrets
+- Support for Layer Details
+
 ## Version 3.8.0, released 2025-04-03
 
 ### New features
