@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.28.0, released 2025-05-06
+
+### New features
+
+- Expose llm parser to public v1 proto to prepare for GA
+
+### Documentation improvements
+
+- update an outdated URL
+
 ## Version 3.27.0, released 2025-04-30
 
 ### New features
