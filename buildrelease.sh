@@ -30,19 +30,13 @@ cd $(dirname $0)
 # but it makes debugging work more reliably for PDBs in packages.
 export DeterministicSourcePaths=true
 
+# Work out which libraries to build based on tags
+projects=$(./prepare-release.sh get-tagged-libraries)
+
 # Make sure that SourceLink uses the GitHub repo, even if that's not where
 # our origin remote points at.
 git remote add github https://github.com/googleapis/google-cloud-dotnet.git
 export GitRepositoryRemoteName=github
-
-# Turn the multi-line output of git tag into space-separated list of projects
-projects=$(git tag --points-at HEAD | sed 's/-.*//g' | awk -vORS=\  '{print $1}' | sed 's/ $//')
-
-if [ -z "$projects" ]
-then
-  echo "No tags found for commit $(git rev-parse HEAD)"
-  exit 1
-fi
 
 # If we're building at least one tool, assume we're not building anything else: we just need to pack
 # the tools into the nuget directory, and finish.
