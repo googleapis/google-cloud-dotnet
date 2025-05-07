@@ -40,12 +40,12 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             catch (UserErrorException e)
             {
-                Console.WriteLine($"Configuration error: {e.Message}");
+                Console.Error.WriteLine($"Configuration error: {e.Message}");
                 return 1;
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Failed: {e}");
+                Console.Error.WriteLine($"Failed: {e}");
                 return 1;
             }
         }
