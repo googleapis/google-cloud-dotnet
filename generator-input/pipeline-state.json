@@ -1149,7 +1149,7 @@
             "id": "Google.Cloud.Dataflow.V1Beta3",
             "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseTimestamp": "2024-05-08T17:34:18Z",
             "lastGeneratedCommit": "8105f2a92ac5938e516c086a2dba6b908a53555c",
             "apiPaths": [
@@ -2492,7 +2492,7 @@
             "id": "Google.Cloud.PubSub.V1",
             "currentVersion": "3.24.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseTimestamp": "2025-03-31T16:12:32Z",
             "lastGeneratedCommit": "a7eb905e0584b44fc96c1e7af06e2b84da964762",
             "apiPaths": [
@@ -3131,7 +3131,7 @@
             "id": "Google.Cloud.TextToSpeech.V1",
             "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseTimestamp": "2025-04-14T17:20:31Z",
             "lastGeneratedCommit": "8f7ef1c0eed3ee1ce7c86c5da3511a2a9dbf4a31",
             "apiPaths": [
@@ -3831,7 +3831,7 @@
             "id": "Google.Cloud.Spanner",
             "currentVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseTimestamp": "2025-04-17T07:00:39Z",
             "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
@@ -3851,7 +3851,7 @@
             "id": "Google.Cloud.Diagnostics",
             "currentVersion": "5.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseTimestamp": "2025-04-14T17:16:29Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3",
