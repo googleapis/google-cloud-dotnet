@@ -2,6 +2,8 @@
 
 ## Version 3.9.0, released 2025-05-06
 
+Note: this release failed due to release process changes; we will release a 3.10.0 shortly.
+
 ### New features
 
 - Support for Secrets
