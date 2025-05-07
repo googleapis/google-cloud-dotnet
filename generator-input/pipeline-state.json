@@ -4038,7 +4038,7 @@
         {
             "id": "Google.Cloud.ModelArmor.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "4ed1e92c372c3e057fe73e04d2c82c69b9c8cb98",
             "apiPaths": [
                 "google/cloud/modelarmor/v1"
