@@ -1017,9 +1017,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     /// <summary>
     /// Optional. An optional request ID to identify requests. Specify a unique
     /// request ID in case you need to retry your request. Requests with same
-    /// `request_id` will ignored for at least 60 minutes since the first request.
-    /// The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// `request_id` will be ignored for at least 60 minutes since the first
+    /// request. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1315,9 +1315,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     /// <summary>
     /// Optional. An optional request ID to identify requests. Specify a unique
     /// request ID in case you need to retry your request. Requests with same
-    /// `request_id` will ignored for at least 60 minutes since the first request.
-    /// The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// `request_id` will be ignored for at least 60 minutes since the first
+    /// request. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1556,9 +1556,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     /// <summary>
     /// Optional. An optional request ID to identify requests. Specify a unique
     /// request ID in case you need to retry your request. Requests with same
-    /// `request_id` will ignored for at least 60 minutes since the first request.
-    /// The request ID must be a valid UUID with the exception that zero UUID is
-    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// `request_id` will be ignored for at least 60 minutes since the first
+    /// request. The request ID must be a valid UUID with the exception that zero
+    /// UUID is not supported (00000000-0000-0000-0000-000000000000).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1990,7 +1990,8 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     /// have
     /// [google.longrunning.Operation.error][google.longrunning.Operation.error]
     /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-    /// corresponding to `Code.CANCELLED`.
+    /// corresponding to
+    /// `[Code.CANCELLED][google.rpc.Code.CANCELLED]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
