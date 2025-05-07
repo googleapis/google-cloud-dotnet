@@ -106,7 +106,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-08T16:40:23Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "351a2dc65443e3fd50280a372830ba963699cfa6",
             "apiPaths": [
                 "google/apps/events/subscriptions/v1"
             ],
