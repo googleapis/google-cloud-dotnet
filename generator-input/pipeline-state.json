@@ -3906,6 +3906,7 @@
         },
         {
             "id": "Google.Cloud.Iam.V3",
+            "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "lastGeneratedCommit": "b21c6de0ef28fbb5055af2f4280492007efc473c",
@@ -3918,6 +3919,7 @@
         },
         {
             "id": "Google.Cloud.Iam.V3Beta",
+            "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "lastGeneratedCommit": "a9e06ec53863e9de34e7f94295c622c1dc765f9c",
@@ -3944,6 +3946,7 @@
         },
         {
             "id": "Google.Geo.Weather.V1",
+            "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "lastGeneratedCommit": "2ed6e92d8ee781ce896b57032160eee04987b1f1",
@@ -4013,6 +4016,7 @@
         },
         {
             "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
+            "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "lastGeneratedCommit": "114d6a575fbc91d36d4f35d543f9d541f13a4a18",
@@ -4025,6 +4029,7 @@
         },
         {
             "id": "Google.Shopping.Merchant.OrderTracking.V1Beta",
+            "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "lastGeneratedCommit": "567d95634cf28a716f2c56ca6638b68a43b4a9e9",
@@ -4037,6 +4042,7 @@
         },
         {
             "id": "Google.Cloud.ModelArmor.V1",
+            "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "4ed1e92c372c3e057fe73e04d2c82c69b9c8cb98",

@@ -66,7 +66,9 @@ public class ConfigureCommand : IContainerCommand
             ["generationAutomationLevel"] = "AUTOMATION_LEVEL_AUTOMATIC",
             ["releaseAutomationLevel"] = "AUTOMATION_LEVEL_BLOCKED",
             ["apiPaths"] = new JArray(apiPath),
-            ["sourcePaths"] = new JArray($"apis/{api.Id}/{api.Id}")
+            ["sourcePaths"] = new JArray($"apis/{api.Id}/{api.Id}"),
+            // Prepare for the first release with an alpha or beta.
+            ["nextVersion"] = api.Id.Split('.').Last().Contains("alpha", StringComparison.OrdinalIgnoreCase) ? "1.0.0-alpha01" : "1.0.0-beta01"
         });
 
         // Slightly fiddly serialization to mimic the indentation that Librarian uses.
