@@ -297,7 +297,6 @@ namespace Google.Apps.Events.Subscriptions.V1
         /// <remarks>
         /// The default SubscriptionsService scopes are:
         /// <list type="bullet">
-        /// <item><description>https://www.googleapis.com/auth/chat.bot</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.memberships</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.memberships.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.messages</description></item>
@@ -312,7 +311,6 @@ namespace Google.Apps.Events.Subscriptions.V1
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
-            "https://www.googleapis.com/auth/chat.bot",
             "https://www.googleapis.com/auth/chat.memberships",
             "https://www.googleapis.com/auth/chat.memberships.readonly",
             "https://www.googleapis.com/auth/chat.messages",
