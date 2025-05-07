@@ -1,0 +1,2104 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.ModelArmor.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.modelarmor.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_ListTemplates_sync",
+      "title": "ListTemplatesRequestObject",
+      "description": "Snippet for ListTemplates",
+      "file": "ModelArmorClient.ListTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplates",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.ListTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.ListTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ModelArmor.V1.ListTemplatesResponse, Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.ListTemplates",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_ListTemplates_async",
+      "title": "ListTemplatesRequestObjectAsync",
+      "description": "Snippet for ListTemplatesAsync",
+      "file": "ModelArmorClient.ListTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplatesAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.ListTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.ListTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ModelArmor.V1.ListTemplatesResponse, Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.ListTemplates",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_ListTemplates_sync_flattened",
+      "title": "ListTemplates",
+      "description": "Snippet for ListTemplates",
+      "file": "ModelArmorClient.ListTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplates",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.ListTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ModelArmor.V1.ListTemplatesResponse, Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.ListTemplates",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_ListTemplates_async_flattened",
+      "title": "ListTemplatesAsync",
+      "description": "Snippet for ListTemplatesAsync",
+      "file": "ModelArmorClient.ListTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplatesAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.ListTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ModelArmor.V1.ListTemplatesResponse, Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.ListTemplates",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_ListTemplates_sync_flattened_resourceNames",
+      "title": "ListTemplatesResourceNames",
+      "description": "Snippet for ListTemplates",
+      "file": "ModelArmorClient.ListTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplates",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.ListTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ModelArmor.V1.ListTemplatesResponse, Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.ListTemplates",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_ListTemplates_async_flattened_resourceNames",
+      "title": "ListTemplatesResourceNamesAsync",
+      "description": "Snippet for ListTemplatesAsync",
+      "file": "ModelArmorClient.ListTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplatesAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.ListTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ModelArmor.V1.ListTemplatesResponse, Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.ListTemplates",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetTemplate_sync",
+      "title": "GetTemplateRequestObject",
+      "description": "Snippet for GetTemplate",
+      "file": "ModelArmorClient.GetTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.GetTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetTemplate_async",
+      "title": "GetTemplateRequestObjectAsync",
+      "description": "Snippet for GetTemplateAsync",
+      "file": "ModelArmorClient.GetTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.GetTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetTemplate_sync_flattened",
+      "title": "GetTemplate",
+      "description": "Snippet for GetTemplate",
+      "file": "ModelArmorClient.GetTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetTemplate_async_flattened",
+      "title": "GetTemplateAsync",
+      "description": "Snippet for GetTemplateAsync",
+      "file": "ModelArmorClient.GetTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetTemplate_sync_flattened_resourceNames",
+      "title": "GetTemplateResourceNames",
+      "description": "Snippet for GetTemplate",
+      "file": "ModelArmorClient.GetTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetTemplate_async_flattened_resourceNames",
+      "title": "GetTemplateResourceNamesAsync",
+      "description": "Snippet for GetTemplateAsync",
+      "file": "ModelArmorClient.GetTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_CreateTemplate_sync",
+      "title": "CreateTemplateRequestObject",
+      "description": "Snippet for CreateTemplate",
+      "file": "ModelArmorClient.CreateTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.CreateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.CreateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.CreateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_CreateTemplate_async",
+      "title": "CreateTemplateRequestObjectAsync",
+      "description": "Snippet for CreateTemplateAsync",
+      "file": "ModelArmorClient.CreateTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.CreateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.CreateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.CreateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_CreateTemplate_sync_flattened",
+      "title": "CreateTemplate",
+      "description": "Snippet for CreateTemplate",
+      "file": "ModelArmorClient.CreateTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.CreateTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ModelArmor.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.CreateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_CreateTemplate_async_flattened",
+      "title": "CreateTemplateAsync",
+      "description": "Snippet for CreateTemplateAsync",
+      "file": "ModelArmorClient.CreateTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.CreateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ModelArmor.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.CreateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_CreateTemplate_sync_flattened_resourceNames",
+      "title": "CreateTemplateResourceNames",
+      "description": "Snippet for CreateTemplate",
+      "file": "ModelArmorClient.CreateTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.CreateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ModelArmor.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.CreateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_CreateTemplate_async_flattened_resourceNames",
+      "title": "CreateTemplateResourceNamesAsync",
+      "description": "Snippet for CreateTemplateAsync",
+      "file": "ModelArmorClient.CreateTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.CreateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ModelArmor.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.CreateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateTemplate_sync",
+      "title": "UpdateTemplateRequestObject",
+      "description": "Snippet for UpdateTemplate",
+      "file": "ModelArmorClient.UpdateTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.UpdateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateTemplate_async",
+      "title": "UpdateTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateTemplateAsync",
+      "file": "ModelArmorClient.UpdateTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.UpdateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateTemplate_sync_flattened",
+      "title": "UpdateTemplate",
+      "description": "Snippet for UpdateTemplate",
+      "file": "ModelArmorClient.UpdateTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.Template",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateTemplate_async_flattened",
+      "title": "UpdateTemplateAsync",
+      "description": "Snippet for UpdateTemplateAsync",
+      "file": "ModelArmorClient.UpdateTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.Template>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_DeleteTemplate_sync",
+      "title": "DeleteTemplateRequestObject",
+      "description": "Snippet for DeleteTemplate",
+      "file": "ModelArmorClient.DeleteTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.DeleteTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.DeleteTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.DeleteTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_DeleteTemplate_async",
+      "title": "DeleteTemplateRequestObjectAsync",
+      "description": "Snippet for DeleteTemplateAsync",
+      "file": "ModelArmorClient.DeleteTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.DeleteTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.DeleteTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.DeleteTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_DeleteTemplate_sync_flattened",
+      "title": "DeleteTemplate",
+      "description": "Snippet for DeleteTemplate",
+      "file": "ModelArmorClient.DeleteTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.DeleteTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.DeleteTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_DeleteTemplate_async_flattened",
+      "title": "DeleteTemplateAsync",
+      "description": "Snippet for DeleteTemplateAsync",
+      "file": "ModelArmorClient.DeleteTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.DeleteTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.DeleteTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_DeleteTemplate_sync_flattened_resourceNames",
+      "title": "DeleteTemplateResourceNames",
+      "description": "Snippet for DeleteTemplate",
+      "file": "ModelArmorClient.DeleteTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplate",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.DeleteTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.DeleteTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_DeleteTemplate_async_flattened_resourceNames",
+      "title": "DeleteTemplateResourceNamesAsync",
+      "description": "Snippet for DeleteTemplateAsync",
+      "file": "ModelArmorClient.DeleteTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.DeleteTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.DeleteTemplate",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetFloorSetting_sync",
+      "title": "GetFloorSettingRequestObject",
+      "description": "Snippet for GetFloorSetting",
+      "file": "ModelArmorClient.GetFloorSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFloorSetting",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetFloorSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.GetFloorSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.FloorSetting",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetFloorSetting_async",
+      "title": "GetFloorSettingRequestObjectAsync",
+      "description": "Snippet for GetFloorSettingAsync",
+      "file": "ModelArmorClient.GetFloorSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFloorSettingAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetFloorSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.GetFloorSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.FloorSetting>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetFloorSetting_sync_flattened",
+      "title": "GetFloorSetting",
+      "description": "Snippet for GetFloorSetting",
+      "file": "ModelArmorClient.GetFloorSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFloorSetting",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetFloorSetting",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.FloorSetting",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetFloorSetting_async_flattened",
+      "title": "GetFloorSettingAsync",
+      "description": "Snippet for GetFloorSettingAsync",
+      "file": "ModelArmorClient.GetFloorSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFloorSettingAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetFloorSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.FloorSetting>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetFloorSetting_sync_flattened_resourceNames",
+      "title": "GetFloorSettingResourceNames",
+      "description": "Snippet for GetFloorSetting",
+      "file": "ModelArmorClient.GetFloorSettingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFloorSetting",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetFloorSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.FloorSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.FloorSetting",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_GetFloorSetting_async_flattened_resourceNames",
+      "title": "GetFloorSettingResourceNamesAsync",
+      "description": "Snippet for GetFloorSettingAsync",
+      "file": "ModelArmorClient.GetFloorSettingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFloorSettingAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.GetFloorSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.FloorSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.FloorSetting>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "GetFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.GetFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateFloorSetting_sync",
+      "title": "UpdateFloorSettingRequestObject",
+      "description": "Snippet for UpdateFloorSetting",
+      "file": "ModelArmorClient.UpdateFloorSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFloorSetting",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateFloorSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.UpdateFloorSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.FloorSetting",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateFloorSetting_async",
+      "title": "UpdateFloorSettingRequestObjectAsync",
+      "description": "Snippet for UpdateFloorSettingAsync",
+      "file": "ModelArmorClient.UpdateFloorSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFloorSettingAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateFloorSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.UpdateFloorSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.FloorSetting>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateFloorSetting_sync_flattened",
+      "title": "UpdateFloorSetting",
+      "description": "Snippet for UpdateFloorSetting",
+      "file": "ModelArmorClient.UpdateFloorSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFloorSetting",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateFloorSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.FloorSetting",
+            "name": "floorSetting"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.FloorSetting",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_UpdateFloorSetting_async_flattened",
+      "title": "UpdateFloorSettingAsync",
+      "description": "Snippet for UpdateFloorSettingAsync",
+      "file": "ModelArmorClient.UpdateFloorSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFloorSettingAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.UpdateFloorSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.FloorSetting",
+            "name": "floorSetting"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.FloorSetting>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "UpdateFloorSetting",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.UpdateFloorSetting",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_SanitizeUserPrompt_sync",
+      "title": "SanitizeUserPromptRequestObject",
+      "description": "Snippet for SanitizeUserPrompt",
+      "file": "ModelArmorClient.SanitizeUserPromptRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SanitizeUserPrompt",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.SanitizeUserPrompt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.SanitizeUserPromptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.SanitizeUserPromptResponse",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "SanitizeUserPrompt",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.SanitizeUserPrompt",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_SanitizeUserPrompt_async",
+      "title": "SanitizeUserPromptRequestObjectAsync",
+      "description": "Snippet for SanitizeUserPromptAsync",
+      "file": "ModelArmorClient.SanitizeUserPromptRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SanitizeUserPromptAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.SanitizeUserPromptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.SanitizeUserPromptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.SanitizeUserPromptResponse>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "SanitizeUserPrompt",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.SanitizeUserPrompt",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_SanitizeModelResponse_sync",
+      "title": "SanitizeModelResponseRequestObject",
+      "description": "Snippet for SanitizeModelResponse",
+      "file": "ModelArmorClient.SanitizeModelResponseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SanitizeModelResponse",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.SanitizeModelResponse",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.SanitizeModelResponseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ModelArmor.V1.SanitizeModelResponseResponse",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "SanitizeModelResponse",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.SanitizeModelResponse",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "modelarmor_v1_generated_ModelArmor_SanitizeModelResponse_async",
+      "title": "SanitizeModelResponseRequestObjectAsync",
+      "description": "Snippet for SanitizeModelResponseAsync",
+      "file": "ModelArmorClient.SanitizeModelResponseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SanitizeModelResponseAsync",
+        "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient.SanitizeModelResponseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ModelArmor.V1.SanitizeModelResponseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ModelArmor.V1.SanitizeModelResponseResponse>",
+        "client": {
+          "shortName": "ModelArmorClient",
+          "fullName": "Google.Cloud.ModelArmor.V1.ModelArmorClient"
+        },
+        "method": {
+          "shortName": "SanitizeModelResponse",
+          "fullName": "google.cloud.modelarmor.v1.ModelArmor.SanitizeModelResponse",
+          "service": {
+            "shortName": "ModelArmor",
+            "fullName": "google.cloud.modelarmor.v1.ModelArmor"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
