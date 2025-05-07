@@ -5815,7 +5815,7 @@ namespace Google.Cloud.Asset.V1 {
         [pbr::OriginalName("PARTITION_KEY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The time when the snapshot is taken. If specified as partition key, the
-        /// result table(s) is partitoned by the additional timestamp column,
+        /// result table(s) is partitioned by the additional timestamp column,
         /// readTime. If [read_time] in ExportAssetsRequest is specified, the
         /// readTime column's value will be the same as it. Otherwise, its value will
         /// be the current time that is used to take the snapshot.
@@ -5823,7 +5823,7 @@ namespace Google.Cloud.Asset.V1 {
         [pbr::OriginalName("READ_TIME")] ReadTime = 1,
         /// <summary>
         /// The time when the request is received and started to be processed. If
-        /// specified as partition key, the result table(s) is partitoned by the
+        /// specified as partition key, the result table(s) is partitioned by the
         /// requestTime column, an additional timestamp column representing when the
         /// request was received.
         /// </summary>
@@ -11837,7 +11837,7 @@ namespace Google.Cloud.Asset.V1 {
             [pbr::OriginalName("PARTITION_KEY_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// The time when the request is received. If specified as partition key,
-            /// the result table(s) is partitoned by the RequestTime column, an
+            /// the result table(s) is partitioned by the RequestTime column, an
             /// additional timestamp column representing when the request was received.
             /// </summary>
             [pbr::OriginalName("REQUEST_TIME")] RequestTime = 1,
@@ -14664,7 +14664,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// Required. Name of the Google Cloud folder or organization to reparent the
     /// target resource. The analysis will be performed against hypothetically
-    /// moving the resource to this specified desitination parent. This can only be
+    /// moving the resource to this specified destination parent. This can only be
     /// a folder number (such as "folders/123") or an organization number (such as
     /// "organizations/123").
     /// </summary>
