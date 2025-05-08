@@ -1,5 +1,23 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2025-05-08
+
+### Bug fixes
+
+- An existing method `UpdateVehicleLocation` is removed from service `VehicleService`
+- An existing method `SearchFuzzedVehicles` is removed from service `VehicleService`
+- An existing message `UpdateVehicleLocationRequest` is removed
+
+### Documentation improvements
+
+- Marked fields as output only
+- Fix typo in FraudPrevention.DISABLE comment
+- Tweak comments
+- Minor wording and branding adjustments
+- Fix CreateAssessmentRequest comment
+- Update API title in docs overview
+- Minor doc fixes
+
 ## Version 2.0.0-beta07, released 2024-04-29
 
 ### New features

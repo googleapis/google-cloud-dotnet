@@ -2535,11 +2535,12 @@
         },
         {
             "id": "Google.Cloud.RecaptchaEnterprise.V1Beta1",
-            "currentVersion": "2.0.0-beta07",
+            "currentVersion": "2.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-04-29T17:16:17Z",
+            "releaseTimestamp": "2025-05-08T17:29:58.833493906Z",
             "lastGeneratedCommit": "f3f5b9119e0864651fcae376645234cef98a682c",
+            "lastReleasedCommit": "f3f5b9119e0864651fcae376645234cef98a682c",
             "apiPaths": [
                 "google/cloud/recaptchaenterprise/v1beta1"
             ],
