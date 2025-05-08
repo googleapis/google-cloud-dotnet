@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-05-08
+
+### Bug fixes
+
+- An existing oauth_scope https://www.googleapis.com/auth/chat.bot is removed from SubscriptionsService
+
 ## Version 1.0.0-beta03, released 2024-05-08
 
 ### New features

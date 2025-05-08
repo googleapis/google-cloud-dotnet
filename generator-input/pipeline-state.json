@@ -103,11 +103,12 @@
         },
         {
             "id": "Google.Apps.Events.Subscriptions.V1",
-            "currentVersion": "1.0.0-beta03",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-08T16:40:23Z",
+            "releaseTimestamp": "2025-05-08T17:23:01.122822811Z",
             "lastGeneratedCommit": "351a2dc65443e3fd50280a372830ba963699cfa6",
+            "lastReleasedCommit": "351a2dc65443e3fd50280a372830ba963699cfa6",
             "apiPaths": [
                 "google/apps/events/subscriptions/v1"
             ],
