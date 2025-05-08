@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.10.0, released 2025-05-08
+
+Same code as 3.9.0, just a re-release to fix process issues.
+
 ## Version 3.9.0, released 2025-05-06
 
 Note: this release failed due to release process changes; we will release a 3.10.0 shortly.
