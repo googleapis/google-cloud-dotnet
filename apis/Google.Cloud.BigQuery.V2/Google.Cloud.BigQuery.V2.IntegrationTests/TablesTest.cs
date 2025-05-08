@@ -823,13 +823,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             existingPolicy.Bindings.Add(new Binding
             {
-                Members = new List<string> { "allAuthenticatedUsers" },
-                Role = "roles/viewer"
+                Members = new List<string> { "domain:google.com" },
+                Role = "roles/bigquery.dataViewer"
             });
 
             var updatedPolicy = client.SetTableIamPolicy(_fixture.DatasetId, tableId, existingPolicy);
             Assert.Contains(updatedPolicy.Bindings,
-                binding => binding.Role == "roles/viewer" && binding.Members.Single() == "allAuthenticatedUsers");
+                binding => binding.Role == "roles/bigquery.dataViewer" && binding.Members.Single() == "domain:google.com");
         }
 
         [Fact]
