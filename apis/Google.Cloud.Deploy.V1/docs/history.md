@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.6.0, released 2025-05-08
+
+### Bug fixes
+
+- Correct pattern of unused resource definition, Revision
+
+### Documentation improvements
+
+- Comments updated for fields in several different resources
+
 ## Version 3.5.0, released 2025-04-14
 
 ### New features
