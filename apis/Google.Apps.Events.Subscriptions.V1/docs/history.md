@@ -2,6 +2,9 @@
 
 ## Version 1.0.0-beta04, released 2025-05-09
 
+Note: the release process failed for this release; a new release
+will be created shortly.
+
 ### Bug fixes
 
 - An existing oauth_scope https://www.googleapis.com/auth/chat.bot is removed from SubscriptionsService
