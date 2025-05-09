@@ -1,5 +1,26 @@
 # Version history
 
+## Version 3.6.0, released 2025-05-09
+
+### Breaking changes
+
+The removal of the unused resource definition in Revision *could*
+break customer code, but only in ways that would never have worked
+when making API calls anyway. While this would strictly speaking
+require a SemVer major version bump, we consider using a minor
+version to be more customer-friendly in this case, as we don't
+expect it to *actually* break any customers. Please file an issue at
+https://github.com/googleapis/google-cloud-dotnet/issues if this
+has affected you.
+
+### Bug fixes
+
+- Correct pattern of unused resource definition, Revision
+
+### Documentation improvements
+
+- Comments updated for fields in several different resources
+
 ## Version 3.5.0, released 2025-04-14
 
 ### New features
