@@ -4019,7 +4019,7 @@
             "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "114d6a575fbc91d36d4f35d543f9d541f13a4a18",
             "apiPaths": [
                 "google/shopping/merchant/issueresolution/v1beta"
@@ -4032,7 +4032,7 @@
             "id": "Google.Shopping.Merchant.OrderTracking.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "567d95634cf28a716f2c56ca6638b68a43b4a9e9",
             "apiPaths": [
                 "google/shopping/merchant/ordertracking/v1beta"
