@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore"/>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core"/>
+  </ItemGroup>
+
+</Project>
