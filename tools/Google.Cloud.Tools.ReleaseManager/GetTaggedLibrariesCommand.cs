@@ -48,7 +48,7 @@ public class GetTaggedLibrariesCommand : CommandBase
 
         IEnumerable<string> TranslateTag(string tag)
         {
-            var bits = tag.Split('-');
+            var bits = tag.Split('-', 2);
             if (bits.Length != 2)
             {
                 throw new UserErrorException($"Cannot translate tag '{tag}'; incorrect format");
