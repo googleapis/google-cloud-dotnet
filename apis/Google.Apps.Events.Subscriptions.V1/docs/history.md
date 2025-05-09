@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-05-09
+
+Re-release of changes in 1.0.0-beta04.
+
 ## Version 1.0.0-beta04, released 2025-05-09
 
 Note: the release process failed for this release; a new release
