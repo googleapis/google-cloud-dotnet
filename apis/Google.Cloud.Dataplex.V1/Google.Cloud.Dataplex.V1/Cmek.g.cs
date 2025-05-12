@@ -873,7 +873,7 @@ namespace Google.Cloud.Dataplex.V1 {
             /// </summary>
             [pbr::OriginalName("UNKNOWN")] Unknown = 0,
             /// <summary>
-            /// Error because of internal server error, will be retried automatically..
+            /// Error because of internal server error, will be retried automatically.
             /// </summary>
             [pbr::OriginalName("INTERNAL_ERROR")] InternalError = 1,
             /// <summary>
@@ -961,12 +961,9 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EncryptionConfigIdFieldNumber = 2;
     private string encryptionConfigId_ = "";
     /// <summary>
-    /// Required. The ID of the EncryptionConfig to create.
-    /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-    /// and hyphens (-).
-    /// The maximum size is 63 characters.
-    /// The first character must be a letter.
-    /// The last character must be a letter or a number.
+    /// Required. The ID of the
+    /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+    /// Currently, only a value of "default" is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
