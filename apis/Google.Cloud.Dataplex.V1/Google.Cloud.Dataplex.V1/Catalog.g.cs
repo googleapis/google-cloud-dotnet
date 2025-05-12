@@ -17343,7 +17343,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("IMPORT")] Import = 1,
         /// <summary>
-        /// Export job type.
+        /// Export job.
         /// </summary>
         [pbr::OriginalName("EXPORT")] Export = 2,
       }
@@ -17754,8 +17754,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Export Job Results. The result is based on the snapshot at the time when
-      /// the job is created.
+      /// Summary results from a metadata export job. The results are a snapshot of
+      /// the metadata at the time when the job was created. The exported entries are
+      /// saved to a Cloud Storage bucket.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExportJobResult : pb::IMessage<ExportJobResult>
@@ -17807,7 +17808,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int ExportedEntriesFieldNumber = 1;
         private long exportedEntries_;
         /// <summary>
-        /// Output only. The number of entries that have been exported.
+        /// Output only. The number of entries that were exported.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17822,7 +17823,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int ErrorMessageFieldNumber = 2;
         private string errorMessage_ = "";
         /// <summary>
-        /// Output only. The error message if the export job failed.
+        /// Output only. The error message if the metadata export job failed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18061,8 +18062,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// this job.
         ///
         /// A metadata import file defines the values to set for each of the entries
-        /// and aspects in a metadata job. For more information about how to create a
-        /// metadata import file and the file requirements, see [Metadata import
+        /// and aspects in a metadata import job. For more information about how to
+        /// create a metadata import file and the file requirements, see [Metadata
+        /// import
         /// file](https://cloud.google.com/dataplex/docs/import-metadata#metadata-import-file).
         ///
         /// You can provide multiple metadata import files in the same metadata job.
@@ -18443,8 +18445,8 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Specifies how the entries and aspects in a metadata job are updated. For
-          /// more information, see [Sync
+          /// Specifies how the entries and aspects in a metadata import job are
+          /// updated. For more information, see [Sync
           /// mode](https://cloud.google.com/dataplex/docs/import-metadata#sync-mode).
           /// </summary>
           public enum SyncMode {
@@ -18787,7 +18789,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Export job specification.
+      /// Job specification for a metadata export job.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExportJobSpec : pb::IMessage<ExportJobSpec>
@@ -18839,7 +18841,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int ScopeFieldNumber = 2;
         private global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobSpec.Types.ExportJobScope scope_;
         /// <summary>
-        /// Required. Selects the entries to be exported by this job.
+        /// Required. The scope of the export job.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18854,12 +18856,15 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int OutputPathFieldNumber = 3;
         private string outputPath_ = "";
         /// <summary>
-        /// Required. The root path of the exported metadata.
-        /// Must be in the format: "gs://&lt;bucket_id>"
-        /// Or specify a customized prefix after the bucket:
-        /// "gs://&lt;bucket_id>/&lt;folder1>/&lt;folder2>/.../".
-        /// The length limit of the customized prefix is 128 characters.
-        /// The bucket must be in the same VPC-SC perimeter with the job.
+        /// Required. The root path of the Cloud Storage bucket to export the
+        /// metadata to, in the format `gs://{bucket}/`. You can optionally specify a
+        /// custom prefix after the bucket name, in the format
+        /// `gs://{bucket}/{prefix}/`. The maximum length of the custom prefix is 128
+        /// characters. Dataplex constructs the object path for the exported files by
+        /// using the bucket name and prefix that you provide, followed by a
+        /// system-generated path.
+        ///
+        /// The bucket must be in the same VPC Service Controls perimeter as the job.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19040,7 +19045,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Scope of the export job.
+          /// The scope of the export job.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ExportJobScope : pb::IMessage<ExportJobScope>
@@ -19095,14 +19100,17 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int OrganizationLevelFieldNumber = 1;
             private bool organizationLevel_;
             /// <summary>
-            /// Indicating if it is an organization level export job.
-            /// - When set to true, exports all entries from entry groups and projects
-            /// sharing the same organization id of the Metadata Job. Only projects and
-            /// entry groups in the VPC-SC perimeter will be exported. The projects and
-            /// entry groups are ignored.
-            /// - When set to false, one of the projects or entry groups must be
-            /// specified.
-            /// - Default to false.
+            /// Whether the metadata export job is an organization-level export job.
+            ///
+            /// - If `true`, the job exports the entries from the same organization and
+            /// VPC Service Controls perimeter as the job. The project that the job
+            /// belongs to determines the VPC Service Controls perimeter. If you set
+            /// the job scope to be at the organization level, then don't provide a
+            /// list of projects or entry groups.
+            /// - If `false`, you must specify a list of projects or a list of entry
+            /// groups whose entries you want to export.
+            ///
+            /// The default is `false`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19119,13 +19127,16 @@ namespace Google.Cloud.Dataplex.V1 {
                 = pb::FieldCodec.ForString(18);
             private readonly pbc::RepeatedField<string> projects_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// The projects that are in the scope of the export job. Can either be
-            /// project numbers or project IDs. If specified, only the entries from the
-            /// specified projects will be exported. The projects must be in the same
-            /// organization and in the VPC-SC perimeter. Either projects or
-            /// entry_groups can be specified when organization_level_export is set to
-            /// false.
-            /// Must follow the format: "projects/&lt;project_id_or_number>"
+            /// The projects whose metadata you want to export, in the format
+            /// `projects/{project_id_or_number}`. Only the entries from
+            /// the specified projects are exported.
+            ///
+            /// The projects must be in the same organization and VPC Service Controls
+            /// perimeter as the job.
+            ///
+            /// If you set the job scope to be a list of projects, then set the
+            /// organization-level export flag to false and don't provide a list of
+            /// entry groups.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19139,13 +19150,16 @@ namespace Google.Cloud.Dataplex.V1 {
                 = pb::FieldCodec.ForString(26);
             private readonly pbc::RepeatedField<string> entryGroups_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// The entry groups that are in scope for the export job. Optional. If
-            /// specified, only entries in the specified entry groups will be exported
-            /// by the job. Must be in the VPC-SC perimeter of the job. The location of
-            /// the entry groups must be the same as the job. Either projects or
-            /// entry_groups can be specified when organization_level_export is set to
-            /// false. Must follow the format:
-            /// "projects/&lt;project_id_or_number>/locations/&lt;location>/entryGroups/&lt;entry_group_id>"
+            /// The entry groups whose metadata you want to export, in the format
+            /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+            /// Only the entries in the specified entry groups are exported.
+            ///
+            /// The entry groups must be in the same location and the same VPC Service
+            /// Controls perimeter as the job.
+            ///
+            /// If you set the job scope to be a list of entry groups, then set the
+            /// organization-level export flag to false and don't provide a list of
+            /// projects.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19159,10 +19173,11 @@ namespace Google.Cloud.Dataplex.V1 {
                 = pb::FieldCodec.ForString(34);
             private readonly pbc::RepeatedField<string> entryTypes_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// If specified, only entries of the specified types will be
-            /// affected by the job.
-            /// Must follow the format:
-            /// "projects/&lt;project_id_or_number>/locations/&lt;location>/entryTypes/&lt;entry_type_id>"
+            /// The entry types that are in scope for the export job, specified as
+            /// relative resource names in the format
+            /// `projects/{project_id_or_number}/locations/{location}/entryTypes/{entry_type_id}`.
+            /// Only entries that belong to the specified entry types are affected by
+            /// the job.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19176,11 +19191,11 @@ namespace Google.Cloud.Dataplex.V1 {
                 = pb::FieldCodec.ForString(42);
             private readonly pbc::RepeatedField<string> aspectTypes_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// The aspect types that are in scope for the export job.
-            /// Optional. If specified, only aspects of the specified types will be
-            /// affected by the job.
-            /// Must follow the format:
-            /// "projects/&lt;project_id_or_number>/locations/&lt;location>/aspectTypes/&lt;aspect_type_id>"
+            /// The aspect types that are in scope for the export job, specified as
+            /// relative resource names in the format
+            /// `projects/{project_id_or_number}/locations/{location}/aspectTypes/{aspect_type_id}`.
+            /// Only aspects that belong to the specified aspect types are affected by
+            /// the job.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

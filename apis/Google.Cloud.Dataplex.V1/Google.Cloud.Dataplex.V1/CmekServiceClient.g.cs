@@ -398,12 +398,9 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The EncryptionConfig to create.
         /// </param>
         /// <param name="encryptionConfigId">
-        /// Required. The ID of the EncryptionConfig to create.
-        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-        /// and hyphens (-).
-        /// The maximum size is 63 characters.
-        /// The first character must be a letter.
-        /// The last character must be a letter or a number.
+        /// Required. The ID of the
+        /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+        /// Currently, only a value of "default" is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -425,12 +422,9 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The EncryptionConfig to create.
         /// </param>
         /// <param name="encryptionConfigId">
-        /// Required. The ID of the EncryptionConfig to create.
-        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-        /// and hyphens (-).
-        /// The maximum size is 63 characters.
-        /// The first character must be a letter.
-        /// The last character must be a letter or a number.
+        /// Required. The ID of the
+        /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+        /// Currently, only a value of "default" is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -452,12 +446,9 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The EncryptionConfig to create.
         /// </param>
         /// <param name="encryptionConfigId">
-        /// Required. The ID of the EncryptionConfig to create.
-        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-        /// and hyphens (-).
-        /// The maximum size is 63 characters.
-        /// The first character must be a letter.
-        /// The last character must be a letter or a number.
+        /// Required. The ID of the
+        /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+        /// Currently, only a value of "default" is supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -474,12 +465,9 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The EncryptionConfig to create.
         /// </param>
         /// <param name="encryptionConfigId">
-        /// Required. The ID of the EncryptionConfig to create.
-        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-        /// and hyphens (-).
-        /// The maximum size is 63 characters.
-        /// The first character must be a letter.
-        /// The last character must be a letter or a number.
+        /// Required. The ID of the
+        /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+        /// Currently, only a value of "default" is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -501,12 +489,9 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The EncryptionConfig to create.
         /// </param>
         /// <param name="encryptionConfigId">
-        /// Required. The ID of the EncryptionConfig to create.
-        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-        /// and hyphens (-).
-        /// The maximum size is 63 characters.
-        /// The first character must be a letter.
-        /// The last character must be a letter or a number.
+        /// Required. The ID of the
+        /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+        /// Currently, only a value of "default" is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -528,12 +513,9 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The EncryptionConfig to create.
         /// </param>
         /// <param name="encryptionConfigId">
-        /// Required. The ID of the EncryptionConfig to create.
-        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
-        /// and hyphens (-).
-        /// The maximum size is 63 characters.
-        /// The first character must be a letter.
-        /// The last character must be a letter or a number.
+        /// Required. The ID of the
+        /// [EncryptionConfig][google.cloud.dataplex.v1.EncryptionConfig] to create.
+        /// Currently, only a value of "default" is supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

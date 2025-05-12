@@ -1705,7 +1705,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ScanStatisticsFieldNumber = 2;
     private global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics scanStatistics_;
     /// <summary>
-    /// Output only. Statistics of the DataDiscoveryScan.
+    /// Output only. Describes result statistics of a data scan discovery job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2131,7 +2131,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Statistics of the DataDiscoveryScan.
+      /// Describes result statistics of a data scan discovery job.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ScanStatistics : pb::IMessage<ScanStatistics>
