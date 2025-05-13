@@ -730,6 +730,609 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExportCluster</summary>
+        public void ExportClusterRequestObject()
+        {
+            // Snippet: ExportCluster(ExportClusterRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ExportClusterRequest request = new ExportClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                GcsDestination = new GcsDestination(),
+                Database = "",
+                CsvExportOptions = new ExportClusterRequest.Types.CsvExportOptions(),
+            };
+            // Make the request
+            Operation<ExportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ExportCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceExportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportClusterAsync</summary>
+        public async Task ExportClusterRequestObjectAsync()
+        {
+            // Snippet: ExportClusterAsync(ExportClusterRequest, CallSettings)
+            // Additional: ExportClusterAsync(ExportClusterRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportClusterRequest request = new ExportClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                GcsDestination = new GcsDestination(),
+                Database = "",
+                CsvExportOptions = new ExportClusterRequest.Types.CsvExportOptions(),
+            };
+            // Make the request
+            Operation<ExportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ExportClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceExportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportCluster</summary>
+        public void ExportCluster()
+        {
+            // Snippet: ExportCluster(string, GcsDestination, string, ExportClusterRequest.Types.CsvExportOptions, ExportClusterRequest.Types.SqlExportOptions, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            GcsDestination gcsDestination = new GcsDestination();
+            string database = "";
+            ExportClusterRequest.Types.CsvExportOptions csvExportOptions = new ExportClusterRequest.Types.CsvExportOptions();
+            ExportClusterRequest.Types.SqlExportOptions sqlExportOptions = new ExportClusterRequest.Types.SqlExportOptions();
+            // Make the request
+            Operation<ExportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ExportCluster(name, gcsDestination, database, csvExportOptions, sqlExportOptions);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceExportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportClusterAsync</summary>
+        public async Task ExportClusterAsync()
+        {
+            // Snippet: ExportClusterAsync(string, GcsDestination, string, ExportClusterRequest.Types.CsvExportOptions, ExportClusterRequest.Types.SqlExportOptions, CallSettings)
+            // Additional: ExportClusterAsync(string, GcsDestination, string, ExportClusterRequest.Types.CsvExportOptions, ExportClusterRequest.Types.SqlExportOptions, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            GcsDestination gcsDestination = new GcsDestination();
+            string database = "";
+            ExportClusterRequest.Types.CsvExportOptions csvExportOptions = new ExportClusterRequest.Types.CsvExportOptions();
+            ExportClusterRequest.Types.SqlExportOptions sqlExportOptions = new ExportClusterRequest.Types.SqlExportOptions();
+            // Make the request
+            Operation<ExportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ExportClusterAsync(name, gcsDestination, database, csvExportOptions, sqlExportOptions);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceExportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportCluster</summary>
+        public void ExportClusterResourceNames()
+        {
+            // Snippet: ExportCluster(ClusterName, GcsDestination, string, ExportClusterRequest.Types.CsvExportOptions, ExportClusterRequest.Types.SqlExportOptions, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            GcsDestination gcsDestination = new GcsDestination();
+            string database = "";
+            ExportClusterRequest.Types.CsvExportOptions csvExportOptions = new ExportClusterRequest.Types.CsvExportOptions();
+            ExportClusterRequest.Types.SqlExportOptions sqlExportOptions = new ExportClusterRequest.Types.SqlExportOptions();
+            // Make the request
+            Operation<ExportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ExportCluster(name, gcsDestination, database, csvExportOptions, sqlExportOptions);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceExportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportClusterAsync</summary>
+        public async Task ExportClusterResourceNamesAsync()
+        {
+            // Snippet: ExportClusterAsync(ClusterName, GcsDestination, string, ExportClusterRequest.Types.CsvExportOptions, ExportClusterRequest.Types.SqlExportOptions, CallSettings)
+            // Additional: ExportClusterAsync(ClusterName, GcsDestination, string, ExportClusterRequest.Types.CsvExportOptions, ExportClusterRequest.Types.SqlExportOptions, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            GcsDestination gcsDestination = new GcsDestination();
+            string database = "";
+            ExportClusterRequest.Types.CsvExportOptions csvExportOptions = new ExportClusterRequest.Types.CsvExportOptions();
+            ExportClusterRequest.Types.SqlExportOptions sqlExportOptions = new ExportClusterRequest.Types.SqlExportOptions();
+            // Make the request
+            Operation<ExportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ExportClusterAsync(name, gcsDestination, database, csvExportOptions, sqlExportOptions);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceExportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCluster</summary>
+        public void ImportClusterRequestObject()
+        {
+            // Snippet: ImportCluster(ImportClusterRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ImportClusterRequest request = new ImportClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                GcsUri = "",
+                Database = "",
+                SqlImportOptions = new ImportClusterRequest.Types.SqlImportOptions(),
+                User = "",
+            };
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ImportCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceImportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportClusterAsync</summary>
+        public async Task ImportClusterRequestObjectAsync()
+        {
+            // Snippet: ImportClusterAsync(ImportClusterRequest, CallSettings)
+            // Additional: ImportClusterAsync(ImportClusterRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportClusterRequest request = new ImportClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                GcsUri = "",
+                Database = "",
+                SqlImportOptions = new ImportClusterRequest.Types.SqlImportOptions(),
+                User = "",
+            };
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ImportClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceImportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCluster</summary>
+        public void ImportCluster()
+        {
+            // Snippet: ImportCluster(string, string, string, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ImportCluster(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceImportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportClusterAsync</summary>
+        public async Task ImportClusterAsync()
+        {
+            // Snippet: ImportClusterAsync(string, string, string, string, CallSettings)
+            // Additional: ImportClusterAsync(string, string, string, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ImportClusterAsync(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceImportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCluster</summary>
+        public void ImportClusterResourceNames()
+        {
+            // Snippet: ImportCluster(ClusterName, string, string, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ImportCluster(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceImportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportClusterAsync</summary>
+        public async Task ImportClusterResourceNamesAsync()
+        {
+            // Snippet: ImportClusterAsync(ClusterName, string, string, string, CallSettings)
+            // Additional: ImportClusterAsync(ClusterName, string, string, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ImportClusterAsync(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceImportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeCluster</summary>
+        public void UpgradeClusterRequestObject()
+        {
+            // Snippet: UpgradeCluster(UpgradeClusterRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            UpgradeClusterRequest request = new UpgradeClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                Version = DatabaseVersion.Unspecified,
+                RequestId = "",
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<UpgradeClusterResponse, OperationMetadata> response = alloyDBAdminClient.UpgradeCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpgradeClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceUpgradeCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeClusterAsync</summary>
+        public async Task UpgradeClusterRequestObjectAsync()
+        {
+            // Snippet: UpgradeClusterAsync(UpgradeClusterRequest, CallSettings)
+            // Additional: UpgradeClusterAsync(UpgradeClusterRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpgradeClusterRequest request = new UpgradeClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                Version = DatabaseVersion.Unspecified,
+                RequestId = "",
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<UpgradeClusterResponse, OperationMetadata> response = await alloyDBAdminClient.UpgradeClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpgradeClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceUpgradeClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeCluster</summary>
+        public void UpgradeCluster()
+        {
+            // Snippet: UpgradeCluster(string, DatabaseVersion, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            DatabaseVersion version = DatabaseVersion.Unspecified;
+            // Make the request
+            Operation<UpgradeClusterResponse, OperationMetadata> response = alloyDBAdminClient.UpgradeCluster(name, version);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpgradeClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceUpgradeCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeClusterAsync</summary>
+        public async Task UpgradeClusterAsync()
+        {
+            // Snippet: UpgradeClusterAsync(string, DatabaseVersion, CallSettings)
+            // Additional: UpgradeClusterAsync(string, DatabaseVersion, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            DatabaseVersion version = DatabaseVersion.Unspecified;
+            // Make the request
+            Operation<UpgradeClusterResponse, OperationMetadata> response = await alloyDBAdminClient.UpgradeClusterAsync(name, version);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpgradeClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceUpgradeClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeCluster</summary>
+        public void UpgradeClusterResourceNames()
+        {
+            // Snippet: UpgradeCluster(ClusterName, DatabaseVersion, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            DatabaseVersion version = DatabaseVersion.Unspecified;
+            // Make the request
+            Operation<UpgradeClusterResponse, OperationMetadata> response = alloyDBAdminClient.UpgradeCluster(name, version);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpgradeClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceUpgradeCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpgradeClusterAsync</summary>
+        public async Task UpgradeClusterResourceNamesAsync()
+        {
+            // Snippet: UpgradeClusterAsync(ClusterName, DatabaseVersion, CallSettings)
+            // Additional: UpgradeClusterAsync(ClusterName, DatabaseVersion, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            DatabaseVersion version = DatabaseVersion.Unspecified;
+            // Make the request
+            Operation<UpgradeClusterResponse, OperationMetadata> response = await alloyDBAdminClient.UpgradeClusterAsync(name, version);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpgradeClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpgradeClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpgradeClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceUpgradeClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpgradeClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteCluster</summary>
         public void DeleteClusterRequestObject()
         {
@@ -4309,6 +4912,7 @@ namespace GoogleCSharpSnippets
             ListSupportedDatabaseFlagsRequest request = new ListSupportedDatabaseFlagsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Scope = SupportedDatabaseFlag.Types.Scope.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListSupportedDatabaseFlagsResponse, SupportedDatabaseFlag> response = alloyDBAdminClient.ListSupportedDatabaseFlags(request);
@@ -4357,6 +4961,7 @@ namespace GoogleCSharpSnippets
             ListSupportedDatabaseFlagsRequest request = new ListSupportedDatabaseFlagsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Scope = SupportedDatabaseFlag.Types.Scope.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListSupportedDatabaseFlagsResponse, SupportedDatabaseFlag> response = alloyDBAdminClient.ListSupportedDatabaseFlagsAsync(request);
