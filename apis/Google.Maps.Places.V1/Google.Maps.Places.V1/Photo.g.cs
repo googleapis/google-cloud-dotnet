@@ -27,20 +27,21 @@ namespace Google.Maps.Places.V1 {
             "CiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGhvdG8ucHJvdG8SFWdvb2dsZS5t",
             "YXBzLnBsYWNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxonZ29vZ2xlL21hcHMvcGxh",
-            "Y2VzL3YxL2F0dHJpYnV0aW9uLnByb3RvItYBCgVQaG90bxIRCgRuYW1lGAEg",
+            "Y2VzL3YxL2F0dHJpYnV0aW9uLnByb3RvIokCCgVQaG90bxIRCgRuYW1lGAEg",
             "ASgJQgPgQQgSEAoId2lkdGhfcHgYAiABKAUSEQoJaGVpZ2h0X3B4GAMgASgF",
             "EkUKE2F1dGhvcl9hdHRyaWJ1dGlvbnMYBCADKAsyKC5nb29nbGUubWFwcy5w",
-            "bGFjZXMudjEuQXV0aG9yQXR0cmlidXRpb246TupBSwobcGxhY2VzLmdvb2ds",
-            "ZWFwaXMuY29tL1Bob3RvEh1wbGFjZXMve3BsYWNlfS9waG90b3Mve3Bob3Rv",
-            "fSoGcGhvdG9zMgVwaG90b0KbAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MUIKUGhvdG9Qcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxh",
-            "Y2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3BiogIGR01QU1YxqgIVR29vZ2xl",
-            "Lk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90",
-            "bzM="));
+            "bGFjZXMudjEuQXV0aG9yQXR0cmlidXRpb24SGAoQZmxhZ19jb250ZW50X3Vy",
+            "aRgFIAEoCRIXCg9nb29nbGVfbWFwc191cmkYBiABKAk6TupBSwobcGxhY2Vz",
+            "Lmdvb2dsZWFwaXMuY29tL1Bob3RvEh1wbGFjZXMve3BsYWNlfS9waG90b3Mv",
+            "e3Bob3RvfSoGcGhvdG9zMgVwaG90b0KbAQoZY29tLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MUIKUGhvdG9Qcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21h",
+            "cHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3BiogIGR01QU1YxqgIV",
+            "R29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.Places.V1.AttributionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Photo), global::Google.Maps.Places.V1.Photo.Parser, new[]{ "Name", "WidthPx", "HeightPx", "AuthorAttributions" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Photo), global::Google.Maps.Places.V1.Photo.Parser, new[]{ "Name", "WidthPx", "HeightPx", "AuthorAttributions", "FlagContentUri", "GoogleMapsUri" }, null, null, null, null)
           }));
     }
     #endregion
@@ -89,6 +90,8 @@ namespace Google.Maps.Places.V1 {
       widthPx_ = other.widthPx_;
       heightPx_ = other.heightPx_;
       authorAttributions_ = other.authorAttributions_.Clone();
+      flagContentUri_ = other.flagContentUri_;
+      googleMapsUri_ = other.googleMapsUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -159,6 +162,36 @@ namespace Google.Maps.Places.V1 {
       get { return authorAttributions_; }
     }
 
+    /// <summary>Field number for the "flag_content_uri" field.</summary>
+    public const int FlagContentUriFieldNumber = 5;
+    private string flagContentUri_ = "";
+    /// <summary>
+    /// A link where users can flag a problem with the photo.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FlagContentUri {
+      get { return flagContentUri_; }
+      set {
+        flagContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "google_maps_uri" field.</summary>
+    public const int GoogleMapsUriFieldNumber = 6;
+    private string googleMapsUri_ = "";
+    /// <summary>
+    /// A link to show the photo on Google Maps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GoogleMapsUri {
+      get { return googleMapsUri_; }
+      set {
+        googleMapsUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -178,6 +211,8 @@ namespace Google.Maps.Places.V1 {
       if (WidthPx != other.WidthPx) return false;
       if (HeightPx != other.HeightPx) return false;
       if(!authorAttributions_.Equals(other.authorAttributions_)) return false;
+      if (FlagContentUri != other.FlagContentUri) return false;
+      if (GoogleMapsUri != other.GoogleMapsUri) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -189,6 +224,8 @@ namespace Google.Maps.Places.V1 {
       if (WidthPx != 0) hash ^= WidthPx.GetHashCode();
       if (HeightPx != 0) hash ^= HeightPx.GetHashCode();
       hash ^= authorAttributions_.GetHashCode();
+      if (FlagContentUri.Length != 0) hash ^= FlagContentUri.GetHashCode();
+      if (GoogleMapsUri.Length != 0) hash ^= GoogleMapsUri.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -220,6 +257,14 @@ namespace Google.Maps.Places.V1 {
         output.WriteInt32(HeightPx);
       }
       authorAttributions_.WriteTo(output, _repeated_authorAttributions_codec);
+      if (FlagContentUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FlagContentUri);
+      }
+      if (GoogleMapsUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(GoogleMapsUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -243,6 +288,14 @@ namespace Google.Maps.Places.V1 {
         output.WriteInt32(HeightPx);
       }
       authorAttributions_.WriteTo(ref output, _repeated_authorAttributions_codec);
+      if (FlagContentUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FlagContentUri);
+      }
+      if (GoogleMapsUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(GoogleMapsUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -263,6 +316,12 @@ namespace Google.Maps.Places.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(HeightPx);
       }
       size += authorAttributions_.CalculateSize(_repeated_authorAttributions_codec);
+      if (FlagContentUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FlagContentUri);
+      }
+      if (GoogleMapsUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleMapsUri);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -285,6 +344,12 @@ namespace Google.Maps.Places.V1 {
         HeightPx = other.HeightPx;
       }
       authorAttributions_.Add(other.authorAttributions_);
+      if (other.FlagContentUri.Length != 0) {
+        FlagContentUri = other.FlagContentUri;
+      }
+      if (other.GoogleMapsUri.Length != 0) {
+        GoogleMapsUri = other.GoogleMapsUri;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -316,6 +381,14 @@ namespace Google.Maps.Places.V1 {
             authorAttributions_.AddEntriesFrom(input, _repeated_authorAttributions_codec);
             break;
           }
+          case 42: {
+            FlagContentUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            GoogleMapsUri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -345,6 +418,14 @@ namespace Google.Maps.Places.V1 {
           }
           case 34: {
             authorAttributions_.AddEntriesFrom(ref input, _repeated_authorAttributions_codec);
+            break;
+          }
+          case 42: {
+            FlagContentUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            GoogleMapsUri = input.ReadString();
             break;
           }
         }

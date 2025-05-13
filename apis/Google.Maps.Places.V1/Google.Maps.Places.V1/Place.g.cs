@@ -26,167 +26,185 @@ namespace Google.Maps.Places.V1 {
           string.Concat(
             "CiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGxhY2UucHJvdG8SFWdvb2dsZS5t",
             "YXBzLnBsYWNlcy52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29v",
-            "Z2xlL2dlby90eXBlL3ZpZXdwb3J0LnByb3RvGilnb29nbGUvbWFwcy9wbGFj",
-            "ZXMvdjEvY29udGVudF9ibG9jay5wcm90bxonZ29vZ2xlL21hcHMvcGxhY2Vz",
-            "L3YxL2V2X2NoYXJnaW5nLnByb3RvGihnb29nbGUvbWFwcy9wbGFjZXMvdjEv",
-            "ZnVlbF9vcHRpb25zLnByb3RvGiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGhv",
-            "dG8ucHJvdG8aJ2dvb2dsZS9tYXBzL3BsYWNlcy92MS9wcmljZV9yYW5nZS5w",
-            "cm90bxolZ29vZ2xlL21hcHMvcGxhY2VzL3YxL3JlZmVyZW5jZS5wcm90bxoi",
-            "Z29vZ2xlL21hcHMvcGxhY2VzL3YxL3Jldmlldy5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90",
-            "bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aGGdvb2dsZS90eXBlL2xh",
-            "dGxuZy5wcm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3RleHQucHJvdG8a",
-            "IGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIq8wCgVQbGFjZRIM",
-            "CgRuYW1lGAEgASgJEgoKAmlkGAIgASgJEjAKDGRpc3BsYXlfbmFtZRgfIAEo",
-            "CzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSDQoFdHlwZXMYBSADKAkS",
-            "FAoMcHJpbWFyeV90eXBlGDIgASgJEj0KGXByaW1hcnlfdHlwZV9kaXNwbGF5",
-            "X25hbWUYICABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0Eh0KFW5h",
-            "dGlvbmFsX3Bob25lX251bWJlchgHIAEoCRIiChppbnRlcm5hdGlvbmFsX3Bo",
-            "b25lX251bWJlchgIIAEoCRIZChFmb3JtYXR0ZWRfYWRkcmVzcxgJIAEoCRIf",
-            "ChdzaG9ydF9mb3JtYXR0ZWRfYWRkcmVzcxgzIAEoCRIyCg5wb3N0YWxfYWRk",
-            "cmVzcxhaIAEoCzIaLmdvb2dsZS50eXBlLlBvc3RhbEFkZHJlc3MSSQoSYWRk",
-            "cmVzc19jb21wb25lbnRzGAogAygLMi0uZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLkFkZHJlc3NDb21wb25lbnQSOAoJcGx1c19jb2RlGAsgASgLMiUu",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBsdXNDb2RlEiUKCGxvY2F0",
-            "aW9uGAwgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEisKCHZpZXdwb3J0GA0g",
-            "ASgLMhkuZ29vZ2xlLmdlby50eXBlLlZpZXdwb3J0Eg4KBnJhdGluZxgOIAEo",
-            "ARIXCg9nb29nbGVfbWFwc191cmkYDyABKAkSEwoLd2Vic2l0ZV91cmkYECAB",
-            "KAkSLgoHcmV2aWV3cxg1IAMoCzIdLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5S",
-            "ZXZpZXcSSAoVcmVndWxhcl9vcGVuaW5nX2hvdXJzGBUgASgLMikuZ29vZ2xl",
-            "Lm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3VycxIfChJ1dGNfb2Zm",
-            "c2V0X21pbnV0ZXMYFiABKAVIAIgBARIoCgl0aW1lX3pvbmUYWCABKAsyFS5n",
-            "b29nbGUudHlwZS5UaW1lWm9uZRIsCgZwaG90b3MYNiADKAsyHC5nb29nbGUu",
-            "bWFwcy5wbGFjZXMudjEuUGhvdG8SGgoSYWRyX2Zvcm1hdF9hZGRyZXNzGBgg",
-            "ASgJEkQKD2J1c2luZXNzX3N0YXR1cxgZIAEoDjIrLmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5QbGFjZS5CdXNpbmVzc1N0YXR1cxI2CgtwcmljZV9sZXZlbBga",
-            "IAEoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QcmljZUxldmVsEj4KDGF0",
-            "dHJpYnV0aW9ucxgbIAMoCzIoLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFj",
-            "ZS5BdHRyaWJ1dGlvbhIeChF1c2VyX3JhdGluZ19jb3VudBgcIAEoBUgBiAEB",
-            "EhoKEmljb25fbWFza19iYXNlX3VyaRgdIAEoCRIdChVpY29uX2JhY2tncm91",
-            "bmRfY29sb3IYHiABKAkSFAoHdGFrZW91dBghIAEoCEgCiAEBEhUKCGRlbGl2",
-            "ZXJ5GCIgASgISAOIAQESFAoHZGluZV9pbhgjIAEoCEgEiAEBEhwKD2N1cmJz",
-            "aWRlX3BpY2t1cBgkIAEoCEgFiAEBEhcKCnJlc2VydmFibGUYJiABKAhIBogB",
-            "ARIdChBzZXJ2ZXNfYnJlYWtmYXN0GCcgASgISAeIAQESGQoMc2VydmVzX2x1",
-            "bmNoGCggASgISAiIAQESGgoNc2VydmVzX2Rpbm5lchgpIAEoCEgJiAEBEhgK",
-            "C3NlcnZlc19iZWVyGCogASgISAqIAQESGAoLc2VydmVzX3dpbmUYKyABKAhI",
-            "C4gBARIaCg1zZXJ2ZXNfYnJ1bmNoGCwgASgISAyIAQESIwoWc2VydmVzX3Zl",
-            "Z2V0YXJpYW5fZm9vZBgtIAEoCEgNiAEBEkgKFWN1cnJlbnRfb3BlbmluZ19o",
-            "b3VycxguIAEoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVu",
-            "aW5nSG91cnMSUgofY3VycmVudF9zZWNvbmRhcnlfb3BlbmluZ19ob3Vycxgv",
-            "IAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91",
-            "cnMSUgofcmVndWxhcl9zZWNvbmRhcnlfb3BlbmluZ19ob3VycxgxIAMoCzIp",
-            "Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSNQoR",
-            "ZWRpdG9yaWFsX3N1bW1hcnkYNCABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6",
-            "ZWRUZXh0EhwKD291dGRvb3Jfc2VhdGluZxg3IAEoCEgOiAEBEhcKCmxpdmVf",
-            "bXVzaWMYOCABKAhID4gBARIeChFtZW51X2Zvcl9jaGlsZHJlbhg5IAEoCEgQ",
-            "iAEBEh0KEHNlcnZlc19jb2NrdGFpbHMYOiABKAhIEYgBARIbCg5zZXJ2ZXNf",
-            "ZGVzc2VydBg7IAEoCEgSiAEBEhoKDXNlcnZlc19jb2ZmZWUYPCABKAhIE4gB",
-            "ARIeChFnb29kX2Zvcl9jaGlsZHJlbhg+IAEoCEgUiAEBEhgKC2FsbG93c19k",
-            "b2dzGD8gASgISBWIAQESFQoIcmVzdHJvb20YQCABKAhIFogBARIcCg9nb29k",
-            "X2Zvcl9ncm91cHMYQSABKAhIF4gBARIlChhnb29kX2Zvcl93YXRjaGluZ19z",
-            "cG9ydHMYQiABKAhIGIgBARJECg9wYXltZW50X29wdGlvbnMYQyABKAsyKy5n",
-            "b29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuUGF5bWVudE9wdGlvbnMSRAoP",
-            "cGFya2luZ19vcHRpb25zGEYgASgLMisuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLlBhcmtpbmdPcHRpb25zEkUKEHN1Yl9kZXN0aW5hdGlvbnMYRyAD",
-            "KAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuU3ViRGVzdGluYXRp",
-            "b24SVQoVYWNjZXNzaWJpbGl0eV9vcHRpb25zGEggASgLMjEuZ29vZ2xlLm1h",
-            "cHMucGxhY2VzLnYxLlBsYWNlLkFjY2Vzc2liaWxpdHlPcHRpb25zSBmIAQES",
-            "OAoMZnVlbF9vcHRpb25zGE4gASgLMiIuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LkZ1ZWxPcHRpb25zEkEKEWV2X2NoYXJnZV9vcHRpb25zGE8gASgLMiYuZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLkVWQ2hhcmdlT3B0aW9ucxJKChJnZW5lcmF0",
-            "aXZlX3N1bW1hcnkYUCABKAsyLi5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxh",
-            "Y2UuR2VuZXJhdGl2ZVN1bW1hcnkSPgoMYXJlYV9zdW1tYXJ5GFEgASgLMigu",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFyZWFTdW1tYXJ5EkcKEWNv",
-            "bnRhaW5pbmdfcGxhY2VzGFIgAygLMiwuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLkNvbnRhaW5pbmdQbGFjZRInChpwdXJlX3NlcnZpY2VfYXJlYV9i",
-            "dXNpbmVzcxhTIAEoCEgaiAEBEjYKC3ByaWNlX3JhbmdlGFYgASgLMiEuZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLlByaWNlUmFuZ2UaXwoQQWRkcmVzc0NvbXBv",
-            "bmVudBIRCglsb25nX3RleHQYASABKAkSEgoKc2hvcnRfdGV4dBgCIAEoCRIN",
-            "CgV0eXBlcxgDIAMoCRIVCg1sYW5ndWFnZV9jb2RlGAQgASgJGjYKCFBsdXND",
-            "b2RlEhMKC2dsb2JhbF9jb2RlGAEgASgJEhUKDWNvbXBvdW5kX2NvZGUYAiAB",
-            "KAka/QcKDE9wZW5pbmdIb3VycxIVCghvcGVuX25vdxgBIAEoCEgAiAEBEkEK",
-            "B3BlcmlvZHMYAiADKAsyMC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2Uu",
-            "T3BlbmluZ0hvdXJzLlBlcmlvZBIcChR3ZWVrZGF5X2Rlc2NyaXB0aW9ucxgD",
-            "IAMoCRJaChRzZWNvbmRhcnlfaG91cnNfdHlwZRgEIAEoDjI8Lmdvb2dsZS5t",
-            "YXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMuU2Vjb25kYXJ5SG91",
-            "cnNUeXBlEkoKDHNwZWNpYWxfZGF5cxgFIAMoCzI0Lmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMuU3BlY2lhbERheRIyCg5uZXh0",
-            "X29wZW5fdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "MwoPbmV4dF9jbG9zZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBqpAgoGUGVyaW9kEkQKBG9wZW4YASABKAsyNi5nb29nbGUubWFw",
-            "cy5wbGFjZXMudjEuUGxhY2UuT3BlbmluZ0hvdXJzLlBlcmlvZC5Qb2ludBJF",
-            "CgVjbG9zZRgCIAEoCzI2Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5P",
-            "cGVuaW5nSG91cnMuUGVyaW9kLlBvaW50GpEBCgVQb2ludBIQCgNkYXkYASAB",
-            "KAVIAIgBARIRCgRob3VyGAIgASgFSAGIAQESEwoGbWludXRlGAMgASgFSAKI",
-            "AQESHwoEZGF0ZRgGIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSEQoJdHJ1bmNh",
-            "dGVkGAUgASgIQgYKBF9kYXlCBwoFX2hvdXJCCQoHX21pbnV0ZRotCgpTcGVj",
-            "aWFsRGF5Eh8KBGRhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlIvsBChJT",
-            "ZWNvbmRhcnlIb3Vyc1R5cGUSJAogU0VDT05EQVJZX0hPVVJTX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIRCg1EUklWRV9USFJPVUdIEAESDgoKSEFQUFlfSE9VUhAC",
-            "EgwKCERFTElWRVJZEAMSCwoHVEFLRU9VVBAEEgsKB0tJVENIRU4QBRINCglC",
-            "UkVBS0ZBU1QQBhIJCgVMVU5DSBAHEgoKBkRJTk5FUhAIEgoKBkJSVU5DSBAJ",
-            "EgoKBlBJQ0tVUBAKEgoKBkFDQ0VTUxALEhAKDFNFTklPUl9IT1VSUxAMEhgK",
-            "FE9OTElORV9TRVJWSUNFX0hPVVJTEA1CCwoJX29wZW5fbm93GjUKC0F0dHJp",
-            "YnV0aW9uEhAKCHByb3ZpZGVyGAEgASgJEhQKDHByb3ZpZGVyX3VyaRgCIAEo",
-            "CRrmAQoOUGF5bWVudE9wdGlvbnMSIQoUYWNjZXB0c19jcmVkaXRfY2FyZHMY",
-            "ASABKAhIAIgBARIgChNhY2NlcHRzX2RlYml0X2NhcmRzGAIgASgISAGIAQES",
-            "HgoRYWNjZXB0c19jYXNoX29ubHkYAyABKAhIAogBARIYCgthY2NlcHRzX25m",
-            "YxgEIAEoCEgDiAEBQhcKFV9hY2NlcHRzX2NyZWRpdF9jYXJkc0IWChRfYWNj",
-            "ZXB0c19kZWJpdF9jYXJkc0IUChJfYWNjZXB0c19jYXNoX29ubHlCDgoMX2Fj",
-            "Y2VwdHNfbmZjGo4DCg5QYXJraW5nT3B0aW9ucxIdChBmcmVlX3Bhcmtpbmdf",
-            "bG90GAEgASgISACIAQESHQoQcGFpZF9wYXJraW5nX2xvdBgCIAEoCEgBiAEB",
-            "EiAKE2ZyZWVfc3RyZWV0X3BhcmtpbmcYAyABKAhIAogBARIgChNwYWlkX3N0",
-            "cmVldF9wYXJraW5nGAQgASgISAOIAQESGgoNdmFsZXRfcGFya2luZxgFIAEo",
-            "CEgEiAEBEiAKE2ZyZWVfZ2FyYWdlX3BhcmtpbmcYBiABKAhIBYgBARIgChNw",
-            "YWlkX2dhcmFnZV9wYXJraW5nGAcgASgISAaIAQFCEwoRX2ZyZWVfcGFya2lu",
-            "Z19sb3RCEwoRX3BhaWRfcGFya2luZ19sb3RCFgoUX2ZyZWVfc3RyZWV0X3Bh",
-            "cmtpbmdCFgoUX3BhaWRfc3RyZWV0X3BhcmtpbmdCEAoOX3ZhbGV0X3Bhcmtp",
-            "bmdCFgoUX2ZyZWVfZ2FyYWdlX3BhcmtpbmdCFgoUX3BhaWRfZ2FyYWdlX3Bh",
-            "cmtpbmcaTAoOU3ViRGVzdGluYXRpb24SLgoEbmFtZRgBIAEoCUIg+kEdChtw",
-            "bGFjZXMuZ29vZ2xlYXBpcy5jb20vUGxhY2USCgoCaWQYAiABKAka0gIKFEFj",
-            "Y2Vzc2liaWxpdHlPcHRpb25zEioKHXdoZWVsY2hhaXJfYWNjZXNzaWJsZV9w",
-            "YXJraW5nGAEgASgISACIAQESKwoed2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2Vu",
-            "dHJhbmNlGAIgASgISAGIAQESKwoed2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3Jl",
-            "c3Ryb29tGAMgASgISAKIAQESKgodd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3Nl",
-            "YXRpbmcYBCABKAhIA4gBAUIgCh5fd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3Bh",
-            "cmtpbmdCIQofX3doZWVsY2hhaXJfYWNjZXNzaWJsZV9lbnRyYW5jZUIhCh9f",
-            "d2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3Jlc3Ryb29tQiAKHl93aGVlbGNoYWly",
-            "X2FjY2Vzc2libGVfc2VhdGluZxqpAQoRR2VuZXJhdGl2ZVN1bW1hcnkSLAoI",
-            "b3ZlcnZpZXcYASABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0Ei8K",
-            "C2Rlc2NyaXB0aW9uGAIgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4",
-            "dBI1CgpyZWZlcmVuY2VzGAMgASgLMiEuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlJlZmVyZW5jZXMaSgoLQXJlYVN1bW1hcnkSOwoOY29udGVudF9ibG9ja3MY",
-            "BCADKAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29udGVudEJsb2NrGk0K",
-            "D0NvbnRhaW5pbmdQbGFjZRIuCgRuYW1lGAEgASgJQiD6QR0KG3BsYWNlcy5n",
-            "b29nbGVhcGlzLmNvbS9QbGFjZRIKCgJpZBgCIAEoCSJyCg5CdXNpbmVzc1N0",
-            "YXR1cxIfChtCVVNJTkVTU19TVEFUVVNfVU5TUEVDSUZJRUQQABIPCgtPUEVS",
-            "QVRJT05BTBABEhYKEkNMT1NFRF9URU1QT1JBUklMWRACEhYKEkNMT1NFRF9Q",
-            "RVJNQU5FTlRMWRADOkLqQT8KG3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFj",
-            "ZRIRcGxhY2VzL3twbGFjZV9pZH0qBnBsYWNlczIFcGxhY2VCFQoTX3V0Y19v",
-            "ZmZzZXRfbWludXRlc0IUChJfdXNlcl9yYXRpbmdfY291bnRCCgoIX3Rha2Vv",
-            "dXRCCwoJX2RlbGl2ZXJ5QgoKCF9kaW5lX2luQhIKEF9jdXJic2lkZV9waWNr",
-            "dXBCDQoLX3Jlc2VydmFibGVCEwoRX3NlcnZlc19icmVha2Zhc3RCDwoNX3Nl",
-            "cnZlc19sdW5jaEIQCg5fc2VydmVzX2Rpbm5lckIOCgxfc2VydmVzX2JlZXJC",
-            "DgoMX3NlcnZlc193aW5lQhAKDl9zZXJ2ZXNfYnJ1bmNoQhkKF19zZXJ2ZXNf",
-            "dmVnZXRhcmlhbl9mb29kQhIKEF9vdXRkb29yX3NlYXRpbmdCDQoLX2xpdmVf",
-            "bXVzaWNCFAoSX21lbnVfZm9yX2NoaWxkcmVuQhMKEV9zZXJ2ZXNfY29ja3Rh",
-            "aWxzQhEKD19zZXJ2ZXNfZGVzc2VydEIQCg5fc2VydmVzX2NvZmZlZUIUChJf",
-            "Z29vZF9mb3JfY2hpbGRyZW5CDgoMX2FsbG93c19kb2dzQgsKCV9yZXN0cm9v",
-            "bUISChBfZ29vZF9mb3JfZ3JvdXBzQhsKGV9nb29kX2Zvcl93YXRjaGluZ19z",
-            "cG9ydHNCGAoWX2FjY2Vzc2liaWxpdHlfb3B0aW9uc0IdChtfcHVyZV9zZXJ2",
-            "aWNlX2FyZWFfYnVzaW5lc3MqsQEKClByaWNlTGV2ZWwSGwoXUFJJQ0VfTEVW",
-            "RUxfVU5TUEVDSUZJRUQQABIUChBQUklDRV9MRVZFTF9GUkVFEAESGwoXUFJJ",
-            "Q0VfTEVWRUxfSU5FWFBFTlNJVkUQAhIYChRQUklDRV9MRVZFTF9NT0RFUkFU",
-            "RRADEhkKFVBSSUNFX0xFVkVMX0VYUEVOU0lWRRAEEh4KGlBSSUNFX0xFVkVM",
-            "X1ZFUllfRVhQRU5TSVZFEAVCmwEKGWNvbS5nb29nbGUubWFwcy5wbGFjZXMu",
-            "djFCClBsYWNlUHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3Bs",
-            "YWNlcy9hcGl2MS9wbGFjZXNwYjtwbGFjZXNwYqICBkdNUFNWMaoCFUdvb2ds",
-            "ZS5NYXBzLlBsYWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBsYWNlc1xWMWIGcHJv",
-            "dG8z"));
+            "Z2xlL2dlby90eXBlL3ZpZXdwb3J0LnByb3RvGi5nb29nbGUvbWFwcy9wbGFj",
+            "ZXMvdjEvYWRkcmVzc19kZXNjcmlwdG9yLnByb3RvGilnb29nbGUvbWFwcy9w",
+            "bGFjZXMvdjEvY29udGVudF9ibG9jay5wcm90bxonZ29vZ2xlL21hcHMvcGxh",
+            "Y2VzL3YxL2V2X2NoYXJnaW5nLnByb3RvGihnb29nbGUvbWFwcy9wbGFjZXMv",
+            "djEvZnVlbF9vcHRpb25zLnByb3RvGiFnb29nbGUvbWFwcy9wbGFjZXMvdjEv",
+            "cGhvdG8ucHJvdG8aJ2dvb2dsZS9tYXBzL3BsYWNlcy92MS9wcmljZV9yYW5n",
+            "ZS5wcm90bxoiZ29vZ2xlL21hcHMvcGxhY2VzL3YxL3Jldmlldy5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoWZ29vZ2xlL3R5cGUv",
+            "ZGF0ZS5wcm90bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aGGdvb2ds",
+            "ZS90eXBlL2xhdGxuZy5wcm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3Rl",
+            "eHQucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIus2",
+            "CgVQbGFjZRIMCgRuYW1lGAEgASgJEgoKAmlkGAIgASgJEjAKDGRpc3BsYXlf",
+            "bmFtZRgfIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHQSDQoFdHlw",
+            "ZXMYBSADKAkSFAoMcHJpbWFyeV90eXBlGDIgASgJEj0KGXByaW1hcnlfdHlw",
+            "ZV9kaXNwbGF5X25hbWUYICABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRU",
+            "ZXh0Eh0KFW5hdGlvbmFsX3Bob25lX251bWJlchgHIAEoCRIiChppbnRlcm5h",
+            "dGlvbmFsX3Bob25lX251bWJlchgIIAEoCRIZChFmb3JtYXR0ZWRfYWRkcmVz",
+            "cxgJIAEoCRIfChdzaG9ydF9mb3JtYXR0ZWRfYWRkcmVzcxgzIAEoCRIyCg5w",
+            "b3N0YWxfYWRkcmVzcxhaIAEoCzIaLmdvb2dsZS50eXBlLlBvc3RhbEFkZHJl",
+            "c3MSSQoSYWRkcmVzc19jb21wb25lbnRzGAogAygLMi0uZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLlBsYWNlLkFkZHJlc3NDb21wb25lbnQSOAoJcGx1c19jb2Rl",
+            "GAsgASgLMiUuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBsdXNDb2Rl",
+            "EiUKCGxvY2F0aW9uGAwgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEisKCHZp",
+            "ZXdwb3J0GA0gASgLMhkuZ29vZ2xlLmdlby50eXBlLlZpZXdwb3J0Eg4KBnJh",
+            "dGluZxgOIAEoARIXCg9nb29nbGVfbWFwc191cmkYDyABKAkSEwoLd2Vic2l0",
+            "ZV91cmkYECABKAkSLgoHcmV2aWV3cxg1IAMoCzIdLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5SZXZpZXcSSAoVcmVndWxhcl9vcGVuaW5nX2hvdXJzGBUgASgL",
+            "MikuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3VycxIf",
+            "ChJ1dGNfb2Zmc2V0X21pbnV0ZXMYFiABKAVIAIgBARIoCgl0aW1lX3pvbmUY",
+            "WCABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZRIsCgZwaG90b3MYNiADKAsy",
+            "HC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGhvdG8SGgoSYWRyX2Zvcm1hdF9h",
+            "ZGRyZXNzGBggASgJEkQKD2J1c2luZXNzX3N0YXR1cxgZIAEoDjIrLmdvb2ds",
+            "ZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5CdXNpbmVzc1N0YXR1cxI2Cgtwcmlj",
+            "ZV9sZXZlbBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QcmljZUxl",
+            "dmVsEj4KDGF0dHJpYnV0aW9ucxgbIAMoCzIoLmdvb2dsZS5tYXBzLnBsYWNl",
+            "cy52MS5QbGFjZS5BdHRyaWJ1dGlvbhIeChF1c2VyX3JhdGluZ19jb3VudBgc",
+            "IAEoBUgBiAEBEhoKEmljb25fbWFza19iYXNlX3VyaRgdIAEoCRIdChVpY29u",
+            "X2JhY2tncm91bmRfY29sb3IYHiABKAkSFAoHdGFrZW91dBghIAEoCEgCiAEB",
+            "EhUKCGRlbGl2ZXJ5GCIgASgISAOIAQESFAoHZGluZV9pbhgjIAEoCEgEiAEB",
+            "EhwKD2N1cmJzaWRlX3BpY2t1cBgkIAEoCEgFiAEBEhcKCnJlc2VydmFibGUY",
+            "JiABKAhIBogBARIdChBzZXJ2ZXNfYnJlYWtmYXN0GCcgASgISAeIAQESGQoM",
+            "c2VydmVzX2x1bmNoGCggASgISAiIAQESGgoNc2VydmVzX2Rpbm5lchgpIAEo",
+            "CEgJiAEBEhgKC3NlcnZlc19iZWVyGCogASgISAqIAQESGAoLc2VydmVzX3dp",
+            "bmUYKyABKAhIC4gBARIaCg1zZXJ2ZXNfYnJ1bmNoGCwgASgISAyIAQESIwoW",
+            "c2VydmVzX3ZlZ2V0YXJpYW5fZm9vZBgtIAEoCEgNiAEBEkgKFWN1cnJlbnRf",
+            "b3BlbmluZ19ob3VycxguIAEoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Q",
+            "bGFjZS5PcGVuaW5nSG91cnMSUgofY3VycmVudF9zZWNvbmRhcnlfb3Blbmlu",
+            "Z19ob3VycxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5P",
+            "cGVuaW5nSG91cnMSUgofcmVndWxhcl9zZWNvbmRhcnlfb3BlbmluZ19ob3Vy",
+            "cxgxIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5n",
+            "SG91cnMSNQoRZWRpdG9yaWFsX3N1bW1hcnkYNCABKAsyGi5nb29nbGUudHlw",
+            "ZS5Mb2NhbGl6ZWRUZXh0EhwKD291dGRvb3Jfc2VhdGluZxg3IAEoCEgOiAEB",
+            "EhcKCmxpdmVfbXVzaWMYOCABKAhID4gBARIeChFtZW51X2Zvcl9jaGlsZHJl",
+            "bhg5IAEoCEgQiAEBEh0KEHNlcnZlc19jb2NrdGFpbHMYOiABKAhIEYgBARIb",
+            "Cg5zZXJ2ZXNfZGVzc2VydBg7IAEoCEgSiAEBEhoKDXNlcnZlc19jb2ZmZWUY",
+            "PCABKAhIE4gBARIeChFnb29kX2Zvcl9jaGlsZHJlbhg+IAEoCEgUiAEBEhgK",
+            "C2FsbG93c19kb2dzGD8gASgISBWIAQESFQoIcmVzdHJvb20YQCABKAhIFogB",
+            "ARIcCg9nb29kX2Zvcl9ncm91cHMYQSABKAhIF4gBARIlChhnb29kX2Zvcl93",
+            "YXRjaGluZ19zcG9ydHMYQiABKAhIGIgBARJECg9wYXltZW50X29wdGlvbnMY",
+            "QyABKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuUGF5bWVudE9w",
+            "dGlvbnMSRAoPcGFya2luZ19vcHRpb25zGEYgASgLMisuZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLlBsYWNlLlBhcmtpbmdPcHRpb25zEkUKEHN1Yl9kZXN0aW5h",
+            "dGlvbnMYRyADKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuU3Vi",
+            "RGVzdGluYXRpb24SVQoVYWNjZXNzaWJpbGl0eV9vcHRpb25zGEggASgLMjEu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkFjY2Vzc2liaWxpdHlPcHRp",
+            "b25zSBmIAQESOAoMZnVlbF9vcHRpb25zGE4gASgLMiIuZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLkZ1ZWxPcHRpb25zEkEKEWV2X2NoYXJnZV9vcHRpb25zGE8g",
+            "ASgLMiYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkVWQ2hhcmdlT3B0aW9ucxJK",
+            "ChJnZW5lcmF0aXZlX3N1bW1hcnkYUCABKAsyLi5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuUGxhY2UuR2VuZXJhdGl2ZVN1bW1hcnkSRwoRY29udGFpbmluZ19w",
+            "bGFjZXMYUiADKAsyLC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuQ29u",
+            "dGFpbmluZ1BsYWNlEicKGnB1cmVfc2VydmljZV9hcmVhX2J1c2luZXNzGFMg",
+            "ASgISBqIAQESRAoSYWRkcmVzc19kZXNjcmlwdG9yGFQgASgLMiguZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLkFkZHJlc3NEZXNjcmlwdG9yEjYKC3ByaWNlX3Jh",
+            "bmdlGFYgASgLMiEuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlByaWNlUmFuZ2US",
+            "QgoOcmV2aWV3X3N1bW1hcnkYVyABKAsyKi5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djEuUGxhY2UuUmV2aWV3U3VtbWFyeRJWChlldl9jaGFyZ2VfYW1lbml0eV9z",
+            "dW1tYXJ5GFkgASgLMjMuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkV2",
+            "Q2hhcmdlQW1lbml0eVN1bW1hcnkSTgoUbmVpZ2hib3Job29kX3N1bW1hcnkY",
+            "WyABKAsyMC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuTmVpZ2hib3Jo",
+            "b29kU3VtbWFyeRpfChBBZGRyZXNzQ29tcG9uZW50EhEKCWxvbmdfdGV4dBgB",
+            "IAEoCRISCgpzaG9ydF90ZXh0GAIgASgJEg0KBXR5cGVzGAMgAygJEhUKDWxh",
+            "bmd1YWdlX2NvZGUYBCABKAkaNgoIUGx1c0NvZGUSEwoLZ2xvYmFsX2NvZGUY",
+            "ASABKAkSFQoNY29tcG91bmRfY29kZRgCIAEoCRr9BwoMT3BlbmluZ0hvdXJz",
+            "EhUKCG9wZW5fbm93GAEgASgISACIAQESQQoHcGVyaW9kcxgCIAMoCzIwLmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9k",
+            "EhwKFHdlZWtkYXlfZGVzY3JpcHRpb25zGAMgAygJEloKFHNlY29uZGFyeV9o",
+            "b3Vyc190eXBlGAQgASgOMjwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNl",
+            "Lk9wZW5pbmdIb3Vycy5TZWNvbmRhcnlIb3Vyc1R5cGUSSgoMc3BlY2lhbF9k",
+            "YXlzGAUgAygLMjQuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5p",
+            "bmdIb3Vycy5TcGVjaWFsRGF5EjIKDm5leHRfb3Blbl90aW1lGAYgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCg9uZXh0X2Nsb3NlX3RpbWUY",
+            "ByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGqkCCgZQZXJpb2QS",
+            "RAoEb3BlbhgBIAEoCzI2Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5P",
+            "cGVuaW5nSG91cnMuUGVyaW9kLlBvaW50EkUKBWNsb3NlGAIgASgLMjYuZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5QZXJpb2Qu",
+            "UG9pbnQakQEKBVBvaW50EhAKA2RheRgBIAEoBUgAiAEBEhEKBGhvdXIYAiAB",
+            "KAVIAYgBARITCgZtaW51dGUYAyABKAVIAogBARIfCgRkYXRlGAYgASgLMhEu",
+            "Z29vZ2xlLnR5cGUuRGF0ZRIRCgl0cnVuY2F0ZWQYBSABKAhCBgoEX2RheUIH",
+            "CgVfaG91ckIJCgdfbWludXRlGi0KClNwZWNpYWxEYXkSHwoEZGF0ZRgBIAEo",
+            "CzIRLmdvb2dsZS50eXBlLkRhdGUi+wEKElNlY29uZGFyeUhvdXJzVHlwZRIk",
+            "CiBTRUNPTkRBUllfSE9VUlNfVFlQRV9VTlNQRUNJRklFRBAAEhEKDURSSVZF",
+            "X1RIUk9VR0gQARIOCgpIQVBQWV9IT1VSEAISDAoIREVMSVZFUlkQAxILCgdU",
+            "QUtFT1VUEAQSCwoHS0lUQ0hFThAFEg0KCUJSRUFLRkFTVBAGEgkKBUxVTkNI",
+            "EAcSCgoGRElOTkVSEAgSCgoGQlJVTkNIEAkSCgoGUElDS1VQEAoSCgoGQUND",
+            "RVNTEAsSEAoMU0VOSU9SX0hPVVJTEAwSGAoUT05MSU5FX1NFUlZJQ0VfSE9V",
+            "UlMQDUILCglfb3Blbl9ub3caNQoLQXR0cmlidXRpb24SEAoIcHJvdmlkZXIY",
+            "ASABKAkSFAoMcHJvdmlkZXJfdXJpGAIgASgJGuYBCg5QYXltZW50T3B0aW9u",
+            "cxIhChRhY2NlcHRzX2NyZWRpdF9jYXJkcxgBIAEoCEgAiAEBEiAKE2FjY2Vw",
+            "dHNfZGViaXRfY2FyZHMYAiABKAhIAYgBARIeChFhY2NlcHRzX2Nhc2hfb25s",
+            "eRgDIAEoCEgCiAEBEhgKC2FjY2VwdHNfbmZjGAQgASgISAOIAQFCFwoVX2Fj",
+            "Y2VwdHNfY3JlZGl0X2NhcmRzQhYKFF9hY2NlcHRzX2RlYml0X2NhcmRzQhQK",
+            "El9hY2NlcHRzX2Nhc2hfb25seUIOCgxfYWNjZXB0c19uZmMajgMKDlBhcmtp",
+            "bmdPcHRpb25zEh0KEGZyZWVfcGFya2luZ19sb3QYASABKAhIAIgBARIdChBw",
+            "YWlkX3BhcmtpbmdfbG90GAIgASgISAGIAQESIAoTZnJlZV9zdHJlZXRfcGFy",
+            "a2luZxgDIAEoCEgCiAEBEiAKE3BhaWRfc3RyZWV0X3BhcmtpbmcYBCABKAhI",
+            "A4gBARIaCg12YWxldF9wYXJraW5nGAUgASgISASIAQESIAoTZnJlZV9nYXJh",
+            "Z2VfcGFya2luZxgGIAEoCEgFiAEBEiAKE3BhaWRfZ2FyYWdlX3BhcmtpbmcY",
+            "ByABKAhIBogBAUITChFfZnJlZV9wYXJraW5nX2xvdEITChFfcGFpZF9wYXJr",
+            "aW5nX2xvdEIWChRfZnJlZV9zdHJlZXRfcGFya2luZ0IWChRfcGFpZF9zdHJl",
+            "ZXRfcGFya2luZ0IQCg5fdmFsZXRfcGFya2luZ0IWChRfZnJlZV9nYXJhZ2Vf",
+            "cGFya2luZ0IWChRfcGFpZF9nYXJhZ2VfcGFya2luZxpMCg5TdWJEZXN0aW5h",
+            "dGlvbhIuCgRuYW1lGAEgASgJQiD6QR0KG3BsYWNlcy5nb29nbGVhcGlzLmNv",
+            "bS9QbGFjZRIKCgJpZBgCIAEoCRrSAgoUQWNjZXNzaWJpbGl0eU9wdGlvbnMS",
+            "Kgodd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3BhcmtpbmcYASABKAhIAIgBARIr",
+            "Ch53aGVlbGNoYWlyX2FjY2Vzc2libGVfZW50cmFuY2UYAiABKAhIAYgBARIr",
+            "Ch53aGVlbGNoYWlyX2FjY2Vzc2libGVfcmVzdHJvb20YAyABKAhIAogBARIq",
+            "Ch13aGVlbGNoYWlyX2FjY2Vzc2libGVfc2VhdGluZxgEIAEoCEgDiAEBQiAK",
+            "Hl93aGVlbGNoYWlyX2FjY2Vzc2libGVfcGFya2luZ0IhCh9fd2hlZWxjaGFp",
+            "cl9hY2Nlc3NpYmxlX2VudHJhbmNlQiEKH193aGVlbGNoYWlyX2FjY2Vzc2li",
+            "bGVfcmVzdHJvb21CIAoeX3doZWVsY2hhaXJfYWNjZXNzaWJsZV9zZWF0aW5n",
+            "GpkBChFHZW5lcmF0aXZlU3VtbWFyeRIsCghvdmVydmlldxgBIAEoCzIaLmdv",
+            "b2dsZS50eXBlLkxvY2FsaXplZFRleHQSIQoZb3ZlcnZpZXdfZmxhZ19jb250",
+            "ZW50X3VyaRgEIAEoCRIzCg9kaXNjbG9zdXJlX3RleHQYBiABKAsyGi5nb29n",
+            "bGUudHlwZS5Mb2NhbGl6ZWRUZXh0Gk0KD0NvbnRhaW5pbmdQbGFjZRIuCgRu",
+            "YW1lGAEgASgJQiD6QR0KG3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIK",
+            "CgJpZBgCIAEoCRqIAQoNUmV2aWV3U3VtbWFyeRIoCgR0ZXh0GAEgASgLMhou",
+            "Z29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBIYChBmbGFnX2NvbnRlbnRfdXJp",
+            "GAIgASgJEjMKD2Rpc2Nsb3N1cmVfdGV4dBgDIAEoCzIaLmdvb2dsZS50eXBl",
+            "LkxvY2FsaXplZFRleHQawAIKFkV2Q2hhcmdlQW1lbml0eVN1bW1hcnkSNQoI",
+            "b3ZlcnZpZXcYASABKAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuQ29udGVu",
+            "dEJsb2NrEjMKBmNvZmZlZRgCIAEoCzIjLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5Db250ZW50QmxvY2sSNwoKcmVzdGF1cmFudBgDIAEoCzIjLmdvb2dsZS5t",
+            "YXBzLnBsYWNlcy52MS5Db250ZW50QmxvY2sSMgoFc3RvcmUYBCABKAsyIy5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuQ29udGVudEJsb2NrEhgKEGZsYWdfY29u",
+            "dGVudF91cmkYBSABKAkSMwoPZGlzY2xvc3VyZV90ZXh0GAYgASgLMhouZ29v",
+            "Z2xlLnR5cGUuTG9jYWxpemVkVGV4dBrVAQoTTmVpZ2hib3Job29kU3VtbWFy",
+            "eRI1CghvdmVydmlldxgBIAEoCzIjLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5D",
+            "b250ZW50QmxvY2sSOAoLZGVzY3JpcHRpb24YAiABKAsyIy5nb29nbGUubWFw",
+            "cy5wbGFjZXMudjEuQ29udGVudEJsb2NrEhgKEGZsYWdfY29udGVudF91cmkY",
+            "AyABKAkSMwoPZGlzY2xvc3VyZV90ZXh0GAQgASgLMhouZ29vZ2xlLnR5cGUu",
+            "TG9jYWxpemVkVGV4dCJyCg5CdXNpbmVzc1N0YXR1cxIfChtCVVNJTkVTU19T",
+            "VEFUVVNfVU5TUEVDSUZJRUQQABIPCgtPUEVSQVRJT05BTBABEhYKEkNMT1NF",
+            "RF9URU1QT1JBUklMWRACEhYKEkNMT1NFRF9QRVJNQU5FTlRMWRADOkLqQT8K",
+            "G3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIRcGxhY2VzL3twbGFjZV9p",
+            "ZH0qBnBsYWNlczIFcGxhY2VCFQoTX3V0Y19vZmZzZXRfbWludXRlc0IUChJf",
+            "dXNlcl9yYXRpbmdfY291bnRCCgoIX3Rha2VvdXRCCwoJX2RlbGl2ZXJ5QgoK",
+            "CF9kaW5lX2luQhIKEF9jdXJic2lkZV9waWNrdXBCDQoLX3Jlc2VydmFibGVC",
+            "EwoRX3NlcnZlc19icmVha2Zhc3RCDwoNX3NlcnZlc19sdW5jaEIQCg5fc2Vy",
+            "dmVzX2Rpbm5lckIOCgxfc2VydmVzX2JlZXJCDgoMX3NlcnZlc193aW5lQhAK",
+            "Dl9zZXJ2ZXNfYnJ1bmNoQhkKF19zZXJ2ZXNfdmVnZXRhcmlhbl9mb29kQhIK",
+            "EF9vdXRkb29yX3NlYXRpbmdCDQoLX2xpdmVfbXVzaWNCFAoSX21lbnVfZm9y",
+            "X2NoaWxkcmVuQhMKEV9zZXJ2ZXNfY29ja3RhaWxzQhEKD19zZXJ2ZXNfZGVz",
+            "c2VydEIQCg5fc2VydmVzX2NvZmZlZUIUChJfZ29vZF9mb3JfY2hpbGRyZW5C",
+            "DgoMX2FsbG93c19kb2dzQgsKCV9yZXN0cm9vbUISChBfZ29vZF9mb3JfZ3Jv",
+            "dXBzQhsKGV9nb29kX2Zvcl93YXRjaGluZ19zcG9ydHNCGAoWX2FjY2Vzc2li",
+            "aWxpdHlfb3B0aW9uc0IdChtfcHVyZV9zZXJ2aWNlX2FyZWFfYnVzaW5lc3Mq",
+            "sQEKClByaWNlTGV2ZWwSGwoXUFJJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIU",
+            "ChBQUklDRV9MRVZFTF9GUkVFEAESGwoXUFJJQ0VfTEVWRUxfSU5FWFBFTlNJ",
+            "VkUQAhIYChRQUklDRV9MRVZFTF9NT0RFUkFURRADEhkKFVBSSUNFX0xFVkVM",
+            "X0VYUEVOU0lWRRAEEh4KGlBSSUNFX0xFVkVMX1ZFUllfRVhQRU5TSVZFEAVC",
+            "mwEKGWNvbS5nb29nbGUubWFwcy5wbGFjZXMudjFCClBsYWNlUHJvdG9QAVo3",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3BsYWNlcy9hcGl2MS9wbGFjZXNw",
+            "YjtwbGFjZXNwYqICBkdNUFNWMaoCFUdvb2dsZS5NYXBzLlBsYWNlcy5WMcoC",
+            "FUdvb2dsZVxNYXBzXFBsYWNlc1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.ContentBlockReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.PriceRangeReflection.Descriptor, global::Google.Maps.Places.V1.ReferenceReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.AddressDescriptorReflection.Descriptor, global::Google.Maps.Places.V1.ContentBlockReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.PriceRangeReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.PriceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "PostalAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "TimeZone", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions", "GenerativeSummary", "AreaSummary", "ContainingPlaces", "PureServiceAreaBusiness", "PriceRange" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions", "PureServiceAreaBusiness" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "PostalAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "TimeZone", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions", "GenerativeSummary", "ContainingPlaces", "PureServiceAreaBusiness", "AddressDescriptor", "PriceRange", "ReviewSummary", "EvChargeAmenitySummary", "NeighborhoodSummary" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions", "PureServiceAreaBusiness" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PlusCode), global::Google.Maps.Places.V1.Place.Types.PlusCode.Parser, new[]{ "GlobalCode", "CompoundCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHoursType", "SpecialDays", "NextOpenTime", "NextCloseTime" }, new[]{ "OpenNow" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point.Parser, new[]{ "Day", "Hour", "Minute", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser, new[]{ "Date" }, null, null, null, null)}),
@@ -195,9 +213,11 @@ namespace Google.Maps.Places.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ParkingOptions), global::Google.Maps.Places.V1.Place.Types.ParkingOptions.Parser, new[]{ "FreeParkingLot", "PaidParkingLot", "FreeStreetParking", "PaidStreetParking", "ValetParking", "FreeGarageParking", "PaidGarageParking" }, new[]{ "FreeParkingLot", "PaidParkingLot", "FreeStreetParking", "PaidStreetParking", "ValetParking", "FreeGarageParking", "PaidGarageParking" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.SubDestination), global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser, new[]{ "Name", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions), global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions.Parser, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.GenerativeSummary), global::Google.Maps.Places.V1.Place.Types.GenerativeSummary.Parser, new[]{ "Overview", "Description", "References" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AreaSummary), global::Google.Maps.Places.V1.Place.Types.AreaSummary.Parser, new[]{ "ContentBlocks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ContainingPlace), global::Google.Maps.Places.V1.Place.Types.ContainingPlace.Parser, new[]{ "Name", "Id" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.GenerativeSummary), global::Google.Maps.Places.V1.Place.Types.GenerativeSummary.Parser, new[]{ "Overview", "OverviewFlagContentUri", "DisclosureText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ContainingPlace), global::Google.Maps.Places.V1.Place.Types.ContainingPlace.Parser, new[]{ "Name", "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ReviewSummary), global::Google.Maps.Places.V1.Place.Types.ReviewSummary.Parser, new[]{ "Text", "FlagContentUri", "DisclosureText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary), global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary.Parser, new[]{ "Overview", "Coffee", "Restaurant", "Store", "FlagContentUri", "DisclosureText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary), global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary.Parser, new[]{ "Overview", "Description", "FlagContentUri", "DisclosureText" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -341,10 +361,13 @@ namespace Google.Maps.Places.V1 {
       fuelOptions_ = other.fuelOptions_ != null ? other.fuelOptions_.Clone() : null;
       evChargeOptions_ = other.evChargeOptions_ != null ? other.evChargeOptions_.Clone() : null;
       generativeSummary_ = other.generativeSummary_ != null ? other.generativeSummary_.Clone() : null;
-      areaSummary_ = other.areaSummary_ != null ? other.areaSummary_.Clone() : null;
       containingPlaces_ = other.containingPlaces_.Clone();
       pureServiceAreaBusiness_ = other.pureServiceAreaBusiness_;
+      addressDescriptor_ = other.addressDescriptor_ != null ? other.addressDescriptor_.Clone() : null;
       priceRange_ = other.priceRange_ != null ? other.priceRange_.Clone() : null;
+      reviewSummary_ = other.reviewSummary_ != null ? other.reviewSummary_.Clone() : null;
+      evChargeAmenitySummary_ = other.evChargeAmenitySummary_ != null ? other.evChargeAmenitySummary_.Clone() : null;
+      neighborhoodSummary_ = other.neighborhoodSummary_ != null ? other.neighborhoodSummary_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -674,9 +697,14 @@ namespace Google.Maps.Places.V1 {
     /// The regular hours of operation. Note that if a place is always open (24
     /// hours), the `close` field will not be set. Clients can rely on always open
     /// (24 hours) being represented as an
-    /// [open][google.maps.places.v1.Place.OpeningHours.Period.open] period
-    /// containing [day][Point.day] with value `0`, [hour][Point.hour] with
-    /// value `0`, and [minute][Point.minute] with value `0`.
+    /// [`open`](https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places#Period)
+    /// period containing
+    /// [`day`](https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places#Point)
+    /// with value `0`,
+    /// [`hour`](https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places#Point)
+    /// with value `0`, and
+    /// [`minute`](https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places#Point)
+    /// with value `0`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1671,7 +1699,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(570, global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination> subDestinations_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination>();
     /// <summary>
-    /// A list of sub destinations related to the place.
+    /// A list of sub-destinations related to the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1729,10 +1757,6 @@ namespace Google.Maps.Places.V1 {
     public const int GenerativeSummaryFieldNumber = 80;
     private global::Google.Maps.Places.V1.Place.Types.GenerativeSummary generativeSummary_;
     /// <summary>
-    /// Experimental: See
-    /// https://developers.google.com/maps/documentation/places/web-service/experimental/places-generative
-    /// for more details.
-    ///
     /// AI-generated summary of the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1741,25 +1765,6 @@ namespace Google.Maps.Places.V1 {
       get { return generativeSummary_; }
       set {
         generativeSummary_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "area_summary" field.</summary>
-    public const int AreaSummaryFieldNumber = 81;
-    private global::Google.Maps.Places.V1.Place.Types.AreaSummary areaSummary_;
-    /// <summary>
-    /// Experimental: See
-    /// https://developers.google.com/maps/documentation/places/web-service/experimental/places-generative
-    /// for more details.
-    ///
-    /// AI-generated summary of the area that the place is in.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Maps.Places.V1.Place.Types.AreaSummary AreaSummary {
-      get { return areaSummary_; }
-      set {
-        areaSummary_ = value;
       }
     }
 
@@ -1811,6 +1816,24 @@ namespace Google.Maps.Places.V1 {
       _hasBits0 &= ~33554432;
     }
 
+    /// <summary>Field number for the "address_descriptor" field.</summary>
+    public const int AddressDescriptorFieldNumber = 84;
+    private global::Google.Maps.Places.V1.AddressDescriptor addressDescriptor_;
+    /// <summary>
+    /// The address descriptor of the place. Address descriptors include additional
+    /// information that help describe a location using landmarks and areas. See
+    /// address descriptor regional coverage in
+    /// https://developers.google.com/maps/documentation/geocoding/address-descriptors/coverage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.AddressDescriptor AddressDescriptor {
+      get { return addressDescriptor_; }
+      set {
+        addressDescriptor_ = value;
+      }
+    }
+
     /// <summary>Field number for the "price_range" field.</summary>
     public const int PriceRangeFieldNumber = 86;
     private global::Google.Maps.Places.V1.PriceRange priceRange_;
@@ -1823,6 +1846,51 @@ namespace Google.Maps.Places.V1 {
       get { return priceRange_; }
       set {
         priceRange_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "review_summary" field.</summary>
+    public const int ReviewSummaryFieldNumber = 87;
+    private global::Google.Maps.Places.V1.Place.Types.ReviewSummary reviewSummary_;
+    /// <summary>
+    /// AI-generated summary of the place using user reviews.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.ReviewSummary ReviewSummary {
+      get { return reviewSummary_; }
+      set {
+        reviewSummary_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ev_charge_amenity_summary" field.</summary>
+    public const int EvChargeAmenitySummaryFieldNumber = 89;
+    private global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary evChargeAmenitySummary_;
+    /// <summary>
+    /// The summary of amenities near the EV charging station.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary EvChargeAmenitySummary {
+      get { return evChargeAmenitySummary_; }
+      set {
+        evChargeAmenitySummary_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "neighborhood_summary" field.</summary>
+    public const int NeighborhoodSummaryFieldNumber = 91;
+    private global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary neighborhoodSummary_;
+    /// <summary>
+    /// A summary of points of interest near the place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary NeighborhoodSummary {
+      get { return neighborhoodSummary_; }
+      set {
+        neighborhoodSummary_ = value;
       }
     }
 
@@ -1905,10 +1973,13 @@ namespace Google.Maps.Places.V1 {
       if (!object.Equals(FuelOptions, other.FuelOptions)) return false;
       if (!object.Equals(EvChargeOptions, other.EvChargeOptions)) return false;
       if (!object.Equals(GenerativeSummary, other.GenerativeSummary)) return false;
-      if (!object.Equals(AreaSummary, other.AreaSummary)) return false;
       if(!containingPlaces_.Equals(other.containingPlaces_)) return false;
       if (PureServiceAreaBusiness != other.PureServiceAreaBusiness) return false;
+      if (!object.Equals(AddressDescriptor, other.AddressDescriptor)) return false;
       if (!object.Equals(PriceRange, other.PriceRange)) return false;
+      if (!object.Equals(ReviewSummary, other.ReviewSummary)) return false;
+      if (!object.Equals(EvChargeAmenitySummary, other.EvChargeAmenitySummary)) return false;
+      if (!object.Equals(NeighborhoodSummary, other.NeighborhoodSummary)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1980,10 +2051,13 @@ namespace Google.Maps.Places.V1 {
       if (fuelOptions_ != null) hash ^= FuelOptions.GetHashCode();
       if (evChargeOptions_ != null) hash ^= EvChargeOptions.GetHashCode();
       if (generativeSummary_ != null) hash ^= GenerativeSummary.GetHashCode();
-      if (areaSummary_ != null) hash ^= AreaSummary.GetHashCode();
       hash ^= containingPlaces_.GetHashCode();
       if (HasPureServiceAreaBusiness) hash ^= PureServiceAreaBusiness.GetHashCode();
+      if (addressDescriptor_ != null) hash ^= AddressDescriptor.GetHashCode();
       if (priceRange_ != null) hash ^= PriceRange.GetHashCode();
+      if (reviewSummary_ != null) hash ^= ReviewSummary.GetHashCode();
+      if (evChargeAmenitySummary_ != null) hash ^= EvChargeAmenitySummary.GetHashCode();
+      if (neighborhoodSummary_ != null) hash ^= NeighborhoodSummary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2226,26 +2300,38 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(130, 5);
         output.WriteMessage(GenerativeSummary);
       }
-      if (areaSummary_ != null) {
-        output.WriteRawTag(138, 5);
-        output.WriteMessage(AreaSummary);
-      }
       containingPlaces_.WriteTo(output, _repeated_containingPlaces_codec);
       if (HasPureServiceAreaBusiness) {
         output.WriteRawTag(152, 5);
         output.WriteBool(PureServiceAreaBusiness);
       }
+      if (addressDescriptor_ != null) {
+        output.WriteRawTag(162, 5);
+        output.WriteMessage(AddressDescriptor);
+      }
       if (priceRange_ != null) {
         output.WriteRawTag(178, 5);
         output.WriteMessage(PriceRange);
+      }
+      if (reviewSummary_ != null) {
+        output.WriteRawTag(186, 5);
+        output.WriteMessage(ReviewSummary);
       }
       if (timeZone_ != null) {
         output.WriteRawTag(194, 5);
         output.WriteMessage(TimeZone);
       }
+      if (evChargeAmenitySummary_ != null) {
+        output.WriteRawTag(202, 5);
+        output.WriteMessage(EvChargeAmenitySummary);
+      }
       if (postalAddress_ != null) {
         output.WriteRawTag(210, 5);
         output.WriteMessage(PostalAddress);
+      }
+      if (neighborhoodSummary_ != null) {
+        output.WriteRawTag(218, 5);
+        output.WriteMessage(NeighborhoodSummary);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2481,26 +2567,38 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(130, 5);
         output.WriteMessage(GenerativeSummary);
       }
-      if (areaSummary_ != null) {
-        output.WriteRawTag(138, 5);
-        output.WriteMessage(AreaSummary);
-      }
       containingPlaces_.WriteTo(ref output, _repeated_containingPlaces_codec);
       if (HasPureServiceAreaBusiness) {
         output.WriteRawTag(152, 5);
         output.WriteBool(PureServiceAreaBusiness);
       }
+      if (addressDescriptor_ != null) {
+        output.WriteRawTag(162, 5);
+        output.WriteMessage(AddressDescriptor);
+      }
       if (priceRange_ != null) {
         output.WriteRawTag(178, 5);
         output.WriteMessage(PriceRange);
+      }
+      if (reviewSummary_ != null) {
+        output.WriteRawTag(186, 5);
+        output.WriteMessage(ReviewSummary);
       }
       if (timeZone_ != null) {
         output.WriteRawTag(194, 5);
         output.WriteMessage(TimeZone);
       }
+      if (evChargeAmenitySummary_ != null) {
+        output.WriteRawTag(202, 5);
+        output.WriteMessage(EvChargeAmenitySummary);
+      }
       if (postalAddress_ != null) {
         output.WriteRawTag(210, 5);
         output.WriteMessage(PostalAddress);
+      }
+      if (neighborhoodSummary_ != null) {
+        output.WriteRawTag(218, 5);
+        output.WriteMessage(NeighborhoodSummary);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2688,15 +2786,24 @@ namespace Google.Maps.Places.V1 {
       if (generativeSummary_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GenerativeSummary);
       }
-      if (areaSummary_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AreaSummary);
-      }
       size += containingPlaces_.CalculateSize(_repeated_containingPlaces_codec);
       if (HasPureServiceAreaBusiness) {
         size += 2 + 1;
       }
+      if (addressDescriptor_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AddressDescriptor);
+      }
       if (priceRange_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PriceRange);
+      }
+      if (reviewSummary_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReviewSummary);
+      }
+      if (evChargeAmenitySummary_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EvChargeAmenitySummary);
+      }
+      if (neighborhoodSummary_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NeighborhoodSummary);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2934,21 +3041,39 @@ namespace Google.Maps.Places.V1 {
         }
         GenerativeSummary.MergeFrom(other.GenerativeSummary);
       }
-      if (other.areaSummary_ != null) {
-        if (areaSummary_ == null) {
-          AreaSummary = new global::Google.Maps.Places.V1.Place.Types.AreaSummary();
-        }
-        AreaSummary.MergeFrom(other.AreaSummary);
-      }
       containingPlaces_.Add(other.containingPlaces_);
       if (other.HasPureServiceAreaBusiness) {
         PureServiceAreaBusiness = other.PureServiceAreaBusiness;
+      }
+      if (other.addressDescriptor_ != null) {
+        if (addressDescriptor_ == null) {
+          AddressDescriptor = new global::Google.Maps.Places.V1.AddressDescriptor();
+        }
+        AddressDescriptor.MergeFrom(other.AddressDescriptor);
       }
       if (other.priceRange_ != null) {
         if (priceRange_ == null) {
           PriceRange = new global::Google.Maps.Places.V1.PriceRange();
         }
         PriceRange.MergeFrom(other.PriceRange);
+      }
+      if (other.reviewSummary_ != null) {
+        if (reviewSummary_ == null) {
+          ReviewSummary = new global::Google.Maps.Places.V1.Place.Types.ReviewSummary();
+        }
+        ReviewSummary.MergeFrom(other.ReviewSummary);
+      }
+      if (other.evChargeAmenitySummary_ != null) {
+        if (evChargeAmenitySummary_ == null) {
+          EvChargeAmenitySummary = new global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary();
+        }
+        EvChargeAmenitySummary.MergeFrom(other.EvChargeAmenitySummary);
+      }
+      if (other.neighborhoodSummary_ != null) {
+        if (neighborhoodSummary_ == null) {
+          NeighborhoodSummary = new global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary();
+        }
+        NeighborhoodSummary.MergeFrom(other.NeighborhoodSummary);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3255,19 +3380,19 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(GenerativeSummary);
             break;
           }
-          case 650: {
-            if (areaSummary_ == null) {
-              AreaSummary = new global::Google.Maps.Places.V1.Place.Types.AreaSummary();
-            }
-            input.ReadMessage(AreaSummary);
-            break;
-          }
           case 658: {
             containingPlaces_.AddEntriesFrom(input, _repeated_containingPlaces_codec);
             break;
           }
           case 664: {
             PureServiceAreaBusiness = input.ReadBool();
+            break;
+          }
+          case 674: {
+            if (addressDescriptor_ == null) {
+              AddressDescriptor = new global::Google.Maps.Places.V1.AddressDescriptor();
+            }
+            input.ReadMessage(AddressDescriptor);
             break;
           }
           case 690: {
@@ -3277,6 +3402,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(PriceRange);
             break;
           }
+          case 698: {
+            if (reviewSummary_ == null) {
+              ReviewSummary = new global::Google.Maps.Places.V1.Place.Types.ReviewSummary();
+            }
+            input.ReadMessage(ReviewSummary);
+            break;
+          }
           case 706: {
             if (timeZone_ == null) {
               TimeZone = new global::Google.Type.TimeZone();
@@ -3284,11 +3416,25 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(TimeZone);
             break;
           }
+          case 714: {
+            if (evChargeAmenitySummary_ == null) {
+              EvChargeAmenitySummary = new global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary();
+            }
+            input.ReadMessage(EvChargeAmenitySummary);
+            break;
+          }
           case 722: {
             if (postalAddress_ == null) {
               PostalAddress = new global::Google.Type.PostalAddress();
             }
             input.ReadMessage(PostalAddress);
+            break;
+          }
+          case 730: {
+            if (neighborhoodSummary_ == null) {
+              NeighborhoodSummary = new global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary();
+            }
+            input.ReadMessage(NeighborhoodSummary);
             break;
           }
         }
@@ -3596,19 +3742,19 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(GenerativeSummary);
             break;
           }
-          case 650: {
-            if (areaSummary_ == null) {
-              AreaSummary = new global::Google.Maps.Places.V1.Place.Types.AreaSummary();
-            }
-            input.ReadMessage(AreaSummary);
-            break;
-          }
           case 658: {
             containingPlaces_.AddEntriesFrom(ref input, _repeated_containingPlaces_codec);
             break;
           }
           case 664: {
             PureServiceAreaBusiness = input.ReadBool();
+            break;
+          }
+          case 674: {
+            if (addressDescriptor_ == null) {
+              AddressDescriptor = new global::Google.Maps.Places.V1.AddressDescriptor();
+            }
+            input.ReadMessage(AddressDescriptor);
             break;
           }
           case 690: {
@@ -3618,6 +3764,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(PriceRange);
             break;
           }
+          case 698: {
+            if (reviewSummary_ == null) {
+              ReviewSummary = new global::Google.Maps.Places.V1.Place.Types.ReviewSummary();
+            }
+            input.ReadMessage(ReviewSummary);
+            break;
+          }
           case 706: {
             if (timeZone_ == null) {
               TimeZone = new global::Google.Type.TimeZone();
@@ -3625,11 +3778,25 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(TimeZone);
             break;
           }
+          case 714: {
+            if (evChargeAmenitySummary_ == null) {
+              EvChargeAmenitySummary = new global::Google.Maps.Places.V1.Place.Types.EvChargeAmenitySummary();
+            }
+            input.ReadMessage(EvChargeAmenitySummary);
+            break;
+          }
           case 722: {
             if (postalAddress_ == null) {
               PostalAddress = new global::Google.Type.PostalAddress();
             }
             input.ReadMessage(PostalAddress);
+            break;
+          }
+          case 730: {
+            if (neighborhoodSummary_ == null) {
+              NeighborhoodSummary = new global::Google.Maps.Places.V1.Place.Types.NeighborhoodSummary();
+            }
+            input.ReadMessage(NeighborhoodSummary);
             break;
           }
         }
@@ -6785,8 +6952,14 @@ namespace Google.Maps.Places.V1 {
       }
 
       /// <summary>
-      /// Place resource name and id of sub destinations that relate to the place.
-      /// For example, different terminals are different destinations of an airport.
+      /// Sub-destinations are specific places associated with a main place. These
+      /// provide more specific destinations for users who are searching within a
+      /// large or complex place, like an airport, national park, university, or
+      /// stadium. For example, sub-destinations at an airport might include
+      /// associated terminals and parking lots. Sub-destinations return the place ID
+      /// and place resource name, which can be used in subsequent Place Details
+      /// (New) requests to fetch richer details, including the sub-destination's
+      /// display name and location.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SubDestination : pb::IMessage<SubDestination>
@@ -6838,7 +7011,7 @@ namespace Google.Maps.Places.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// The resource name of the sub destination.
+        /// The resource name of the sub-destination.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6853,7 +7026,7 @@ namespace Google.Maps.Places.V1 {
         public const int IdFieldNumber = 2;
         private string id_ = "";
         /// <summary>
-        /// The place id of the sub destination.
+        /// The place id of the sub-destination.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7400,10 +7573,6 @@ namespace Google.Maps.Places.V1 {
       }
 
       /// <summary>
-      /// Experimental: See
-      /// https://developers.google.com/maps/documentation/places/web-service/experimental/places-generative
-      /// for more details.
-      ///
       /// AI-generated summary of the place.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -7442,8 +7611,8 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GenerativeSummary(GenerativeSummary other) : this() {
           overview_ = other.overview_ != null ? other.overview_.Clone() : null;
-          description_ = other.description_ != null ? other.description_.Clone() : null;
-          references_ = other.references_ != null ? other.references_.Clone() : null;
+          overviewFlagContentUri_ = other.overviewFlagContentUri_;
+          disclosureText_ = other.disclosureText_ != null ? other.disclosureText_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7468,33 +7637,35 @@ namespace Google.Maps.Places.V1 {
           }
         }
 
-        /// <summary>Field number for the "description" field.</summary>
-        public const int DescriptionFieldNumber = 2;
-        private global::Google.Type.LocalizedText description_;
+        /// <summary>Field number for the "overview_flag_content_uri" field.</summary>
+        public const int OverviewFlagContentUriFieldNumber = 4;
+        private string overviewFlagContentUri_ = "";
         /// <summary>
-        /// The detailed description of the place.
+        /// A link where users can flag a problem with the overview summary.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Type.LocalizedText Description {
-          get { return description_; }
+        public string OverviewFlagContentUri {
+          get { return overviewFlagContentUri_; }
           set {
-            description_ = value;
+            overviewFlagContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
-        /// <summary>Field number for the "references" field.</summary>
-        public const int ReferencesFieldNumber = 3;
-        private global::Google.Maps.Places.V1.References references_;
+        /// <summary>Field number for the "disclosure_text" field.</summary>
+        public const int DisclosureTextFieldNumber = 6;
+        private global::Google.Type.LocalizedText disclosureText_;
         /// <summary>
-        /// References that are used to generate the summary description.
+        /// The AI disclosure message "Summarized with Gemini"
+        /// (and its localized variants). This will be in the language specified in
+        /// the request if available.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Maps.Places.V1.References References {
-          get { return references_; }
+        public global::Google.Type.LocalizedText DisclosureText {
+          get { return disclosureText_; }
           set {
-            references_ = value;
+            disclosureText_ = value;
           }
         }
 
@@ -7514,8 +7685,8 @@ namespace Google.Maps.Places.V1 {
             return true;
           }
           if (!object.Equals(Overview, other.Overview)) return false;
-          if (!object.Equals(Description, other.Description)) return false;
-          if (!object.Equals(References, other.References)) return false;
+          if (OverviewFlagContentUri != other.OverviewFlagContentUri) return false;
+          if (!object.Equals(DisclosureText, other.DisclosureText)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7524,8 +7695,8 @@ namespace Google.Maps.Places.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (overview_ != null) hash ^= Overview.GetHashCode();
-          if (description_ != null) hash ^= Description.GetHashCode();
-          if (references_ != null) hash ^= References.GetHashCode();
+          if (OverviewFlagContentUri.Length != 0) hash ^= OverviewFlagContentUri.GetHashCode();
+          if (disclosureText_ != null) hash ^= DisclosureText.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7548,13 +7719,13 @@ namespace Google.Maps.Places.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Overview);
           }
-          if (description_ != null) {
-            output.WriteRawTag(18);
-            output.WriteMessage(Description);
+          if (OverviewFlagContentUri.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(OverviewFlagContentUri);
           }
-          if (references_ != null) {
-            output.WriteRawTag(26);
-            output.WriteMessage(References);
+          if (disclosureText_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DisclosureText);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -7570,13 +7741,13 @@ namespace Google.Maps.Places.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Overview);
           }
-          if (description_ != null) {
-            output.WriteRawTag(18);
-            output.WriteMessage(Description);
+          if (OverviewFlagContentUri.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(OverviewFlagContentUri);
           }
-          if (references_ != null) {
-            output.WriteRawTag(26);
-            output.WriteMessage(References);
+          if (disclosureText_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DisclosureText);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -7591,11 +7762,11 @@ namespace Google.Maps.Places.V1 {
           if (overview_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overview);
           }
-          if (description_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Description);
+          if (OverviewFlagContentUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(OverviewFlagContentUri);
           }
-          if (references_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(References);
+          if (disclosureText_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisclosureText);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7615,17 +7786,14 @@ namespace Google.Maps.Places.V1 {
             }
             Overview.MergeFrom(other.Overview);
           }
-          if (other.description_ != null) {
-            if (description_ == null) {
-              Description = new global::Google.Type.LocalizedText();
-            }
-            Description.MergeFrom(other.Description);
+          if (other.OverviewFlagContentUri.Length != 0) {
+            OverviewFlagContentUri = other.OverviewFlagContentUri;
           }
-          if (other.references_ != null) {
-            if (references_ == null) {
-              References = new global::Google.Maps.Places.V1.References();
+          if (other.disclosureText_ != null) {
+            if (disclosureText_ == null) {
+              DisclosureText = new global::Google.Type.LocalizedText();
             }
-            References.MergeFrom(other.References);
+            DisclosureText.MergeFrom(other.DisclosureText);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -7649,18 +7817,15 @@ namespace Google.Maps.Places.V1 {
                 input.ReadMessage(Overview);
                 break;
               }
-              case 18: {
-                if (description_ == null) {
-                  Description = new global::Google.Type.LocalizedText();
-                }
-                input.ReadMessage(Description);
+              case 34: {
+                OverviewFlagContentUri = input.ReadString();
                 break;
               }
-              case 26: {
-                if (references_ == null) {
-                  References = new global::Google.Maps.Places.V1.References();
+              case 50: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
                 }
-                input.ReadMessage(References);
+                input.ReadMessage(DisclosureText);
                 break;
               }
             }
@@ -7685,208 +7850,15 @@ namespace Google.Maps.Places.V1 {
                 input.ReadMessage(Overview);
                 break;
               }
-              case 18: {
-                if (description_ == null) {
-                  Description = new global::Google.Type.LocalizedText();
-                }
-                input.ReadMessage(Description);
-                break;
-              }
-              case 26: {
-                if (references_ == null) {
-                  References = new global::Google.Maps.Places.V1.References();
-                }
-                input.ReadMessage(References);
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
-      /// Experimental: See
-      /// https://developers.google.com/maps/documentation/places/web-service/experimental/places-generative
-      /// for more details.
-      ///
-      /// AI-generated summary of the area that the place is in.
-      /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-      public sealed partial class AreaSummary : pb::IMessage<AreaSummary>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<AreaSummary> _parser = new pb::MessageParser<AreaSummary>(() => new AreaSummary());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<AreaSummary> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[9]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public AreaSummary() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public AreaSummary(AreaSummary other) : this() {
-          contentBlocks_ = other.contentBlocks_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public AreaSummary Clone() {
-          return new AreaSummary(this);
-        }
-
-        /// <summary>Field number for the "content_blocks" field.</summary>
-        public const int ContentBlocksFieldNumber = 4;
-        private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.ContentBlock> _repeated_contentBlocks_codec
-            = pb::FieldCodec.ForMessage(34, global::Google.Maps.Places.V1.ContentBlock.Parser);
-        private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.ContentBlock> contentBlocks_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.ContentBlock>();
-        /// <summary>
-        /// Content blocks that compose the area summary. Each block has a separate
-        /// topic about the area.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Google.Maps.Places.V1.ContentBlock> ContentBlocks {
-          get { return contentBlocks_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other) {
-          return Equals(other as AreaSummary);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(AreaSummary other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if(!contentBlocks_.Equals(other.contentBlocks_)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode() {
-          int hash = 1;
-          hash ^= contentBlocks_.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          contentBlocks_.WriteTo(output, _repeated_contentBlocks_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          contentBlocks_.WriteTo(ref output, _repeated_contentBlocks_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize() {
-          int size = 0;
-          size += contentBlocks_.CalculateSize(_repeated_contentBlocks_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(AreaSummary other) {
-          if (other == null) {
-            return;
-          }
-          contentBlocks_.Add(other.contentBlocks_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
               case 34: {
-                contentBlocks_.AddEntriesFrom(input, _repeated_contentBlocks_codec);
+                OverviewFlagContentUri = input.ReadString();
                 break;
               }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 34: {
-                contentBlocks_.AddEntriesFrom(ref input, _repeated_contentBlocks_codec);
+              case 50: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
                 break;
               }
             }
@@ -7914,7 +7886,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[10]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8123,6 +8095,1093 @@ namespace Google.Maps.Places.V1 {
               }
               case 18: {
                 Id = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// AI-generated summary of the place using user reviews.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ReviewSummary : pb::IMessage<ReviewSummary>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ReviewSummary> _parser = new pb::MessageParser<ReviewSummary>(() => new ReviewSummary());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ReviewSummary> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReviewSummary() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReviewSummary(ReviewSummary other) : this() {
+          text_ = other.text_ != null ? other.text_.Clone() : null;
+          flagContentUri_ = other.flagContentUri_;
+          disclosureText_ = other.disclosureText_ != null ? other.disclosureText_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReviewSummary Clone() {
+          return new ReviewSummary(this);
+        }
+
+        /// <summary>Field number for the "text" field.</summary>
+        public const int TextFieldNumber = 1;
+        private global::Google.Type.LocalizedText text_;
+        /// <summary>
+        /// The summary of user reviews.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Text {
+          get { return text_; }
+          set {
+            text_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "flag_content_uri" field.</summary>
+        public const int FlagContentUriFieldNumber = 2;
+        private string flagContentUri_ = "";
+        /// <summary>
+        /// A link where users can flag a problem with the summary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FlagContentUri {
+          get { return flagContentUri_; }
+          set {
+            flagContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "disclosure_text" field.</summary>
+        public const int DisclosureTextFieldNumber = 3;
+        private global::Google.Type.LocalizedText disclosureText_;
+        /// <summary>
+        /// The AI disclosure message "Summarized with Gemini"
+        /// (and its localized variants). This will be in the language specified in
+        /// the request if available.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText DisclosureText {
+          get { return disclosureText_; }
+          set {
+            disclosureText_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ReviewSummary);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ReviewSummary other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Text, other.Text)) return false;
+          if (FlagContentUri != other.FlagContentUri) return false;
+          if (!object.Equals(DisclosureText, other.DisclosureText)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (text_ != null) hash ^= Text.GetHashCode();
+          if (FlagContentUri.Length != 0) hash ^= FlagContentUri.GetHashCode();
+          if (disclosureText_ != null) hash ^= DisclosureText.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (text_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Text);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (text_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Text);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (text_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Text);
+          }
+          if (FlagContentUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ReviewSummary other) {
+          if (other == null) {
+            return;
+          }
+          if (other.text_ != null) {
+            if (text_ == null) {
+              Text = new global::Google.Type.LocalizedText();
+            }
+            Text.MergeFrom(other.Text);
+          }
+          if (other.FlagContentUri.Length != 0) {
+            FlagContentUri = other.FlagContentUri;
+          }
+          if (other.disclosureText_ != null) {
+            if (disclosureText_ == null) {
+              DisclosureText = new global::Google.Type.LocalizedText();
+            }
+            DisclosureText.MergeFrom(other.DisclosureText);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (text_ == null) {
+                  Text = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Text);
+                break;
+              }
+              case 18: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (text_ == null) {
+                  Text = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Text);
+                break;
+              }
+              case 18: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The summary of amenities near the EV charging station. This only applies to
+      /// places with type `electric_vehicle_charging_station`. The `overview` field
+      /// is guaranteed to be provided while the other fields are optional.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EvChargeAmenitySummary : pb::IMessage<EvChargeAmenitySummary>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EvChargeAmenitySummary> _parser = new pb::MessageParser<EvChargeAmenitySummary>(() => new EvChargeAmenitySummary());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EvChargeAmenitySummary> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[11]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EvChargeAmenitySummary() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EvChargeAmenitySummary(EvChargeAmenitySummary other) : this() {
+          overview_ = other.overview_ != null ? other.overview_.Clone() : null;
+          coffee_ = other.coffee_ != null ? other.coffee_.Clone() : null;
+          restaurant_ = other.restaurant_ != null ? other.restaurant_.Clone() : null;
+          store_ = other.store_ != null ? other.store_.Clone() : null;
+          flagContentUri_ = other.flagContentUri_;
+          disclosureText_ = other.disclosureText_ != null ? other.disclosureText_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EvChargeAmenitySummary Clone() {
+          return new EvChargeAmenitySummary(this);
+        }
+
+        /// <summary>Field number for the "overview" field.</summary>
+        public const int OverviewFieldNumber = 1;
+        private global::Google.Maps.Places.V1.ContentBlock overview_;
+        /// <summary>
+        /// An overview of the available amenities. This is guaranteed to be
+        /// provided.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.ContentBlock Overview {
+          get { return overview_; }
+          set {
+            overview_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "coffee" field.</summary>
+        public const int CoffeeFieldNumber = 2;
+        private global::Google.Maps.Places.V1.ContentBlock coffee_;
+        /// <summary>
+        /// A summary of the nearby coffee options.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.ContentBlock Coffee {
+          get { return coffee_; }
+          set {
+            coffee_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "restaurant" field.</summary>
+        public const int RestaurantFieldNumber = 3;
+        private global::Google.Maps.Places.V1.ContentBlock restaurant_;
+        /// <summary>
+        /// A summary of the nearby restaurants.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.ContentBlock Restaurant {
+          get { return restaurant_; }
+          set {
+            restaurant_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "store" field.</summary>
+        public const int StoreFieldNumber = 4;
+        private global::Google.Maps.Places.V1.ContentBlock store_;
+        /// <summary>
+        /// A summary of the nearby gas stations.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.ContentBlock Store {
+          get { return store_; }
+          set {
+            store_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "flag_content_uri" field.</summary>
+        public const int FlagContentUriFieldNumber = 5;
+        private string flagContentUri_ = "";
+        /// <summary>
+        /// A link where users can flag a problem with the summary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FlagContentUri {
+          get { return flagContentUri_; }
+          set {
+            flagContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "disclosure_text" field.</summary>
+        public const int DisclosureTextFieldNumber = 6;
+        private global::Google.Type.LocalizedText disclosureText_;
+        /// <summary>
+        /// The AI disclosure message "Summarized with Gemini"
+        /// (and its localized variants). This will be in the language specified in
+        /// the request if available.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText DisclosureText {
+          get { return disclosureText_; }
+          set {
+            disclosureText_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EvChargeAmenitySummary);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EvChargeAmenitySummary other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Overview, other.Overview)) return false;
+          if (!object.Equals(Coffee, other.Coffee)) return false;
+          if (!object.Equals(Restaurant, other.Restaurant)) return false;
+          if (!object.Equals(Store, other.Store)) return false;
+          if (FlagContentUri != other.FlagContentUri) return false;
+          if (!object.Equals(DisclosureText, other.DisclosureText)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (overview_ != null) hash ^= Overview.GetHashCode();
+          if (coffee_ != null) hash ^= Coffee.GetHashCode();
+          if (restaurant_ != null) hash ^= Restaurant.GetHashCode();
+          if (store_ != null) hash ^= Store.GetHashCode();
+          if (FlagContentUri.Length != 0) hash ^= FlagContentUri.GetHashCode();
+          if (disclosureText_ != null) hash ^= DisclosureText.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (overview_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Overview);
+          }
+          if (coffee_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Coffee);
+          }
+          if (restaurant_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Restaurant);
+          }
+          if (store_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Store);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (overview_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Overview);
+          }
+          if (coffee_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Coffee);
+          }
+          if (restaurant_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Restaurant);
+          }
+          if (store_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Store);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (overview_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overview);
+          }
+          if (coffee_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Coffee);
+          }
+          if (restaurant_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Restaurant);
+          }
+          if (store_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Store);
+          }
+          if (FlagContentUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EvChargeAmenitySummary other) {
+          if (other == null) {
+            return;
+          }
+          if (other.overview_ != null) {
+            if (overview_ == null) {
+              Overview = new global::Google.Maps.Places.V1.ContentBlock();
+            }
+            Overview.MergeFrom(other.Overview);
+          }
+          if (other.coffee_ != null) {
+            if (coffee_ == null) {
+              Coffee = new global::Google.Maps.Places.V1.ContentBlock();
+            }
+            Coffee.MergeFrom(other.Coffee);
+          }
+          if (other.restaurant_ != null) {
+            if (restaurant_ == null) {
+              Restaurant = new global::Google.Maps.Places.V1.ContentBlock();
+            }
+            Restaurant.MergeFrom(other.Restaurant);
+          }
+          if (other.store_ != null) {
+            if (store_ == null) {
+              Store = new global::Google.Maps.Places.V1.ContentBlock();
+            }
+            Store.MergeFrom(other.Store);
+          }
+          if (other.FlagContentUri.Length != 0) {
+            FlagContentUri = other.FlagContentUri;
+          }
+          if (other.disclosureText_ != null) {
+            if (disclosureText_ == null) {
+              DisclosureText = new global::Google.Type.LocalizedText();
+            }
+            DisclosureText.MergeFrom(other.DisclosureText);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (overview_ == null) {
+                  Overview = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Overview);
+                break;
+              }
+              case 18: {
+                if (coffee_ == null) {
+                  Coffee = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Coffee);
+                break;
+              }
+              case 26: {
+                if (restaurant_ == null) {
+                  Restaurant = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Restaurant);
+                break;
+              }
+              case 34: {
+                if (store_ == null) {
+                  Store = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Store);
+                break;
+              }
+              case 42: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+              case 50: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (overview_ == null) {
+                  Overview = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Overview);
+                break;
+              }
+              case 18: {
+                if (coffee_ == null) {
+                  Coffee = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Coffee);
+                break;
+              }
+              case 26: {
+                if (restaurant_ == null) {
+                  Restaurant = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Restaurant);
+                break;
+              }
+              case 34: {
+                if (store_ == null) {
+                  Store = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Store);
+                break;
+              }
+              case 42: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+              case 50: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A summary of points of interest near the place.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class NeighborhoodSummary : pb::IMessage<NeighborhoodSummary>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NeighborhoodSummary> _parser = new pb::MessageParser<NeighborhoodSummary>(() => new NeighborhoodSummary());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NeighborhoodSummary> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[12]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NeighborhoodSummary() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NeighborhoodSummary(NeighborhoodSummary other) : this() {
+          overview_ = other.overview_ != null ? other.overview_.Clone() : null;
+          description_ = other.description_ != null ? other.description_.Clone() : null;
+          flagContentUri_ = other.flagContentUri_;
+          disclosureText_ = other.disclosureText_ != null ? other.disclosureText_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NeighborhoodSummary Clone() {
+          return new NeighborhoodSummary(this);
+        }
+
+        /// <summary>Field number for the "overview" field.</summary>
+        public const int OverviewFieldNumber = 1;
+        private global::Google.Maps.Places.V1.ContentBlock overview_;
+        /// <summary>
+        /// An overview summary of the neighborhood.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.ContentBlock Overview {
+          get { return overview_; }
+          set {
+            overview_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 2;
+        private global::Google.Maps.Places.V1.ContentBlock description_;
+        /// <summary>
+        /// A detailed description of the neighborhood.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.ContentBlock Description {
+          get { return description_; }
+          set {
+            description_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "flag_content_uri" field.</summary>
+        public const int FlagContentUriFieldNumber = 3;
+        private string flagContentUri_ = "";
+        /// <summary>
+        /// A link where users can flag a problem with the summary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FlagContentUri {
+          get { return flagContentUri_; }
+          set {
+            flagContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "disclosure_text" field.</summary>
+        public const int DisclosureTextFieldNumber = 4;
+        private global::Google.Type.LocalizedText disclosureText_;
+        /// <summary>
+        /// The AI disclosure message "Summarized with Gemini"
+        /// (and its localized variants). This will be in the language specified in
+        /// the request if available.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText DisclosureText {
+          get { return disclosureText_; }
+          set {
+            disclosureText_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NeighborhoodSummary);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NeighborhoodSummary other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Overview, other.Overview)) return false;
+          if (!object.Equals(Description, other.Description)) return false;
+          if (FlagContentUri != other.FlagContentUri) return false;
+          if (!object.Equals(DisclosureText, other.DisclosureText)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (overview_ != null) hash ^= Overview.GetHashCode();
+          if (description_ != null) hash ^= Description.GetHashCode();
+          if (FlagContentUri.Length != 0) hash ^= FlagContentUri.GetHashCode();
+          if (disclosureText_ != null) hash ^= DisclosureText.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (overview_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Overview);
+          }
+          if (description_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Description);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (overview_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Overview);
+          }
+          if (description_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Description);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (overview_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overview);
+          }
+          if (description_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Description);
+          }
+          if (FlagContentUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FlagContentUri);
+          }
+          if (disclosureText_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisclosureText);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NeighborhoodSummary other) {
+          if (other == null) {
+            return;
+          }
+          if (other.overview_ != null) {
+            if (overview_ == null) {
+              Overview = new global::Google.Maps.Places.V1.ContentBlock();
+            }
+            Overview.MergeFrom(other.Overview);
+          }
+          if (other.description_ != null) {
+            if (description_ == null) {
+              Description = new global::Google.Maps.Places.V1.ContentBlock();
+            }
+            Description.MergeFrom(other.Description);
+          }
+          if (other.FlagContentUri.Length != 0) {
+            FlagContentUri = other.FlagContentUri;
+          }
+          if (other.disclosureText_ != null) {
+            if (disclosureText_ == null) {
+              DisclosureText = new global::Google.Type.LocalizedText();
+            }
+            DisclosureText.MergeFrom(other.DisclosureText);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (overview_ == null) {
+                  Overview = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Overview);
+                break;
+              }
+              case 18: {
+                if (description_ == null) {
+                  Description = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Description);
+                break;
+              }
+              case 26: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+              case 34: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (overview_ == null) {
+                  Overview = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Overview);
+                break;
+              }
+              case 18: {
+                if (description_ == null) {
+                  Description = new global::Google.Maps.Places.V1.ContentBlock();
+                }
+                input.ReadMessage(Description);
+                break;
+              }
+              case 26: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+              case 34: {
+                if (disclosureText_ == null) {
+                  DisclosureText = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(DisclosureText);
                 break;
               }
             }
