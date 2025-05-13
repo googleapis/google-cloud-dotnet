@@ -2,7 +2,7 @@
   {
     "method": "ListCatalogs",
     "client": "CatalogServiceClient",
-    "skip": "Requires additional set-up",
+    "restrictedSkip": "Requires additional set-up",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global"
     }

@@ -2,7 +2,7 @@
   {
     "client": "CloudTasksClient",
     "method": "ListQueues",
-    "skip": "Requires AppEngine application",
+    "restrictedSkip": "Requires AppEngine application",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/${PROJECT_APPENGINE_LOCATION}"
     }

@@ -2,7 +2,7 @@
   {
     "method": "ListLocations",
     "client": "SecureSourceManagerClient",
-    "skip": "Requires API enablement",
+    "restrictedSkip": "Requires API enablement",
     "clientNavigationProperty": "LocationsClient",
     "arguments": {
       "request": {
@@ -13,7 +13,7 @@
   {
     "method": "ListInstances",
     "client": "SecureSourceManagerClient",
-    "skip": "Requires API enablement",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-central1"
     }

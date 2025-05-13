@@ -2,7 +2,7 @@
   {
     "method": "ListDeviceSessions",
     "client": "DirectAccessServiceClient",
-    "skip": "Requires permission devicestreaming.deviceSessions.list",
+    "restrictedSkip": "Requires permission devicestreaming.deviceSessions.list",
     "arguments": {
       "parent": "projects/${PROJECT_ID}"
     }
