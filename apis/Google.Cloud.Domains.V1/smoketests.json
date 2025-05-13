@@ -2,7 +2,7 @@
   {
     "method": "ListRegistrations",
     "client": "DomainsClient",
-    "skip": "Requires permission domains.registrations.list",
+    "restrictedSkip": "Requires permission domains.registrations.list",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global"
     }

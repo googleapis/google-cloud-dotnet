@@ -2,7 +2,7 @@
   {
     "method": "ListSlates",
     "client": "VideoStitcherServiceClient",
-    "skip": "Requires API enablement",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     }
@@ -10,7 +10,7 @@
   {
     "method": "ListCdnKeys",
     "client": "VideoStitcherServiceClient",
-    "skip": "Requires API enablement",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     }

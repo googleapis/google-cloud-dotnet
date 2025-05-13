@@ -2,7 +2,7 @@
   {
     "method": "ListKeys",
     "client": "ApiKeysClient",
-    "skip": "Requires apikeys.keys.list permission",
+    "restrictedSkip": "Requires apikeys.keys.list permission",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global"
     }
