@@ -82,6 +82,12 @@
                 "ExecuteSqlAsync"
               ]
             },
+            "ExportCluster": {
+              "methods": [
+                "ExportCluster",
+                "ExportClusterAsync"
+              ]
+            },
             "FailoverInstance": {
               "methods": [
                 "FailoverInstance",
@@ -122,6 +128,12 @@
               "methods": [
                 "GetUser",
                 "GetUserAsync"
+              ]
+            },
+            "ImportCluster": {
+              "methods": [
+                "ImportCluster",
+                "ImportClusterAsync"
               ]
             },
             "InjectFault": {
@@ -212,6 +224,27 @@
               "methods": [
                 "UpdateUser",
                 "UpdateUserAsync"
+              ]
+            },
+            "UpgradeCluster": {
+              "methods": [
+                "UpgradeCluster",
+                "UpgradeClusterAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AlloyDBCSQLAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AlloyDBCSQLAdminClient",
+          "rpcs": {
+            "RestoreFromCloudSQL": {
+              "methods": [
+                "RestoreFromCloudSQL",
+                "RestoreFromCloudSQLAsync"
               ]
             }
           }
