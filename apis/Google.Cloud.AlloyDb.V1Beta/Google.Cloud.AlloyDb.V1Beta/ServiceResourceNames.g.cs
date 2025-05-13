@@ -80,6 +80,18 @@ namespace Google.Cloud.AlloyDb.V1Beta
         }
     }
 
+    public partial class ImportClusterRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ClusterName ClusterName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ClusterName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class UpgradeClusterRequest
     {
         /// <summary>
