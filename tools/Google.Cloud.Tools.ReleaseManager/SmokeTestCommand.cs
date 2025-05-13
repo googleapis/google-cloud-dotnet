@@ -83,8 +83,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 try
                 {
-                    test.Execute(assembly, templateVariables);
-                    if (test.Skip is string)
+                    bool executed = test.Execute(assembly, templateVariables);
+                    if (!executed)
                     {
                         skipped.Add($"{test.Client}.{test.Method}");
                     }
@@ -138,7 +138,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             string MaybeGetServiceAccountId()
             {
-                var credentialFile = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
+                var credentialFile = Environment.GetEnvironmentVariable(SmokeTest.GoogleApplicationCredentialsEnvironmentVariable);
                 if (string.IsNullOrEmpty(credentialFile))
                 {
                     return null;

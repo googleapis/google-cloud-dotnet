@@ -27,6 +27,8 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SmokeTest
     {
+        internal const string GoogleApplicationCredentialsEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
+
         /// <summary>
         /// The method to test, e.g. AnalyzeSyntax. Only synchronous operations should be called,
         /// but long-running operations and list operations are handled automatically.
@@ -53,6 +55,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         public string Skip { get; set; }
 
         /// <summary>
+        /// If non-null, and running in a "restricted" environment (crudely detected by the absence of the
+        /// GOOGLE_APPLICATION_CREDENTIALS environment variable), the test is skipped. As with <see cref="Skip"/>,
+        /// the value should be the reason for skipping.
+        /// </summary>
+        public string RestrictedSkip { get; set; }
+
+        /// <summary>
         /// The endpoint to set in the builder when creating a client. (May be null, in which case the default
         /// endpoint is used.)
         /// </summary>
@@ -77,11 +86,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         public string FieldMask { get; set; }
 
         /// <summary>
-        /// Executes a smoke test.
+        /// Executes a smoke test. Returns whether it actually executed (true) or was skipped (false).
         /// </summary>
         /// <param name="assembly">The assembly of the client library being tests.</param>
         /// <param name="templateVariables">Variables to replace within the template.</param>
-        public void Execute(Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
+        public bool Execute(Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
             var constructionClientType = FindClient(assembly);
             var transports = Transports ?? FindTransports(constructionClientType).Split(',').Select(t => t.Trim());
@@ -93,10 +102,15 @@ namespace Google.Cloud.Tools.ReleaseManager
             var method = FindMethod(effectiveClientType);
             var arguments = ConvertArguments(method, templateVariables);
 
+            if (RestrictedSkip is object && string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleApplicationCredentialsEnvironmentVariable)))
+            {
+                Console.WriteLine($"*** Skipping test for {constructionClientType.Name}.{Method} (running in restricted context): {RestrictedSkip} ***");
+                return false;
+            }
             if (Skip is object)
             {
                 Console.WriteLine($"*** Skipping test for {constructionClientType.Name}.{Method}: {Skip} ***");
-                return;
+                return false;
             }
             foreach (var transport in transports)
             {
@@ -109,6 +123,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var result = method.Invoke(clientInstance, arguments);
                 DisplayResult(result);
             }
+            return true;
         }
 
         private System.Type FindClient(Assembly assembly)
