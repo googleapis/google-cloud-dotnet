@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             ListSupportedDatabaseFlagsRequest request = new ListSupportedDatabaseFlagsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Scope = SupportedDatabaseFlag.Types.Scope.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListSupportedDatabaseFlagsResponse, SupportedDatabaseFlag> response = alloyDBAdminClient.ListSupportedDatabaseFlagsAsync(request);
