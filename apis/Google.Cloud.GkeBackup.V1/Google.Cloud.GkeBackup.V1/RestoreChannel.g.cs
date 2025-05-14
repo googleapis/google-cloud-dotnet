@@ -136,9 +136,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string destinationProject_ = "";
     /// <summary>
     /// Required. Immutable. The project into which the backups will be restored.
-    /// The format is `projects/{project}`.
-    /// Currently, {project} can only be the project number. Support for project
-    /// IDs will be added in the future.
+    /// The format is `projects/{projectId}` or `projects/{projectNumber}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
