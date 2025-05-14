@@ -115,6 +115,20 @@ namespace Google.Cloud.Storage.Control.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest> __Marshaller_google_storage_control_v2_ListAnywhereCachesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> __Marshaller_google_storage_control_v2_ListAnywhereCachesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest> __Marshaller_google_storage_control_v2_GetProjectIntelligenceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Marshaller_google_storage_control_v2_IntelligenceConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest> __Marshaller_google_storage_control_v2_UpdateProjectIntelligenceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest> __Marshaller_google_storage_control_v2_GetFolderIntelligenceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest> __Marshaller_google_storage_control_v2_UpdateFolderIntelligenceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest> __Marshaller_google_storage_control_v2_GetOrganizationIntelligenceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest> __Marshaller_google_storage_control_v2_UpdateOrganizationIntelligenceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder> __Method_CreateFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder>(
@@ -251,6 +265,54 @@ namespace Google.Cloud.Storage.Control.V2 {
         "ListAnywhereCaches",
         __Marshaller_google_storage_control_v2_ListAnywhereCachesRequest,
         __Marshaller_google_storage_control_v2_ListAnywhereCachesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Method_GetProjectIntelligenceConfig = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetProjectIntelligenceConfig",
+        __Marshaller_google_storage_control_v2_GetProjectIntelligenceConfigRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Method_UpdateProjectIntelligenceConfig = new grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateProjectIntelligenceConfig",
+        __Marshaller_google_storage_control_v2_UpdateProjectIntelligenceConfigRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Method_GetFolderIntelligenceConfig = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFolderIntelligenceConfig",
+        __Marshaller_google_storage_control_v2_GetFolderIntelligenceConfigRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Method_UpdateFolderIntelligenceConfig = new grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFolderIntelligenceConfig",
+        __Marshaller_google_storage_control_v2_UpdateFolderIntelligenceConfigRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Method_GetOrganizationIntelligenceConfig = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetOrganizationIntelligenceConfig",
+        __Marshaller_google_storage_control_v2_GetOrganizationIntelligenceConfigRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> __Method_UpdateOrganizationIntelligenceConfig = new grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateOrganizationIntelligenceConfig",
+        __Marshaller_google_storage_control_v2_UpdateOrganizationIntelligenceConfigRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -473,6 +535,78 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> ListAnywhereCaches(global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetProjectIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateProjectIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetFolderIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateFolderIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetOrganizationIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateOrganizationIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1366,6 +1500,294 @@ namespace Google.Cloud.Storage.Control.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAnywhereCaches, null, options, request);
       }
+      /// <summary>
+      /// Returns the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig GetProjectIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProjectIntelligenceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig GetProjectIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetProjectIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetProjectIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProjectIntelligenceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetProjectIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetProjectIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig UpdateProjectIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProjectIntelligenceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig UpdateProjectIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateProjectIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProjectIntelligenceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Project scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateProjectIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig GetFolderIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFolderIntelligenceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig GetFolderIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFolderIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetFolderIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFolderIntelligenceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetFolderIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFolderIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig UpdateFolderIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFolderIntelligenceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig UpdateFolderIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFolderIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFolderIntelligenceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Folder scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFolderIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig GetOrganizationIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOrganizationIntelligenceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig GetOrganizationIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetOrganizationIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOrganizationIntelligenceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetOrganizationIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig UpdateOrganizationIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOrganizationIntelligenceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceConfig UpdateOrganizationIntelligenceConfig(global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateOrganizationIntelligenceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOrganizationIntelligenceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Organization scoped singleton IntelligenceConfig resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateOrganizationIntelligenceConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageControlClient NewInstance(ClientBaseConfiguration configuration)
@@ -1396,7 +1818,13 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_PauseAnywhereCache, serviceImpl.PauseAnywhereCache)
           .AddMethod(__Method_ResumeAnywhereCache, serviceImpl.ResumeAnywhereCache)
           .AddMethod(__Method_GetAnywhereCache, serviceImpl.GetAnywhereCache)
-          .AddMethod(__Method_ListAnywhereCaches, serviceImpl.ListAnywhereCaches).Build();
+          .AddMethod(__Method_ListAnywhereCaches, serviceImpl.ListAnywhereCaches)
+          .AddMethod(__Method_GetProjectIntelligenceConfig, serviceImpl.GetProjectIntelligenceConfig)
+          .AddMethod(__Method_UpdateProjectIntelligenceConfig, serviceImpl.UpdateProjectIntelligenceConfig)
+          .AddMethod(__Method_GetFolderIntelligenceConfig, serviceImpl.GetFolderIntelligenceConfig)
+          .AddMethod(__Method_UpdateFolderIntelligenceConfig, serviceImpl.UpdateFolderIntelligenceConfig)
+          .AddMethod(__Method_GetOrganizationIntelligenceConfig, serviceImpl.GetOrganizationIntelligenceConfig)
+          .AddMethod(__Method_UpdateOrganizationIntelligenceConfig, serviceImpl.UpdateOrganizationIntelligenceConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1423,6 +1851,12 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_ResumeAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(serviceImpl.ResumeAnywhereCache));
       serviceBinder.AddMethod(__Method_GetAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(serviceImpl.GetAnywhereCache));
       serviceBinder.AddMethod(__Method_ListAnywhereCaches, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse>(serviceImpl.ListAnywhereCaches));
+      serviceBinder.AddMethod(__Method_GetProjectIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.GetProjectIntelligenceConfig));
+      serviceBinder.AddMethod(__Method_UpdateProjectIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.UpdateProjectIntelligenceConfig));
+      serviceBinder.AddMethod(__Method_GetFolderIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.GetFolderIntelligenceConfig));
+      serviceBinder.AddMethod(__Method_UpdateFolderIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.UpdateFolderIntelligenceConfig));
+      serviceBinder.AddMethod(__Method_GetOrganizationIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.GetOrganizationIntelligenceConfig));
+      serviceBinder.AddMethod(__Method_UpdateOrganizationIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.UpdateOrganizationIntelligenceConfig));
     }
 
   }

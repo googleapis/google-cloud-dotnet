@@ -67,6 +67,12 @@ namespace Google.Cloud.Storage.Control.V2
             ResumeAnywhereCacheSettings = existing.ResumeAnywhereCacheSettings;
             GetAnywhereCacheSettings = existing.GetAnywhereCacheSettings;
             ListAnywhereCachesSettings = existing.ListAnywhereCachesSettings;
+            GetProjectIntelligenceConfigSettings = existing.GetProjectIntelligenceConfigSettings;
+            UpdateProjectIntelligenceConfigSettings = existing.UpdateProjectIntelligenceConfigSettings;
+            GetFolderIntelligenceConfigSettings = existing.GetFolderIntelligenceConfigSettings;
+            UpdateFolderIntelligenceConfigSettings = existing.UpdateFolderIntelligenceConfigSettings;
+            GetOrganizationIntelligenceConfigSettings = existing.GetOrganizationIntelligenceConfigSettings;
+            UpdateOrganizationIntelligenceConfigSettings = existing.UpdateOrganizationIntelligenceConfigSettings;
             OnCopy(existing);
         }
 
@@ -469,6 +475,144 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListAnywhereCachesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetProjectIntelligenceConfig</c> and
+        /// <c>StorageControlClient.GetProjectIntelligenceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetProjectIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.UpdateProjectIntelligenceConfig</c> and
+        /// <c>StorageControlClient.UpdateProjectIntelligenceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateProjectIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetFolderIntelligenceConfig</c> and
+        /// <c>StorageControlClient.GetFolderIntelligenceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFolderIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.UpdateFolderIntelligenceConfig</c> and
+        /// <c>StorageControlClient.UpdateFolderIntelligenceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFolderIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetOrganizationIntelligenceConfig</c> and
+        /// <c>StorageControlClient.GetOrganizationIntelligenceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.UpdateOrganizationIntelligenceConfig</c> and
+        /// <c>StorageControlClient.UpdateOrganizationIntelligenceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -3011,6 +3155,624 @@ namespace Google.Cloud.Storage.Control.V2
             }
             return ListAnywhereCachesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetProjectIntelligenceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your project.
+        /// 
+        /// Format: `projects/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetProjectIntelligenceConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectIntelligenceConfig(new GetProjectIntelligenceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your project.
+        /// 
+        /// Format: `projects/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectIntelligenceConfigAsync(new GetProjectIntelligenceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your project.
+        /// 
+        /// Format: `projects/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetProjectIntelligenceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your project.
+        /// 
+        /// Format: `projects/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetProjectIntelligenceConfig(IntelligenceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectIntelligenceConfig(new GetProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your project.
+        /// 
+        /// Format: `projects/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(IntelligenceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectIntelligenceConfigAsync(new GetProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your project.
+        /// 
+        /// Format: `projects/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(IntelligenceConfigName name, st::CancellationToken cancellationToken) =>
+            GetProjectIntelligenceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateProjectIntelligenceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig UpdateProjectIntelligenceConfig(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProjectIntelligenceConfig(new UpdateProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfig = gax::GaxPreconditions.CheckNotNull(intelligenceConfig, nameof(intelligenceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProjectIntelligenceConfigAsync(new UpdateProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfig = gax::GaxPreconditions.CheckNotNull(intelligenceConfig, nameof(intelligenceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateProjectIntelligenceConfigAsync(intelligenceConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetFolderIntelligenceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your folder.
+        /// 
+        /// Format: `folders/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetFolderIntelligenceConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolderIntelligenceConfig(new GetFolderIntelligenceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your folder.
+        /// 
+        /// Format: `folders/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolderIntelligenceConfigAsync(new GetFolderIntelligenceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your folder.
+        /// 
+        /// Format: `folders/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFolderIntelligenceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your folder.
+        /// 
+        /// Format: `folders/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetFolderIntelligenceConfig(IntelligenceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolderIntelligenceConfig(new GetFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your folder.
+        /// 
+        /// Format: `folders/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(IntelligenceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFolderIntelligenceConfigAsync(new GetFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your folder.
+        /// 
+        /// Format: `folders/{id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(IntelligenceConfigName name, st::CancellationToken cancellationToken) =>
+            GetFolderIntelligenceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateFolderIntelligenceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig UpdateFolderIntelligenceConfig(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFolderIntelligenceConfig(new UpdateFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfig = gax::GaxPreconditions.CheckNotNull(intelligenceConfig, nameof(intelligenceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFolderIntelligenceConfigAsync(new UpdateFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfig = gax::GaxPreconditions.CheckNotNull(intelligenceConfig, nameof(intelligenceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFolderIntelligenceConfigAsync(intelligenceConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetOrganizationIntelligenceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your organization.
+        /// 
+        /// Format: `organizations/{org_id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetOrganizationIntelligenceConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOrganizationIntelligenceConfig(new GetOrganizationIntelligenceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your organization.
+        /// 
+        /// Format: `organizations/{org_id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOrganizationIntelligenceConfigAsync(new GetOrganizationIntelligenceConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your organization.
+        /// 
+        /// Format: `organizations/{org_id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetOrganizationIntelligenceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your organization.
+        /// 
+        /// Format: `organizations/{org_id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig GetOrganizationIntelligenceConfig(IntelligenceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOrganizationIntelligenceConfig(new GetOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your organization.
+        /// 
+        /// Format: `organizations/{org_id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOrganizationIntelligenceConfigAsync(new GetOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceConfig` resource associated with
+        /// your organization.
+        /// 
+        /// Format: `organizations/{org_id}/locations/global/intelligenceConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName name, st::CancellationToken cancellationToken) =>
+            GetOrganizationIntelligenceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateOrganizationIntelligenceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceConfig UpdateOrganizationIntelligenceConfig(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOrganizationIntelligenceConfig(new UpdateOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfig = gax::GaxPreconditions.CheckNotNull(intelligenceConfig, nameof(intelligenceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOrganizationIntelligenceConfigAsync(new UpdateOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfig = gax::GaxPreconditions.CheckNotNull(intelligenceConfig, nameof(intelligenceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="intelligenceConfig">
+        /// Required. The `IntelligenceConfig` resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The `update_mask` that specifies the fields within the
+        /// `IntelligenceConfig` resource that should be modified by this update. Only
+        /// the listed fields are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateOrganizationIntelligenceConfigAsync(intelligenceConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>
@@ -3052,6 +3814,18 @@ namespace Google.Cloud.Storage.Control.V2
         private readonly gaxgrpc::ApiCall<GetAnywhereCacheRequest, AnywhereCache> _callGetAnywhereCache;
 
         private readonly gaxgrpc::ApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse> _callListAnywhereCaches;
+
+        private readonly gaxgrpc::ApiCall<GetProjectIntelligenceConfigRequest, IntelligenceConfig> _callGetProjectIntelligenceConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateProjectIntelligenceConfigRequest, IntelligenceConfig> _callUpdateProjectIntelligenceConfig;
+
+        private readonly gaxgrpc::ApiCall<GetFolderIntelligenceConfigRequest, IntelligenceConfig> _callGetFolderIntelligenceConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateFolderIntelligenceConfigRequest, IntelligenceConfig> _callUpdateFolderIntelligenceConfig;
+
+        private readonly gaxgrpc::ApiCall<GetOrganizationIntelligenceConfigRequest, IntelligenceConfig> _callGetOrganizationIntelligenceConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateOrganizationIntelligenceConfigRequest, IntelligenceConfig> _callUpdateOrganizationIntelligenceConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
@@ -3122,6 +3896,24 @@ namespace Google.Cloud.Storage.Control.V2
             _callListAnywhereCaches = clientHelper.BuildApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse>("ListAnywhereCaches", grpcClient.ListAnywhereCachesAsync, grpcClient.ListAnywhereCaches, effectiveSettings.ListAnywhereCachesSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callListAnywhereCaches);
             Modify_ListAnywhereCachesApiCall(ref _callListAnywhereCaches);
+            _callGetProjectIntelligenceConfig = clientHelper.BuildApiCall<GetProjectIntelligenceConfigRequest, IntelligenceConfig>("GetProjectIntelligenceConfig", grpcClient.GetProjectIntelligenceConfigAsync, grpcClient.GetProjectIntelligenceConfig, effectiveSettings.GetProjectIntelligenceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetProjectIntelligenceConfig);
+            Modify_GetProjectIntelligenceConfigApiCall(ref _callGetProjectIntelligenceConfig);
+            _callUpdateProjectIntelligenceConfig = clientHelper.BuildApiCall<UpdateProjectIntelligenceConfigRequest, IntelligenceConfig>("UpdateProjectIntelligenceConfig", grpcClient.UpdateProjectIntelligenceConfigAsync, grpcClient.UpdateProjectIntelligenceConfig, effectiveSettings.UpdateProjectIntelligenceConfigSettings).WithGoogleRequestParam("intelligence_config.name", request => request.IntelligenceConfig?.Name);
+            Modify_ApiCall(ref _callUpdateProjectIntelligenceConfig);
+            Modify_UpdateProjectIntelligenceConfigApiCall(ref _callUpdateProjectIntelligenceConfig);
+            _callGetFolderIntelligenceConfig = clientHelper.BuildApiCall<GetFolderIntelligenceConfigRequest, IntelligenceConfig>("GetFolderIntelligenceConfig", grpcClient.GetFolderIntelligenceConfigAsync, grpcClient.GetFolderIntelligenceConfig, effectiveSettings.GetFolderIntelligenceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFolderIntelligenceConfig);
+            Modify_GetFolderIntelligenceConfigApiCall(ref _callGetFolderIntelligenceConfig);
+            _callUpdateFolderIntelligenceConfig = clientHelper.BuildApiCall<UpdateFolderIntelligenceConfigRequest, IntelligenceConfig>("UpdateFolderIntelligenceConfig", grpcClient.UpdateFolderIntelligenceConfigAsync, grpcClient.UpdateFolderIntelligenceConfig, effectiveSettings.UpdateFolderIntelligenceConfigSettings).WithGoogleRequestParam("intelligence_config.name", request => request.IntelligenceConfig?.Name);
+            Modify_ApiCall(ref _callUpdateFolderIntelligenceConfig);
+            Modify_UpdateFolderIntelligenceConfigApiCall(ref _callUpdateFolderIntelligenceConfig);
+            _callGetOrganizationIntelligenceConfig = clientHelper.BuildApiCall<GetOrganizationIntelligenceConfigRequest, IntelligenceConfig>("GetOrganizationIntelligenceConfig", grpcClient.GetOrganizationIntelligenceConfigAsync, grpcClient.GetOrganizationIntelligenceConfig, effectiveSettings.GetOrganizationIntelligenceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetOrganizationIntelligenceConfig);
+            Modify_GetOrganizationIntelligenceConfigApiCall(ref _callGetOrganizationIntelligenceConfig);
+            _callUpdateOrganizationIntelligenceConfig = clientHelper.BuildApiCall<UpdateOrganizationIntelligenceConfigRequest, IntelligenceConfig>("UpdateOrganizationIntelligenceConfig", grpcClient.UpdateOrganizationIntelligenceConfigAsync, grpcClient.UpdateOrganizationIntelligenceConfig, effectiveSettings.UpdateOrganizationIntelligenceConfigSettings).WithGoogleRequestParam("intelligence_config.name", request => request.IntelligenceConfig?.Name);
+            Modify_ApiCall(ref _callUpdateOrganizationIntelligenceConfig);
+            Modify_UpdateOrganizationIntelligenceConfigApiCall(ref _callUpdateOrganizationIntelligenceConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3161,6 +3953,18 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_ListAnywhereCachesApiCall(ref gaxgrpc::ApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse> call);
 
+        partial void Modify_GetProjectIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<GetProjectIntelligenceConfigRequest, IntelligenceConfig> call);
+
+        partial void Modify_UpdateProjectIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<UpdateProjectIntelligenceConfigRequest, IntelligenceConfig> call);
+
+        partial void Modify_GetFolderIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<GetFolderIntelligenceConfigRequest, IntelligenceConfig> call);
+
+        partial void Modify_UpdateFolderIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<UpdateFolderIntelligenceConfigRequest, IntelligenceConfig> call);
+
+        partial void Modify_GetOrganizationIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<GetOrganizationIntelligenceConfigRequest, IntelligenceConfig> call);
+
+        partial void Modify_UpdateOrganizationIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<UpdateOrganizationIntelligenceConfigRequest, IntelligenceConfig> call);
+
         partial void OnConstruction(StorageControl.StorageControlClient grpcClient, StorageControlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC StorageControl client</summary>
@@ -3199,6 +4003,18 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_GetAnywhereCacheRequest(ref GetAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAnywhereCachesRequest(ref ListAnywhereCachesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetProjectIntelligenceConfigRequest(ref GetProjectIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateProjectIntelligenceConfigRequest(ref UpdateProjectIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFolderIntelligenceConfigRequest(ref GetFolderIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateFolderIntelligenceConfigRequest(ref UpdateFolderIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetOrganizationIntelligenceConfigRequest(ref GetOrganizationIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateOrganizationIntelligenceConfigRequest(ref UpdateOrganizationIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
@@ -3797,6 +4613,150 @@ namespace Google.Cloud.Storage.Control.V2
             }
             Modify_ListAnywhereCachesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAnywhereCachesRequest, ListAnywhereCachesResponse, AnywhereCache>(_callListAnywhereCaches, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceConfig GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProjectIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callGetProjectIntelligenceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceConfig> GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProjectIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callGetProjectIntelligenceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceConfig UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProjectIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callUpdateProjectIntelligenceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Project scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProjectIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callUpdateProjectIntelligenceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceConfig GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFolderIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callGetFolderIntelligenceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceConfig> GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFolderIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callGetFolderIntelligenceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceConfig UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFolderIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callUpdateFolderIntelligenceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Folder scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFolderIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callUpdateFolderIntelligenceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceConfig GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callGetOrganizationIntelligenceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceConfig> GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callGetOrganizationIntelligenceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceConfig UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callUpdateOrganizationIntelligenceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Organization scoped singleton IntelligenceConfig resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
+            return _callUpdateOrganizationIntelligenceConfig.Async(request, callSettings);
         }
     }
 

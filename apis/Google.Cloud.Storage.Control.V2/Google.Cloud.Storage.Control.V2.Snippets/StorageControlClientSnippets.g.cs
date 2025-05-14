@@ -2379,5 +2379,464 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfig</summary>
+        public void GetProjectIntelligenceConfigRequestObject()
+        {
+            // Snippet: GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetProjectIntelligenceConfigRequest request = new GetProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfigAsync</summary>
+        public async Task GetProjectIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CallSettings)
+            // Additional: GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProjectIntelligenceConfigRequest request = new GetProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfig</summary>
+        public void GetProjectIntelligenceConfig()
+        {
+            // Snippet: GetProjectIntelligenceConfig(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfigAsync</summary>
+        public async Task GetProjectIntelligenceConfigAsync()
+        {
+            // Snippet: GetProjectIntelligenceConfigAsync(string, CallSettings)
+            // Additional: GetProjectIntelligenceConfigAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfig</summary>
+        public void GetProjectIntelligenceConfigResourceNames()
+        {
+            // Snippet: GetProjectIntelligenceConfig(IntelligenceConfigName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfigAsync</summary>
+        public async Task GetProjectIntelligenceConfigResourceNamesAsync()
+        {
+            // Snippet: GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
+            // Additional: GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfig</summary>
+        public void UpdateProjectIntelligenceConfigRequestObject()
+        {
+            // Snippet: UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateProjectIntelligenceConfigRequest request = new UpdateProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfigAsync</summary>
+        public async Task UpdateProjectIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CallSettings)
+            // Additional: UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateProjectIntelligenceConfigRequest request = new UpdateProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfig</summary>
+        public void UpdateProjectIntelligenceConfig()
+        {
+            // Snippet: UpdateProjectIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfigAsync</summary>
+        public async Task UpdateProjectIntelligenceConfigAsync()
+        {
+            // Snippet: UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
+            // Additional: UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfig</summary>
+        public void GetFolderIntelligenceConfigRequestObject()
+        {
+            // Snippet: GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetFolderIntelligenceConfigRequest request = new GetFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfigAsync</summary>
+        public async Task GetFolderIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CallSettings)
+            // Additional: GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFolderIntelligenceConfigRequest request = new GetFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfig</summary>
+        public void GetFolderIntelligenceConfig()
+        {
+            // Snippet: GetFolderIntelligenceConfig(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfigAsync</summary>
+        public async Task GetFolderIntelligenceConfigAsync()
+        {
+            // Snippet: GetFolderIntelligenceConfigAsync(string, CallSettings)
+            // Additional: GetFolderIntelligenceConfigAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfig</summary>
+        public void GetFolderIntelligenceConfigResourceNames()
+        {
+            // Snippet: GetFolderIntelligenceConfig(IntelligenceConfigName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfigAsync</summary>
+        public async Task GetFolderIntelligenceConfigResourceNamesAsync()
+        {
+            // Snippet: GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
+            // Additional: GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfig</summary>
+        public void UpdateFolderIntelligenceConfigRequestObject()
+        {
+            // Snippet: UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateFolderIntelligenceConfigRequest request = new UpdateFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfigAsync</summary>
+        public async Task UpdateFolderIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CallSettings)
+            // Additional: UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFolderIntelligenceConfigRequest request = new UpdateFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfig</summary>
+        public void UpdateFolderIntelligenceConfig()
+        {
+            // Snippet: UpdateFolderIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfigAsync</summary>
+        public async Task UpdateFolderIntelligenceConfigAsync()
+        {
+            // Snippet: UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
+            // Additional: UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfig</summary>
+        public void GetOrganizationIntelligenceConfigRequestObject()
+        {
+            // Snippet: GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetOrganizationIntelligenceConfigRequest request = new GetOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfigAsync</summary>
+        public async Task GetOrganizationIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CallSettings)
+            // Additional: GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetOrganizationIntelligenceConfigRequest request = new GetOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfig</summary>
+        public void GetOrganizationIntelligenceConfig()
+        {
+            // Snippet: GetOrganizationIntelligenceConfig(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfigAsync</summary>
+        public async Task GetOrganizationIntelligenceConfigAsync()
+        {
+            // Snippet: GetOrganizationIntelligenceConfigAsync(string, CallSettings)
+            // Additional: GetOrganizationIntelligenceConfigAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfig</summary>
+        public void GetOrganizationIntelligenceConfigResourceNames()
+        {
+            // Snippet: GetOrganizationIntelligenceConfig(IntelligenceConfigName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfigAsync</summary>
+        public async Task GetOrganizationIntelligenceConfigResourceNamesAsync()
+        {
+            // Snippet: GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
+            // Additional: GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfig</summary>
+        public void UpdateOrganizationIntelligenceConfigRequestObject()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateOrganizationIntelligenceConfigRequest request = new UpdateOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfigAsync</summary>
+        public async Task UpdateOrganizationIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
+            // Additional: UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateOrganizationIntelligenceConfigRequest request = new UpdateOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfig</summary>
+        public void UpdateOrganizationIntelligenceConfig()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfigAsync</summary>
+        public async Task UpdateOrganizationIntelligenceConfigAsync()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
+            // Additional: UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            // End snippet
+        }
     }
 }
