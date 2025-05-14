@@ -1350,6 +1350,7 @@ namespace GoogleCSharpSnippets
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
+                DeleteCommercial = false,
             };
             // Make the request
             analyticsHubServiceClient.DeleteListing(request);
@@ -1367,6 +1368,7 @@ namespace GoogleCSharpSnippets
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
+                DeleteCommercial = false,
             };
             // Make the request
             await analyticsHubServiceClient.DeleteListingAsync(request);
@@ -2543,6 +2545,7 @@ namespace GoogleCSharpSnippets
             RevokeSubscriptionRequest request = new RevokeSubscriptionRequest
             {
                 SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+                RevokeCommercial = false,
             };
             // Make the request
             RevokeSubscriptionResponse response = analyticsHubServiceClient.RevokeSubscription(request);
@@ -2560,6 +2563,7 @@ namespace GoogleCSharpSnippets
             RevokeSubscriptionRequest request = new RevokeSubscriptionRequest
             {
                 SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+                RevokeCommercial = false,
             };
             // Make the request
             RevokeSubscriptionResponse response = await analyticsHubServiceClient.RevokeSubscriptionAsync(request);
