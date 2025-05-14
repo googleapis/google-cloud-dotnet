@@ -4987,6 +4987,1467 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetProjectIntelligenceConfig_sync",
+      "title": "GetProjectIntelligenceConfigRequestObject",
+      "description": "Snippet for GetProjectIntelligenceConfig",
+      "file": "StorageControlClient.GetProjectIntelligenceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetProjectIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetProjectIntelligenceConfig_async",
+      "title": "GetProjectIntelligenceConfigRequestObjectAsync",
+      "description": "Snippet for GetProjectIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetProjectIntelligenceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetProjectIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetProjectIntelligenceConfig_sync_flattened",
+      "title": "GetProjectIntelligenceConfig",
+      "description": "Snippet for GetProjectIntelligenceConfig",
+      "file": "StorageControlClient.GetProjectIntelligenceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetProjectIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetProjectIntelligenceConfig_async_flattened",
+      "title": "GetProjectIntelligenceConfigAsync",
+      "description": "Snippet for GetProjectIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetProjectIntelligenceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetProjectIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetProjectIntelligenceConfig_sync_flattened_resourceNames",
+      "title": "GetProjectIntelligenceConfigResourceNames",
+      "description": "Snippet for GetProjectIntelligenceConfig",
+      "file": "StorageControlClient.GetProjectIntelligenceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetProjectIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetProjectIntelligenceConfig_async_flattened_resourceNames",
+      "title": "GetProjectIntelligenceConfigResourceNamesAsync",
+      "description": "Snippet for GetProjectIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetProjectIntelligenceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetProjectIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateProjectIntelligenceConfig_sync",
+      "title": "UpdateProjectIntelligenceConfigRequestObject",
+      "description": "Snippet for UpdateProjectIntelligenceConfig",
+      "file": "StorageControlClient.UpdateProjectIntelligenceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProjectIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateProjectIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateProjectIntelligenceConfig_async",
+      "title": "UpdateProjectIntelligenceConfigRequestObjectAsync",
+      "description": "Snippet for UpdateProjectIntelligenceConfigAsync",
+      "file": "StorageControlClient.UpdateProjectIntelligenceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProjectIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateProjectIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateProjectIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateProjectIntelligenceConfig_sync_flattened",
+      "title": "UpdateProjectIntelligenceConfig",
+      "description": "Snippet for UpdateProjectIntelligenceConfig",
+      "file": "StorageControlClient.UpdateProjectIntelligenceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProjectIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateProjectIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+            "name": "intelligenceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateProjectIntelligenceConfig_async_flattened",
+      "title": "UpdateProjectIntelligenceConfigAsync",
+      "description": "Snippet for UpdateProjectIntelligenceConfigAsync",
+      "file": "StorageControlClient.UpdateProjectIntelligenceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProjectIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateProjectIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+            "name": "intelligenceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateProjectIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateProjectIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolderIntelligenceConfig_sync",
+      "title": "GetFolderIntelligenceConfigRequestObject",
+      "description": "Snippet for GetFolderIntelligenceConfig",
+      "file": "StorageControlClient.GetFolderIntelligenceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolderIntelligenceConfig_async",
+      "title": "GetFolderIntelligenceConfigRequestObjectAsync",
+      "description": "Snippet for GetFolderIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetFolderIntelligenceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetFolderIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolderIntelligenceConfig_sync_flattened",
+      "title": "GetFolderIntelligenceConfig",
+      "description": "Snippet for GetFolderIntelligenceConfig",
+      "file": "StorageControlClient.GetFolderIntelligenceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolderIntelligenceConfig_async_flattened",
+      "title": "GetFolderIntelligenceConfigAsync",
+      "description": "Snippet for GetFolderIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetFolderIntelligenceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolderIntelligenceConfig_sync_flattened_resourceNames",
+      "title": "GetFolderIntelligenceConfigResourceNames",
+      "description": "Snippet for GetFolderIntelligenceConfig",
+      "file": "StorageControlClient.GetFolderIntelligenceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolderIntelligenceConfig_async_flattened_resourceNames",
+      "title": "GetFolderIntelligenceConfigResourceNamesAsync",
+      "description": "Snippet for GetFolderIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetFolderIntelligenceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateFolderIntelligenceConfig_sync",
+      "title": "UpdateFolderIntelligenceConfigRequestObject",
+      "description": "Snippet for UpdateFolderIntelligenceConfig",
+      "file": "StorageControlClient.UpdateFolderIntelligenceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolderIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateFolderIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateFolderIntelligenceConfig_async",
+      "title": "UpdateFolderIntelligenceConfigRequestObjectAsync",
+      "description": "Snippet for UpdateFolderIntelligenceConfigAsync",
+      "file": "StorageControlClient.UpdateFolderIntelligenceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolderIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateFolderIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateFolderIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateFolderIntelligenceConfig_sync_flattened",
+      "title": "UpdateFolderIntelligenceConfig",
+      "description": "Snippet for UpdateFolderIntelligenceConfig",
+      "file": "StorageControlClient.UpdateFolderIntelligenceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolderIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateFolderIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+            "name": "intelligenceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateFolderIntelligenceConfig_async_flattened",
+      "title": "UpdateFolderIntelligenceConfigAsync",
+      "description": "Snippet for UpdateFolderIntelligenceConfigAsync",
+      "file": "StorageControlClient.UpdateFolderIntelligenceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFolderIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateFolderIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+            "name": "intelligenceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateFolderIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateFolderIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetOrganizationIntelligenceConfig_sync",
+      "title": "GetOrganizationIntelligenceConfigRequestObject",
+      "description": "Snippet for GetOrganizationIntelligenceConfig",
+      "file": "StorageControlClient.GetOrganizationIntelligenceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrganizationIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetOrganizationIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetOrganizationIntelligenceConfig_async",
+      "title": "GetOrganizationIntelligenceConfigRequestObjectAsync",
+      "description": "Snippet for GetOrganizationIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetOrganizationIntelligenceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrganizationIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetOrganizationIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetOrganizationIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetOrganizationIntelligenceConfig_sync_flattened",
+      "title": "GetOrganizationIntelligenceConfig",
+      "description": "Snippet for GetOrganizationIntelligenceConfig",
+      "file": "StorageControlClient.GetOrganizationIntelligenceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrganizationIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetOrganizationIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetOrganizationIntelligenceConfig_async_flattened",
+      "title": "GetOrganizationIntelligenceConfigAsync",
+      "description": "Snippet for GetOrganizationIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetOrganizationIntelligenceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrganizationIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetOrganizationIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetOrganizationIntelligenceConfig_sync_flattened_resourceNames",
+      "title": "GetOrganizationIntelligenceConfigResourceNames",
+      "description": "Snippet for GetOrganizationIntelligenceConfig",
+      "file": "StorageControlClient.GetOrganizationIntelligenceConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrganizationIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetOrganizationIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetOrganizationIntelligenceConfig_async_flattened_resourceNames",
+      "title": "GetOrganizationIntelligenceConfigResourceNamesAsync",
+      "description": "Snippet for GetOrganizationIntelligenceConfigAsync",
+      "file": "StorageControlClient.GetOrganizationIntelligenceConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrganizationIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetOrganizationIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.GetOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateOrganizationIntelligenceConfig_sync",
+      "title": "UpdateOrganizationIntelligenceConfigRequestObject",
+      "description": "Snippet for UpdateOrganizationIntelligenceConfig",
+      "file": "StorageControlClient.UpdateOrganizationIntelligenceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOrganizationIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateOrganizationIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateOrganizationIntelligenceConfig_async",
+      "title": "UpdateOrganizationIntelligenceConfigRequestObjectAsync",
+      "description": "Snippet for UpdateOrganizationIntelligenceConfigAsync",
+      "file": "StorageControlClient.UpdateOrganizationIntelligenceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOrganizationIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateOrganizationIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateOrganizationIntelligenceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateOrganizationIntelligenceConfig_sync_flattened",
+      "title": "UpdateOrganizationIntelligenceConfig",
+      "description": "Snippet for UpdateOrganizationIntelligenceConfig",
+      "file": "StorageControlClient.UpdateOrganizationIntelligenceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOrganizationIntelligenceConfig",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateOrganizationIntelligenceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+            "name": "intelligenceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateOrganizationIntelligenceConfig_async_flattened",
+      "title": "UpdateOrganizationIntelligenceConfigAsync",
+      "description": "Snippet for UpdateOrganizationIntelligenceConfigAsync",
+      "file": "StorageControlClient.UpdateOrganizationIntelligenceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOrganizationIntelligenceConfigAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateOrganizationIntelligenceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceConfig",
+            "name": "intelligenceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceConfig>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateOrganizationIntelligenceConfig",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateOrganizationIntelligenceConfig",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

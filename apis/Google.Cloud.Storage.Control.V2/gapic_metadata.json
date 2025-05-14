@@ -58,10 +58,28 @@
                 "GetFolderAsync"
               ]
             },
+            "GetFolderIntelligenceConfig": {
+              "methods": [
+                "GetFolderIntelligenceConfig",
+                "GetFolderIntelligenceConfigAsync"
+              ]
+            },
             "GetManagedFolder": {
               "methods": [
                 "GetManagedFolder",
                 "GetManagedFolderAsync"
+              ]
+            },
+            "GetOrganizationIntelligenceConfig": {
+              "methods": [
+                "GetOrganizationIntelligenceConfig",
+                "GetOrganizationIntelligenceConfigAsync"
+              ]
+            },
+            "GetProjectIntelligenceConfig": {
+              "methods": [
+                "GetProjectIntelligenceConfig",
+                "GetProjectIntelligenceConfigAsync"
               ]
             },
             "GetStorageLayout": {
@@ -110,6 +128,24 @@
               "methods": [
                 "UpdateAnywhereCache",
                 "UpdateAnywhereCacheAsync"
+              ]
+            },
+            "UpdateFolderIntelligenceConfig": {
+              "methods": [
+                "UpdateFolderIntelligenceConfig",
+                "UpdateFolderIntelligenceConfigAsync"
+              ]
+            },
+            "UpdateOrganizationIntelligenceConfig": {
+              "methods": [
+                "UpdateOrganizationIntelligenceConfig",
+                "UpdateOrganizationIntelligenceConfigAsync"
+              ]
+            },
+            "UpdateProjectIntelligenceConfig": {
+              "methods": [
+                "UpdateProjectIntelligenceConfig",
+                "UpdateProjectIntelligenceConfigAsync"
               ]
             }
           }
