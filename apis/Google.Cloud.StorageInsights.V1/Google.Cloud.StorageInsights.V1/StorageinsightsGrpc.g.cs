@@ -87,6 +87,26 @@ namespace Google.Cloud.StorageInsights.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.GetReportDetailRequest> __Marshaller_google_cloud_storageinsights_v1_GetReportDetailRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.GetReportDetailRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.ReportDetail> __Marshaller_google_cloud_storageinsights_v1_ReportDetail = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.ReportDetail.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest> __Marshaller_google_cloud_storageinsights_v1_ListDatasetConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse> __Marshaller_google_cloud_storageinsights_v1_ListDatasetConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest> __Marshaller_google_cloud_storageinsights_v1_GetDatasetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.DatasetConfig> __Marshaller_google_cloud_storageinsights_v1_DatasetConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.DatasetConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest> __Marshaller_google_cloud_storageinsights_v1_CreateDatasetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest> __Marshaller_google_cloud_storageinsights_v1_UpdateDatasetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest> __Marshaller_google_cloud_storageinsights_v1_DeleteDatasetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest> __Marshaller_google_cloud_storageinsights_v1_LinkDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest> __Marshaller_google_cloud_storageinsights_v1_UnlinkDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.ListReportConfigsRequest, global::Google.Cloud.StorageInsights.V1.ListReportConfigsResponse> __Method_ListReportConfigs = new grpc::Method<global::Google.Cloud.StorageInsights.V1.ListReportConfigsRequest, global::Google.Cloud.StorageInsights.V1.ListReportConfigsResponse>(
@@ -143,6 +163,62 @@ namespace Google.Cloud.StorageInsights.V1 {
         "GetReportDetail",
         __Marshaller_google_cloud_storageinsights_v1_GetReportDetailRequest,
         __Marshaller_google_cloud_storageinsights_v1_ReportDetail);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest, global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse> __Method_ListDatasetConfigs = new grpc::Method<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest, global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDatasetConfigs",
+        __Marshaller_google_cloud_storageinsights_v1_ListDatasetConfigsRequest,
+        __Marshaller_google_cloud_storageinsights_v1_ListDatasetConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest, global::Google.Cloud.StorageInsights.V1.DatasetConfig> __Method_GetDatasetConfig = new grpc::Method<global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest, global::Google.Cloud.StorageInsights.V1.DatasetConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDatasetConfig",
+        __Marshaller_google_cloud_storageinsights_v1_GetDatasetConfigRequest,
+        __Marshaller_google_cloud_storageinsights_v1_DatasetConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest, global::Google.LongRunning.Operation> __Method_CreateDatasetConfig = new grpc::Method<global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDatasetConfig",
+        __Marshaller_google_cloud_storageinsights_v1_CreateDatasetConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateDatasetConfig = new grpc::Method<global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDatasetConfig",
+        __Marshaller_google_cloud_storageinsights_v1_UpdateDatasetConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteDatasetConfig = new grpc::Method<global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDatasetConfig",
+        __Marshaller_google_cloud_storageinsights_v1_DeleteDatasetConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest, global::Google.LongRunning.Operation> __Method_LinkDataset = new grpc::Method<global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LinkDataset",
+        __Marshaller_google_cloud_storageinsights_v1_LinkDatasetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest, global::Google.LongRunning.Operation> __Method_UnlinkDataset = new grpc::Method<global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UnlinkDataset",
+        __Marshaller_google_cloud_storageinsights_v1_UnlinkDatasetRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -234,6 +310,91 @@ namespace Google.Cloud.StorageInsights.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageInsights.V1.ReportDetail> GetReportDetail(global::Google.Cloud.StorageInsights.V1.GetReportDetailRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the dataset configurations in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse> ListDatasetConfigs(global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageInsights.V1.DatasetConfig> GetDatasetConfig(global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatasetConfig(global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatasetConfig(global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDatasetConfig(global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Links a dataset to BigQuery in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LinkDataset(global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Unlinks a dataset from BigQuery in a given project
+      /// for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UnlinkDataset(global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -603,6 +764,346 @@ namespace Google.Cloud.StorageInsights.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetReportDetail, null, options, request);
       }
+      /// <summary>
+      /// Lists the dataset configurations in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse ListDatasetConfigs(global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatasetConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the dataset configurations in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse ListDatasetConfigs(global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDatasetConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists the dataset configurations in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse> ListDatasetConfigsAsync(global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatasetConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the dataset configurations in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse> ListDatasetConfigsAsync(global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDatasetConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Gets the dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageInsights.V1.DatasetConfig GetDatasetConfig(global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatasetConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.StorageInsights.V1.DatasetConfig GetDatasetConfig(global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageInsights.V1.DatasetConfig> GetDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatasetConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageInsights.V1.DatasetConfig> GetDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDatasetConfig(global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatasetConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDatasetConfig(global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatasetConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatasetConfig(global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatasetConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatasetConfig(global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatasetConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDatasetConfig(global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatasetConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDatasetConfig(global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatasetConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a dataset configuration in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatasetConfigAsync(global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDatasetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Links a dataset to BigQuery in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation LinkDataset(global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LinkDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Links a dataset to BigQuery in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation LinkDataset(global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LinkDataset, null, options, request);
+      }
+      /// <summary>
+      /// Links a dataset to BigQuery in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LinkDatasetAsync(global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LinkDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Links a dataset to BigQuery in a given project for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LinkDatasetAsync(global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LinkDataset, null, options, request);
+      }
+      /// <summary>
+      /// Unlinks a dataset from BigQuery in a given project
+      /// for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UnlinkDataset(global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnlinkDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unlinks a dataset from BigQuery in a given project
+      /// for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UnlinkDataset(global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UnlinkDataset, null, options, request);
+      }
+      /// <summary>
+      /// Unlinks a dataset from BigQuery in a given project
+      /// for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UnlinkDatasetAsync(global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnlinkDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unlinks a dataset from BigQuery in a given project
+      /// for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UnlinkDatasetAsync(global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UnlinkDataset, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageInsightsClient NewInstance(ClientBaseConfiguration configuration)
@@ -623,7 +1124,14 @@ namespace Google.Cloud.StorageInsights.V1 {
           .AddMethod(__Method_UpdateReportConfig, serviceImpl.UpdateReportConfig)
           .AddMethod(__Method_DeleteReportConfig, serviceImpl.DeleteReportConfig)
           .AddMethod(__Method_ListReportDetails, serviceImpl.ListReportDetails)
-          .AddMethod(__Method_GetReportDetail, serviceImpl.GetReportDetail).Build();
+          .AddMethod(__Method_GetReportDetail, serviceImpl.GetReportDetail)
+          .AddMethod(__Method_ListDatasetConfigs, serviceImpl.ListDatasetConfigs)
+          .AddMethod(__Method_GetDatasetConfig, serviceImpl.GetDatasetConfig)
+          .AddMethod(__Method_CreateDatasetConfig, serviceImpl.CreateDatasetConfig)
+          .AddMethod(__Method_UpdateDatasetConfig, serviceImpl.UpdateDatasetConfig)
+          .AddMethod(__Method_DeleteDatasetConfig, serviceImpl.DeleteDatasetConfig)
+          .AddMethod(__Method_LinkDataset, serviceImpl.LinkDataset)
+          .AddMethod(__Method_UnlinkDataset, serviceImpl.UnlinkDataset).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -640,6 +1148,13 @@ namespace Google.Cloud.StorageInsights.V1 {
       serviceBinder.AddMethod(__Method_DeleteReportConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.DeleteReportConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReportConfig));
       serviceBinder.AddMethod(__Method_ListReportDetails, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.ListReportDetailsRequest, global::Google.Cloud.StorageInsights.V1.ListReportDetailsResponse>(serviceImpl.ListReportDetails));
       serviceBinder.AddMethod(__Method_GetReportDetail, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.GetReportDetailRequest, global::Google.Cloud.StorageInsights.V1.ReportDetail>(serviceImpl.GetReportDetail));
+      serviceBinder.AddMethod(__Method_ListDatasetConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest, global::Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse>(serviceImpl.ListDatasetConfigs));
+      serviceBinder.AddMethod(__Method_GetDatasetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest, global::Google.Cloud.StorageInsights.V1.DatasetConfig>(serviceImpl.GetDatasetConfig));
+      serviceBinder.AddMethod(__Method_CreateDatasetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatasetConfig));
+      serviceBinder.AddMethod(__Method_UpdateDatasetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatasetConfig));
+      serviceBinder.AddMethod(__Method_DeleteDatasetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatasetConfig));
+      serviceBinder.AddMethod(__Method_LinkDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.LinkDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.LinkDataset));
+      serviceBinder.AddMethod(__Method_UnlinkDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.UnlinkDataset));
     }
 
   }
