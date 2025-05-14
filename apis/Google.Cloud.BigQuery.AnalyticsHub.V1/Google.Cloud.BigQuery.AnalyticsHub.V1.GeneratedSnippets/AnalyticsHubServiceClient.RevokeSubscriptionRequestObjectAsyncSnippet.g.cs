@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             RevokeSubscriptionRequest request = new RevokeSubscriptionRequest
             {
                 SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+                RevokeCommercial = false,
             };
             // Make the request
             RevokeSubscriptionResponse response = await analyticsHubServiceClient.RevokeSubscriptionAsync(request);

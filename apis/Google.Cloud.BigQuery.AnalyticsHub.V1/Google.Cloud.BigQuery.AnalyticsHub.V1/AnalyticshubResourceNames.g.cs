@@ -2201,6 +2201,15 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
                             get => string.IsNullOrEmpty(Table) ? null : TableName.Parse(Table, allowUnparsed: true);
                             set => Table = value?.ToString() ?? "";
                         }
+
+                        /// <summary>
+                        /// <see cref="RoutineName"/>-typed view over the <see cref="Routine"/> resource name property.
+                        /// </summary>
+                        public RoutineName RoutineAsRoutineName
+                        {
+                            get => string.IsNullOrEmpty(Routine) ? null : RoutineName.Parse(Routine, allowUnparsed: true);
+                            set => Routine = value?.ToString() ?? "";
+                        }
                     }
                 }
             }
@@ -2216,6 +2225,25 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
                     set => Topic = value?.ToString() ?? "";
                 }
             }
+
+            public partial class CommercialInfo
+            {
+                public partial class Types
+                {
+                    public partial class GoogleCloudMarketplaceInfo
+                    {
+                        /// <summary>
+                        /// <see cref="ManagedServiceName"/>-typed view over the <see cref="Service"/> resource name
+                        /// property.
+                        /// </summary>
+                        public ManagedServiceName ServiceAsManagedServiceName
+                        {
+                            get => string.IsNullOrEmpty(Service) ? null : ManagedServiceName.Parse(Service, allowUnparsed: true);
+                            set => Service = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -2228,6 +2256,27 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbav::SubscriptionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class CommercialInfo
+            {
+                public partial class Types
+                {
+                    public partial class GoogleCloudMarketplaceInfo
+                    {
+                        /// <summary>
+                        /// <see cref="OrderName"/>-typed view over the <see cref="Order"/> resource name property.
+                        /// </summary>
+                        public OrderName OrderAsOrderName
+                        {
+                            get => string.IsNullOrEmpty(Order) ? null : OrderName.Parse(Order, allowUnparsed: true);
+                            set => Order = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
         }
     }
 

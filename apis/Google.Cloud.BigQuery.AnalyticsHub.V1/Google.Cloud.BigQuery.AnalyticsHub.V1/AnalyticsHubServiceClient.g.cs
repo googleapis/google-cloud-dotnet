@@ -782,7 +782,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -816,7 +816,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -850,7 +850,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -884,7 +884,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -939,7 +939,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="organization">
         /// Required. The organization resource path of the projects containing
-        /// DataExchanges. e.g. `organizations/myorg/locations/US`.
+        /// DataExchanges. e.g. `organizations/myorg/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -974,7 +974,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="organization">
         /// Required. The organization resource path of the projects containing
-        /// DataExchanges. e.g. `organizations/myorg/locations/US`.
+        /// DataExchanges. e.g. `organizations/myorg/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1035,7 +1035,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1065,7 +1065,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1077,7 +1077,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1146,7 +1146,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1165,7 +1165,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1184,7 +1184,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1199,7 +1199,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1237,7 +1237,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1362,7 +1362,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1377,7 +1377,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1392,7 +1392,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1404,7 +1404,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1464,7 +1464,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1532,7 +1532,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1627,7 +1627,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1642,7 +1642,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1657,7 +1657,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1669,7 +1669,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1684,7 +1684,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1699,7 +1699,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1738,7 +1738,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1757,7 +1757,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1776,7 +1776,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1791,7 +1791,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1810,7 +1810,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1829,7 +1829,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1954,7 +1954,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1969,7 +1969,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1984,7 +1984,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1996,7 +1996,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2011,7 +2011,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2026,7 +2026,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2085,7 +2085,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2105,7 +2105,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2125,7 +2125,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2142,7 +2142,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2162,7 +2162,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2182,7 +2182,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2190,8 +2190,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2200,8 +2202,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2210,8 +2214,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2247,12 +2253,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubscribeDataExchangeOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2263,12 +2271,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2279,12 +2289,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2292,12 +2304,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2308,12 +2322,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2324,12 +2340,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2403,7 +2421,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2420,7 +2438,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2437,7 +2455,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2451,7 +2469,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2468,7 +2486,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2485,7 +2503,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2524,7 +2542,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2539,7 +2557,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2554,7 +2572,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2566,7 +2584,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2581,7 +2599,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2596,7 +2614,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2626,7 +2644,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2660,7 +2678,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2694,7 +2712,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2728,7 +2746,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2781,8 +2799,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2817,8 +2835,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2853,8 +2871,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2889,8 +2907,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2951,7 +2969,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2966,7 +2984,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2981,7 +2999,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2993,7 +3011,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3008,7 +3026,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3023,7 +3041,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3089,7 +3107,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3104,7 +3122,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3119,7 +3137,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3131,7 +3149,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3146,7 +3164,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3161,7 +3179,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3792,8 +3810,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         public override lro::OperationsClient SubscribeDataExchangeOperationsClient { get; }
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3805,8 +3825,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         }
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
