@@ -1,5 +1,45 @@
 # Version history
 
+## Version 1.10.0, released 2025-05-14
+
+### New features
+
+- Sync AlloyDB API changes from HEAD to stable
+- Add new CSQL API for supporting Cluster creation from Cloud SQL
+- Add new methods for exporting, importing and upgrade Cluster operations
+- Add new fields to support observability configurations, machine types and PSC related configs
+- Add CloudSQL support for RestoreCluster operation
+- Add new fields and methods to the AlloyDB API
+- Improve documentation of existing API fields
+- Add GCA Entitlement type
+- Add fields to PscInstanceConfig
+- Add recommended_value and scope field to SupportedDatabaseFlags
+- Make user optional in ExecuteSql API
+- Add Import and Export functionalities
+- Add machine_type field to instance config
+- Add a new GCAEntitlement field in Gemini config
+- Add the GCAInstanceConfig field in instance
+
+### Documentation improvements
+
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `zone_id` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `id` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `ip` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `state` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `database_flags` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1.GenerateClientCertificateRequest` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.alloydb.v1.OperationMetadata` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1beta.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1beta.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `track_wait_event_types` in message `.google.cloud.alloydb.v1beta.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1beta.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1beta.GenerateClientCertificateRequest` is changed
+
 ## Version 1.9.0, released 2024-10-29
 
 ### New features
