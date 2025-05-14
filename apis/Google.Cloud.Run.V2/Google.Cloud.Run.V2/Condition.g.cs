@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKsDAoJQ29uZGl0",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLHDAoJQ29uZGl0",
             "aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4yJC5nb29nbGUuY2xv",
             "dWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNzYWdlGAMgASgJEjgK",
             "FGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
@@ -41,7 +41,7 @@ namespace Google.Cloud.Run.V2 {
             "SVRJT05fUkVDT05DSUxJTkcQAhIUChBDT05ESVRJT05fRkFJTEVEEAMSFwoT",
             "Q09ORElUSU9OX1NVQ0NFRURFRBAEIkYKCFNldmVyaXR5EhgKFFNFVkVSSVRZ",
             "X1VOU1BFQ0lGSUVEEAASCQoFRVJST1IQARILCgdXQVJOSU5HEAISCAoESU5G",
-            "TxADIrIDCgxDb21tb25SZWFzb24SGwoXQ09NTU9OX1JFQVNPTl9VTkRFRklO",
+            "TxADIs0DCgxDb21tb25SZWFzb24SGwoXQ09NTU9OX1JFQVNPTl9VTkRFRklO",
             "RUQQABILCgdVTktOT1dOEAESEwoPUkVWSVNJT05fRkFJTEVEEAMSHgoaUFJP",
             "R1JFU1NfREVBRExJTkVfRVhDRUVERUQQBBIVChFDT05UQUlORVJfTUlTU0lO",
             "RxAGEh8KG0NPTlRBSU5FUl9QRVJNSVNTSU9OX0RFTklFRBAHEiAKHENPTlRB",
@@ -50,21 +50,21 @@ namespace Google.Cloud.Run.V2 {
             "WV9QRVJNSVNTSU9OX0RFTklFRBAKEh8KG0VOQ1JZUFRJT05fS0VZX0NIRUNL",
             "X0ZBSUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNTX0NIRUNLX0ZBSUxFRBAMEhkK",
             "FVdBSVRJTkdfRk9SX09QRVJBVElPThANEhMKD0lNTUVESUFURV9SRVRSWRAO",
-            "EhMKD1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBAiygIKDlJldmlz",
-            "aW9uUmVhc29uEh0KGVJFVklTSU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQ",
-            "RU5ESU5HEAESCwoHUkVTRVJWRRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklO",
-            "RxAEEg4KClJFQ1JFQVRJTkcQBRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVS",
-            "X0VSUk9SEAYSJAogQ1VTVE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQ",
-            "BxIhCh1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElW",
-            "RV9SRVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAK",
-            "EhgKFEhFQUxUSF9DSEVDS19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19X",
-            "QVJNSU5HEAwimwEKD0V4ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVB",
-            "U09OX1VOREVGSU5FRBAAEiQKIEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5H",
-            "X0VSUk9SEAESFgoSTk9OX1pFUk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVE",
-            "EAMSDgoKQ0FOQ0VMTElORxAEEgsKB0RFTEVURUQQBUIJCgdyZWFzb25zQlYK",
-            "F2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWilj",
-            "bG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJv",
-            "dG8z"));
+            "EhMKD1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBASGQoVVlBDX05F",
+            "VFdPUktfTk9UX0ZPVU5EEBEiygIKDlJldmlzaW9uUmVhc29uEh0KGVJFVklT",
+            "SU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQRU5ESU5HEAESCwoHUkVTRVJW",
+            "RRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklORxAEEg4KClJFQ1JFQVRJTkcQ",
+            "BRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVSX0VSUk9SEAYSJAogQ1VTVE9N",
+            "SVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIhCh1NSU5fSU5TVEFOQ0VT",
+            "X05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9SRVZJU0lPTl9MSU1JVF9S",
+            "RUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgKFEhFQUxUSF9DSEVDS19T",
+            "S0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJNSU5HEAwimwEKD0V4ZWN1",
+            "dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09OX1VOREVGSU5FRBAAEiQK",
+            "IEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5HX0VSUk9SEAESFgoSTk9OX1pF",
+            "Uk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVEEAMSDgoKQ0FOQ0VMTElORxAE",
+            "EgsKB0RFTEVURUQQBUIJCgdyZWFzb25zQlYKF2NvbS5nb29nbGUuY2xvdWQu",
+            "cnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dv",
+            "L3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -763,6 +763,10 @@ namespace Google.Cloud.Run.V2 {
         /// An internal error occurred. Further information may be in the message.
         /// </summary>
         [pbr::OriginalName("INTERNAL")] Internal = 16,
+        /// <summary>
+        /// User-provided VPC network was not found.
+        /// </summary>
+        [pbr::OriginalName("VPC_NETWORK_NOT_FOUND")] VpcNetworkNotFound = 17,
       }
 
       /// <summary>
