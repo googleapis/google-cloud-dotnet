@@ -66,7 +66,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 };
                 var insertOp = instancesClient.Insert(projectId, zone, instanceResource);
                 var completed = insertOp.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
-                Assert.Null(completed.Exception);
+                Assert.True(completed.Exception is null, completed.Exception?.ToString());
                 Assert.True(completed.IsCompleted);
                 _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
             }
