@@ -35,6 +35,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Attempting to write data to a non-empty table fails with an error.
         /// </summary>
         [ApiValue("WRITE_EMPTY")]
-        WriteIfEmpty
+        WriteIfEmpty,
+	/// <summary>
+	/// If the table already exists, BigQuery overwrites the
+	/// data, but keeps the constraints and schema of the existing table.
+	/// </summary>
+	[ApiValue("WRITE_TRUNCATE_DATA")]
+	WriteTruncateData
     }
 }
