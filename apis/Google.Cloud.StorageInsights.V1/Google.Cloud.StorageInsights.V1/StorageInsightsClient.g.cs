@@ -21,6 +21,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -55,6 +56,18 @@ namespace Google.Cloud.StorageInsights.V1
             DeleteReportConfigSettings = existing.DeleteReportConfigSettings;
             ListReportDetailsSettings = existing.ListReportDetailsSettings;
             GetReportDetailSettings = existing.GetReportDetailSettings;
+            ListDatasetConfigsSettings = existing.ListDatasetConfigsSettings;
+            GetDatasetConfigSettings = existing.GetDatasetConfigSettings;
+            CreateDatasetConfigSettings = existing.CreateDatasetConfigSettings;
+            CreateDatasetConfigOperationsSettings = existing.CreateDatasetConfigOperationsSettings.Clone();
+            UpdateDatasetConfigSettings = existing.UpdateDatasetConfigSettings;
+            UpdateDatasetConfigOperationsSettings = existing.UpdateDatasetConfigOperationsSettings.Clone();
+            DeleteDatasetConfigSettings = existing.DeleteDatasetConfigSettings;
+            DeleteDatasetConfigOperationsSettings = existing.DeleteDatasetConfigOperationsSettings.Clone();
+            LinkDatasetSettings = existing.LinkDatasetSettings;
+            LinkDatasetOperationsSettings = existing.LinkDatasetOperationsSettings.Clone();
+            UnlinkDatasetSettings = existing.UnlinkDatasetSettings;
+            UnlinkDatasetOperationsSettings = existing.UnlinkDatasetOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -168,6 +181,216 @@ namespace Google.Cloud.StorageInsights.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetReportDetailSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.ListDatasetConfigs</c> and <c>StorageInsightsClient.ListDatasetConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDatasetConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.GetDatasetConfig</c> and <c>StorageInsightsClient.GetDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDatasetConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.CreateDatasetConfig</c> and <c>StorageInsightsClient.CreateDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDatasetConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageInsightsClient.CreateDatasetConfig</c> and
+        /// <c>StorageInsightsClient.CreateDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDatasetConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.UpdateDatasetConfig</c> and <c>StorageInsightsClient.UpdateDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDatasetConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageInsightsClient.UpdateDatasetConfig</c> and
+        /// <c>StorageInsightsClient.UpdateDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDatasetConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.DeleteDatasetConfig</c> and <c>StorageInsightsClient.DeleteDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDatasetConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageInsightsClient.DeleteDatasetConfig</c> and
+        /// <c>StorageInsightsClient.DeleteDatasetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDatasetConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.LinkDataset</c> and <c>StorageInsightsClient.LinkDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LinkDatasetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageInsightsClient.LinkDataset</c> and
+        /// <c>StorageInsightsClient.LinkDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings LinkDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageInsightsClient.UnlinkDataset</c> and <c>StorageInsightsClient.UnlinkDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UnlinkDatasetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageInsightsClient.UnlinkDataset</c> and
+        /// <c>StorageInsightsClient.UnlinkDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UnlinkDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1148,6 +1371,974 @@ namespace Google.Cloud.StorageInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReportDetail> GetReportDetailAsync(ReportDetailName name, st::CancellationToken cancellationToken) =>
             GetReportDetailAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigs(ListDatasetConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigsAsync(ListDatasetConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatasetConfigsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetConfigsRequest request = new ListDatasetConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasetConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatasetConfigsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetConfigsRequest request = new ListDatasetConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasetConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatasetConfigsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetConfigsRequest request = new ListDatasetConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasetConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDatasetConfigsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatasetConfigsRequest request = new ListDatasetConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatasetConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetConfig GetDatasetConfig(GetDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetConfig> GetDatasetConfigAsync(GetDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetConfig> GetDatasetConfigAsync(GetDatasetConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetDatasetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetConfig GetDatasetConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetConfig(new GetDatasetConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetConfig> GetDatasetConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetConfigAsync(new GetDatasetConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetConfig> GetDatasetConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDatasetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetConfig GetDatasetConfig(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetConfig(new GetDatasetConfigRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetConfig> GetDatasetConfigAsync(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetConfigAsync(new GetDatasetConfigRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetConfig> GetDatasetConfigAsync(DatasetConfigName name, st::CancellationToken cancellationToken) =>
+            GetDatasetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> CreateDatasetConfig(CreateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(CreateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(CreateDatasetConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateDatasetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDatasetConfig</c>.</summary>
+        public virtual lro::OperationsClient CreateDatasetConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDatasetConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> PollOnceCreateDatasetConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatasetConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDatasetConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> PollOnceCreateDatasetConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatasetConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="datasetConfig">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="datasetConfigId">
+        /// Required. ID of the requesting object.
+        /// If auto-generating ID is enabled on the server-side, remove this field and
+        /// `dataset_config_id` from the method_signature of Create RPC
+        /// Note: The value should not contain any hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> CreateDatasetConfig(string parent, DatasetConfig datasetConfig, string datasetConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetConfig(new CreateDatasetConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DatasetConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)),
+                DatasetConfig = gax::GaxPreconditions.CheckNotNull(datasetConfig, nameof(datasetConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="datasetConfig">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="datasetConfigId">
+        /// Required. ID of the requesting object.
+        /// If auto-generating ID is enabled on the server-side, remove this field and
+        /// `dataset_config_id` from the method_signature of Create RPC
+        /// Note: The value should not contain any hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(string parent, DatasetConfig datasetConfig, string datasetConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetConfigAsync(new CreateDatasetConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DatasetConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)),
+                DatasetConfig = gax::GaxPreconditions.CheckNotNull(datasetConfig, nameof(datasetConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="datasetConfig">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="datasetConfigId">
+        /// Required. ID of the requesting object.
+        /// If auto-generating ID is enabled on the server-side, remove this field and
+        /// `dataset_config_id` from the method_signature of Create RPC
+        /// Note: The value should not contain any hyphens.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(string parent, DatasetConfig datasetConfig, string datasetConfigId, st::CancellationToken cancellationToken) =>
+            CreateDatasetConfigAsync(parent, datasetConfig, datasetConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="datasetConfig">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="datasetConfigId">
+        /// Required. ID of the requesting object.
+        /// If auto-generating ID is enabled on the server-side, remove this field and
+        /// `dataset_config_id` from the method_signature of Create RPC
+        /// Note: The value should not contain any hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> CreateDatasetConfig(gagr::LocationName parent, DatasetConfig datasetConfig, string datasetConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetConfig(new CreateDatasetConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DatasetConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)),
+                DatasetConfig = gax::GaxPreconditions.CheckNotNull(datasetConfig, nameof(datasetConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="datasetConfig">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="datasetConfigId">
+        /// Required. ID of the requesting object.
+        /// If auto-generating ID is enabled on the server-side, remove this field and
+        /// `dataset_config_id` from the method_signature of Create RPC
+        /// Note: The value should not contain any hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(gagr::LocationName parent, DatasetConfig datasetConfig, string datasetConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetConfigAsync(new CreateDatasetConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DatasetConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)),
+                DatasetConfig = gax::GaxPreconditions.CheckNotNull(datasetConfig, nameof(datasetConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent.
+        /// </param>
+        /// <param name="datasetConfig">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="datasetConfigId">
+        /// Required. ID of the requesting object.
+        /// If auto-generating ID is enabled on the server-side, remove this field and
+        /// `dataset_config_id` from the method_signature of Create RPC
+        /// Note: The value should not contain any hyphens.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(gagr::LocationName parent, DatasetConfig datasetConfig, string datasetConfigId, st::CancellationToken cancellationToken) =>
+            CreateDatasetConfigAsync(parent, datasetConfig, datasetConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> UpdateDatasetConfig(UpdateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> UpdateDatasetConfigAsync(UpdateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> UpdateDatasetConfigAsync(UpdateDatasetConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDatasetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDatasetConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateDatasetConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDatasetConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> PollOnceUpdateDatasetConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatasetConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDatasetConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> PollOnceUpdateDatasetConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatasetConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="datasetConfig">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `DatasetConfig` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not provide a mask then it returns an "Invalid Argument" error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetConfig, OperationMetadata> UpdateDatasetConfig(DatasetConfig datasetConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatasetConfig(new UpdateDatasetConfigRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                DatasetConfig = gax::GaxPreconditions.CheckNotNull(datasetConfig, nameof(datasetConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="datasetConfig">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `DatasetConfig` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not provide a mask then it returns an "Invalid Argument" error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> UpdateDatasetConfigAsync(DatasetConfig datasetConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatasetConfigAsync(new UpdateDatasetConfigRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                DatasetConfig = gax::GaxPreconditions.CheckNotNull(datasetConfig, nameof(datasetConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="datasetConfig">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `DatasetConfig` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not provide a mask then it returns an "Invalid Argument" error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> UpdateDatasetConfigAsync(DatasetConfig datasetConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDatasetConfigAsync(datasetConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDatasetConfig(DeleteDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(DeleteDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(DeleteDatasetConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDatasetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDatasetConfig</c>.</summary>
+        public virtual lro::OperationsClient DeleteDatasetConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDatasetConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDatasetConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatasetConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDatasetConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDatasetConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatasetConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDatasetConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetConfig(new DeleteDatasetConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetConfigAsync(new DeleteDatasetConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDatasetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDatasetConfig(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetConfig(new DeleteDatasetConfigRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetConfigAsync(new DeleteDatasetConfigRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(DatasetConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteDatasetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LinkDatasetResponse, OperationMetadata> LinkDataset(LinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(LinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(LinkDatasetRequest request, st::CancellationToken cancellationToken) =>
+            LinkDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>LinkDataset</c>.</summary>
+        public virtual lro::OperationsClient LinkDatasetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>LinkDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LinkDatasetResponse, OperationMetadata> PollOnceLinkDataset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LinkDatasetResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), LinkDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>LinkDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> PollOnceLinkDatasetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LinkDatasetResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), LinkDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LinkDatasetResponse, OperationMetadata> LinkDataset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            LinkDataset(new LinkDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            LinkDatasetAsync(new LinkDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(string name, st::CancellationToken cancellationToken) =>
+            LinkDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LinkDatasetResponse, OperationMetadata> LinkDataset(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            LinkDataset(new LinkDatasetRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            LinkDatasetAsync(new LinkDatasetRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(DatasetConfigName name, st::CancellationToken cancellationToken) =>
+            LinkDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> UnlinkDataset(UnlinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(UnlinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(UnlinkDatasetRequest request, st::CancellationToken cancellationToken) =>
+            UnlinkDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UnlinkDataset</c>.</summary>
+        public virtual lro::OperationsClient UnlinkDatasetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UnlinkDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceUnlinkDataset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UnlinkDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UnlinkDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceUnlinkDatasetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UnlinkDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> UnlinkDataset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UnlinkDataset(new UnlinkDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UnlinkDatasetAsync(new UnlinkDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(string name, st::CancellationToken cancellationToken) =>
+            UnlinkDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> UnlinkDataset(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            UnlinkDataset(new UnlinkDatasetRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(DatasetConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            UnlinkDatasetAsync(new UnlinkDatasetRequest
+            {
+                DatasetConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(DatasetConfigName name, st::CancellationToken cancellationToken) =>
+            UnlinkDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>StorageInsights client wrapper implementation, for convenient use.</summary>
@@ -1170,6 +2361,20 @@ namespace Google.Cloud.StorageInsights.V1
 
         private readonly gaxgrpc::ApiCall<GetReportDetailRequest, ReportDetail> _callGetReportDetail;
 
+        private readonly gaxgrpc::ApiCall<ListDatasetConfigsRequest, ListDatasetConfigsResponse> _callListDatasetConfigs;
+
+        private readonly gaxgrpc::ApiCall<GetDatasetConfigRequest, DatasetConfig> _callGetDatasetConfig;
+
+        private readonly gaxgrpc::ApiCall<CreateDatasetConfigRequest, lro::Operation> _callCreateDatasetConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateDatasetConfigRequest, lro::Operation> _callUpdateDatasetConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteDatasetConfigRequest, lro::Operation> _callDeleteDatasetConfig;
+
+        private readonly gaxgrpc::ApiCall<LinkDatasetRequest, lro::Operation> _callLinkDataset;
+
+        private readonly gaxgrpc::ApiCall<UnlinkDatasetRequest, lro::Operation> _callUnlinkDataset;
+
         /// <summary>
         /// Constructs a client wrapper for the StorageInsights service, with the specified gRPC client and settings.
         /// </summary>
@@ -1185,6 +2390,11 @@ namespace Google.Cloud.StorageInsights.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            CreateDatasetConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatasetConfigOperationsSettings, logger);
+            UpdateDatasetConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatasetConfigOperationsSettings, logger);
+            DeleteDatasetConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetConfigOperationsSettings, logger);
+            LinkDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LinkDatasetOperationsSettings, logger);
+            UnlinkDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UnlinkDatasetOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListReportConfigs = clientHelper.BuildApiCall<ListReportConfigsRequest, ListReportConfigsResponse>("ListReportConfigs", grpcClient.ListReportConfigsAsync, grpcClient.ListReportConfigs, effectiveSettings.ListReportConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReportConfigs);
@@ -1207,6 +2417,27 @@ namespace Google.Cloud.StorageInsights.V1
             _callGetReportDetail = clientHelper.BuildApiCall<GetReportDetailRequest, ReportDetail>("GetReportDetail", grpcClient.GetReportDetailAsync, grpcClient.GetReportDetail, effectiveSettings.GetReportDetailSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReportDetail);
             Modify_GetReportDetailApiCall(ref _callGetReportDetail);
+            _callListDatasetConfigs = clientHelper.BuildApiCall<ListDatasetConfigsRequest, ListDatasetConfigsResponse>("ListDatasetConfigs", grpcClient.ListDatasetConfigsAsync, grpcClient.ListDatasetConfigs, effectiveSettings.ListDatasetConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDatasetConfigs);
+            Modify_ListDatasetConfigsApiCall(ref _callListDatasetConfigs);
+            _callGetDatasetConfig = clientHelper.BuildApiCall<GetDatasetConfigRequest, DatasetConfig>("GetDatasetConfig", grpcClient.GetDatasetConfigAsync, grpcClient.GetDatasetConfig, effectiveSettings.GetDatasetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDatasetConfig);
+            Modify_GetDatasetConfigApiCall(ref _callGetDatasetConfig);
+            _callCreateDatasetConfig = clientHelper.BuildApiCall<CreateDatasetConfigRequest, lro::Operation>("CreateDatasetConfig", grpcClient.CreateDatasetConfigAsync, grpcClient.CreateDatasetConfig, effectiveSettings.CreateDatasetConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDatasetConfig);
+            Modify_CreateDatasetConfigApiCall(ref _callCreateDatasetConfig);
+            _callUpdateDatasetConfig = clientHelper.BuildApiCall<UpdateDatasetConfigRequest, lro::Operation>("UpdateDatasetConfig", grpcClient.UpdateDatasetConfigAsync, grpcClient.UpdateDatasetConfig, effectiveSettings.UpdateDatasetConfigSettings).WithGoogleRequestParam("dataset_config.name", request => request.DatasetConfig?.Name);
+            Modify_ApiCall(ref _callUpdateDatasetConfig);
+            Modify_UpdateDatasetConfigApiCall(ref _callUpdateDatasetConfig);
+            _callDeleteDatasetConfig = clientHelper.BuildApiCall<DeleteDatasetConfigRequest, lro::Operation>("DeleteDatasetConfig", grpcClient.DeleteDatasetConfigAsync, grpcClient.DeleteDatasetConfig, effectiveSettings.DeleteDatasetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDatasetConfig);
+            Modify_DeleteDatasetConfigApiCall(ref _callDeleteDatasetConfig);
+            _callLinkDataset = clientHelper.BuildApiCall<LinkDatasetRequest, lro::Operation>("LinkDataset", grpcClient.LinkDatasetAsync, grpcClient.LinkDataset, effectiveSettings.LinkDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callLinkDataset);
+            Modify_LinkDatasetApiCall(ref _callLinkDataset);
+            _callUnlinkDataset = clientHelper.BuildApiCall<UnlinkDatasetRequest, lro::Operation>("UnlinkDataset", grpcClient.UnlinkDatasetAsync, grpcClient.UnlinkDataset, effectiveSettings.UnlinkDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUnlinkDataset);
+            Modify_UnlinkDatasetApiCall(ref _callUnlinkDataset);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1225,6 +2456,20 @@ namespace Google.Cloud.StorageInsights.V1
         partial void Modify_ListReportDetailsApiCall(ref gaxgrpc::ApiCall<ListReportDetailsRequest, ListReportDetailsResponse> call);
 
         partial void Modify_GetReportDetailApiCall(ref gaxgrpc::ApiCall<GetReportDetailRequest, ReportDetail> call);
+
+        partial void Modify_ListDatasetConfigsApiCall(ref gaxgrpc::ApiCall<ListDatasetConfigsRequest, ListDatasetConfigsResponse> call);
+
+        partial void Modify_GetDatasetConfigApiCall(ref gaxgrpc::ApiCall<GetDatasetConfigRequest, DatasetConfig> call);
+
+        partial void Modify_CreateDatasetConfigApiCall(ref gaxgrpc::ApiCall<CreateDatasetConfigRequest, lro::Operation> call);
+
+        partial void Modify_UpdateDatasetConfigApiCall(ref gaxgrpc::ApiCall<UpdateDatasetConfigRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDatasetConfigApiCall(ref gaxgrpc::ApiCall<DeleteDatasetConfigRequest, lro::Operation> call);
+
+        partial void Modify_LinkDatasetApiCall(ref gaxgrpc::ApiCall<LinkDatasetRequest, lro::Operation> call);
+
+        partial void Modify_UnlinkDatasetApiCall(ref gaxgrpc::ApiCall<UnlinkDatasetRequest, lro::Operation> call);
 
         partial void OnConstruction(StorageInsights.StorageInsightsClient grpcClient, StorageInsightsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1247,6 +2492,20 @@ namespace Google.Cloud.StorageInsights.V1
         partial void Modify_ListReportDetailsRequest(ref ListReportDetailsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetReportDetailRequest(ref GetReportDetailRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDatasetConfigsRequest(ref ListDatasetConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDatasetConfigRequest(ref GetDatasetConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDatasetConfigRequest(ref CreateDatasetConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDatasetConfigRequest(ref UpdateDatasetConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDatasetConfigRequest(ref DeleteDatasetConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_LinkDatasetRequest(ref LinkDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UnlinkDatasetRequest(ref UnlinkDatasetRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists ReportConfigs in a given project and location.
@@ -1415,6 +2674,191 @@ namespace Google.Cloud.StorageInsights.V1
             Modify_GetReportDetailRequest(ref request, ref callSettings);
             return _callGetReportDetail.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigs(ListDatasetConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatasetConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDatasetConfigsRequest, ListDatasetConfigsResponse, DatasetConfig>(_callListDatasetConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the dataset configurations in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> ListDatasetConfigsAsync(ListDatasetConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatasetConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatasetConfigsRequest, ListDatasetConfigsResponse, DatasetConfig>(_callListDatasetConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DatasetConfig GetDatasetConfig(GetDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDatasetConfigRequest(ref request, ref callSettings);
+            return _callGetDatasetConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DatasetConfig> GetDatasetConfigAsync(GetDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDatasetConfigRequest(ref request, ref callSettings);
+            return _callGetDatasetConfig.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDatasetConfig</c>.</summary>
+        public override lro::OperationsClient CreateDatasetConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatasetConfig, OperationMetadata> CreateDatasetConfig(CreateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatasetConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetConfig, OperationMetadata>(_callCreateDatasetConfig.Sync(request, callSettings), CreateDatasetConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> CreateDatasetConfigAsync(CreateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatasetConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetConfig, OperationMetadata>(await _callCreateDatasetConfig.Async(request, callSettings).ConfigureAwait(false), CreateDatasetConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDatasetConfig</c>.</summary>
+        public override lro::OperationsClient UpdateDatasetConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatasetConfig, OperationMetadata> UpdateDatasetConfig(UpdateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatasetConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetConfig, OperationMetadata>(_callUpdateDatasetConfig.Sync(request, callSettings), UpdateDatasetConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatasetConfig, OperationMetadata>> UpdateDatasetConfigAsync(UpdateDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatasetConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetConfig, OperationMetadata>(await _callUpdateDatasetConfig.Async(request, callSettings).ConfigureAwait(false), UpdateDatasetConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDatasetConfig</c>.</summary>
+        public override lro::OperationsClient DeleteDatasetConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDatasetConfig(DeleteDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatasetConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteDatasetConfig.Sync(request, callSettings), DeleteDatasetConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a dataset configuration in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatasetConfigAsync(DeleteDatasetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatasetConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDatasetConfig.Async(request, callSettings).ConfigureAwait(false), DeleteDatasetConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>LinkDataset</c>.</summary>
+        public override lro::OperationsClient LinkDatasetOperationsClient { get; }
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LinkDatasetResponse, OperationMetadata> LinkDataset(LinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LinkDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<LinkDatasetResponse, OperationMetadata>(_callLinkDataset.Sync(request, callSettings), LinkDatasetOperationsClient);
+        }
+
+        /// <summary>
+        /// Links a dataset to BigQuery in a given project for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LinkDatasetResponse, OperationMetadata>> LinkDatasetAsync(LinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LinkDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<LinkDatasetResponse, OperationMetadata>(await _callLinkDataset.Async(request, callSettings).ConfigureAwait(false), LinkDatasetOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UnlinkDataset</c>.</summary>
+        public override lro::OperationsClient UnlinkDatasetOperationsClient { get; }
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> UnlinkDataset(UnlinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnlinkDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callUnlinkDataset.Sync(request, callSettings), UnlinkDatasetOperationsClient);
+        }
+
+        /// <summary>
+        /// Unlinks a dataset from BigQuery in a given project
+        /// for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> UnlinkDatasetAsync(UnlinkDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnlinkDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callUnlinkDataset.Async(request, callSettings).ConfigureAwait(false), UnlinkDatasetOperationsClient);
+        }
     }
 
     public partial class ListReportConfigsRequest : gaxgrpc::IPageRequest
@@ -1422,6 +2866,10 @@ namespace Google.Cloud.StorageInsights.V1
     }
 
     public partial class ListReportDetailsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDatasetConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1439,6 +2887,28 @@ namespace Google.Cloud.StorageInsights.V1
         public scg::IEnumerator<ReportDetail> GetEnumerator() => ReportDetails.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDatasetConfigsResponse : gaxgrpc::IPageResponse<DatasetConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DatasetConfig> GetEnumerator() => DatasetConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class StorageInsights
+    {
+        public partial class StorageInsightsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class StorageInsights
