@@ -235,6 +235,18 @@
         "grpc": {
           "libraryClient": "OnlineReturnPolicyServiceClient",
           "rpcs": {
+            "CreateOnlineReturnPolicy": {
+              "methods": [
+                "CreateOnlineReturnPolicy",
+                "CreateOnlineReturnPolicyAsync"
+              ]
+            },
+            "DeleteOnlineReturnPolicy": {
+              "methods": [
+                "DeleteOnlineReturnPolicy",
+                "DeleteOnlineReturnPolicyAsync"
+              ]
+            },
             "GetOnlineReturnPolicy": {
               "methods": [
                 "GetOnlineReturnPolicy",
@@ -245,6 +257,12 @@
               "methods": [
                 "ListOnlineReturnPolicies",
                 "ListOnlineReturnPoliciesAsync"
+              ]
+            },
+            "UpdateOnlineReturnPolicy": {
+              "methods": [
+                "UpdateOnlineReturnPolicy",
+                "UpdateOnlineReturnPolicyAsync"
               ]
             }
           }
