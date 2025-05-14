@@ -44,7 +44,7 @@ namespace Google.Cloud.Run.V2 {
             "b24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIm8KFURlbGV0ZVJldmlzaW9u",
             "UmVxdWVzdBIxCgRuYW1lGAEgASgJQiPgQQL6QR0KG3J1bi5nb29nbGVhcGlz",
             "LmNvbS9SZXZpc2lvbhIVCg12YWxpZGF0ZV9vbmx5GAIgASgIEgwKBGV0YWcY",
-            "AyABKAki3w0KCFJldmlzaW9uEhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQY",
+            "AyABKAkiyw4KCFJldmlzaW9uEhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQY",
             "AiABKAlCA+BBAxIXCgpnZW5lcmF0aW9uGAMgASgDQgPgQQMSPgoGbGFiZWxz",
             "GAQgAygLMikuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5SZXZpc2lvbi5MYWJlbHNF",
             "bnRyeUID4EEDEkgKC2Fubm90YXRpb25zGAUgAygLMi4uZ29vZ2xlLmNsb3Vk",
@@ -78,31 +78,34 @@ namespace Google.Cloud.Run.V2 {
             "JiABKAgSRwoOc2NhbGluZ19zdGF0dXMYJyABKAsyKi5nb29nbGUuY2xvdWQu",
             "cnVuLnYyLlJldmlzaW9uU2NhbGluZ1N0YXR1c0ID4EEDEjgKDW5vZGVfc2Vs",
             "ZWN0b3IYKCABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLk5vZGVTZWxlY3Rv",
-            "chIRCgRldGFnGGMgASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6dOpBcQobcnVuLmdvb2ds",
-            "ZWFwaXMuY29tL1JldmlzaW9uEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vc2VydmljZXMve3NlcnZpY2V9L3JldmlzaW9ucy97",
-            "cmV2aXNpb259UgEBMoUGCglSZXZpc2lvbnMS0gEKC0dldFJldmlzaW9uEicu",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRSZXZpc2lvblJlcXVlc3QaHS5nb29n",
-            "bGUuY2xvdWQucnVuLnYyLlJldmlzaW9uInvaQQRuYW1lgtPkkwI6EjgvdjIv",
+            "chIyCh1ncHVfem9uYWxfcmVkdW5kYW5jeV9kaXNhYmxlZBgwIAEoCEIG4EEB",
+            "4EEDSACIAQESFAoHY3JlYXRvchgxIAEoCUID4EEDEhEKBGV0YWcYYyABKAlC",
+            "A+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ATp06kFxChtydW4uZ29vZ2xlYXBpcy5jb20vUmV2aXNp",
+            "b24ST3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9z",
+            "ZXJ2aWNlcy97c2VydmljZX0vcmV2aXNpb25zL3tyZXZpc2lvbn1SAQFCIAoe",
+            "X2dwdV96b25hbF9yZWR1bmRhbmN5X2Rpc2FibGVkMoUGCglSZXZpc2lvbnMS",
+            "0gEKC0dldFJldmlzaW9uEicuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRSZXZp",
+            "c2lvblJlcXVlc3QaHS5nb29nbGUuY2xvdWQucnVuLnYyLlJldmlzaW9uInva",
+            "QQRuYW1lgtPkkwI6EjgvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9zZXJ2aWNlcy8qL3JldmlzaW9ucy8qfYrT5JMCLhIsCgRuYW1lEiRwcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioS5wEKDUxpc3RSZXZp",
+            "c2lvbnMSKS5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RSZXZpc2lvbnNSZXF1",
+            "ZXN0GiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5MaXN0UmV2aXNpb25zUmVzcG9u",
+            "c2Uif9pBBnBhcmVudILT5JMCOhI4L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9zZXJ2aWNlcy8qfS9yZXZpc2lvbnOK0+STAjASLgoGcGFy",
+            "ZW50EiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioS8AEK",
+            "DkRlbGV0ZVJldmlzaW9uEiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5EZWxldGVS",
+            "ZXZpc2lvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "IpIBykEUCghSZXZpc2lvbhIIUmV2aXNpb27aQQRuYW1lgtPkkwI6KjgvdjIv",
             "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL3Jldmlz",
             "aW9ucy8qfYrT5JMCLhIsCgRuYW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97",
-            "bG9jYXRpb249Kn0vKioS5wEKDUxpc3RSZXZpc2lvbnMSKS5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLkxpc3RSZXZpc2lvbnNSZXF1ZXN0GiouZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5MaXN0UmV2aXNpb25zUmVzcG9uc2Uif9pBBnBhcmVudILT5JMC",
-            "OhI4L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNl",
-            "cy8qfS9yZXZpc2lvbnOK0+STAjASLgoGcGFyZW50EiRwcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy97bG9jYXRpb249Kn0vKioS8AEKDkRlbGV0ZVJldmlzaW9uEiou",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5EZWxldGVSZXZpc2lvblJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpIBykEUCghSZXZpc2lvbhII",
-            "UmV2aXNpb27aQQRuYW1lgtPkkwI6KjgvdjIve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9zZXJ2aWNlcy8qL3JldmlzaW9ucy8qfYrT5JMCLhIsCgRu",
-            "YW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioaRspB",
-            "EnJ1bi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CVQoXY29tLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjJCDVJldmlzaW9uUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
-            "dW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "bG9jYXRpb249Kn0vKioaRspBEnJ1bi5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CVQoX",
+            "Y29tLmdvb2dsZS5jbG91ZC5ydW4udjJCDVJldmlzaW9uUHJvdG9QAVopY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.StatusReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,7 +113,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListRevisionsRequest), global::Google.Cloud.Run.V2.ListRevisionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListRevisionsResponse), global::Google.Cloud.Run.V2.ListRevisionsResponse.Parser, new[]{ "Revisions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteRevisionRequest), global::Google.Cloud.Run.V2.DeleteRevisionRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Revision), global::Google.Cloud.Run.V2.Revision.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Service", "Scaling", "VpcAccess", "MaxInstanceRequestConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "ServiceMesh", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "Reconciling", "Conditions", "ObservedGeneration", "LogUri", "SatisfiesPzs", "SessionAffinity", "ScalingStatus", "NodeSelector", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Revision), global::Google.Cloud.Run.V2.Revision.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Service", "Scaling", "VpcAccess", "MaxInstanceRequestConcurrency", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "ServiceMesh", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "Reconciling", "Conditions", "ObservedGeneration", "LogUri", "SatisfiesPzs", "SessionAffinity", "ScalingStatus", "NodeSelector", "GpuZonalRedundancyDisabled", "Creator", "Etag" }, new[]{ "GpuZonalRedundancyDisabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1156,6 +1159,7 @@ namespace Google.Cloud.Run.V2 {
   {
     private static readonly pb::MessageParser<Revision> _parser = new pb::MessageParser<Revision>(() => new Revision());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Revision> Parser { get { return _parser; } }
@@ -1183,6 +1187,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Revision(Revision other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       uid_ = other.uid_;
       generation_ = other.generation_;
@@ -1214,6 +1219,8 @@ namespace Google.Cloud.Run.V2 {
       sessionAffinity_ = other.sessionAffinity_;
       scalingStatus_ = other.scalingStatus_ != null ? other.scalingStatus_.Clone() : null;
       nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
+      gpuZonalRedundancyDisabled_ = other.gpuZonalRedundancyDisabled_;
+      creator_ = other.creator_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1719,6 +1726,52 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "gpu_zonal_redundancy_disabled" field.</summary>
+    public const int GpuZonalRedundancyDisabledFieldNumber = 48;
+    private readonly static bool GpuZonalRedundancyDisabledDefaultValue = false;
+
+    private bool gpuZonalRedundancyDisabled_;
+    /// <summary>
+    /// Optional. Output only. True if GPU zonal redundancy is disabled on this
+    /// revision.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GpuZonalRedundancyDisabled {
+      get { if ((_hasBits0 & 1) != 0) { return gpuZonalRedundancyDisabled_; } else { return GpuZonalRedundancyDisabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        gpuZonalRedundancyDisabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "gpu_zonal_redundancy_disabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGpuZonalRedundancyDisabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "gpu_zonal_redundancy_disabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGpuZonalRedundancyDisabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "creator" field.</summary>
+    public const int CreatorFieldNumber = 49;
+    private string creator_ = "";
+    /// <summary>
+    /// Output only. Email address of the authenticated creator.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Creator {
+      get { return creator_; }
+      set {
+        creator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -1781,6 +1834,8 @@ namespace Google.Cloud.Run.V2 {
       if (SessionAffinity != other.SessionAffinity) return false;
       if (!object.Equals(ScalingStatus, other.ScalingStatus)) return false;
       if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
+      if (GpuZonalRedundancyDisabled != other.GpuZonalRedundancyDisabled) return false;
+      if (Creator != other.Creator) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1820,6 +1875,8 @@ namespace Google.Cloud.Run.V2 {
       if (SessionAffinity != false) hash ^= SessionAffinity.GetHashCode();
       if (scalingStatus_ != null) hash ^= ScalingStatus.GetHashCode();
       if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
+      if (HasGpuZonalRedundancyDisabled) hash ^= GpuZonalRedundancyDisabled.GetHashCode();
+      if (Creator.Length != 0) hash ^= Creator.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1948,6 +2005,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(194, 2);
         output.WriteMessage(NodeSelector);
       }
+      if (HasGpuZonalRedundancyDisabled) {
+        output.WriteRawTag(128, 3);
+        output.WriteBool(GpuZonalRedundancyDisabled);
+      }
+      if (Creator.Length != 0) {
+        output.WriteRawTag(138, 3);
+        output.WriteString(Creator);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -2071,6 +2136,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(194, 2);
         output.WriteMessage(NodeSelector);
       }
+      if (HasGpuZonalRedundancyDisabled) {
+        output.WriteRawTag(128, 3);
+        output.WriteBool(GpuZonalRedundancyDisabled);
+      }
+      if (Creator.Length != 0) {
+        output.WriteRawTag(138, 3);
+        output.WriteString(Creator);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -2167,6 +2240,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (nodeSelector_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(NodeSelector);
+      }
+      if (HasGpuZonalRedundancyDisabled) {
+        size += 2 + 1;
+      }
+      if (Creator.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Creator);
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -2298,6 +2377,12 @@ namespace Google.Cloud.Run.V2 {
           NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
         }
         NodeSelector.MergeFrom(other.NodeSelector);
+      }
+      if (other.HasGpuZonalRedundancyDisabled) {
+        GpuZonalRedundancyDisabled = other.GpuZonalRedundancyDisabled;
+      }
+      if (other.Creator.Length != 0) {
+        Creator = other.Creator;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -2474,6 +2559,14 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(NodeSelector);
             break;
           }
+          case 384: {
+            GpuZonalRedundancyDisabled = input.ReadBool();
+            break;
+          }
+          case 394: {
+            Creator = input.ReadString();
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2648,6 +2741,14 @@ namespace Google.Cloud.Run.V2 {
               NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
             }
             input.ReadMessage(NodeSelector);
+            break;
+          }
+          case 384: {
+            GpuZonalRedundancyDisabled = input.ReadBool();
+            break;
+          }
+          case 394: {
+            Creator = input.ReadString();
             break;
           }
           case 794: {

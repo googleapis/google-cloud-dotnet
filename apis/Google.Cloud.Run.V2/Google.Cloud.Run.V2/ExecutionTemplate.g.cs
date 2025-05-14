@@ -27,17 +27,17 @@ namespace Google.Cloud.Run.V2 {
             "Cixnb29nbGUvY2xvdWQvcnVuL3YyL2V4ZWN1dGlvbl90ZW1wbGF0ZS5wcm90",
             "bxITZ29vZ2xlLmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxonZ29vZ2xlL2Nsb3VkL3J1bi92Mi90YXNrX3RlbXBsYXRl",
-            "LnByb3RvIusCChFFeGVjdXRpb25UZW1wbGF0ZRJCCgZsYWJlbHMYASADKAsy",
+            "LnByb3RvIvACChFFeGVjdXRpb25UZW1wbGF0ZRJCCgZsYWJlbHMYASADKAsy",
             "Mi5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvblRlbXBsYXRlLkxhYmVs",
             "c0VudHJ5EkwKC2Fubm90YXRpb25zGAIgAygLMjcuZ29vZ2xlLmNsb3VkLnJ1",
-            "bi52Mi5FeGVjdXRpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0VudHJ5EhMKC3Bh",
-            "cmFsbGVsaXNtGAMgASgFEhIKCnRhc2tfY291bnQYBCABKAUSOAoIdGVtcGxh",
-            "dGUYBSABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2tUZW1wbGF0ZUID",
-            "4EECGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBQl4KF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhZFeGVj",
-            "dXRpb25UZW1wbGF0ZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vcnVu",
-            "L2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
+            "bi52Mi5FeGVjdXRpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0VudHJ5EhgKC3Bh",
+            "cmFsbGVsaXNtGAMgASgFQgPgQQESEgoKdGFza19jb3VudBgEIAEoBRI4Cgh0",
+            "ZW1wbGF0ZRgFIAEoCzIhLmdvb2dsZS5jbG91ZC5ydW4udjIuVGFza1RlbXBs",
+            "YXRlQgPgQQIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAFCXgoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJC",
+            "FkV4ZWN1dGlvblRlbXBsYXRlUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Run.V2.TaskTemplateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,13 +154,12 @@ namespace Google.Cloud.Run.V2 {
     public const int ParallelismFieldNumber = 3;
     private int parallelism_;
     /// <summary>
-    /// Specifies the maximum desired number of tasks the execution should run at
-    /// given time. Must be &lt;= task_count.
-    /// When the job is run, if this field is 0 or unset, the maximum possible
-    /// value will be used for that execution.
-    /// The actual number of tasks running in steady state will be less than this
-    /// number when there are fewer tasks waiting to be completed remaining,
-    /// i.e. when the work left to do is less than max parallelism.
+    /// Optional. Specifies the maximum desired number of tasks the execution
+    /// should run at given time. When the job is run, if this field is 0 or unset,
+    /// the maximum possible value will be used for that execution. The actual
+    /// number of tasks running in steady state will be less than this number when
+    /// there are fewer tasks waiting to be completed remaining, i.e. when the work
+    /// left to do is less than max parallelism.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
