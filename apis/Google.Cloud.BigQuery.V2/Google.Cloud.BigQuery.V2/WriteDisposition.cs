@@ -36,11 +36,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         [ApiValue("WRITE_EMPTY")]
         WriteIfEmpty,
-	/// <summary>
-	/// If the table already exists, BigQuery overwrites the
-	/// data, but keeps the constraints and schema of the existing table.
-	/// </summary>
-	[ApiValue("WRITE_TRUNCATE_DATA")]
-	WriteTruncateData
+        /// <summary>
+        /// If the table already exists, BigQuery overwrites the
+        /// data, but keeps the constraints and schema of the existing table.
+        /// </summary>
+        [ApiValue("WRITE_TRUNCATE_DATA")]
+        WriteTruncateData
     }
 }
