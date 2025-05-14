@@ -28,7 +28,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
   /// configuration, encompassing return policies for both ads and free listings
   /// ## programs. This API defines the following resource model:
   ///
-  /// [OnlineReturnPolicy][google.shopping.merchant.accounts.v1.OnlineReturnPolicy]
+  /// [OnlineReturnPolicy](/merchant/api/reference/rpc/google.shopping.merchant.accounts.v1beta#google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy)
   /// </summary>
   public static partial class OnlineReturnPolicyService
   {
@@ -75,6 +75,14 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest> __Marshaller_google_shopping_merchant_accounts_v1beta_ListOnlineReturnPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse> __Marshaller_google_shopping_merchant_accounts_v1beta_ListOnlineReturnPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest> __Marshaller_google_shopping_merchant_accounts_v1beta_CreateOnlineReturnPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest> __Marshaller_google_shopping_merchant_accounts_v1beta_UpdateOnlineReturnPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest> __Marshaller_google_shopping_merchant_accounts_v1beta_DeleteOnlineReturnPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.GetOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> __Method_GetOnlineReturnPolicy = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.GetOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>(
@@ -92,6 +100,30 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         __Marshaller_google_shopping_merchant_accounts_v1beta_ListOnlineReturnPoliciesRequest,
         __Marshaller_google_shopping_merchant_accounts_v1beta_ListOnlineReturnPoliciesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> __Method_CreateOnlineReturnPolicy = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateOnlineReturnPolicy",
+        __Marshaller_google_shopping_merchant_accounts_v1beta_CreateOnlineReturnPolicyRequest,
+        __Marshaller_google_shopping_merchant_accounts_v1beta_OnlineReturnPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> __Method_UpdateOnlineReturnPolicy = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateOnlineReturnPolicy",
+        __Marshaller_google_shopping_merchant_accounts_v1beta_UpdateOnlineReturnPolicyRequest,
+        __Marshaller_google_shopping_merchant_accounts_v1beta_OnlineReturnPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteOnlineReturnPolicy = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteOnlineReturnPolicy",
+        __Marshaller_google_shopping_merchant_accounts_v1beta_DeleteOnlineReturnPolicyRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -103,7 +135,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public abstract partial class OnlineReturnPolicyServiceBase
     {
       /// <summary>
-      /// Gets an existing return policy for a given business.
+      /// Gets an existing return policy for a given merchant.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -115,13 +147,49 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
 
       /// <summary>
-      /// Lists all existing return policies for a given business.
+      /// Lists all existing return policies for a given merchant.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse> ListOnlineReturnPolicies(global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> CreateOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> UpdateOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -156,7 +224,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
 
       /// <summary>
-      /// Gets an existing return policy for a given business.
+      /// Gets an existing return policy for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -169,7 +237,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return GetOnlineReturnPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an existing return policy for a given business.
+      /// Gets an existing return policy for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -180,7 +248,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetOnlineReturnPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets an existing return policy for a given business.
+      /// Gets an existing return policy for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -193,7 +261,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return GetOnlineReturnPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an existing return policy for a given business.
+      /// Gets an existing return policy for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -204,7 +272,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetOnlineReturnPolicy, null, options, request);
       }
       /// <summary>
-      /// Lists all existing return policies for a given business.
+      /// Lists all existing return policies for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -217,7 +285,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return ListOnlineReturnPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all existing return policies for a given business.
+      /// Lists all existing return policies for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -228,7 +296,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListOnlineReturnPolicies, null, options, request);
       }
       /// <summary>
-      /// Lists all existing return policies for a given business.
+      /// Lists all existing return policies for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -241,7 +309,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return ListOnlineReturnPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all existing return policies for a given business.
+      /// Lists all existing return policies for a given merchant.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -250,6 +318,150 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse> ListOnlineReturnPoliciesAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOnlineReturnPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy CreateOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateOnlineReturnPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy CreateOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateOnlineReturnPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateOnlineReturnPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateOnlineReturnPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy UpdateOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOnlineReturnPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy UpdateOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateOnlineReturnPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOnlineReturnPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateOnlineReturnPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteOnlineReturnPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOnlineReturnPolicy(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteOnlineReturnPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOnlineReturnPolicyAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteOnlineReturnPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing return policy for a given merchant.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOnlineReturnPolicyAsync(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteOnlineReturnPolicy, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -266,7 +478,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetOnlineReturnPolicy, serviceImpl.GetOnlineReturnPolicy)
-          .AddMethod(__Method_ListOnlineReturnPolicies, serviceImpl.ListOnlineReturnPolicies).Build();
+          .AddMethod(__Method_ListOnlineReturnPolicies, serviceImpl.ListOnlineReturnPolicies)
+          .AddMethod(__Method_CreateOnlineReturnPolicy, serviceImpl.CreateOnlineReturnPolicy)
+          .AddMethod(__Method_UpdateOnlineReturnPolicy, serviceImpl.UpdateOnlineReturnPolicy)
+          .AddMethod(__Method_DeleteOnlineReturnPolicy, serviceImpl.DeleteOnlineReturnPolicy).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -278,6 +493,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     {
       serviceBinder.AddMethod(__Method_GetOnlineReturnPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1Beta.GetOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>(serviceImpl.GetOnlineReturnPolicy));
       serviceBinder.AddMethod(__Method_ListOnlineReturnPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse>(serviceImpl.ListOnlineReturnPolicies));
+      serviceBinder.AddMethod(__Method_CreateOnlineReturnPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>(serviceImpl.CreateOnlineReturnPolicy));
+      serviceBinder.AddMethod(__Method_UpdateOnlineReturnPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest, global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>(serviceImpl.UpdateOnlineReturnPolicy));
+      serviceBinder.AddMethod(__Method_DeleteOnlineReturnPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteOnlineReturnPolicy));
     }
 
   }

@@ -29,86 +29,125 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             "Y2hhbnQuYWNjb3VudHMudjFiZXRhGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
             "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9m",
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "bxogZ29vZ2xlL3Nob3BwaW5nL3R5cGUvdHlwZXMucHJvdG8aFmdvb2dsZS90",
-            "eXBlL2RhdGUucHJvdG8iYwocR2V0T25saW5lUmV0dXJuUG9saWN5UmVxdWVz",
-            "dBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLW1lcmNoYW50YXBpLmdvb2dsZWFw",
-            "aXMuY29tL09ubGluZVJldHVyblBvbGljeSKZAQofTGlzdE9ubGluZVJldHVy",
-            "blBvbGljaWVzUmVxdWVzdBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLxItbWVy",
-            "Y2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vT25saW5lUmV0dXJuUG9saWN5EhYK",
-            "CXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BB",
-            "ASKZAQogTGlzdE9ubGluZVJldHVyblBvbGljaWVzUmVzcG9uc2USXAoWb25s",
-            "aW5lX3JldHVybl9wb2xpY2llcxgBIAMoCzI8Lmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5hY2NvdW50cy52MWJldGEuT25saW5lUmV0dXJuUG9saWN5EhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCSLhDwoST25saW5lUmV0dXJuUG9saWN5",
-            "EhEKBG5hbWUYASABKAlCA+BBCBIdChByZXR1cm5fcG9saWN5X2lkGAIgASgJ",
-            "QgPgQQMSFQoFbGFiZWwYAyABKAlCBuBBAuBBBRIZCgljb3VudHJpZXMYBCAD",
-            "KAlCBuBBAuBBBRJTCgZwb2xpY3kYBSABKAsyQy5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLk9ubGluZVJldHVyblBvbGljeS5Q",
-            "b2xpY3kSbgoSc2Vhc29uYWxfb3ZlcnJpZGVzGA4gAygLMk0uZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5PbmxpbmVSZXR1cm5Q",
-            "b2xpY3kuU2Vhc29uYWxPdmVycmlkZUID4EEBEmIKDnJlc3RvY2tpbmdfZmVl",
-            "GAYgASgLMkouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
-            "YmV0YS5PbmxpbmVSZXR1cm5Qb2xpY3kuUmVzdG9ja2luZ0ZlZRJhCg5yZXR1",
-            "cm5fbWV0aG9kcxgHIAMoDjJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
-            "Y2NvdW50cy52MWJldGEuT25saW5lUmV0dXJuUG9saWN5LlJldHVybk1ldGhv",
-            "ZBJjCg9pdGVtX2NvbmRpdGlvbnMYCCADKA4ySi5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLk9ubGluZVJldHVyblBvbGljeS5J",
-            "dGVtQ29uZGl0aW9uEmsKE3JldHVybl9zaGlwcGluZ19mZWUYCSABKAsyTi5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLk9ubGlu",
-            "ZVJldHVyblBvbGljeS5SZXR1cm5TaGlwcGluZ0ZlZRIeChFyZXR1cm5fcG9s",
-            "aWN5X3VyaRgKIAEoCUID4EECEiIKFWFjY2VwdF9kZWZlY3RpdmVfb25seRgL",
-            "IAEoCEgAiAEBEiAKE3Byb2Nlc3NfcmVmdW5kX2RheXMYDCABKAVIAYgBARIc",
-            "Cg9hY2NlcHRfZXhjaGFuZ2UYDSABKAhIAogBARr0AQoRUmV0dXJuU2hpcHBp",
-            "bmdGZWUSZgoEdHlwZRgBIAEoDjJTLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5hY2NvdW50cy52MWJldGEuT25saW5lUmV0dXJuUG9saWN5LlJldHVyblNo",
-            "aXBwaW5nRmVlLlR5cGVCA+BBAhIuCglmaXhlZF9mZWUYAiABKAsyGy5nb29n",
-            "bGUuc2hvcHBpbmcudHlwZS5QcmljZSJHCgRUeXBlEhQKEFRZUEVfVU5TUEVD",
-            "SUZJRUQQABIJCgVGSVhFRBABEh4KGkNVU1RPTUVSX1BBWUlOR19BQ1RVQUxf",
-            "RkVFEAIaYgoNUmVzdG9ja2luZ0ZlZRIwCglmaXhlZF9mZWUYASABKAsyGy5n",
-            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUgAEhcKDW1pY3JvX3BlcmNlbnQY",
-            "AiABKAVIAEIGCgR0eXBlGtUBCgZQb2xpY3kSVgoEdHlwZRgBIAEoDjJILmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuT25saW5l",
-            "UmV0dXJuUG9saWN5LlBvbGljeS5UeXBlEgwKBGRheXMYAiABKAMiZQoEVHlw",
-            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASIQodTlVNQkVSX09GX0RBWVNfQUZU",
-            "RVJfREVMSVZFUlkQARIOCgpOT19SRVRVUk5TEAISFAoQTElGRVRJTUVfUkVU",
-            "VVJOUxADGtQBChBTZWFzb25hbE92ZXJyaWRlEhUKC3JldHVybl9kYXlzGAUg",
-            "ASgFSAASLgoRcmV0dXJuX3VudGlsX2RhdGUYBiABKAsyES5nb29nbGUudHlw",
-            "ZS5EYXRlSAASEgoFbGFiZWwYASABKAlCA+BBAhIqCgpzdGFydF9kYXRlGAIg",
-            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEigKCGVuZF9kYXRlGAMgASgL",
-            "MhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECQg8KDXJldHVybl93aW5kb3ciWAoM",
-            "UmV0dXJuTWV0aG9kEh0KGVJFVFVSTl9NRVRIT0RfVU5TUEVDSUZJRUQQABIL",
-            "CgdCWV9NQUlMEAESDAoISU5fU1RPUkUQAhIOCgpBVF9BX0tJT1NLEAMiQgoN",
-            "SXRlbUNvbmRpdGlvbhIeChpJVEVNX0NPTkRJVElPTl9VTlNQRUNJRklFRBAA",
-            "EgcKA05FVxABEggKBFVTRUQQAjqWAepBkgEKLW1lcmNoYW50YXBpLmdvb2ds",
-            "ZWFwaXMuY29tL09ubGluZVJldHVyblBvbGljeRI3YWNjb3VudHMve2FjY291",
-            "bnR9L29ubGluZVJldHVyblBvbGljaWVzL3tyZXR1cm5fcG9saWN5fSoUb25s",
-            "aW5lUmV0dXJuUG9saWNpZXMyEm9ubGluZVJldHVyblBvbGljeUIYChZfYWNj",
-            "ZXB0X2RlZmVjdGl2ZV9vbmx5QhYKFF9wcm9jZXNzX3JlZnVuZF9kYXlzQhIK",
-            "EF9hY2NlcHRfZXhjaGFuZ2UyzgQKGU9ubGluZVJldHVyblBvbGljeVNlcnZp",
-            "Y2US5wEKFUdldE9ubGluZVJldHVyblBvbGljeRJGLmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuR2V0T25saW5lUmV0dXJuUG9s",
-            "aWN5UmVxdWVzdBo8Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50",
-            "cy52MWJldGEuT25saW5lUmV0dXJuUG9saWN5IkjaQQRuYW1lgtPkkwI7Ejkv",
-            "YWNjb3VudHMvdjFiZXRhL3tuYW1lPWFjY291bnRzLyovb25saW5lUmV0dXJu",
-            "UG9saWNpZXMvKn0S/QEKGExpc3RPbmxpbmVSZXR1cm5Qb2xpY2llcxJJLmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuTGlzdE9u",
-            "bGluZVJldHVyblBvbGljaWVzUmVxdWVzdBpKLmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5hY2NvdW50cy52MWJldGEuTGlzdE9ubGluZVJldHVyblBvbGlj",
-            "aWVzUmVzcG9uc2UiStpBBnBhcmVudILT5JMCOxI5L2FjY291bnRzL3YxYmV0",
-            "YS97cGFyZW50PWFjY291bnRzLyp9L29ubGluZVJldHVyblBvbGljaWVzGkfK",
-            "QRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKZAQosY29tLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGFCF09ubGluZVJldHVyblBv",
-            "bGljeVByb3RvUAFaTmNsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcvbWVy",
-            "Y2hhbnQvYWNjb3VudHMvYXBpdjFiZXRhL2FjY291bnRzcGI7YWNjb3VudHNw",
-            "YmIGcHJvdG8z"));
+            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
+            "dWYvZmllbGRfbWFzay5wcm90bxogZ29vZ2xlL3Nob3BwaW5nL3R5cGUvdHlw",
+            "ZXMucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8iYwocR2V0T25saW5l",
+            "UmV0dXJuUG9saWN5UmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLW1l",
+            "cmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL09ubGluZVJldHVyblBvbGljeSKZ",
+            "AQofTGlzdE9ubGluZVJldHVyblBvbGljaWVzUmVxdWVzdBJFCgZwYXJlbnQY",
+            "ASABKAlCNeBBAvpBLxItbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vT25s",
+            "aW5lUmV0dXJuUG9saWN5EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBh",
+            "Z2VfdG9rZW4YAyABKAlCA+BBASLJAQofQ3JlYXRlT25saW5lUmV0dXJuUG9s",
+            "aWN5UmVxdWVzdBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLxItbWVyY2hhbnRh",
+            "cGkuZ29vZ2xlYXBpcy5jb20vT25saW5lUmV0dXJuUG9saWN5El8KFG9ubGlu",
+            "ZV9yZXR1cm5fcG9saWN5GAIgASgLMjwuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
+            "YW50LmFjY291bnRzLnYxYmV0YS5PbmxpbmVSZXR1cm5Qb2xpY3lCA+BBAiKz",
+            "AQofVXBkYXRlT25saW5lUmV0dXJuUG9saWN5UmVxdWVzdBJfChRvbmxpbmVf",
+            "cmV0dXJuX3BvbGljeRgBIAEoCzI8Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
+            "dC5hY2NvdW50cy52MWJldGEuT25saW5lUmV0dXJuUG9saWN5QgPgQQISLwoL",
+            "dXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
+            "ImYKH0RlbGV0ZU9ubGluZVJldHVyblBvbGljeVJlcXVlc3QSQwoEbmFtZRgB",
+            "IAEoCUI14EEC+kEvCi1tZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9Pbmxp",
+            "bmVSZXR1cm5Qb2xpY3kimQEKIExpc3RPbmxpbmVSZXR1cm5Qb2xpY2llc1Jl",
+            "c3BvbnNlElwKFm9ubGluZV9yZXR1cm5fcG9saWNpZXMYASADKAsyPC5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLk9ubGluZVJl",
+            "dHVyblBvbGljeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiiBIKEk9ubGlu",
+            "ZVJldHVyblBvbGljeRIRCgRuYW1lGAEgASgJQgPgQQgSHQoQcmV0dXJuX3Bv",
+            "bGljeV9pZBgCIAEoCUID4EEDEhUKBWxhYmVsGAMgASgJQgbgQQLgQQUSGQoJ",
+            "Y291bnRyaWVzGAQgAygJQgbgQQLgQQUSWAoGcG9saWN5GAUgASgLMkMuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5PbmxpbmVS",
+            "ZXR1cm5Qb2xpY3kuUG9saWN5QgPgQQESbgoSc2Vhc29uYWxfb3ZlcnJpZGVz",
+            "GA4gAygLMk0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
+            "YmV0YS5PbmxpbmVSZXR1cm5Qb2xpY3kuU2Vhc29uYWxPdmVycmlkZUID4EEB",
+            "EmcKDnJlc3RvY2tpbmdfZmVlGAYgASgLMkouZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LmFjY291bnRzLnYxYmV0YS5PbmxpbmVSZXR1cm5Qb2xpY3kuUmVz",
+            "dG9ja2luZ0ZlZUID4EEBEmYKDnJldHVybl9tZXRob2RzGAcgAygOMkkuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5PbmxpbmVS",
+            "ZXR1cm5Qb2xpY3kuUmV0dXJuTWV0aG9kQgPgQQESaAoPaXRlbV9jb25kaXRp",
+            "b25zGAggAygOMkouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRz",
+            "LnYxYmV0YS5PbmxpbmVSZXR1cm5Qb2xpY3kuSXRlbUNvbmRpdGlvbkID4EEB",
+            "EnAKE3JldHVybl9zaGlwcGluZ19mZWUYCSABKAsyTi5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQuYWNjb3VudHMudjFiZXRhLk9ubGluZVJldHVyblBvbGlj",
+            "eS5SZXR1cm5TaGlwcGluZ0ZlZUID4EEBEh4KEXJldHVybl9wb2xpY3lfdXJp",
+            "GAogASgJQgPgQQISIgoVYWNjZXB0X2RlZmVjdGl2ZV9vbmx5GAsgASgISACI",
+            "AQESIAoTcHJvY2Vzc19yZWZ1bmRfZGF5cxgMIAEoBUgBiAEBEhwKD2FjY2Vw",
+            "dF9leGNoYW5nZRgNIAEoCEgCiAEBEnAKE3JldHVybl9sYWJlbF9zb3VyY2UY",
+            "DyABKA4yTi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjFi",
+            "ZXRhLk9ubGluZVJldHVyblBvbGljeS5SZXR1cm5MYWJlbFNvdXJjZUgDiAEB",
+            "GvQBChFSZXR1cm5TaGlwcGluZ0ZlZRJmCgR0eXBlGAEgASgOMlMuZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5PbmxpbmVSZXR1",
+            "cm5Qb2xpY3kuUmV0dXJuU2hpcHBpbmdGZWUuVHlwZUID4EECEi4KCWZpeGVk",
+            "X2ZlZRgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlIkcKBFR5",
+            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgkKBUZJWEVEEAESHgoaQ1VTVE9N",
+            "RVJfUEFZSU5HX0FDVFVBTF9GRUUQAhpiCg1SZXN0b2NraW5nRmVlEjAKCWZp",
+            "eGVkX2ZlZRgBIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAAS",
+            "FwoNbWljcm9fcGVyY2VudBgCIAEoBUgAQgYKBHR5cGUa1QEKBlBvbGljeRJW",
+            "CgR0eXBlGAEgASgOMkguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291",
+            "bnRzLnYxYmV0YS5PbmxpbmVSZXR1cm5Qb2xpY3kuUG9saWN5LlR5cGUSDAoE",
+            "ZGF5cxgCIAEoAyJlCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIhCh1O",
+            "VU1CRVJfT0ZfREFZU19BRlRFUl9ERUxJVkVSWRABEg4KCk5PX1JFVFVSTlMQ",
+            "AhIUChBMSUZFVElNRV9SRVRVUk5TEAMa1AEKEFNlYXNvbmFsT3ZlcnJpZGUS",
+            "FQoLcmV0dXJuX2RheXMYBSABKAVIABIuChFyZXR1cm5fdW50aWxfZGF0ZRgG",
+            "IAEoCzIRLmdvb2dsZS50eXBlLkRhdGVIABISCgVsYWJlbBgBIAEoCUID4EEC",
+            "EioKCnN0YXJ0X2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQIS",
+            "KAoIZW5kX2RhdGUYAyABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQJCDwoN",
+            "cmV0dXJuX3dpbmRvdyJYCgxSZXR1cm5NZXRob2QSHQoZUkVUVVJOX01FVEhP",
+            "RF9VTlNQRUNJRklFRBAAEgsKB0JZX01BSUwQARIMCghJTl9TVE9SRRACEg4K",
+            "CkFUX0FfS0lPU0sQAyJCCg1JdGVtQ29uZGl0aW9uEh4KGklURU1fQ09ORElU",
+            "SU9OX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESCAoEVVNFRBACIoEBChFSZXR1",
+            "cm5MYWJlbFNvdXJjZRIjCh9SRVRVUk5fTEFCRUxfU09VUkNFX1VOU1BFQ0lG",
+            "SUVEEAASFgoSRE9XTkxPQURfQU5EX1BSSU5UEAESEgoOSU5fVEhFX1BBQ0tB",
+            "R0UQAhIbChdDVVNUT01FUl9SRVNQT05TSUJJTElUWRADOpYB6kGSAQotbWVy",
+            "Y2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vT25saW5lUmV0dXJuUG9saWN5Ejdh",
+            "Y2NvdW50cy97YWNjb3VudH0vb25saW5lUmV0dXJuUG9saWNpZXMve3JldHVy",
+            "bl9wb2xpY3l9KhRvbmxpbmVSZXR1cm5Qb2xpY2llczISb25saW5lUmV0dXJu",
+            "UG9saWN5QhgKFl9hY2NlcHRfZGVmZWN0aXZlX29ubHlCFgoUX3Byb2Nlc3Nf",
+            "cmVmdW5kX2RheXNCEgoQX2FjY2VwdF9leGNoYW5nZUIWChRfcmV0dXJuX2xh",
+            "YmVsX3NvdXJjZTLYCgoZT25saW5lUmV0dXJuUG9saWN5U2VydmljZRLnAQoV",
+            "R2V0T25saW5lUmV0dXJuUG9saWN5EkYuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
+            "YW50LmFjY291bnRzLnYxYmV0YS5HZXRPbmxpbmVSZXR1cm5Qb2xpY3lSZXF1",
+            "ZXN0GjwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0",
+            "YS5PbmxpbmVSZXR1cm5Qb2xpY3kiSNpBBG5hbWWC0+STAjsSOS9hY2NvdW50",
+            "cy92MWJldGEve25hbWU9YWNjb3VudHMvKi9vbmxpbmVSZXR1cm5Qb2xpY2ll",
+            "cy8qfRL9AQoYTGlzdE9ubGluZVJldHVyblBvbGljaWVzEkkuZ29vZ2xlLnNo",
+            "b3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxYmV0YS5MaXN0T25saW5lUmV0",
+            "dXJuUG9saWNpZXNSZXF1ZXN0GkouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LmFjY291bnRzLnYxYmV0YS5MaXN0T25saW5lUmV0dXJuUG9saWNpZXNSZXNw",
+            "b25zZSJK2kEGcGFyZW50gtPkkwI7EjkvYWNjb3VudHMvdjFiZXRhL3twYXJl",
+            "bnQ9YWNjb3VudHMvKn0vb25saW5lUmV0dXJuUG9saWNpZXMShQIKGENyZWF0",
+            "ZU9ubGluZVJldHVyblBvbGljeRJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
+            "dC5hY2NvdW50cy52MWJldGEuQ3JlYXRlT25saW5lUmV0dXJuUG9saWN5UmVx",
+            "dWVzdBo8Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJl",
+            "dGEuT25saW5lUmV0dXJuUG9saWN5ImDaQQZwYXJlbnSC0+STAlEiOS9hY2Nv",
+            "dW50cy92MWJldGEve3BhcmVudD1hY2NvdW50cy8qfS9vbmxpbmVSZXR1cm5Q",
+            "b2xpY2llczoUb25saW5lX3JldHVybl9wb2xpY3kStQIKGFVwZGF0ZU9ubGlu",
+            "ZVJldHVyblBvbGljeRJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2Nv",
+            "dW50cy52MWJldGEuVXBkYXRlT25saW5lUmV0dXJuUG9saWN5UmVxdWVzdBo8",
+            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGEuT25s",
+            "aW5lUmV0dXJuUG9saWN5Io8B2kEgb25saW5lX3JldHVybl9wb2xpY3ksdXBk",
+            "YXRlX21hc2uC0+STAmYyTi9hY2NvdW50cy92MWJldGEve29ubGluZV9yZXR1",
+            "cm5fcG9saWN5Lm5hbWU9YWNjb3VudHMvKi9vbmxpbmVSZXR1cm5Qb2xpY2ll",
+            "cy8qfToUb25saW5lX3JldHVybl9wb2xpY3kSxwEKGERlbGV0ZU9ubGluZVJl",
+            "dHVyblBvbGljeRJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50",
+            "cy52MWJldGEuRGVsZXRlT25saW5lUmV0dXJuUG9saWN5UmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSJI2kEEbmFtZYLT5JMCOyo5L2FjY291bnRz",
+            "L3YxYmV0YS97bmFtZT1hY2NvdW50cy8qL29ubGluZVJldHVyblBvbGljaWVz",
+            "Lyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKZAQosY29tLmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MWJldGFCF09ubGluZVJl",
+            "dHVyblBvbGljeVByb3RvUAFaTmNsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBp",
+            "bmcvbWVyY2hhbnQvYWNjb3VudHMvYXBpdjFiZXRhL2FjY291bnRzcGI7YWNj",
+            "b3VudHNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.GetOnlineReturnPolicyRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.GetOnlineReturnPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest.Parser, new[]{ "Parent", "OnlineReturnPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest.Parser, new[]{ "OnlineReturnPolicy", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest), global::Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse), global::Google.Shopping.Merchant.Accounts.V1Beta.ListOnlineReturnPoliciesResponse.Parser, new[]{ "OnlineReturnPolicies", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Parser, new[]{ "Name", "ReturnPolicyId", "Label", "Countries", "Policy", "SeasonalOverrides", "RestockingFee", "ReturnMethods", "ItemConditions", "ReturnShippingFee", "ReturnPolicyUri", "AcceptDefectiveOnly", "ProcessRefundDays", "AcceptExchange" }, new[]{ "AcceptDefectiveOnly", "ProcessRefundDays", "AcceptExchange" }, new[]{ typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnMethod), typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ItemCondition) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee.Parser, new[]{ "Type", "FixedFee" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Parser, new[]{ "Name", "ReturnPolicyId", "Label", "Countries", "Policy", "SeasonalOverrides", "RestockingFee", "ReturnMethods", "ItemConditions", "ReturnShippingFee", "ReturnPolicyUri", "AcceptDefectiveOnly", "ProcessRefundDays", "AcceptExchange", "ReturnLabelSource" }, new[]{ "AcceptDefectiveOnly", "ProcessRefundDays", "AcceptExchange", "ReturnLabelSource" }, new[]{ typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnMethod), typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ItemCondition), typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee.Parser, new[]{ "Type", "FixedFee" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.RestockingFee), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.RestockingFee.Parser, new[]{ "FixedFee", "MicroPercent" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.Policy), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.Policy.Parser, new[]{ "Type", "Days" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.Policy.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.SeasonalOverride), global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.SeasonalOverride.Parser, new[]{ "ReturnDays", "ReturnUntilDate", "Label", "StartDate", "EndDate" }, new[]{ "ReturnWindow" }, null, null, null)})
@@ -369,7 +408,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The business account for which to list return policies.
+    /// Required. The merchant account for which to list return policies.
     /// Format: `accounts/{account}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -604,6 +643,700 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
   }
 
   /// <summary>
+  /// Request message for the `CreateOnlineReturnPolicy` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateOnlineReturnPolicyRequest : pb::IMessage<CreateOnlineReturnPolicyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateOnlineReturnPolicyRequest> _parser = new pb::MessageParser<CreateOnlineReturnPolicyRequest>(() => new CreateOnlineReturnPolicyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateOnlineReturnPolicyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateOnlineReturnPolicyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateOnlineReturnPolicyRequest(CreateOnlineReturnPolicyRequest other) : this() {
+      parent_ = other.parent_;
+      onlineReturnPolicy_ = other.onlineReturnPolicy_ != null ? other.onlineReturnPolicy_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateOnlineReturnPolicyRequest Clone() {
+      return new CreateOnlineReturnPolicyRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The merchant account for which to create a return policy.
+    /// Format: `accounts/{account}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "online_return_policy" field.</summary>
+    public const int OnlineReturnPolicyFieldNumber = 2;
+    private global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy onlineReturnPolicy_;
+    /// <summary>
+    /// Required. The return policy to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy OnlineReturnPolicy {
+      get { return onlineReturnPolicy_; }
+      set {
+        onlineReturnPolicy_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateOnlineReturnPolicyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateOnlineReturnPolicyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(OnlineReturnPolicy, other.OnlineReturnPolicy)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (onlineReturnPolicy_ != null) hash ^= OnlineReturnPolicy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (onlineReturnPolicy_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OnlineReturnPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (onlineReturnPolicy_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OnlineReturnPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (onlineReturnPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnlineReturnPolicy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateOnlineReturnPolicyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.onlineReturnPolicy_ != null) {
+        if (onlineReturnPolicy_ == null) {
+          OnlineReturnPolicy = new global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy();
+        }
+        OnlineReturnPolicy.MergeFrom(other.OnlineReturnPolicy);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (onlineReturnPolicy_ == null) {
+              OnlineReturnPolicy = new global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy();
+            }
+            input.ReadMessage(OnlineReturnPolicy);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (onlineReturnPolicy_ == null) {
+              OnlineReturnPolicy = new global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy();
+            }
+            input.ReadMessage(OnlineReturnPolicy);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for the `UpdateOnlineReturnPolicy` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateOnlineReturnPolicyRequest : pb::IMessage<UpdateOnlineReturnPolicyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateOnlineReturnPolicyRequest> _parser = new pb::MessageParser<UpdateOnlineReturnPolicyRequest>(() => new UpdateOnlineReturnPolicyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateOnlineReturnPolicyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOnlineReturnPolicyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOnlineReturnPolicyRequest(UpdateOnlineReturnPolicyRequest other) : this() {
+      onlineReturnPolicy_ = other.onlineReturnPolicy_ != null ? other.onlineReturnPolicy_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOnlineReturnPolicyRequest Clone() {
+      return new UpdateOnlineReturnPolicyRequest(this);
+    }
+
+    /// <summary>Field number for the "online_return_policy" field.</summary>
+    public const int OnlineReturnPolicyFieldNumber = 1;
+    private global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy onlineReturnPolicy_;
+    /// <summary>
+    /// Required. The return policy to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy OnlineReturnPolicy {
+      get { return onlineReturnPolicy_; }
+      set {
+        onlineReturnPolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateOnlineReturnPolicyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateOnlineReturnPolicyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OnlineReturnPolicy, other.OnlineReturnPolicy)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (onlineReturnPolicy_ != null) hash ^= OnlineReturnPolicy.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (onlineReturnPolicy_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OnlineReturnPolicy);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (onlineReturnPolicy_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OnlineReturnPolicy);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (onlineReturnPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnlineReturnPolicy);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateOnlineReturnPolicyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.onlineReturnPolicy_ != null) {
+        if (onlineReturnPolicy_ == null) {
+          OnlineReturnPolicy = new global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy();
+        }
+        OnlineReturnPolicy.MergeFrom(other.OnlineReturnPolicy);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (onlineReturnPolicy_ == null) {
+              OnlineReturnPolicy = new global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy();
+            }
+            input.ReadMessage(OnlineReturnPolicy);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (onlineReturnPolicy_ == null) {
+              OnlineReturnPolicy = new global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy();
+            }
+            input.ReadMessage(OnlineReturnPolicy);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for the `DeleteOnlineReturnPolicy` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteOnlineReturnPolicyRequest : pb::IMessage<DeleteOnlineReturnPolicyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteOnlineReturnPolicyRequest> _parser = new pb::MessageParser<DeleteOnlineReturnPolicyRequest>(() => new DeleteOnlineReturnPolicyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteOnlineReturnPolicyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteOnlineReturnPolicyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteOnlineReturnPolicyRequest(DeleteOnlineReturnPolicyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteOnlineReturnPolicyRequest Clone() {
+      return new DeleteOnlineReturnPolicyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the return policy to delete.
+    /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteOnlineReturnPolicyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteOnlineReturnPolicyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteOnlineReturnPolicyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Response message for the `ListOnlineReturnPolicies` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -621,7 +1354,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -850,7 +1583,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -885,6 +1618,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       acceptDefectiveOnly_ = other.acceptDefectiveOnly_;
       processRefundDays_ = other.processRefundDays_;
       acceptExchange_ = other.acceptExchange_;
+      returnLabelSource_ = other.returnLabelSource_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -966,7 +1700,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int PolicyFieldNumber = 5;
     private global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.Policy policy_;
     /// <summary>
-    /// The return policy.
+    /// Optional. The return policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -996,8 +1730,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int RestockingFeeFieldNumber = 6;
     private global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.RestockingFee restockingFee_;
     /// <summary>
-    /// The restocking fee that applies to all return reason categories. This would
-    /// be treated as a free restocking fee if the value is not set.
+    /// Optional. The restocking fee that applies to all return reason categories.
+    /// This would be treated as a free restocking fee if the value is not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1014,8 +1748,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnMethod) x);
     private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnMethod> returnMethods_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnMethod>();
     /// <summary>
-    /// The return methods of how customers can return an item. This value is
-    /// required to not be empty unless the type of return policy is noReturns.
+    /// Optional. The return methods of how customers can return an item. This
+    /// value is required to not be empty unless the type of return policy is
+    /// noReturns.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1029,8 +1764,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ItemCondition) x);
     private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ItemCondition> itemConditions_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ItemCondition>();
     /// <summary>
-    /// The item conditions accepted for returns must not be empty unless the type
-    /// of return policy is 'noReturns'.
+    /// Optional. The item conditions accepted for returns must not be empty unless
+    /// the type of return policy is 'noReturns'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1042,8 +1777,8 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public const int ReturnShippingFeeFieldNumber = 9;
     private global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnShippingFee returnShippingFee_;
     /// <summary>
-    /// The return shipping fee. Should be set only when customer need to download
-    /// and print the return label.
+    /// Optional. The return shipping fee. Should be set only when customer need to
+    /// download and print the return label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1163,6 +1898,37 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       _hasBits0 &= ~4;
     }
 
+    /// <summary>Field number for the "return_label_source" field.</summary>
+    public const int ReturnLabelSourceFieldNumber = 15;
+    private readonly static global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource ReturnLabelSourceDefaultValue = global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource.Unspecified;
+
+    private global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource returnLabelSource_;
+    /// <summary>
+    /// The field specifies the return label source. This field is required when
+    /// return method is BY_MAIL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource ReturnLabelSource {
+      get { if ((_hasBits0 & 8) != 0) { return returnLabelSource_; } else { return ReturnLabelSourceDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        returnLabelSource_ = value;
+      }
+    }
+    /// <summary>Gets whether the "return_label_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReturnLabelSource {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "return_label_source" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReturnLabelSource() {
+      _hasBits0 &= ~8;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1192,6 +1958,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       if (AcceptDefectiveOnly != other.AcceptDefectiveOnly) return false;
       if (ProcessRefundDays != other.ProcessRefundDays) return false;
       if (AcceptExchange != other.AcceptExchange) return false;
+      if (ReturnLabelSource != other.ReturnLabelSource) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1213,6 +1980,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       if (HasAcceptDefectiveOnly) hash ^= AcceptDefectiveOnly.GetHashCode();
       if (HasProcessRefundDays) hash ^= ProcessRefundDays.GetHashCode();
       if (HasAcceptExchange) hash ^= AcceptExchange.GetHashCode();
+      if (HasReturnLabelSource) hash ^= ReturnLabelSource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1275,6 +2043,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         output.WriteBool(AcceptExchange);
       }
       seasonalOverrides_.WriteTo(output, _repeated_seasonalOverrides_codec);
+      if (HasReturnLabelSource) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ReturnLabelSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1329,6 +2101,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         output.WriteBool(AcceptExchange);
       }
       seasonalOverrides_.WriteTo(ref output, _repeated_seasonalOverrides_codec);
+      if (HasReturnLabelSource) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ReturnLabelSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1372,6 +2148,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
       if (HasAcceptExchange) {
         size += 1 + 1;
+      }
+      if (HasReturnLabelSource) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReturnLabelSource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1427,6 +2206,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
       if (other.HasAcceptExchange) {
         AcceptExchange = other.AcceptExchange;
+      }
+      if (other.HasReturnLabelSource) {
+        ReturnLabelSource = other.ReturnLabelSource;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1508,6 +2290,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
           }
           case 114: {
             seasonalOverrides_.AddEntriesFrom(input, _repeated_seasonalOverrides_codec);
+            break;
+          }
+          case 120: {
+            ReturnLabelSource = (global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource) input.ReadEnum();
             break;
           }
         }
@@ -1592,6 +2378,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
             seasonalOverrides_.AddEntriesFrom(ref input, _repeated_seasonalOverrides_codec);
             break;
           }
+          case 120: {
+            ReturnLabelSource = (global::Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy.Types.ReturnLabelSource) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1640,6 +2430,28 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         /// Used.
         /// </summary>
         [pbr::OriginalName("USED")] Used = 2,
+      }
+
+      /// <summary>
+      /// The available return label sources.
+      /// </summary>
+      public enum ReturnLabelSource {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("RETURN_LABEL_SOURCE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Download and print.
+        /// </summary>
+        [pbr::OriginalName("DOWNLOAD_AND_PRINT")] DownloadAndPrint = 1,
+        /// <summary>
+        /// Label include in the package.
+        /// </summary>
+        [pbr::OriginalName("IN_THE_PACKAGE")] InThePackage = 2,
+        /// <summary>
+        /// Customer to provide.
+        /// </summary>
+        [pbr::OriginalName("CUSTOMER_RESPONSIBILITY")] CustomerResponsibility = 3,
       }
 
       /// <summary>

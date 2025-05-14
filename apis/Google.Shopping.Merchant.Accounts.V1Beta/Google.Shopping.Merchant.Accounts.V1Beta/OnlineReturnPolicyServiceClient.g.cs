@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Shopping.Merchant.Accounts.V1Beta
 {
@@ -49,6 +50,9 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetOnlineReturnPolicySettings = existing.GetOnlineReturnPolicySettings;
             ListOnlineReturnPoliciesSettings = existing.ListOnlineReturnPoliciesSettings;
+            CreateOnlineReturnPolicySettings = existing.CreateOnlineReturnPolicySettings;
+            UpdateOnlineReturnPolicySettings = existing.UpdateOnlineReturnPolicySettings;
+            DeleteOnlineReturnPolicySettings = existing.DeleteOnlineReturnPolicySettings;
             OnCopy(existing);
         }
 
@@ -91,6 +95,63 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListOnlineReturnPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy</c> and
+        /// <c>OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateOnlineReturnPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicy</c> and
+        /// <c>OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateOnlineReturnPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicy</c> and
+        /// <c>OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteOnlineReturnPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="OnlineReturnPolicyServiceSettings"/> object.</returns>
@@ -155,7 +216,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
     /// configuration, encompassing return policies for both ads and free listings
     /// ## programs. This API defines the following resource model:
     /// 
-    /// [OnlineReturnPolicy][google.shopping.merchant.accounts.v1.OnlineReturnPolicy]
+    /// [OnlineReturnPolicy](/merchant/api/reference/rpc/google.shopping.merchant.accounts.v1beta#google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy)
     /// </remarks>
     public abstract partial class OnlineReturnPolicyServiceClient
     {
@@ -239,7 +300,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         public virtual OnlineReturnPolicyService.OnlineReturnPolicyServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -248,7 +309,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -257,7 +318,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -266,7 +327,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             GetOnlineReturnPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -281,7 +342,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -296,7 +357,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -308,7 +369,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             GetOnlineReturnPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -323,7 +384,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -338,7 +399,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -350,7 +411,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             GetOnlineReturnPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -359,7 +420,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -368,10 +429,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="parent">
-        /// Required. The business account for which to list return policies.
+        /// Required. The merchant account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -402,10 +463,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="parent">
-        /// Required. The business account for which to list return policies.
+        /// Required. The merchant account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -436,10 +497,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="parent">
-        /// Required. The business account for which to list return policies.
+        /// Required. The merchant account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -470,10 +531,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="parent">
-        /// Required. The business account for which to list return policies.
+        /// Required. The merchant account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -502,6 +563,302 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }
             return ListOnlineReturnPoliciesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OnlineReturnPolicy CreateOnlineReturnPolicy(CreateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(CreateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(CreateOnlineReturnPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateOnlineReturnPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The merchant account for which to create a return policy.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OnlineReturnPolicy CreateOnlineReturnPolicy(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOnlineReturnPolicy(new CreateOnlineReturnPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The merchant account for which to create a return policy.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOnlineReturnPolicyAsync(new CreateOnlineReturnPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The merchant account for which to create a return policy.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(string parent, st::CancellationToken cancellationToken) =>
+            CreateOnlineReturnPolicyAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The merchant account for which to create a return policy.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OnlineReturnPolicy CreateOnlineReturnPolicy(AccountName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOnlineReturnPolicy(new CreateOnlineReturnPolicyRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The merchant account for which to create a return policy.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(AccountName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOnlineReturnPolicyAsync(new CreateOnlineReturnPolicyRequest
+            {
+                ParentAsAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The merchant account for which to create a return policy.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(AccountName parent, st::CancellationToken cancellationToken) =>
+            CreateOnlineReturnPolicyAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OnlineReturnPolicy UpdateOnlineReturnPolicy(UpdateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(UpdateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(UpdateOnlineReturnPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateOnlineReturnPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="onlineReturnPolicy">
+        /// Required. The return policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OnlineReturnPolicy UpdateOnlineReturnPolicy(OnlineReturnPolicy onlineReturnPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOnlineReturnPolicy(new UpdateOnlineReturnPolicyRequest
+            {
+                OnlineReturnPolicy = gax::GaxPreconditions.CheckNotNull(onlineReturnPolicy, nameof(onlineReturnPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="onlineReturnPolicy">
+        /// Required. The return policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(OnlineReturnPolicy onlineReturnPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOnlineReturnPolicyAsync(new UpdateOnlineReturnPolicyRequest
+            {
+                OnlineReturnPolicy = gax::GaxPreconditions.CheckNotNull(onlineReturnPolicy, nameof(onlineReturnPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="onlineReturnPolicy">
+        /// Required. The return policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(OnlineReturnPolicy onlineReturnPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateOnlineReturnPolicyAsync(onlineReturnPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteOnlineReturnPolicy(DeleteOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteOnlineReturnPolicyAsync(DeleteOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteOnlineReturnPolicyAsync(DeleteOnlineReturnPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteOnlineReturnPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the return policy to delete.
+        /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteOnlineReturnPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOnlineReturnPolicy(new DeleteOnlineReturnPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the return policy to delete.
+        /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteOnlineReturnPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOnlineReturnPolicyAsync(new DeleteOnlineReturnPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the return policy to delete.
+        /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteOnlineReturnPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteOnlineReturnPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the return policy to delete.
+        /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteOnlineReturnPolicy(OnlineReturnPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOnlineReturnPolicy(new DeleteOnlineReturnPolicyRequest
+            {
+                OnlineReturnPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the return policy to delete.
+        /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteOnlineReturnPolicyAsync(OnlineReturnPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOnlineReturnPolicyAsync(new DeleteOnlineReturnPolicyRequest
+            {
+                OnlineReturnPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the return policy to delete.
+        /// Format: `accounts/{account}/onlineReturnPolicies/{return_policy}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteOnlineReturnPolicyAsync(OnlineReturnPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteOnlineReturnPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OnlineReturnPolicyService client wrapper implementation, for convenient use.</summary>
@@ -510,13 +867,19 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
     /// configuration, encompassing return policies for both ads and free listings
     /// ## programs. This API defines the following resource model:
     /// 
-    /// [OnlineReturnPolicy][google.shopping.merchant.accounts.v1.OnlineReturnPolicy]
+    /// [OnlineReturnPolicy](/merchant/api/reference/rpc/google.shopping.merchant.accounts.v1beta#google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy)
     /// </remarks>
     public sealed partial class OnlineReturnPolicyServiceClientImpl : OnlineReturnPolicyServiceClient
     {
         private readonly gaxgrpc::ApiCall<GetOnlineReturnPolicyRequest, OnlineReturnPolicy> _callGetOnlineReturnPolicy;
 
         private readonly gaxgrpc::ApiCall<ListOnlineReturnPoliciesRequest, ListOnlineReturnPoliciesResponse> _callListOnlineReturnPolicies;
+
+        private readonly gaxgrpc::ApiCall<CreateOnlineReturnPolicyRequest, OnlineReturnPolicy> _callCreateOnlineReturnPolicy;
+
+        private readonly gaxgrpc::ApiCall<UpdateOnlineReturnPolicyRequest, OnlineReturnPolicy> _callUpdateOnlineReturnPolicy;
+
+        private readonly gaxgrpc::ApiCall<DeleteOnlineReturnPolicyRequest, wkt::Empty> _callDeleteOnlineReturnPolicy;
 
         /// <summary>
         /// Constructs a client wrapper for the OnlineReturnPolicyService service, with the specified gRPC client and
@@ -542,6 +905,15 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             _callListOnlineReturnPolicies = clientHelper.BuildApiCall<ListOnlineReturnPoliciesRequest, ListOnlineReturnPoliciesResponse>("ListOnlineReturnPolicies", grpcClient.ListOnlineReturnPoliciesAsync, grpcClient.ListOnlineReturnPolicies, effectiveSettings.ListOnlineReturnPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOnlineReturnPolicies);
             Modify_ListOnlineReturnPoliciesApiCall(ref _callListOnlineReturnPolicies);
+            _callCreateOnlineReturnPolicy = clientHelper.BuildApiCall<CreateOnlineReturnPolicyRequest, OnlineReturnPolicy>("CreateOnlineReturnPolicy", grpcClient.CreateOnlineReturnPolicyAsync, grpcClient.CreateOnlineReturnPolicy, effectiveSettings.CreateOnlineReturnPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateOnlineReturnPolicy);
+            Modify_CreateOnlineReturnPolicyApiCall(ref _callCreateOnlineReturnPolicy);
+            _callUpdateOnlineReturnPolicy = clientHelper.BuildApiCall<UpdateOnlineReturnPolicyRequest, OnlineReturnPolicy>("UpdateOnlineReturnPolicy", grpcClient.UpdateOnlineReturnPolicyAsync, grpcClient.UpdateOnlineReturnPolicy, effectiveSettings.UpdateOnlineReturnPolicySettings).WithGoogleRequestParam("online_return_policy.name", request => request.OnlineReturnPolicy?.Name);
+            Modify_ApiCall(ref _callUpdateOnlineReturnPolicy);
+            Modify_UpdateOnlineReturnPolicyApiCall(ref _callUpdateOnlineReturnPolicy);
+            _callDeleteOnlineReturnPolicy = clientHelper.BuildApiCall<DeleteOnlineReturnPolicyRequest, wkt::Empty>("DeleteOnlineReturnPolicy", grpcClient.DeleteOnlineReturnPolicyAsync, grpcClient.DeleteOnlineReturnPolicy, effectiveSettings.DeleteOnlineReturnPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteOnlineReturnPolicy);
+            Modify_DeleteOnlineReturnPolicyApiCall(ref _callDeleteOnlineReturnPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -550,6 +922,12 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         partial void Modify_GetOnlineReturnPolicyApiCall(ref gaxgrpc::ApiCall<GetOnlineReturnPolicyRequest, OnlineReturnPolicy> call);
 
         partial void Modify_ListOnlineReturnPoliciesApiCall(ref gaxgrpc::ApiCall<ListOnlineReturnPoliciesRequest, ListOnlineReturnPoliciesResponse> call);
+
+        partial void Modify_CreateOnlineReturnPolicyApiCall(ref gaxgrpc::ApiCall<CreateOnlineReturnPolicyRequest, OnlineReturnPolicy> call);
+
+        partial void Modify_UpdateOnlineReturnPolicyApiCall(ref gaxgrpc::ApiCall<UpdateOnlineReturnPolicyRequest, OnlineReturnPolicy> call);
+
+        partial void Modify_DeleteOnlineReturnPolicyApiCall(ref gaxgrpc::ApiCall<DeleteOnlineReturnPolicyRequest, wkt::Empty> call);
 
         partial void OnConstruction(OnlineReturnPolicyService.OnlineReturnPolicyServiceClient grpcClient, OnlineReturnPolicyServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -560,8 +938,14 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
 
         partial void Modify_ListOnlineReturnPoliciesRequest(ref ListOnlineReturnPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateOnlineReturnPolicyRequest(ref CreateOnlineReturnPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateOnlineReturnPolicyRequest(ref UpdateOnlineReturnPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteOnlineReturnPolicyRequest(ref DeleteOnlineReturnPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -573,7 +957,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Gets an existing return policy for a given business.
+        /// Gets an existing return policy for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -585,7 +969,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -597,7 +981,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies for a given business.
+        /// Lists all existing return policies for a given merchant.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -606,6 +990,78 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         {
             Modify_ListOnlineReturnPoliciesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOnlineReturnPoliciesRequest, ListOnlineReturnPoliciesResponse, OnlineReturnPolicy>(_callListOnlineReturnPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override OnlineReturnPolicy CreateOnlineReturnPolicy(CreateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateOnlineReturnPolicyRequest(ref request, ref callSettings);
+            return _callCreateOnlineReturnPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<OnlineReturnPolicy> CreateOnlineReturnPolicyAsync(CreateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateOnlineReturnPolicyRequest(ref request, ref callSettings);
+            return _callCreateOnlineReturnPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override OnlineReturnPolicy UpdateOnlineReturnPolicy(UpdateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOnlineReturnPolicyRequest(ref request, ref callSettings);
+            return _callUpdateOnlineReturnPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<OnlineReturnPolicy> UpdateOnlineReturnPolicyAsync(UpdateOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOnlineReturnPolicyRequest(ref request, ref callSettings);
+            return _callUpdateOnlineReturnPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteOnlineReturnPolicy(DeleteOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteOnlineReturnPolicyRequest(ref request, ref callSettings);
+            _callDeleteOnlineReturnPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an existing return policy for a given merchant.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteOnlineReturnPolicyAsync(DeleteOnlineReturnPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteOnlineReturnPolicyRequest(ref request, ref callSettings);
+            return _callDeleteOnlineReturnPolicy.Async(request, callSettings);
         }
     }
 
