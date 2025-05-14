@@ -1,5 +1,78 @@
 # Version history
 
+## Version 1.0.0-alpha11, released 2025-05-14
+
+### New features
+
+- Sync AlloyDB API changes from HEAD to stable
+- Add new CSQL API for supporting Cluster creation from Cloud SQL
+- Add new methods for exporting, importing and upgrade Cluster operations
+- Add new fields to support observability configurations, machine types and PSC related configs
+- Add CloudSQL support for RestoreCluster operation
+- Add new fields and methods to the AlloyDB API
+- Improve documentation of existing API fields
+- Add GCA Entitlement type
+- Add fields to PscInstanceConfig
+- Add recommended_value and scope field to SupportedDatabaseFlags
+- Make user optional in ExecuteSql API
+- Add Import and Export functionalities
+- Add machine_type field to instance config
+- Add a new GCAEntitlement field in Gemini config
+- Add the GCAInstanceConfig field in instance
+- A new service `AlloyDBCSQLAdmin` is added
+- A new message `RestoreFromCloudSQLRequest` is added
+- A new enum `GCAEntitlementType` is added
+- A new message `GCAInstanceConfig` is added
+- A new field `machine_type` is added to message `.google.cloud.alloydb.v1alpha.Instance`
+- A new field `assistive_experiences_enabled` is added to message `.google.cloud.alloydb.v1alpha.Instance`
+- A new message `PscAutoConnectionConfig` is added
+- A new field `psc_auto_connections` is added to message `.google.cloud.alloydb.v1alpha.Instance`
+- A new field `gca_config` is added to message `.google.cloud.alloydb.v1alpha.Instance`
+- A new enum `Scope` is added
+- A new field `recommended_string_value` is added to message `.google.cloud.alloydb.v1alpha.SupportedDatabaseFlag`
+- A new field `recommended_integer_value` is added to message `.google.cloud.alloydb.v1alpha.SupportedDatabaseFlag`
+- A new field `scope` is added to message `.google.cloud.alloydb.v1alpha.SupportedDatabaseFlag`
+- A new method `ExportCluster` is added to service `AlloyDBAdmin`
+- A new method `ImportCluster` is added to service `AlloyDBAdmin`
+- A new message `GcsDestination` is added
+- A new message `ExportClusterRequest` is added
+- A new message `ExportClusterResponse` is added
+- A new message `ImportClusterRequest` is added
+- A new message `ImportClusterResponse` is added
+- A new field `scope` is added to message `.google.cloud.alloydb.v1alpha.ListSupportedDatabaseFlagsRequest`
+
+### Documentation improvements
+
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `zone_id` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `id` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `ip` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `state` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `database_flags` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1.GenerateClientCertificateRequest` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.alloydb.v1.OperationMetadata` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1beta.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1beta.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `track_wait_event_types` in message `.google.cloud.alloydb.v1beta.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1beta.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1beta.GenerateClientCertificateRequest` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1alpha.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1alpha.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `zone_id` in message `.google.cloud.alloydb.v1alpha.Instance` is changed
+- A comment for field `id` in message `.google.cloud.alloydb.v1alpha.Instance` is changed
+- A comment for field `ip` in message `.google.cloud.alloydb.v1alpha.Instance` is changed
+- A comment for field `state` in message `.google.cloud.alloydb.v1alpha.Instance` is changed
+- A comment for field `track_wait_event_types` in message `.google.cloud.alloydb.v1alpha.Instance` is changed
+- A comment for field `database_flags` in message `.google.cloud.alloydb.v1alpha.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1alpha.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1alpha.GenerateClientCertificateRequest` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.alloydb.v1alpha.OperationMetadata` is changed
+
 ## Version 1.0.0-alpha10, released 2024-11-18
 
 ### Bug fixes
