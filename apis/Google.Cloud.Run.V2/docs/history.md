@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.14.0, released 2025-05-15
+
+### New features
+
+- Support node selector in Cloud Run jobs for GPU setting
+- Support GPU zonal redundancy setting in Cloud Run services
+
 ## Version 2.13.0, released 2025-02-10
 
 ### New features
