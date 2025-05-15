@@ -3248,7 +3248,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-07-22T16:40:30Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "c18013694a22d051c77be488454d3762765f5a5e",
             "apiPaths": [
                 "google/cloud/video/livestream/v1"
             ],
