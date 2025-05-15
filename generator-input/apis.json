@@ -5429,7 +5429,7 @@
     },
     {
       "id": "Google.Cloud.Support.V2",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Google Cloud Support",
       "productUrl": "https://cloud.google.com/support/docs/reference/support-api",
