@@ -65,7 +65,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbmRwb2ludHMv",
             "e2VuZHBvaW50fRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
             "YXRpb259L3B1Ymxpc2hlcnMve3B1Ymxpc2hlcn0vbW9kZWxzL3ttb2RlbH0i",
-            "3gkKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgHIAEo",
+            "9QkKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgHIAEo",
             "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRlZFJlc291",
             "cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNIABJRChBz",
@@ -86,42 +86,42 @@ namespace Google.Cloud.AIPlatform.V1 {
             "MjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2RlbC5T",
             "dGF0dXNCA+BBAxJSCg1zeXN0ZW1fbGFiZWxzGBwgAygLMjsuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2RlbC5TeXN0ZW1MYWJlbHNF",
-            "bnRyeRJbChlzcGVjdWxhdGl2ZV9kZWNvZGluZ19zcGVjGB4gASgLMjMuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3BlY3VsYXRpdmVEZWNvZGluZ1Nw",
-            "ZWNCA+BBARp/CgZTdGF0dXMSFAoHbWVzc2FnZRgBIAEoCUID4EEDEjkKEGxh",
-            "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSJAoXYXZhaWxhYmxlX3JlcGxpY2FfY291bnQYAyABKAVCA+BB",
-            "AxozChFTeXN0ZW1MYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBQhYKFHByZWRpY3Rpb25fcmVzb3VyY2VzIo8BChBQcml2YXRl",
-            "RW5kcG9pbnRzEh0KEHByZWRpY3RfaHR0cF91cmkYASABKAlCA+BBAxIdChBl",
-            "eHBsYWluX2h0dHBfdXJpGAIgASgJQgPgQQMSHAoPaGVhbHRoX2h0dHBfdXJp",
-            "GAMgASgJQgPgQQMSHwoSc2VydmljZV9hdHRhY2htZW50GAQgASgJQgPgQQMi",
-            "nAEKI1ByZWRpY3RSZXF1ZXN0UmVzcG9uc2VMb2dnaW5nQ29uZmlnEg8KB2Vu",
-            "YWJsZWQYASABKAgSFQoNc2FtcGxpbmdfcmF0ZRgCIAEoARJNChRiaWdxdWVy",
-            "eV9kZXN0aW5hdGlvbhgDIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb24iTgoWQ2xpZW50Q29ubmVjdGlvbkNv",
-            "bmZpZxI0ChFpbmZlcmVuY2VfdGltZW91dBgBIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJEZXBsb3ltZW50Q29uZmlnEhsKE2Zh",
-            "c3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgimQMKF1NwZWN1bGF0aXZlRGVjb2Rp",
-            "bmdTcGVjEmwKF2RyYWZ0X21vZGVsX3NwZWN1bGF0aW9uGAIgASgLMkkuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3BlY3VsYXRpdmVEZWNvZGluZ1Nw",
-            "ZWMuRHJhZnRNb2RlbFNwZWN1bGF0aW9uSAASYQoRbmdyYW1fc3BlY3VsYXRp",
-            "b24YAyABKAsyRC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TcGVjdWxh",
-            "dGl2ZURlY29kaW5nU3BlYy5OZ3JhbVNwZWN1bGF0aW9uSAASHwoXc3BlY3Vs",
-            "YXRpdmVfdG9rZW5fY291bnQYASABKAUaVQoVRHJhZnRNb2RlbFNwZWN1bGF0",
-            "aW9uEjwKC2RyYWZ0X21vZGVsGAEgASgJQifgQQL6QSEKH2FpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vTW9kZWwaJgoQTmdyYW1TcGVjdWxhdGlvbhISCgpu",
-            "Z3JhbV9zaXplGAEgASgFQg0KC3NwZWN1bGF0aW9uQssBCh5jb20uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
-            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
-            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "bnRyeRIVCg1jaGVja3BvaW50X2lkGB0gASgJElsKGXNwZWN1bGF0aXZlX2Rl",
+            "Y29kaW5nX3NwZWMYHiABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5TcGVjdWxhdGl2ZURlY29kaW5nU3BlY0ID4EEBGn8KBlN0YXR1cxIUCgdt",
+            "ZXNzYWdlGAEgASgJQgPgQQMSOQoQbGFzdF91cGRhdGVfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIkChdhdmFpbGFibGVf",
+            "cmVwbGljYV9jb3VudBgDIAEoBUID4EEDGjMKEVN5c3RlbUxhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCFgoUcHJlZGljdGlv",
+            "bl9yZXNvdXJjZXMijwEKEFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGljdF9o",
+            "dHRwX3VyaRgBIAEoCUID4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiABKAlC",
+            "A+BBAxIcCg9oZWFsdGhfaHR0cF91cmkYAyABKAlCA+BBAxIfChJzZXJ2aWNl",
+            "X2F0dGFjaG1lbnQYBCABKAlCA+BBAyKcAQojUHJlZGljdFJlcXVlc3RSZXNw",
+            "b25zZUxvZ2dpbmdDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIVCg1zYW1wbGlu",
+            "Z19yYXRlGAIgASgBEk0KFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAMgASgLMi8u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmlnUXVlcnlEZXN0aW5hdGlv",
+            "biJOChZDbGllbnRDb25uZWN0aW9uQ29uZmlnEjQKEWluZmVyZW5jZV90aW1l",
+            "b3V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIjUKFkZhc3Rl",
+            "ckRlcGxveW1lbnRDb25maWcSGwoTZmFzdF90cnlvdXRfZW5hYmxlZBgCIAEo",
+            "CCKZAwoXU3BlY3VsYXRpdmVEZWNvZGluZ1NwZWMSbAoXZHJhZnRfbW9kZWxf",
+            "c3BlY3VsYXRpb24YAiABKAsySS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5TcGVjdWxhdGl2ZURlY29kaW5nU3BlYy5EcmFmdE1vZGVsU3BlY3VsYXRp",
+            "b25IABJhChFuZ3JhbV9zcGVjdWxhdGlvbhgDIAEoCzJELmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlNwZWN1bGF0aXZlRGVjb2RpbmdTcGVjLk5ncmFt",
+            "U3BlY3VsYXRpb25IABIfChdzcGVjdWxhdGl2ZV90b2tlbl9jb3VudBgBIAEo",
+            "BRpVChVEcmFmdE1vZGVsU3BlY3VsYXRpb24SPAoLZHJhZnRfbW9kZWwYASAB",
+            "KAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbBom",
+            "ChBOZ3JhbVNwZWN1bGF0aW9uEhIKCm5ncmFtX3NpemUYASABKAVCDQoLc3Bl",
+            "Y3VsYXRpb25CywEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIN",
+            "RW5kcG9pbnRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
+            "cm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5D",
+            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
+            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "ClientConnectionConfig", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "Status", "SystemLabels", "SpeculativeDecodingSpec" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "Status", "SystemLabels", "CheckpointId", "SpeculativeDecodingSpec" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null),
@@ -1226,6 +1226,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       fasterDeploymentConfig_ = other.fasterDeploymentConfig_ != null ? other.fasterDeploymentConfig_.Clone() : null;
       status_ = other.status_ != null ? other.status_.Clone() : null;
       systemLabels_ = other.systemLabels_.Clone();
+      checkpointId_ = other.checkpointId_;
       speculativeDecodingSpec_ = other.speculativeDecodingSpec_ != null ? other.speculativeDecodingSpec_.Clone() : null;
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
@@ -1576,6 +1577,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return systemLabels_; }
     }
 
+    /// <summary>Field number for the "checkpoint_id" field.</summary>
+    public const int CheckpointIdFieldNumber = 29;
+    private string checkpointId_ = "";
+    /// <summary>
+    /// The checkpoint id of the model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CheckpointId {
+      get { return checkpointId_; }
+      set {
+        checkpointId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "speculative_decoding_spec" field.</summary>
     public const int SpeculativeDecodingSpecFieldNumber = 30;
     private global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec speculativeDecodingSpec_;
@@ -1645,6 +1661,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(FasterDeploymentConfig, other.FasterDeploymentConfig)) return false;
       if (!object.Equals(Status, other.Status)) return false;
       if (!SystemLabels.Equals(other.SystemLabels)) return false;
+      if (CheckpointId != other.CheckpointId) return false;
       if (!object.Equals(SpeculativeDecodingSpec, other.SpeculativeDecodingSpec)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1671,6 +1688,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (fasterDeploymentConfig_ != null) hash ^= FasterDeploymentConfig.GetHashCode();
       if (status_ != null) hash ^= Status.GetHashCode();
       hash ^= SystemLabels.GetHashCode();
+      if (CheckpointId.Length != 0) hash ^= CheckpointId.GetHashCode();
       if (speculativeDecodingSpec_ != null) hash ^= SpeculativeDecodingSpec.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
@@ -1756,6 +1774,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(Status);
       }
       systemLabels_.WriteTo(output, _map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CheckpointId);
+      }
       if (speculativeDecodingSpec_ != null) {
         output.WriteRawTag(242, 1);
         output.WriteMessage(SpeculativeDecodingSpec);
@@ -1835,6 +1857,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(Status);
       }
       systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CheckpointId);
+      }
       if (speculativeDecodingSpec_ != null) {
         output.WriteRawTag(242, 1);
         output.WriteMessage(SpeculativeDecodingSpec);
@@ -1898,6 +1924,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Status);
       }
       size += systemLabels_.CalculateSize(_map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CheckpointId);
+      }
       if (speculativeDecodingSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SpeculativeDecodingSpec);
       }
@@ -1968,6 +1997,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         Status.MergeFrom(other.Status);
       }
       systemLabels_.MergeFrom(other.systemLabels_);
+      if (other.CheckpointId.Length != 0) {
+        CheckpointId = other.CheckpointId;
+      }
       if (other.speculativeDecodingSpec_ != null) {
         if (speculativeDecodingSpec_ == null) {
           SpeculativeDecodingSpec = new global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec();
@@ -2100,6 +2132,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
             break;
           }
+          case 234: {
+            CheckpointId = input.ReadString();
+            break;
+          }
           case 242: {
             if (speculativeDecodingSpec_ == null) {
               SpeculativeDecodingSpec = new global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec();
@@ -2213,6 +2249,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 226: {
             systemLabels_.AddEntriesFrom(ref input, _map_systemLabels_codec);
+            break;
+          }
+          case 234: {
+            CheckpointId = input.ReadString();
             break;
           }
           case 242: {
