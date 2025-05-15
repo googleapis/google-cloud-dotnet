@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.9.0, released 2025-05-15
+
+### New features
+
+- Add support for Analytics Hub & Marketplace Integration
+- Adding CommercialInfo message to the Listing and Subscription resources
+- Adding allow_only_metadata_sharing to Listing resource
+- Adding routine field to the SharedResource message
+- Adding DestinationDataset to the Subscription resource
+- Adding delete_commercial and revoke_commercial to DeleteListingRequest and RevokeSubscriptionRequest
+
 ## Version 1.8.0, released 2025-03-31
 
 ### New features
