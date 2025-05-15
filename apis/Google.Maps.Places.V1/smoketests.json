@@ -3,6 +3,7 @@
     "method": "SearchText",
     "client": "PlacesClient",
     "fieldMask": "places.formattedAddress",
+    "restrictedSkip": "b/414750416",
     "transports": [ "Grpc" ],
     "arguments": {
       "request": {
