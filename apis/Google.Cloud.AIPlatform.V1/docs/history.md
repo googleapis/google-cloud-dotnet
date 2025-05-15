@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.29.0, released 2025-05-15
+
+### New features
+
+- Add checkpoint ID to endpoint proto
+- New field `additional_properties` is added to message `.google.cloud.aiplatform.v1.Schema`
+- Add ANN feature for RagManagedDb
+- Tuning Checkpoints API
+- A new value `NVIDIA_B200 & NVIDIA_H200_141GB` is added to enum `AcceleratorType`
+
 ## Version 3.28.0, released 2025-05-06
 
 ### New features
