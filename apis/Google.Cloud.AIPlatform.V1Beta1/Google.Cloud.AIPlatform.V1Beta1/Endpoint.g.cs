@@ -66,7 +66,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
             "b25zL3tsb2NhdGlvbn0vZW5kcG9pbnRzL3tlbmRwb2ludH0STXByb2plY3Rz",
             "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wdWJsaXNoZXJzL3tw",
-            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9Iu0JCg1EZXBsb3llZE1vZGVsElIK",
+            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9IoQKCg1EZXBsb3llZE1vZGVsElIK",
             "E2RlZGljYXRlZF9yZXNvdXJjZXMYByABKAsyMy5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MWJldGExLkRlZGljYXRlZFJlc291cmNlc0gAElIKE2F1dG9t",
             "YXRpY19yZXNvdXJjZXMYCCABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
@@ -90,41 +90,42 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EZXBsb3llZE1vZGVsLlN0YXR1c0ID",
             "4EEDElcKDXN5c3RlbV9sYWJlbHMYHCADKAsyQC5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MWJldGExLkRlcGxveWVkTW9kZWwuU3lzdGVtTGFiZWxzRW50",
-            "cnkafwoGU3RhdHVzEhQKB21lc3NhZ2UYASABKAlCA+BBAxI5ChBsYXN0X3Vw",
-            "ZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEiQKF2F2YWlsYWJsZV9yZXBsaWNhX2NvdW50GAMgASgFQgPgQQMaMwoR",
-            "U3lzdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4AUIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJpdmF0ZUVuZHBv",
-            "aW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMSHQoQZXhwbGFp",
-            "bl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRwX3VyaRgDIAEo",
-            "CUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIvQBCiNQ",
-            "cmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIPCgdlbmFibGVk",
-            "GAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiABKAESUgoUYmlncXVlcnlfZGVz",
-            "dGluYXRpb24YAyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkJpZ1F1ZXJ5RGVzdGluYXRpb24SNAoncmVxdWVzdF9yZXNwb25zZV9s",
-            "b2dnaW5nX3NjaGVtYV92ZXJzaW9uGAQgASgJQgPgQQMSGwoTZW5hYmxlX290",
-            "ZWxfbG9nZ2luZxgGIAEoCCJ0ChRQdWJsaXNoZXJNb2RlbENvbmZpZxJcCg5s",
-            "b2dnaW5nX2NvbmZpZxgDIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuUHJlZGljdFJlcXVlc3RSZXNwb25zZUxvZ2dpbmdDb25maWci",
-            "TgoWQ2xpZW50Q29ubmVjdGlvbkNvbmZpZxI0ChFpbmZlcmVuY2VfdGltZW91",
-            "dBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJE",
-            "ZXBsb3ltZW50Q29uZmlnEhsKE2Zhc3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgi",
-            "9wEKDlJvbGxvdXRPcHRpb25zEiIKGG1heF91bmF2YWlsYWJsZV9yZXBsaWNh",
-            "cxgDIAEoBUgAEiQKGm1heF91bmF2YWlsYWJsZV9wZXJjZW50YWdlGAQgASgF",
-            "SAASHAoSbWF4X3N1cmdlX3JlcGxpY2FzGAUgASgFSAESHgoUbWF4X3N1cmdl",
-            "X3BlcmNlbnRhZ2UYBiABKAVIARIfChdwcmV2aW91c19kZXBsb3llZF9tb2Rl",
-            "bBgBIAEoCRIcCg9yZXZpc2lvbl9udW1iZXIYAiABKAVCA+BBA0IRCg9tYXhf",
-            "dW5hdmFpbGFibGVCCwoJbWF4X3N1cmdlQuQBCiNjb20uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMUINRW5kcG9pbnRQcm90b1ABWkNjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3Jt",
-            "cGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFC",
-            "ZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29n",
-            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "cnkSFQoNY2hlY2twb2ludF9pZBgdIAEoCRp/CgZTdGF0dXMSFAoHbWVzc2Fn",
+            "ZRgBIAEoCUID4EEDEjkKEGxhc3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSJAoXYXZhaWxhYmxlX3JlcGxp",
+            "Y2FfY291bnQYAyABKAVCA+BBAxozChFTeXN0ZW1MYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhYKFHByZWRpY3Rpb25fcmVz",
+            "b3VyY2VzIo8BChBQcml2YXRlRW5kcG9pbnRzEh0KEHByZWRpY3RfaHR0cF91",
+            "cmkYASABKAlCA+BBAxIdChBleHBsYWluX2h0dHBfdXJpGAIgASgJQgPgQQMS",
+            "HAoPaGVhbHRoX2h0dHBfdXJpGAMgASgJQgPgQQMSHwoSc2VydmljZV9hdHRh",
+            "Y2htZW50GAQgASgJQgPgQQMi9AEKI1ByZWRpY3RSZXF1ZXN0UmVzcG9uc2VM",
+            "b2dnaW5nQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSFQoNc2FtcGxpbmdfcmF0",
+            "ZRgCIAEoARJSChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgDIAEoCzI0Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQmlnUXVlcnlEZXN0aW5hdGlv",
+            "bhI0CidyZXF1ZXN0X3Jlc3BvbnNlX2xvZ2dpbmdfc2NoZW1hX3ZlcnNpb24Y",
+            "BCABKAlCA+BBAxIbChNlbmFibGVfb3RlbF9sb2dnaW5nGAYgASgIInQKFFB1",
+            "Ymxpc2hlck1vZGVsQ29uZmlnElwKDmxvZ2dpbmdfY29uZmlnGAMgASgLMkQu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QcmVkaWN0UmVxdWVz",
+            "dFJlc3BvbnNlTG9nZ2luZ0NvbmZpZyJOChZDbGllbnRDb25uZWN0aW9uQ29u",
+            "ZmlnEjQKEWluZmVyZW5jZV90aW1lb3V0GAEgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uIjUKFkZhc3RlckRlcGxveW1lbnRDb25maWcSGwoTZmFz",
+            "dF90cnlvdXRfZW5hYmxlZBgCIAEoCCL3AQoOUm9sbG91dE9wdGlvbnMSIgoY",
+            "bWF4X3VuYXZhaWxhYmxlX3JlcGxpY2FzGAMgASgFSAASJAoabWF4X3VuYXZh",
+            "aWxhYmxlX3BlcmNlbnRhZ2UYBCABKAVIABIcChJtYXhfc3VyZ2VfcmVwbGlj",
+            "YXMYBSABKAVIARIeChRtYXhfc3VyZ2VfcGVyY2VudGFnZRgGIAEoBUgBEh8K",
+            "F3ByZXZpb3VzX2RlcGxveWVkX21vZGVsGAEgASgJEhwKD3JldmlzaW9uX251",
+            "bWJlchgCIAEoBUID4EEDQhEKD21heF91bmF2YWlsYWJsZUILCgltYXhfc3Vy",
+            "Z2VC5AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQg1F",
+            "bmRwb2ludFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9y",
+            "bS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJ",
+            "UGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
+            "OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Endpoint), global::Google.Cloud.AIPlatform.V1Beta1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "ClientConnectionConfig", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "RolloutOptions", "Status", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "RolloutOptions", "Status", "SystemLabels", "CheckpointId" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination", "RequestResponseLoggingSchemaVersion", "EnableOtelLogging" }, null, null, null, null),
@@ -1230,6 +1231,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       rolloutOptions_ = other.rolloutOptions_ != null ? other.rolloutOptions_.Clone() : null;
       status_ = other.status_ != null ? other.status_.Clone() : null;
       systemLabels_ = other.systemLabels_.Clone();
+      checkpointId_ = other.checkpointId_;
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
           DedicatedResources = other.DedicatedResources.Clone();
@@ -1591,6 +1593,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return systemLabels_; }
     }
 
+    /// <summary>Field number for the "checkpoint_id" field.</summary>
+    public const int CheckpointIdFieldNumber = 29;
+    private string checkpointId_ = "";
+    /// <summary>
+    /// The checkpoint id of the model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CheckpointId {
+      get { return checkpointId_; }
+      set {
+        checkpointId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object predictionResources_;
     /// <summary>Enum of possible cases for the "prediction_resources" oneof.</summary>
     public enum PredictionResourcesOneofCase {
@@ -1646,6 +1663,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(RolloutOptions, other.RolloutOptions)) return false;
       if (!object.Equals(Status, other.Status)) return false;
       if (!SystemLabels.Equals(other.SystemLabels)) return false;
+      if (CheckpointId != other.CheckpointId) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1672,6 +1690,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (rolloutOptions_ != null) hash ^= RolloutOptions.GetHashCode();
       if (status_ != null) hash ^= Status.GetHashCode();
       hash ^= SystemLabels.GetHashCode();
+      if (CheckpointId.Length != 0) hash ^= CheckpointId.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1760,6 +1779,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(Status);
       }
       systemLabels_.WriteTo(output, _map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CheckpointId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1839,6 +1862,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(Status);
       }
       systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CheckpointId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1901,6 +1928,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Status);
       }
       size += systemLabels_.CalculateSize(_map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CheckpointId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1974,6 +2004,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         Status.MergeFrom(other.Status);
       }
       systemLabels_.MergeFrom(other.systemLabels_);
+      if (other.CheckpointId.Length != 0) {
+        CheckpointId = other.CheckpointId;
+      }
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
           if (DedicatedResources == null) {
@@ -2107,6 +2140,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
             break;
           }
+          case 234: {
+            CheckpointId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2220,6 +2257,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 226: {
             systemLabels_.AddEntriesFrom(ref input, _map_systemLabels_codec);
+            break;
+          }
+          case 234: {
+            CheckpointId = input.ReadString();
             break;
           }
         }
