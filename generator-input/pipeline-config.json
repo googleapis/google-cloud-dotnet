@@ -53,11 +53,11 @@
       "environmentVariables": [
         {
           "name": "NUGET_API_KEY_GOOGLE_APIS_PACKAGES",
-          "secretName": "nuget-api-key-google-apis-packages"
+          "secretName": "dotnet-nuget-google-apis-packages"
         },
         {
           "name": "NUGET_API_KEY_GOOGLE_CLOUD",
-          "secretName": "nuget-api-key-google-cloud"
+          "secretName": "dotnet-nuget-google-cloud"
         },
         {
           "name": "DOCS_BUCKET_GOOGLEAPISDEV",
