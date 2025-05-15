@@ -1384,7 +1384,7 @@
     },
     {
       "id": "Google.Cloud.Chronicle.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Chronicle",
       "productUrl": "https://cloud.google.com/chronicle/docs/secops/secops-overview",
