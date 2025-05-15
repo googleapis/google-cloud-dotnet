@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,8 @@ namespace Google.Cloud.ClientTesting
     {
         public const string TestProjectEnvironmentVariable = "TEST_PROJECT";
         public const string ProjectLocationEnvironmentVariable = "TEST_PROJECT_LOCATION";
+        public const string GoogleApplicationCredentialsEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
+        public const string GoogleCloudTestsInVpcScEnvironmentVariable = "GOOGLE_CLOUD_TESTS_IN_VPCSC";
 
         /// <summary>
         /// Returns the project ID to use for testing.
@@ -71,7 +73,20 @@ namespace Google.Cloud.ClientTesting
         /// </summary>
         public static void SkipIfVpcSc()
         {
-            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("GOOGLE_CLOUD_TESTS_IN_VPCSC")))
+            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleCloudTestsInVpcScEnvironmentVariable)))
+            {
+                throw new SkipException("Test skipped in VPCSC environment");
+            }
+        }
+
+        /// <summary>
+        /// Throws a <see cref="SkipException"/> if the tests are running in a "restricted" environment
+        /// (crudely detected by the absence of the GOOGLE_APPLICATION_CREDENTIALS environment variable).
+        /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
+        /// </summary>
+        public static void SkipOnRestrictedEnvironment()
+        {
+            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleApplicationCredentialsEnvironmentVariable)))
             {
                 throw new SkipException("Test skipped in VPCSC environment");
             }
