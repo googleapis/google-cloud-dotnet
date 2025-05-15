@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.9.0, released 2025-05-15
+
+### New features
+
+- Added OutputType field to the Clip resource to support MP4 clipping
+- Added DVRSession methods to support DVR feature
+
+### Documentation improvements
+
+- Clarified GCS in the comment for method `DeleteClip` in service `LivestreamService`
+- Updated comment for field `update_mask` in message `.google.cloud.video.livestream.v1.UpdateInputRequest` to indicate updates in `tier` field are allowed
+- A comment for field `requested_cancellation` in message `.google.cloud.video.livestream.v1.OperationMetadata` is changed to clarify error type
+
 ## Version 1.8.0, released 2024-07-22
 
 ### New features
