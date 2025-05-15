@@ -5271,7 +5271,7 @@
     },
     {
       "id": "Google.Cloud.Storage.Control.V2",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Cloud Storage",
       "productUrl": "https://cloud.google.com/storage/docs/overview",
