@@ -3464,6 +3464,885 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDvrSession</summary>
+        public void CreateDvrSessionRequestObject()
+        {
+            // Snippet: CreateDvrSession(CreateDvrSessionRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDvrSessionRequest request = new CreateDvrSessionRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                DvrSessionId = "",
+                DvrSession = new DvrSession(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = livestreamServiceClient.CreateDvrSession(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDvrSessionAsync</summary>
+        public async Task CreateDvrSessionRequestObjectAsync()
+        {
+            // Snippet: CreateDvrSessionAsync(CreateDvrSessionRequest, CallSettings)
+            // Additional: CreateDvrSessionAsync(CreateDvrSessionRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDvrSessionRequest request = new CreateDvrSessionRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                DvrSessionId = "",
+                DvrSession = new DvrSession(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = await livestreamServiceClient.CreateDvrSessionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDvrSession</summary>
+        public void CreateDvrSession()
+        {
+            // Snippet: CreateDvrSession(string, DvrSession, string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            DvrSession dvrSession = new DvrSession();
+            string dvrSessionId = "";
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = livestreamServiceClient.CreateDvrSession(parent, dvrSession, dvrSessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDvrSessionAsync</summary>
+        public async Task CreateDvrSessionAsync()
+        {
+            // Snippet: CreateDvrSessionAsync(string, DvrSession, string, CallSettings)
+            // Additional: CreateDvrSessionAsync(string, DvrSession, string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            DvrSession dvrSession = new DvrSession();
+            string dvrSessionId = "";
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = await livestreamServiceClient.CreateDvrSessionAsync(parent, dvrSession, dvrSessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDvrSession</summary>
+        public void CreateDvrSessionResourceNames()
+        {
+            // Snippet: CreateDvrSession(ChannelName, DvrSession, string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            DvrSession dvrSession = new DvrSession();
+            string dvrSessionId = "";
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = livestreamServiceClient.CreateDvrSession(parent, dvrSession, dvrSessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceCreateDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDvrSessionAsync</summary>
+        public async Task CreateDvrSessionResourceNamesAsync()
+        {
+            // Snippet: CreateDvrSessionAsync(ChannelName, DvrSession, string, CallSettings)
+            // Additional: CreateDvrSessionAsync(ChannelName, DvrSession, string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            DvrSession dvrSession = new DvrSession();
+            string dvrSessionId = "";
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = await livestreamServiceClient.CreateDvrSessionAsync(parent, dvrSession, dvrSessionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceCreateDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDvrSessions</summary>
+        public void ListDvrSessionsRequestObject()
+        {
+            // Snippet: ListDvrSessions(ListDvrSessionsRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ListDvrSessionsRequest request = new ListDvrSessionsRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDvrSessionsResponse, DvrSession> response = livestreamServiceClient.ListDvrSessions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DvrSession item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDvrSessionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DvrSession item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DvrSession> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DvrSession item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDvrSessionsAsync</summary>
+        public async Task ListDvrSessionsRequestObjectAsync()
+        {
+            // Snippet: ListDvrSessionsAsync(ListDvrSessionsRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDvrSessionsRequest request = new ListDvrSessionsRequest
+            {
+                ParentAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> response = livestreamServiceClient.ListDvrSessionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DvrSession item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDvrSessionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DvrSession item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DvrSession> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DvrSession item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDvrSessions</summary>
+        public void ListDvrSessions()
+        {
+            // Snippet: ListDvrSessions(string, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            PagedEnumerable<ListDvrSessionsResponse, DvrSession> response = livestreamServiceClient.ListDvrSessions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DvrSession item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDvrSessionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DvrSession item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DvrSession> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DvrSession item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDvrSessionsAsync</summary>
+        public async Task ListDvrSessionsAsync()
+        {
+            // Snippet: ListDvrSessionsAsync(string, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> response = livestreamServiceClient.ListDvrSessionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DvrSession item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDvrSessionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DvrSession item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DvrSession> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DvrSession item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDvrSessions</summary>
+        public void ListDvrSessionsResourceNames()
+        {
+            // Snippet: ListDvrSessions(ChannelName, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            PagedEnumerable<ListDvrSessionsResponse, DvrSession> response = livestreamServiceClient.ListDvrSessions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DvrSession item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDvrSessionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DvrSession item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DvrSession> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DvrSession item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDvrSessionsAsync</summary>
+        public async Task ListDvrSessionsResourceNamesAsync()
+        {
+            // Snippet: ListDvrSessionsAsync(ChannelName, string, int?, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName parent = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> response = livestreamServiceClient.ListDvrSessionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DvrSession item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDvrSessionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DvrSession item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DvrSession> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DvrSession item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDvrSession</summary>
+        public void GetDvrSessionRequestObject()
+        {
+            // Snippet: GetDvrSession(GetDvrSessionRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            GetDvrSessionRequest request = new GetDvrSessionRequest
+            {
+                DvrSessionName = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]"),
+            };
+            // Make the request
+            DvrSession response = livestreamServiceClient.GetDvrSession(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDvrSessionAsync</summary>
+        public async Task GetDvrSessionRequestObjectAsync()
+        {
+            // Snippet: GetDvrSessionAsync(GetDvrSessionRequest, CallSettings)
+            // Additional: GetDvrSessionAsync(GetDvrSessionRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDvrSessionRequest request = new GetDvrSessionRequest
+            {
+                DvrSessionName = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]"),
+            };
+            // Make the request
+            DvrSession response = await livestreamServiceClient.GetDvrSessionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDvrSession</summary>
+        public void GetDvrSession()
+        {
+            // Snippet: GetDvrSession(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/dvrSessions/[DVR_SESSION]";
+            // Make the request
+            DvrSession response = livestreamServiceClient.GetDvrSession(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDvrSessionAsync</summary>
+        public async Task GetDvrSessionAsync()
+        {
+            // Snippet: GetDvrSessionAsync(string, CallSettings)
+            // Additional: GetDvrSessionAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/dvrSessions/[DVR_SESSION]";
+            // Make the request
+            DvrSession response = await livestreamServiceClient.GetDvrSessionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDvrSession</summary>
+        public void GetDvrSessionResourceNames()
+        {
+            // Snippet: GetDvrSession(DvrSessionName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            DvrSessionName name = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]");
+            // Make the request
+            DvrSession response = livestreamServiceClient.GetDvrSession(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDvrSessionAsync</summary>
+        public async Task GetDvrSessionResourceNamesAsync()
+        {
+            // Snippet: GetDvrSessionAsync(DvrSessionName, CallSettings)
+            // Additional: GetDvrSessionAsync(DvrSessionName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DvrSessionName name = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]");
+            // Make the request
+            DvrSession response = await livestreamServiceClient.GetDvrSessionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDvrSession</summary>
+        public void DeleteDvrSessionRequestObject()
+        {
+            // Snippet: DeleteDvrSession(DeleteDvrSessionRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDvrSessionRequest request = new DeleteDvrSessionRequest
+            {
+                DvrSessionName = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteDvrSession(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDvrSessionAsync</summary>
+        public async Task DeleteDvrSessionRequestObjectAsync()
+        {
+            // Snippet: DeleteDvrSessionAsync(DeleteDvrSessionRequest, CallSettings)
+            // Additional: DeleteDvrSessionAsync(DeleteDvrSessionRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDvrSessionRequest request = new DeleteDvrSessionRequest
+            {
+                DvrSessionName = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteDvrSessionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDvrSession</summary>
+        public void DeleteDvrSession()
+        {
+            // Snippet: DeleteDvrSession(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/dvrSessions/[DVR_SESSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteDvrSession(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDvrSessionAsync</summary>
+        public async Task DeleteDvrSessionAsync()
+        {
+            // Snippet: DeleteDvrSessionAsync(string, CallSettings)
+            // Additional: DeleteDvrSessionAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]/dvrSessions/[DVR_SESSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteDvrSessionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDvrSession</summary>
+        public void DeleteDvrSessionResourceNames()
+        {
+            // Snippet: DeleteDvrSession(DvrSessionName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            DvrSessionName name = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = livestreamServiceClient.DeleteDvrSession(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceDeleteDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDvrSessionAsync</summary>
+        public async Task DeleteDvrSessionResourceNamesAsync()
+        {
+            // Snippet: DeleteDvrSessionAsync(DvrSessionName, CallSettings)
+            // Additional: DeleteDvrSessionAsync(DvrSessionName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DvrSessionName name = DvrSessionName.FromProjectLocationChannelDvrSession("[PROJECT]", "[LOCATION]", "[CHANNEL]", "[DVR_SESSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await livestreamServiceClient.DeleteDvrSessionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceDeleteDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDvrSession</summary>
+        public void UpdateDvrSessionRequestObject()
+        {
+            // Snippet: UpdateDvrSession(UpdateDvrSessionRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDvrSessionRequest request = new UpdateDvrSessionRequest
+            {
+                UpdateMask = new FieldMask(),
+                DvrSession = new DvrSession(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = livestreamServiceClient.UpdateDvrSession(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceUpdateDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDvrSessionAsync</summary>
+        public async Task UpdateDvrSessionRequestObjectAsync()
+        {
+            // Snippet: UpdateDvrSessionAsync(UpdateDvrSessionRequest, CallSettings)
+            // Additional: UpdateDvrSessionAsync(UpdateDvrSessionRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDvrSessionRequest request = new UpdateDvrSessionRequest
+            {
+                UpdateMask = new FieldMask(),
+                DvrSession = new DvrSession(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = await livestreamServiceClient.UpdateDvrSessionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceUpdateDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDvrSession</summary>
+        public void UpdateDvrSession()
+        {
+            // Snippet: UpdateDvrSession(DvrSession, FieldMask, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            DvrSession dvrSession = new DvrSession();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = livestreamServiceClient.UpdateDvrSession(dvrSession, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceUpdateDvrSession(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDvrSessionAsync</summary>
+        public async Task UpdateDvrSessionAsync()
+        {
+            // Snippet: UpdateDvrSessionAsync(DvrSession, FieldMask, CallSettings)
+            // Additional: UpdateDvrSessionAsync(DvrSession, FieldMask, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DvrSession dvrSession = new DvrSession();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DvrSession, OperationMetadata> response = await livestreamServiceClient.UpdateDvrSessionAsync(dvrSession, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DvrSession, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DvrSession result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DvrSession, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceUpdateDvrSessionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DvrSession retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateAsset</summary>
         public void CreateAssetRequestObject()
         {

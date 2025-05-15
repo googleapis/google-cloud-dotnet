@@ -28,6 +28,12 @@
                 "CreateClipAsync"
               ]
             },
+            "CreateDvrSession": {
+              "methods": [
+                "CreateDvrSession",
+                "CreateDvrSessionAsync"
+              ]
+            },
             "CreateEvent": {
               "methods": [
                 "CreateEvent",
@@ -58,6 +64,12 @@
                 "DeleteClipAsync"
               ]
             },
+            "DeleteDvrSession": {
+              "methods": [
+                "DeleteDvrSession",
+                "DeleteDvrSessionAsync"
+              ]
+            },
             "DeleteEvent": {
               "methods": [
                 "DeleteEvent",
@@ -86,6 +98,12 @@
               "methods": [
                 "GetClip",
                 "GetClipAsync"
+              ]
+            },
+            "GetDvrSession": {
+              "methods": [
+                "GetDvrSession",
+                "GetDvrSessionAsync"
               ]
             },
             "GetEvent": {
@@ -124,6 +142,12 @@
                 "ListClipsAsync"
               ]
             },
+            "ListDvrSessions": {
+              "methods": [
+                "ListDvrSessions",
+                "ListDvrSessionsAsync"
+              ]
+            },
             "ListEvents": {
               "methods": [
                 "ListEvents",
@@ -152,6 +176,12 @@
               "methods": [
                 "UpdateChannel",
                 "UpdateChannelAsync"
+              ]
+            },
+            "UpdateDvrSession": {
+              "methods": [
+                "UpdateDvrSession",
+                "UpdateDvrSessionAsync"
               ]
             },
             "UpdateInput": {

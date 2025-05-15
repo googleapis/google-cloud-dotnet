@@ -5830,6 +5830,1418 @@
       ]
     },
     {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateDvrSession_sync",
+      "title": "CreateDvrSessionRequestObject",
+      "description": "Snippet for CreateDvrSession",
+      "file": "LivestreamServiceClient.CreateDvrSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateDvrSession_async",
+      "title": "CreateDvrSessionRequestObjectAsync",
+      "description": "Snippet for CreateDvrSessionAsync",
+      "file": "LivestreamServiceClient.CreateDvrSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateDvrSession_sync_flattened",
+      "title": "CreateDvrSession",
+      "description": "Snippet for CreateDvrSession",
+      "file": "LivestreamServiceClient.CreateDvrSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateDvrSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+            "name": "dvrSession"
+          },
+          {
+            "type": "System.String",
+            "name": "dvrSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateDvrSession_async_flattened",
+      "title": "CreateDvrSessionAsync",
+      "description": "Snippet for CreateDvrSessionAsync",
+      "file": "LivestreamServiceClient.CreateDvrSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+            "name": "dvrSession"
+          },
+          {
+            "type": "System.String",
+            "name": "dvrSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateDvrSession_sync_flattened_resourceNames",
+      "title": "CreateDvrSessionResourceNames",
+      "description": "Snippet for CreateDvrSession",
+      "file": "LivestreamServiceClient.CreateDvrSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+            "name": "dvrSession"
+          },
+          {
+            "type": "System.String",
+            "name": "dvrSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateDvrSession_async_flattened_resourceNames",
+      "title": "CreateDvrSessionResourceNamesAsync",
+      "description": "Snippet for CreateDvrSessionAsync",
+      "file": "LivestreamServiceClient.CreateDvrSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+            "name": "dvrSession"
+          },
+          {
+            "type": "System.String",
+            "name": "dvrSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListDvrSessions_sync",
+      "title": "ListDvrSessionsRequestObject",
+      "description": "Snippet for ListDvrSessions",
+      "file": "LivestreamServiceClient.ListDvrSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDvrSessions",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListDvrSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse, Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListDvrSessions",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListDvrSessions",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListDvrSessions_async",
+      "title": "ListDvrSessionsRequestObjectAsync",
+      "description": "Snippet for ListDvrSessionsAsync",
+      "file": "LivestreamServiceClient.ListDvrSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDvrSessionsAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListDvrSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse, Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListDvrSessions",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListDvrSessions",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListDvrSessions_sync_flattened",
+      "title": "ListDvrSessions",
+      "description": "Snippet for ListDvrSessions",
+      "file": "LivestreamServiceClient.ListDvrSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDvrSessions",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListDvrSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse, Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListDvrSessions",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListDvrSessions",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListDvrSessions_async_flattened",
+      "title": "ListDvrSessionsAsync",
+      "description": "Snippet for ListDvrSessionsAsync",
+      "file": "LivestreamServiceClient.ListDvrSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDvrSessionsAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListDvrSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse, Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListDvrSessions",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListDvrSessions",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListDvrSessions_sync_flattened_resourceNames",
+      "title": "ListDvrSessionsResourceNames",
+      "description": "Snippet for ListDvrSessions",
+      "file": "LivestreamServiceClient.ListDvrSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDvrSessions",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListDvrSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse, Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListDvrSessions",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListDvrSessions",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListDvrSessions_async_flattened_resourceNames",
+      "title": "ListDvrSessionsResourceNamesAsync",
+      "description": "Snippet for ListDvrSessionsAsync",
+      "file": "LivestreamServiceClient.ListDvrSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDvrSessionsAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListDvrSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse, Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListDvrSessions",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListDvrSessions",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetDvrSession_sync",
+      "title": "GetDvrSessionRequestObject",
+      "description": "Snippet for GetDvrSession",
+      "file": "LivestreamServiceClient.GetDvrSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetDvrSession_async",
+      "title": "GetDvrSessionRequestObjectAsync",
+      "description": "Snippet for GetDvrSessionAsync",
+      "file": "LivestreamServiceClient.GetDvrSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetDvrSession_sync_flattened",
+      "title": "GetDvrSession",
+      "description": "Snippet for GetDvrSession",
+      "file": "LivestreamServiceClient.GetDvrSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetDvrSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetDvrSession_async_flattened",
+      "title": "GetDvrSessionAsync",
+      "description": "Snippet for GetDvrSessionAsync",
+      "file": "LivestreamServiceClient.GetDvrSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetDvrSession_sync_flattened_resourceNames",
+      "title": "GetDvrSessionResourceNames",
+      "description": "Snippet for GetDvrSession",
+      "file": "LivestreamServiceClient.GetDvrSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetDvrSession_async_flattened_resourceNames",
+      "title": "GetDvrSessionResourceNamesAsync",
+      "description": "Snippet for GetDvrSessionAsync",
+      "file": "LivestreamServiceClient.GetDvrSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.DvrSession>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteDvrSession_sync",
+      "title": "DeleteDvrSessionRequestObject",
+      "description": "Snippet for DeleteDvrSession",
+      "file": "LivestreamServiceClient.DeleteDvrSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteDvrSession_async",
+      "title": "DeleteDvrSessionRequestObjectAsync",
+      "description": "Snippet for DeleteDvrSessionAsync",
+      "file": "LivestreamServiceClient.DeleteDvrSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteDvrSession_sync_flattened",
+      "title": "DeleteDvrSession",
+      "description": "Snippet for DeleteDvrSession",
+      "file": "LivestreamServiceClient.DeleteDvrSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteDvrSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteDvrSession_async_flattened",
+      "title": "DeleteDvrSessionAsync",
+      "description": "Snippet for DeleteDvrSessionAsync",
+      "file": "LivestreamServiceClient.DeleteDvrSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteDvrSession_sync_flattened_resourceNames",
+      "title": "DeleteDvrSessionResourceNames",
+      "description": "Snippet for DeleteDvrSession",
+      "file": "LivestreamServiceClient.DeleteDvrSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteDvrSession_async_flattened_resourceNames",
+      "title": "DeleteDvrSessionResourceNamesAsync",
+      "description": "Snippet for DeleteDvrSessionAsync",
+      "file": "LivestreamServiceClient.DeleteDvrSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdateDvrSession_sync",
+      "title": "UpdateDvrSessionRequestObject",
+      "description": "Snippet for UpdateDvrSession",
+      "file": "LivestreamServiceClient.UpdateDvrSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdateDvrSession_async",
+      "title": "UpdateDvrSessionRequestObjectAsync",
+      "description": "Snippet for UpdateDvrSessionAsync",
+      "file": "LivestreamServiceClient.UpdateDvrSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdateDvrSession_sync_flattened",
+      "title": "UpdateDvrSession",
+      "description": "Snippet for UpdateDvrSession",
+      "file": "LivestreamServiceClient.UpdateDvrSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDvrSession",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateDvrSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+            "name": "dvrSession"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdateDvrSession_async_flattened",
+      "title": "UpdateDvrSessionAsync",
+      "description": "Snippet for UpdateDvrSessionAsync",
+      "file": "LivestreamServiceClient.UpdateDvrSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDvrSessionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateDvrSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DvrSession",
+            "name": "dvrSession"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.DvrSession, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDvrSession",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdateDvrSession",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_sync",
       "title": "CreateAssetRequestObject",
       "description": "Snippet for CreateAsset",
