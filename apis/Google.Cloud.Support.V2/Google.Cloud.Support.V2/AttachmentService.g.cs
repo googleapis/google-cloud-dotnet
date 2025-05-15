@@ -112,8 +112,7 @@ namespace Google.Cloud.Support.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of Case object for which attachments should be
-    /// listed.
+    /// Required. The name of the case for which attachments should be listed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,9 +127,14 @@ namespace Google.Cloud.Support.V2 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of attachments fetched with each request. If not
-    /// provided, the default is 10. The maximum page size that will be returned is
-    /// 100.
+    /// The maximum number of attachments fetched with each request.
+    ///
+    /// If not provided, the default is 10. The maximum page size that will be
+    /// returned is 100.
+    ///
+    /// The size of each page can be smaller than the requested page size and can
+    /// include zero. For example, you could request 100 attachments on one page,
+    /// receive 0, and then on the next page, receive 90.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -393,7 +397,7 @@ namespace Google.Cloud.Support.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Support.V2.Attachment.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Support.V2.Attachment> attachments_ = new pbc::RepeatedField<global::Google.Cloud.Support.V2.Attachment>();
     /// <summary>
-    /// The list of attachments associated with the given case.
+    /// The list of attachments associated with a case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -405,9 +409,9 @@ namespace Google.Cloud.Support.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token to retrieve the next page of results. This should be set in the
-    /// `page_token` field of subsequent `cases.attachments.list` requests. If
-    /// unspecified, there are no more results to retrieve.
+    /// A token to retrieve the next page of results. Set this in the `page_token`
+    /// field of subsequent `cases.attachments.list` requests. If unspecified,
+    /// there are no more results to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
