@@ -26,16 +26,17 @@ namespace Google.Cloud.Support.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvc3VwcG9ydC92Mi9hY3Rvci5wcm90bxIXZ29vZ2xl",
             "LmNsb3VkLnN1cHBvcnQudjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8iSQoFQWN0b3ISFAoMZGlzcGxheV9uYW1lGAEgASgJEg0KBWVtYWls",
-            "GAIgASgJEhsKDmdvb2dsZV9zdXBwb3J0GAQgASgIQgPgQQNCswEKG2NvbS5n",
-            "b29nbGUuY2xvdWQuc3VwcG9ydC52MkIKQWN0b3JQcm90b1ABWjVjbG91ZC5n",
-            "b29nbGUuY29tL2dvL3N1cHBvcnQvYXBpdjIvc3VwcG9ydHBiO3N1cHBvcnRw",
-            "YqoCF0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyygIXR29vZ2xlXENsb3VkXFN1",
-            "cHBvcnRcVjLqAhpHb29nbGU6OkNsb3VkOjpTdXBwb3J0OjpWMmIGcHJvdG8z"));
+            "cHJvdG8iZAoFQWN0b3ISFAoMZGlzcGxheV9uYW1lGAEgASgJEhEKBWVtYWls",
+            "GAIgASgJQgIYARIbCg5nb29nbGVfc3VwcG9ydBgEIAEoCEID4EEDEhUKCHVz",
+            "ZXJuYW1lGAUgASgJQgPgQQNCswEKG2NvbS5nb29nbGUuY2xvdWQuc3VwcG9y",
+            "dC52MkIKQWN0b3JQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3N1cHBv",
+            "cnQvYXBpdjIvc3VwcG9ydHBiO3N1cHBvcnRwYqoCF0dvb2dsZS5DbG91ZC5T",
+            "dXBwb3J0LlYyygIXR29vZ2xlXENsb3VkXFN1cHBvcnRcVjLqAhpHb29nbGU6",
+            "OkNsb3VkOjpTdXBwb3J0OjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2.Actor), global::Google.Cloud.Support.V2.Actor.Parser, new[]{ "DisplayName", "Email", "GoogleSupport" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2.Actor), global::Google.Cloud.Support.V2.Actor.Parser, new[]{ "DisplayName", "Email", "GoogleSupport", "Username" }, null, null, null, null)
           }));
     }
     #endregion
@@ -43,8 +44,9 @@ namespace Google.Cloud.Support.V2 {
   }
   #region Messages
   /// <summary>
-  /// An object containing information about the effective user and
-  /// authenticated principal responsible for an action.
+  /// An Actor represents an entity that performed an action. For example, an actor
+  /// could be a user who posted a comment on a support case, a user who
+  /// uploaded an attachment, or a service account that created a support case.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Actor : pb::IMessage<Actor>
@@ -84,6 +86,7 @@ namespace Google.Cloud.Support.V2 {
       displayName_ = other.displayName_;
       email_ = other.email_;
       googleSupport_ = other.googleSupport_;
+      username_ = other.username_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -115,12 +118,14 @@ namespace Google.Cloud.Support.V2 {
     public const int EmailFieldNumber = 2;
     private string email_ = "";
     /// <summary>
-    /// The email address of the actor. If not provided, it is inferred from
-    /// credentials supplied during case creation. If the authenticated principal
-    /// does not have an email address, one must be provided. When a name is
-    /// provided, an email must also be provided. This will be obfuscated if the
-    /// user is a Google Support agent.
+    /// The email address of the actor. If not provided, it is inferred from the
+    /// credentials supplied during case creation. When a name is provided, an
+    /// email must also be provided. If the user is a Google Support agent, this is
+    /// obfuscated.
+    ///
+    /// This field is deprecated. Use **username** field instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Email {
@@ -145,6 +150,25 @@ namespace Google.Cloud.Support.V2 {
       }
     }
 
+    /// <summary>Field number for the "username" field.</summary>
+    public const int UsernameFieldNumber = 5;
+    private string username_ = "";
+    /// <summary>
+    /// Output only. The username of the actor. It may look like an email or other
+    /// format provided by the identity provider. If not provided, it is inferred
+    /// from the credentials supplied. When a name is provided, a username must
+    /// also be provided. If the user is a Google Support agent, this will not be
+    /// set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Username {
+      get { return username_; }
+      set {
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -163,6 +187,7 @@ namespace Google.Cloud.Support.V2 {
       if (DisplayName != other.DisplayName) return false;
       if (Email != other.Email) return false;
       if (GoogleSupport != other.GoogleSupport) return false;
+      if (Username != other.Username) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,6 +198,7 @@ namespace Google.Cloud.Support.V2 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (GoogleSupport != false) hash ^= GoogleSupport.GetHashCode();
+      if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -203,6 +229,10 @@ namespace Google.Cloud.Support.V2 {
         output.WriteRawTag(32);
         output.WriteBool(GoogleSupport);
       }
+      if (Username.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Username);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,6 +255,10 @@ namespace Google.Cloud.Support.V2 {
         output.WriteRawTag(32);
         output.WriteBool(GoogleSupport);
       }
+      if (Username.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Username);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -243,6 +277,9 @@ namespace Google.Cloud.Support.V2 {
       }
       if (GoogleSupport != false) {
         size += 1 + 1;
+      }
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -264,6 +301,9 @@ namespace Google.Cloud.Support.V2 {
       }
       if (other.GoogleSupport != false) {
         GoogleSupport = other.GoogleSupport;
+      }
+      if (other.Username.Length != 0) {
+        Username = other.Username;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -292,6 +332,10 @@ namespace Google.Cloud.Support.V2 {
             GoogleSupport = input.ReadBool();
             break;
           }
+          case 42: {
+            Username = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -317,6 +361,10 @@ namespace Google.Cloud.Support.V2 {
           }
           case 32: {
             GoogleSupport = input.ReadBool();
+            break;
+          }
+          case 42: {
+            Username = input.ReadString();
             break;
           }
         }

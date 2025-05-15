@@ -170,7 +170,7 @@ namespace Google.Cloud.Support.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The fully qualified name of a case to be retrieved.
+    /// Required. The full name of a case to be retrieved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -367,8 +367,7 @@ namespace Google.Cloud.Support.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the Google Cloud Resource under which the case should
-    /// be created.
+    /// Required. The name of the parent under which the case should be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -615,7 +614,7 @@ namespace Google.Cloud.Support.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The fully qualified name of parent resource to list cases under.
+    /// Required. The name of a parent to list cases under.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -630,19 +629,21 @@ namespace Google.Cloud.Support.V2 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// An expression written in filter language. If non-empty, the query returns
-    /// the cases that match the filter. Else, the query doesn't filter the cases.
+    /// An expression used to filter cases.
     ///
-    /// Filter expressions use the following fields with the operators equals (`=`)
-    /// and `AND`:
+    /// If it's an empty string, then no filtering happens. Otherwise, the endpoint
+    /// returns the cases that match the filter.
     ///
-    /// - `state`: The accepted values are `OPEN` or `CLOSED`.
-    /// - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You
+    /// Expressions use the following fields separated by `AND` and specified with
+    /// `=`:
+    ///
+    /// - `state`: Can be `OPEN` or `CLOSED`.
+    /// - `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You
     /// can specify multiple values for priority using the `OR` operator. For
     /// example, `priority=P1 OR priority=P2`.
     /// - `creator.email`: The email address of the case creator.
     ///
-    /// Examples:
+    /// EXAMPLES:
     ///
     /// - `state=CLOSED`
     /// - `state=OPEN AND creator.email="tester@example.com"`
@@ -948,7 +949,7 @@ namespace Google.Cloud.Support.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Support.V2.Case.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Support.V2.Case> cases_ = new pbc::RepeatedField<global::Google.Cloud.Support.V2.Case>();
     /// <summary>
-    /// The list of cases associated with the Google Cloud Resource, after any
+    /// The list of cases associated with the parent after any
     /// filters have been applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -961,9 +962,9 @@ namespace Google.Cloud.Support.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token to retrieve the next page of results. This should be set in the
-    /// `page_token` field of the subsequent `ListCasesRequest` message that is
-    /// issued. If unspecified, there are no more results to retrieve.
+    /// A token to retrieve the next page of results. Set this in the `page_token`
+    /// field of subsequent `cases.list` requests. If unspecified, there are no
+    /// more results to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1176,7 +1177,7 @@ namespace Google.Cloud.Support.V2 {
     public const int ParentFieldNumber = 4;
     private string parent_ = "";
     /// <summary>
-    /// The fully qualified name of parent resource to search cases under.
+    /// The name of the parent resource to search for cases under.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1191,21 +1192,19 @@ namespace Google.Cloud.Support.V2 {
     public const int QueryFieldNumber = 1;
     private string query_ = "";
     /// <summary>
-    /// An expression written in filter language.
+    /// An expression used to filter cases.
     ///
-    /// A query uses the following fields with the operators equals (`=`) and
-    /// `AND`:
+    /// Expressions use the following fields separated by `AND` and specified with
+    /// `=`:
     ///
     /// - `organization`: An organization name in the form
     /// `organizations/&lt;organization_id>`.
     /// - `project`: A project name in the form `projects/&lt;project_id>`.
-    /// - `state`: The accepted values are `OPEN` or `CLOSED`.
-    /// - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You
+    /// - `state`: Can be `OPEN` or `CLOSED`.
+    /// - `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You
     /// can specify multiple values for priority using the `OR` operator. For
     /// example, `priority=P1 OR priority=P2`.
     /// - `creator.email`: The email address of the case creator.
-    /// - `billingAccount`: A billing account in the form
-    /// `billingAccounts/&lt;billing_account_id>`
     ///
     /// You must specify either `organization` or `project`.
     ///
@@ -1222,7 +1221,6 @@ namespace Google.Cloud.Support.V2 {
     /// - `organization="organizations/123456789"`
     /// - `project="projects/my-project-id"`
     /// - `project="projects/123456789"`
-    /// - `billing_account="billingAccounts/123456-A0B0C0-CUZ789"`
     /// - `organization="organizations/123456789" AND state=CLOSED`
     /// - `project="projects/my-project-id" AND creator.email="tester@example.com"`
     /// - `project="projects/my-project-id" AND (priority=P0 OR priority=P1)`
@@ -1528,7 +1526,7 @@ namespace Google.Cloud.Support.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Support.V2.Case.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Support.V2.Case> cases_ = new pbc::RepeatedField<global::Google.Cloud.Support.V2.Case>();
     /// <summary>
-    /// The list of cases associated with the Google Cloud Resource, after any
+    /// The list of cases associated with the parent after any
     /// filters have been applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1541,9 +1539,9 @@ namespace Google.Cloud.Support.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token to retrieve the next page of results. This should be set in the
-    /// `page_token` field of subsequent `SearchCaseRequest` message that is
-    /// issued. If unspecified, there are no more results to retrieve.
+    /// A token to retrieve the next page of results. Set this in the
+    /// `page_token` field of subsequent `cases.search` requests. If unspecified,
+    /// there are no more results to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1754,7 +1752,7 @@ namespace Google.Cloud.Support.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The fully qualified name of the Case resource to be escalated.
+    /// Required. The name of the case to be escalated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1769,7 +1767,7 @@ namespace Google.Cloud.Support.V2 {
     public const int EscalationFieldNumber = 2;
     private global::Google.Cloud.Support.V2.Escalation escalation_;
     /// <summary>
-    /// The escalation object to be sent with the escalation request.
+    /// The escalation information to be sent with the escalation request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1999,7 +1997,7 @@ namespace Google.Cloud.Support.V2 {
     public const int CaseFieldNumber = 1;
     private global::Google.Cloud.Support.V2.Case case_;
     /// <summary>
-    /// Required. The case object to update.
+    /// Required. The case to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2014,14 +2012,13 @@ namespace Google.Cloud.Support.V2 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// A list of attributes of the case object that should be updated
-    /// as part of this request. Supported values are `priority`, `display_name`,
-    /// and `subscriber_email_addresses`. If no fields are specified, all supported
-    /// fields are updated.
+    /// A list of attributes of the case that should be updated. Supported values
+    /// are `priority`, `display_name`, and `subscriber_email_addresses`. If no
+    /// fields are specified, all supported fields are updated.
     ///
-    /// WARNING: If you do not provide a field mask, then you might accidentally
-    /// clear some fields. For example, if you leave the field mask empty and do
-    /// not provide a value for `subscriber_email_addresses`, then
+    /// Be careful - if you do not provide a field mask, then you might
+    /// accidentally clear some fields. For example, if you leave the field mask
+    /// empty and do not provide a value for `subscriber_email_addresses`, then
     /// `subscriber_email_addresses` is updated to empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2260,7 +2257,7 @@ namespace Google.Cloud.Support.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The fully qualified name of the case resource to be closed.
+    /// Required. The name of the case to close.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2405,7 +2402,7 @@ namespace Google.Cloud.Support.V2 {
   }
 
   /// <summary>
-  /// The request message for SearchCaseClassifications endpoint.
+  /// The request message for the SearchCaseClassifications endpoint.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchCaseClassificationsRequest : pb::IMessage<SearchCaseClassificationsRequest>
@@ -2458,9 +2455,10 @@ namespace Google.Cloud.Support.V2 {
     public const int QueryFieldNumber = 1;
     private string query_ = "";
     /// <summary>
-    /// An expression written in the Google Cloud filter language. If non-empty,
-    /// then only cases whose fields match the filter are returned. If empty, then
-    /// no messages are filtered out.
+    /// An expression used to filter case classifications.
+    ///
+    /// If it's an empty string, then no filtering happens. Otherwise, case
+    /// classifications will be returned that match the filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2475,7 +2473,7 @@ namespace Google.Cloud.Support.V2 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of cases fetched with each request.
+    /// The maximum number of classifications fetched with each request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2750,9 +2748,9 @@ namespace Google.Cloud.Support.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token to retrieve the next page of results. This should be set in the
-    /// `page_token` field of subsequent `SearchCaseClassificationsRequest` message
-    /// that is issued. If unspecified, there are no more results to retrieve.
+    /// A token to retrieve the next page of results. Set this in the `page_token`
+    /// field of subsequent `caseClassifications.list` requests. If unspecified,
+    /// there are no more results to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
