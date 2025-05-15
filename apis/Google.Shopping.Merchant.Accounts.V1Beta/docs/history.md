@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2025-05-15
+
+### New features
+
+- Updated comments for returns sub-API publication
+
+### Documentation improvements
+
+- A comment for service `OnlineReturnPolicyService` is changed
+- A comment for method `GetOnlineReturnPolicy` in service `OnlineReturnPolicyService` is changed
+- A comment for method `ListOnlineReturnPolicies` in service `OnlineReturnPolicyService` is changed
+- A comment for field `parent` in message `.google.shopping.merchant.accounts.v1beta.ListOnlineReturnPoliciesRequest` is changed
+- A comment for field `policy` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `restocking_fee` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `return_methods` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `item_conditions` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `return_shipping_fee` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+
 ## Version 1.0.0-beta05, released 2025-03-17
 
 ### New features
