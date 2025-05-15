@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta29, released 2025-05-15
+
+### New features
+
+- Add checkpoint ID to endpoint proto
+- Add ANN feature for RagManagedDb
+- Tuning Checkpoints API
+- New field `additional_properties` is added to message `.google.cloud.aiplatform.v1beta1.Schema`
+- Add EncryptionSpec for RagCorpus CMEK feature
+- A new value `NVIDIA_B200 & NVIDIA_H200_141GB` is added to enum `AcceleratorType`
+
+### Documentation improvements
+
+- Fix links and typos
+- Remove comments for a non public feature
+
 ## Version 1.0.0-beta28, released 2025-05-06
 
 ### New features
