@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2025-05-15
+
+### New features
+
+- Add Client Libraries Storage IntelligenceConfig
+
 ## Version 1.3.0, released 2025-05-06
 
 ### New features
