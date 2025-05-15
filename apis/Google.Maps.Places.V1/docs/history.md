@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2025-05-15
+
+### New features
+
+- Add address descriptor proto
+- Add new photo fields
+- Update GenerativeSummary fields
+- Add new GoogleMapsLinks fields
+- Add new NeighborhoodSummary fields
+- Add new ReviewSummary fields
+- Add new review fields
+
+### Bug fixes
+
+- An existing field `description` is removed from message `.google.maps.places.v1.Place`
+- An existing field `references` is removed from message `.google.maps.places.v1.Place`
+- An existing message `AreaSummary` is removed
+- An existing field `area_summary` is removed from message `.google.maps.places.v1.Place`
+
+### Documentation improvements
+
+- Change comments for some fields in Places API
+
 ## Version 1.0.0-beta14, released 2025-03-17
 
 ### New features
