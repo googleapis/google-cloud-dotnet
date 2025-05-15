@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.17.0, released 2025-05-15
+
+### New features
+
+- Adding eTag field to AutokeyConfig
+
+### Documentation improvements
+
+- Updating docs for total_size field in KMS List APIs
+
 ## Version 3.16.0, released 2025-02-25
 
 ### New features
