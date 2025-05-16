@@ -61,11 +61,11 @@
         },
         {
           "name": "DOCS_BUCKET_GOOGLEAPISDEV",
-          "secretName": "docs-bucket-googleapisdev"
+          "defaultValue": "docs-staging"
         },
         {
           "name": "DOCS_BUCKET_DEVSITE",
-          "secretName": "docs-bucket-devsite"
+          "defaultValue": "docs-staging-v2"
         }
       ]
     }
