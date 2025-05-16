@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.18.0, released 2025-05-16
+
+### Documentation improvements
+
+- A comment for enum value `DESTROYED` in enum `CryptoKeyVersionState` is changed
+
 ## Version 3.17.0, released 2025-05-15
 
 ### New features
