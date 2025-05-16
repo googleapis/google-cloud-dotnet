@@ -218,7 +218,7 @@ namespace Google.Cloud.NetApp.V1 {
 
     private long transferBytes_;
     /// <summary>
-    /// Cumulative bytes trasferred so far for the replication relatinonship.
+    /// Cumulative bytes transferred so far for the replication relationship.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

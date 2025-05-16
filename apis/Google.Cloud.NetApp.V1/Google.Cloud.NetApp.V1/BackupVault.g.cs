@@ -28,7 +28,7 @@ namespace Google.Cloud.NetApp.V1 {
             "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xl",
             "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8iyQcKC0JhY2t1cFZhdWx0EhEKBG5hbWUYASABKAlC",
+            "aW1lc3RhbXAucHJvdG8ikQoKC0JhY2t1cFZhdWx0EhEKBG5hbWUYASABKAlC",
             "A+BBCBI9CgVzdGF0ZRgCIAEoDjIpLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEu",
             "QmFja3VwVmF1bHQuU3RhdGVCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgtkZXNjcmlwdGlv",
@@ -41,41 +41,49 @@ namespace Google.Cloud.NetApp.V1 {
             "bGVhcGlzLmNvbS9Mb2NhdGlvbhJGChNzb3VyY2VfYmFja3VwX3ZhdWx0GAkg",
             "ASgJQingQQP6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVs",
             "dBJLChhkZXN0aW5hdGlvbl9iYWNrdXBfdmF1bHQYCiABKAlCKeBBA/pBIwoh",
-            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0Gi0KC0xhYmVsc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXgoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZ",
-            "EAISDAoIREVMRVRJTkcQAxIJCgVFUlJPUhAEEgwKCFVQREFUSU5HEAUiVQoP",
-            "QmFja3VwVmF1bHRUeXBlEiEKHUJBQ0tVUF9WQVVMVF9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDQoJSU5fUkVHSU9OEAESEAoMQ1JPU1NfUkVHSU9OEAI6hwHqQYMB",
-            "CiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSQ3Byb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBWYXVsdHMv",
-            "e2JhY2t1cF92YXVsdH0qDGJhY2t1cFZhdWx0czILYmFja3VwVmF1bHQiUAoV",
-            "R2V0QmFja3VwVmF1bHRSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwoh",
-            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0Ip0BChdMaXN0QmFj",
-            "a3VwVmF1bHRzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0EhEKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJEg4K",
-            "BmZpbHRlchgFIAEoCSKEAQoYTGlzdEJhY2t1cFZhdWx0c1Jlc3BvbnNlEjoK",
-            "DWJhY2t1cF92YXVsdHMYASADKAsyIy5nb29nbGUuY2xvdWQubmV0YXBwLnYx",
-            "LkJhY2t1cFZhdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJl",
-            "YWNoYWJsZRgDIAMoCSKzAQoYQ3JlYXRlQmFja3VwVmF1bHRSZXF1ZXN0EjkK",
-            "BnBhcmVudBgBIAEoCUIp4EEC+kEjEiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20v",
-            "QmFja3VwVmF1bHQSHAoPYmFja3VwX3ZhdWx0X2lkGAIgASgJQgPgQQISPgoM",
-            "YmFja3VwX3ZhdWx0GAMgASgLMiMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5C",
-            "YWNrdXBWYXVsdEID4EECIlMKGERlbGV0ZUJhY2t1cFZhdWx0UmVxdWVzdBI3",
-            "CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9C",
-            "YWNrdXBWYXVsdCKQAQoYVXBkYXRlQmFja3VwVmF1bHRSZXF1ZXN0EjQKC3Vw",
-            "ZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID",
-            "4EECEj4KDGJhY2t1cF92YXVsdBgCIAEoCzIjLmdvb2dsZS5jbG91ZC5uZXRh",
-            "cHAudjEuQmFja3VwVmF1bHRCA+BBAkKyAQoaY29tLmdvb2dsZS5jbG91ZC5u",
-            "ZXRhcHAudjFCEEJhY2t1cFZhdWx0UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUu",
-            "Q2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdv",
-            "b2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0El8KF2JhY2t1cF9y",
+            "ZXRlbnRpb25fcG9saWN5GAsgASgLMjkuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
+            "MS5CYWNrdXBWYXVsdC5CYWNrdXBSZXRlbnRpb25Qb2xpY3lCA+BBARrkAQoV",
+            "QmFja3VwUmV0ZW50aW9uUG9saWN5EjMKJmJhY2t1cF9taW5pbXVtX2VuZm9y",
+            "Y2VkX3JldGVudGlvbl9kYXlzGAEgASgFQgPgQQISIwoWZGFpbHlfYmFja3Vw",
+            "X2ltbXV0YWJsZRgCIAEoCEID4EEBEiQKF3dlZWtseV9iYWNrdXBfaW1tdXRh",
+            "YmxlGAMgASgIQgPgQQESJQoYbW9udGhseV9iYWNrdXBfaW1tdXRhYmxlGAQg",
+            "ASgIQgPgQQESJAoXbWFudWFsX2JhY2t1cF9pbW11dGFibGUYBSABKAhCA+BB",
+            "ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIl4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJ",
+            "TkcQARIJCgVSRUFEWRACEgwKCERFTEVUSU5HEAMSCQoFRVJST1IQBBIMCghV",
+            "UERBVElORxAFIlUKD0JhY2t1cFZhdWx0VHlwZRIhCh1CQUNLVVBfVkFVTFRf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEg0KCUlOX1JFR0lPThABEhAKDENST1NTX1JF",
+            "R0lPThACOocB6kGDAQohbmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFZh",
+            "dWx0EkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "YmFja3VwVmF1bHRzL3tiYWNrdXBfdmF1bHR9KgxiYWNrdXBWYXVsdHMyC2Jh",
+            "Y2t1cFZhdWx0IlAKFUdldEJhY2t1cFZhdWx0UmVxdWVzdBI3CgRuYW1lGAEg",
+            "ASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVs",
+            "dCKdAQoXTGlzdEJhY2t1cFZhdWx0c1JlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
+            "QingQQL6QSMSIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVsdBIR",
+            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIQCghvcmRl",
+            "cl9ieRgEIAEoCRIOCgZmaWx0ZXIYBSABKAkihAEKGExpc3RCYWNrdXBWYXVs",
+            "dHNSZXNwb25zZRI6Cg1iYWNrdXBfdmF1bHRzGAEgAygLMiMuZ29vZ2xlLmNs",
+            "b3VkLm5ldGFwcC52MS5CYWNrdXBWYXVsdBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiswEKGENyZWF0ZUJhY2t1cFZh",
+            "dWx0UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0YXBwLmdv",
+            "b2dsZWFwaXMuY29tL0JhY2t1cFZhdWx0EhwKD2JhY2t1cF92YXVsdF9pZBgC",
+            "IAEoCUID4EECEj4KDGJhY2t1cF92YXVsdBgDIAEoCzIjLmdvb2dsZS5jbG91",
+            "ZC5uZXRhcHAudjEuQmFja3VwVmF1bHRCA+BBAiJTChhEZWxldGVCYWNrdXBW",
+            "YXVsdFJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29v",
+            "Z2xlYXBpcy5jb20vQmFja3VwVmF1bHQikAEKGFVwZGF0ZUJhY2t1cFZhdWx0",
+            "UmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5GaWVsZE1hc2tCA+BBAhI+CgxiYWNrdXBfdmF1bHQYAiABKAsyIy5nb29n",
+            "bGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cFZhdWx0QgPgQQJCsgEKGmNvbS5n",
+            "b29nbGUuY2xvdWQubmV0YXBwLnYxQhBCYWNrdXBWYXVsdFByb3RvUAFaMmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFw",
+            "cHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxO",
+            "ZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault), global::Google.Cloud.NetApp.V1.BackupVault.Parser, new[]{ "Name", "State", "CreateTime", "Description", "Labels", "BackupVaultType", "SourceRegion", "BackupRegion", "SourceBackupVault", "DestinationBackupVault" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.State), typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault), global::Google.Cloud.NetApp.V1.BackupVault.Parser, new[]{ "Name", "State", "CreateTime", "Description", "Labels", "BackupVaultType", "SourceRegion", "BackupRegion", "SourceBackupVault", "DestinationBackupVault", "BackupRetentionPolicy" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.State), typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupVaultType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy), global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy.Parser, new[]{ "BackupMinimumEnforcedRetentionDays", "DailyBackupImmutable", "WeeklyBackupImmutable", "MonthlyBackupImmutable", "ManualBackupImmutable" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest), global::Google.Cloud.NetApp.V1.GetBackupVaultRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest), global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse), global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse.Parser, new[]{ "BackupVaults", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -136,6 +144,7 @@ namespace Google.Cloud.NetApp.V1 {
       backupRegion_ = other.backupRegion_;
       sourceBackupVault_ = other.sourceBackupVault_;
       destinationBackupVault_ = other.destinationBackupVault_;
+      backupRetentionPolicy_ = other.backupRetentionPolicy_ != null ? other.backupRetentionPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -303,6 +312,21 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "backup_retention_policy" field.</summary>
+    public const int BackupRetentionPolicyFieldNumber = 11;
+    private global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy backupRetentionPolicy_;
+    /// <summary>
+    /// Optional. Backup retention policy defining the retenton of backups.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy BackupRetentionPolicy {
+      get { return backupRetentionPolicy_; }
+      set {
+        backupRetentionPolicy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -328,6 +352,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (BackupRegion != other.BackupRegion) return false;
       if (SourceBackupVault != other.SourceBackupVault) return false;
       if (DestinationBackupVault != other.DestinationBackupVault) return false;
+      if (!object.Equals(BackupRetentionPolicy, other.BackupRetentionPolicy)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -345,6 +370,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (BackupRegion.Length != 0) hash ^= BackupRegion.GetHashCode();
       if (SourceBackupVault.Length != 0) hash ^= SourceBackupVault.GetHashCode();
       if (DestinationBackupVault.Length != 0) hash ^= DestinationBackupVault.GetHashCode();
+      if (backupRetentionPolicy_ != null) hash ^= BackupRetentionPolicy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -400,6 +426,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(82);
         output.WriteString(DestinationBackupVault);
       }
+      if (backupRetentionPolicy_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(BackupRetentionPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -447,6 +477,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(82);
         output.WriteString(DestinationBackupVault);
       }
+      if (backupRetentionPolicy_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(BackupRetentionPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -484,6 +518,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (DestinationBackupVault.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationBackupVault);
+      }
+      if (backupRetentionPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackupRetentionPolicy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -527,6 +564,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.DestinationBackupVault.Length != 0) {
         DestinationBackupVault = other.DestinationBackupVault;
+      }
+      if (other.backupRetentionPolicy_ != null) {
+        if (backupRetentionPolicy_ == null) {
+          BackupRetentionPolicy = new global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy();
+        }
+        BackupRetentionPolicy.MergeFrom(other.BackupRetentionPolicy);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -584,6 +627,13 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 82: {
             DestinationBackupVault = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (backupRetentionPolicy_ == null) {
+              BackupRetentionPolicy = new global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy();
+            }
+            input.ReadMessage(BackupRetentionPolicy);
             break;
           }
         }
@@ -644,6 +694,13 @@ namespace Google.Cloud.NetApp.V1 {
             DestinationBackupVault = input.ReadString();
             break;
           }
+          case 90: {
+            if (backupRetentionPolicy_ == null) {
+              BackupRetentionPolicy = new global::Google.Cloud.NetApp.V1.BackupVault.Types.BackupRetentionPolicy();
+            }
+            input.ReadMessage(BackupRetentionPolicy);
+            break;
+          }
         }
       }
     }
@@ -700,6 +757,371 @@ namespace Google.Cloud.NetApp.V1 {
         /// BackupVault type is CROSS_REGION.
         /// </summary>
         [pbr::OriginalName("CROSS_REGION")] CrossRegion = 2,
+      }
+
+      /// <summary>
+      /// Retention policy for backups in the backup vault
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class BackupRetentionPolicy : pb::IMessage<BackupRetentionPolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BackupRetentionPolicy> _parser = new pb::MessageParser<BackupRetentionPolicy>(() => new BackupRetentionPolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<BackupRetentionPolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetApp.V1.BackupVault.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BackupRetentionPolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BackupRetentionPolicy(BackupRetentionPolicy other) : this() {
+          backupMinimumEnforcedRetentionDays_ = other.backupMinimumEnforcedRetentionDays_;
+          dailyBackupImmutable_ = other.dailyBackupImmutable_;
+          weeklyBackupImmutable_ = other.weeklyBackupImmutable_;
+          monthlyBackupImmutable_ = other.monthlyBackupImmutable_;
+          manualBackupImmutable_ = other.manualBackupImmutable_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BackupRetentionPolicy Clone() {
+          return new BackupRetentionPolicy(this);
+        }
+
+        /// <summary>Field number for the "backup_minimum_enforced_retention_days" field.</summary>
+        public const int BackupMinimumEnforcedRetentionDaysFieldNumber = 1;
+        private int backupMinimumEnforcedRetentionDays_;
+        /// <summary>
+        /// Required. Minimum retention duration in days for backups in the backup
+        /// vault.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int BackupMinimumEnforcedRetentionDays {
+          get { return backupMinimumEnforcedRetentionDays_; }
+          set {
+            backupMinimumEnforcedRetentionDays_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "daily_backup_immutable" field.</summary>
+        public const int DailyBackupImmutableFieldNumber = 2;
+        private bool dailyBackupImmutable_;
+        /// <summary>
+        /// Optional. Indicates if the daily backups are immutable.
+        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// monthly_backup_immutable and manual_backup_immutable must be true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DailyBackupImmutable {
+          get { return dailyBackupImmutable_; }
+          set {
+            dailyBackupImmutable_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "weekly_backup_immutable" field.</summary>
+        public const int WeeklyBackupImmutableFieldNumber = 3;
+        private bool weeklyBackupImmutable_;
+        /// <summary>
+        /// Optional. Indicates if the weekly backups are immutable.
+        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// monthly_backup_immutable and manual_backup_immutable must be true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool WeeklyBackupImmutable {
+          get { return weeklyBackupImmutable_; }
+          set {
+            weeklyBackupImmutable_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "monthly_backup_immutable" field.</summary>
+        public const int MonthlyBackupImmutableFieldNumber = 4;
+        private bool monthlyBackupImmutable_;
+        /// <summary>
+        /// Optional. Indicates if the monthly backups are immutable.
+        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// monthly_backup_immutable and manual_backup_immutable must be true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool MonthlyBackupImmutable {
+          get { return monthlyBackupImmutable_; }
+          set {
+            monthlyBackupImmutable_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "manual_backup_immutable" field.</summary>
+        public const int ManualBackupImmutableFieldNumber = 5;
+        private bool manualBackupImmutable_;
+        /// <summary>
+        /// Optional. Indicates if the manual backups are immutable.
+        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// monthly_backup_immutable and manual_backup_immutable must be true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ManualBackupImmutable {
+          get { return manualBackupImmutable_; }
+          set {
+            manualBackupImmutable_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as BackupRetentionPolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(BackupRetentionPolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (BackupMinimumEnforcedRetentionDays != other.BackupMinimumEnforcedRetentionDays) return false;
+          if (DailyBackupImmutable != other.DailyBackupImmutable) return false;
+          if (WeeklyBackupImmutable != other.WeeklyBackupImmutable) return false;
+          if (MonthlyBackupImmutable != other.MonthlyBackupImmutable) return false;
+          if (ManualBackupImmutable != other.ManualBackupImmutable) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (BackupMinimumEnforcedRetentionDays != 0) hash ^= BackupMinimumEnforcedRetentionDays.GetHashCode();
+          if (DailyBackupImmutable != false) hash ^= DailyBackupImmutable.GetHashCode();
+          if (WeeklyBackupImmutable != false) hash ^= WeeklyBackupImmutable.GetHashCode();
+          if (MonthlyBackupImmutable != false) hash ^= MonthlyBackupImmutable.GetHashCode();
+          if (ManualBackupImmutable != false) hash ^= ManualBackupImmutable.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (BackupMinimumEnforcedRetentionDays != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(BackupMinimumEnforcedRetentionDays);
+          }
+          if (DailyBackupImmutable != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(DailyBackupImmutable);
+          }
+          if (WeeklyBackupImmutable != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(WeeklyBackupImmutable);
+          }
+          if (MonthlyBackupImmutable != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(MonthlyBackupImmutable);
+          }
+          if (ManualBackupImmutable != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(ManualBackupImmutable);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (BackupMinimumEnforcedRetentionDays != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(BackupMinimumEnforcedRetentionDays);
+          }
+          if (DailyBackupImmutable != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(DailyBackupImmutable);
+          }
+          if (WeeklyBackupImmutable != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(WeeklyBackupImmutable);
+          }
+          if (MonthlyBackupImmutable != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(MonthlyBackupImmutable);
+          }
+          if (ManualBackupImmutable != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(ManualBackupImmutable);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (BackupMinimumEnforcedRetentionDays != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(BackupMinimumEnforcedRetentionDays);
+          }
+          if (DailyBackupImmutable != false) {
+            size += 1 + 1;
+          }
+          if (WeeklyBackupImmutable != false) {
+            size += 1 + 1;
+          }
+          if (MonthlyBackupImmutable != false) {
+            size += 1 + 1;
+          }
+          if (ManualBackupImmutable != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(BackupRetentionPolicy other) {
+          if (other == null) {
+            return;
+          }
+          if (other.BackupMinimumEnforcedRetentionDays != 0) {
+            BackupMinimumEnforcedRetentionDays = other.BackupMinimumEnforcedRetentionDays;
+          }
+          if (other.DailyBackupImmutable != false) {
+            DailyBackupImmutable = other.DailyBackupImmutable;
+          }
+          if (other.WeeklyBackupImmutable != false) {
+            WeeklyBackupImmutable = other.WeeklyBackupImmutable;
+          }
+          if (other.MonthlyBackupImmutable != false) {
+            MonthlyBackupImmutable = other.MonthlyBackupImmutable;
+          }
+          if (other.ManualBackupImmutable != false) {
+            ManualBackupImmutable = other.ManualBackupImmutable;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                BackupMinimumEnforcedRetentionDays = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                DailyBackupImmutable = input.ReadBool();
+                break;
+              }
+              case 24: {
+                WeeklyBackupImmutable = input.ReadBool();
+                break;
+              }
+              case 32: {
+                MonthlyBackupImmutable = input.ReadBool();
+                break;
+              }
+              case 40: {
+                ManualBackupImmutable = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                BackupMinimumEnforcedRetentionDays = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                DailyBackupImmutable = input.ReadBool();
+                break;
+              }
+              case 24: {
+                WeeklyBackupImmutable = input.ReadBool();
+                break;
+              }
+              case 32: {
+                MonthlyBackupImmutable = input.ReadBool();
+                break;
+              }
+              case 40: {
+                ManualBackupImmutable = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
