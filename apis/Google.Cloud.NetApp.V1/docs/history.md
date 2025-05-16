@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.10.0, released 2025-05-16
+
+### New features
+
+- A new message 'google.cloud.netapp.v1.BackupRetentionPolicy' is added in 'google.cloud.netapp.v1.BackupVault'
+- A new field 'enforced_retention_end_time' in message 'google.cloud.netapp.v1.Backup' is added
+- New fields 'custom_performance_enabled', 'total_throughput_mibps', 'total_iops' in message 'google.cloud.netapp.v1.StoragePool' are added
+
+### Documentation improvements
+
+- A comment for field `transfer_bytes` in message `.google.cloud.netapp.v1.TransferStats` is changed
+
 ## Version 1.9.0, released 2025-05-06
 
 ### New features
