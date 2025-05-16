@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0-alpha25, released 2025-05-16
+
+Test release only; still no change from 2.0.0-alpha23.
+
 ## Version 2.0.0-alpha24, released 2025-05-08
 
 Test release only; no change from 2.0.0-alpha23.
