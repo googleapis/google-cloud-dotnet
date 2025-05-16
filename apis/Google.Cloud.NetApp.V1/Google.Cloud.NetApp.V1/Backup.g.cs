@@ -28,7 +28,7 @@ namespace Google.Cloud.NetApp.V1 {
             "LmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xlL3Byb3Rv",
             "YnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8ijggKBkJhY2t1cBIRCgRuYW1lGAEgASgJQgPgQQgSOAoFc3Rh",
+            "bXAucHJvdG8i1AgKBkJhY2t1cBIRCgRuYW1lGAEgASgJQgPgQQgSOAoFc3Rh",
             "dGUYAiABKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cC5TdGF0",
             "ZUID4EEDEhMKC2Rlc2NyaXB0aW9uGAMgASgJEh8KEnZvbHVtZV91c2FnZV9i",
             "eXRlcxgEIAEoA0ID4EEDEj0KC2JhY2t1cF90eXBlGAUgASgOMiMuZ29vZ2xl",
@@ -42,39 +42,41 @@ namespace Google.Cloud.NetApp.V1 {
             "Zmllc19wenMYCyABKAhCA+BBAxIaCg1zYXRpc2ZpZXNfcHppGAwgASgIQgPg",
             "QQMSQAoNdm9sdW1lX3JlZ2lvbhgNIAEoCUIp4EED+kEjCiFsb2NhdGlvbnMu",
             "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SQAoNYmFja3VwX3JlZ2lvbhgOIAEo",
-            "CUIp4EED+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24a",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASJtCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5H",
-            "EAESDQoJVVBMT0FESU5HEAISCQoFUkVBRFkQAxIMCghERUxFVElORxAEEgkK",
-            "BUVSUk9SEAUSDAoIVVBEQVRJTkcQBiI3CgRUeXBlEhQKEFRZUEVfVU5TUEVD",
-            "SUZJRUQQABIKCgZNQU5VQUwQARINCglTQ0hFRFVMRUQQAjqJAepBhQEKHG5l",
-            "dGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXASVHByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBWYXVsdHMve2JhY2t1cF92",
-            "YXVsdH0vYmFja3Vwcy97YmFja3VwfSoHYmFja3VwczIGYmFja3VwQhIKEF9z",
-            "b3VyY2Vfc25hcHNob3QikwEKEkxpc3RCYWNrdXBzUmVxdWVzdBI0CgZwYXJl",
-            "bnQYASABKAlCJOBBAvpBHhIcbmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1",
-            "cBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIQCghv",
-            "cmRlcl9ieRgEIAEoCRIOCgZmaWx0ZXIYBSABKAkidAoTTGlzdEJhY2t1cHNS",
-            "ZXNwb25zZRIvCgdiYWNrdXBzGAEgAygLMh4uZ29vZ2xlLmNsb3VkLm5ldGFw",
-            "cC52MS5CYWNrdXASFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVh",
-            "Y2hhYmxlGAMgAygJIkYKEEdldEJhY2t1cFJlcXVlc3QSMgoEbmFtZRgBIAEo",
-            "CUIk4EEC+kEeChxuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwIpgBChND",
-            "cmVhdGVCYWNrdXBSZXF1ZXN0EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEeEhxu",
-            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwEhYKCWJhY2t1cF9pZBgCIAEo",
-            "CUID4EECEjMKBmJhY2t1cBgDIAEoCzIeLmdvb2dsZS5jbG91ZC5uZXRhcHAu",
-            "djEuQmFja3VwQgPgQQIiSQoTRGVsZXRlQmFja3VwUmVxdWVzdBIyCgRuYW1l",
-            "GAEgASgJQiTgQQL6QR4KHG5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXAi",
-            "gAEKE1VwZGF0ZUJhY2t1cFJlcXVlc3QSNAoLdXBkYXRlX21hc2sYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISMwoGYmFja3VwGAIg",
-            "ASgLMh4uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5CYWNrdXBCA+BBAkKtAQoa",
-            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCC0JhY2t1cFByb3RvUAFaMmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFw",
-            "cHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxO",
-            "ZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "CUIp4EED+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24S",
+            "RAobZW5mb3JjZWRfcmV0ZW50aW9uX2VuZF90aW1lGA8gASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEibQoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEg0KCVVQTE9BRElORxACEgkK",
+            "BVJFQURZEAMSDAoIREVMRVRJTkcQBBIJCgVFUlJPUhAFEgwKCFVQREFUSU5H",
+            "EAYiNwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGTUFOVUFMEAES",
+            "DQoJU0NIRURVTEVEEAI6iQHqQYUBChxuZXRhcHAuZ29vZ2xlYXBpcy5jb20v",
+            "QmFja3VwElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vYmFja3VwVmF1bHRzL3tiYWNrdXBfdmF1bHR9L2JhY2t1cHMve2JhY2t1",
+            "cH0qB2JhY2t1cHMyBmJhY2t1cEISChBfc291cmNlX3NuYXBzaG90IpMBChJM",
+            "aXN0QmFja3Vwc1JlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6QR4SHG5l",
+            "dGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXASEQoJcGFnZV9zaXplGAIgASgF",
+            "EhIKCnBhZ2VfdG9rZW4YAyABKAkSEAoIb3JkZXJfYnkYBCABKAkSDgoGZmls",
+            "dGVyGAUgASgJInQKE0xpc3RCYWNrdXBzUmVzcG9uc2USLwoHYmFja3VwcxgB",
+            "IAMoCzIeLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQmFja3VwEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJGChBHZXRC",
+            "YWNrdXBSZXF1ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocbmV0YXBwLmdv",
+            "b2dsZWFwaXMuY29tL0JhY2t1cCKYAQoTQ3JlYXRlQmFja3VwUmVxdWVzdBI0",
+            "CgZwYXJlbnQYASABKAlCJOBBAvpBHhIcbmV0YXBwLmdvb2dsZWFwaXMuY29t",
+            "L0JhY2t1cBIWCgliYWNrdXBfaWQYAiABKAlCA+BBAhIzCgZiYWNrdXAYAyAB",
+            "KAsyHi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cEID4EECIkkKE0Rl",
+            "bGV0ZUJhY2t1cFJlcXVlc3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEeChxuZXRh",
+            "cHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwIoABChNVcGRhdGVCYWNrdXBSZXF1",
+            "ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFza0ID4EECEjMKBmJhY2t1cBgCIAEoCzIeLmdvb2dsZS5jbG91ZC5u",
+            "ZXRhcHAudjEuQmFja3VwQgPgQQJCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0",
+            "YXBwLnYxQgtCYWNrdXBQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25l",
+            "dGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5O",
+            "ZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpD",
+            "bG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Backup), global::Google.Cloud.NetApp.V1.Backup.Parser, new[]{ "Name", "State", "Description", "VolumeUsageBytes", "BackupType", "SourceVolume", "SourceSnapshot", "CreateTime", "Labels", "ChainStorageBytes", "SatisfiesPzs", "SatisfiesPzi", "VolumeRegion", "BackupRegion" }, new[]{ "SourceSnapshot" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Backup.Types.State), typeof(global::Google.Cloud.NetApp.V1.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Backup), global::Google.Cloud.NetApp.V1.Backup.Parser, new[]{ "Name", "State", "Description", "VolumeUsageBytes", "BackupType", "SourceVolume", "SourceSnapshot", "CreateTime", "Labels", "ChainStorageBytes", "SatisfiesPzs", "SatisfiesPzi", "VolumeRegion", "BackupRegion", "EnforcedRetentionEndTime" }, new[]{ "SourceSnapshot" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Backup.Types.State), typeof(global::Google.Cloud.NetApp.V1.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupsRequest), global::Google.Cloud.NetApp.V1.ListBackupsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupsResponse), global::Google.Cloud.NetApp.V1.ListBackupsResponse.Parser, new[]{ "Backups", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetBackupRequest), global::Google.Cloud.NetApp.V1.GetBackupRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -139,6 +141,7 @@ namespace Google.Cloud.NetApp.V1 {
       satisfiesPzi_ = other.satisfiesPzi_;
       volumeRegion_ = other.volumeRegion_;
       backupRegion_ = other.backupRegion_;
+      enforcedRetentionEndTime_ = other.enforcedRetentionEndTime_ != null ? other.enforcedRetentionEndTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -385,6 +388,21 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "enforced_retention_end_time" field.</summary>
+    public const int EnforcedRetentionEndTimeFieldNumber = 15;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp enforcedRetentionEndTime_;
+    /// <summary>
+    /// Output only. The time until which the backup is not deletable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EnforcedRetentionEndTime {
+      get { return enforcedRetentionEndTime_; }
+      set {
+        enforcedRetentionEndTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -414,6 +432,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (VolumeRegion != other.VolumeRegion) return false;
       if (BackupRegion != other.BackupRegion) return false;
+      if (!object.Equals(EnforcedRetentionEndTime, other.EnforcedRetentionEndTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -435,6 +454,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (VolumeRegion.Length != 0) hash ^= VolumeRegion.GetHashCode();
       if (BackupRegion.Length != 0) hash ^= BackupRegion.GetHashCode();
+      if (enforcedRetentionEndTime_ != null) hash ^= EnforcedRetentionEndTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -506,6 +526,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(114);
         output.WriteString(BackupRegion);
       }
+      if (enforcedRetentionEndTime_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EnforcedRetentionEndTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -569,6 +593,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(114);
         output.WriteString(BackupRegion);
       }
+      if (enforcedRetentionEndTime_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EnforcedRetentionEndTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -618,6 +646,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (BackupRegion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupRegion);
+      }
+      if (enforcedRetentionEndTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnforcedRetentionEndTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -673,6 +704,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.BackupRegion.Length != 0) {
         BackupRegion = other.BackupRegion;
+      }
+      if (other.enforcedRetentionEndTime_ != null) {
+        if (enforcedRetentionEndTime_ == null) {
+          EnforcedRetentionEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EnforcedRetentionEndTime.MergeFrom(other.EnforcedRetentionEndTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -748,6 +785,13 @@ namespace Google.Cloud.NetApp.V1 {
             BackupRegion = input.ReadString();
             break;
           }
+          case 122: {
+            if (enforcedRetentionEndTime_ == null) {
+              EnforcedRetentionEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EnforcedRetentionEndTime);
+            break;
+          }
         }
       }
     #endif
@@ -820,6 +864,13 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 114: {
             BackupRegion = input.ReadString();
+            break;
+          }
+          case 122: {
+            if (enforcedRetentionEndTime_ == null) {
+              EnforcedRetentionEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EnforcedRetentionEndTime);
             break;
           }
         }

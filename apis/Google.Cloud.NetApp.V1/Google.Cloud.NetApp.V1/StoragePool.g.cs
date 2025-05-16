@@ -49,7 +49,7 @@ namespace Google.Cloud.NetApp.V1 {
             "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9y",
             "YWdlUG9vbCJZCh5Td2l0Y2hBY3RpdmVSZXBsaWNhWm9uZVJlcXVlc3QSNwoE",
             "bmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3Rv",
-            "cmFnZVBvb2wi4gkKC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
+            "cmFnZVBvb2wiyQoKC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
             "Cg1zZXJ2aWNlX2xldmVsGAIgASgOMiQuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5TZXJ2aWNlTGV2ZWxCA+BBAhIZCgxjYXBhY2l0eV9naWIYAyABKANCA+BB",
             "AhIgChN2b2x1bWVfY2FwYWNpdHlfZ2liGAQgASgDQgPgQQMSGQoMdm9sdW1l",
@@ -69,23 +69,25 @@ namespace Google.Cloud.NetApp.V1 {
             "c3NfYWxsb3dlZBgRIAEoCEICGAFIAIgBARIfChJhbGxvd19hdXRvX3RpZXJp",
             "bmcYEiABKAhCA+BBARIZCgxyZXBsaWNhX3pvbmUYFCABKAlCA+BBARIRCgR6",
             "b25lGBUgASgJQgPgQQESGgoNc2F0aXNmaWVzX3B6cxgXIAEoCEID4EEDEhoK",
-            "DXNhdGlzZmllc19wemkYGCABKAhCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERF",
-            "TEVUSU5HEAMSDAoIVVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNB",
-            "QkxFRBAGEgkKBUVSUk9SEAc6hwHqQYMBCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
-            "b20vU3RvcmFnZVBvb2wSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9zdG9yYWdlUG9vbHMve3N0b3JhZ2VfcG9vbH0qDHN0b3Jh",
-            "Z2VQb29sczILc3RvcmFnZVBvb2xCGAoWX2dsb2JhbF9hY2Nlc3NfYWxsb3dl",
-            "ZCKoAQofVmFsaWRhdGVEaXJlY3RvcnlTZXJ2aWNlUmVxdWVzdBI3CgRuYW1l",
-            "GAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9yYWdl",
-            "UG9vbBJMChZkaXJlY3Rvcnlfc2VydmljZV90eXBlGAIgASgOMiwuZ29vZ2xl",
-            "LmNsb3VkLm5ldGFwcC52MS5EaXJlY3RvcnlTZXJ2aWNlVHlwZUKyAQoaY29t",
-            "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCEFN0b3JhZ2VQb29sUHJvdG9QAVoy",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0",
-            "YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3Vk",
-            "XE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3Rv",
-            "Mw=="));
+            "DXNhdGlzZmllc19wemkYGCABKAhCA+BBAxInChpjdXN0b21fcGVyZm9ybWFu",
+            "Y2VfZW5hYmxlZBgZIAEoCEID4EEBEiMKFnRvdGFsX3Rocm91Z2hwdXRfbWli",
+            "cHMYGiABKANCA+BBARIXCgp0b3RhbF9pb3BzGBsgASgDQgPgQQEaLQoLTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ7CgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoIQ1JF",
+            "QVRJTkcQAhIMCghERUxFVElORxADEgwKCFVQREFUSU5HEAQSDQoJUkVTVE9S",
+            "SU5HEAUSDAoIRElTQUJMRUQQBhIJCgVFUlJPUhAHOocB6kGDAQohbmV0YXBw",
+            "Lmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQb29sEkNwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3RvcmFnZVBvb2xzL3tzdG9yYWdl",
+            "X3Bvb2x9KgxzdG9yYWdlUG9vbHMyC3N0b3JhZ2VQb29sQhgKFl9nbG9iYWxf",
+            "YWNjZXNzX2FsbG93ZWQiqAEKH1ZhbGlkYXRlRGlyZWN0b3J5U2VydmljZVJl",
+            "cXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBp",
+            "cy5jb20vU3RvcmFnZVBvb2wSTAoWZGlyZWN0b3J5X3NlcnZpY2VfdHlwZRgC",
+            "IAEoDjIsLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuRGlyZWN0b3J5U2Vydmlj",
+            "ZVR5cGVCsgEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQhBTdG9yYWdl",
+            "UG9vbFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYx",
+            "L25ldGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoC",
+            "Fkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRB",
+            "cHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,7 +98,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest), global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest.Parser, new[]{ "UpdateMask", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest), global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest), global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi", "CustomPerformanceEnabled", "TotalThroughputMibps", "TotalIops" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest), global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest.Parser, new[]{ "Name", "DirectoryServiceType" }, null, null, null, null)
           }));
     }
@@ -1915,6 +1917,9 @@ namespace Google.Cloud.NetApp.V1 {
       zone_ = other.zone_;
       satisfiesPzs_ = other.satisfiesPzs_;
       satisfiesPzi_ = other.satisfiesPzi_;
+      customPerformanceEnabled_ = other.customPerformanceEnabled_;
+      totalThroughputMibps_ = other.totalThroughputMibps_;
+      totalIops_ = other.totalIops_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2277,6 +2282,53 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_performance_enabled" field.</summary>
+    public const int CustomPerformanceEnabledFieldNumber = 25;
+    private bool customPerformanceEnabled_;
+    /// <summary>
+    /// Optional. True if using Independent Scaling of capacity and performance
+    /// (Hyperdisk) By default set to false
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CustomPerformanceEnabled {
+      get { return customPerformanceEnabled_; }
+      set {
+        customPerformanceEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_throughput_mibps" field.</summary>
+    public const int TotalThroughputMibpsFieldNumber = 26;
+    private long totalThroughputMibps_;
+    /// <summary>
+    /// Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalThroughputMibps {
+      get { return totalThroughputMibps_; }
+      set {
+        totalThroughputMibps_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_iops" field.</summary>
+    public const int TotalIopsFieldNumber = 27;
+    private long totalIops_;
+    /// <summary>
+    /// Optional. Custom Performance Total IOPS of the pool
+    /// If not provided, it will be calculated based on the total_throughput_mibps
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalIops {
+      get { return totalIops_; }
+      set {
+        totalIops_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2314,6 +2366,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (Zone != other.Zone) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
+      if (CustomPerformanceEnabled != other.CustomPerformanceEnabled) return false;
+      if (TotalThroughputMibps != other.TotalThroughputMibps) return false;
+      if (TotalIops != other.TotalIops) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2343,6 +2398,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
+      if (CustomPerformanceEnabled != false) hash ^= CustomPerformanceEnabled.GetHashCode();
+      if (TotalThroughputMibps != 0L) hash ^= TotalThroughputMibps.GetHashCode();
+      if (TotalIops != 0L) hash ^= TotalIops.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2446,6 +2504,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(192, 1);
         output.WriteBool(SatisfiesPzi);
       }
+      if (CustomPerformanceEnabled != false) {
+        output.WriteRawTag(200, 1);
+        output.WriteBool(CustomPerformanceEnabled);
+      }
+      if (TotalThroughputMibps != 0L) {
+        output.WriteRawTag(208, 1);
+        output.WriteInt64(TotalThroughputMibps);
+      }
+      if (TotalIops != 0L) {
+        output.WriteRawTag(216, 1);
+        output.WriteInt64(TotalIops);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2541,6 +2611,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(192, 1);
         output.WriteBool(SatisfiesPzi);
       }
+      if (CustomPerformanceEnabled != false) {
+        output.WriteRawTag(200, 1);
+        output.WriteBool(CustomPerformanceEnabled);
+      }
+      if (TotalThroughputMibps != 0L) {
+        output.WriteRawTag(208, 1);
+        output.WriteInt64(TotalThroughputMibps);
+      }
+      if (TotalIops != 0L) {
+        output.WriteRawTag(216, 1);
+        output.WriteInt64(TotalIops);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2614,6 +2696,15 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (SatisfiesPzi != false) {
         size += 2 + 1;
+      }
+      if (CustomPerformanceEnabled != false) {
+        size += 2 + 1;
+      }
+      if (TotalThroughputMibps != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(TotalThroughputMibps);
+      }
+      if (TotalIops != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(TotalIops);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2693,6 +2784,15 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.SatisfiesPzi != false) {
         SatisfiesPzi = other.SatisfiesPzi;
+      }
+      if (other.CustomPerformanceEnabled != false) {
+        CustomPerformanceEnabled = other.CustomPerformanceEnabled;
+      }
+      if (other.TotalThroughputMibps != 0L) {
+        TotalThroughputMibps = other.TotalThroughputMibps;
+      }
+      if (other.TotalIops != 0L) {
+        TotalIops = other.TotalIops;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2800,6 +2900,18 @@ namespace Google.Cloud.NetApp.V1 {
             SatisfiesPzi = input.ReadBool();
             break;
           }
+          case 200: {
+            CustomPerformanceEnabled = input.ReadBool();
+            break;
+          }
+          case 208: {
+            TotalThroughputMibps = input.ReadInt64();
+            break;
+          }
+          case 216: {
+            TotalIops = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2904,6 +3016,18 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 192: {
             SatisfiesPzi = input.ReadBool();
+            break;
+          }
+          case 200: {
+            CustomPerformanceEnabled = input.ReadBool();
+            break;
+          }
+          case 208: {
+            TotalThroughputMibps = input.ReadInt64();
+            break;
+          }
+          case 216: {
+            TotalIops = input.ReadInt64();
             break;
           }
         }
