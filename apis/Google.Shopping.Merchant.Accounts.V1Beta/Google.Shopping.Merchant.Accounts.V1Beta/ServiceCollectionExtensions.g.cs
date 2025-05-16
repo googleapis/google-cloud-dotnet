@@ -315,6 +315,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gsmav::GbpAccountsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGbpAccountsServiceClient(this IServiceCollection services, sys::Action<gsmav::GbpAccountsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::GbpAccountsServiceClientBuilder builder = new gsmav::GbpAccountsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmav::GbpAccountsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGbpAccountsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmav::GbpAccountsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::GbpAccountsServiceClientBuilder builder = new gsmav::GbpAccountsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gsmav::HomepageServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -346,6 +382,78 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gsmav::HomepageServiceClientBuilder builder = new gsmav::HomepageServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmav::LfpProvidersServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLfpProvidersServiceClient(this IServiceCollection services, sys::Action<gsmav::LfpProvidersServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::LfpProvidersServiceClientBuilder builder = new gsmav::LfpProvidersServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmav::LfpProvidersServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLfpProvidersServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmav::LfpProvidersServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::LfpProvidersServiceClientBuilder builder = new gsmav::LfpProvidersServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmav::OmnichannelSettingsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddOmnichannelSettingsServiceClient(this IServiceCollection services, sys::Action<gsmav::OmnichannelSettingsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::OmnichannelSettingsServiceClientBuilder builder = new gsmav::OmnichannelSettingsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmav::OmnichannelSettingsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddOmnichannelSettingsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmav::OmnichannelSettingsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::OmnichannelSettingsServiceClientBuilder builder = new gsmav::OmnichannelSettingsServiceClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
