@@ -3391,7 +3391,7 @@ namespace Google.Cloud.Kms.V1 {
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
         /// <summary>
-        /// This key material of this version is destroyed and no longer stored.
+        /// The key material of this version is destroyed and no longer stored.
         /// This version may only become
         /// [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED]
         /// again if this version is
