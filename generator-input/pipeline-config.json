@@ -48,6 +48,26 @@
           "defaultValue": "https://github.com/googleapis/google-cloud-dotnet"
         }
       ]
+    },
+    "publish-library": {
+      "environmentVariables": [
+        {
+          "name": "NUGET_API_KEY_GOOGLE_APIS_PACKAGES",
+          "secretName": "dotnet-nuget-google-apis-packages"
+        },
+        {
+          "name": "NUGET_API_KEY_GOOGLE_CLOUD",
+          "secretName": "dotnet-nuget-google-cloud"
+        },
+        {
+          "name": "DOCS_BUCKET_GOOGLEAPISDEV",
+          "defaultValue": "docs-staging"
+        },
+        {
+          "name": "DOCS_BUCKET_DEVSITE",
+          "defaultValue": "docs-staging-v2"
+        }
+      ]
     }
   }
 }
