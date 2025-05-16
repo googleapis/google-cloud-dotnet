@@ -302,7 +302,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // The file has a Content-Encoding of gzip, and it's stored compressed.
             // We should still be able to download it, and the result should be the original plain text.
             var stream = new MemoryStream();
-            _fixture.Client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream);
+            _fixture.Client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream);
             var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
@@ -322,7 +322,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
             var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream);
+            client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream);
             var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
@@ -340,7 +340,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
             var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
+            client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream,
                 new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Never });
             var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();
@@ -359,7 +359,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
             var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
+            var obj = client.DownloadObject(StorageFixture.TestBucket, "gzipped-text.txt", stream,
                 new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Automatic });
             var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();

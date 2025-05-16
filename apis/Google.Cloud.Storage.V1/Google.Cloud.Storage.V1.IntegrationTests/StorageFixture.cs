@@ -41,7 +41,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     [FileLoggerBeforeAfterTest]
     public sealed class StorageFixture : CloudProjectFixtureBase, ICollectionFixture<StorageFixture>
     {
-        internal const string CrossLanguageTestBucket = "storage-library-test-bucket";
+        internal const string TestBucket = "dotnet-storage-library-test-bucket";
 
         private const string RequesterPaysProjectEnvironmentVariable = "REQUESTER_PAYS_TEST_PROJECT";
         private const string RequesterPaysCredentialsEnvironmentVariable = "REQUESTER_PAYS_CREDENTIALS";

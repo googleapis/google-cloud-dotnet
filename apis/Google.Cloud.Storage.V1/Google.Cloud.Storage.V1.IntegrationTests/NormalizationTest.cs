@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     /// <summary>
     /// Tests that ensure the client does *not* perform any normalization.
-    /// The bucket <see cref="StorageFixture.CrossLanguageTestBucket"/> contains two files named "Café"
+    /// The bucket <see cref="StorageFixture.TestBucket"/> contains two files named "Café"
     /// but using different normalization. The client should be able to retrieve both.
     /// </summary>
     [FileLoggerBeforeAfterTest]
@@ -38,11 +38,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             TestEnvironment.SkipIfVpcSc();
             var client = StorageClient.Create();
-            var obj = client.GetObject(StorageFixture.CrossLanguageTestBucket, name);
+            var obj = client.GetObject(StorageFixture.TestBucket, name);
             Assert.Equal(name, obj.Name);
 
             var stream = new MemoryStream();
-            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, name, stream);
+            client.DownloadObject(StorageFixture.TestBucket, name, stream);
             string text = Encoding.UTF8.GetString(stream.ToArray());
             Assert.Equal(expectedContent, text);
         }
