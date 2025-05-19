@@ -1840,6 +1840,33 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Dataform.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Dataform",
+      "productUrl": "https://cloud.google.com/dataform/docs/overview",
+      "description": "Recommended Google client library to access the Google Cloud Dataform API, which allows you to develop, version control, and operationalize SQL pipelines in BigQuery.",
+      "tags": [
+        "sql",
+        "bigquery",
+        "analysis",
+        "scheduling",
+        "workflows",
+        "versioning"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.4.0",
+        "Google.Cloud.Location": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/dataform/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "dataform",
+      "serviceConfigFile": "dataform_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Dataform.V1Beta1",
       "version": "1.0.0-beta08",
       "type": "grpc",
