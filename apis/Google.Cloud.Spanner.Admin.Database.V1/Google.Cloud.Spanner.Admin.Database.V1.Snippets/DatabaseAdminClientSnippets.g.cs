@@ -732,6 +732,7 @@ namespace GoogleCSharpSnippets
                 Statements = { "", },
                 OperationId = "",
                 ProtoDescriptors = ByteString.Empty,
+                ThroughputMode = false,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = databaseAdminClient.UpdateDatabaseDdl(request);
@@ -768,6 +769,7 @@ namespace GoogleCSharpSnippets
                 Statements = { "", },
                 OperationId = "",
                 ProtoDescriptors = ByteString.Empty,
+                ThroughputMode = false,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = await databaseAdminClient.UpdateDatabaseDdlAsync(request);
