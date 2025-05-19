@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0-alpha06, released 2025-05-19
+
+Only dependency changes since 2.0.0-alpha05; releasing as a test of new release processes.
+
 ## Version 2.0.0-alpha05, released 2024-05-08
 
 ### New features
