@@ -47,7 +47,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
         string value = Environment.GetEnvironmentVariable(name);
         if (string.IsNullOrEmpty(value))
         {
-            throw new Exception($"Expected environment variable '{value}'");
+            throw new Exception($"Expected environment variable '{name}'");
         }
         return value;
     }
