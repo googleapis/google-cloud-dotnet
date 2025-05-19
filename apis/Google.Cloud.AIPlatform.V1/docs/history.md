@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.30.0, released 2025-05-19
+
+### New features
+
+- Adding thoughts_token_count to prediction service
+
 ## Version 3.29.0, released 2025-05-15
 
 ### New features
