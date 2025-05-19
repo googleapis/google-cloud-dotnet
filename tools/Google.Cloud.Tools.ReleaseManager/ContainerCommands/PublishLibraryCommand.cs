@@ -83,7 +83,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 var bucket = GetRequiredEnvironmentVariable(DocsBucketEnvPrefix + siteUpper);
                 
                 bits[0] = "dotnet";
-                var destinationObject = string.Join("", bits);
+                var destinationObject = string.Join("-", bits);
 
                 list.Add(new(bundle, destinationObject, bucket));
             }
