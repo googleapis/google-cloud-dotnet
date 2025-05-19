@@ -94,8 +94,9 @@ public sealed class PublishLibraryCommand : IContainerCommand
         {
             using var client = StorageClient.Create();
             using var bundleStream = File.OpenRead(_file);
+            Console.WriteLine($"Uploading {_destinationObject} to {_bucket}");
             client.UploadObject(_bucket, _destinationObject, null, bundleStream);
-            Console.WriteLine($"Uploaded {_destinationObject}");
+            Console.WriteLine($"Uploaded {_destinationObject} to {_bucket}");
         }
     }
 
