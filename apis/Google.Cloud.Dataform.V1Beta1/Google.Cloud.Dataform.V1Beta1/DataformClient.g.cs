@@ -923,6 +923,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -932,6 +935,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -941,6 +947,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="parent">
         /// Required. The location in which to list repositories. Must be in the format
@@ -975,6 +984,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="parent">
         /// Required. The location in which to list repositories. Must be in the format
@@ -1009,6 +1021,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="parent">
         /// Required. The location in which to list repositories. Must be in the format
@@ -1043,6 +1058,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="parent">
         /// Required. The location in which to list repositories. Must be in the format
@@ -1344,11 +1362,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1359,11 +1376,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1374,11 +1390,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1389,11 +1404,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="repository">
         /// Required. The repository to update.
@@ -1414,11 +1428,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="repository">
         /// Required. The repository to update.
@@ -1439,11 +1452,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="repository">
         /// Required. The repository to update.
@@ -3108,11 +3120,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3123,11 +3134,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3138,11 +3148,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3153,11 +3162,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="releaseConfig">
         /// Required. The release config to update.
@@ -3178,11 +3186,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="releaseConfig">
         /// Required. The release config to update.
@@ -3203,11 +3210,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="releaseConfig">
         /// Required. The release config to update.
@@ -4159,11 +4165,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4174,11 +4179,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4189,11 +4193,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4204,11 +4207,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="workflowConfig">
         /// Required. The workflow config to update.
@@ -4229,11 +4231,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="workflowConfig">
         /// Required. The workflow config to update.
@@ -4254,11 +4255,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="workflowConfig">
         /// Required. The workflow config to update.
@@ -5027,11 +5027,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5042,11 +5041,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5057,11 +5055,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5072,11 +5069,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="config">
         /// Required. The config to update.
@@ -5096,11 +5092,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="config">
         /// Required. The config to update.
@@ -5120,11 +5115,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="config">
         /// Required. The config to update.
@@ -5666,6 +5660,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5678,6 +5675,9 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Lists Repositories in a given project and location.
+        /// 
+        /// **Note:** *This method can return repositories not shown in the [Dataform
+        /// UI](https://console.cloud.google.com/bigquery/dataform)*.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5739,11 +5739,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5757,11 +5756,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single Repository.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6529,11 +6527,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6547,11 +6544,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single ReleaseConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6757,11 +6753,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6775,11 +6770,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Updates a single WorkflowConfig.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6985,11 +6979,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7003,11 +6996,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <summary>
         /// Update default config for a given project and location.
         /// 
-        /// **Note:** This method does not fully implement
-        /// [AIP-134](https://google.aip.dev/134); in particular:
-        /// - The wildcard entry (**\***) is treated as a bad request
-        /// - When the **field_mask** is omitted, instead of only updating the set
-        /// fields, the request is treated as a full update on all modifiable fields
+        /// **Note:** *This method does not fully implement
+        /// [AIP/134](https://google.aip.dev/134). The wildcard entry (\*) is treated
+        /// as a bad request, and when the `field_mask` is omitted, the request is
+        /// treated as a full update on all modifiable fields.*
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
