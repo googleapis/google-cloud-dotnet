@@ -3938,7 +3938,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "a9e06ec53863e9de34e7f94295c622c1dc765f9c",
+            "lastGeneratedCommit": "8fe4ca0046ec135a6d5423965e170e149b14ef95",
             "apiPaths": [
                 "google/iam/v3beta"
             ],
