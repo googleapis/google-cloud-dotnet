@@ -80,7 +80,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
 
                 var site = bits[0]; // e.g. googleapisdev or devsite
                 var siteUpper = site.ToUpperInvariant();
-                var bucket = GetRequiredEnvironmentVariable($"{DocsBucketEnvPrefix}_{siteUpper}");
+                var bucket = GetRequiredEnvironmentVariable(DocsBucketEnvPrefix + siteUpper);
                 
                 bits[0] = "dotnet";
                 var destinationObject = string.Join("", bits);
@@ -114,8 +114,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
         {
             var packageOwner = File.ReadAllText(Path.Combine(packageOutput, PackageLibraryCommand.PackageOwnerFile));
             var packages  = Directory.GetFiles(packageOutput, "*.nupkg");
-            string envName = $"{NuGetApiKeyEnvPrefix}_{packageOwner.ToUpperInvariant().Replace("-", "_")}";
-            var apiKey = GetRequiredEnvironmentVariable($"{NuGetApiKeyEnvPrefix}_{packageOwner.ToUpperInvariant().Replace("-", "_")}");
+            var apiKey = GetRequiredEnvironmentVariable(NuGetApiKeyEnvPrefix + packageOwner.ToUpperInvariant().Replace("-", "_"));
             return packages.Select(p => new NuGetPackage(apiKey, p)).ToList();
         }
 
