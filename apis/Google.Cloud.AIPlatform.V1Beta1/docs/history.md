@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta30, released 2025-05-19
+
+### New features
+
+- Add encryption_spec to Model Monitoring public preview API
+- Adding thoughts_token_count to v1beta1 client library
+
 ## Version 1.0.0-beta29, released 2025-05-15
 
 ### New features
