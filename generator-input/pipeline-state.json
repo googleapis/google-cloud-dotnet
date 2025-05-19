@@ -1658,7 +1658,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:26:19Z",
-            "lastGeneratedCommit": "dfe85eea9a7a14e220563ecbeef0517d592883ac",
+            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/cloud/gkehub/v1beta1"
             ],
