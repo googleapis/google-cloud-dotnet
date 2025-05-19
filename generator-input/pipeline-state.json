@@ -4087,6 +4087,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Dataform.V1/Google.Cloud.Dataform.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Support.V2Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/support/v2beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Support.V2Beta/Google.Cloud.Support.V2Beta"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [

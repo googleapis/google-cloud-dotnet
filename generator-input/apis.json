@@ -5473,6 +5473,25 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Support.V2Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Support",
+      "productUrl": "https://cloud.google.com/support/docs/reference/support-api",
+      "description": "Recommended Google client library to access the Google Cloud Support API (v2beta), which manages Google Cloud technical support cases for Customer Care support offerings.",
+      "tags": [
+        "support"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/support/v2beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "cloudsupport",
+      "serviceConfigFile": "cloudsupport_v2beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Talent.V4",
       "version": "2.7.0",
       "type": "grpc",
