@@ -4076,6 +4076,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.ModelArmor.V1/Google.Cloud.ModelArmor.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Dataform.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/dataform/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Dataform.V1/Google.Cloud.Dataform.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
