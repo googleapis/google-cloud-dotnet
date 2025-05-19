@@ -121,12 +121,22 @@ public sealed class PublishLibraryCommand : IContainerCommand
         internal void Push()
         {
             Console.WriteLine($"Pushing {Path.GetFileName(_file)}.");
-            Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
-                "nuget",
-                "push",
-                "-s", "https://api.nuget.org/v3/index.json",
-                "-k", _apiKey,
-                _file);
+            try
+            {
+                Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
+                    "nuget",
+                    "push",
+                    "-s", "https://api.nuget.org/v3/index.json",
+                    "-k", _apiKey,
+                    _file);
+            }
+            catch (Exception e) when (e.Message?.Contains("error: Response status code does not indicate success: 409") == true)
+            {
+                // We failed to push because we've already pushed this package. This will usually be due to retrying
+                // publication which failed half way through before.
+                Console.WriteLine($"WARNING: failed to push {Path.GetFileName(_file)} due to response 409; skipping. Please check this was expected");
+                return;
+            }
             Console.WriteLine($"Pushed {Path.GetFileName(_file)} successfully.");
         }
     }
