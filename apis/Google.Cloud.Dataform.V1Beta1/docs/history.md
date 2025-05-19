@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2025-05-19
+
+### New features
+
+- Support adding a workflow action to execute a Data Preparation node
+
+### Documentation improvements
+
+- Updated the formatting in some comments in multiple services
+
 ## Version 1.0.0-beta08, released 2025-03-03
 
 ### Bug fixes
