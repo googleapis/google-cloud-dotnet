@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListCases",
+    "client": "CaseServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
