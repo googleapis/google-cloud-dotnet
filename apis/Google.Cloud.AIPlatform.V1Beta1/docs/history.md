@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta31, released 2025-05-20
+
+### New features
+
+- Add VertexAISearch.max_results, filter, data_store_specs options
+
 ## Version 1.0.0-beta30, released 2025-05-19
 
 ### New features
