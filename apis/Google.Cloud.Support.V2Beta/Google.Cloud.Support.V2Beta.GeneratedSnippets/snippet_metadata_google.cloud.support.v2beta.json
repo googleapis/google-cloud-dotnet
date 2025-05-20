@@ -1,0 +1,2985 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Support.V2Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.support.v2beta",
+        "version": "v2beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_ListAttachments_sync",
+      "title": "ListAttachmentsRequestObject",
+      "description": "Snippet for ListAttachments",
+      "file": "CaseAttachmentServiceClient.ListAttachmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachments",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.ListAttachments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ListAttachmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListAttachmentsResponse, Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.ListAttachments",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_ListAttachments_async",
+      "title": "ListAttachmentsRequestObjectAsync",
+      "description": "Snippet for ListAttachmentsAsync",
+      "file": "CaseAttachmentServiceClient.ListAttachmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachmentsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.ListAttachmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ListAttachmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListAttachmentsResponse, Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.ListAttachments",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_ListAttachments_sync_flattened",
+      "title": "ListAttachments",
+      "description": "Snippet for ListAttachments",
+      "file": "CaseAttachmentServiceClient.ListAttachmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachments",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.ListAttachments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListAttachmentsResponse, Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.ListAttachments",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_ListAttachments_async_flattened",
+      "title": "ListAttachmentsAsync",
+      "description": "Snippet for ListAttachmentsAsync",
+      "file": "CaseAttachmentServiceClient.ListAttachmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachmentsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.ListAttachmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListAttachmentsResponse, Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.ListAttachments",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_ListAttachments_sync_flattened_resourceNames",
+      "title": "ListAttachmentsResourceNames",
+      "description": "Snippet for ListAttachments",
+      "file": "CaseAttachmentServiceClient.ListAttachmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachments",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.ListAttachments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListAttachmentsResponse, Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.ListAttachments",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_ListAttachments_async_flattened_resourceNames",
+      "title": "ListAttachmentsResourceNamesAsync",
+      "description": "Snippet for ListAttachmentsAsync",
+      "file": "CaseAttachmentServiceClient.ListAttachmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAttachmentsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.ListAttachmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListAttachmentsResponse, Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "ListAttachments",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.ListAttachments",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_sync",
+      "title": "GetCaseRequestObject",
+      "description": "Snippet for GetCase",
+      "file": "CaseServiceClient.GetCaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.GetCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.GetCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "GetCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.GetCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_async",
+      "title": "GetCaseRequestObjectAsync",
+      "description": "Snippet for GetCaseAsync",
+      "file": "CaseServiceClient.GetCaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.GetCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.GetCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "GetCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.GetCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_sync_flattened",
+      "title": "GetCase",
+      "description": "Snippet for GetCase",
+      "file": "CaseServiceClient.GetCaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.GetCase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "GetCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.GetCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_async_flattened",
+      "title": "GetCaseAsync",
+      "description": "Snippet for GetCaseAsync",
+      "file": "CaseServiceClient.GetCaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.GetCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "GetCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.GetCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_sync_flattened_resourceNames",
+      "title": "GetCaseResourceNames",
+      "description": "Snippet for GetCase",
+      "file": "CaseServiceClient.GetCaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.GetCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "GetCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.GetCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_async_flattened_resourceNames",
+      "title": "GetCaseResourceNamesAsync",
+      "description": "Snippet for GetCaseAsync",
+      "file": "CaseServiceClient.GetCaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.GetCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "GetCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.GetCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_sync",
+      "title": "ListCasesRequestObject",
+      "description": "Snippet for ListCases",
+      "file": "CaseServiceClient.ListCasesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCases",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ListCasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_async",
+      "title": "ListCasesRequestObjectAsync",
+      "description": "Snippet for ListCasesAsync",
+      "file": "CaseServiceClient.ListCasesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCasesAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ListCasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_sync_flattened",
+      "title": "ListCases",
+      "description": "Snippet for ListCases",
+      "file": "CaseServiceClient.ListCasesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCases",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCases",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_async_flattened",
+      "title": "ListCasesAsync",
+      "description": "Snippet for ListCasesAsync",
+      "file": "CaseServiceClient.ListCasesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCasesAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_sync_flattened_resourceNames1",
+      "title": "ListCasesResourceNames1",
+      "description": "Snippet for ListCases",
+      "file": "CaseServiceClient.ListCasesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCases",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCases",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_async_flattened_resourceNames1",
+      "title": "ListCasesResourceNames1Async",
+      "description": "Snippet for ListCasesAsync",
+      "file": "CaseServiceClient.ListCasesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCasesAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_sync_flattened_resourceNames2",
+      "title": "ListCasesResourceNames2",
+      "description": "Snippet for ListCases",
+      "file": "CaseServiceClient.ListCasesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCases",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCases",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_ListCases_async_flattened_resourceNames2",
+      "title": "ListCasesResourceNames2Async",
+      "description": "Snippet for ListCasesAsync",
+      "file": "CaseServiceClient.ListCasesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCasesAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.ListCasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "ListCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.ListCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_SearchCases_sync",
+      "title": "SearchCasesRequestObject",
+      "description": "Snippet for SearchCases",
+      "file": "CaseServiceClient.SearchCasesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCases",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.SearchCases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.SearchCasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.SearchCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "SearchCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.SearchCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_SearchCases_async",
+      "title": "SearchCasesRequestObjectAsync",
+      "description": "Snippet for SearchCasesAsync",
+      "file": "CaseServiceClient.SearchCasesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCasesAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.SearchCasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.SearchCasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.SearchCasesResponse, Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "SearchCases",
+          "fullName": "google.cloud.support.v2beta.CaseService.SearchCases",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_sync",
+      "title": "CreateCaseRequestObject",
+      "description": "Snippet for CreateCase",
+      "file": "CaseServiceClient.CreateCaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CreateCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_async",
+      "title": "CreateCaseRequestObjectAsync",
+      "description": "Snippet for CreateCaseAsync",
+      "file": "CaseServiceClient.CreateCaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CreateCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_sync_flattened",
+      "title": "CreateCase",
+      "description": "Snippet for CreateCase",
+      "file": "CaseServiceClient.CreateCaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_async_flattened",
+      "title": "CreateCaseAsync",
+      "description": "Snippet for CreateCaseAsync",
+      "file": "CaseServiceClient.CreateCaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_sync_flattened_resourceNames1",
+      "title": "CreateCaseResourceNames1",
+      "description": "Snippet for CreateCase",
+      "file": "CaseServiceClient.CreateCaseResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCase",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_async_flattened_resourceNames1",
+      "title": "CreateCaseResourceNames1Async",
+      "description": "Snippet for CreateCaseAsync",
+      "file": "CaseServiceClient.CreateCaseResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_sync_flattened_resourceNames2",
+      "title": "CreateCaseResourceNames2",
+      "description": "Snippet for CreateCase",
+      "file": "CaseServiceClient.CreateCaseResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCase",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CreateCase_async_flattened_resourceNames2",
+      "title": "CreateCaseResourceNames2Async",
+      "description": "Snippet for CreateCaseAsync",
+      "file": "CaseServiceClient.CreateCaseResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CreateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CreateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_UpdateCase_sync",
+      "title": "UpdateCaseRequestObject",
+      "description": "Snippet for UpdateCase",
+      "file": "CaseServiceClient.UpdateCaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.UpdateCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.UpdateCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.UpdateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_UpdateCase_async",
+      "title": "UpdateCaseRequestObjectAsync",
+      "description": "Snippet for UpdateCaseAsync",
+      "file": "CaseServiceClient.UpdateCaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.UpdateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.UpdateCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.UpdateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_UpdateCase_sync_flattened",
+      "title": "UpdateCase",
+      "description": "Snippet for UpdateCase",
+      "file": "CaseServiceClient.UpdateCaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.UpdateCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.UpdateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_UpdateCase_async_flattened",
+      "title": "UpdateCaseAsync",
+      "description": "Snippet for UpdateCaseAsync",
+      "file": "CaseServiceClient.UpdateCaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.UpdateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.Case",
+            "name": "case"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.UpdateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_EscalateCase_sync",
+      "title": "EscalateCaseRequestObject",
+      "description": "Snippet for EscalateCase",
+      "file": "CaseServiceClient.EscalateCaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EscalateCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.EscalateCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.EscalateCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "EscalateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.EscalateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_EscalateCase_async",
+      "title": "EscalateCaseRequestObjectAsync",
+      "description": "Snippet for EscalateCaseAsync",
+      "file": "CaseServiceClient.EscalateCaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EscalateCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.EscalateCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.EscalateCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "EscalateCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.EscalateCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CloseCase_sync",
+      "title": "CloseCaseRequestObject",
+      "description": "Snippet for CloseCase",
+      "file": "CaseServiceClient.CloseCaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CloseCase",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CloseCase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CloseCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Case",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CloseCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CloseCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_CloseCase_async",
+      "title": "CloseCaseRequestObjectAsync",
+      "description": "Snippet for CloseCaseAsync",
+      "file": "CaseServiceClient.CloseCaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CloseCaseAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.CloseCaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CloseCaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Case>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "CloseCase",
+          "fullName": "google.cloud.support.v2beta.CaseService.CloseCase",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_SearchCaseClassifications_sync",
+      "title": "SearchCaseClassificationsRequestObject",
+      "description": "Snippet for SearchCaseClassifications",
+      "file": "CaseServiceClient.SearchCaseClassificationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCaseClassifications",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.SearchCaseClassifications",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.SearchCaseClassificationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.SearchCaseClassificationsResponse, Google.Cloud.Support.V2Beta.CaseClassification>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "SearchCaseClassifications",
+          "fullName": "google.cloud.support.v2beta.CaseService.SearchCaseClassifications",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseService_SearchCaseClassifications_async",
+      "title": "SearchCaseClassificationsRequestObjectAsync",
+      "description": "Snippet for SearchCaseClassificationsAsync",
+      "file": "CaseServiceClient.SearchCaseClassificationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCaseClassificationsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient.SearchCaseClassificationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.SearchCaseClassificationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.SearchCaseClassificationsResponse, Google.Cloud.Support.V2Beta.CaseClassification>",
+        "client": {
+          "shortName": "CaseServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseServiceClient"
+        },
+        "method": {
+          "shortName": "SearchCaseClassifications",
+          "fullName": "google.cloud.support.v2beta.CaseService.SearchCaseClassifications",
+          "service": {
+            "shortName": "CaseService",
+            "fullName": "google.cloud.support.v2beta.CaseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_ListComments_sync",
+      "title": "ListCommentsRequestObject",
+      "description": "Snippet for ListComments",
+      "file": "CommentServiceClient.ListCommentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListComments",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.ListComments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ListCommentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCommentsResponse, Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "ListComments",
+          "fullName": "google.cloud.support.v2beta.CommentService.ListComments",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_ListComments_async",
+      "title": "ListCommentsRequestObjectAsync",
+      "description": "Snippet for ListCommentsAsync",
+      "file": "CommentServiceClient.ListCommentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCommentsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.ListCommentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ListCommentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCommentsResponse, Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "ListComments",
+          "fullName": "google.cloud.support.v2beta.CommentService.ListComments",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_ListComments_sync_flattened",
+      "title": "ListComments",
+      "description": "Snippet for ListComments",
+      "file": "CommentServiceClient.ListCommentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListComments",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.ListComments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCommentsResponse, Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "ListComments",
+          "fullName": "google.cloud.support.v2beta.CommentService.ListComments",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_ListComments_async_flattened",
+      "title": "ListCommentsAsync",
+      "description": "Snippet for ListCommentsAsync",
+      "file": "CommentServiceClient.ListCommentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCommentsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.ListCommentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCommentsResponse, Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "ListComments",
+          "fullName": "google.cloud.support.v2beta.CommentService.ListComments",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_ListComments_sync_flattened_resourceNames",
+      "title": "ListCommentsResourceNames",
+      "description": "Snippet for ListComments",
+      "file": "CommentServiceClient.ListCommentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListComments",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.ListComments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ListCommentsResponse, Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "ListComments",
+          "fullName": "google.cloud.support.v2beta.CommentService.ListComments",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_ListComments_async_flattened_resourceNames",
+      "title": "ListCommentsResourceNamesAsync",
+      "description": "Snippet for ListCommentsAsync",
+      "file": "CommentServiceClient.ListCommentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCommentsAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.ListCommentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ListCommentsResponse, Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "ListComments",
+          "fullName": "google.cloud.support.v2beta.CommentService.ListComments",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_CreateComment_sync",
+      "title": "CreateCommentRequestObject",
+      "description": "Snippet for CreateComment",
+      "file": "CommentServiceClient.CreateCommentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateComment",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.CreateComment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CreateCommentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Comment",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.CreateComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_CreateComment_async",
+      "title": "CreateCommentRequestObjectAsync",
+      "description": "Snippet for CreateCommentAsync",
+      "file": "CommentServiceClient.CreateCommentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCommentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.CreateCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CreateCommentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.CreateComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_CreateComment_sync_flattened",
+      "title": "CreateComment",
+      "description": "Snippet for CreateComment",
+      "file": "CommentServiceClient.CreateCommentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateComment",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.CreateComment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Comment",
+            "name": "comment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Comment",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.CreateComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_CreateComment_async_flattened",
+      "title": "CreateCommentAsync",
+      "description": "Snippet for CreateCommentAsync",
+      "file": "CommentServiceClient.CreateCommentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCommentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.CreateCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Comment",
+            "name": "comment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.CreateComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_CreateComment_sync_flattened_resourceNames",
+      "title": "CreateCommentResourceNames",
+      "description": "Snippet for CreateComment",
+      "file": "CommentServiceClient.CreateCommentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateComment",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.CreateComment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Comment",
+            "name": "comment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Comment",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.CreateComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_CreateComment_async_flattened_resourceNames",
+      "title": "CreateCommentResourceNamesAsync",
+      "description": "Snippet for CreateCommentAsync",
+      "file": "CommentServiceClient.CreateCommentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCommentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.CreateCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2Beta.Comment",
+            "name": "comment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.CreateComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_FeedService_ShowFeed_sync",
+      "title": "ShowFeedRequestObject",
+      "description": "Snippet for ShowFeed",
+      "file": "FeedServiceClient.ShowFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowFeed",
+        "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient.ShowFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ShowFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ShowFeedResponse, Google.Cloud.Support.V2Beta.FeedItem>",
+        "client": {
+          "shortName": "FeedServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient"
+        },
+        "method": {
+          "shortName": "ShowFeed",
+          "fullName": "google.cloud.support.v2beta.FeedService.ShowFeed",
+          "service": {
+            "shortName": "FeedService",
+            "fullName": "google.cloud.support.v2beta.FeedService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_FeedService_ShowFeed_async",
+      "title": "ShowFeedRequestObjectAsync",
+      "description": "Snippet for ShowFeedAsync",
+      "file": "FeedServiceClient.ShowFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowFeedAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient.ShowFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.ShowFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ShowFeedResponse, Google.Cloud.Support.V2Beta.FeedItem>",
+        "client": {
+          "shortName": "FeedServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient"
+        },
+        "method": {
+          "shortName": "ShowFeed",
+          "fullName": "google.cloud.support.v2beta.FeedService.ShowFeed",
+          "service": {
+            "shortName": "FeedService",
+            "fullName": "google.cloud.support.v2beta.FeedService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_FeedService_ShowFeed_sync_flattened",
+      "title": "ShowFeed",
+      "description": "Snippet for ShowFeed",
+      "file": "FeedServiceClient.ShowFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowFeed",
+        "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient.ShowFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ShowFeedResponse, Google.Cloud.Support.V2Beta.FeedItem>",
+        "client": {
+          "shortName": "FeedServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient"
+        },
+        "method": {
+          "shortName": "ShowFeed",
+          "fullName": "google.cloud.support.v2beta.FeedService.ShowFeed",
+          "service": {
+            "shortName": "FeedService",
+            "fullName": "google.cloud.support.v2beta.FeedService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_FeedService_ShowFeed_async_flattened",
+      "title": "ShowFeedAsync",
+      "description": "Snippet for ShowFeedAsync",
+      "file": "FeedServiceClient.ShowFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowFeedAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient.ShowFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ShowFeedResponse, Google.Cloud.Support.V2Beta.FeedItem>",
+        "client": {
+          "shortName": "FeedServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient"
+        },
+        "method": {
+          "shortName": "ShowFeed",
+          "fullName": "google.cloud.support.v2beta.FeedService.ShowFeed",
+          "service": {
+            "shortName": "FeedService",
+            "fullName": "google.cloud.support.v2beta.FeedService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_FeedService_ShowFeed_sync_flattened_resourceNames",
+      "title": "ShowFeedResourceNames",
+      "description": "Snippet for ShowFeed",
+      "file": "FeedServiceClient.ShowFeedResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowFeed",
+        "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient.ShowFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2Beta.ShowFeedResponse, Google.Cloud.Support.V2Beta.FeedItem>",
+        "client": {
+          "shortName": "FeedServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient"
+        },
+        "method": {
+          "shortName": "ShowFeed",
+          "fullName": "google.cloud.support.v2beta.FeedService.ShowFeed",
+          "service": {
+            "shortName": "FeedService",
+            "fullName": "google.cloud.support.v2beta.FeedService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_FeedService_ShowFeed_async_flattened_resourceNames",
+      "title": "ShowFeedResourceNamesAsync",
+      "description": "Snippet for ShowFeedAsync",
+      "file": "FeedServiceClient.ShowFeedResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowFeedAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient.ShowFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2Beta.ShowFeedResponse, Google.Cloud.Support.V2Beta.FeedItem>",
+        "client": {
+          "shortName": "FeedServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.FeedServiceClient"
+        },
+        "method": {
+          "shortName": "ShowFeed",
+          "fullName": "google.cloud.support.v2beta.FeedService.ShowFeed",
+          "service": {
+            "shortName": "FeedService",
+            "fullName": "google.cloud.support.v2beta.FeedService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

@@ -4096,6 +4096,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "c7a80cb6c1408bd6cc0f5c90c11599a2cffdae90",
             "apiPaths": [
                 "google/cloud/support/v2beta"
             ],
