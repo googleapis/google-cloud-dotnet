@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
@@ -95,8 +96,16 @@ public sealed class PublishLibraryCommand : IContainerCommand
             using var client = StorageClient.Create();
             using var bundleStream = File.OpenRead(_file);
             Console.WriteLine($"Uploading {_destinationObject} to {_bucket}");
-            client.UploadObject(_bucket, _destinationObject, null, bundleStream);
-            Console.WriteLine($"Uploaded {_destinationObject} to {_bucket}");
+            var options = new UploadObjectOptions { IfGenerationMatch = 0 };
+            try
+            {
+                client.UploadObject(_bucket, _destinationObject, null, bundleStream, options);
+                Console.WriteLine($"Uploaded {_destinationObject} to {_bucket}");
+            }
+            catch (GoogleApiException e) when (e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
+            {
+                Console.WriteLine("Documentation bundle already exists. Continuing.");
+            }
         }
     }
 
@@ -122,22 +131,13 @@ public sealed class PublishLibraryCommand : IContainerCommand
         internal void Push()
         {
             Console.WriteLine($"Pushing {Path.GetFileName(_file)}.");
-            try
-            {
-                Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
-                    "nuget",
-                    "push",
-                    "-s", "https://api.nuget.org/v3/index.json",
-                    "-k", _apiKey,
-                    _file);
-            }
-            catch (Exception e) when (e.Message?.Contains("error: Response status code does not indicate success: 409") == true)
-            {
-                // We failed to push because we've already pushed this package. This will usually be due to retrying
-                // publication which failed half way through before.
-                Console.WriteLine($"WARNING: failed to push {Path.GetFileName(_file)} due to response 409; skipping. Please check this was expected");
-                return;
-            }
+            Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
+                "nuget",
+                "push",
+                "-s", "https://api.nuget.org/v3/index.json",
+                "-k", _apiKey,
+                "--skip-duplicate", // Allows us to rerun a release step.
+                _file);
             Console.WriteLine($"Pushed {Path.GetFileName(_file)} successfully.");
         }
     }
