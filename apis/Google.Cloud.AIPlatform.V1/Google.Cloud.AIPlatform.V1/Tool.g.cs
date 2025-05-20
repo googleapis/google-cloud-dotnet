@@ -71,47 +71,51 @@ namespace Google.Cloud.AIPlatform.V1 {
             "UmFnUmVzb3VyY2USPwoKcmFnX2NvcnB1cxgBIAEoCUIr4EEB+kElCiNhaXBs",
             "YXRmb3JtLmdvb2dsZWFwaXMuY29tL1JhZ0NvcnB1cxIZCgxyYWdfZmlsZV9p",
             "ZHMYAiADKAlCA+BBAUITChFfc2ltaWxhcml0eV90b3Bfa0IcChpfdmVjdG9y",
-            "X2Rpc3RhbmNlX3RocmVzaG9sZCI9Cg5WZXJ0ZXhBSVNlYXJjaBIWCglkYXRh",
-            "c3RvcmUYASABKAlCA+BBARITCgZlbmdpbmUYAiABKAlCA+BBASJtChVHb29n",
-            "bGVTZWFyY2hSZXRyaWV2YWwSVAoYZHluYW1pY19yZXRyaWV2YWxfY29uZmln",
-            "GAIgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRHluYW1pY1Jl",
-            "dHJpZXZhbENvbmZpZyIVChNFbnRlcnByaXNlV2ViU2VhcmNoIsoBChZEeW5h",
-            "bWljUmV0cmlldmFsQ29uZmlnEkUKBG1vZGUYASABKA4yNy5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5EeW5hbWljUmV0cmlldmFsQ29uZmlnLk1vZGUS",
-            "IwoRZHluYW1pY190aHJlc2hvbGQYAiABKAJCA+BBAUgAiAEBIi4KBE1vZGUS",
-            "FAoQTU9ERV9VTlNQRUNJRklFRBAAEhAKDE1PREVfRFlOQU1JQxABQhQKEl9k",
-            "eW5hbWljX3RocmVzaG9sZCKxAQoKVG9vbENvbmZpZxJXChdmdW5jdGlvbl9j",
-            "YWxsaW5nX2NvbmZpZxgBIAEoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkZ1bmN0aW9uQ2FsbGluZ0NvbmZpZ0ID4EEBEkoKEHJldHJpZXZhbF9j",
-            "b25maWcYAiABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZXRy",
-            "aWV2YWxDb25maWdCA+BBASLCAQoVRnVuY3Rpb25DYWxsaW5nQ29uZmlnEkkK",
-            "BG1vZGUYASABKA4yNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GdW5j",
-            "dGlvbkNhbGxpbmdDb25maWcuTW9kZUID4EEBEiMKFmFsbG93ZWRfZnVuY3Rp",
-            "b25fbmFtZXMYAiADKAlCA+BBASI5CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJ",
-            "RUQQABIICgRBVVRPEAESBwoDQU5ZEAISCAoETk9ORRADInYKD1JldHJpZXZh",
-            "bENvbmZpZxIpCgdsYXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5n",
-            "SACIAQESGgoNbGFuZ3VhZ2VfY29kZRgCIAEoCUgBiAEBQgoKCF9sYXRfbG5n",
-            "QhAKDl9sYW5ndWFnZV9jb2RlIqoFChJSYWdSZXRyaWV2YWxDb25maWcSEgoF",
-            "dG9wX2sYASABKAVCA+BBARJKCgZmaWx0ZXIYAyABKAsyNS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5SYWdSZXRyaWV2YWxDb25maWcuRmlsdGVyQgPg",
-            "QQESTAoHcmFua2luZxgEIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlJhZ1JldHJpZXZhbENvbmZpZy5SYW5raW5nQgPgQQEakwEKBkZpbHRl",
-            "chIoChl2ZWN0b3JfZGlzdGFuY2VfdGhyZXNob2xkGAMgASgBQgPgQQFIABIq",
-            "Cht2ZWN0b3Jfc2ltaWxhcml0eV90aHJlc2hvbGQYBCABKAFCA+BBAUgAEhwK",
-            "D21ldGFkYXRhX2ZpbHRlchgCIAEoCUID4EEBQhUKE3ZlY3Rvcl9kYl90aHJl",
-            "c2hvbGQazwIKB1JhbmtpbmcSXwoMcmFua19zZXJ2aWNlGAEgASgLMkIuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmFnUmV0cmlldmFsQ29uZmlnLlJh",
-            "bmtpbmcuUmFua1NlcnZpY2VCA+BBAUgAElsKCmxsbV9yYW5rZXIYAyABKAsy",
-            "QC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SYWdSZXRyaWV2YWxDb25m",
-            "aWcuUmFua2luZy5MbG1SYW5rZXJCA+BBAUgAGjoKC1JhbmtTZXJ2aWNlEhwK",
-            "Cm1vZGVsX25hbWUYASABKAlCA+BBAUgAiAEBQg0KC19tb2RlbF9uYW1lGjgK",
-            "CUxsbVJhbmtlchIcCgptb2RlbF9uYW1lGAEgASgJQgPgQQFIAIgBAUINCgtf",
-            "bW9kZWxfbmFtZUIQCg5yYW5raW5nX2NvbmZpZ0LHAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQglUb29sUHJvdG9QAVo+Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRm",
-            "b3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxD",
-            "bG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9y",
-            "bTo6VjFiBnByb3RvMw=="));
+            "X2Rpc3RhbmNlX3RocmVzaG9sZCL6AQoOVmVydGV4QUlTZWFyY2gSFgoJZGF0",
+            "YXN0b3JlGAEgASgJQgPgQQESEwoGZW5naW5lGAIgASgJQgPgQQESGAoLbWF4",
+            "X3Jlc3VsdHMYAyABKAVCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARJSChBk",
+            "YXRhX3N0b3JlX3NwZWNzGAUgAygLMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuVmVydGV4QUlTZWFyY2guRGF0YVN0b3JlU3BlYxo4Cg1EYXRhU3Rv",
+            "cmVTcGVjEhIKCmRhdGFfc3RvcmUYASABKAkSEwoGZmlsdGVyGAIgASgJQgPg",
+            "QQEibQoVR29vZ2xlU2VhcmNoUmV0cmlldmFsElQKGGR5bmFtaWNfcmV0cmll",
+            "dmFsX2NvbmZpZxgCIAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LkR5bmFtaWNSZXRyaWV2YWxDb25maWciFQoTRW50ZXJwcmlzZVdlYlNlYXJj",
+            "aCLKAQoWRHluYW1pY1JldHJpZXZhbENvbmZpZxJFCgRtb2RlGAEgASgOMjcu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRHluYW1pY1JldHJpZXZhbENv",
+            "bmZpZy5Nb2RlEiMKEWR5bmFtaWNfdGhyZXNob2xkGAIgASgCQgPgQQFIAIgB",
+            "ASIuCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIQCgxNT0RFX0RZTkFN",
+            "SUMQAUIUChJfZHluYW1pY190aHJlc2hvbGQisQEKClRvb2xDb25maWcSVwoX",
+            "ZnVuY3Rpb25fY2FsbGluZ19jb25maWcYASABKAsyMS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5GdW5jdGlvbkNhbGxpbmdDb25maWdCA+BBARJKChBy",
+            "ZXRyaWV2YWxfY29uZmlnGAIgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuUmV0cmlldmFsQ29uZmlnQgPgQQEiwgEKFUZ1bmN0aW9uQ2FsbGlu",
+            "Z0NvbmZpZxJJCgRtb2RlGAEgASgOMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuRnVuY3Rpb25DYWxsaW5nQ29uZmlnLk1vZGVCA+BBARIjChZhbGxv",
+            "d2VkX2Z1bmN0aW9uX25hbWVzGAIgAygJQgPgQQEiOQoETW9kZRIUChBNT0RF",
+            "X1VOU1BFQ0lGSUVEEAASCAoEQVVUTxABEgcKA0FOWRACEggKBE5PTkUQAyJ2",
+            "Cg9SZXRyaWV2YWxDb25maWcSKQoHbGF0X2xuZxgBIAEoCzITLmdvb2dsZS50",
+            "eXBlLkxhdExuZ0gAiAEBEhoKDWxhbmd1YWdlX2NvZGUYAiABKAlIAYgBAUIK",
+            "CghfbGF0X2xuZ0IQCg5fbGFuZ3VhZ2VfY29kZSKqBQoSUmFnUmV0cmlldmFs",
+            "Q29uZmlnEhIKBXRvcF9rGAEgASgFQgPgQQESSgoGZmlsdGVyGAMgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmFnUmV0cmlldmFsQ29uZmln",
+            "LkZpbHRlckID4EEBEkwKB3JhbmtpbmcYBCABKAsyNi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5SYWdSZXRyaWV2YWxDb25maWcuUmFua2luZ0ID4EEB",
+            "GpMBCgZGaWx0ZXISKAoZdmVjdG9yX2Rpc3RhbmNlX3RocmVzaG9sZBgDIAEo",
+            "AUID4EEBSAASKgobdmVjdG9yX3NpbWlsYXJpdHlfdGhyZXNob2xkGAQgASgB",
+            "QgPgQQFIABIcCg9tZXRhZGF0YV9maWx0ZXIYAiABKAlCA+BBAUIVChN2ZWN0",
+            "b3JfZGJfdGhyZXNob2xkGs8CCgdSYW5raW5nEl8KDHJhbmtfc2VydmljZRgB",
+            "IAEoCzJCLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJhZ1JldHJpZXZh",
+            "bENvbmZpZy5SYW5raW5nLlJhbmtTZXJ2aWNlQgPgQQFIABJbCgpsbG1fcmFu",
+            "a2VyGAMgASgLMkAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmFnUmV0",
+            "cmlldmFsQ29uZmlnLlJhbmtpbmcuTGxtUmFua2VyQgPgQQFIABo6CgtSYW5r",
+            "U2VydmljZRIcCgptb2RlbF9uYW1lGAEgASgJQgPgQQFIAIgBAUINCgtfbW9k",
+            "ZWxfbmFtZRo4CglMbG1SYW5rZXISHAoKbW9kZWxfbmFtZRgBIAEoCUID4EEB",
+            "SACIAQFCDQoLX21vZGVsX25hbWVCEAoOcmFua2luZ19jb25maWdCxwEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIJVG9vbFByb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
+            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
+            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -124,7 +128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CodeExecutionResult), global::Google.Cloud.AIPlatform.V1.CodeExecutionResult.Parser, new[]{ "Outcome", "Output" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.CodeExecutionResult.Types.Outcome) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Retrieval), global::Google.Cloud.AIPlatform.V1.Retrieval.Parser, new[]{ "VertexAiSearch", "VertexRagStore", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexRagStore), global::Google.Cloud.AIPlatform.V1.VertexRagStore.Parser, new[]{ "RagResources", "SimilarityTopK", "VectorDistanceThreshold", "RagRetrievalConfig" }, new[]{ "SimilarityTopK", "VectorDistanceThreshold" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource), global::Google.Cloud.AIPlatform.V1.VertexRagStore.Types.RagResource.Parser, new[]{ "RagCorpus", "RagFileIds" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexAISearch), global::Google.Cloud.AIPlatform.V1.VertexAISearch.Parser, new[]{ "Datastore", "Engine" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexAISearch), global::Google.Cloud.AIPlatform.V1.VertexAISearch.Parser, new[]{ "Datastore", "Engine", "MaxResults", "Filter", "DataStoreSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec), global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec.Parser, new[]{ "DataStore", "Filter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1.GoogleSearchRetrieval.Parser, new[]{ "DynamicRetrievalConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EnterpriseWebSearch), global::Google.Cloud.AIPlatform.V1.EnterpriseWebSearch.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DynamicRetrievalConfig), global::Google.Cloud.AIPlatform.V1.DynamicRetrievalConfig.Parser, new[]{ "Mode", "DynamicThreshold" }, new[]{ "DynamicThreshold" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.DynamicRetrievalConfig.Types.Mode) }, null, null),
@@ -3278,6 +3282,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public VertexAISearch(VertexAISearch other) : this() {
       datastore_ = other.datastore_;
       engine_ = other.engine_;
+      maxResults_ = other.maxResults_;
+      filter_ = other.filter_;
+      dataStoreSpecs_ = other.dataStoreSpecs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3321,6 +3328,55 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "max_results" field.</summary>
+    public const int MaxResultsFieldNumber = 3;
+    private int maxResults_;
+    /// <summary>
+    /// Optional. Number of search results to return per query.
+    /// The default value is 10.
+    /// The maximumm allowed value is 10.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxResults {
+      get { return maxResults_; }
+      set {
+        maxResults_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Filter strings to be passed to the search API.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_store_specs" field.</summary>
+    public const int DataStoreSpecsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec> _repeated_dataStoreSpecs_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec> dataStoreSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec>();
+    /// <summary>
+    /// Specifications that define the specific DataStores to be searched, along
+    /// with configurations for those data stores. This is only considered for
+    /// Engines with multiple data stores.
+    /// It should only be set if engine is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.VertexAISearch.Types.DataStoreSpec> DataStoreSpecs {
+      get { return dataStoreSpecs_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3338,6 +3394,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Datastore != other.Datastore) return false;
       if (Engine != other.Engine) return false;
+      if (MaxResults != other.MaxResults) return false;
+      if (Filter != other.Filter) return false;
+      if(!dataStoreSpecs_.Equals(other.dataStoreSpecs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3347,6 +3406,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (Datastore.Length != 0) hash ^= Datastore.GetHashCode();
       if (Engine.Length != 0) hash ^= Engine.GetHashCode();
+      if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      hash ^= dataStoreSpecs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3373,6 +3435,15 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(Engine);
       }
+      if (MaxResults != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxResults);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      dataStoreSpecs_.WriteTo(output, _repeated_dataStoreSpecs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3391,6 +3462,15 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(Engine);
       }
+      if (MaxResults != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxResults);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      dataStoreSpecs_.WriteTo(ref output, _repeated_dataStoreSpecs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3407,6 +3487,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Engine.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Engine);
       }
+      if (MaxResults != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResults);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      size += dataStoreSpecs_.CalculateSize(_repeated_dataStoreSpecs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3425,6 +3512,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Engine.Length != 0) {
         Engine = other.Engine;
       }
+      if (other.MaxResults != 0) {
+        MaxResults = other.MaxResults;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      dataStoreSpecs_.Add(other.dataStoreSpecs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3446,6 +3540,18 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             Engine = input.ReadString();
+            break;
+          }
+          case 24: {
+            MaxResults = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            dataStoreSpecs_.AddEntriesFrom(input, _repeated_dataStoreSpecs_codec);
             break;
           }
         }
@@ -3471,10 +3577,272 @@ namespace Google.Cloud.AIPlatform.V1 {
             Engine = input.ReadString();
             break;
           }
+          case 24: {
+            MaxResults = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            dataStoreSpecs_.AddEntriesFrom(ref input, _repeated_dataStoreSpecs_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VertexAISearch message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Define data stores within engine to filter on in a search call and
+      /// configurations for those data stores. For more information, see
+      /// https://cloud.google.com/generative-ai-app-builder/docs/reference/rpc/google.cloud.discoveryengine.v1#datastorespec
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DataStoreSpec : pb::IMessage<DataStoreSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataStoreSpec> _parser = new pb::MessageParser<DataStoreSpec>(() => new DataStoreSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataStoreSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.VertexAISearch.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataStoreSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataStoreSpec(DataStoreSpec other) : this() {
+          dataStore_ = other.dataStore_;
+          filter_ = other.filter_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataStoreSpec Clone() {
+          return new DataStoreSpec(this);
+        }
+
+        /// <summary>Field number for the "data_store" field.</summary>
+        public const int DataStoreFieldNumber = 1;
+        private string dataStore_ = "";
+        /// <summary>
+        /// Full resource name of DataStore, such as
+        /// Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DataStore {
+          get { return dataStore_; }
+          set {
+            dataStore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "filter" field.</summary>
+        public const int FilterFieldNumber = 2;
+        private string filter_ = "";
+        /// <summary>
+        /// Optional. Filter specification to filter documents in the data store
+        /// specified by data_store field. For more information on filtering, see
+        /// [Filtering](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Filter {
+          get { return filter_; }
+          set {
+            filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataStoreSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataStoreSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DataStore != other.DataStore) return false;
+          if (Filter != other.Filter) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DataStore.Length != 0) hash ^= DataStore.GetHashCode();
+          if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DataStore.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DataStore);
+          }
+          if (Filter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Filter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DataStore.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DataStore);
+          }
+          if (Filter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Filter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DataStore.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DataStore);
+          }
+          if (Filter.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataStoreSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DataStore.Length != 0) {
+            DataStore = other.DataStore;
+          }
+          if (other.Filter.Length != 0) {
+            Filter = other.Filter;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                DataStore = input.ReadString();
+                break;
+              }
+              case 18: {
+                Filter = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DataStore = input.ReadString();
+                break;
+              }
+              case 18: {
+                Filter = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
