@@ -1,0 +1,342 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.dataform.v1",
+  "libraryPackage": "Google.Cloud.Dataform.V1",
+  "services": {
+    "Dataform": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataformClient",
+          "rpcs": {
+            "CancelWorkflowInvocation": {
+              "methods": [
+                "CancelWorkflowInvocation",
+                "CancelWorkflowInvocationAsync"
+              ]
+            },
+            "CommitRepositoryChanges": {
+              "methods": [
+                "CommitRepositoryChanges",
+                "CommitRepositoryChangesAsync"
+              ]
+            },
+            "CommitWorkspaceChanges": {
+              "methods": [
+                "CommitWorkspaceChanges",
+                "CommitWorkspaceChangesAsync"
+              ]
+            },
+            "ComputeRepositoryAccessTokenStatus": {
+              "methods": [
+                "ComputeRepositoryAccessTokenStatus",
+                "ComputeRepositoryAccessTokenStatusAsync"
+              ]
+            },
+            "CreateCompilationResult": {
+              "methods": [
+                "CreateCompilationResult",
+                "CreateCompilationResultAsync"
+              ]
+            },
+            "CreateReleaseConfig": {
+              "methods": [
+                "CreateReleaseConfig",
+                "CreateReleaseConfigAsync"
+              ]
+            },
+            "CreateRepository": {
+              "methods": [
+                "CreateRepository",
+                "CreateRepositoryAsync"
+              ]
+            },
+            "CreateWorkflowConfig": {
+              "methods": [
+                "CreateWorkflowConfig",
+                "CreateWorkflowConfigAsync"
+              ]
+            },
+            "CreateWorkflowInvocation": {
+              "methods": [
+                "CreateWorkflowInvocation",
+                "CreateWorkflowInvocationAsync"
+              ]
+            },
+            "CreateWorkspace": {
+              "methods": [
+                "CreateWorkspace",
+                "CreateWorkspaceAsync"
+              ]
+            },
+            "DeleteReleaseConfig": {
+              "methods": [
+                "DeleteReleaseConfig",
+                "DeleteReleaseConfigAsync"
+              ]
+            },
+            "DeleteRepository": {
+              "methods": [
+                "DeleteRepository",
+                "DeleteRepositoryAsync"
+              ]
+            },
+            "DeleteWorkflowConfig": {
+              "methods": [
+                "DeleteWorkflowConfig",
+                "DeleteWorkflowConfigAsync"
+              ]
+            },
+            "DeleteWorkflowInvocation": {
+              "methods": [
+                "DeleteWorkflowInvocation",
+                "DeleteWorkflowInvocationAsync"
+              ]
+            },
+            "DeleteWorkspace": {
+              "methods": [
+                "DeleteWorkspace",
+                "DeleteWorkspaceAsync"
+              ]
+            },
+            "FetchFileDiff": {
+              "methods": [
+                "FetchFileDiff",
+                "FetchFileDiffAsync"
+              ]
+            },
+            "FetchFileGitStatuses": {
+              "methods": [
+                "FetchFileGitStatuses",
+                "FetchFileGitStatusesAsync"
+              ]
+            },
+            "FetchGitAheadBehind": {
+              "methods": [
+                "FetchGitAheadBehind",
+                "FetchGitAheadBehindAsync"
+              ]
+            },
+            "FetchRemoteBranches": {
+              "methods": [
+                "FetchRemoteBranches",
+                "FetchRemoteBranchesAsync"
+              ]
+            },
+            "FetchRepositoryHistory": {
+              "methods": [
+                "FetchRepositoryHistory",
+                "FetchRepositoryHistoryAsync"
+              ]
+            },
+            "GetCompilationResult": {
+              "methods": [
+                "GetCompilationResult",
+                "GetCompilationResultAsync"
+              ]
+            },
+            "GetConfig": {
+              "methods": [
+                "GetConfig",
+                "GetConfigAsync"
+              ]
+            },
+            "GetReleaseConfig": {
+              "methods": [
+                "GetReleaseConfig",
+                "GetReleaseConfigAsync"
+              ]
+            },
+            "GetRepository": {
+              "methods": [
+                "GetRepository",
+                "GetRepositoryAsync"
+              ]
+            },
+            "GetWorkflowConfig": {
+              "methods": [
+                "GetWorkflowConfig",
+                "GetWorkflowConfigAsync"
+              ]
+            },
+            "GetWorkflowInvocation": {
+              "methods": [
+                "GetWorkflowInvocation",
+                "GetWorkflowInvocationAsync"
+              ]
+            },
+            "GetWorkspace": {
+              "methods": [
+                "GetWorkspace",
+                "GetWorkspaceAsync"
+              ]
+            },
+            "InstallNpmPackages": {
+              "methods": [
+                "InstallNpmPackages",
+                "InstallNpmPackagesAsync"
+              ]
+            },
+            "ListCompilationResults": {
+              "methods": [
+                "ListCompilationResults",
+                "ListCompilationResultsAsync"
+              ]
+            },
+            "ListReleaseConfigs": {
+              "methods": [
+                "ListReleaseConfigs",
+                "ListReleaseConfigsAsync"
+              ]
+            },
+            "ListRepositories": {
+              "methods": [
+                "ListRepositories",
+                "ListRepositoriesAsync"
+              ]
+            },
+            "ListWorkflowConfigs": {
+              "methods": [
+                "ListWorkflowConfigs",
+                "ListWorkflowConfigsAsync"
+              ]
+            },
+            "ListWorkflowInvocations": {
+              "methods": [
+                "ListWorkflowInvocations",
+                "ListWorkflowInvocationsAsync"
+              ]
+            },
+            "ListWorkspaces": {
+              "methods": [
+                "ListWorkspaces",
+                "ListWorkspacesAsync"
+              ]
+            },
+            "MakeDirectory": {
+              "methods": [
+                "MakeDirectory",
+                "MakeDirectoryAsync"
+              ]
+            },
+            "MoveDirectory": {
+              "methods": [
+                "MoveDirectory",
+                "MoveDirectoryAsync"
+              ]
+            },
+            "MoveFile": {
+              "methods": [
+                "MoveFile",
+                "MoveFileAsync"
+              ]
+            },
+            "PullGitCommits": {
+              "methods": [
+                "PullGitCommits",
+                "PullGitCommitsAsync"
+              ]
+            },
+            "PushGitCommits": {
+              "methods": [
+                "PushGitCommits",
+                "PushGitCommitsAsync"
+              ]
+            },
+            "QueryCompilationResultActions": {
+              "methods": [
+                "QueryCompilationResultActions",
+                "QueryCompilationResultActionsAsync"
+              ]
+            },
+            "QueryDirectoryContents": {
+              "methods": [
+                "QueryDirectoryContents",
+                "QueryDirectoryContentsAsync"
+              ]
+            },
+            "QueryRepositoryDirectoryContents": {
+              "methods": [
+                "QueryRepositoryDirectoryContents",
+                "QueryRepositoryDirectoryContentsAsync"
+              ]
+            },
+            "QueryWorkflowInvocationActions": {
+              "methods": [
+                "QueryWorkflowInvocationActions",
+                "QueryWorkflowInvocationActionsAsync"
+              ]
+            },
+            "ReadFile": {
+              "methods": [
+                "ReadFile",
+                "ReadFileAsync"
+              ]
+            },
+            "ReadRepositoryFile": {
+              "methods": [
+                "ReadRepositoryFile",
+                "ReadRepositoryFileAsync"
+              ]
+            },
+            "RemoveDirectory": {
+              "methods": [
+                "RemoveDirectory",
+                "RemoveDirectoryAsync"
+              ]
+            },
+            "RemoveFile": {
+              "methods": [
+                "RemoveFile",
+                "RemoveFileAsync"
+              ]
+            },
+            "ResetWorkspaceChanges": {
+              "methods": [
+                "ResetWorkspaceChanges",
+                "ResetWorkspaceChangesAsync"
+              ]
+            },
+            "SearchFiles": {
+              "methods": [
+                "SearchFiles",
+                "SearchFilesAsync"
+              ]
+            },
+            "UpdateConfig": {
+              "methods": [
+                "UpdateConfig",
+                "UpdateConfigAsync"
+              ]
+            },
+            "UpdateReleaseConfig": {
+              "methods": [
+                "UpdateReleaseConfig",
+                "UpdateReleaseConfigAsync"
+              ]
+            },
+            "UpdateRepository": {
+              "methods": [
+                "UpdateRepository",
+                "UpdateRepositoryAsync"
+              ]
+            },
+            "UpdateWorkflowConfig": {
+              "methods": [
+                "UpdateWorkflowConfig",
+                "UpdateWorkflowConfigAsync"
+              ]
+            },
+            "WriteFile": {
+              "methods": [
+                "WriteFile",
+                "WriteFileAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

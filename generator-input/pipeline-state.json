@@ -4083,6 +4083,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "e82ef048ff8b890448686334fbb6a85452e2de06",
             "apiPaths": [
                 "google/cloud/dataform/v1"
             ],
