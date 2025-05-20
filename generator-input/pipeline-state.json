@@ -1156,7 +1156,7 @@
             "id": "Google.Cloud.Dataflow.V1Beta3",
             "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-08T17:34:18Z",
             "lastGeneratedCommit": "8105f2a92ac5938e516c086a2dba6b908a53555c",
             "apiPaths": [
@@ -3146,7 +3146,7 @@
             "id": "Google.Cloud.TextToSpeech.V1",
             "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-14T17:20:31Z",
             "lastGeneratedCommit": "8f7ef1c0eed3ee1ce7c86c5da3511a2a9dbf4a31",
             "apiPaths": [
@@ -3324,7 +3324,7 @@
         {
             "id": "Google.Cloud.VisionAI.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/cloud/visionai/v1"
@@ -4082,7 +4082,7 @@
             "id": "Google.Cloud.Dataform.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "e82ef048ff8b890448686334fbb6a85452e2de06",
             "apiPaths": [
                 "google/cloud/dataform/v1"
@@ -4095,7 +4095,7 @@
             "id": "Google.Cloud.Support.V2Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "c7a80cb6c1408bd6cc0f5c90c11599a2cffdae90",
             "apiPaths": [
                 "google/cloud/support/v2beta"
