@@ -247,6 +247,7 @@
     "apis/Google.Cloud.StorageInsights.V1/Google.Cloud.StorageInsights.V1/**",
     "apis/Google.Cloud.StorageTransfer.V1/Google.Cloud.StorageTransfer.V1/**",
     "apis/Google.Cloud.Support.V2/Google.Cloud.Support.V2/**",
+    "apis/Google.Cloud.Support.V2Beta/Google.Cloud.Support.V2Beta/**",
     "apis/Google.Cloud.Talent.V4/Google.Cloud.Talent.V4/**",
     "apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/**",
     "apis/Google.Cloud.Tasks.V2/Google.Cloud.Tasks.V2/**",
