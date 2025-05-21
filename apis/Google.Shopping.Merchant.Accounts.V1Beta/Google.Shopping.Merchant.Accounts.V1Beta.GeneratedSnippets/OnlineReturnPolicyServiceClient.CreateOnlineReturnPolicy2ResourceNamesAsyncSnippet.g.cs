@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened]
+    // [START merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened2_resourceNames]
     using Google.Shopping.Merchant.Accounts.V1Beta;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedOnlineReturnPolicyServiceClientSnippets
     {
-        /// <summary>Snippet for CreateOnlineReturnPolicy</summary>
+        /// <summary>Snippet for CreateOnlineReturnPolicyAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,15 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateOnlineReturnPolicy()
+        public async Task CreateOnlineReturnPolicy2ResourceNamesAsync()
         {
             // Create client
-            OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = OnlineReturnPolicyServiceClient.Create();
+            OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = await OnlineReturnPolicyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]";
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            OnlineReturnPolicy onlineReturnPolicy = new OnlineReturnPolicy();
             // Make the request
-            OnlineReturnPolicy response = onlineReturnPolicyServiceClient.CreateOnlineReturnPolicy(parent);
+            OnlineReturnPolicy response = await onlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync(parent, onlineReturnPolicy);
         }
     }
-    // [END merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened]
+    // [END merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened2_resourceNames]
 }

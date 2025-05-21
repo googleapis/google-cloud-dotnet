@@ -425,7 +425,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateOnlineReturnPolicy</summary>
-        public void CreateOnlineReturnPolicy()
+        public void CreateOnlineReturnPolicy1()
         {
             // Snippet: CreateOnlineReturnPolicy(string, CallSettings)
             // Create client
@@ -438,7 +438,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateOnlineReturnPolicyAsync</summary>
-        public async Task CreateOnlineReturnPolicyAsync()
+        public async Task CreateOnlineReturnPolicy1Async()
         {
             // Snippet: CreateOnlineReturnPolicyAsync(string, CallSettings)
             // Additional: CreateOnlineReturnPolicyAsync(string, CancellationToken)
@@ -452,7 +452,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateOnlineReturnPolicy</summary>
-        public void CreateOnlineReturnPolicyResourceNames()
+        public void CreateOnlineReturnPolicy1ResourceNames()
         {
             // Snippet: CreateOnlineReturnPolicy(AccountName, CallSettings)
             // Create client
@@ -465,7 +465,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateOnlineReturnPolicyAsync</summary>
-        public async Task CreateOnlineReturnPolicyResourceNamesAsync()
+        public async Task CreateOnlineReturnPolicy1ResourceNamesAsync()
         {
             // Snippet: CreateOnlineReturnPolicyAsync(AccountName, CallSettings)
             // Additional: CreateOnlineReturnPolicyAsync(AccountName, CancellationToken)
@@ -475,6 +475,64 @@ namespace GoogleCSharpSnippets
             AccountName parent = AccountName.FromAccount("[ACCOUNT]");
             // Make the request
             OnlineReturnPolicy response = await onlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOnlineReturnPolicy</summary>
+        public void CreateOnlineReturnPolicy2()
+        {
+            // Snippet: CreateOnlineReturnPolicy(string, OnlineReturnPolicy, CallSettings)
+            // Create client
+            OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = OnlineReturnPolicyServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            OnlineReturnPolicy onlineReturnPolicy = new OnlineReturnPolicy();
+            // Make the request
+            OnlineReturnPolicy response = onlineReturnPolicyServiceClient.CreateOnlineReturnPolicy(parent, onlineReturnPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOnlineReturnPolicyAsync</summary>
+        public async Task CreateOnlineReturnPolicy2Async()
+        {
+            // Snippet: CreateOnlineReturnPolicyAsync(string, OnlineReturnPolicy, CallSettings)
+            // Additional: CreateOnlineReturnPolicyAsync(string, OnlineReturnPolicy, CancellationToken)
+            // Create client
+            OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = await OnlineReturnPolicyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]";
+            OnlineReturnPolicy onlineReturnPolicy = new OnlineReturnPolicy();
+            // Make the request
+            OnlineReturnPolicy response = await onlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync(parent, onlineReturnPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOnlineReturnPolicy</summary>
+        public void CreateOnlineReturnPolicy2ResourceNames()
+        {
+            // Snippet: CreateOnlineReturnPolicy(AccountName, OnlineReturnPolicy, CallSettings)
+            // Create client
+            OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = OnlineReturnPolicyServiceClient.Create();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            OnlineReturnPolicy onlineReturnPolicy = new OnlineReturnPolicy();
+            // Make the request
+            OnlineReturnPolicy response = onlineReturnPolicyServiceClient.CreateOnlineReturnPolicy(parent, onlineReturnPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOnlineReturnPolicyAsync</summary>
+        public async Task CreateOnlineReturnPolicy2ResourceNamesAsync()
+        {
+            // Snippet: CreateOnlineReturnPolicyAsync(AccountName, OnlineReturnPolicy, CallSettings)
+            // Additional: CreateOnlineReturnPolicyAsync(AccountName, OnlineReturnPolicy, CancellationToken)
+            // Create client
+            OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = await OnlineReturnPolicyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
+            OnlineReturnPolicy onlineReturnPolicy = new OnlineReturnPolicy();
+            // Make the request
+            OnlineReturnPolicy response = await onlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync(parent, onlineReturnPolicy);
             // End snippet
         }
 
