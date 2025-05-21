@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0-alpha10, released 2025-05-21
+
+More release process testing.
+
 ## Version 2.0.0-alpha09, released 2025-05-21
 
 More release process testing.
