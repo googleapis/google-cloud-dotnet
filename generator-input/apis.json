@@ -216,7 +216,7 @@
     },
     {
       "id": "Google.Area120.Tables.V1Alpha1",
-      "version": "2.0.0-alpha11",
+      "version": "2.0.0-alpha12",
       "type": "grpc",
       "productName": "Google Area 120 Tables",
       "description": "Recommended Google client library to access the Area 120 Tables API",
