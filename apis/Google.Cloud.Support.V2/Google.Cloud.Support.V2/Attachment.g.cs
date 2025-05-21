@@ -28,20 +28,20 @@ namespace Google.Cloud.Support.V2 {
             "b29nbGUuY2xvdWQuc3VwcG9ydC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xl",
             "L2Nsb3VkL3N1cHBvcnQvdjIvYWN0b3IucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8igQMKCkF0dGFjaG1lbnQSEQoEbmFtZRgBIAEo",
-            "CUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjQKB2NyZWF0b3IYAyABKAsyHi5nb29nbGUuY2xv",
-            "dWQuc3VwcG9ydC52Mi5BY3RvckID4EEDEhAKCGZpbGVuYW1lGAQgASgJEhYK",
-            "CW1pbWVfdHlwZRgFIAEoCUID4EEDEhcKCnNpemVfYnl0ZXMYBiABKANCA+BB",
-            "AzqwAepBrAEKJmNsb3Vkc3VwcG9ydC5nb29nbGVhcGlzLmNvbS9BdHRhY2ht",
-            "ZW50EkVvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2Nhc2VzL3tjYXNl",
-            "fS9hdHRhY2htZW50cy97YXR0YWNobWVudF9pZH0SO3Byb2plY3RzL3twcm9q",
-            "ZWN0fS9jYXNlcy97Y2FzZX0vYXR0YWNobWVudHMve2F0dGFjaG1lbnRfaWR9",
-            "QrgBChtjb20uZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJCD0F0dGFjaG1lbnRQ",
-            "cm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3N1cHBvcnQvYXBpdjIvc3Vw",
-            "cG9ydHBiO3N1cHBvcnRwYqoCF0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyygIX",
-            "R29vZ2xlXENsb3VkXFN1cHBvcnRcVjLqAhpHb29nbGU6OkNsb3VkOjpTdXBw",
-            "b3J0OjpWMmIGcHJvdG8z"));
+            "Zi90aW1lc3RhbXAucHJvdG8ihAMKCkF0dGFjaG1lbnQSFAoEbmFtZRgBIAEo",
+            "CUIG4EED4EEIEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKB2NyZWF0b3IYAyABKAsyHi5nb29nbGUu",
+            "Y2xvdWQuc3VwcG9ydC52Mi5BY3RvckID4EEDEhAKCGZpbGVuYW1lGAQgASgJ",
+            "EhYKCW1pbWVfdHlwZRgFIAEoCUID4EEDEhcKCnNpemVfYnl0ZXMYBiABKANC",
+            "A+BBAzqwAepBrAEKJmNsb3Vkc3VwcG9ydC5nb29nbGVhcGlzLmNvbS9BdHRh",
+            "Y2htZW50EkVvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2Nhc2VzL3tj",
+            "YXNlfS9hdHRhY2htZW50cy97YXR0YWNobWVudF9pZH0SO3Byb2plY3RzL3tw",
+            "cm9qZWN0fS9jYXNlcy97Y2FzZX0vYXR0YWNobWVudHMve2F0dGFjaG1lbnRf",
+            "aWR9QrgBChtjb20uZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJCD0F0dGFjaG1l",
+            "bnRQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3N1cHBvcnQvYXBpdjIv",
+            "c3VwcG9ydHBiO3N1cHBvcnRwYqoCF0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYy",
+            "ygIXR29vZ2xlXENsb3VkXFN1cHBvcnRcVjLqAhpHb29nbGU6OkNsb3VkOjpT",
+            "dXBwb3J0OjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Support.V2.ActorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,7 +116,7 @@ namespace Google.Cloud.Support.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the attachment.
+    /// Output only. Identifier. The resource name of the attachment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
