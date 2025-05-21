@@ -8942,10 +8942,10 @@
       ]
     },
     {
-      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened",
-      "title": "CreateOnlineReturnPolicy",
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened1",
+      "title": "CreateOnlineReturnPolicy1",
       "description": "Snippet for CreateOnlineReturnPolicy",
-      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicySnippet.g.cs",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateOnlineReturnPolicy",
@@ -8989,10 +8989,10 @@
       ]
     },
     {
-      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened",
-      "title": "CreateOnlineReturnPolicyAsync",
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened1",
+      "title": "CreateOnlineReturnPolicy1Async",
       "description": "Snippet for CreateOnlineReturnPolicyAsync",
-      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsyncSnippet.g.cs",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateOnlineReturnPolicyAsync",
@@ -9037,10 +9037,10 @@
       ]
     },
     {
-      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened_resourceNames",
-      "title": "CreateOnlineReturnPolicyResourceNames",
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened1_resourceNames",
+      "title": "CreateOnlineReturnPolicy1ResourceNames",
       "description": "Snippet for CreateOnlineReturnPolicy",
-      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyResourceNamesSnippet.g.cs",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1ResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateOnlineReturnPolicy",
@@ -9084,10 +9084,10 @@
       ]
     },
     {
-      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened_resourceNames",
-      "title": "CreateOnlineReturnPolicyResourceNamesAsync",
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened1_resourceNames",
+      "title": "CreateOnlineReturnPolicy1ResourceNamesAsync",
       "description": "Snippet for CreateOnlineReturnPolicyAsync",
-      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyResourceNamesAsyncSnippet.g.cs",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1ResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateOnlineReturnPolicyAsync",
@@ -9127,6 +9127,212 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened2",
+      "title": "CreateOnlineReturnPolicy2",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened2",
+      "title": "CreateOnlineReturnPolicy2Async",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened2_resourceNames",
+      "title": "CreateOnlineReturnPolicy2ResourceNames",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened2_resourceNames",
+      "title": "CreateOnlineReturnPolicy2ResourceNamesAsync",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]

@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened_resourceNames]
+    // [START merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened1_resourceNames]
     using Google.Shopping.Merchant.Accounts.V1Beta;
     using System.Threading.Tasks;
 
@@ -30,7 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateOnlineReturnPolicyResourceNamesAsync()
+        public async Task CreateOnlineReturnPolicy1ResourceNamesAsync()
         {
             // Create client
             OnlineReturnPolicyServiceClient onlineReturnPolicyServiceClient = await OnlineReturnPolicyServiceClient.CreateAsync();
@@ -40,5 +40,5 @@ namespace GoogleCSharpSnippets
             OnlineReturnPolicy response = await onlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync(parent);
         }
     }
-    // [END merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened_resourceNames]
+    // [END merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened1_resourceNames]
 }

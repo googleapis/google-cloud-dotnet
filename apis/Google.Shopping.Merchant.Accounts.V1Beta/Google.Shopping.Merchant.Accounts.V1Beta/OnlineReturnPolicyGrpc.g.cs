@@ -183,7 +183,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
 
       /// <summary>
-      /// Deletes an existing return policy for a given merchant.
+      /// Deletes an existing return policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -416,7 +416,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateOnlineReturnPolicy, null, options, request);
       }
       /// <summary>
-      /// Deletes an existing return policy for a given merchant.
+      /// Deletes an existing return policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -429,7 +429,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return DeleteOnlineReturnPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an existing return policy for a given merchant.
+      /// Deletes an existing return policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -440,7 +440,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteOnlineReturnPolicy, null, options, request);
       }
       /// <summary>
-      /// Deletes an existing return policy for a given merchant.
+      /// Deletes an existing return policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -453,7 +453,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return DeleteOnlineReturnPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an existing return policy for a given merchant.
+      /// Deletes an existing return policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

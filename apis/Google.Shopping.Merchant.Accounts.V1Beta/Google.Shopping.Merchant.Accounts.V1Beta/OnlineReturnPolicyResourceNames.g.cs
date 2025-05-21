@@ -269,18 +269,6 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
     }
 
-    public partial class ListOnlineReturnPoliciesRequest
-    {
-        /// <summary>
-        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public AccountName ParentAsAccountName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
     public partial class CreateOnlineReturnPolicyRequest
     {
         /// <summary>
@@ -302,6 +290,18 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         {
             get => string.IsNullOrEmpty(Name) ? null : gsmav::OnlineReturnPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListOnlineReturnPoliciesRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 
