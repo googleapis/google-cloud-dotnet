@@ -427,7 +427,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -441,7 +443,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1110,7 +1114,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1125,7 +1131,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1138,7 +1146,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1153,7 +1163,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1166,7 +1178,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1181,7 +1195,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1194,7 +1210,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1209,7 +1227,9 @@ namespace Google.Cloud.Storage.V2 {
       /// <summary>
       /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}`.
+      /// `projects/_/buckets/{bucket}` for a bucket, or
+      /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+      /// for a managed folder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

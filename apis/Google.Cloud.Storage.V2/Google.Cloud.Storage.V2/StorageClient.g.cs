@@ -971,10 +971,12 @@ namespace Google.Cloud.Storage.V2
         /// Creates a new bucket.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to which this bucket will belong.
+        /// Required. The project to which this bucket will belong. This field must
+        /// either be empty or `projects/_`. The project ID that owns this bucket
+        /// should be specified in the `bucket.project` field.
         /// </param>
         /// <param name="bucket">
-        /// Properties of the new bucket being inserted.
+        /// Optional. Properties of the new bucket being inserted.
         /// The name of the bucket is specified in the `bucket_id` field. Populating
         /// `bucket.name` field will result in an error.
         /// The project of the bucket must be specified in the `bucket.project` field.
@@ -1001,10 +1003,12 @@ namespace Google.Cloud.Storage.V2
         /// Creates a new bucket.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to which this bucket will belong.
+        /// Required. The project to which this bucket will belong. This field must
+        /// either be empty or `projects/_`. The project ID that owns this bucket
+        /// should be specified in the `bucket.project` field.
         /// </param>
         /// <param name="bucket">
-        /// Properties of the new bucket being inserted.
+        /// Optional. Properties of the new bucket being inserted.
         /// The name of the bucket is specified in the `bucket_id` field. Populating
         /// `bucket.name` field will result in an error.
         /// The project of the bucket must be specified in the `bucket.project` field.
@@ -1031,10 +1035,12 @@ namespace Google.Cloud.Storage.V2
         /// Creates a new bucket.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to which this bucket will belong.
+        /// Required. The project to which this bucket will belong. This field must
+        /// either be empty or `projects/_`. The project ID that owns this bucket
+        /// should be specified in the `bucket.project` field.
         /// </param>
         /// <param name="bucket">
-        /// Properties of the new bucket being inserted.
+        /// Optional. Properties of the new bucket being inserted.
         /// The name of the bucket is specified in the `bucket_id` field. Populating
         /// `bucket.name` field will result in an error.
         /// The project of the bucket must be specified in the `bucket.project` field.
@@ -1056,10 +1062,12 @@ namespace Google.Cloud.Storage.V2
         /// Creates a new bucket.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to which this bucket will belong.
+        /// Required. The project to which this bucket will belong. This field must
+        /// either be empty or `projects/_`. The project ID that owns this bucket
+        /// should be specified in the `bucket.project` field.
         /// </param>
         /// <param name="bucket">
-        /// Properties of the new bucket being inserted.
+        /// Optional. Properties of the new bucket being inserted.
         /// The name of the bucket is specified in the `bucket_id` field. Populating
         /// `bucket.name` field will result in an error.
         /// The project of the bucket must be specified in the `bucket.project` field.
@@ -1086,10 +1094,12 @@ namespace Google.Cloud.Storage.V2
         /// Creates a new bucket.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to which this bucket will belong.
+        /// Required. The project to which this bucket will belong. This field must
+        /// either be empty or `projects/_`. The project ID that owns this bucket
+        /// should be specified in the `bucket.project` field.
         /// </param>
         /// <param name="bucket">
-        /// Properties of the new bucket being inserted.
+        /// Optional. Properties of the new bucket being inserted.
         /// The name of the bucket is specified in the `bucket_id` field. Populating
         /// `bucket.name` field will result in an error.
         /// The project of the bucket must be specified in the `bucket.project` field.
@@ -1116,10 +1126,12 @@ namespace Google.Cloud.Storage.V2
         /// Creates a new bucket.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to which this bucket will belong.
+        /// Required. The project to which this bucket will belong. This field must
+        /// either be empty or `projects/_`. The project ID that owns this bucket
+        /// should be specified in the `bucket.project` field.
         /// </param>
         /// <param name="bucket">
-        /// Properties of the new bucket being inserted.
+        /// Optional. Properties of the new bucket being inserted.
         /// The name of the bucket is specified in the `bucket_id` field. Populating
         /// `bucket.name` field will result in an error.
         /// The project of the bucket must be specified in the `bucket.project` field.
@@ -1395,7 +1407,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1406,7 +1420,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1417,7 +1433,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1428,7 +1446,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1445,7 +1465,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1462,7 +1484,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1476,7 +1500,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1493,7 +1519,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1510,7 +1538,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1524,7 +1554,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1535,7 +1567,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1546,7 +1580,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1557,7 +1593,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1581,7 +1619,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1605,7 +1645,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1625,7 +1667,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1649,7 +1693,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1673,7 +1719,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2379,8 +2427,8 @@ namespace Google.Cloud.Storage.V2
         /// `CancelResumableWrite`.
         /// </param>
         /// <param name="generation">
-        /// If present, permanently deletes a specific revision of this object (as
-        /// opposed to the latest version, the default).
+        /// Optional. If present, permanently deletes a specific revision of this
+        /// object (as opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2423,8 +2471,8 @@ namespace Google.Cloud.Storage.V2
         /// `CancelResumableWrite`.
         /// </param>
         /// <param name="generation">
-        /// If present, permanently deletes a specific revision of this object (as
-        /// opposed to the latest version, the default).
+        /// Optional. If present, permanently deletes a specific revision of this
+        /// object (as opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2467,8 +2515,8 @@ namespace Google.Cloud.Storage.V2
         /// `CancelResumableWrite`.
         /// </param>
         /// <param name="generation">
-        /// If present, permanently deletes a specific revision of this object (as
-        /// opposed to the latest version, the default).
+        /// Optional. If present, permanently deletes a specific revision of this
+        /// object (as opposed to the latest version, the default).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2506,8 +2554,8 @@ namespace Google.Cloud.Storage.V2
         /// `CancelResumableWrite`.
         /// </param>
         /// <param name="generation">
-        /// If present, permanently deletes a specific revision of this object (as
-        /// opposed to the latest version, the default).
+        /// Optional. If present, permanently deletes a specific revision of this
+        /// object (as opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2550,8 +2598,8 @@ namespace Google.Cloud.Storage.V2
         /// `CancelResumableWrite`.
         /// </param>
         /// <param name="generation">
-        /// If present, permanently deletes a specific revision of this object (as
-        /// opposed to the latest version, the default).
+        /// Optional. If present, permanently deletes a specific revision of this
+        /// object (as opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2594,8 +2642,8 @@ namespace Google.Cloud.Storage.V2
         /// `CancelResumableWrite`.
         /// </param>
         /// <param name="generation">
-        /// If present, permanently deletes a specific revision of this object (as
-        /// opposed to the latest version, the default).
+        /// Optional. If present, permanently deletes a specific revision of this
+        /// object (as opposed to the latest version, the default).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3069,8 +3117,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. Name of the object.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed to the
-        /// latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3099,8 +3147,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. Name of the object.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed to the
-        /// latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3129,8 +3177,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. Name of the object.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed to the
-        /// latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3154,8 +3202,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. Name of the object.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed to the
-        /// latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3184,8 +3232,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. Name of the object.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed to the
-        /// latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3214,8 +3262,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. Name of the object.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed to the
-        /// latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3308,8 +3356,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. The name of the object to read.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed
-        /// to the latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
@@ -3337,8 +3385,8 @@ namespace Google.Cloud.Storage.V2
         /// Required. The name of the object to read.
         /// </param>
         /// <param name="generation">
-        /// If present, selects a specific revision of this object (as opposed
-        /// to the latest version, the default).
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
@@ -4317,10 +4365,10 @@ namespace Google.Cloud.Storage.V2
             _callLockBucketRetentionPolicy = clientHelper.BuildApiCall<LockBucketRetentionPolicyRequest, Bucket>("LockBucketRetentionPolicy", grpcClient.LockBucketRetentionPolicyAsync, grpcClient.LockBucketRetentionPolicy, effectiveSettings.LockBucketRetentionPolicySettings).WithGoogleRequestParam("bucket", request => request.Bucket);
             Modify_ApiCall(ref _callLockBucketRetentionPolicy);
             Modify_LockBucketRetentionPolicyApiCall(ref _callLockBucketRetentionPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("bucket", request => request.Resource);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::GetIamPolicyRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Resource));
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("bucket", request => request.Resource);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::SetIamPolicyRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Resource));
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::TestIamPermissionsRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/managedFolders(?:/.*)?$", request => request.Resource));
@@ -4615,7 +4663,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4629,7 +4679,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4643,7 +4695,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4657,7 +4711,9 @@ namespace Google.Cloud.Storage.V2
         /// <summary>
         /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}`.
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
