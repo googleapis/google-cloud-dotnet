@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.12.0, released 2025-05-22
+
+### New features
+
+- Support markup input for Cloud TTS Chirp 3: HD voice synthesis
+- Support pinyin/yomigana custom pronunciation encodings for cmn-cn/ja-jp
+
 ## Version 3.11.0, released 2025-04-14
 
 ### New features
