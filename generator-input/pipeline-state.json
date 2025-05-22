@@ -2758,7 +2758,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-12-05T18:52:23Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "443957ba92ed5f5445b688b1376397d66005f0df",
             "apiPaths": [
                 "google/cloud/security/publicca/v1"
             ],
