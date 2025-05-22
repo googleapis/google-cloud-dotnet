@@ -41,7 +41,11 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
         var apis = options.GetApisFromLibraryId(catalog);
         for (int attempt = 1; true; attempt++)
         {
-            var args = attempt == 1 ? apis.Select(api => api.Id) : new List<string> { "--retry" };
+            var args = attempt == 1 ? apis.Select(api => api.Id).ToList() : new List<string> { "--retry" };
+            if (Directory.Exists(Path.Combine(repoRoot, "tools", "Google.Cloud.Tools.ReleaseManager", "bin")))
+            {
+                args.Add("--no-build-releasemanager");
+            }
             try
             {
                 Processes.RunBashScript(repoRoot, "runintegrationtests.sh", args);
