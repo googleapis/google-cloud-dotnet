@@ -1154,11 +1154,12 @@
         },
         {
             "id": "Google.Cloud.Dataflow.V1Beta3",
-            "currentVersion": "2.0.0-beta07",
+            "currentVersion": "2.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-08T17:34:18Z",
+            "releaseTimestamp": "2025-05-22T07:11:58.632959417Z",
             "lastGeneratedCommit": "8105f2a92ac5938e516c086a2dba6b908a53555c",
+            "lastReleasedCommit": "8105f2a92ac5938e516c086a2dba6b908a53555c",
             "apiPaths": [
                 "google/dataflow/v1beta3"
             ],
