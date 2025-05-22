@@ -21,17 +21,17 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 public class ContainerOptions
 {
-    private const string ApiPathOption = "api-path";
-    private const string LibraryIdOption = "library-id";
-    private const string RepoRootOption = "repo-root";
-    private const string ApiRootOption = "api-root";
-    private const string GeneratorInputOption = "generator-input";
-    private const string GeneratorOutputOption = "generator-output";
-    private const string PackageOutputOption = "package-output";
-    private const string TestOption = "test";
-    private const string OutputOption = "output";
-    private const string VersionOption = "version";
-    private const string ReleaseNotesOption = "release-notes";
+    internal const string ApiPathOption = "api-path";
+    internal const string LibraryIdOption = "library-id";
+    internal const string RepoRootOption = "repo-root";
+    internal const string ApiRootOption = "api-root";
+    internal const string GeneratorInputOption = "generator-input";
+    internal const string GeneratorOutputOption = "generator-output";
+    internal const string PackageOutputOption = "package-output";
+    internal const string TestOption = "test";
+    internal const string OutputOption = "output";
+    internal const string VersionOption = "version";
+    internal const string ReleaseNotesOption = "release-notes";
 
     internal string ApiPath { get; set; }
     internal string LibraryId { get; set; }

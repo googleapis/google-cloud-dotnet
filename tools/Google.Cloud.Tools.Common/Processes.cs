@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -67,11 +68,14 @@ namespace Google.Cloud.Tools.Common
 
         public static void RunBashScript(string workingDirectory, string script, IEnumerable<string> args)
         {
+            var bash = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                ? @"C:\Program Files\Git\bin\bash.exe" // Hardcoding this is a bit odd, but it's not like this is general purpose...
+                : "/bin/bash";
             var processArguments = args.Prepend($"./{script}").ToList();
 
             var psi = new ProcessStartInfo
             {
-                FileName = "/bin/bash",
+                FileName = bash,
                 WorkingDirectory = workingDirectory
             };
             processArguments.ForEach(psi.ArgumentList.Add);
