@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Support.V2Beta",
-  "release_level": "unreleased",
+  "release_level": "preview",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Support.V2Beta/latest",
   "library_type": "GAPIC_AUTO",
   "language": "dotnet",

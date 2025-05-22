@@ -5474,7 +5474,7 @@
     },
     {
       "id": "Google.Cloud.Support.V2Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Google Cloud Support",
       "productUrl": "https://cloud.google.com/support/docs/reference/support-api",
