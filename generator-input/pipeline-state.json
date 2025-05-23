@@ -990,7 +990,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-10-08T22:06:24Z",
-            "lastGeneratedCommit": "3f103ea2269aafa78eca65d29092870d1eb61d48",
+            "lastGeneratedCommit": "32a745de44b8b2e506677389d9921dfb6fc81f33",
             "apiPaths": [
                 "google/cloud/commerce/consumer/procurement/v1"
             ],
