@@ -30,19 +30,16 @@ internal class GenerateApisCommand : ICommand
         @"C:\Program Files\Git\usr\bin\bash.exe",
         "/usr/bin/bash"
     };
-    internal const string ProtocEnvironmentVariable = "PROTOC";
-    internal const string ProtobufToolsRootEnvironmentVariable = "PROTOBUF_TOOLS_ROOT";
     internal const string GapicGeneratorEnvironmentVariable = "GAPIC_PLUGIN";
     internal const string GrpcGeneratorEnvironmentVariable = "GRPC_PLUGIN";
     internal const string GoogleApisDirectoryEnvironmentVariable = "GOOGLEAPIS";
     internal const string GeneratorOutputDirectoryEnvironmentVariable = "GENERATOR_OUTPUT_DIR";
     internal const string GeneratorInputDirectoryEnvironmentVariable = "GENERATOR_INPUT_DIR";
 
+    private readonly ProtobufCompiler _protobufCompiler;
     private readonly RootLayout _rootLayout;
-    private readonly string _protocBinary;
     private readonly string _gapicGeneratorBinary;
     private readonly string _grpcGeneratorBinary;
-    private readonly string _protobufToolsRootDirectory;
     private readonly string _tempOutputDirectory;
 
     public string Description => "Generates APIs (used by generateapis.sh)";
@@ -55,10 +52,9 @@ internal class GenerateApisCommand : ICommand
     {
         // These are only *validated* in Execute.
         _rootLayout = rootLayout;
-        _protocBinary = Environment.GetEnvironmentVariable(ProtocEnvironmentVariable);
+        _protobufCompiler = new ProtobufCompiler();
         _gapicGeneratorBinary = Environment.GetEnvironmentVariable(GapicGeneratorEnvironmentVariable);
         _grpcGeneratorBinary = Environment.GetEnvironmentVariable(GrpcGeneratorEnvironmentVariable);
-        _protobufToolsRootDirectory = Environment.GetEnvironmentVariable(ProtobufToolsRootEnvironmentVariable);
         _tempOutputDirectory = Path.Combine(Path.GetTempPath(), "generator-output");
     }
 
@@ -138,6 +134,8 @@ internal class GenerateApisCommand : ICommand
         MaybeRunScript("postgeneration.sh");
         ValidateNamespaces();
 
+        // TODO: Use Processes.RunBashScript instead. (That will need tweaking
+        // to allow absolute paths to scripts.)
         void MaybeRunScript(string script)
         {
             var fullScript = Path.Combine(apiLayout.TweaksDirectory, script);
@@ -202,7 +200,7 @@ internal class GenerateApisCommand : ICommand
         // Message and service generation. This doesn't need the common resources,
         // and we don't want to pass in the common resources proto because we don't
         // want to generate it.
-        RunProtoc(protosDir,
+        _protobufCompiler.Execute(_rootLayout.Googleapis, protosDir,
             $"--csharp_out={productionDirectory}",
             $"--csharp_opt=base_namespace={api.Id}",
             "--csharp_opt=file_extension=.g.cs",
@@ -236,7 +234,7 @@ internal class GenerateApisCommand : ICommand
             allGapicArguments.Add($"{GetApiProtosDirectory("google/cloud")}/common_resources.proto");
         }
 
-        RunProtoc(protosDir, allGapicArguments.ToArray());
+        _protobufCompiler.Execute(_rootLayout.Googleapis, protosDir, allGapicArguments.ToArray());
 
         IEnumerable<(string name, string value)> GetGapicPluginOptions()
         {
@@ -270,35 +268,10 @@ internal class GenerateApisCommand : ICommand
         string productionDirectory = Path.Combine(apiLayout.ProductionDirectory);
         Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
-        RunProtoc(GetApiProtosDirectory(api),
+        _protobufCompiler.Execute(GetApiProtosDirectory(api),
             $"--csharp_out={productionDirectory}",
             $"--csharp_opt=base_namespace={api.Id}",
             "--csharp_opt=file_extension=.g.cs");
-    }
-
-    /// <summary>
-    /// Runs protoc with the specified custom arguments, assuming common include paths (-I arguments),
-    /// and fetching all protos (recursively) from the given proto directory.
-    /// </summary>
-    private void RunProtoc(string protoDirectory, params string[] customArgs)
-    {
-        var protos = Directory.GetFiles(protoDirectory, "*.proto", SearchOption.AllDirectories);
-        var psi = new ProcessStartInfo
-        {
-            FileName = _protocBinary,
-            ArgumentList =
-            {
-                // Common arguments
-                "-I", _rootLayout.Googleapis,
-                "-I", Path.Combine(_protobufToolsRootDirectory, "tools")
-            }
-        };
-        // Then the custom arguments passed in, then the protos.
-        foreach (var arg in customArgs.Concat(protos))
-        {
-            psi.ArgumentList.Add(arg);
-        }
-        Processes.RunAndPropagateOutput(psi, "protoc", line => !line.Contains(" is unused."));
     }
 
     private void DeleteGeneratedFiles(string directory)
@@ -316,13 +289,12 @@ internal class GenerateApisCommand : ICommand
 
     private void ValidateEnvironment()
     {
+        _protobufCompiler.ValidateConfiguration();
         ValidateDirectory(_rootLayout.GeneratorInput, "generator output");
         ValidateDirectory(_rootLayout.GeneratorOutput, "generator input");
         ValidateDirectory(_rootLayout.Googleapis, "googleapis");
-        ValidateFile(_protocBinary, "protoc");
         ValidateFile(_gapicGeneratorBinary, "GAPIC generator");
         ValidateFile(_grpcGeneratorBinary, "gRPC generator");
-        ValidateDirectory(_protobufToolsRootDirectory, "protobuf tools root");
         // This will throw if we can't detect bash.
         GetBashExecutable();
 
@@ -399,7 +371,7 @@ internal class GenerateApisCommand : ICommand
         var descriptorFile = Path.Combine(_tempOutputDirectory, "descriptor.pb");
         try
         {
-            RunProtoc(apiDirectory,
+            _protobufCompiler.Execute(_rootLayout.Googleapis, apiDirectory,
                 $"--descriptor_set_out={descriptorFile}");
         }
         catch (Exception e)
@@ -436,7 +408,7 @@ internal class GenerateApisCommand : ICommand
         // want to generate it.
         try
         {
-            RunProtoc(apiDirectory,
+            _protobufCompiler.Execute(_rootLayout.Googleapis, apiDirectory,
                 $"--csharp_out={productionDirectory}",
                 $"--csharp_opt=base_namespace={id}",
                 "--csharp_opt=file_extension=.g.cs",
@@ -482,7 +454,7 @@ internal class GenerateApisCommand : ICommand
 
         try
         {
-            RunProtoc(apiDirectory, allGapicArguments.ToArray());
+            _protobufCompiler.Execute(_rootLayout.Googleapis, apiDirectory, allGapicArguments.ToArray());
         }
         catch (Exception e)
         {
