@@ -17,6 +17,7 @@ using Google.Protobuf;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using YamlDotNet.Serialization;
@@ -36,6 +37,57 @@ internal sealed class ApiAnalyzer
     {
         _protoc = protoc;
         _googleapis = googleapis;
+    }
+
+    /// <summary>
+    /// Returns an <see cref="ApiMetadata"/> representation of an API path, by loading the protos,
+    /// service config etc. The returns metadata is not added to <paramref name="catalog"/>.
+    /// </summary>
+    internal ApiMetadata ConfigureApi(string apiPath, ApiCatalog catalog)
+    {
+        var indexEntry = MiniIndexEntry.Load(_protoc, _googleapis, apiPath);
+        var serviceConfig = ParseServiceConfigYaml(Path.Combine(_googleapis, indexEntry.Path, indexEntry.ServiceConfigFile));
+
+        var api = new ApiMetadata
+        {
+            Id = indexEntry.CSharpNamespace,
+            ProtoPath = indexEntry.Path,
+            ProductName = indexEntry.Title.EndsWith(" API") ? indexEntry.Title[..^4] : indexEntry.Title,
+            ProductUrl = serviceConfig.Publishing?.DocumentationUri,
+            Description = indexEntry.Description,
+            Version = "1.0.0-beta00",
+            Type = ApiType.Grpc,
+            Generator = GeneratorType.Micro,
+            // Let's not include test dependencies, which are rarely useful.
+            TestDependencies = null,
+            // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
+            ShortName = indexEntry.ServiceName.Split('.').First(),
+            // The service config file is always populated in the index, so we don't need to translate empty to null here.
+            ServiceConfigFile = indexEntry.ServiceConfigFile
+        };
+
+        // Add dependencies discovered via the proto imports.
+        // This doesn't fail on any dependencies that aren't found - we could tighten this up later
+        // by knowing about common protos, for example.
+        var apisByProtoPath = catalog.Apis.Where(api => api.ProtoPath is object).ToDictionary(api => api.ProtoPath);
+        foreach (var import in indexEntry.ImportDirectories)
+        {
+            if (apisByProtoPath.TryGetValue(import, out var dependency))
+            {
+                api.Dependencies.Add(dependency.Id, dependency.Version);
+            }
+        }
+
+        // Add mixin dependencies discovered via APIs listed in the service config file.
+        // This *does* fail if we can't find the API, as that would indicate a general issue.
+        foreach (var mixin in indexEntry.MixinPackages)
+        {
+            api.Dependencies[mixin] = catalog[mixin].Version;
+        }
+
+        // Add any other information from BUILD.bazel
+        UpdateFromBazel(api, googleapis);
+        return api;
     }
 
     internal static ApiMetadata ConfigureApi(string googleapis, ApiCatalog catalog, ApiIndex.V1.Api apiIndexEntry)
@@ -233,6 +285,38 @@ internal sealed class ApiAnalyzer
                 api.IncludeCommonResourcesProto = includeCommonResourcesProto;
                 UpdateOrAddJson("includeCommonResourcesProto", includeCommonResourcesProto);
             }
+        }
+    }
+
+    /// <summary>
+    /// Just the bits of the old API Index which we need to configure an API.
+    /// </summary>
+    private sealed class MiniIndexEntry
+    {
+        /// <summary>
+        /// Directory within googleapis, e.g. google/cloud/functions/v2
+        /// </summary>
+        internal string Path { get; }
+        internal string Title { get; }
+        internal string CSharpNamespace { get; }
+        internal string DocumentationUri { get; }
+        internal string Description { get; }
+        internal string ServiceName { get; }
+        /// <summary>
+        /// The name of the service config YAML file, relative to <see cref="Path"/>.
+        /// </summary>
+        internal string ServiceConfigFile { get; }
+        internal ImmutableList<string> MixinPackages { get; }
+        internal ImmutableList<string> ImportDirectories { get; }
+
+        private MiniIndexEntry()
+        {
+        }
+
+        internal static MiniIndexEntry Load(ProtobufCompiler protoc, string googleapis, string apiPath)
+        {
+            // TODO: Implement this by running protoc etc.
+            return null;
         }
     }
 }
