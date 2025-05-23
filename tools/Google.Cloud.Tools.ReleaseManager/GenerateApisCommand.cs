@@ -361,7 +361,7 @@ internal class GenerateApisCommand : ICommand
         {
             throw new UserErrorException($"{configFiles.Count} service config files detected in {arg}");
         }
-        var serviceConfig = AddCommand.ParseServiceConfigYaml(configFiles[0]);
+        var serviceConfig = ApiAnalyzer.ParseServiceConfigYaml(configFiles[0]);
 
         // Copied from GenerateGapicApi and modified
 
@@ -531,7 +531,7 @@ internal class GenerateApisCommand : ICommand
         // This is slow, but avoids directories with a service config but no APIs.
         bool HasApis(string file)
         {
-            var config = AddCommand.ParseServiceConfigYaml(file);
+            var config = ApiAnalyzer.ParseServiceConfigYaml(file);
             return config.Apis.Count > 0;
         }
     }
