@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.CompareV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseManager", "Google.Cloud.Tools.ReleaseManager\Google.Cloud.Tools.ReleaseManager.csproj", "{4171E471-ABAB-43B9-B759-6641BA6C4A4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ApiIndex.V1", "Google.Cloud.Tools.ApiIndex.V1\Google.Cloud.Tools.ApiIndex.V1.csproj", "{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseManager.Tests", "Google.Cloud.Tools.ReleaseManager.Tests\Google.Cloud.Tools.ReleaseManager.Tests.csproj", "{0FCAFBAD-1EC3-4B37-A82C-F0D0E6C3CD2F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseProgressReporter", "Google.Cloud.Tools.ReleaseProgressReporter\Google.Cloud.Tools.ReleaseProgressReporter.csproj", "{BBF9EA6D-B33F-4B79-BC27-531E07C24F35}"
@@ -123,18 +121,6 @@ Global
 		{4171E471-ABAB-43B9-B759-6641BA6C4A4A}.Release|x64.Build.0 = Release|Any CPU
 		{4171E471-ABAB-43B9-B759-6641BA6C4A4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{4171E471-ABAB-43B9-B759-6641BA6C4A4A}.Release|x86.Build.0 = Release|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Debug|x64.Build.0 = Debug|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Debug|x86.Build.0 = Debug|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Release|x64.ActiveCfg = Release|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Release|x64.Build.0 = Release|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Release|x86.ActiveCfg = Release|Any CPU
-		{D72EED37-F4B7-404B-97F9-45A5E5EBDA69}.Release|x86.Build.0 = Release|Any CPU
 		{0FCAFBAD-1EC3-4B37-A82C-F0D0E6C3CD2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0FCAFBAD-1EC3-4B37-A82C-F0D0E6C3CD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCAFBAD-1EC3-4B37-A82C-F0D0E6C3CD2F}.Debug|x64.ActiveCfg = Debug|Any CPU
