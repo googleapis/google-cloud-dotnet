@@ -108,6 +108,28 @@ namespace Google.Cloud.ManagedKafka.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest> __Marshaller_google_cloud_managedkafka_v1_UpdateConsumerGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest> __Marshaller_google_cloud_managedkafka_v1_DeleteConsumerGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.ListAclsRequest> __Marshaller_google_cloud_managedkafka_v1_ListAclsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.ListAclsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.ListAclsResponse> __Marshaller_google_cloud_managedkafka_v1_ListAclsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.ListAclsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.GetAclRequest> __Marshaller_google_cloud_managedkafka_v1_GetAclRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.GetAclRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.Acl> __Marshaller_google_cloud_managedkafka_v1_Acl = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.Acl.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.CreateAclRequest> __Marshaller_google_cloud_managedkafka_v1_CreateAclRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.CreateAclRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest> __Marshaller_google_cloud_managedkafka_v1_UpdateAclRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest> __Marshaller_google_cloud_managedkafka_v1_DeleteAclRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest> __Marshaller_google_cloud_managedkafka_v1_AddAclEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse> __Marshaller_google_cloud_managedkafka_v1_AddAclEntryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest> __Marshaller_google_cloud_managedkafka_v1_RemoveAclEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse> __Marshaller_google_cloud_managedkafka_v1_RemoveAclEntryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.ListClustersRequest, global::Google.Cloud.ManagedKafka.V1.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.ListClustersRequest, global::Google.Cloud.ManagedKafka.V1.ListClustersResponse>(
@@ -220,6 +242,62 @@ namespace Google.Cloud.ManagedKafka.V1 {
         "DeleteConsumerGroup",
         __Marshaller_google_cloud_managedkafka_v1_DeleteConsumerGroupRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.ListAclsRequest, global::Google.Cloud.ManagedKafka.V1.ListAclsResponse> __Method_ListAcls = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.ListAclsRequest, global::Google.Cloud.ManagedKafka.V1.ListAclsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAcls",
+        __Marshaller_google_cloud_managedkafka_v1_ListAclsRequest,
+        __Marshaller_google_cloud_managedkafka_v1_ListAclsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.GetAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl> __Method_GetAcl = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.GetAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAcl",
+        __Marshaller_google_cloud_managedkafka_v1_GetAclRequest,
+        __Marshaller_google_cloud_managedkafka_v1_Acl);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.CreateAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl> __Method_CreateAcl = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.CreateAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAcl",
+        __Marshaller_google_cloud_managedkafka_v1_CreateAclRequest,
+        __Marshaller_google_cloud_managedkafka_v1_Acl);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl> __Method_UpdateAcl = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAcl",
+        __Marshaller_google_cloud_managedkafka_v1_UpdateAclRequest,
+        __Marshaller_google_cloud_managedkafka_v1_Acl);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAcl = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAcl",
+        __Marshaller_google_cloud_managedkafka_v1_DeleteAclRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest, global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse> __Method_AddAclEntry = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest, global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddAclEntry",
+        __Marshaller_google_cloud_managedkafka_v1_AddAclEntryRequest,
+        __Marshaller_google_cloud_managedkafka_v1_AddAclEntryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest, global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse> __Method_RemoveAclEntry = new grpc::Method<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest, global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveAclEntry",
+        __Marshaller_google_cloud_managedkafka_v1_RemoveAclEntryRequest,
+        __Marshaller_google_cloud_managedkafka_v1_RemoveAclEntryResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -395,6 +473,93 @@ namespace Google.Cloud.ManagedKafka.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConsumerGroup(global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the acls in a given cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedKafka.V1.ListAclsResponse> ListAcls(global::Google.Cloud.ManagedKafka.V1.ListAclsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedKafka.V1.Acl> GetAcl(global::Google.Cloud.ManagedKafka.V1.GetAclRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new acl in the given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedKafka.V1.Acl> CreateAcl(global::Google.Cloud.ManagedKafka.V1.CreateAclRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedKafka.V1.Acl> UpdateAcl(global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an acl.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAcl(global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+      /// not exist yet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse> AddAclEntry(global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+      /// its acl entries become empty (i.e. if the removed entry was the last one in
+      /// the acl).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse> RemoveAclEntry(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1100,6 +1265,354 @@ namespace Google.Cloud.ManagedKafka.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConsumerGroup, null, options, request);
       }
+      /// <summary>
+      /// Lists the acls in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.ListAclsResponse ListAcls(global::Google.Cloud.ManagedKafka.V1.ListAclsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAcls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the acls in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.ListAclsResponse ListAcls(global::Google.Cloud.ManagedKafka.V1.ListAclsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAcls, null, options, request);
+      }
+      /// <summary>
+      /// Lists the acls in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.ListAclsResponse> ListAclsAsync(global::Google.Cloud.ManagedKafka.V1.ListAclsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the acls in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.ListAclsResponse> ListAclsAsync(global::Google.Cloud.ManagedKafka.V1.ListAclsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAcls, null, options, request);
+      }
+      /// <summary>
+      /// Returns the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.Acl GetAcl(global::Google.Cloud.ManagedKafka.V1.GetAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAcl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.Acl GetAcl(global::Google.Cloud.ManagedKafka.V1.GetAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAcl, null, options, request);
+      }
+      /// <summary>
+      /// Returns the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.Acl> GetAclAsync(global::Google.Cloud.ManagedKafka.V1.GetAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.Acl> GetAclAsync(global::Google.Cloud.ManagedKafka.V1.GetAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAcl, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new acl in the given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.Acl CreateAcl(global::Google.Cloud.ManagedKafka.V1.CreateAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAcl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new acl in the given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.Acl CreateAcl(global::Google.Cloud.ManagedKafka.V1.CreateAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAcl, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new acl in the given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.Acl> CreateAclAsync(global::Google.Cloud.ManagedKafka.V1.CreateAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAclAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new acl in the given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.Acl> CreateAclAsync(global::Google.Cloud.ManagedKafka.V1.CreateAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAcl, null, options, request);
+      }
+      /// <summary>
+      /// Updates the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.Acl UpdateAcl(global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAcl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.Acl UpdateAcl(global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAcl, null, options, request);
+      }
+      /// <summary>
+      /// Updates the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.Acl> UpdateAclAsync(global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAclAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the properties of a single acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.Acl> UpdateAclAsync(global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAcl, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAcl(global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAcl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAcl(global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAcl, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAclAsync(global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAclAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an acl.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAclAsync(global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAcl, null, options, request);
+      }
+      /// <summary>
+      /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+      /// not exist yet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse AddAclEntry(global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddAclEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+      /// not exist yet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse AddAclEntry(global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddAclEntry, null, options, request);
+      }
+      /// <summary>
+      /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+      /// not exist yet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse> AddAclEntryAsync(global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddAclEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+      /// not exist yet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse> AddAclEntryAsync(global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddAclEntry, null, options, request);
+      }
+      /// <summary>
+      /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+      /// its acl entries become empty (i.e. if the removed entry was the last one in
+      /// the acl).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse RemoveAclEntry(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveAclEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+      /// its acl entries become empty (i.e. if the removed entry was the last one in
+      /// the acl).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse RemoveAclEntry(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveAclEntry, null, options, request);
+      }
+      /// <summary>
+      /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+      /// its acl entries become empty (i.e. if the removed entry was the last one in
+      /// the acl).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse> RemoveAclEntryAsync(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveAclEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+      /// its acl entries become empty (i.e. if the removed entry was the last one in
+      /// the acl).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse> RemoveAclEntryAsync(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveAclEntry, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ManagedKafkaClient NewInstance(ClientBaseConfiguration configuration)
@@ -1127,7 +1640,14 @@ namespace Google.Cloud.ManagedKafka.V1 {
           .AddMethod(__Method_ListConsumerGroups, serviceImpl.ListConsumerGroups)
           .AddMethod(__Method_GetConsumerGroup, serviceImpl.GetConsumerGroup)
           .AddMethod(__Method_UpdateConsumerGroup, serviceImpl.UpdateConsumerGroup)
-          .AddMethod(__Method_DeleteConsumerGroup, serviceImpl.DeleteConsumerGroup).Build();
+          .AddMethod(__Method_DeleteConsumerGroup, serviceImpl.DeleteConsumerGroup)
+          .AddMethod(__Method_ListAcls, serviceImpl.ListAcls)
+          .AddMethod(__Method_GetAcl, serviceImpl.GetAcl)
+          .AddMethod(__Method_CreateAcl, serviceImpl.CreateAcl)
+          .AddMethod(__Method_UpdateAcl, serviceImpl.UpdateAcl)
+          .AddMethod(__Method_DeleteAcl, serviceImpl.DeleteAcl)
+          .AddMethod(__Method_AddAclEntry, serviceImpl.AddAclEntry)
+          .AddMethod(__Method_RemoveAclEntry, serviceImpl.RemoveAclEntry).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1151,6 +1671,13 @@ namespace Google.Cloud.ManagedKafka.V1 {
       serviceBinder.AddMethod(__Method_GetConsumerGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.GetConsumerGroupRequest, global::Google.Cloud.ManagedKafka.V1.ConsumerGroup>(serviceImpl.GetConsumerGroup));
       serviceBinder.AddMethod(__Method_UpdateConsumerGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest, global::Google.Cloud.ManagedKafka.V1.ConsumerGroup>(serviceImpl.UpdateConsumerGroup));
       serviceBinder.AddMethod(__Method_DeleteConsumerGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConsumerGroup));
+      serviceBinder.AddMethod(__Method_ListAcls, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.ListAclsRequest, global::Google.Cloud.ManagedKafka.V1.ListAclsResponse>(serviceImpl.ListAcls));
+      serviceBinder.AddMethod(__Method_GetAcl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.GetAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl>(serviceImpl.GetAcl));
+      serviceBinder.AddMethod(__Method_CreateAcl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.CreateAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl>(serviceImpl.CreateAcl));
+      serviceBinder.AddMethod(__Method_UpdateAcl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest, global::Google.Cloud.ManagedKafka.V1.Acl>(serviceImpl.UpdateAcl));
+      serviceBinder.AddMethod(__Method_DeleteAcl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAcl));
+      serviceBinder.AddMethod(__Method_AddAclEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest, global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse>(serviceImpl.AddAclEntry));
+      serviceBinder.AddMethod(__Method_RemoveAclEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest, global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse>(serviceImpl.RemoveAclEntry));
     }
 
   }

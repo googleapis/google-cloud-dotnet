@@ -3922,6 +3922,2021 @@
       ]
     },
     {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_ListAcls_sync",
+      "title": "ListAclsRequestObject",
+      "description": "Snippet for ListAcls",
+      "file": "ManagedKafkaClient.ListAclsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAcls",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.ListAcls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ListAclsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListAclsResponse, Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "ListAcls",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.ListAcls",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_ListAcls_async",
+      "title": "ListAclsRequestObjectAsync",
+      "description": "Snippet for ListAclsAsync",
+      "file": "ManagedKafkaClient.ListAclsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclsAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.ListAclsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ListAclsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListAclsResponse, Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "ListAcls",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.ListAcls",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_ListAcls_sync_flattened",
+      "title": "ListAcls",
+      "description": "Snippet for ListAcls",
+      "file": "ManagedKafkaClient.ListAclsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAcls",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.ListAcls",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListAclsResponse, Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "ListAcls",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.ListAcls",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_ListAcls_async_flattened",
+      "title": "ListAclsAsync",
+      "description": "Snippet for ListAclsAsync",
+      "file": "ManagedKafkaClient.ListAclsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclsAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.ListAclsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListAclsResponse, Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "ListAcls",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.ListAcls",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_ListAcls_sync_flattened_resourceNames",
+      "title": "ListAclsResourceNames",
+      "description": "Snippet for ListAcls",
+      "file": "ManagedKafkaClient.ListAclsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAcls",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.ListAcls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListAclsResponse, Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "ListAcls",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.ListAcls",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_ListAcls_async_flattened_resourceNames",
+      "title": "ListAclsResourceNamesAsync",
+      "description": "Snippet for ListAclsAsync",
+      "file": "ManagedKafkaClient.ListAclsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclsAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.ListAclsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListAclsResponse, Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "ListAcls",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.ListAcls",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_GetAcl_sync",
+      "title": "GetAclRequestObject",
+      "description": "Snippet for GetAcl",
+      "file": "ManagedKafkaClient.GetAclRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.GetAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.GetAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "GetAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.GetAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_GetAcl_async",
+      "title": "GetAclRequestObjectAsync",
+      "description": "Snippet for GetAclAsync",
+      "file": "ManagedKafkaClient.GetAclRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.GetAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.GetAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "GetAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.GetAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_GetAcl_sync_flattened",
+      "title": "GetAcl",
+      "description": "Snippet for GetAcl",
+      "file": "ManagedKafkaClient.GetAclSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.GetAcl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "GetAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.GetAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_GetAcl_async_flattened",
+      "title": "GetAclAsync",
+      "description": "Snippet for GetAclAsync",
+      "file": "ManagedKafkaClient.GetAclAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.GetAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "GetAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.GetAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_GetAcl_sync_flattened_resourceNames",
+      "title": "GetAclResourceNames",
+      "description": "Snippet for GetAcl",
+      "file": "ManagedKafkaClient.GetAclResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.GetAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "GetAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.GetAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_GetAcl_async_flattened_resourceNames",
+      "title": "GetAclResourceNamesAsync",
+      "description": "Snippet for GetAclAsync",
+      "file": "ManagedKafkaClient.GetAclResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.GetAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "GetAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.GetAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_CreateAcl_sync",
+      "title": "CreateAclRequestObject",
+      "description": "Snippet for CreateAcl",
+      "file": "ManagedKafkaClient.CreateAclRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.CreateAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.CreateAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "CreateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.CreateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_CreateAcl_async",
+      "title": "CreateAclRequestObjectAsync",
+      "description": "Snippet for CreateAclAsync",
+      "file": "ManagedKafkaClient.CreateAclRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.CreateAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.CreateAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "CreateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.CreateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_CreateAcl_sync_flattened",
+      "title": "CreateAcl",
+      "description": "Snippet for CreateAcl",
+      "file": "ManagedKafkaClient.CreateAclSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.CreateAcl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Acl",
+            "name": "acl"
+          },
+          {
+            "type": "System.String",
+            "name": "aclId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "CreateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.CreateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_CreateAcl_async_flattened",
+      "title": "CreateAclAsync",
+      "description": "Snippet for CreateAclAsync",
+      "file": "ManagedKafkaClient.CreateAclAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.CreateAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Acl",
+            "name": "acl"
+          },
+          {
+            "type": "System.String",
+            "name": "aclId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "CreateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.CreateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_CreateAcl_sync_flattened_resourceNames",
+      "title": "CreateAclResourceNames",
+      "description": "Snippet for CreateAcl",
+      "file": "ManagedKafkaClient.CreateAclResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.CreateAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Acl",
+            "name": "acl"
+          },
+          {
+            "type": "System.String",
+            "name": "aclId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "CreateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.CreateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_CreateAcl_async_flattened_resourceNames",
+      "title": "CreateAclResourceNamesAsync",
+      "description": "Snippet for CreateAclAsync",
+      "file": "ManagedKafkaClient.CreateAclResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.CreateAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Acl",
+            "name": "acl"
+          },
+          {
+            "type": "System.String",
+            "name": "aclId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "CreateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.CreateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_UpdateAcl_sync",
+      "title": "UpdateAclRequestObject",
+      "description": "Snippet for UpdateAcl",
+      "file": "ManagedKafkaClient.UpdateAclRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.UpdateAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.UpdateAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "UpdateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.UpdateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_UpdateAcl_async",
+      "title": "UpdateAclRequestObjectAsync",
+      "description": "Snippet for UpdateAclAsync",
+      "file": "ManagedKafkaClient.UpdateAclRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.UpdateAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.UpdateAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "UpdateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.UpdateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_UpdateAcl_sync_flattened",
+      "title": "UpdateAcl",
+      "description": "Snippet for UpdateAcl",
+      "file": "ManagedKafkaClient.UpdateAclSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.UpdateAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Acl",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Acl",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "UpdateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.UpdateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_UpdateAcl_async_flattened",
+      "title": "UpdateAclAsync",
+      "description": "Snippet for UpdateAclAsync",
+      "file": "ManagedKafkaClient.UpdateAclAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.UpdateAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Acl",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Acl>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "UpdateAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.UpdateAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_DeleteAcl_sync",
+      "title": "DeleteAclRequestObject",
+      "description": "Snippet for DeleteAcl",
+      "file": "ManagedKafkaClient.DeleteAclRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.DeleteAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.DeleteAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "DeleteAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.DeleteAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_DeleteAcl_async",
+      "title": "DeleteAclRequestObjectAsync",
+      "description": "Snippet for DeleteAclAsync",
+      "file": "ManagedKafkaClient.DeleteAclRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.DeleteAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.DeleteAclRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "DeleteAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.DeleteAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_DeleteAcl_sync_flattened",
+      "title": "DeleteAcl",
+      "description": "Snippet for DeleteAcl",
+      "file": "ManagedKafkaClient.DeleteAclSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.DeleteAcl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "DeleteAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.DeleteAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_DeleteAcl_async_flattened",
+      "title": "DeleteAclAsync",
+      "description": "Snippet for DeleteAclAsync",
+      "file": "ManagedKafkaClient.DeleteAclAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.DeleteAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "DeleteAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.DeleteAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_DeleteAcl_sync_flattened_resourceNames",
+      "title": "DeleteAclResourceNames",
+      "description": "Snippet for DeleteAcl",
+      "file": "ManagedKafkaClient.DeleteAclResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAcl",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.DeleteAcl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "DeleteAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.DeleteAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_DeleteAcl_async_flattened_resourceNames",
+      "title": "DeleteAclResourceNamesAsync",
+      "description": "Snippet for DeleteAclAsync",
+      "file": "ManagedKafkaClient.DeleteAclResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.DeleteAclAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "DeleteAcl",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.DeleteAcl",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_AddAclEntry_sync",
+      "title": "AddAclEntryRequestObject",
+      "description": "Snippet for AddAclEntry",
+      "file": "ManagedKafkaClient.AddAclEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAclEntry",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.AddAclEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AddAclEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.AddAclEntryResponse",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "AddAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.AddAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_AddAclEntry_async",
+      "title": "AddAclEntryRequestObjectAsync",
+      "description": "Snippet for AddAclEntryAsync",
+      "file": "ManagedKafkaClient.AddAclEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAclEntryAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.AddAclEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AddAclEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.AddAclEntryResponse>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "AddAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.AddAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_AddAclEntry_sync_flattened",
+      "title": "AddAclEntry",
+      "description": "Snippet for AddAclEntry",
+      "file": "ManagedKafkaClient.AddAclEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAclEntry",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.AddAclEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.AddAclEntryResponse",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "AddAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.AddAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_AddAclEntry_async_flattened",
+      "title": "AddAclEntryAsync",
+      "description": "Snippet for AddAclEntryAsync",
+      "file": "ManagedKafkaClient.AddAclEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAclEntryAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.AddAclEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.AddAclEntryResponse>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "AddAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.AddAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_AddAclEntry_sync_flattened_resourceNames",
+      "title": "AddAclEntryResourceNames",
+      "description": "Snippet for AddAclEntry",
+      "file": "ManagedKafkaClient.AddAclEntryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAclEntry",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.AddAclEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.AddAclEntryResponse",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "AddAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.AddAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_AddAclEntry_async_flattened_resourceNames",
+      "title": "AddAclEntryResourceNamesAsync",
+      "description": "Snippet for AddAclEntryAsync",
+      "file": "ManagedKafkaClient.AddAclEntryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAclEntryAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.AddAclEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.AddAclEntryResponse>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "AddAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.AddAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_RemoveAclEntry_sync",
+      "title": "RemoveAclEntryRequestObject",
+      "description": "Snippet for RemoveAclEntry",
+      "file": "ManagedKafkaClient.RemoveAclEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAclEntry",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.RemoveAclEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "RemoveAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.RemoveAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_RemoveAclEntry_async",
+      "title": "RemoveAclEntryRequestObjectAsync",
+      "description": "Snippet for RemoveAclEntryAsync",
+      "file": "ManagedKafkaClient.RemoveAclEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAclEntryAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.RemoveAclEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "RemoveAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.RemoveAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_RemoveAclEntry_sync_flattened",
+      "title": "RemoveAclEntry",
+      "description": "Snippet for RemoveAclEntry",
+      "file": "ManagedKafkaClient.RemoveAclEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAclEntry",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.RemoveAclEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "RemoveAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.RemoveAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_RemoveAclEntry_async_flattened",
+      "title": "RemoveAclEntryAsync",
+      "description": "Snippet for RemoveAclEntryAsync",
+      "file": "ManagedKafkaClient.RemoveAclEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAclEntryAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.RemoveAclEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "RemoveAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.RemoveAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_RemoveAclEntry_sync_flattened_resourceNames",
+      "title": "RemoveAclEntryResourceNames",
+      "description": "Snippet for RemoveAclEntry",
+      "file": "ManagedKafkaClient.RemoveAclEntryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAclEntry",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.RemoveAclEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "RemoveAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.RemoveAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafka_RemoveAclEntry_async_flattened_resourceNames",
+      "title": "RemoveAclEntryResourceNamesAsync",
+      "description": "Snippet for RemoveAclEntryAsync",
+      "file": "ManagedKafkaClient.RemoveAclEntryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAclEntryAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient.RemoveAclEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclName",
+            "name": "acl"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.AclEntry",
+            "name": "aclEntry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse>",
+        "client": {
+          "shortName": "ManagedKafkaClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaClient"
+        },
+        "method": {
+          "shortName": "RemoveAclEntry",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafka.RemoveAclEntry",
+          "service": {
+            "shortName": "ManagedKafka",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafka"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_sync",
       "title": "ListConnectClustersRequestObject",
       "description": "Snippet for ListConnectClusters",

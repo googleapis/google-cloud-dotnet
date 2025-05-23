@@ -80,76 +80,130 @@ namespace Google.Cloud.ManagedKafka.V1 {
             "dW1lcl9ncm91cBgCIAEoCzIrLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2Eu",
             "djEuQ29uc3VtZXJHcm91cEID4EECIl0KGkRlbGV0ZUNvbnN1bWVyR3JvdXBS",
             "ZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopbWFuYWdlZGthZmthLmdv",
-            "b2dsZWFwaXMuY29tL0NvbnN1bWVyR3JvdXAytRYKDE1hbmFnZWRLYWZrYRK0",
-            "AQoMTGlzdENsdXN0ZXJzEjEuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52",
-            "MS5MaXN0Q2x1c3RlcnNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLm1hbmFnZWRr",
-            "YWZrYS52MS5MaXN0Q2x1c3RlcnNSZXNwb25zZSI92kEGcGFyZW50gtPkkwIu",
-            "EiwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jbHVzdGVy",
-            "cxKhAQoKR2V0Q2x1c3RlchIvLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2Eu",
-            "djEuR2V0Q2x1c3RlclJlcXVlc3QaJS5nb29nbGUuY2xvdWQubWFuYWdlZGth",
-            "ZmthLnYxLkNsdXN0ZXIiO9pBBG5hbWWC0+STAi4SLC92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9EtwBCg1DcmVhdGVDbHVz",
-            "dGVyEjIuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5DcmVhdGVDbHVz",
-            "dGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ieMpB",
-            "HAoHQ2x1c3RlchIRT3BlcmF0aW9uTWV0YWRhdGHaQRlwYXJlbnQsY2x1c3Rl",
-            "cixjbHVzdGVyX2lkgtPkkwI3IiwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9jbHVzdGVyczoHY2x1c3RlchLeAQoNVXBkYXRlQ2x1c3Rl",
-            "chIyLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuVXBkYXRlQ2x1c3Rl",
-            "clJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInrKQRwK",
-            "B0NsdXN0ZXISEU9wZXJhdGlvbk1ldGFkYXRh2kETY2x1c3Rlcix1cGRhdGVf",
-            "bWFza4LT5JMCPzI0L3YxL3tjbHVzdGVyLm5hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9jbHVzdGVycy8qfToHY2x1c3RlchLMAQoNRGVsZXRlQ2x1c3Rl",
-            "chIyLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuRGVsZXRlQ2x1c3Rl",
-            "clJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImjKQSoK",
-            "FWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRu",
-            "YW1lgtPkkwIuKiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
-            "bHVzdGVycy8qfRK3AQoKTGlzdFRvcGljcxIvLmdvb2dsZS5jbG91ZC5tYW5h",
-            "Z2Vka2Fma2EudjEuTGlzdFRvcGljc1JlcXVlc3QaMC5nb29nbGUuY2xvdWQu",
-            "bWFuYWdlZGthZmthLnYxLkxpc3RUb3BpY3NSZXNwb25zZSJG2kEGcGFyZW50",
-            "gtPkkwI3EjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Ns",
-            "dXN0ZXJzLyp9L3RvcGljcxKkAQoIR2V0VG9waWMSLS5nb29nbGUuY2xvdWQu",
-            "bWFuYWdlZGthZmthLnYxLkdldFRvcGljUmVxdWVzdBojLmdvb2dsZS5jbG91",
-            "ZC5tYW5hZ2Vka2Fma2EudjEuVG9waWMiRNpBBG5hbWWC0+STAjcSNS92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyovdG9waWNz",
-            "Lyp9EsIBCgtDcmVhdGVUb3BpYxIwLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fm",
-            "a2EudjEuQ3JlYXRlVG9waWNSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLm1hbmFn",
-            "ZWRrYWZrYS52MS5Ub3BpYyJc2kEVcGFyZW50LHRvcGljLHRvcGljX2lkgtPk",
-            "kwI+IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0",
-            "ZXJzLyp9L3RvcGljczoFdG9waWMSxAEKC1VwZGF0ZVRvcGljEjAuZ29vZ2xl",
-            "LmNsb3VkLm1hbmFnZWRrYWZrYS52MS5VcGRhdGVUb3BpY1JlcXVlc3QaIy5n",
-            "b29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLlRvcGljIl7aQRF0b3BpYyx1",
-            "cGRhdGVfbWFza4LT5JMCRDI7L3YxL3t0b3BpYy5uYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovY2x1c3RlcnMvKi90b3BpY3MvKn06BXRvcGljEp0BCgtE",
-            "ZWxldGVUb3BpYxIwLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuRGVs",
-            "ZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkTaQQRu",
-            "YW1lgtPkkwI3KjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
-            "bHVzdGVycy8qL3RvcGljcy8qfRLXAQoSTGlzdENvbnN1bWVyR3JvdXBzEjcu",
-            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5MaXN0Q29uc3VtZXJHcm91",
-            "cHNSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5MaXN0",
-            "Q29uc3VtZXJHcm91cHNSZXNwb25zZSJO2kEGcGFyZW50gtPkkwI/Ej0vdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9L2Nv",
-            "bnN1bWVyR3JvdXBzEsUBChBHZXRDb25zdW1lckdyb3VwEjUuZ29vZ2xlLmNs",
-            "b3VkLm1hbmFnZWRrYWZrYS52MS5HZXRDb25zdW1lckdyb3VwUmVxdWVzdBor",
-            "Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQ29uc3VtZXJHcm91cCJN",
-            "2kEEbmFtZYLT5JMCQBI+L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovY2x1c3RlcnMvKi9jb25zdW1lckdyb3Vwcy8qKn0SgQIKE1VwZGF0ZUNv",
-            "bnN1bWVyR3JvdXASOC5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLlVw",
-            "ZGF0ZUNvbnN1bWVyR3JvdXBSZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLm1hbmFn",
-            "ZWRrYWZrYS52MS5Db25zdW1lckdyb3VwIoIB2kEaY29uc3VtZXJfZ3JvdXAs",
-            "dXBkYXRlX21hc2uC0+STAl8yTS92MS97Y29uc3VtZXJfZ3JvdXAubmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyovY29uc3VtZXJHcm91",
-            "cHMvKip9Og5jb25zdW1lcl9ncm91cBK2AQoTRGVsZXRlQ29uc3VtZXJHcm91",
-            "cBI4Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuRGVsZXRlQ29uc3Vt",
-            "ZXJHcm91cFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiTdpBBG5h",
-            "bWWC0+STAkAqPi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Ns",
-            "dXN0ZXJzLyovY29uc3VtZXJHcm91cHMvKip9Gk/KQRttYW5hZ2Vka2Fma2Eu",
-            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQt0BCiBjb20uZ29vZ2xlLmNsb3VkLm1hbmFn",
-            "ZWRrYWZrYS52MUIRTWFuYWdlZEthZmthUHJvdG9QAVpEY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9tYW5hZ2Vka2Fma2EvYXBpdjEvbWFuYWdlZGthZmthcGI7bWFu",
-            "YWdlZGthZmthcGKqAhxHb29nbGUuQ2xvdWQuTWFuYWdlZEthZmthLlYxygIc",
-            "R29vZ2xlXENsb3VkXE1hbmFnZWRLYWZrYVxWMeoCH0dvb2dsZTo6Q2xvdWQ6",
-            "Ok1hbmFnZWRLYWZrYTo6VjFiBnByb3RvMw=="));
+            "b2dsZWFwaXMuY29tL0NvbnN1bWVyR3JvdXAiewoPTGlzdEFjbHNSZXF1ZXN0",
+            "EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhEh9tYW5hZ2Vka2Fma2EuZ29vZ2xl",
+            "YXBpcy5jb20vQWNsEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2Vf",
+            "dG9rZW4YAyABKAlCA+BBASJcChBMaXN0QWNsc1Jlc3BvbnNlEi8KBGFjbHMY",
+            "ASADKAsyIS5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLkFjbBIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiRgoNR2V0QWNsUmVxdWVzdBI1CgRuYW1l",
+            "GAEgASgJQifgQQL6QSEKH21hbmFnZWRrYWZrYS5nb29nbGVhcGlzLmNvbS9B",
+            "Y2wilQEKEENyZWF0ZUFjbFJlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6",
+            "QSESH21hbmFnZWRrYWZrYS5nb29nbGVhcGlzLmNvbS9BY2wSEwoGYWNsX2lk",
+            "GAIgASgJQgPgQQISMwoDYWNsGAMgASgLMiEuZ29vZ2xlLmNsb3VkLm1hbmFn",
+            "ZWRrYWZrYS52MS5BY2xCA+BBAiJ9ChBVcGRhdGVBY2xSZXF1ZXN0EjMKA2Fj",
+            "bBgBIAEoCzIhLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQWNsQgPg",
+            "QQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrQgPgQQEiSQoQRGVsZXRlQWNsUmVxdWVzdBI1CgRuYW1lGAEgASgJ",
+            "QifgQQL6QSEKH21hbmFnZWRrYWZrYS5nb29nbGVhcGlzLmNvbS9BY2wiigEK",
+            "EkFkZEFjbEVudHJ5UmVxdWVzdBI0CgNhY2wYASABKAlCJ+BBAvpBIQofbWFu",
+            "YWdlZGthZmthLmdvb2dsZWFwaXMuY29tL0FjbBI+CglhY2xfZW50cnkYAiAB",
+            "KAsyJi5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLkFjbEVudHJ5QgPg",
+            "QQIiWgoTQWRkQWNsRW50cnlSZXNwb25zZRIuCgNhY2wYASABKAsyIS5nb29n",
+            "bGUuY2xvdWQubWFuYWdlZGthZmthLnYxLkFjbBITCgthY2xfY3JlYXRlZBgC",
+            "IAEoCCKNAQoVUmVtb3ZlQWNsRW50cnlSZXF1ZXN0EjQKA2FjbBgBIAEoCUIn",
+            "4EEC+kEhCh9tYW5hZ2Vka2Fma2EuZ29vZ2xlYXBpcy5jb20vQWNsEj4KCWFj",
+            "bF9lbnRyeRgCIAEoCzImLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEu",
+            "QWNsRW50cnlCA+BBAiJrChZSZW1vdmVBY2xFbnRyeVJlc3BvbnNlEjAKA2Fj",
+            "bBgBIAEoCzIhLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQWNsSAAS",
+            "FQoLYWNsX2RlbGV0ZWQYAiABKAhIAEIICgZyZXN1bHQy0SAKDE1hbmFnZWRL",
+            "YWZrYRK0AQoMTGlzdENsdXN0ZXJzEjEuZ29vZ2xlLmNsb3VkLm1hbmFnZWRr",
+            "YWZrYS52MS5MaXN0Q2x1c3RlcnNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLm1h",
+            "bmFnZWRrYWZrYS52MS5MaXN0Q2x1c3RlcnNSZXNwb25zZSI92kEGcGFyZW50",
+            "gtPkkwIuEiwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9j",
+            "bHVzdGVycxKhAQoKR2V0Q2x1c3RlchIvLmdvb2dsZS5jbG91ZC5tYW5hZ2Vk",
+            "a2Fma2EudjEuR2V0Q2x1c3RlclJlcXVlc3QaJS5nb29nbGUuY2xvdWQubWFu",
+            "YWdlZGthZmthLnYxLkNsdXN0ZXIiO9pBBG5hbWWC0+STAi4SLC92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9EtwBCg1DcmVh",
+            "dGVDbHVzdGVyEjIuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5DcmVh",
+            "dGVDbHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ieMpBHAoHQ2x1c3RlchIRT3BlcmF0aW9uTWV0YWRhdGHaQRlwYXJlbnQs",
+            "Y2x1c3RlcixjbHVzdGVyX2lkgtPkkwI3IiwvdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qfS9jbHVzdGVyczoHY2x1c3RlchLeAQoNVXBkYXRl",
+            "Q2x1c3RlchIyLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuVXBkYXRl",
+            "Q2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "InrKQRwKB0NsdXN0ZXISEU9wZXJhdGlvbk1ldGFkYXRh2kETY2x1c3Rlcix1",
+            "cGRhdGVfbWFza4LT5JMCPzI0L3YxL3tjbHVzdGVyLm5hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jbHVzdGVycy8qfToHY2x1c3RlchLMAQoNRGVsZXRl",
+            "Q2x1c3RlchIyLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuRGVsZXRl",
+            "Q2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "ImjKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRh",
+            "dGHaQQRuYW1lgtPkkwIuKiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jbHVzdGVycy8qfRK3AQoKTGlzdFRvcGljcxIvLmdvb2dsZS5jbG91",
+            "ZC5tYW5hZ2Vka2Fma2EudjEuTGlzdFRvcGljc1JlcXVlc3QaMC5nb29nbGUu",
+            "Y2xvdWQubWFuYWdlZGthZmthLnYxLkxpc3RUb3BpY3NSZXNwb25zZSJG2kEG",
+            "cGFyZW50gtPkkwI3EjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2NsdXN0ZXJzLyp9L3RvcGljcxKkAQoIR2V0VG9waWMSLS5nb29nbGUu",
+            "Y2xvdWQubWFuYWdlZGthZmthLnYxLkdldFRvcGljUmVxdWVzdBojLmdvb2ds",
+            "ZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuVG9waWMiRNpBBG5hbWWC0+STAjcS",
+            "NS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyov",
+            "dG9waWNzLyp9EsIBCgtDcmVhdGVUb3BpYxIwLmdvb2dsZS5jbG91ZC5tYW5h",
+            "Z2Vka2Fma2EudjEuQ3JlYXRlVG9waWNSZXF1ZXN0GiMuZ29vZ2xlLmNsb3Vk",
+            "Lm1hbmFnZWRrYWZrYS52MS5Ub3BpYyJc2kEVcGFyZW50LHRvcGljLHRvcGlj",
+            "X2lkgtPkkwI+IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2NsdXN0ZXJzLyp9L3RvcGljczoFdG9waWMSxAEKC1VwZGF0ZVRvcGljEjAu",
+            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5VcGRhdGVUb3BpY1JlcXVl",
+            "c3QaIy5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLlRvcGljIl7aQRF0",
+            "b3BpYyx1cGRhdGVfbWFza4LT5JMCRDI7L3YxL3t0b3BpYy5uYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMvKi90b3BpY3MvKn06BXRvcGlj",
+            "Ep0BCgtEZWxldGVUb3BpYxIwLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2Eu",
+            "djEuRGVsZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IkTaQQRuYW1lgtPkkwI3KjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jbHVzdGVycy8qL3RvcGljcy8qfRLXAQoSTGlzdENvbnN1bWVyR3Jv",
+            "dXBzEjcuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5MaXN0Q29uc3Vt",
+            "ZXJHcm91cHNSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52",
+            "MS5MaXN0Q29uc3VtZXJHcm91cHNSZXNwb25zZSJO2kEGcGFyZW50gtPkkwI/",
+            "Ej0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJz",
+            "Lyp9L2NvbnN1bWVyR3JvdXBzEsUBChBHZXRDb25zdW1lckdyb3VwEjUuZ29v",
+            "Z2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5HZXRDb25zdW1lckdyb3VwUmVx",
+            "dWVzdBorLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuQ29uc3VtZXJH",
+            "cm91cCJN2kEEbmFtZYLT5JMCQBI+L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY2x1c3RlcnMvKi9jb25zdW1lckdyb3Vwcy8qKn0SgQIKE1Vw",
+            "ZGF0ZUNvbnN1bWVyR3JvdXASOC5nb29nbGUuY2xvdWQubWFuYWdlZGthZmth",
+            "LnYxLlVwZGF0ZUNvbnN1bWVyR3JvdXBSZXF1ZXN0GisuZ29vZ2xlLmNsb3Vk",
+            "Lm1hbmFnZWRrYWZrYS52MS5Db25zdW1lckdyb3VwIoIB2kEaY29uc3VtZXJf",
+            "Z3JvdXAsdXBkYXRlX21hc2uC0+STAl8yTS92MS97Y29uc3VtZXJfZ3JvdXAu",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyovY29uc3Vt",
+            "ZXJHcm91cHMvKip9Og5jb25zdW1lcl9ncm91cBK2AQoTRGVsZXRlQ29uc3Vt",
+            "ZXJHcm91cBI4Lmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuRGVsZXRl",
+            "Q29uc3VtZXJHcm91cFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "TdpBBG5hbWWC0+STAkAqPi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2NsdXN0ZXJzLyovY29uc3VtZXJHcm91cHMvKip9Eq8BCghMaXN0QWNs",
+            "cxItLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuTGlzdEFjbHNSZXF1",
+            "ZXN0Gi4uZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5MaXN0QWNsc1Jl",
+            "c3BvbnNlIkTaQQZwYXJlbnSC0+STAjUSMy92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovY2x1c3RlcnMvKn0vYWNscxKdAQoGR2V0QWNsEisu",
+            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5HZXRBY2xSZXF1ZXN0GiEu",
+            "Z29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5BY2wiQ9pBBG5hbWWC0+ST",
+            "AjYSNC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJz",
+            "LyovYWNscy8qKn0StAEKCUNyZWF0ZUFjbBIuLmdvb2dsZS5jbG91ZC5tYW5h",
+            "Z2Vka2Fma2EudjEuQ3JlYXRlQWNsUmVxdWVzdBohLmdvb2dsZS5jbG91ZC5t",
+            "YW5hZ2Vka2Fma2EudjEuQWNsIlTaQRFwYXJlbnQsYWNsLGFjbF9pZILT5JMC",
+            "OiIzL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVy",
+            "cy8qfS9hY2xzOgNhY2wStwEKCVVwZGF0ZUFjbBIuLmdvb2dsZS5jbG91ZC5t",
+            "YW5hZ2Vka2Fma2EudjEuVXBkYXRlQWNsUmVxdWVzdBohLmdvb2dsZS5jbG91",
+            "ZC5tYW5hZ2Vka2Fma2EudjEuQWNsIlfaQQ9hY2wsdXBkYXRlX21hc2uC0+ST",
+            "Aj8yOC92MS97YWNsLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVz",
+            "dGVycy8qL2FjbHMvKip9OgNhY2wSmAEKCURlbGV0ZUFjbBIuLmdvb2dsZS5j",
+            "bG91ZC5tYW5hZ2Vka2Fma2EudjEuRGVsZXRlQWNsUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSJD2kEEbmFtZYLT5JMCNio0L3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMvKi9hY2xzLyoqfRLWAQoL",
+            "QWRkQWNsRW50cnkSMC5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLkFk",
+            "ZEFjbEVudHJ5UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2Eu",
+            "djEuQWRkQWNsRW50cnlSZXNwb25zZSJi2kENYWNsLGFjbF9lbnRyeYLT5JMC",
+            "TCI/L3YxL3thY2w9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVycy8q",
+            "L2FjbHMvKip9OmFkZEFjbEVudHJ5OglhY2xfZW50cnkS4gEKDlJlbW92ZUFj",
+            "bEVudHJ5EjMuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5SZW1vdmVB",
+            "Y2xFbnRyeVJlcXVlc3QaNC5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYx",
+            "LlJlbW92ZUFjbEVudHJ5UmVzcG9uc2UiZdpBDWFjbCxhY2xfZW50cnmC0+ST",
+            "Ak8iQi92MS97YWNsPXByb2plY3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMv",
+            "Ki9hY2xzLyoqfTpyZW1vdmVBY2xFbnRyeToJYWNsX2VudHJ5Gk/KQRttYW5h",
+            "Z2Vka2Fma2EuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQt0BCiBjb20uZ29vZ2xlLmNs",
+            "b3VkLm1hbmFnZWRrYWZrYS52MUIRTWFuYWdlZEthZmthUHJvdG9QAVpEY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9tYW5hZ2Vka2Fma2EvYXBpdjEvbWFuYWdlZGth",
+            "ZmthcGI7bWFuYWdlZGthZmthcGKqAhxHb29nbGUuQ2xvdWQuTWFuYWdlZEth",
+            "ZmthLlYxygIcR29vZ2xlXENsb3VkXE1hbmFnZWRLYWZrYVxWMeoCH0dvb2ds",
+            "ZTo6Q2xvdWQ6Ok1hbmFnZWRLYWZrYTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -169,7 +223,17 @@ namespace Google.Cloud.ManagedKafka.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.ListConsumerGroupsResponse), global::Google.Cloud.ManagedKafka.V1.ListConsumerGroupsResponse.Parser, new[]{ "ConsumerGroups", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.GetConsumerGroupRequest), global::Google.Cloud.ManagedKafka.V1.GetConsumerGroupRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest), global::Google.Cloud.ManagedKafka.V1.UpdateConsumerGroupRequest.Parser, new[]{ "UpdateMask", "ConsumerGroup" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest), global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest), global::Google.Cloud.ManagedKafka.V1.DeleteConsumerGroupRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.ListAclsRequest), global::Google.Cloud.ManagedKafka.V1.ListAclsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.ListAclsResponse), global::Google.Cloud.ManagedKafka.V1.ListAclsResponse.Parser, new[]{ "Acls", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.GetAclRequest), global::Google.Cloud.ManagedKafka.V1.GetAclRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.CreateAclRequest), global::Google.Cloud.ManagedKafka.V1.CreateAclRequest.Parser, new[]{ "Parent", "AclId", "Acl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest), global::Google.Cloud.ManagedKafka.V1.UpdateAclRequest.Parser, new[]{ "Acl", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest), global::Google.Cloud.ManagedKafka.V1.DeleteAclRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest), global::Google.Cloud.ManagedKafka.V1.AddAclEntryRequest.Parser, new[]{ "Acl", "AclEntry" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse), global::Google.Cloud.ManagedKafka.V1.AddAclEntryResponse.Parser, new[]{ "Acl", "AclCreated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest), global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryRequest.Parser, new[]{ "Acl", "AclEntry" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse), global::Google.Cloud.ManagedKafka.V1.RemoveAclEntryResponse.Parser, new[]{ "Acl", "AclDeleted" }, new[]{ "Result" }, null, null, null)
           }));
     }
     #endregion
@@ -4503,6 +4567,2532 @@ namespace Google.Cloud.ManagedKafka.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for ListAcls.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListAclsRequest : pb::IMessage<ListAclsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListAclsRequest> _parser = new pb::MessageParser<ListAclsRequest>(() => new ListAclsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListAclsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAclsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAclsRequest(ListAclsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAclsRequest Clone() {
+      return new ListAclsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent cluster whose acls are to be listed.
+    /// Structured like
+    /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of acls to return. The service may return
+    /// fewer than this value. If unset or zero, all acls for the parent is
+    /// returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous `ListAcls` call.
+    /// Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters provided to `ListAcls` must match
+    /// the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListAclsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListAclsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListAclsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for ListAcls.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListAclsResponse : pb::IMessage<ListAclsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListAclsResponse> _parser = new pb::MessageParser<ListAclsResponse>(() => new ListAclsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListAclsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAclsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAclsResponse(ListAclsResponse other) : this() {
+      acls_ = other.acls_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAclsResponse Clone() {
+      return new ListAclsResponse(this);
+    }
+
+    /// <summary>Field number for the "acls" field.</summary>
+    public const int AclsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ManagedKafka.V1.Acl> _repeated_acls_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ManagedKafka.V1.Acl.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ManagedKafka.V1.Acl> acls_ = new pbc::RepeatedField<global::Google.Cloud.ManagedKafka.V1.Acl>();
+    /// <summary>
+    /// The list of acls in the requested parent. The order of the acls is
+    /// unspecified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ManagedKafka.V1.Acl> Acls {
+      get { return acls_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token that can be sent as `page_token` to retrieve the next page of
+    /// results. If this field is omitted, there are no more results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListAclsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListAclsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!acls_.Equals(other.acls_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= acls_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      acls_.WriteTo(output, _repeated_acls_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      acls_.WriteTo(ref output, _repeated_acls_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += acls_.CalculateSize(_repeated_acls_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListAclsResponse other) {
+      if (other == null) {
+        return;
+      }
+      acls_.Add(other.acls_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            acls_.AddEntriesFrom(input, _repeated_acls_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            acls_.AddEntriesFrom(ref input, _repeated_acls_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for GetAcl.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAclRequest : pb::IMessage<GetAclRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAclRequest> _parser = new pb::MessageParser<GetAclRequest>(() => new GetAclRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAclRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAclRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAclRequest(GetAclRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAclRequest Clone() {
+      return new GetAclRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the acl to return.
+    /// Structured like:
+    /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+    ///
+    /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+    /// resource_name, pattern_type) of the acl. See `Acl.name` for
+    /// details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAclRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAclRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAclRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for CreateAcl.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateAclRequest : pb::IMessage<CreateAclRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateAclRequest> _parser = new pb::MessageParser<CreateAclRequest>(() => new CreateAclRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateAclRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAclRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAclRequest(CreateAclRequest other) : this() {
+      parent_ = other.parent_;
+      aclId_ = other.aclId_;
+      acl_ = other.acl_ != null ? other.acl_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAclRequest Clone() {
+      return new CreateAclRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent cluster in which to create the acl.
+    /// Structured like
+    /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "acl_id" field.</summary>
+    public const int AclIdFieldNumber = 2;
+    private string aclId_ = "";
+    /// <summary>
+    /// Required. The ID to use for the acl, which will become the final component
+    /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+    /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+    /// structured like one of the following:
+    ///
+    /// For acls on the cluster:
+    ///   `cluster`
+    ///
+    /// For acls on a single resource within the cluster:
+    ///   `topic/{resource_name}`
+    ///   `consumerGroup/{resource_name}`
+    ///   `transactionalId/{resource_name}`
+    ///
+    /// For acls on all resources that match a prefix:
+    ///   `topicPrefixed/{resource_name}`
+    ///   `consumerGroupPrefixed/{resource_name}`
+    ///   `transactionalIdPrefixed/{resource_name}`
+    ///
+    /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+    ///   `allTopics` (represents `topic/*`)
+    ///   `allConsumerGroups` (represents `consumerGroup/*`)
+    ///   `allTransactionalIds` (represents `transactionalId/*`)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AclId {
+      get { return aclId_; }
+      set {
+        aclId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "acl" field.</summary>
+    public const int AclFieldNumber = 3;
+    private global::Google.Cloud.ManagedKafka.V1.Acl acl_;
+    /// <summary>
+    /// Required. Configuration of the acl to create. Its `name` field is ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.Acl Acl {
+      get { return acl_; }
+      set {
+        acl_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateAclRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateAclRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (AclId != other.AclId) return false;
+      if (!object.Equals(Acl, other.Acl)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (AclId.Length != 0) hash ^= AclId.GetHashCode();
+      if (acl_ != null) hash ^= Acl.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (AclId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AclId);
+      }
+      if (acl_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Acl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (AclId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AclId);
+      }
+      if (acl_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Acl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (AclId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AclId);
+      }
+      if (acl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Acl);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateAclRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.AclId.Length != 0) {
+        AclId = other.AclId;
+      }
+      if (other.acl_ != null) {
+        if (acl_ == null) {
+          Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+        }
+        Acl.MergeFrom(other.Acl);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            AclId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (acl_ == null) {
+              Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            }
+            input.ReadMessage(Acl);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            AclId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (acl_ == null) {
+              Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            }
+            input.ReadMessage(Acl);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for UpdateAcl.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateAclRequest : pb::IMessage<UpdateAclRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateAclRequest> _parser = new pb::MessageParser<UpdateAclRequest>(() => new UpdateAclRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateAclRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateAclRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateAclRequest(UpdateAclRequest other) : this() {
+      acl_ = other.acl_ != null ? other.acl_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateAclRequest Clone() {
+      return new UpdateAclRequest(this);
+    }
+
+    /// <summary>Field number for the "acl" field.</summary>
+    public const int AclFieldNumber = 1;
+    private global::Google.Cloud.ManagedKafka.V1.Acl acl_;
+    /// <summary>
+    /// Required. The updated acl. Its `name` and `etag` fields must be populated.
+    /// `acl_entries` must not be empty in the updated acl; to remove all acl
+    /// entries for an acl, use DeleteAcl.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.Acl Acl {
+      get { return acl_; }
+      set {
+        acl_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. Field mask is used to specify the fields to be overwritten in the
+    /// Acl resource by the update. The fields specified in the update_mask are
+    /// relative to the resource, not the full request. A field will be overwritten
+    /// if it is in the mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateAclRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateAclRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Acl, other.Acl)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (acl_ != null) hash ^= Acl.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (acl_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Acl);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (acl_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Acl);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (acl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Acl);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateAclRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.acl_ != null) {
+        if (acl_ == null) {
+          Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+        }
+        Acl.MergeFrom(other.Acl);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (acl_ == null) {
+              Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            }
+            input.ReadMessage(Acl);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (acl_ == null) {
+              Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            }
+            input.ReadMessage(Acl);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for DeleteAcl.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteAclRequest : pb::IMessage<DeleteAclRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteAclRequest> _parser = new pb::MessageParser<DeleteAclRequest>(() => new DeleteAclRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteAclRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteAclRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteAclRequest(DeleteAclRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteAclRequest Clone() {
+      return new DeleteAclRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the acl to delete.
+    /// Structured like:
+    /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+    ///
+    /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+    /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteAclRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteAclRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteAclRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for AddAclEntry.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddAclEntryRequest : pb::IMessage<AddAclEntryRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddAclEntryRequest> _parser = new pb::MessageParser<AddAclEntryRequest>(() => new AddAclEntryRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddAclEntryRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddAclEntryRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddAclEntryRequest(AddAclEntryRequest other) : this() {
+      acl_ = other.acl_;
+      aclEntry_ = other.aclEntry_ != null ? other.aclEntry_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddAclEntryRequest Clone() {
+      return new AddAclEntryRequest(this);
+    }
+
+    /// <summary>Field number for the "acl" field.</summary>
+    public const int AclFieldNumber = 1;
+    private string acl_ = "";
+    /// <summary>
+    /// Required. The name of the acl to add the acl entry to.
+    /// Structured like:
+    /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+    ///
+    /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+    /// resource_name, pattern_type) of the acl. See `Acl.name` for
+    /// details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Acl {
+      get { return acl_; }
+      set {
+        acl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "acl_entry" field.</summary>
+    public const int AclEntryFieldNumber = 2;
+    private global::Google.Cloud.ManagedKafka.V1.AclEntry aclEntry_;
+    /// <summary>
+    /// Required. The acl entry to add.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.AclEntry AclEntry {
+      get { return aclEntry_; }
+      set {
+        aclEntry_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddAclEntryRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddAclEntryRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Acl != other.Acl) return false;
+      if (!object.Equals(AclEntry, other.AclEntry)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Acl.Length != 0) hash ^= Acl.GetHashCode();
+      if (aclEntry_ != null) hash ^= AclEntry.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Acl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Acl);
+      }
+      if (aclEntry_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AclEntry);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Acl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Acl);
+      }
+      if (aclEntry_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AclEntry);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Acl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Acl);
+      }
+      if (aclEntry_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AclEntry);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddAclEntryRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Acl.Length != 0) {
+        Acl = other.Acl;
+      }
+      if (other.aclEntry_ != null) {
+        if (aclEntry_ == null) {
+          AclEntry = new global::Google.Cloud.ManagedKafka.V1.AclEntry();
+        }
+        AclEntry.MergeFrom(other.AclEntry);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Acl = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (aclEntry_ == null) {
+              AclEntry = new global::Google.Cloud.ManagedKafka.V1.AclEntry();
+            }
+            input.ReadMessage(AclEntry);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Acl = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (aclEntry_ == null) {
+              AclEntry = new global::Google.Cloud.ManagedKafka.V1.AclEntry();
+            }
+            input.ReadMessage(AclEntry);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for AddAclEntry.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddAclEntryResponse : pb::IMessage<AddAclEntryResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddAclEntryResponse> _parser = new pb::MessageParser<AddAclEntryResponse>(() => new AddAclEntryResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddAclEntryResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddAclEntryResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddAclEntryResponse(AddAclEntryResponse other) : this() {
+      acl_ = other.acl_ != null ? other.acl_.Clone() : null;
+      aclCreated_ = other.aclCreated_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddAclEntryResponse Clone() {
+      return new AddAclEntryResponse(this);
+    }
+
+    /// <summary>Field number for the "acl" field.</summary>
+    public const int AclFieldNumber = 1;
+    private global::Google.Cloud.ManagedKafka.V1.Acl acl_;
+    /// <summary>
+    /// The updated acl.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.Acl Acl {
+      get { return acl_; }
+      set {
+        acl_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "acl_created" field.</summary>
+    public const int AclCreatedFieldNumber = 2;
+    private bool aclCreated_;
+    /// <summary>
+    /// Whether the acl was created as a result of adding the acl entry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AclCreated {
+      get { return aclCreated_; }
+      set {
+        aclCreated_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddAclEntryResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddAclEntryResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Acl, other.Acl)) return false;
+      if (AclCreated != other.AclCreated) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (acl_ != null) hash ^= Acl.GetHashCode();
+      if (AclCreated != false) hash ^= AclCreated.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (acl_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Acl);
+      }
+      if (AclCreated != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AclCreated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (acl_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Acl);
+      }
+      if (AclCreated != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AclCreated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (acl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Acl);
+      }
+      if (AclCreated != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddAclEntryResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.acl_ != null) {
+        if (acl_ == null) {
+          Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+        }
+        Acl.MergeFrom(other.Acl);
+      }
+      if (other.AclCreated != false) {
+        AclCreated = other.AclCreated;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (acl_ == null) {
+              Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            }
+            input.ReadMessage(Acl);
+            break;
+          }
+          case 16: {
+            AclCreated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (acl_ == null) {
+              Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            }
+            input.ReadMessage(Acl);
+            break;
+          }
+          case 16: {
+            AclCreated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for RemoveAclEntry.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoveAclEntryRequest : pb::IMessage<RemoveAclEntryRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveAclEntryRequest> _parser = new pb::MessageParser<RemoveAclEntryRequest>(() => new RemoveAclEntryRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveAclEntryRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveAclEntryRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveAclEntryRequest(RemoveAclEntryRequest other) : this() {
+      acl_ = other.acl_;
+      aclEntry_ = other.aclEntry_ != null ? other.aclEntry_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveAclEntryRequest Clone() {
+      return new RemoveAclEntryRequest(this);
+    }
+
+    /// <summary>Field number for the "acl" field.</summary>
+    public const int AclFieldNumber = 1;
+    private string acl_ = "";
+    /// <summary>
+    /// Required. The name of the acl to remove the acl entry from.
+    /// Structured like:
+    /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+    ///
+    /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+    /// resource_name, pattern_type) of the acl. See `Acl.name` for
+    /// details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Acl {
+      get { return acl_; }
+      set {
+        acl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "acl_entry" field.</summary>
+    public const int AclEntryFieldNumber = 2;
+    private global::Google.Cloud.ManagedKafka.V1.AclEntry aclEntry_;
+    /// <summary>
+    /// Required. The acl entry to remove.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.AclEntry AclEntry {
+      get { return aclEntry_; }
+      set {
+        aclEntry_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveAclEntryRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveAclEntryRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Acl != other.Acl) return false;
+      if (!object.Equals(AclEntry, other.AclEntry)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Acl.Length != 0) hash ^= Acl.GetHashCode();
+      if (aclEntry_ != null) hash ^= AclEntry.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Acl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Acl);
+      }
+      if (aclEntry_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AclEntry);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Acl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Acl);
+      }
+      if (aclEntry_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AclEntry);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Acl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Acl);
+      }
+      if (aclEntry_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AclEntry);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveAclEntryRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Acl.Length != 0) {
+        Acl = other.Acl;
+      }
+      if (other.aclEntry_ != null) {
+        if (aclEntry_ == null) {
+          AclEntry = new global::Google.Cloud.ManagedKafka.V1.AclEntry();
+        }
+        AclEntry.MergeFrom(other.AclEntry);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Acl = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (aclEntry_ == null) {
+              AclEntry = new global::Google.Cloud.ManagedKafka.V1.AclEntry();
+            }
+            input.ReadMessage(AclEntry);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Acl = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (aclEntry_ == null) {
+              AclEntry = new global::Google.Cloud.ManagedKafka.V1.AclEntry();
+            }
+            input.ReadMessage(AclEntry);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for RemoveAclEntry.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoveAclEntryResponse : pb::IMessage<RemoveAclEntryResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveAclEntryResponse> _parser = new pb::MessageParser<RemoveAclEntryResponse>(() => new RemoveAclEntryResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveAclEntryResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ManagedKafkaReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveAclEntryResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveAclEntryResponse(RemoveAclEntryResponse other) : this() {
+      switch (other.ResultCase) {
+        case ResultOneofCase.Acl:
+          Acl = other.Acl.Clone();
+          break;
+        case ResultOneofCase.AclDeleted:
+          AclDeleted = other.AclDeleted;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveAclEntryResponse Clone() {
+      return new RemoveAclEntryResponse(this);
+    }
+
+    /// <summary>Field number for the "acl" field.</summary>
+    public const int AclFieldNumber = 1;
+    /// <summary>
+    /// The updated acl. Returned if the removed acl entry was not the last entry
+    /// in the acl.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.Acl Acl {
+      get { return resultCase_ == ResultOneofCase.Acl ? (global::Google.Cloud.ManagedKafka.V1.Acl) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.Acl;
+      }
+    }
+
+    /// <summary>Field number for the "acl_deleted" field.</summary>
+    public const int AclDeletedFieldNumber = 2;
+    /// <summary>
+    /// Returned with value true if the removed acl entry was the last entry in
+    /// the acl, resulting in acl deletion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AclDeleted {
+      get { return HasAclDeleted ? (bool) result_ : false; }
+      set {
+        result_ = value;
+        resultCase_ = ResultOneofCase.AclDeleted;
+      }
+    }
+    /// <summary>Gets whether the "acl_deleted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAclDeleted {
+      get { return resultCase_ == ResultOneofCase.AclDeleted; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "acl_deleted" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAclDeleted() {
+      if (HasAclDeleted) {
+        ClearResult();
+      }
+    }
+
+    private object result_;
+    /// <summary>Enum of possible cases for the "result" oneof.</summary>
+    public enum ResultOneofCase {
+      None = 0,
+      Acl = 1,
+      AclDeleted = 2,
+    }
+    private ResultOneofCase resultCase_ = ResultOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResultOneofCase ResultCase {
+      get { return resultCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResult() {
+      resultCase_ = ResultOneofCase.None;
+      result_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveAclEntryResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveAclEntryResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Acl, other.Acl)) return false;
+      if (AclDeleted != other.AclDeleted) return false;
+      if (ResultCase != other.ResultCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (resultCase_ == ResultOneofCase.Acl) hash ^= Acl.GetHashCode();
+      if (HasAclDeleted) hash ^= AclDeleted.GetHashCode();
+      hash ^= (int) resultCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (resultCase_ == ResultOneofCase.Acl) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Acl);
+      }
+      if (HasAclDeleted) {
+        output.WriteRawTag(16);
+        output.WriteBool(AclDeleted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (resultCase_ == ResultOneofCase.Acl) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Acl);
+      }
+      if (HasAclDeleted) {
+        output.WriteRawTag(16);
+        output.WriteBool(AclDeleted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (resultCase_ == ResultOneofCase.Acl) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Acl);
+      }
+      if (HasAclDeleted) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveAclEntryResponse other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ResultCase) {
+        case ResultOneofCase.Acl:
+          if (Acl == null) {
+            Acl = new global::Google.Cloud.ManagedKafka.V1.Acl();
+          }
+          Acl.MergeFrom(other.Acl);
+          break;
+        case ResultOneofCase.AclDeleted:
+          AclDeleted = other.AclDeleted;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.ManagedKafka.V1.Acl subBuilder = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            if (resultCase_ == ResultOneofCase.Acl) {
+              subBuilder.MergeFrom(Acl);
+            }
+            input.ReadMessage(subBuilder);
+            Acl = subBuilder;
+            break;
+          }
+          case 16: {
+            AclDeleted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.ManagedKafka.V1.Acl subBuilder = new global::Google.Cloud.ManagedKafka.V1.Acl();
+            if (resultCase_ == ResultOneofCase.Acl) {
+              subBuilder.MergeFrom(Acl);
+            }
+            input.ReadMessage(subBuilder);
+            Acl = subBuilder;
+            break;
+          }
+          case 16: {
+            AclDeleted = input.ReadBool();
             break;
           }
         }
