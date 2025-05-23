@@ -151,4 +151,72 @@ namespace Google.Cloud.ManagedKafka.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListAclsRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAclRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::AclName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::AclName AclName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::AclName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAclRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAclRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::AclName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::AclName AclName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::AclName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddAclEntryRequest
+    {
+        /// <summary><see cref="AclName"/>-typed view over the <see cref="Acl"/> resource name property.</summary>
+        public AclName AclAsAclName
+        {
+            get => string.IsNullOrEmpty(Acl) ? null : AclName.Parse(Acl, allowUnparsed: true);
+            set => Acl = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RemoveAclEntryRequest
+    {
+        /// <summary><see cref="AclName"/>-typed view over the <see cref="Acl"/> resource name property.</summary>
+        public AclName AclAsAclName
+        {
+            get => string.IsNullOrEmpty(Acl) ? null : AclName.Parse(Acl, allowUnparsed: true);
+            set => Acl = value?.ToString() ?? "";
+        }
+    }
 }
