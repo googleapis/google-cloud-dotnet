@@ -87,36 +87,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
 
             var api = ConfigureApi(googleapis, catalog, targetApi);
-            AddApiToCatalog(catalog, api);
+            catalog.Add(api);
 
             // Done. Let's write out the catalog and display what we've done.
             catalog.Save(rootLayout);
             Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
             Console.WriteLine(api.Json.ToString(Formatting.Indented));
             return 0;
-        }
-
-        internal static void AddApiToCatalog(ApiCatalog catalog, ApiMetadata api)
-        {
-            // Now work out what the new API metadata looks like in JSON.
-            var serializer = new JsonSerializer
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
-                ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
-            };
-            api.Json = (JObject) JToken.FromObject(api, serializer);
-
-            var followingApi = catalog.Apis.FirstOrDefault(candidate => string.Compare(candidate.Id, api.Id, StringComparison.Ordinal) > 0);
-            if (followingApi is object)
-            {
-                followingApi.Json.AddBeforeSelf(api.Json);
-            }
-            else
-            {
-                // Looks like this API will be last in the list.
-                catalog.Apis.Last().Json.AddAfterSelf(api.Json);
-            }
         }
 
         internal static ApiMetadata ConfigureApi(string googleapis, ApiCatalog catalog, ApiIndex.V1.Api apiIndexEntry)

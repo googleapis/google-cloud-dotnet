@@ -52,7 +52,7 @@ public class ConfigureCommand : IContainerCommand
         }
 
         api = AddCommand.ConfigureApi(apiRoot, catalog, targetApi);
-        AddCommand.AddApiToCatalog(catalog, api);
+        catalog.Add(api);
         catalog.Save(rootLayout);
 
         // Now add the new library to the 
