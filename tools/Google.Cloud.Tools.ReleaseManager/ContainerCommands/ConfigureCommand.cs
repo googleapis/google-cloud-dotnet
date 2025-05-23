@@ -51,7 +51,7 @@ public class ConfigureCommand : IContainerCommand
             return 1;
         }
 
-        api = AddCommand.ConfigureApi(apiRoot, catalog, targetApi);
+        api = ApiAnalyzer.ConfigureApi(apiRoot, catalog, targetApi);
         catalog.Add(api);
         catalog.Save(rootLayout);
 

@@ -13,16 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Google.Protobuf;
 using LibGit2Sharp;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
 using System;
-using System.IO;
 using System.Linq;
-using YamlDotNet.Serialization;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
@@ -86,7 +80,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     $"No service found for '{id}'.{Environment.NewLine}Similar possibilities (check options?): {string.Join(", ", possibilities)}");
             }
 
-            var api = ConfigureApi(googleapis, catalog, targetApi);
+            var api = ApiAnalyzer.ConfigureApi(googleapis, catalog, targetApi);
             catalog.Add(api);
 
             // Done. Let's write out the catalog and display what we've done.
@@ -94,79 +88,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
             Console.WriteLine(api.Json.ToString(Formatting.Indented));
             return 0;
-        }
-
-        internal static ApiMetadata ConfigureApi(string googleapis, ApiCatalog catalog, ApiIndex.V1.Api apiIndexEntry)
-        {
-            var serviceConfig = ParseServiceConfigYaml(Path.Combine(googleapis, apiIndexEntry.Directory, apiIndexEntry.ConfigFile));
-
-            var api = new ApiMetadata
-            {
-                Id = apiIndexEntry.DeriveCSharpNamespace(),
-                ProtoPath = apiIndexEntry.Directory,
-                ProductName = apiIndexEntry.Title.EndsWith(" API") ? apiIndexEntry.Title[..^4] : apiIndexEntry.Title,
-                ProductUrl = serviceConfig.Publishing?.DocumentationUri,
-                Description = apiIndexEntry.Description,
-                Version = "1.0.0-beta00",
-                Type = ApiType.Grpc,
-                Generator = GeneratorType.Micro,
-                // Let's not include test dependencies, which are rarely useful.
-                TestDependencies = null,
-                // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
-                ShortName = apiIndexEntry.HostName.Split('.').First(),
-                // The service config file is always populated in the index, so we don't need to translate empty to null here.
-                ServiceConfigFile = apiIndexEntry.ConfigFile
-            };
-
-            // Add dependencies discovered via the proto imports.
-            // This doesn't fail on any dependencies that aren't found - we could tighten this up later
-            // by knowing about common protos, for example.
-            var apisByProtoPath = catalog.Apis.Where(api => api.ProtoPath is object).ToDictionary(api => api.ProtoPath);
-            foreach (var import in apiIndexEntry.ImportDirectories)
-            {
-                if (apisByProtoPath.TryGetValue(import, out var dependency))
-                {
-                    api.Dependencies.Add(dependency.Id, dependency.Version);
-                }
-            }
-
-            // Add mixin dependencies discovered via APIs listed in the service config file.
-            // This *does* fail if we can't find the API, as that would indicate a general issue.
-            foreach (var mixin in apiIndexEntry.GetMixinPackages())
-            {
-                api.Dependencies[mixin] = catalog[mixin].Version;
-            }
-
-            // Add any other information from BUILD.bazel
-            UpdateFromBazelCommand.Update(api, googleapis);
-            return api;
-        }
-
-        // This is internal so that it's available to GenerateApisCommand, for unconfigured
-        // APIs. This is somewhat experimental - if we want this long-term, we should probably
-        // move it elsewhere.
-        internal static Api.Service ParseServiceConfigYaml(string path)
-        {
-            if (path is null)
-            {
-                return null;
-            }
-
-            var deserializer = new Deserializer();
-            using (var reader = File.OpenText(path))
-            {
-                var yamlObject = deserializer.Deserialize(reader);
-                var serializer = new SerializerBuilder().JsonCompatible().Build();
-                var writer = new StringWriter();
-                serializer.Serialize(writer, yamlObject);
-                string json = writer.ToString();
-                // Hack to avoid proto parse failures with the serialized JSON: YamlDotNet serializes
-                // values as strings (because it doesn't know that they're Boolean). Ideally, we should
-                // deserialize straight from YAML to a Service...
-                json = json.Replace("\"true\"", "true").Replace("\"false\"", "false");
-                var parser = new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
-                return parser.Parse<Api.Service>(json);
-            }
         }
     }
 }
