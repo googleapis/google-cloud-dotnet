@@ -86,6 +86,13 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 bits[0] = "dotnet";
                 var destinationObject = string.Join("-", bits);
 
+                // Apply a suitable prefix only for devsite, as we did in the (now obsolete)
+                // uploaddocs.sh.
+                if (site == "devsite")
+                {
+                    destinationObject = "docfx-" + destinationObject;
+                }
+
                 list.Add(new(bundle, destinationObject, bucket));
             }
             return list;
