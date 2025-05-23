@@ -43,6 +43,7 @@ namespace Google.Cloud.Bigtable.V2
         private RowMergeState _rowMergeState = NewRow.Instance;
         private IEnumerator<Row> _singleResponseRowEnumerator;
         private BigtableServiceApiClient.ReadRowsStream _stream;
+        private readonly long _rowsLimit;
 
         public RowAsyncEnumerator(
             BigtableClientImpl client,
@@ -55,6 +56,7 @@ namespace Google.Cloud.Bigtable.V2
             _callSettings = callSettings;
             _retrySettings = retrySettings;
             _cancellationToken = cancellationToken;
+            _rowsLimit = originalRequest.RowsLimit;
 
             _requestManager = new BigtableReadRowsRequestManager(originalRequest);
         }
@@ -79,6 +81,11 @@ namespace Google.Cloud.Bigtable.V2
 
         public async ValueTask<bool> MoveNextAsync()
         {
+            if (_rowsLimit > 0 && _requestManager.RowsReadSoFar() == _rowsLimit)
+            {
+                return false;
+            }
+            
             if (_stream == null)
             {
                 await EstablishStream(_requestManager.OriginalRequest).ConfigureAwait(false);
