@@ -86,53 +86,7 @@ internal sealed class ApiAnalyzer
         }
 
         // Add any other information from BUILD.bazel
-        UpdateFromBazel(api, googleapis);
-        return api;
-    }
-
-    internal static ApiMetadata ConfigureApi(string googleapis, ApiCatalog catalog, ApiIndex.V1.Api apiIndexEntry)
-    {
-        var serviceConfig = ParseServiceConfigYaml(Path.Combine(googleapis, apiIndexEntry.Directory, apiIndexEntry.ConfigFile));
-
-        var api = new ApiMetadata
-        {
-            Id = apiIndexEntry.DeriveCSharpNamespace(),
-            ProtoPath = apiIndexEntry.Directory,
-            ProductName = apiIndexEntry.Title.EndsWith(" API") ? apiIndexEntry.Title[..^4] : apiIndexEntry.Title,
-            ProductUrl = serviceConfig.Publishing?.DocumentationUri,
-            Description = apiIndexEntry.Description,
-            Version = "1.0.0-beta00",
-            Type = ApiType.Grpc,
-            Generator = GeneratorType.Micro,
-            // Let's not include test dependencies, which are rarely useful.
-            TestDependencies = null,
-            // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
-            ShortName = apiIndexEntry.HostName.Split('.').First(),
-            // The service config file is always populated in the index, so we don't need to translate empty to null here.
-            ServiceConfigFile = apiIndexEntry.ConfigFile
-        };
-
-        // Add dependencies discovered via the proto imports.
-        // This doesn't fail on any dependencies that aren't found - we could tighten this up later
-        // by knowing about common protos, for example.
-        var apisByProtoPath = catalog.Apis.Where(api => api.ProtoPath is object).ToDictionary(api => api.ProtoPath);
-        foreach (var import in apiIndexEntry.ImportDirectories)
-        {
-            if (apisByProtoPath.TryGetValue(import, out var dependency))
-            {
-                api.Dependencies.Add(dependency.Id, dependency.Version);
-            }
-        }
-
-        // Add mixin dependencies discovered via APIs listed in the service config file.
-        // This *does* fail if we can't find the API, as that would indicate a general issue.
-        foreach (var mixin in apiIndexEntry.GetMixinPackages())
-        {
-            api.Dependencies[mixin] = catalog[mixin].Version;
-        }
-
-        // Add any other information from BUILD.bazel
-        UpdateFromBazel(api, googleapis);
+        UpdateFromBazel(api, _googleapis);
         return api;
     }
 

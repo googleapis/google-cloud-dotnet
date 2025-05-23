@@ -36,22 +36,16 @@ public class ConfigureCommand : IContainerCommand
         var generatorInput = options.RequireOption(options.GeneratorInput);
 
         var rootLayout = RootLayout.ForConfiguration(generatorInput, apiRoot);
-        var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
-        var targetApi = apiIndex.Apis.FirstOrDefault(api => api.Directory == apiPath);
         var catalog = ApiCatalog.Load(rootLayout);
+        var protoc = new ProtobufCompiler();
 
-        if (targetApi is null)
-        {
-            Console.WriteLine($"No API index entry for API path {apiPath}");
-            return 1;
-        }
         if (catalog.Apis.FirstOrDefault(api => api.ProtoPath == apiPath) is ApiMetadata api)
         {
             Console.WriteLine($"API path {apiPath} is already configured for {api.Id}");
             return 1;
         }
 
-        api = ApiAnalyzer.ConfigureApi(apiRoot, catalog, targetApi);
+        api = new ApiAnalyzer(protoc, apiRoot).ConfigureApi(apiPath, catalog);
         catalog.Add(api);
         catalog.Save(rootLayout);
 
