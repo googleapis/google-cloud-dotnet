@@ -18,12 +18,8 @@ using Google.Cloud.Bigtable.Common.V2;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
-using Google.Apis.Auth.OAuth2;
-using Grpc.Auth;
 using static Google.Cloud.Bigtable.V2.BigtableMutateRowsRequestManager;
 
 namespace Google.Cloud.Bigtable.V2
@@ -876,6 +872,7 @@ namespace Google.Cloud.Bigtable.V2
                 tableName,
                 new RowSet { RowKeys = { rowKey.Value } },
                 filter,
+                rowsLimit: 1,
                 callSettings: callSettings);
 
             // Equivalent to using SingleOrDefaultAsync, but avoids a System.Linq.Async dependency.
