@@ -13,7 +13,10 @@
 // limitations under the License.
 
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -135,6 +138,33 @@ namespace Google.Cloud.Tools.Common
                 }
             }
             return catalog;
+        }
+
+        /// <summary>
+        /// Adds an API to the catalog, formatting its JSON representation and updating <see cref="Json"/>
+        /// appropriately.
+        /// </summary>
+        public void Add(ApiMetadata api)
+        {
+            // Now work out what the new API metadata looks like in JSON.
+            var serializer = new JsonSerializer
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
+                ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
+            };
+            api.Json = (JObject) JToken.FromObject(api, serializer);
+
+            var followingApi = Apis.FirstOrDefault(candidate => string.Compare(candidate.Id, api.Id, StringComparison.Ordinal) > 0);
+            if (followingApi is object)
+            {
+                followingApi.Json.AddBeforeSelf(api.Json);
+            }
+            else
+            {
+                // Looks like this API will be last in the list.
+                Apis.Last().Json.AddAfterSelf(api.Json);
+            }
         }
     }
 }
