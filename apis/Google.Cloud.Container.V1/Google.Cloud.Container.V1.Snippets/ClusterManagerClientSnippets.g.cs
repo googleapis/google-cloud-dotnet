@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.Container.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -442,6 +443,8 @@ namespace GoogleCSharpSnippets
                 ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
                 StoragePools = { "", },
+                MaxRunDuration = new Duration(),
+                FlexStart = false,
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -489,6 +492,8 @@ namespace GoogleCSharpSnippets
                 ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
                 StoragePools = { "", },
+                MaxRunDuration = new Duration(),
+                FlexStart = false,
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
@@ -2766,6 +2771,130 @@ namespace GoogleCSharpSnippets
             CheckAutopilotCompatibilityRequest request = new CheckAutopilotCompatibilityRequest { Name = "", };
             // Make the request
             CheckAutopilotCompatibilityResponse response = await clusterManagerClient.CheckAutopilotCompatibilityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchClusterUpgradeInfo</summary>
+        public void FetchClusterUpgradeInfoRequestObject()
+        {
+            // Snippet: FetchClusterUpgradeInfo(FetchClusterUpgradeInfoRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            FetchClusterUpgradeInfoRequest request = new FetchClusterUpgradeInfoRequest
+            {
+                Name = "",
+                Version = "",
+            };
+            // Make the request
+            ClusterUpgradeInfo response = clusterManagerClient.FetchClusterUpgradeInfo(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchClusterUpgradeInfoAsync</summary>
+        public async Task FetchClusterUpgradeInfoRequestObjectAsync()
+        {
+            // Snippet: FetchClusterUpgradeInfoAsync(FetchClusterUpgradeInfoRequest, CallSettings)
+            // Additional: FetchClusterUpgradeInfoAsync(FetchClusterUpgradeInfoRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchClusterUpgradeInfoRequest request = new FetchClusterUpgradeInfoRequest
+            {
+                Name = "",
+                Version = "",
+            };
+            // Make the request
+            ClusterUpgradeInfo response = await clusterManagerClient.FetchClusterUpgradeInfoAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchClusterUpgradeInfo</summary>
+        public void FetchClusterUpgradeInfo()
+        {
+            // Snippet: FetchClusterUpgradeInfo(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            ClusterUpgradeInfo response = clusterManagerClient.FetchClusterUpgradeInfo(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchClusterUpgradeInfoAsync</summary>
+        public async Task FetchClusterUpgradeInfoAsync()
+        {
+            // Snippet: FetchClusterUpgradeInfoAsync(string, CallSettings)
+            // Additional: FetchClusterUpgradeInfoAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            ClusterUpgradeInfo response = await clusterManagerClient.FetchClusterUpgradeInfoAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNodePoolUpgradeInfo</summary>
+        public void FetchNodePoolUpgradeInfoRequestObject()
+        {
+            // Snippet: FetchNodePoolUpgradeInfo(FetchNodePoolUpgradeInfoRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            FetchNodePoolUpgradeInfoRequest request = new FetchNodePoolUpgradeInfoRequest
+            {
+                Name = "",
+                Version = "",
+            };
+            // Make the request
+            NodePoolUpgradeInfo response = clusterManagerClient.FetchNodePoolUpgradeInfo(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNodePoolUpgradeInfoAsync</summary>
+        public async Task FetchNodePoolUpgradeInfoRequestObjectAsync()
+        {
+            // Snippet: FetchNodePoolUpgradeInfoAsync(FetchNodePoolUpgradeInfoRequest, CallSettings)
+            // Additional: FetchNodePoolUpgradeInfoAsync(FetchNodePoolUpgradeInfoRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchNodePoolUpgradeInfoRequest request = new FetchNodePoolUpgradeInfoRequest
+            {
+                Name = "",
+                Version = "",
+            };
+            // Make the request
+            NodePoolUpgradeInfo response = await clusterManagerClient.FetchNodePoolUpgradeInfoAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNodePoolUpgradeInfo</summary>
+        public void FetchNodePoolUpgradeInfo()
+        {
+            // Snippet: FetchNodePoolUpgradeInfo(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            NodePoolUpgradeInfo response = clusterManagerClient.FetchNodePoolUpgradeInfo(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNodePoolUpgradeInfoAsync</summary>
+        public async Task FetchNodePoolUpgradeInfoAsync()
+        {
+            // Snippet: FetchNodePoolUpgradeInfoAsync(string, CallSettings)
+            // Additional: FetchNodePoolUpgradeInfoAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            NodePoolUpgradeInfo response = await clusterManagerClient.FetchNodePoolUpgradeInfoAsync(name);
             // End snippet
         }
     }

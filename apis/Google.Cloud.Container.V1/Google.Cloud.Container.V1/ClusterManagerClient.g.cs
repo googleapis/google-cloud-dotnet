@@ -80,6 +80,8 @@ namespace Google.Cloud.Container.V1
             SetMaintenancePolicySettings = existing.SetMaintenancePolicySettings;
             ListUsableSubnetworksSettings = existing.ListUsableSubnetworksSettings;
             CheckAutopilotCompatibilitySettings = existing.CheckAutopilotCompatibilitySettings;
+            FetchClusterUpgradeInfoSettings = existing.FetchClusterUpgradeInfoSettings;
+            FetchNodePoolUpgradeInfoSettings = existing.FetchNodePoolUpgradeInfoSettings;
             OnCopy(existing);
         }
 
@@ -579,6 +581,32 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CheckAutopilotCompatibilitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterManagerClient.FetchClusterUpgradeInfo</c> and <c>ClusterManagerClient.FetchClusterUpgradeInfoAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchClusterUpgradeInfoSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterManagerClient.FetchNodePoolUpgradeInfo</c> and
+        /// <c>ClusterManagerClient.FetchNodePoolUpgradeInfoAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchNodePoolUpgradeInfoSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ClusterManagerSettings"/> object.</returns>
@@ -1800,7 +1828,7 @@ namespace Google.Cloud.Container.V1
         /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         /// 
-        /// * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring
+        /// * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring
         /// service with a Kubernetes-native resource model
         /// * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
         /// longer available as of GKE 1.15).
@@ -1843,7 +1871,7 @@ namespace Google.Cloud.Container.V1
         /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         /// 
-        /// * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring
+        /// * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring
         /// service with a Kubernetes-native resource model
         /// * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
         /// longer available as of GKE 1.15).
@@ -1886,7 +1914,7 @@ namespace Google.Cloud.Container.V1
         /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         /// 
-        /// * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring
+        /// * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring
         /// service with a Kubernetes-native resource model
         /// * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
         /// longer available as of GKE 1.15).
@@ -1912,7 +1940,7 @@ namespace Google.Cloud.Container.V1
         /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         /// 
-        /// * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring
+        /// * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring
         /// service with a Kubernetes-native resource model
         /// * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
         /// longer available as of GKE 1.15).
@@ -1941,7 +1969,7 @@ namespace Google.Cloud.Container.V1
         /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         /// 
-        /// * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring
+        /// * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring
         /// service with a Kubernetes-native resource model
         /// * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
         /// longer available as of GKE 1.15).
@@ -1970,7 +1998,7 @@ namespace Google.Cloud.Container.V1
         /// Required. The monitoring service the cluster should use to write metrics.
         /// Currently available options:
         /// 
-        /// * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring
+        /// * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring
         /// service with a Kubernetes-native resource model
         /// * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
         /// longer available as of GKE 1.15).
@@ -5265,6 +5293,153 @@ namespace Google.Cloud.Container.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest request, st::CancellationToken cancellationToken) =>
             CheckAutopilotCompatibilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ClusterUpgradeInfo FetchClusterUpgradeInfo(FetchClusterUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClusterUpgradeInfo> FetchClusterUpgradeInfoAsync(FetchClusterUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClusterUpgradeInfo> FetchClusterUpgradeInfoAsync(FetchClusterUpgradeInfoRequest request, st::CancellationToken cancellationToken) =>
+            FetchClusterUpgradeInfoAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name (project, location, cluster) of the cluster to get.
+        /// Specified in the format `projects/*/locations/*/clusters/*` or
+        /// `projects/*/zones/*/clusters/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ClusterUpgradeInfo FetchClusterUpgradeInfo(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchClusterUpgradeInfo(new FetchClusterUpgradeInfoRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name (project, location, cluster) of the cluster to get.
+        /// Specified in the format `projects/*/locations/*/clusters/*` or
+        /// `projects/*/zones/*/clusters/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClusterUpgradeInfo> FetchClusterUpgradeInfoAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchClusterUpgradeInfoAsync(new FetchClusterUpgradeInfoRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name (project, location, cluster) of the cluster to get.
+        /// Specified in the format `projects/*/locations/*/clusters/*` or
+        /// `projects/*/zones/*/clusters/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ClusterUpgradeInfo> FetchClusterUpgradeInfoAsync(string name, st::CancellationToken cancellationToken) =>
+            FetchClusterUpgradeInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NodePoolUpgradeInfo FetchNodePoolUpgradeInfo(FetchNodePoolUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NodePoolUpgradeInfo> FetchNodePoolUpgradeInfoAsync(FetchNodePoolUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NodePoolUpgradeInfo> FetchNodePoolUpgradeInfoAsync(FetchNodePoolUpgradeInfoRequest request, st::CancellationToken cancellationToken) =>
+            FetchNodePoolUpgradeInfoAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name (project, location, cluster, nodepool) of the nodepool
+        /// to get. Specified in the format
+        /// `projects/*/locations/*/clusters/*/nodePools/*` or
+        /// `projects/*/zones/*/clusters/*/nodePools/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NodePoolUpgradeInfo FetchNodePoolUpgradeInfo(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchNodePoolUpgradeInfo(new FetchNodePoolUpgradeInfoRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name (project, location, cluster, nodepool) of the nodepool
+        /// to get. Specified in the format
+        /// `projects/*/locations/*/clusters/*/nodePools/*` or
+        /// `projects/*/zones/*/clusters/*/nodePools/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NodePoolUpgradeInfo> FetchNodePoolUpgradeInfoAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchNodePoolUpgradeInfoAsync(new FetchNodePoolUpgradeInfoRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name (project, location, cluster, nodepool) of the nodepool
+        /// to get. Specified in the format
+        /// `projects/*/locations/*/clusters/*/nodePools/*` or
+        /// `projects/*/zones/*/clusters/*/nodePools/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NodePoolUpgradeInfo> FetchNodePoolUpgradeInfoAsync(string name, st::CancellationToken cancellationToken) =>
+            FetchNodePoolUpgradeInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ClusterManager client wrapper implementation, for convenient use.</summary>
@@ -5340,6 +5515,10 @@ namespace Google.Cloud.Container.V1
         private readonly gaxgrpc::ApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse> _callListUsableSubnetworks;
 
         private readonly gaxgrpc::ApiCall<CheckAutopilotCompatibilityRequest, CheckAutopilotCompatibilityResponse> _callCheckAutopilotCompatibility;
+
+        private readonly gaxgrpc::ApiCall<FetchClusterUpgradeInfoRequest, ClusterUpgradeInfo> _callFetchClusterUpgradeInfo;
+
+        private readonly gaxgrpc::ApiCall<FetchNodePoolUpgradeInfoRequest, NodePoolUpgradeInfo> _callFetchNodePoolUpgradeInfo;
 
         /// <summary>
         /// Constructs a client wrapper for the ClusterManager service, with the specified gRPC client and settings.
@@ -5460,6 +5639,12 @@ namespace Google.Cloud.Container.V1
             _callCheckAutopilotCompatibility = clientHelper.BuildApiCall<CheckAutopilotCompatibilityRequest, CheckAutopilotCompatibilityResponse>("CheckAutopilotCompatibility", grpcClient.CheckAutopilotCompatibilityAsync, grpcClient.CheckAutopilotCompatibility, effectiveSettings.CheckAutopilotCompatibilitySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCheckAutopilotCompatibility);
             Modify_CheckAutopilotCompatibilityApiCall(ref _callCheckAutopilotCompatibility);
+            _callFetchClusterUpgradeInfo = clientHelper.BuildApiCall<FetchClusterUpgradeInfoRequest, ClusterUpgradeInfo>("FetchClusterUpgradeInfo", grpcClient.FetchClusterUpgradeInfoAsync, grpcClient.FetchClusterUpgradeInfo, effectiveSettings.FetchClusterUpgradeInfoSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchClusterUpgradeInfo);
+            Modify_FetchClusterUpgradeInfoApiCall(ref _callFetchClusterUpgradeInfo);
+            _callFetchNodePoolUpgradeInfo = clientHelper.BuildApiCall<FetchNodePoolUpgradeInfoRequest, NodePoolUpgradeInfo>("FetchNodePoolUpgradeInfo", grpcClient.FetchNodePoolUpgradeInfoAsync, grpcClient.FetchNodePoolUpgradeInfo, effectiveSettings.FetchNodePoolUpgradeInfoSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchNodePoolUpgradeInfo);
+            Modify_FetchNodePoolUpgradeInfoApiCall(ref _callFetchNodePoolUpgradeInfo);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5533,6 +5718,10 @@ namespace Google.Cloud.Container.V1
 
         partial void Modify_CheckAutopilotCompatibilityApiCall(ref gaxgrpc::ApiCall<CheckAutopilotCompatibilityRequest, CheckAutopilotCompatibilityResponse> call);
 
+        partial void Modify_FetchClusterUpgradeInfoApiCall(ref gaxgrpc::ApiCall<FetchClusterUpgradeInfoRequest, ClusterUpgradeInfo> call);
+
+        partial void Modify_FetchNodePoolUpgradeInfoApiCall(ref gaxgrpc::ApiCall<FetchNodePoolUpgradeInfoRequest, NodePoolUpgradeInfo> call);
+
         partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ClusterManager client</summary>
@@ -5605,6 +5794,10 @@ namespace Google.Cloud.Container.V1
         partial void Modify_ListUsableSubnetworksRequest(ref ListUsableSubnetworksRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CheckAutopilotCompatibilityRequest(ref CheckAutopilotCompatibilityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchClusterUpgradeInfoRequest(ref FetchClusterUpgradeInfoRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchNodePoolUpgradeInfoRequest(ref FetchNodePoolUpgradeInfoRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -6488,6 +6681,54 @@ namespace Google.Cloud.Container.V1
         {
             Modify_CheckAutopilotCompatibilityRequest(ref request, ref callSettings);
             return _callCheckAutopilotCompatibility.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ClusterUpgradeInfo FetchClusterUpgradeInfo(FetchClusterUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchClusterUpgradeInfoRequest(ref request, ref callSettings);
+            return _callFetchClusterUpgradeInfo.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch upgrade information of a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ClusterUpgradeInfo> FetchClusterUpgradeInfoAsync(FetchClusterUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchClusterUpgradeInfoRequest(ref request, ref callSettings);
+            return _callFetchClusterUpgradeInfo.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NodePoolUpgradeInfo FetchNodePoolUpgradeInfo(FetchNodePoolUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchNodePoolUpgradeInfoRequest(ref request, ref callSettings);
+            return _callFetchNodePoolUpgradeInfo.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch upgrade information of a specific nodepool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NodePoolUpgradeInfo> FetchNodePoolUpgradeInfoAsync(FetchNodePoolUpgradeInfoRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchNodePoolUpgradeInfoRequest(ref request, ref callSettings);
+            return _callFetchNodePoolUpgradeInfo.Async(request, callSettings);
         }
     }
 
