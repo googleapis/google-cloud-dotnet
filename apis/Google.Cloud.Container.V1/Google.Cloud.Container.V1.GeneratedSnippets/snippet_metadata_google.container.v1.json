@@ -1276,12 +1276,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 74,
+          "end": 77,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 72,
+          "start": 35,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -1325,12 +1325,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 75,
+          "end": 78,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 73,
+          "start": 36,
+          "end": 76,
           "type": "SHORT"
         }
       ]
@@ -8402,6 +8402,390 @@
         }
       },
       "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchClusterUpgradeInfo_sync",
+      "title": "FetchClusterUpgradeInfoRequestObject",
+      "description": "Snippet for FetchClusterUpgradeInfo",
+      "file": "ClusterManagerClient.FetchClusterUpgradeInfoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchClusterUpgradeInfo",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchClusterUpgradeInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.FetchClusterUpgradeInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Container.V1.ClusterUpgradeInfo",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchClusterUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchClusterUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchClusterUpgradeInfo_async",
+      "title": "FetchClusterUpgradeInfoRequestObjectAsync",
+      "description": "Snippet for FetchClusterUpgradeInfoAsync",
+      "file": "ClusterManagerClient.FetchClusterUpgradeInfoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchClusterUpgradeInfoAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchClusterUpgradeInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.FetchClusterUpgradeInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ClusterUpgradeInfo>",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchClusterUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchClusterUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchClusterUpgradeInfo_sync_flattened",
+      "title": "FetchClusterUpgradeInfo",
+      "description": "Snippet for FetchClusterUpgradeInfo",
+      "file": "ClusterManagerClient.FetchClusterUpgradeInfoSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchClusterUpgradeInfo",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchClusterUpgradeInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Container.V1.ClusterUpgradeInfo",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchClusterUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchClusterUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchClusterUpgradeInfo_async_flattened",
+      "title": "FetchClusterUpgradeInfoAsync",
+      "description": "Snippet for FetchClusterUpgradeInfoAsync",
+      "file": "ClusterManagerClient.FetchClusterUpgradeInfoAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchClusterUpgradeInfoAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchClusterUpgradeInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ClusterUpgradeInfo>",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchClusterUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchClusterUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchNodePoolUpgradeInfo_sync",
+      "title": "FetchNodePoolUpgradeInfoRequestObject",
+      "description": "Snippet for FetchNodePoolUpgradeInfo",
+      "file": "ClusterManagerClient.FetchNodePoolUpgradeInfoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchNodePoolUpgradeInfo",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchNodePoolUpgradeInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.FetchNodePoolUpgradeInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Container.V1.NodePoolUpgradeInfo",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchNodePoolUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchNodePoolUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchNodePoolUpgradeInfo_async",
+      "title": "FetchNodePoolUpgradeInfoRequestObjectAsync",
+      "description": "Snippet for FetchNodePoolUpgradeInfoAsync",
+      "file": "ClusterManagerClient.FetchNodePoolUpgradeInfoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchNodePoolUpgradeInfoAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchNodePoolUpgradeInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.FetchNodePoolUpgradeInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.NodePoolUpgradeInfo>",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchNodePoolUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchNodePoolUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchNodePoolUpgradeInfo_sync_flattened",
+      "title": "FetchNodePoolUpgradeInfo",
+      "description": "Snippet for FetchNodePoolUpgradeInfo",
+      "file": "ClusterManagerClient.FetchNodePoolUpgradeInfoSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchNodePoolUpgradeInfo",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchNodePoolUpgradeInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Container.V1.NodePoolUpgradeInfo",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchNodePoolUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchNodePoolUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_FetchNodePoolUpgradeInfo_async_flattened",
+      "title": "FetchNodePoolUpgradeInfoAsync",
+      "description": "Snippet for FetchNodePoolUpgradeInfoAsync",
+      "file": "ClusterManagerClient.FetchNodePoolUpgradeInfoAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchNodePoolUpgradeInfoAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.FetchNodePoolUpgradeInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.NodePoolUpgradeInfo>",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "FetchNodePoolUpgradeInfo",
+          "fullName": "google.container.v1.ClusterManager.FetchNodePoolUpgradeInfo",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
       "origin": "API_DEFINITION",
       "segments": [
         {
