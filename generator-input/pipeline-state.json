@@ -3050,7 +3050,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-01-06T18:04:26Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "bbeb0530ac9d8a61d8156f0d4e111909fc2827aa",
             "apiPaths": [
                 "google/storagetransfer/v1"
             ],
