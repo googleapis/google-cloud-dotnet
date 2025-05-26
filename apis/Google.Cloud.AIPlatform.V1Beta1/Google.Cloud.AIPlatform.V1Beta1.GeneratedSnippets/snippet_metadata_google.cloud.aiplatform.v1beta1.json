@@ -38727,6 +38727,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_IndexService_ImportIndex_sync",
+      "title": "ImportIndexRequestObject",
+      "description": "Snippet for ImportIndex",
+      "file": "IndexServiceClient.ImportIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIndex",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient.ImportIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Index, Google.Cloud.AIPlatform.V1Beta1.ImportIndexOperationMetadata>",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "ImportIndex",
+          "fullName": "google.cloud.aiplatform.v1beta1.IndexService.ImportIndex",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1beta1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_IndexService_ImportIndex_async",
+      "title": "ImportIndexRequestObjectAsync",
+      "description": "Snippet for ImportIndexAsync",
+      "file": "IndexServiceClient.ImportIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIndexAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient.ImportIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Index, Google.Cloud.AIPlatform.V1Beta1.ImportIndexOperationMetadata>>",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "ImportIndex",
+          "fullName": "google.cloud.aiplatform.v1beta1.IndexService.ImportIndex",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1beta1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_IndexService_ListIndexes_sync",
       "title": "ListIndexesRequestObject",
       "description": "Snippet for ListIndexes",

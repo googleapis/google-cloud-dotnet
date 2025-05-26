@@ -72,6 +72,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.Index> __Marshaller_google_cloud_aiplatform_v1beta1_Index = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.Index.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ImportIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ListIndexesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesResponse> __Marshaller_google_cloud_aiplatform_v1beta1_ListIndexesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesResponse.Parser));
@@ -103,6 +105,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "GetIndex",
         __Marshaller_google_cloud_aiplatform_v1beta1_GetIndexRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_Index);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest, global::Google.LongRunning.Operation> __Method_ImportIndex = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportIndex",
+        __Marshaller_google_cloud_aiplatform_v1beta1_ImportIndexRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesResponse> __Method_ListIndexes = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesResponse>(
@@ -174,6 +184,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.Index> GetIndex(global::Google.Cloud.AIPlatform.V1Beta1.GetIndexRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports an Index from an external source (e.g., BigQuery).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportIndex(global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -365,6 +387,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.Index> GetIndexAsync(global::Google.Cloud.AIPlatform.V1Beta1.GetIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIndex, null, options, request);
+      }
+      /// <summary>
+      /// Imports an Index from an external source (e.g., BigQuery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportIndex(global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports an Index from an external source (e.g., BigQuery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportIndex(global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportIndex, null, options, request);
+      }
+      /// <summary>
+      /// Imports an Index from an external source (e.g., BigQuery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportIndexAsync(global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports an Index from an external source (e.g., BigQuery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportIndexAsync(global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportIndex, null, options, request);
       }
       /// <summary>
       /// Lists Indexes in a Location.
@@ -634,6 +704,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateIndex, serviceImpl.CreateIndex)
           .AddMethod(__Method_GetIndex, serviceImpl.GetIndex)
+          .AddMethod(__Method_ImportIndex, serviceImpl.ImportIndex)
           .AddMethod(__Method_ListIndexes, serviceImpl.ListIndexes)
           .AddMethod(__Method_UpdateIndex, serviceImpl.UpdateIndex)
           .AddMethod(__Method_DeleteIndex, serviceImpl.DeleteIndex)
@@ -650,6 +721,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     {
       serviceBinder.AddMethod(__Method_CreateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CreateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateIndex));
       serviceBinder.AddMethod(__Method_GetIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetIndexRequest, global::Google.Cloud.AIPlatform.V1Beta1.Index>(serviceImpl.GetIndex));
+      serviceBinder.AddMethod(__Method_ImportIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportIndex));
       serviceBinder.AddMethod(__Method_ListIndexes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListIndexesResponse>(serviceImpl.ListIndexes));
       serviceBinder.AddMethod(__Method_UpdateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.UpdateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateIndex));
       serviceBinder.AddMethod(__Method_DeleteIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIndex));
