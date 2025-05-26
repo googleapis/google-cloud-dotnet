@@ -967,6 +967,12 @@
                 "GetIndexAsync"
               ]
             },
+            "ImportIndex": {
+              "methods": [
+                "ImportIndex",
+                "ImportIndexAsync"
+              ]
+            },
             "ListIndexes": {
               "methods": [
                 "ListIndexes",
