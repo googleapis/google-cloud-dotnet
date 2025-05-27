@@ -3663,7 +3663,7 @@
       "type": "grpc",
       "productName": "Model Armor",
       "productUrl": "https://cloud.google.com/security-command-center/docs/model-armor-overview",
-      "description": "Recommended Google client library to access the Model Armor API, helps you protect against risks like prompt injection, harmful content, and data leakage in generative AI applications by letting you define policies that filter user prompts and model responses.",
+      "description": "Recommended Google client library to access the Model Armor API (v1), which helps you protect against risks like prompt injection, harmful content, and data leakage in generative AI applications by letting you define policies that filter user prompts and model responses.",
       "tags": [
         "ai",
         "security",
@@ -3678,6 +3678,30 @@
       "includeCommonResourcesProto": true,
       "shortName": "modelarmor",
       "serviceConfigFile": "modelarmor_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
+      "id": "Google.Cloud.ModelArmor.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Model Armor",
+      "productUrl": "https://cloud.google.com/security-command-center/docs/model-armor-overview",
+      "description": "Recommended Google client library to access the Model Armor API (v1beta), which helps you protect against risks like prompt injection, harmful content, and data leakage in generative AI applications by letting you define policies that filter user prompts and model responses.",
+      "tags": [
+        "ai",
+        "security",
+        "safety",
+        "llm"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/modelarmor/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "modelarmor",
+      "serviceConfigFile": "modelarmor_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
