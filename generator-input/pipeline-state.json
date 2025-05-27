@@ -4110,6 +4110,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Support.V2Beta/Google.Cloud.Support.V2Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.ModelArmor.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/modelarmor/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.ModelArmor.V1Beta/Google.Cloud.ModelArmor.V1Beta"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
