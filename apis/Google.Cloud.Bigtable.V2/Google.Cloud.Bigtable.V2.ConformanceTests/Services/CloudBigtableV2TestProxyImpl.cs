@@ -75,6 +75,13 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
                 settings.ReadModifyWriteRowSettings = callSettings;
                 settings.SampleRowKeysSettings = callSettings;
                 settings.CallSettings = callSettings;
+                // same as default ReadRowsRetrySettings except DeadlineExceeded is not in the retryFilter
+                settings.ReadRowsRetrySettings = RetrySettings.FromExponentialBackoff(
+                    maxAttempts: 5,
+                    initialBackoff: TimeSpan.FromMilliseconds(10),
+                    maxBackoff: TimeSpan.FromMinutes(1),
+                    backoffMultiplier: 2,
+                    retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.Aborted));
             }
         }
 
@@ -146,7 +153,7 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             {
                 rowsResult.Rows.Add(row);
             }
-            string message = rowsResult.Rows.Count == 0 ? $"ReadRows didn't find rows or deadline exceeded" : "ReadRows succeeded";
+            string message = rowsResult.Rows.Count == 0 ? $"ReadRows didn't find rows" : "ReadRows succeeded";
             rowsResult.Status = SetSuccessStatus(message);
             return rowsResult;
         }
