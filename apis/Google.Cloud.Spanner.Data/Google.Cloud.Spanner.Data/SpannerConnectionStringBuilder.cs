@@ -253,7 +253,7 @@ namespace Google.Cloud.Spanner.Data
         /// The endpoint to use to connect to Spanner. If not supplied in the
         /// connection string, the default endpoint will be used.
         /// </summary>
-        public string EndPoint => $"{Host}:{Port}";
+        public string EndPoint => Host != null ? $"{Host}:{Port}" : null;
 
         /// <summary>
         /// The endpoint to use to connect to Spanner. If not supplied in the
@@ -261,23 +261,19 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string UniverseDomain
         {
-            get => GetValueOrDefault(nameof(UniverseDomain), EffectiveDefaultUniverseDomain);
+            get => GetValueOrDefault(nameof(UniverseDomain), null);
             set => this[nameof(UniverseDomain)] = value;
         }
 
-        private static string GetNonWhiteSpaceOrNullEnvironmentVariable(string valueName)
-        {
-            var value = Environment.GetEnvironmentVariable(valueName);
-            return string.IsNullOrWhiteSpace(value) ? null : value;
-        }
+        //private static string GetNonWhiteSpaceOrNullEnvironmentVariable(string valueName)
+        //{
+        //    var value = Environment.GetEnvironmentVariable(valueName);
+        //    return string.IsNullOrWhiteSpace(value) ? null : value;
+        //}
 
-        private static string EffectiveDefaultUniverseDomain => GetNonWhiteSpaceOrNullEnvironmentVariable(UniverseDomainEnvironmentVariable) ?? "googleapis.com";//DefaultHostDomain;
+        //private static string EffectiveDefaultUniverseDomain => GetNonWhiteSpaceOrNullEnvironmentVariable(UniverseDomainEnvironmentVariable) ?? "googleapis.com";//DefaultHostDomain;
 
-        /// <summary>
-        /// The endpoint to use to connect to Spanner. If not supplied in the
-        /// connection string, the default endpoint will be used.
-        /// </summary>
-        public string EffectiveUniverseDomain => UniverseDomain ?? (CredentialOverride is null ? EffectiveDefaultUniverseDomain : null); // Some cred check here? But we do not have access to creds in this builder as this is not the clientbuilder;
+        //public string EffectiveUniverseDomain => UniverseDomain ?? EffectiveDefaultUniverseDomain; // Some cred check here? But we do not have access to creds in this builder as this is not the clientbuilder;
         /*(CallInvoker is not null ? null :
         Endpoint is null ? EffectiveDefaultUniverseDomain :
         TokenAccessMethod is null && ChannelCredentials is null && Credential is null ? EffectiveDefaultUniverseDomain :
@@ -297,7 +293,7 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetValueOrDefault(nameof(Host), EffectiveUniverseDomain);
+            get => GetValueOrDefault(nameof(Host), UniverseDomain != null ? null : "spanner.googleapis.com");
             set => this[nameof(Host)] = value;
         }
 
