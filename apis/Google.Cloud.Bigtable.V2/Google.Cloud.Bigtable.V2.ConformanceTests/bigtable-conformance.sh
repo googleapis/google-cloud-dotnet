@@ -34,7 +34,7 @@ cd cloud-bigtable-clients-test/tests
 # Cookie, RetryInfo, ExecuteQuery, ReverseScans and FeatureGap are known failures of new features that we don't yet support.
 # CloseClient we don't support as expected, but we support it in a valid manner.
 # For the others we have issues to investigate, see comments in b/372509076 .
-eval "go test -v -proxy_addr=:7238 -skip _Retry_WithRoutingCookie\|_Retry_WithRetryInfo\|_CloseClient\|_ReverseScans\|TestFeatureGap\|TestExecuteQuery\|TestReadRows_NoRetry_ErrorAfterLastRow\|TestReadRows_Retry_PausedScan\|TestReadRows_Retry_LastScannedRow_Reverse\|TestReadRow_Generic_DeadlineExceeded"
+eval "go test -v -proxy_addr=:7238 -skip _Retry_WithRoutingCookie\|_Retry_WithRetryInfo\|_CloseClient\|_ReverseScans\|TestFeatureGap\|TestExecuteQuery\|TestReadRows_Retry_LastScannedRow_Reverse\|TestReadRow_Generic_DeadlineExceeded"
 returnCode=$?
 popd
 
