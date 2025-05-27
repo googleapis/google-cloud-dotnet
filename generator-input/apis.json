@@ -5161,7 +5161,7 @@
       },
       "noVersionHistory": true,
       "shortName": "spanner",
-      "serviceConfigFile": "spanner_admin_instance.yaml",
+      "serviceConfigFile": "spanner.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
       "includeCommonResourcesProto": true,
