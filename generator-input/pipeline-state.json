@@ -4116,6 +4116,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "17b10a69d4a5d79e5196feed3742e00378ade9b0",
             "apiPaths": [
                 "google/cloud/modelarmor/v1beta"
             ],
