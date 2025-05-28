@@ -3051,11 +3051,12 @@
         },
         {
             "id": "Google.Cloud.StorageTransfer.V1",
-            "currentVersion": "2.8.0",
+            "currentVersion": "2.9.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-06T18:04:26Z",
+            "releaseTimestamp": "2025-05-28T15:42:31.635397462Z",
             "lastGeneratedCommit": "bbeb0530ac9d8a61d8156f0d4e111909fc2827aa",
+            "lastReleasedCommit": "bbeb0530ac9d8a61d8156f0d4e111909fc2827aa",
             "apiPaths": [
                 "google/storagetransfer/v1"
             ],
