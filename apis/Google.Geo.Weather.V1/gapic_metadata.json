@@ -33,6 +33,12 @@
                 "LookupHistoryHours",
                 "LookupHistoryHoursAsync"
               ]
+            },
+            "LookupPublicAlerts": {
+              "methods": [
+                "LookupPublicAlerts",
+                "LookupPublicAlertsAsync"
+              ]
             }
           }
         }

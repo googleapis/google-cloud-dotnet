@@ -49,6 +49,7 @@ namespace Google.Geo.Weather.V1
             LookupForecastHoursSettings = existing.LookupForecastHoursSettings;
             LookupForecastDaysSettings = existing.LookupForecastDaysSettings;
             LookupHistoryHoursSettings = existing.LookupHistoryHoursSettings;
+            LookupPublicAlertsSettings = existing.LookupPublicAlertsSettings;
             OnCopy(existing);
         }
 
@@ -125,6 +126,18 @@ namespace Google.Geo.Weather.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings LookupHistoryHoursSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>WeatherClient.LookupPublicAlerts</c> and <c>WeatherClient.LookupPublicAlertsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupPublicAlertsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="WeatherSettings"/> object.</returns>
@@ -351,6 +364,33 @@ namespace Google.Geo.Weather.V1
         /// <returns>A pageable asynchronous sequence of <see cref="HistoryHour"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<LookupHistoryHoursResponse, HistoryHour> LookupHistoryHoursAsync(LookupHistoryHoursRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns public weather alerts for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LookupPublicAlertsResponse LookupPublicAlerts(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns public weather alerts for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicAlertsResponse> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns public weather alerts for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LookupPublicAlertsResponse> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, st::CancellationToken cancellationToken) =>
+            LookupPublicAlertsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Weather client wrapper implementation, for convenient use.</summary>
@@ -366,6 +406,8 @@ namespace Google.Geo.Weather.V1
         private readonly gaxgrpc::ApiCall<LookupForecastDaysRequest, LookupForecastDaysResponse> _callLookupForecastDays;
 
         private readonly gaxgrpc::ApiCall<LookupHistoryHoursRequest, LookupHistoryHoursResponse> _callLookupHistoryHours;
+
+        private readonly gaxgrpc::ApiCall<LookupPublicAlertsRequest, LookupPublicAlertsResponse> _callLookupPublicAlerts;
 
         /// <summary>
         /// Constructs a client wrapper for the Weather service, with the specified gRPC client and settings.
@@ -394,6 +436,9 @@ namespace Google.Geo.Weather.V1
             _callLookupHistoryHours = clientHelper.BuildApiCall<LookupHistoryHoursRequest, LookupHistoryHoursResponse>("LookupHistoryHours", grpcClient.LookupHistoryHoursAsync, grpcClient.LookupHistoryHours, effectiveSettings.LookupHistoryHoursSettings);
             Modify_ApiCall(ref _callLookupHistoryHours);
             Modify_LookupHistoryHoursApiCall(ref _callLookupHistoryHours);
+            _callLookupPublicAlerts = clientHelper.BuildApiCall<LookupPublicAlertsRequest, LookupPublicAlertsResponse>("LookupPublicAlerts", grpcClient.LookupPublicAlertsAsync, grpcClient.LookupPublicAlerts, effectiveSettings.LookupPublicAlertsSettings);
+            Modify_ApiCall(ref _callLookupPublicAlerts);
+            Modify_LookupPublicAlertsApiCall(ref _callLookupPublicAlerts);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -407,6 +452,8 @@ namespace Google.Geo.Weather.V1
 
         partial void Modify_LookupHistoryHoursApiCall(ref gaxgrpc::ApiCall<LookupHistoryHoursRequest, LookupHistoryHoursResponse> call);
 
+        partial void Modify_LookupPublicAlertsApiCall(ref gaxgrpc::ApiCall<LookupPublicAlertsRequest, LookupPublicAlertsResponse> call);
+
         partial void OnConstruction(Weather.WeatherClient grpcClient, WeatherSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Weather client</summary>
@@ -419,6 +466,8 @@ namespace Google.Geo.Weather.V1
         partial void Modify_LookupForecastDaysRequest(ref LookupForecastDaysRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_LookupHistoryHoursRequest(ref LookupHistoryHoursRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_LookupPublicAlertsRequest(ref LookupPublicAlertsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns the current weather conditions at a given location.
@@ -520,6 +569,30 @@ namespace Google.Geo.Weather.V1
         {
             Modify_LookupHistoryHoursRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<LookupHistoryHoursRequest, LookupHistoryHoursResponse, HistoryHour>(_callLookupHistoryHours, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns public weather alerts for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LookupPublicAlertsResponse LookupPublicAlerts(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupPublicAlertsRequest(ref request, ref callSettings);
+            return _callLookupPublicAlerts.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns public weather alerts for a given location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LookupPublicAlertsResponse> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupPublicAlertsRequest(ref request, ref callSettings);
+            return _callLookupPublicAlerts.Async(request, callSettings);
         }
     }
 

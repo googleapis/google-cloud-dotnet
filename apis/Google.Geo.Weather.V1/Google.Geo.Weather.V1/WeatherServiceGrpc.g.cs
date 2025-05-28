@@ -79,6 +79,10 @@ namespace Google.Geo.Weather.V1 {
     static readonly grpc::Marshaller<global::Google.Geo.Weather.V1.LookupHistoryHoursRequest> __Marshaller_google_maps_weather_v1_LookupHistoryHoursRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Geo.Weather.V1.LookupHistoryHoursRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Geo.Weather.V1.LookupHistoryHoursResponse> __Marshaller_google_maps_weather_v1_LookupHistoryHoursResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Geo.Weather.V1.LookupHistoryHoursResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Geo.Weather.V1.LookupPublicAlertsRequest> __Marshaller_google_maps_weather_v1_LookupPublicAlertsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Geo.Weather.V1.LookupPublicAlertsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Geo.Weather.V1.LookupPublicAlertsResponse> __Marshaller_google_maps_weather_v1_LookupPublicAlertsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Geo.Weather.V1.LookupPublicAlertsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Geo.Weather.V1.LookupCurrentConditionsRequest, global::Google.Geo.Weather.V1.LookupCurrentConditionsResponse> __Method_LookupCurrentConditions = new grpc::Method<global::Google.Geo.Weather.V1.LookupCurrentConditionsRequest, global::Google.Geo.Weather.V1.LookupCurrentConditionsResponse>(
@@ -111,6 +115,14 @@ namespace Google.Geo.Weather.V1 {
         "LookupHistoryHours",
         __Marshaller_google_maps_weather_v1_LookupHistoryHoursRequest,
         __Marshaller_google_maps_weather_v1_LookupHistoryHoursResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Geo.Weather.V1.LookupPublicAlertsRequest, global::Google.Geo.Weather.V1.LookupPublicAlertsResponse> __Method_LookupPublicAlerts = new grpc::Method<global::Google.Geo.Weather.V1.LookupPublicAlertsRequest, global::Google.Geo.Weather.V1.LookupPublicAlertsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LookupPublicAlerts",
+        __Marshaller_google_maps_weather_v1_LookupPublicAlertsRequest,
+        __Marshaller_google_maps_weather_v1_LookupPublicAlertsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -169,6 +181,18 @@ namespace Google.Geo.Weather.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Geo.Weather.V1.LookupHistoryHoursResponse> LookupHistoryHours(global::Google.Geo.Weather.V1.LookupHistoryHoursRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns public weather alerts for a given location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Geo.Weather.V1.LookupPublicAlertsResponse> LookupPublicAlerts(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -406,6 +430,54 @@ namespace Google.Geo.Weather.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_LookupHistoryHours, null, options, request);
       }
+      /// <summary>
+      /// Returns public weather alerts for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Geo.Weather.V1.LookupPublicAlertsResponse LookupPublicAlerts(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupPublicAlerts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns public weather alerts for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Geo.Weather.V1.LookupPublicAlertsResponse LookupPublicAlerts(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LookupPublicAlerts, null, options, request);
+      }
+      /// <summary>
+      /// Returns public weather alerts for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Geo.Weather.V1.LookupPublicAlertsResponse> LookupPublicAlertsAsync(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupPublicAlertsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns public weather alerts for a given location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Geo.Weather.V1.LookupPublicAlertsResponse> LookupPublicAlertsAsync(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LookupPublicAlerts, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override WeatherClient NewInstance(ClientBaseConfiguration configuration)
@@ -423,7 +495,8 @@ namespace Google.Geo.Weather.V1 {
           .AddMethod(__Method_LookupCurrentConditions, serviceImpl.LookupCurrentConditions)
           .AddMethod(__Method_LookupForecastHours, serviceImpl.LookupForecastHours)
           .AddMethod(__Method_LookupForecastDays, serviceImpl.LookupForecastDays)
-          .AddMethod(__Method_LookupHistoryHours, serviceImpl.LookupHistoryHours).Build();
+          .AddMethod(__Method_LookupHistoryHours, serviceImpl.LookupHistoryHours)
+          .AddMethod(__Method_LookupPublicAlerts, serviceImpl.LookupPublicAlerts).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -437,6 +510,7 @@ namespace Google.Geo.Weather.V1 {
       serviceBinder.AddMethod(__Method_LookupForecastHours, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Geo.Weather.V1.LookupForecastHoursRequest, global::Google.Geo.Weather.V1.LookupForecastHoursResponse>(serviceImpl.LookupForecastHours));
       serviceBinder.AddMethod(__Method_LookupForecastDays, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Geo.Weather.V1.LookupForecastDaysRequest, global::Google.Geo.Weather.V1.LookupForecastDaysResponse>(serviceImpl.LookupForecastDays));
       serviceBinder.AddMethod(__Method_LookupHistoryHours, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Geo.Weather.V1.LookupHistoryHoursRequest, global::Google.Geo.Weather.V1.LookupHistoryHoursResponse>(serviceImpl.LookupHistoryHours));
+      serviceBinder.AddMethod(__Method_LookupPublicAlerts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Geo.Weather.V1.LookupPublicAlertsRequest, global::Google.Geo.Weather.V1.LookupPublicAlertsResponse>(serviceImpl.LookupPublicAlerts));
     }
 
   }

@@ -104,27 +104,32 @@ namespace Google.Geo.Weather.V1 {
             "UmVzcG9uc2USOgoNaGlzdG9yeV9ob3VycxgBIAMoCzIjLmdvb2dsZS5tYXBz",
             "LndlYXRoZXIudjEuSGlzdG9yeUhvdXISKAoJdGltZV96b25lGAIgASgLMhUu",
             "Z29vZ2xlLnR5cGUuVGltZVpvbmUSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJ",
-            "MuwFCgdXZWF0aGVyErABChdMb29rdXBDdXJyZW50Q29uZGl0aW9ucxI2Lmdv",
-            "b2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwQ3VycmVudENvbmRpdGlvbnNS",
-            "ZXF1ZXN0GjcuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBDdXJyZW50",
-            "Q29uZGl0aW9uc1Jlc3BvbnNlIiSC0+STAh4SHC92MS9jdXJyZW50Q29uZGl0",
-            "aW9uczpsb29rdXASoQEKE0xvb2t1cEZvcmVjYXN0SG91cnMSMi5nb29nbGUu",
-            "bWFwcy53ZWF0aGVyLnYxLkxvb2t1cEZvcmVjYXN0SG91cnNSZXF1ZXN0GjMu",
-            "Z29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBGb3JlY2FzdEhvdXJzUmVz",
-            "cG9uc2UiIYLT5JMCGxIZL3YxL2ZvcmVjYXN0L2hvdXJzOmxvb2t1cBKdAQoS",
-            "TG9va3VwRm9yZWNhc3REYXlzEjEuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5M",
-            "b29rdXBGb3JlY2FzdERheXNSZXF1ZXN0GjIuZ29vZ2xlLm1hcHMud2VhdGhl",
-            "ci52MS5Mb29rdXBGb3JlY2FzdERheXNSZXNwb25zZSIggtPkkwIaEhgvdjEv",
-            "Zm9yZWNhc3QvZGF5czpsb29rdXASnQEKEkxvb2t1cEhpc3RvcnlIb3VycxIx",
-            "Lmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwSGlzdG9yeUhvdXJzUmVx",
-            "dWVzdBoyLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwSGlzdG9yeUhv",
-            "dXJzUmVzcG9uc2UiIILT5JMCGhIYL3YxL2hpc3RvcnkvaG91cnM6bG9va3Vw",
-            "GkrKQRZ3ZWF0aGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKnAQoaY29tLmdvb2ds",
-            "ZS5tYXBzLndlYXRoZXIudjFCE1dlYXRoZXJTZXJ2aWNlUHJvdG9QAVo6Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9tYXBzL3dlYXRoZXIvYXBpdjEvd2VhdGhlcnBi",
-            "O3dlYXRoZXJwYqICBUdNV1YxqgIVR29vZ2xlLkdlby5XZWF0aGVyLlYxygIV",
-            "R29vZ2xlXEdlb1xXZWF0aGVyXFYxYgZwcm90bzM="));
+            "IhsKGUxvb2t1cFB1YmxpY0FsZXJ0c1JlcXVlc3QiHAoaTG9va3VwUHVibGlj",
+            "QWxlcnRzUmVzcG9uc2UyiwcKB1dlYXRoZXISsAEKF0xvb2t1cEN1cnJlbnRD",
+            "b25kaXRpb25zEjYuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBDdXJy",
+            "ZW50Q29uZGl0aW9uc1JlcXVlc3QaNy5nb29nbGUubWFwcy53ZWF0aGVyLnYx",
+            "Lkxvb2t1cEN1cnJlbnRDb25kaXRpb25zUmVzcG9uc2UiJILT5JMCHhIcL3Yx",
+            "L2N1cnJlbnRDb25kaXRpb25zOmxvb2t1cBKhAQoTTG9va3VwRm9yZWNhc3RI",
+            "b3VycxIyLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwRm9yZWNhc3RI",
+            "b3Vyc1JlcXVlc3QaMy5nb29nbGUubWFwcy53ZWF0aGVyLnYxLkxvb2t1cEZv",
+            "cmVjYXN0SG91cnNSZXNwb25zZSIhgtPkkwIbEhkvdjEvZm9yZWNhc3QvaG91",
+            "cnM6bG9va3VwEp0BChJMb29rdXBGb3JlY2FzdERheXMSMS5nb29nbGUubWFw",
+            "cy53ZWF0aGVyLnYxLkxvb2t1cEZvcmVjYXN0RGF5c1JlcXVlc3QaMi5nb29n",
+            "bGUubWFwcy53ZWF0aGVyLnYxLkxvb2t1cEZvcmVjYXN0RGF5c1Jlc3BvbnNl",
+            "IiCC0+STAhoSGC92MS9mb3JlY2FzdC9kYXlzOmxvb2t1cBKdAQoSTG9va3Vw",
+            "SGlzdG9yeUhvdXJzEjEuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBI",
+            "aXN0b3J5SG91cnNSZXF1ZXN0GjIuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5M",
+            "b29rdXBIaXN0b3J5SG91cnNSZXNwb25zZSIggtPkkwIaEhgvdjEvaGlzdG9y",
+            "eS9ob3Vyczpsb29rdXASnAEKEkxvb2t1cFB1YmxpY0FsZXJ0cxIxLmdvb2ds",
+            "ZS5tYXBzLndlYXRoZXIudjEuTG9va3VwUHVibGljQWxlcnRzUmVxdWVzdBoy",
+            "Lmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwUHVibGljQWxlcnRzUmVz",
+            "cG9uc2UiH4LT5JMCGRIXL3YxL3B1YmxpY0FsZXJ0czpsb29rdXAaSspBFndl",
+            "YXRoZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqcBChpjb20uZ29vZ2xlLm1hcHMu",
+            "d2VhdGhlci52MUITV2VhdGhlclNlcnZpY2VQcm90b1ABWjpjbG91ZC5nb29n",
+            "bGUuY29tL2dvL21hcHMvd2VhdGhlci9hcGl2MS93ZWF0aGVycGI7d2VhdGhl",
+            "cnBiogIFR01XVjGqAhVHb29nbGUuR2VvLldlYXRoZXIuVjHKAhVHb29nbGVc",
+            "R2VvXFdlYXRoZXJcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Geo.Weather.V1.AirPressureReflection.Descriptor, global::Google.Geo.Weather.V1.ForecastDayReflection.Descriptor, global::Google.Geo.Weather.V1.ForecastHourReflection.Descriptor, global::Google.Geo.Weather.V1.HistoryHourReflection.Descriptor, global::Google.Geo.Weather.V1.PrecipitationReflection.Descriptor, global::Google.Geo.Weather.V1.TemperatureReflection.Descriptor, global::Google.Geo.Weather.V1.UnitsSystemReflection.Descriptor, global::Google.Geo.Weather.V1.VisibilityReflection.Descriptor, global::Google.Geo.Weather.V1.WeatherConditionReflection.Descriptor, global::Google.Geo.Weather.V1.WindReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,7 +140,9 @@ namespace Google.Geo.Weather.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupForecastDaysRequest), global::Google.Geo.Weather.V1.LookupForecastDaysRequest.Parser, new[]{ "Location", "Days", "UnitsSystem", "LanguageCode", "PageSize", "PageToken" }, new[]{ "Days", "LanguageCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupForecastDaysResponse), global::Google.Geo.Weather.V1.LookupForecastDaysResponse.Parser, new[]{ "ForecastDays", "TimeZone", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupHistoryHoursRequest), global::Google.Geo.Weather.V1.LookupHistoryHoursRequest.Parser, new[]{ "Location", "Hours", "UnitsSystem", "LanguageCode", "PageSize", "PageToken" }, new[]{ "Hours", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupHistoryHoursResponse), global::Google.Geo.Weather.V1.LookupHistoryHoursResponse.Parser, new[]{ "HistoryHours", "TimeZone", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupHistoryHoursResponse), global::Google.Geo.Weather.V1.LookupHistoryHoursResponse.Parser, new[]{ "HistoryHours", "TimeZone", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest), global::Google.Geo.Weather.V1.LookupPublicAlertsRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupPublicAlertsResponse), global::Google.Geo.Weather.V1.LookupPublicAlertsResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -4089,6 +4096,326 @@ namespace Google.Geo.Weather.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// (-- Request for the LookupPublicAlerts RPC. --)
+  /// (-- TODO (418938868): mikesky - Add request fields.
+  /// Reason: We want to parallelize our work and creating a simple proto for
+  /// quick approval could help us do other tasks while the larger proto is
+  /// being approved. --)
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LookupPublicAlertsRequest : pb::IMessage<LookupPublicAlertsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LookupPublicAlertsRequest> _parser = new pb::MessageParser<LookupPublicAlertsRequest>(() => new LookupPublicAlertsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LookupPublicAlertsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Geo.Weather.V1.WeatherServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LookupPublicAlertsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LookupPublicAlertsRequest(LookupPublicAlertsRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LookupPublicAlertsRequest Clone() {
+      return new LookupPublicAlertsRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LookupPublicAlertsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LookupPublicAlertsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LookupPublicAlertsRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// (-- Response for the LookupPublicAlerts RPC. --)
+  /// (-- TODO(418938868): mikesky - Add public weather alert records to the
+  /// response. Reason: We want to parallelize our work and creating a simple proto
+  /// for quick approval could help us do other tasks while the larger proto is
+  /// being approved. --)
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LookupPublicAlertsResponse : pb::IMessage<LookupPublicAlertsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LookupPublicAlertsResponse> _parser = new pb::MessageParser<LookupPublicAlertsResponse>(() => new LookupPublicAlertsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LookupPublicAlertsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Geo.Weather.V1.WeatherServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LookupPublicAlertsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LookupPublicAlertsResponse(LookupPublicAlertsResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LookupPublicAlertsResponse Clone() {
+      return new LookupPublicAlertsResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LookupPublicAlertsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LookupPublicAlertsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LookupPublicAlertsResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }

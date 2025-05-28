@@ -3970,7 +3970,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "2ed6e92d8ee781ce896b57032160eee04987b1f1",
+            "lastGeneratedCommit": "0cda37e7ad68526c1ebb3c4d27555ff17476f1e9",
             "apiPaths": [
                 "google/maps/weather/v1"
             ],

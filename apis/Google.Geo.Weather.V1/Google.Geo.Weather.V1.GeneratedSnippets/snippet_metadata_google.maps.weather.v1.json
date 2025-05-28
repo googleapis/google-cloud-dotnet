@@ -397,6 +397,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupPublicAlerts_sync",
+      "title": "LookupPublicAlertsRequestObject",
+      "description": "Snippet for LookupPublicAlerts",
+      "file": "WeatherClient.LookupPublicAlertsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicAlerts",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupPublicAlerts",
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupPublicAlertsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Geo.Weather.V1.LookupPublicAlertsResponse",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupPublicAlerts",
+          "fullName": "google.maps.weather.v1.Weather.LookupPublicAlerts",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupPublicAlerts_async",
+      "title": "LookupPublicAlertsRequestObjectAsync",
+      "description": "Snippet for LookupPublicAlertsAsync",
+      "file": "WeatherClient.LookupPublicAlertsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupPublicAlertsAsync",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupPublicAlertsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupPublicAlertsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Geo.Weather.V1.LookupPublicAlertsResponse>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupPublicAlerts",
+          "fullName": "google.maps.weather.v1.Weather.LookupPublicAlerts",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

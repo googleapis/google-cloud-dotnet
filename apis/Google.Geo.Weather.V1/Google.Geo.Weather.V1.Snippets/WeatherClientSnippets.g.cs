@@ -368,5 +368,32 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for LookupPublicAlerts</summary>
+        public void LookupPublicAlertsRequestObject()
+        {
+            // Snippet: LookupPublicAlerts(LookupPublicAlertsRequest, CallSettings)
+            // Create client
+            WeatherClient weatherClient = WeatherClient.Create();
+            // Initialize request argument(s)
+            LookupPublicAlertsRequest request = new LookupPublicAlertsRequest { };
+            // Make the request
+            LookupPublicAlertsResponse response = weatherClient.LookupPublicAlerts(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupPublicAlertsAsync</summary>
+        public async Task LookupPublicAlertsRequestObjectAsync()
+        {
+            // Snippet: LookupPublicAlertsAsync(LookupPublicAlertsRequest, CallSettings)
+            // Additional: LookupPublicAlertsAsync(LookupPublicAlertsRequest, CancellationToken)
+            // Create client
+            WeatherClient weatherClient = await WeatherClient.CreateAsync();
+            // Initialize request argument(s)
+            LookupPublicAlertsRequest request = new LookupPublicAlertsRequest { };
+            // Make the request
+            LookupPublicAlertsResponse response = await weatherClient.LookupPublicAlertsAsync(request);
+            // End snippet
+        }
     }
 }
