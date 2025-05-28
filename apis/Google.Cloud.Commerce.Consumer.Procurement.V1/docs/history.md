@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.5.0, released 2025-05-28
+
+### Bug fixes
+
+- An existing google.api.http annotation `http_uri` is changed for method `UpdateLicensePool` in service `LicenseManagementService`
+
 ## Version 1.4.0, released 2024-10-07
 
 ### New features
