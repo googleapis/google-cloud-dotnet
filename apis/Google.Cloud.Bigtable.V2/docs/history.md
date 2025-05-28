@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.18.0, released 2025-05-28
+
+### Bug fixes
+
+- ReadRow/s respects rowsLimit and retries on Aborted exception. Fixes TestReadRows_Retry_PausedScan, TestReadRows_NoRetry_ErrorAfterLastRow, and TestReadRow_Generic_DeadlineExceeded. (#14794)
+
 ## Version 3.17.0, released 2025-03-17
 
 ### New features
