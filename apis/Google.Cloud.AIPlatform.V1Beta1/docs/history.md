@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta32, released 2025-05-28
+
+### New features
+
+- Introduce RAG as context/memory store for Gemini Live API
+- Add ImportIndex to IndexService
+
+### Documentation improvements
+
+- A comment for message `RagFileParsingConfig` is updated.
+- A comment for field `global_max_embedding_requests_per_min` in message `.google.cloud.aiplatform.v1beta1.ImportRagFilesConfig` is updated.
+
 ## Version 1.0.0-beta31, released 2025-05-20
 
 ### New features
