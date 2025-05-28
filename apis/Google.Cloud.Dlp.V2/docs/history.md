@@ -1,5 +1,17 @@
 # Version history
 
+## Version 4.18.0, released 2025-05-28
+
+### New features
+
+- Add Dataplex Catalog action for discovery configs
+- Add a project ID to table reference so that org parents can create single table discovery configs.
+- New fields for data profile finding.
+
+### Documentation improvements
+
+- Various doc revisions
+
 ## Version 4.17.0, released 2025-03-24
 
 ### New features
