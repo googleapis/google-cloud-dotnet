@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.9.0, released 2025-05-28
+
+### New features
+
+- Support Azure federated identity
+- Support BYOSA
+
+### Documentation improvements
+
+- A comment for message `ObjectConditions` is changed
+- A comment for field `list_url` in message `.google.storagetransfer.v1.HttpData` is changed
+- A comment for field `overwrite_objects_already_existing_in_sink` in message `.google.storagetransfer.v1.TransferOptions` is changed
+- A comment for field `end_time_of_day` in message `.google.storagetransfer.v1.Schedule` is changed
+- A comment for enum value `COPY` in enum `LoggableAction` is changed
+
 ## Version 2.8.0, released 2025-01-06
 
 ### New features
