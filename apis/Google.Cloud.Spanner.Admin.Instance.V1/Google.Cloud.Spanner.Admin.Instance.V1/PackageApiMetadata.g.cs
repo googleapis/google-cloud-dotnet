@@ -33,23 +33,23 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             {
                 {
                     "google.longrunning.Operations.CancelOperation",
-                    // { "post": "/v1/{name=projects/*/instances/*/databases/*/operations/*}:cancel", "additionalBindings": [ { "post": "/v1/{name=projects/*/instances/*/operations/*}:cancel" } ] }
-                    proto::ByteString.FromBase64("IkEvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbFo3IjUvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbA==")
+                    // { "post": "/v1/{name=projects/*/instances/*/databases/*/operations/*}:cancel", "additionalBindings": [ { "post": "/v1/{name=projects/*/instances/*/operations/*}:cancel" }, { "post": "/v1/{name=projects/*/instances/*/backups/*/operations/*}:cancel" }, { "post": "/v1/{name=projects/*/instances/*/instancePartitions/*/operations/*}:cancel" }, { "post": "/v1/{name=projects/*/instanceConfigs/*/operations/*}:cancel" }, { "post": "/v1/{name=projects/*/instanceConfigs/*/ssdCaches/*/operations/*}:cancel" } ] }
+                    proto::ByteString.FromBase64("IkEvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbFo3IjUvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbFpBIj8vdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyovb3BlcmF0aW9ucy8qfTpjYW5jZWxaTCJKL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovaW5zdGFuY2VQYXJ0aXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWxaPSI7L3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyovb3BlcmF0aW9ucy8qfTpjYW5jZWxaSSJHL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyovc3NkQ2FjaGVzLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw=")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",
-                    // { "delete": "/v1/{name=projects/*/instances/*/databases/*/operations/*}", "additionalBindings": [ { "delete": "/v1/{name=projects/*/instances/*/operations/*}" } ] }
-                    proto::ByteString.FromBase64("KjovdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9WjAqLi92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL29wZXJhdGlvbnMvKn0=")
+                    // { "delete": "/v1/{name=projects/*/instances/*/databases/*/operations/*}", "additionalBindings": [ { "delete": "/v1/{name=projects/*/instances/*/operations/*}" }, { "delete": "/v1/{name=projects/*/instances/*/backups/*/operations/*}" }, { "delete": "/v1/{name=projects/*/instances/*/instancePartitions/*/operations/*}" }, { "delete": "/v1/{name=projects/*/instanceConfigs/*/operations/*}" }, { "delete": "/v1/{name=projects/*/instanceConfigs/*/ssdCaches/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("KjovdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9WjAqLi92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL29wZXJhdGlvbnMvKn1aOio4L3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovYmFja3Vwcy8qL29wZXJhdGlvbnMvKn1aRSpDL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovaW5zdGFuY2VQYXJ0aXRpb25zLyovb3BlcmF0aW9ucy8qfVo2KjQvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZUNvbmZpZ3MvKi9vcGVyYXRpb25zLyp9WkIqQC92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlQ29uZmlncy8qL3NzZENhY2hlcy8qL29wZXJhdGlvbnMvKn0=")
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=projects/*/instances/*/databases/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/instances/*/operations/*}" } ] }
-                    proto::ByteString.FromBase64("EjovdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9WjASLi92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL29wZXJhdGlvbnMvKn0=")
+                    // { "get": "/v1/{name=projects/*/instances/*/databases/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/instances/*/operations/*}" }, { "get": "/v1/{name=projects/*/instances/*/backups/*/operations/*}" }, { "get": "/v1/{name=projects/*/instances/*/instancePartitions/*/operations/*}" }, { "get": "/v1/{name=projects/*/instanceConfigs/*/operations/*}" }, { "get": "/v1/{name=projects/*/instanceConfigs/*/ssdCaches/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EjovdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zLyp9WjASLi92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL29wZXJhdGlvbnMvKn1aOhI4L3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovYmFja3Vwcy8qL29wZXJhdGlvbnMvKn1aRRJDL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovaW5zdGFuY2VQYXJ0aXRpb25zLyovb3BlcmF0aW9ucy8qfVo2EjQvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZUNvbmZpZ3MvKi9vcGVyYXRpb25zLyp9WkISQC92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlQ29uZmlncy8qL3NzZENhY2hlcy8qL29wZXJhdGlvbnMvKn0=")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",
-                    // { "get": "/v1/{name=projects/*/instances/*/databases/*/operations}", "additionalBindings": [ { "get": "/v1/{name=projects/*/instances/*/operations}" } ] }
-                    proto::ByteString.FromBase64("EjgvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zfVouEiwvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9vcGVyYXRpb25zfQ==")
+                    // { "get": "/v1/{name=projects/*/instances/*/databases/*/operations}", "additionalBindings": [ { "get": "/v1/{name=projects/*/instances/*/operations}" }, { "get": "/v1/{name=projects/*/instances/*/backups/*/operations}" }, { "get": "/v1/{name=projects/*/instances/*/instancePartitions/*/operations}" }, { "get": "/v1/{name=projects/*/instanceConfigs/*/operations}" }, { "get": "/v1/{name=projects/*/instanceConfigs/*/ssdCaches/*/operations}" } ] }
+                    proto::ByteString.FromBase64("EjgvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9vcGVyYXRpb25zfVouEiwvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9vcGVyYXRpb25zfVo4EjYvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyovb3BlcmF0aW9uc31aQxJBL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovaW5zdGFuY2VQYXJ0aXRpb25zLyovb3BlcmF0aW9uc31aNBIyL3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyovb3BlcmF0aW9uc31aQBI+L3YxL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyovc3NkQ2FjaGVzLyovb3BlcmF0aW9uc30=")
                 },
             });
 
