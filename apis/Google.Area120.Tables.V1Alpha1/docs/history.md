@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0-alpha14, released 2025-05-28
+
+FIXME: Forced release with no commit messages; please write release notes.
+
 ## Version 2.0.0-alpha13, released 2025-05-21
 
 More release process testing.
