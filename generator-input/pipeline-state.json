@@ -1759,7 +1759,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-14T17:20:24Z",
-            "lastGeneratedCommit": "81dd948a70adea81e4a6ae12fffd2855dd741e70",
+            "lastGeneratedCommit": "361c4941ccff4b02f608a0c1af63dcb65a888358",
             "apiPaths": [
                 "google/cloud/iap/v1"
             ],
