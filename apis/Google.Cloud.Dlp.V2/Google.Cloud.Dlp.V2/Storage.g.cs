@@ -133,23 +133,24 @@ namespace Google.Cloud.Dlp.V2 {
             "a2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5",
             "SAASEQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJs",
             "ZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoI",
-            "dGFibGVfaWQYAyABKAkiNgoOVGFibGVSZWZlcmVuY2USEgoKZGF0YXNldF9p",
-            "ZBgBIAEoCRIQCgh0YWJsZV9pZBgCIAEoCSJzCg1CaWdRdWVyeUZpZWxkEjMK",
-            "BXRhYmxlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5",
-            "VGFibGUSLQoFZmllbGQYAiABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "RmllbGRJZCI5CghFbnRpdHlJZBItCgVmaWVsZBgBIAEoCzIeLmdvb2dsZS5w",
-            "cml2YWN5LmRscC52Mi5GaWVsZElkIkoKDFRhYmxlT3B0aW9ucxI6ChJpZGVu",
-            "dGlmeWluZ19maWVsZHMYASADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "RmllbGRJZCp0CgpMaWtlbGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJ",
-            "RUQQABIRCg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NT",
-            "SUJMRRADEgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqmgEKCEZpbGVU",
-            "eXBlEhkKFUZJTEVfVFlQRV9VTlNQRUNJRklFRBAAEg8KC0JJTkFSWV9GSUxF",
-            "EAESDQoJVEVYVF9GSUxFEAISCQoFSU1BR0UQAxIICgRXT1JEEAUSBwoDUERG",
-            "EAYSCAoEQVZSTxAHEgcKA0NTVhAIEgcKA1RTVhAJEg4KClBPV0VSUE9JTlQQ",
-            "CxIJCgVFWENFTBAMQpkBChljb20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyQgpE",
-            "bHBTdG9yYWdlUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vZGxwL2FwaXYyL2Rs",
-            "cHBiO2RscHBiqgITR29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91",
-            "ZFxEbHBcVjLqAhZHb29nbGU6OkNsb3VkOjpEbHA6OlYyYgZwcm90bzM="));
+            "dGFibGVfaWQYAyABKAkiSgoOVGFibGVSZWZlcmVuY2USEgoKZGF0YXNldF9p",
+            "ZBgBIAEoCRIQCgh0YWJsZV9pZBgCIAEoCRISCgpwcm9qZWN0X2lkGAMgASgJ",
+            "InMKDUJpZ1F1ZXJ5RmllbGQSMwoFdGFibGUYASABKAsyJC5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjIuQmlnUXVlcnlUYWJsZRItCgVmaWVsZBgCIAEoCzIeLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkIjkKCEVudGl0eUlkEi0KBWZp",
+            "ZWxkGAEgASgLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiSgoM",
+            "VGFibGVPcHRpb25zEjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgBIAMoCzIeLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoW",
+            "TElLRUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIM",
+            "CghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVS",
+            "WV9MSUtFTFkQBSqaAQoIRmlsZVR5cGUSGQoVRklMRV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDwoLQklOQVJZX0ZJTEUQARINCglURVhUX0ZJTEUQAhIJCgVJTUFH",
+            "RRADEggKBFdPUkQQBRIHCgNQREYQBhIICgRBVlJPEAcSBwoDQ1NWEAgSBwoD",
+            "VFNWEAkSDgoKUE9XRVJQT0lOVBALEgkKBUVYQ0VMEAxCmQEKGWNvbS5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjJCCkRscFN0b3JhZ2VQAVopY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9kbHAvYXBpdjIvZGxwcGI7ZGxwcGKqAhNHb29nbGUuQ2xvdWQu",
+            "RGxwLlYyygITR29vZ2xlXENsb3VkXERscFxWMuoCFkdvb2dsZTo6Q2xvdWQ6",
+            "OkRscDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -178,7 +179,7 @@ namespace Google.Cloud.Dlp.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key), global::Google.Cloud.Dlp.V2.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key.Types.PathElement), global::Google.Cloud.Dlp.V2.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordKey), global::Google.Cloud.Dlp.V2.RecordKey.Parser, new[]{ "DatastoreKey", "BigQueryKey", "IdValues" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryTable), global::Google.Cloud.Dlp.V2.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableReference), global::Google.Cloud.Dlp.V2.TableReference.Parser, new[]{ "DatasetId", "TableId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableReference), global::Google.Cloud.Dlp.V2.TableReference.Parser, new[]{ "DatasetId", "TableId", "ProjectId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryField), global::Google.Cloud.Dlp.V2.BigQueryField.Parser, new[]{ "Table", "Field" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.EntityId), global::Google.Cloud.Dlp.V2.EntityId.Parser, new[]{ "Field" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableOptions), global::Google.Cloud.Dlp.V2.TableOptions.Parser, new[]{ "IdentifyingFields" }, null, null, null, null)
@@ -9405,6 +9406,7 @@ namespace Google.Cloud.Dlp.V2 {
     public TableReference(TableReference other) : this() {
       datasetId_ = other.datasetId_;
       tableId_ = other.tableId_;
+      projectId_ = other.projectId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9444,6 +9446,23 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 3;
+    private string projectId_ = "";
+    /// <summary>
+    /// The Google Cloud project ID of the project containing the table.
+    /// If omitted, the project ID is inferred from the parent project. This field
+    /// is required if the parent resource is an organization.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9461,6 +9480,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (DatasetId != other.DatasetId) return false;
       if (TableId != other.TableId) return false;
+      if (ProjectId != other.ProjectId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9470,6 +9490,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (TableId.Length != 0) hash ^= TableId.GetHashCode();
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9496,6 +9517,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteString(TableId);
       }
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ProjectId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9514,6 +9539,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteString(TableId);
       }
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ProjectId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9529,6 +9558,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (TableId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableId);
+      }
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9547,6 +9579,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.TableId.Length != 0) {
         TableId = other.TableId;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9571,6 +9606,10 @@ namespace Google.Cloud.Dlp.V2 {
             TableId = input.ReadString();
             break;
           }
+          case 26: {
+            ProjectId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -9592,6 +9631,10 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             TableId = input.ReadString();
+            break;
+          }
+          case 26: {
+            ProjectId = input.ReadString();
             break;
           }
         }
