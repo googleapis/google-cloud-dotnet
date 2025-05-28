@@ -1,5 +1,52 @@
 # Version history
 
+## Version 3.34.0, released 2025-05-28
+
+### New features
+
+- Add topology_manager in NodeKubeletConfig
+- Add image_gc_low_threshold_percent in NodeKubeletConfig
+- Add image_gc_high_threshold_percent in NodeKubeletConfig
+- Add image_minimum_gc_age in NodeKubeletConfig
+- Add image_maximum_gc_age in NodeKubeletConfig
+- Add container_log_max_size in NodeKubeletConfig
+- Add container_log_max_files in NodeKubeletConfig
+- Add allowed_unsafe_sysctls in NodeKubeletConfig
+- Add max_run_duration in NodeConfig
+- Add flex_start in NodeConfig
+- Add performance_monitoring_unit in AdvancedMachineFeatures
+- Add high_scale_checkpointing_config in AddonsConfig
+- Add alpha_cluster_feature_gates in Cluster
+- Add pod_autoscaling in Cluster
+- Add desired_pod_autoscaling in ClusterUpdate
+- Add desired_disable_l4_lb_firewall_reconciliation in ClusterUpdate
+- Add desired_anonymous_authentication_config in ClusterUpdate
+- Add max_run_duration in UpdateNodePoolRequest
+- Add flex_start in UpdateNodePoolRequest
+- Add NODE_SERVICE_ACCOUNT_MISSING_PERMISSIONS in StatusCondition.Code
+- Add disable_l4_lb_firewall_reconciliation in NetworkConfig
+- Add UPGRADE_INFO_EVENT in NotificationConfig.EventType
+- Add confidential_instance_type in ConfidentialNodes
+- Add event_type in UpgradeInfoEvent
+- Add standard_support_end_time in UpgradeInfoEvent
+- Add extended_support_end_time in UpgradeInfoEvent
+- Add mitigated_versions in SecurityBulletinEvent
+- Add autopilot_compatibility_auditing_enabled in WorkloadPolicyConfig
+- Add KCP_HPA in LoggingComponentConfig.Component
+- Add JOBSET in MonitoringComponentConfig.Component
+- Add auto_monitoring_config in ManagedPrometheusConfig
+- Add data_cache_count in EphemeralStorageLocalSsdConfig
+- Add FetchClusterUpgradeInfoRequest
+- Add ClusterUpgradeInfo
+- Add UpgradeDetails
+- Add FetchNodePoolUpgradeInfoRequest
+- Add NodePoolUpgradeInfo
+
+### Documentation improvements
+
+- Minor documentation updates
+- Broken (or ambiguous) markdown link
+
 ## Version 3.33.0, released 2024-11-18
 
 ### New features
