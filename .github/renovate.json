@@ -170,6 +170,7 @@
     "apis/Google.Cloud.Metastore.V1Beta/Google.Cloud.Metastore.V1Beta/**",
     "apis/Google.Cloud.MigrationCenter.V1/Google.Cloud.MigrationCenter.V1/**",
     "apis/Google.Cloud.ModelArmor.V1/Google.Cloud.ModelArmor.V1/**",
+    "apis/Google.Cloud.ModelArmor.V1Beta/Google.Cloud.ModelArmor.V1Beta/**",
     "apis/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3/**",
     "apis/Google.Cloud.NetApp.V1/Google.Cloud.NetApp.V1/**",
     "apis/Google.Cloud.NetworkConnectivity.V1/Google.Cloud.NetworkConnectivity.V1/**",
