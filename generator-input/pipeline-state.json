@@ -987,11 +987,12 @@
         },
         {
             "id": "Google.Cloud.Commerce.Consumer.Procurement.V1",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-10-08T22:06:24Z",
+            "releaseTimestamp": "2025-05-28T15:39:38.189657802Z",
             "lastGeneratedCommit": "32a745de44b8b2e506677389d9921dfb6fc81f33",
+            "lastReleasedCommit": "32a745de44b8b2e506677389d9921dfb6fc81f33",
             "apiPaths": [
                 "google/cloud/commerce/consumer/procurement/v1"
             ],
