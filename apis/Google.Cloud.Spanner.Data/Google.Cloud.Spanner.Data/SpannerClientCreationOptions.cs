@@ -32,14 +32,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal sealed class SpannerClientCreationOptions : IEquatable<SpannerClientCreationOptions>
     {
-        //private static readonly Lazy<Task<ChannelCredentials>> s_defaultCredentialsTaskProvider = new Lazy<Task<ChannelCredentials>>(CreatedScopedDefaultCredentials);
-
-        //private static async Task<ChannelCredentials> CreatedScopedDefaultCredentials()
-        //{
-        //    var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-        //    return ConvertGoogleCredential(appDefaultCredentials);
-        //}
-
         /// <summary>
         /// The gRPC adapter to create clients with; never null.
         /// </summary>
@@ -69,19 +61,7 @@ namespace Google.Cloud.Spanner.Data
 
         internal DirectedReadOptions DirectedReadOptions { get; }
 
-        private string EffectiveUniverseDomain { get; }
-
-        private String GetEffectiveEndpoint(String builderEndpoint, ServiceMetadata serviceMetadata)
-        {
-            if (builderEndpoint != null)
-            {
-                return builderEndpoint;
-            }
-
-            return (serviceMetadata.EndpointTemplate is not null ? string.Format(serviceMetadata.EndpointTemplate, EffectiveUniverseDomain) :
-            EffectiveUniverseDomain == "googleapis.com" ? serviceMetadata.DefaultEndpoint :
-            null);
-        }
+        private string EffectiveUniverseEndpoint { get; }
 
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
@@ -103,7 +83,10 @@ namespace Google.Cloud.Spanner.Data
             }.MaybeCreateEmulatorClientBuilder();
             UsesEmulator = emulatorBuilder is object;
 
-            ValidateCredentialsFileOrThrow(builder.CredentialFile);
+            if(!string.IsNullOrEmpty(builder.CredentialFile))
+            {
+                ValidateCredentialsFileOrThrow(builder.CredentialFile);
+            }
 
             var gcpCallInvokerBuilder = new GcpCallInvokerConfigBuilder
             {
@@ -111,7 +94,7 @@ namespace Google.Cloud.Spanner.Data
                 GoogleCredential = builder.GoogleCredential,
                 ChannelCredentials = builder.CredentialOverride,
                 Endpoint = builder.EndPoint,
-                CredentialsPath = builder.CredentialFile,
+                CredentialsPath = !string.IsNullOrEmpty(builder.CredentialFile) ? builder.CredentialFile : null,
                 UseJwtAccessWithScopes = true
             };
 
@@ -132,7 +115,7 @@ namespace Google.Cloud.Spanner.Data
             UniverseDomain = gcpCallInvokerBuilder.UniverseDomain;
             // This sets a task, callers on the EffectiveChannelCredentials responsible for waiting for the result of this task
             EffectiveChannelCredentials = gcpCallInvokerBuilder.CheckAndGetChannelCredentials();
-            //EffectiveUniverseDomain = gcpCallInvokerBuilder.InvokerEffectiveEndpoint;
+            EffectiveUniverseEndpoint = gcpCallInvokerBuilder.InvokerEffectiveEndpoint;
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
@@ -230,9 +213,10 @@ namespace Google.Cloud.Spanner.Data
         {
             string file = credentialsFile;
             string extension = Path.GetExtension(file);
+            Console.WriteLine($"Credential file: {file}, extension: {extension}");
             if (!extension.Equals(".json", StringComparison.OrdinalIgnoreCase))
             {
-                throw new InvalidOperationException($"{nameof(SpannerConnectionStringBuilder.CredentialFile)} should only be set to a JSON file.");
+                throw new InvalidOperationException($"{nameof(SpannerConnectionStringBuilder.CredentialFile)} should only be set to a JSON file. {file}");
             }
 
             if (!File.Exists(file) && !Path.IsPathRooted(file))
@@ -259,36 +243,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 return _credentialsOverride;
             }
-            //if (_googleCredential is not null)
-            //{
-            //    return EffectiveChannelCredentials;
-            //}
-            //if (string.IsNullOrEmpty(_credentialsFile))
-            //{
-            //    return await s_defaultCredentialsTaskProvider.Value.ConfigureAwait(false);
-            //}
 
-            //var credential = await GoogleCredential.FromFileAsync(file, cancellationToken: default).ConfigureAwait(false);
             // ClientBuilderBase should take care of fetching right creds GoogleCredentials, file based creds or application default creds
-            return await EffectiveChannelCredentials.ConfigureAwait(false);
+            var creds = await EffectiveChannelCredentials.ConfigureAwait(false);
+            return creds;
         }
-
-        /* This method might not be needed since InvokerEffectiveCredentials are set from ClientBuilderBase now and GetChannelCredentials makes use of similar logic in it
-         * Ref 1: https://github.com/googleapis/gax-dotnet/blob/615f639998fb7bf1da8b3c04d053163bc4983d91/Google.Api.Gax.Grpc/ClientBuilderBase.cs#L531
-         * Ref 2: https://github.com/googleapis/gax-dotnet/blob/615f639998fb7bf1da8b3c04d053163bc4983d91/Google.Api.Gax.Grpc/ClientBuilderBase.cs#L555
-         * 
-         * Purva to check true/false value for UseJwtAccessWithScopes set in the builder --> we need that to be true
-         */
-
-        //private static ChannelCredentials ConvertGoogleCredential(GoogleCredential credential, String universeDomain = null)
-        //{
-        //    credential = credential.CreateScoped(SpannerClient.DefaultScopes);
-        //    // Use self-signed JWTs for service accounts.
-        //    if (credential.UnderlyingCredential is ServiceAccountCredential serviceCredential)
-        //    {
-        //        credential = GoogleCredential.FromServiceAccountCredential(serviceCredential.WithUseJwtAccessWithScopes(true));
-        //    }
-        //    return credential.ToChannelCredentials(); // https://github.com/googleapis/gax-dotnet/blob/099efcb64245339c0cc7968cadd9a29d3e56adef/Google.Api.Gax.Grpc/GoogleCredentialExtensions.cs#L20
-        //}
     }
 }

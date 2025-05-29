@@ -25,6 +25,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerClientCreationOptionsTest
     {
+
         [Fact]
         public void Equality_CustomHostAndPort()
         {
@@ -114,19 +115,19 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public async Task CredentialFileP12Error()
+        public void CredentialFileP12Error()
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
-            var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => options.GetCredentialsAsync());
+            // Exception will be thrown if bad CredentialFile is set while creating the client options itself
+            Assert.Throws<InvalidOperationException>(() => new SpannerClientCreationOptions(builder));
         }
 
         [Fact]
-        public async Task CredentialFileNotFound()
+        public void CredentialFileNotFound()
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
-            var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<FileNotFoundException>(() => options.GetCredentialsAsync());
+            // Exception will be thrown if bad CredentialFile is set while creating the client options itself
+            Assert.Throws<FileNotFoundException>(() => new SpannerClientCreationOptions(builder));
         }
 
         [Fact]
@@ -136,6 +137,21 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder("", credential);
             var options = new SpannerClientCreationOptions(builder);
             Assert.NotNull(await options.GetCredentialsAsync());
+        }
+
+        [Theory]
+        // InlineData format: ConnectionString, UniverseDomain, ExpectedEndpoint 
+        [InlineData("UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "spanner.test-domain.test.goog:443")]
+        [InlineData("Host=test-host;Port=567", null, "test-host:567")]
+        [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "test-host:567")]
+        public void Equality_UniverseDomainAndEndpoint(string connectionString, string universeDomain, string expectedEndpoint)
+        {
+            //string universeDomain = "test-domain.test.goog";
+            var builder = new SpannerConnectionStringBuilder(connectionString);
+            var options = new SpannerClientCreationOptions(builder);
+
+            Assert.Equal(universeDomain, options.UniverseDomain);
+            Assert.Equal(expectedEndpoint, options.Endpoint);
         }
     }
 }

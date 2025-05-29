@@ -46,9 +46,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal const int DefaultMaxConcurrentStreamsLowWatermark = 20;
 
-        internal const string DefaultHostDomain = "spanner.googleapis.com";
-        internal const string UniverseDomainEnvironmentVariable = "GOOGLE_CLOUD_UNIVERSE_DOMAIN";
-
         private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
@@ -265,31 +262,16 @@ namespace Google.Cloud.Spanner.Data
             set => this[nameof(UniverseDomain)] = value;
         }
 
-        //private static string GetNonWhiteSpaceOrNullEnvironmentVariable(string valueName)
-        //{
-        //    var value = Environment.GetEnvironmentVariable(valueName);
-        //    return string.IsNullOrWhiteSpace(value) ? null : value;
-        //}
-
-        //private static string EffectiveDefaultUniverseDomain => GetNonWhiteSpaceOrNullEnvironmentVariable(UniverseDomainEnvironmentVariable) ?? "googleapis.com";//DefaultHostDomain;
-
-        //public string EffectiveUniverseDomain => UniverseDomain ?? EffectiveDefaultUniverseDomain; // Some cred check here? But we do not have access to creds in this builder as this is not the clientbuilder;
-        /*(CallInvoker is not null ? null :
-        Endpoint is null ? EffectiveDefaultUniverseDomain :
-        TokenAccessMethod is null && ChannelCredentials is null && Credential is null ? EffectiveDefaultUniverseDomain :
-        null);*/
-
-        // public virtual string EffectiveEndpoint => Endpoint ?? EffectiveUniverseDomain not null and Port not null ? $"{EffectiveDefaultUniverseDomain}:{Port}" : null; // TODO: Purva check how the endpoint template should look for universe domain. Does it need Port?
-        /*(ServiceMetadata.EndpointTemplate is not null ? string.Format(ServiceMetadata.EndpointTemplate, EffectiveUniverseDomain) :
-        EffectiveUniverseDomain == ServiceMetadata.DefaultUniverseDomain ? ServiceMetadata.DefaultEndpoint :
-        null)*/
-
         /// <summary>
         /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
         /// host will be used.
         /// </summary>
         public string Host
         {
+            // If the Host is set, return the value.
+            // If not set, check if UniverseDomain is set and if set, Host is null to create Endpoint through UniverseDomain.
+            // Otherwise return the default googleapis host domain.
+            //
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
