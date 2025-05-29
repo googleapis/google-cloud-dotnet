@@ -3,7 +3,7 @@
   
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Version>0.4.0</Version>
     <Description>Tool used by Google .NET release processes to generate SBOMs. While there is nothing "secret" in this package, it is unlikely to be useful to other developers. (It currently hardcodes a Google organization, amongst other things.) It is only published as a matter of convenience for other Google .NET repositories.</Description>
