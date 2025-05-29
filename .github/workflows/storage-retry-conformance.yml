@@ -28,10 +28,12 @@ jobs:
       with:
         submodules: true
 
-    - name: Setup .NET 6.0
+    - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: |
+          6.0.x
+          8.0.x
 
     - run: dotnet test Google.Cloud.Storage.V1.RetryConformanceTests.csproj
       env:
