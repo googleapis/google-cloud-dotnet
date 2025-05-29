@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.32.0, released 2025-05-29
+
+### New features
+
+- A new field `include_thoughts` is added to message `.google.cloud.aiplatform.v1.Part`
+- A new field `thought` is added to message `.google.cloud.aiplatform.v1.Part`
+- A new field `thought_signature` is added to message `.google.cloud.aiplatform.v1.GenerationConfig.ThinkingConfig`
+
 ## Version 3.31.0, released 2025-05-20
 
 ### New features
