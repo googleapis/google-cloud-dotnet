@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0.410-jammy AS build
+COPY --from=mcr.microsoft.com/dotnet/sdk:6.0.414-jammy /usr/share/dotnet/sdk /usr/share/dotnet/sdk
+COPY --from=mcr.microsoft.com/dotnet/sdk:6.0.414-jammy /usr/share/dotnet/shared /usr/share/dotnet/shared
 
 WORKDIR /src
 
@@ -38,7 +40,10 @@ RUN dotnet build tweaks/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Genera
 # Install protobuf, the gRPC plugin and GAPIC generator, ready to run
 RUN bash -c 'source toolversions.sh && install_protoc && install_microgenerator && install_grpc'
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy
+FROM mcr.microsoft.com/dotnet/sdk:8.0.410-jammy
+# Whatever SDKs and runtimes we picked up earlier, copy them over.
+COPY --from=build /usr/share/dotnet/sdk /usr/share/dotnet/sdk
+COPY --from=build /usr/share/dotnet/shared /usr/share/dotnet/shared
 
 WORKDIR /app
 COPY --from=build /src/packages/Google.Protobuf.Tools.* protobuf
