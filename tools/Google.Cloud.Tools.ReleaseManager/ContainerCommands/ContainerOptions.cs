@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -21,6 +22,7 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 public class ContainerOptions
 {
+    private const string UtilityDocsLibraryPrefix = "docs-";
     internal const string ApiPathOption = "api-path";
     internal const string LibraryIdOption = "library-id";
     internal const string RepoRootOption = "repo-root";
@@ -74,6 +76,10 @@ public class ContainerOptions
             return (nameValue[0].Substring(2), nameValue[1]);
         }
     }
+
+    internal string UtilityDocsName  => LibraryId is null ? null
+        : LibraryId.StartsWith(UtilityDocsLibraryPrefix, StringComparison.Ordinal) ? LibraryId[UtilityDocsLibraryPrefix.Length..]
+        : null;
 
     internal string RequireOption(string option, [CallerArgumentExpression("option")] string expression = null) =>
         option ?? throw new UserErrorException($"Option for {expression} is required");

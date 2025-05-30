@@ -4130,6 +4130,60 @@
             "sourcePaths": [
                 "apis/Google.Cloud.ModelArmor.V1Beta/Google.Cloud.ModelArmor.V1Beta"
             ]
+        },
+        {
+            "id": "docs-help",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "apiPaths": [
+            ],
+            "sourcePaths": [
+            ]
+        },
+        {
+            "id": "docs-gax",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "apiPaths": [
+            ],
+            "sourcePaths": [
+            ]
+        },
+        {
+            "id": "docs-google-apis",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "apiPaths": [
+            ],
+            "sourcePaths": [
+            ]
+        },
+        {
+            "id": "docs-grpc",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "apiPaths": [
+            ],
+            "sourcePaths": [
+            ]
+        },
+        {
+            "id": "docs-protobuf",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "apiPaths": [
+            ],
+            "sourcePaths": [
+            ]
+        },
+        {
+            "id": "docs-common-proto",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "apiPaths": [
+            ],
+            "sourcePaths": [
+            ]
         }
     ],
     "commonLibrarySourcePaths": [

@@ -24,13 +24,6 @@ then
   exit 0
 fi
 
-if [[ "$3" != "" ]]
-then
-  declare -r SERVICE_ACCOUNT_JSON=$3
-else
-  declare -r SERVICE_ACCOUNT_JSON=adc
-fi
-
 set -eu -o pipefail
 
 declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
@@ -165,11 +158,7 @@ dotnet docuploader create-metadata \
   --xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
   $XREF_FLAGS
 
-
-dotnet docuploader upload \
-  --documentation-path . \
-  --credentials $SERVICE_ACCOUNT_JSON \
-  --staging-bucket $DEVSITE_STAGING_BUCKET \
-  --destination-prefix docfx
+# Tar up the file ready to be uploaded.
+tar czvf ../../docfx-dotnet-$DEVSITE_PACKAGE-$VERSION.tar.gz .
 
 echo 'Done'

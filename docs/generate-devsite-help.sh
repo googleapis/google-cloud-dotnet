@@ -11,13 +11,6 @@ fi
 
 dotnet tool restore > /dev/null
 
-if [[ "$2" != "" ]]
-then
-  declare -r SERVICE_ACCOUNT_JSON=$2
-else
-  declare -r SERVICE_ACCOUNT_JSON=adc
-fi
-
 declare -r DEVSITE_STAGING_BUCKET=docs-staging-v2
 declare -r VERSION=$1
 
@@ -49,11 +42,8 @@ devsite://dotnet/Google.Cloud.Datastore.V1,\
 devsite://dotnet/Google.Cloud.Storage.V1 \
   --language dotnet 
 
-dotnet docuploader upload \
-  --documentation-path . \
-  --credentials $SERVICE_ACCOUNT_JSON \
-  --staging-bucket $DEVSITE_STAGING_BUCKET \
-  --destination-prefix docfx
+# Tar up the file ready to be uploaded.
+tar czvf ../docfx-dotnet-help-$VERSION.tar.gz .
 
 cd ../..
 
