@@ -36,7 +36,6 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// </summary>
         private static readonly Dictionary<string, List<string>> s_googleApisCommitMessageCache = new();
 
-        private static readonly Regex OwlBotEmailRegex = new Regex(@".*gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
         private const string LibrarianRobotEmail = "cloud-sdk-librarian-dotnet-robot@google.com";
 
         /// <summary>
@@ -83,25 +82,8 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             var messageLines = SplitCommitMessage(message);
 
-            // OwlBot includes helpful metadata about the original internal and googleapis commit.
-            // The googleapis commit can be useful in terms of having better formatting of release notes,
-            // but either way, we should skip "Committer" lines and anything after "PiperOrigin-RevId".
-            if (OwlBotEmailRegex.IsMatch(_libGit2Commit.Author.Email))
-            {
-                var sourceLink = messageLines.FirstOrDefault(line => line.StartsWith("Source-Link: https://github.com/googleapis/googleapis/"));
-                // Work around Bazel Bot putting everything on one line: go back to the googleapis commit.
-                if (sourceLink is object)
-                {
-                    var commit = sourceLink.Split('/').Last();
-                    messageLines = GetGoogleApisCommitLines(rootLayout, commit) ?? messageLines;
-                }
-                messageLines = messageLines
-                    .Where(line => !line.StartsWith("Committer: @"))
-                    .TakeWhile(line => !line.StartsWith("PiperOrigin-RevId"))
-                    .ToList();
-            }
-            // Librarian includes source link and piper origin revid lines. For now, we'll just skip those 
-            else if (_libGit2Commit.Author.Email == LibrarianRobotEmail)
+            // Librarian includes source link and piper origin revid lines. For now, we'll just skip those.
+            if (_libGit2Commit.Author.Email == LibrarianRobotEmail)
             {
                 messageLines = messageLines
                     .Where(line => !line.StartsWith("Source-Link:"))

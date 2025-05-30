@@ -24,7 +24,7 @@ namespace Google.Cloud.Tools.ReleaseManager
     public sealed class UpdateDependenciesCommand : CommandBase
     {
         public UpdateDependenciesCommand()
-            : base("update-dependencies", "Updates dependencies for all APIs (or those changed in the previous commit, with --owlbot)", 0, 1, "[--owlbot]")
+            : base("update-dependencies", "Updates dependencies for all APIs")
         {
         }
 
@@ -34,23 +34,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var catalog = nonSourceGenerator.ApiCatalog;
             var apiNames = catalog.CreateIdHashSet();
 
-            var apisToUpdate = catalog.Apis;
-
-            if (args.Length == 1)
-            {
-                if (args[0] != "--owlbot")
-                {
-                    throw new UserErrorException("Only valid argument for update-dependencies is --owlbot.");
-                }
-                apisToUpdate = FindApisToUpdateFromPreviousCommit(catalog);
-                // Don't even bother checking if we don't have any updates.
-                if (apisToUpdate.Count == 0)
-                {
-                    return 0;
-                }
-            }
-
-            foreach (var api in apisToUpdate)
+            foreach (var api in catalog.Apis)
             {
                 UpdateDependencies(catalog, api);
                 nonSourceGenerator.GenerateApiFiles(api);
@@ -58,41 +42,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             nonSourceGenerator.GenerateNonApiFiles();
             catalog.Save(nonSourceGenerator.RootLayout);
             return 0;
-        }
-
-        private List<ApiMetadata> FindApisToUpdateFromPreviousCommit(ApiCatalog catalog)
-        {
-            using var repo = new Repository(RootLayout.RepositoryRoot);
-            // OwlBot will be post-processing a new commit from either OwlBot itself or
-            // release-please; we want to find out what the API catalog looked like in
-            // the parent commit.
-            var headCommit = repo.Head.Tip;
-            var parentCommit = headCommit.Parents.First();
-            var headApisJson = headCommit.Tree[ApiCatalog.PathInRepository].Target;
-            var parentApisJson = parentCommit.Tree[ApiCatalog.PathInRepository].Target;
-
-            // Let's not even bother parsing if apis.json hasn't changed.
-            if (headApisJson.Sha == parentApisJson.Sha)
-            {
-                return new();
-            }
-
-            var text = ((Blob) parentApisJson).GetContentText();
-            var oldCatalog = ApiCatalog.FromJson(text);
-
-            // We only want to check for dependency updates in APIs that have changed *and* aren't patch releases.
-            var apisToUpdate = catalog.Apis
-                .Where(api => oldCatalog.TryGetApi(api.Id, out var oldApi) && api.Version != oldApi.Version && api.StructuredVersion.Patch == 0)
-                .ToList();
-            if (apisToUpdate.Any())
-            {
-                Console.WriteLine("Checking for dependency updates in:");
-                foreach (var api in apisToUpdate)
-                {
-                    Console.WriteLine($"  {api.Id}");
-                }
-            }
-            return apisToUpdate;
         }
 
         /// <summary>

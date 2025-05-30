@@ -33,7 +33,6 @@ namespace Google.Cloud.Tools.ReleaseManager;
 /// - Solution files
 /// - Repo metadata
 /// - Documentation stubs
-/// - OwlBot configuration
 ///
 /// This is effectively the business logic underlying <see cref="GenerateProjectsCommand"/>,
 /// but designed for use from multiple places.
@@ -42,13 +41,6 @@ namespace Google.Cloud.Tools.ReleaseManager;
 /// </summary>
 internal sealed class NonSourceGenerator
 {
-    /// <summary>
-    /// Allows switching between OwlBot and Librarian. When this is true, OwlBot config files
-    /// are generated, and OwlBot will create PRs. When this is false, any OwlBot config files are
-    /// *deleted* by GenerateProjectsCommand, effectively disabling OwlBot.
-    /// </summary>
-    private static readonly bool GenerateOwlBotConfig = false;
-
     internal const string ProjectVersionValue = "project";
     internal const string DefaultVersionValue = "default";
     internal const string DefaultNetstandardTarget = "netstandard2.0";
@@ -180,7 +172,6 @@ internal sealed class NonSourceGenerator
     /// - Solution files
     /// - Repo metadata
     /// - Documentation stubs
-    /// - OwlBot configuration
     /// </summary>
     /// <param name="api"></param>
     internal void GenerateApiFiles(ApiMetadata api)
@@ -194,7 +185,6 @@ internal sealed class NonSourceGenerator
 
         GenerateProjects(api, apiNames);
         GenerateSolutionFile(api);
-        GenerateOwlBotConfiguration(api);
         GenerateMetadataFile(api);
     }
 
@@ -524,82 +514,6 @@ internal sealed class NonSourceGenerator
         File.WriteAllLines(file, allLines);
     }
 
-    private void GenerateOwlBotConfiguration(ApiMetadata api)
-    {
-        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
-        var owlBotConfigFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot.yaml");
-        var owlBotForceRegenerationFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot-ForceRegeneration.txt");
-
-        // If we're not using OwlBot, make sure we don't have any files for it.
-        if (!GenerateOwlBotConfig)
-        {
-            File.Delete(owlBotConfigFile);
-            File.Delete(owlBotForceRegenerationFile);
-            return;
-        }
-
-        // We will recreate this if necessary.
-        File.Delete(owlBotForceRegenerationFile);
-        if (api.Generator == GeneratorType.None)
-        {
-            // Clean up any previous OwlBot configuration
-            File.Delete(owlBotConfigFile);
-            return;
-        }
-        string content =
-$@"
-# Copyright {DateTime.UtcNow.Year} Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the ""License"");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an ""AS IS"" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-squash: true
-
-deep-remove-regex:
-    - /owl-bot-staging
-
-deep-copy-regex:
-    - source: /{api.ProtoPath}/.*-csharp/{api.Id}
-      dest: /owl-bot-staging/{api.Id}/{api.Id}
-    - source: /{api.ProtoPath}/.*-csharp/{api.Id}.Snippets
-      dest: /owl-bot-staging/{api.Id}/{api.Id}.Snippets
-    - source: /{api.ProtoPath}/.*-csharp/{api.Id}.GeneratedSnippets
-      dest: /owl-bot-staging/{api.Id}/{api.Id}.GeneratedSnippets
-    - source: /{api.ProtoPath}/.*-csharp/gapic_metadata.json
-      dest: /owl-bot-staging/{api.Id}/gapic_metadata.json
-
-api-name: {api.Id}
-";
-        File.WriteAllText(owlBotConfigFile, content);
-
-        var forceRegenerationReasons = new List<string>();
-        if (File.Exists(Path.Combine(apiLayout.TweaksDirectory, "pregeneration.sh")))
-        {
-            forceRegenerationReasons.Add("API requires pre-generation tweaks.");
-        }
-        if (api.CommonResourcesConfig is object)
-        {
-            forceRegenerationReasons.Add("API uses a custom resources configuration.");
-        }
-        if (api.ForceOwlBotRegeneration is string reason)
-        {
-            forceRegenerationReasons.Add(reason);
-        }
-        if (forceRegenerationReasons.Any())
-        {
-            File.WriteAllLines(owlBotForceRegenerationFile, forceRegenerationReasons);
-        }
-    }
-
     /// <summary>
     /// Generates a metadata file (currently .repo-metadata.json; may change name later) with
     /// all the information that language-agnostic tools require.
@@ -756,8 +670,6 @@ api-name: {api.Id}
         DeleteRelative($"{api.Id}.sln");
         DeleteRelative(".repo-metadata.json");
         DeleteRelative(".repo-metadata.json");
-        DeleteRelative(".OwlBot.yaml");
-        DeleteRelative(".OwlBot-ForceRegeneration.txt");
 
         DeleteProject(apiLayout.ProductionDirectory);
         DeleteProject(apiLayout.UnitTestsDirectory);
