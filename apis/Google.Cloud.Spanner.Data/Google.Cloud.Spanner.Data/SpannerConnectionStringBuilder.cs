@@ -1,10 +1,10 @@
-// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2025 Google LLC
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Apache License, Version 2.0 (the "License"):
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -45,6 +45,10 @@ namespace Google.Cloud.Spanner.Data
         /// The default value for <see cref="MaxConcurrentStreamsLowWatermark"/>.
         /// </summary>
         internal const int DefaultMaxConcurrentStreamsLowWatermark = 20;
+
+        internal const string DefaultDomain = "googleapis.com";
+        internal const string DefaultHost = $"spanner.{DefaultDomain}";
+        internal const int DefaultPort = 443;
 
         private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
@@ -253,6 +257,16 @@ namespace Google.Cloud.Spanner.Data
         public string EndPoint => $"{Host}:{Port}";
 
         /// <summary>
+        /// The endpoint to use to connect to Spanner. If not supplied in the
+        /// connection string, the default endpoint will be used.
+        /// </summary>
+        public string UniverseDomain
+        {
+            get => GetValueOrDefault(nameof(UniverseDomain), DefaultDomain);
+            set => this[nameof(UniverseDomain)] = value;
+        }
+
+        /// <summary>
         /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
         /// host will be used.
         /// </summary>
@@ -261,7 +275,7 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetValueOrDefault(nameof(Host), "spanner.googleapis.com");
+            get => GetValueOrDefault(nameof(Host), DefaultHost);
             set => this[nameof(Host)] = value;
         }
 
@@ -274,7 +288,7 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetInt32OrDefault(nameof(Port), 1, 65535, 443);
+            get => GetInt32OrDefault(nameof(Port), 1, 65535, DefaultPort);
             set => SetInt32WithValidation(nameof(Port), 1, 65535, value);
         }
 
@@ -605,19 +619,19 @@ namespace Google.Cloud.Spanner.Data
                 // TODO: Other validation? (For integer values etc?)
                 if (string.Equals(keyword, DataSourceKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    value = ValidatedDataSource((string)value);
+                    value = ValidatedDataSource((string) value);
                 }
                 else if (string.Equals(keyword, ClrToSpannerTypeDefaultMappingsKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    ConversionOptions = ConversionOptions.WithClrToSpannerMappings((string)value);
+                    ConversionOptions = ConversionOptions.WithClrToSpannerMappings((string) value);
                 }
                 else if (string.Equals(keyword, SpannerToClrTypeDefaultMappingsKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    ConversionOptions = ConversionOptions.WithSpannerToClrMappings((string)value);
+                    ConversionOptions = ConversionOptions.WithSpannerToClrMappings((string) value);
                 }
                 else if (string.Equals(keyword, UseClrDefaultForNullKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(bool.Parse((string)value));
+                    ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(bool.Parse((string) value));
                 }
                 base[keyword] = value;
             }
