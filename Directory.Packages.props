@@ -6,18 +6,18 @@
     
 
     <!-- Default GAX versions: these should typically be changed together -->
-    <PackageVersion Include="Google.Api.Gax" Version="[4.9.0, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Rest" Version="[4.9.0, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.9.0, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Testing" Version="[4.9.0, 5.0.0)" />
-    <PackageVersion Include="Google.Api.Gax.Grpc.Testing" Version="[4.9.0, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax" Version="[4.11.0, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Rest" Version="[4.11.0, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.11.0, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Testing" Version="[4.11.0, 5.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Grpc.Testing" Version="[4.11.0, 5.0.0)" />
     
     <!-- 
       - The Google.Protobuf version should usually be the one that
       - the current Google.Api.CommonProtos version depends on.
       -->
-    <PackageVersion Include="Google.Api.CommonProtos" Version="[2.16.0, 3.0.0)" />
-    <PackageVersion Include="Google.Protobuf" Version="3.28.2" />
+    <PackageVersion Include="Google.Api.CommonProtos" Version="[2.17.0, 3.0.0)" />
+    <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
 
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.assert" Version="2.9.3" />
