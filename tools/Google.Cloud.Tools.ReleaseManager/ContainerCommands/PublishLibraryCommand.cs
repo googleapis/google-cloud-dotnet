@@ -82,7 +82,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 var site = bits[0]; // e.g. googleapisdev or devsite
                 var siteUpper = site.ToUpperInvariant();
                 var bucket = GetRequiredEnvironmentVariable(DocsBucketEnvPrefix + siteUpper);
-                
+
                 bits[0] = "dotnet";
                 var destinationObject = string.Join("-", bits);
 
@@ -104,6 +104,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
             using var bundleStream = File.OpenRead(_file);
             Console.WriteLine($"Uploading {_destinationObject} to {_bucket}");
             var options = new UploadObjectOptions { IfGenerationMatch = 0, timeout = TimeSpan.FromMinutes(5) };
+            checkServiceAccount();
             try
             {
                 client.UploadObject(_bucket, _destinationObject, null, bundleStream, options);
@@ -112,6 +113,48 @@ public sealed class PublishLibraryCommand : IContainerCommand
             catch (GoogleApiException e) when (e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
             {
                 Console.WriteLine("Documentation bundle already exists. Continuing.");
+            }
+        }
+        
+        internal static void checkServiceAccount()
+        {
+            try
+            {
+                GoogleCredential credential = await GoogleCredential.GetApplicationDefaultAsync();
+
+                if (credential.IsCreateScopedRequired)
+                {
+                    // This might happen if the initial credential doesn't have sufficient scopes,
+                    // but the underlying credential source (e.g., service account) can be scoped.
+                    // For direct service account email, this often isn't strictly necessary.
+                    // However, it's good practice for general ADC usage.
+                    credential = credential.CreateScoped("https://www.googleapis.com/auth/cloud-platform"); // Or a more specific scope
+                }
+
+                // Check if the credential is a service account credential
+                if (credential.UnderlyingCredential is ServiceAccountCredential serviceAccountCredential)
+                {
+                    Console.WriteLine($"Application is authenticated as Service Account: {serviceAccountCredential.ClientEmail}");
+                }
+                else if (credential.UnderlyingCredential is UserCredential userCredential)
+                {
+                    Console.WriteLine($"Application is authenticated as User: {userCredential.UserId}");
+                }
+                else if (credential.UnderlyingCredential != null)
+                {
+                    Console.WriteLine($"Application is authenticated with an unknown credential type: {credential.UnderlyingCredential.GetType().Name}");
+                }
+                else
+                {
+                    Console.WriteLine("Could not determine credential type or no credentials found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                Console.WriteLine("This usually means no Application Default Credentials were found or configured.");
+                Console.WriteLine("Ensure you've run 'gcloud auth application-default login' locally,");
+                Console.WriteLine("or that a service account is attached to your Google Cloud instance.");
             }
         }
     }
