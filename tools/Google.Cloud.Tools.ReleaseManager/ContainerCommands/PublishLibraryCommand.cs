@@ -129,8 +129,13 @@ public sealed class PublishLibraryCommand : IContainerCommand
 
         internal static List<NuGetPackage> LoadPackages(string packageOutput)
         {
+            var packages = Directory.GetFiles(packageOutput, "*.nupkg");
+            // If we don't have any packages, we don't need an owners file.
+            if (packages.Length == 0)
+            {
+                return new List<NuGetPackage>();
+            }
             var packageOwner = File.ReadAllText(Path.Combine(packageOutput, PackageLibraryCommand.PackageOwnerFile));
-            var packages  = Directory.GetFiles(packageOutput, "*.nupkg");
             var apiKey = GetRequiredEnvironmentVariable(NuGetApiKeyEnvPrefix + packageOwner.ToUpperInvariant().Replace("-", "_"));
             return packages.Select(p => new NuGetPackage(apiKey, p)).ToList();
         }

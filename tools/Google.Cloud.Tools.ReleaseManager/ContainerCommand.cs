@@ -21,6 +21,17 @@ namespace Google.Cloud.Tools.ReleaseManager;
 
 public sealed class ContainerCommand : ICommand
 {
+    internal const string GenerateRaw = "generate-raw";
+    internal const string GenerateLibrary = "generate-library";
+    internal const string Clean = "clean";
+    internal const string BuildRaw = "build-raw";
+    internal const string BuildLibrary = "build-library";
+    internal const string Configure = "configure";
+    internal const string PrepareLibraryRelease = "prepare-library-release";
+    internal const string IntegrationTestLibrary = "integration-test-library";
+    internal const string PackageLibrary = "package-library";
+    internal const string PublishLibrary = "publish-library";
+
     public string Description => "Runs the specified container command, expected to be called from the generator CLI";
 
     public string Command => "container";
@@ -36,24 +47,30 @@ public sealed class ContainerCommand : ICommand
 
         IContainerCommand subcommand = args[0] switch
         {
-            "generate-raw" => new GenerateRawCommand(),
-            "generate-library" => new GenerateLibraryCommand(),
-            "clean" => new CleanCommand(),
-            "build-raw" => new BuildRawCommand(),
-            "build-library" => new BuildLibraryCommand(),
-            "configure" => new ConfigureCommand(),
-            "prepare-library-release" => new PrepareLibraryReleaseCommand(),
-            "integration-test-library" => new IntegrationTestLibraryCommand(),
-            "package-library" => new PackageLibraryCommand(),
-            "publish-library" => new PublishLibraryCommand(),
+            GenerateRaw => new GenerateRawCommand(),
+            GenerateLibrary => new GenerateLibraryCommand(),
+            Clean => new CleanCommand(),
+            BuildRaw => new BuildRawCommand(),
+            BuildLibrary => new BuildLibraryCommand(),
+            Configure => new ConfigureCommand(),
+            PrepareLibraryRelease => new PrepareLibraryReleaseCommand(),
+            IntegrationTestLibrary => new IntegrationTestLibraryCommand(),
+            PackageLibrary => new PackageLibraryCommand(),
+            PublishLibrary => new PublishLibraryCommand(),
             _ => throw new UserErrorException($"Unknown subcommand '{args[0]}'")
         };
 
         // All container commands have a very specific format for arguments - every argument is
         // --name=value. This allows us to do parsing just once.
         var options = ContainerOptions.FromArgs(args.Skip(1));
+
         try
         {
+            if (options.UtilityDocsName is not null)
+            {
+                return UtilityDocCommands.Execute(args[0], options);
+            }
+
             return subcommand.Execute(options);
         }
         catch (Exception e)
