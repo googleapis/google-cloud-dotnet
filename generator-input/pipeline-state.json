@@ -4134,56 +4134,34 @@
         {
             "id": "docs-help",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "apiPaths": [
-            ],
-            "sourcePaths": [
-            ]
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
         },
         {
             "id": "docs-gax",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "apiPaths": [
-            ],
-            "sourcePaths": [
-            ]
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
         },
         {
             "id": "docs-google-apis",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "apiPaths": [
-            ],
-            "sourcePaths": [
-            ]
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
         },
         {
             "id": "docs-grpc",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "apiPaths": [
-            ],
-            "sourcePaths": [
-            ]
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
         },
         {
             "id": "docs-protobuf",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "apiPaths": [
-            ],
-            "sourcePaths": [
-            ]
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
         },
         {
             "id": "docs-common-proto",
+            "currentVersion": "2.17.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "apiPaths": [
-            ],
-            "sourcePaths": [
-            ]
+            "releaseTimestamp": "2025-05-30T16:27:43.914268243Z"
         }
     ],
     "commonLibrarySourcePaths": [
