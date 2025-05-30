@@ -5365,7 +5365,6 @@
       "projects": [
         "BenchmarkingTool",
         "CleanTestData",
-        "CreateCommonTestBucket",
         "IntegrationTests",
         "RetryConformanceTests",
         "Snippets",
