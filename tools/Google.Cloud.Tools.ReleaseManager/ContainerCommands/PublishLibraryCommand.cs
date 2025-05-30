@@ -103,7 +103,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
             using var client = StorageClient.Create();
             using var bundleStream = File.OpenRead(_file);
             Console.WriteLine($"Uploading {_destinationObject} to {_bucket}");
-            var options = new UploadObjectOptions { IfGenerationMatch = 0 };
+            var options = new UploadObjectOptions { IfGenerationMatch = 0, timeout = TimeSpan.FromMinutes(5) };
             try
             {
                 client.UploadObject(_bucket, _destinationObject, null, bundleStream, options);
