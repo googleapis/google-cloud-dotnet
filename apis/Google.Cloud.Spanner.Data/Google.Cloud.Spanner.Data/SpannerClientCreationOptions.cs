@@ -93,7 +93,10 @@ namespace Google.Cloud.Spanner.Data
                 UniverseDomain = builder.UniverseDomain,
                 GoogleCredential = builder.GoogleCredential,
                 ChannelCredentials = builder.CredentialOverride,
-                Endpoint = builder.EndPoint,
+                // If Host and Port are default (i.e. not set by the customer),
+                // then set it to null and let EffectiveEndpoint in ClientBuilderBase figure out the endpoint
+                Endpoint = SpannerConnectionStringBuilder.DefaultHost.Equals(builder.Host)
+                && SpannerConnectionStringBuilder.DefaultPort.Equals(builder.Port) ? null : builder.EndPoint,
                 CredentialsPath = !string.IsNullOrEmpty(builder.CredentialFile) ? builder.CredentialFile : null,
                 UseJwtAccessWithScopes = true
             };
@@ -119,6 +122,8 @@ namespace Google.Cloud.Spanner.Data
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
+
+            Console.WriteLine($"Client options -- Endpoint={Endpoint}, UniverseDomain={UniverseDomain}");
         }
 
         internal Task<ChannelCredentials> EffectiveChannelCredentials

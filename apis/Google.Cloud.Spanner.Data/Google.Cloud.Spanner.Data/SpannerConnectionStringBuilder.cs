@@ -46,6 +46,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal const int DefaultMaxConcurrentStreamsLowWatermark = 20;
 
+        internal const string DefaultDomain = "googleapis.com";
+        internal const string DefaultHost = $"spanner.{DefaultDomain}";
+        internal const int DefaultPort = 443;
+
         private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
@@ -250,7 +254,7 @@ namespace Google.Cloud.Spanner.Data
         /// The endpoint to use to connect to Spanner. If not supplied in the
         /// connection string, the default endpoint will be used.
         /// </summary>
-        public string EndPoint => Host != null ? $"{Host}:{Port}" : null;
+        public string EndPoint => $"{Host}:{Port}";
 
         /// <summary>
         /// The endpoint to use to connect to Spanner. If not supplied in the
@@ -258,7 +262,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string UniverseDomain
         {
-            get => GetValueOrDefault(nameof(UniverseDomain), null);
+            get => GetValueOrDefault(nameof(UniverseDomain), DefaultDomain);
             set => this[nameof(UniverseDomain)] = value;
         }
 
@@ -268,14 +272,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string Host
         {
-            // If the Host is set, return the value.
-            // If not set, check if UniverseDomain is set and if set, Host is null to create Endpoint through UniverseDomain.
-            // Otherwise return the default googleapis host domain.
-            //
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetValueOrDefault(nameof(Host), UniverseDomain != null ? null : "spanner.googleapis.com");
+            get => GetValueOrDefault(nameof(Host), DefaultHost);
             set => this[nameof(Host)] = value;
         }
 
@@ -288,7 +288,7 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetInt32OrDefault(nameof(Port), 1, 65535, 443);
+            get => GetInt32OrDefault(nameof(Port), 1, 65535, DefaultPort);
             set => SetInt32WithValidation(nameof(Port), 1, 65535, value);
         }
 

@@ -144,6 +144,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "spanner.test-domain.test.goog:443")]
         [InlineData("Host=test-host;Port=567", null, "test-host:567")]
         [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "test-host:567")]
+        [InlineData("Data Spurce=projects/p1/instances/i1/databases/d1","googleapis.com","spanner.googleapis.com:443")]
         public void Equality_UniverseDomainAndEndpoint(string connectionString, string universeDomain, string expectedEndpoint)
         {
             //string universeDomain = "test-domain.test.goog";
