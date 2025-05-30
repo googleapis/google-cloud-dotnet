@@ -135,8 +135,28 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 // Check if the credential is a service account credential
                 if (credential.UnderlyingCredential is ServiceAccountCredential serviceAccountCredential)
                 {
-                  Console.WriteLine($"Application is authenticated as Service Account: {serviceAccountCredential.Id}");
-              }
+                    Console.WriteLine($"Application is authenticated as Service Account: {serviceAccountCredential.Id}");
+                }
+                else if (credential.UnderlyingCredential is ComputeCredential computeCredential)
+                {
+                    Console.WriteLine($"Application is authenticated using Compute Engine credentials.");
+                     string? defaultServiceAccountEmail = await computeCredential.GetDefaultServiceAccountEmailAsync();
+
+            if (!string.IsNullOrEmpty(defaultServiceAccountEmail))
+            {
+                Console.WriteLine($"Default GCE Service Account Email: {defaultServiceAccountEmail}");
+            }
+            else
+            {
+                Console.WriteLine("Could not retrieve default GCE service account email. " +
+                                  "This usually means the application is not running on a GCE VM, " +
+                                  "or the VM does not have a default service account configured.");
+            }
+                }
+                else if (credential.UnderlyingCredential is ImpersonatedCredential impersonatedCredential)
+                {
+                    Console.WriteLine($"Application is authenticated using Impersonated Credential for: {impersonatedCredential.TargetPrincipal}");
+                }
 
                 else if (credential.UnderlyingCredential != null)
                 {
