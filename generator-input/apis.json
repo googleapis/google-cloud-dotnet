@@ -5553,10 +5553,7 @@
       "serviceConfigFile": "jobs_v4beta1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest",
-      "includeCommonResourcesProto": true,
-      "projects": [
-        "CleanTestData"
-      ]
+      "includeCommonResourcesProto": true
     },
     {
       "id": "Google.Cloud.Tasks.V2",
