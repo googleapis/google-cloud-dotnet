@@ -116,7 +116,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
             }
         }
         
-        internal static void checkServiceAccount()
+        internal  async static void checkServiceAccount()
         {
             try
             {
