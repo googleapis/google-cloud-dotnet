@@ -22,7 +22,7 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 public class ContainerOptions
 {
-    private const string UtilityDocsLibraryPrefix = "docs-";
+    internal const string UtilityDocsLibraryPrefix = "docs-";
     internal const string ApiPathOption = "api-path";
     internal const string LibraryIdOption = "library-id";
     internal const string RepoRootOption = "repo-root";

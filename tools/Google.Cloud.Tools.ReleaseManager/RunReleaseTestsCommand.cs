@@ -58,6 +58,11 @@ public sealed class RunReleaseTestsCommand : CommandBase
 
             // Definitely in the release; test the library for this commit.
             var libraryId = GetReleaseLibrary(commit);
+            if (libraryId.StartsWith(ContainerOptions.UtilityDocsLibraryPrefix, StringComparison.Ordinal))
+            {
+                Console.WriteLine($"Skipping integration tests for {libraryId}; it's a docs package.");
+                continue;
+            }
             Console.WriteLine($"Testing {libraryId} at {commit.Sha}");
 
             Commands.Checkout(repo, commit.Sha);
