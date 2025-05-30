@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.16.0" />
     <PackageReference Include="LibGit2Sharp" />
     <PackageReference Include="NuGet.Protocol" />
     <PackageReference Include="Octokit" />
@@ -19,7 +18,10 @@
      - this binary refers to. Without this, we end up loading the netstandard2.0 TFM
      - for libraries which target that, and that then fails to use the channel.
      -->
-    <PackageReference Include="Grpc.Net.Client" VersionOverride="2.66.0" />
+    <PackageReference Include="Grpc.Net.Client" VersionOverride="2.71.0" />
+
+    <!-- Ensure that we've got the default version of GAX available. -->
+    <PackageReference Include="Google.Api.Gax.Grpc" />
 
     <!--
       - Used to publish documentation. It doesn't matter if this ends up being fairly stale,
