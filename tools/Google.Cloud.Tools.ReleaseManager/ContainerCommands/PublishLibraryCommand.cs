@@ -140,7 +140,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 else if (credential.UnderlyingCredential is ComputeCredential computeCredential)
                 {
                     Console.WriteLine($"Application is authenticated using Compute Engine credentials.");
-                     string? defaultServiceAccountEmail = await computeCredential.GetDefaultServiceAccountEmailAsync();
+                     string defaultServiceAccountEmail = await computeCredential.GetDefaultServiceAccountEmailAsync();
 
             if (!string.IsNullOrEmpty(defaultServiceAccountEmail))
             {
