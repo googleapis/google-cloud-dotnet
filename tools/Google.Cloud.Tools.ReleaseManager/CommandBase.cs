@@ -15,7 +15,6 @@
 using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
@@ -82,20 +81,6 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// <param name="args">The command line arguments other than the command name.
         /// This will have been validated to have the expected number of arguments.</param>
         protected abstract int ExecuteImpl(string[] args);
-
-        protected List<ApiVersionPair> FindChangedVersions()
-        {
-            var currentCatalog = ApiCatalog.Load(RootLayout);
-            var primaryCatalog = LoadPrimaryCatalog();
-            var currentVersions = currentCatalog.CreateRawVersionMap();
-            var primaryVersions = primaryCatalog.CreateRawVersionMap();
-            return currentVersions.Keys.Concat(primaryVersions.Keys)
-                .Distinct()
-                .OrderBy(id => id)
-                .Select(id => new ApiVersionPair(id, primaryVersions.GetValueOrDefault(id), currentVersions.GetValueOrDefault(id)))
-                .Where(v => v.NewVersion != v.OldVersion)
-                .ToList();
-        }
 
         protected ApiCatalog LoadPrimaryCatalog()
         {
