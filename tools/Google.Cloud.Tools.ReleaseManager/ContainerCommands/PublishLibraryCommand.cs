@@ -135,7 +135,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 // Check if the credential is a service account credential
                 if (credential.UnderlyingCredential is ServiceAccountCredential serviceAccountCredential)
                 {
-                  Console.WriteLine($"Application is authenticated as Service Account: {serviceAccountCredential.ServiceAccountEmail}");
+                  Console.WriteLine($"Application is authenticated as Service Account: {serviceAccountCredential.Id}");
               }
 
                 else if (credential.UnderlyingCredential != null)
