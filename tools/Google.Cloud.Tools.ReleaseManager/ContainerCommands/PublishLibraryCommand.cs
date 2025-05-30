@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using Google.Apis.Auth.OAuth2;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
@@ -103,7 +104,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
             using var client = StorageClient.Create();
             using var bundleStream = File.OpenRead(_file);
             Console.WriteLine($"Uploading {_destinationObject} to {_bucket}");
-            var options = new UploadObjectOptions { IfGenerationMatch = 0, timeout = TimeSpan.FromMinutes(5) };
+            var options = new UploadObjectOptions { IfGenerationMatch = 0 };
             checkServiceAccount();
             try
             {
