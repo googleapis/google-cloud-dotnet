@@ -4,7 +4,7 @@
     <Version>1.0.0-beta01</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Model Armor API, helps you protect against risks like prompt injection, harmful content, and data leakage in generative AI applications by letting you define policies that filter user prompts and model responses.</Description>
+    <Description>Recommended Google client library to access the Model Armor API (v1), which helps you protect against risks like prompt injection, harmful content, and data leakage in generative AI applications by letting you define policies that filter user prompts and model responses.</Description>
     <PackageTags>ai;security;safety;llm;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>

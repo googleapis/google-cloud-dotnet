@@ -37,7 +37,7 @@
     <PackageVersion Include="Octokit" Version="14.0.0" />
     <PackageVersion Include="GitHubJwt" Version="0.0.6" />
     <PackageVersion Include="Mono.Cecil" Version="0.11.6" />
-    <PackageVersion Include="System.Collections.Immutable" Version="6.0.0" />
+    <PackageVersion Include="System.Collections.Immutable" Version="6.0.1" />
     <PackageVersion Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
     <PackageVersion Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" />
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.12" />

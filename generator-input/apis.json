@@ -1974,7 +1974,7 @@
       ],
       "dependencies": {
         "Google.LongRunning": "3.3.0",
-        "System.Linq.Async": "6.0.1"
+        "System.Linq.Async": "default"
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
@@ -2663,8 +2663,8 @@
       "dependencies": {
         "Google.Cloud.Firestore.V1": "project",
         "Grpc.Core": "2.46.6",
-        "System.Collections.Immutable": "6.0.0",
-        "System.Linq.Async": "6.0.1"
+        "System.Collections.Immutable": "default",
+        "System.Linq.Async": "default"
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
