@@ -207,12 +207,6 @@ namespace Google.Cloud.Tools.Common
         public string CommonResourcesConfig { get; set; }
 
         /// <summary>
-        /// Reason to force local regeneration of the API in OwlBot PRs, due to some corner case.
-        /// This reason ends up in the .OwlBot-ForceRegeneration.txt file.
-        /// </summary>
-        public string ForceOwlBotRegeneration { get; set; }
-
-        /// <summary>
         /// Indicates whether the given package name denotes a Cloud API, documented on cloud.google.com.
         /// Note that this is only expected to "know" about API libraries, not support libraries (GAX, protobuf etc).
         /// </summary>

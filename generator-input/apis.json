@@ -3010,7 +3010,6 @@
       "dependencies": {
         "Google.Api.Gax.Grpc": "default"
       },
-      "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place.",
       "serviceConfigFile": "iam_meta_api.yaml",
       "includeCommonResourcesProto": false,
       "projects": [
@@ -4113,7 +4112,6 @@
         "Google.Api.Gax": "default"
       },
       "noVersionHistory": true,
-      "forceOwlBotRegeneration": "OsLogin Common proto is generated in the wrong place.",
       "serviceConfigFile": "none",
       "includeCommonResourcesProto": false
     },
@@ -4133,7 +4131,6 @@
       "dependencies": {
         "Google.Cloud.OsLogin.Common": "3.3.0"
       },
-      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
       "serviceConfigFile": "oslogin_v1.yaml",
       "restNumericEnums": true,
@@ -4157,7 +4154,6 @@
       "dependencies": {
         "Google.Cloud.OsLogin.Common": "3.3.0"
       },
-      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
       "serviceConfigFile": "oslogin_v1beta.yaml",
       "restNumericEnums": true,
@@ -6301,7 +6297,6 @@
       "testDependencies": {
         "Google.Api.Gax.Testing": "default"
       },
-      "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
       "serviceConfigFile": "longrunning.yaml",
       "includeCommonResourcesProto": false,
       "projects": [
