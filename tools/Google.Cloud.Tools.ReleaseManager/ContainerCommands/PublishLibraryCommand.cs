@@ -136,10 +136,7 @@ public sealed class PublishLibraryCommand : IContainerCommand
                 {
                     Console.WriteLine($"Application is authenticated as Service Account: {serviceAccountCredential.ClientEmail}");
                 }
-                else if (credential.UnderlyingCredential is UserCredential userCredential)
-                {
-                    Console.WriteLine($"Application is authenticated as User: {userCredential.UserId}");
-                }
+
                 else if (credential.UnderlyingCredential != null)
                 {
                     Console.WriteLine($"Application is authenticated with an unknown credential type: {credential.UnderlyingCredential.GetType().Name}");
