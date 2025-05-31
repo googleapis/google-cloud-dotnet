@@ -76,7 +76,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
                 { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
                 { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
-                
+
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
                 { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
