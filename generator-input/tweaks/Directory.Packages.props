@@ -9,7 +9,7 @@
     <PackageVersion Include="Google.Protobuf" Version="3.28.2"/>
     <PackageVersion Include="Microsoft.Build.Locator" Version="1.7.8" />
     
-    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
     
     <!-- 
       - Note: do not upgrade 4.8.0 until we're using .NET SDK v8
