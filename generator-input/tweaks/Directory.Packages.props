@@ -3,27 +3,13 @@
     <PackageVersion Include="Grpc.Core" Version="[2.46.6, 3.0.0)" />
     <PackageVersion Include="Grpc.Core.Testing" Version="[2.46.6, 3.0.0)" />
     
-    <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.9.0, 5.0.0)" />    
-    <PackageVersion Include="Google.Api.CommonProtos" Version="[2.16.0, 3.0.0)" />
+    <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.11.0, 5.0.0)" />
+    <PackageVersion Include="Google.Api.CommonProtos" Version="[2.17.0, 3.0.0)" />
     <PackageVersion Include="Google.LongRunning" Version="[3.3.0, 4.0.0)" />
     <PackageVersion Include="Google.Protobuf" Version="3.31.1"/>
-    <PackageVersion Include="Microsoft.Build.Locator" Version="1.7.8" />
     
-    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" />
-    
-    <!-- 
-      - Note: do not upgrade 4.8.0 until we're using .NET SDK v8
-      - or https://github.com/dotnet/roslyn/issues/71784 is fixed.
-      - See b/328172159 as an example of the failure.
-      -->
-    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.8.0" />
-
-    <!--
-      - For some reason, the above packages introduce a dependency somewhere on version 3.0.3
-      - of Microsoft.Extensions.Logging.Abstractions, so MSBuild gets confused. It's simplest
-      - to just specify v6 ourselves.
-      -->
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.4" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.14.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.14.0" />
   </ItemGroup>
 </Project>
