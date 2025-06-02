@@ -252,7 +252,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T18:00:27Z",
-            "lastGeneratedCommit": "2f91d30c7b594bb6693d1306c60590267b54446a",
+            "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/cloud/apigateway/v1"
             ],
