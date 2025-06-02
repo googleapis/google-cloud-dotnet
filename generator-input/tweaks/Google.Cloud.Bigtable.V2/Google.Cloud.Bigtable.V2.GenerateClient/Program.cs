@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Microsoft.Build.Locator;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -29,7 +28,7 @@ using System.Threading.Tasks;
 
 using static Google.Cloud.Bigtable.V2.GenerateClient.RoslynHelpers;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
-using gax = Google.Api.Gax;
+using GAX = Google.Api.Gax;
 
 namespace Google.Cloud.Bigtable.V2.GenerateClient
 {
@@ -109,7 +108,6 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             var apiClientName = args[1];
             var userClientName = args[2];
 
-            MSBuildLocator.RegisterDefaults();
             var workspace = MSBuildWorkspace.Create(new Dictionary<string, string> { ["TargetFramework"] = "net45" });
 
             Project project;
@@ -207,7 +205,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                             var clientImplSyncMethod = clientImplMethod.WithBodySafe(
                                 Task().Member(nameof(System.Threading.Tasks.Task.Run))
                                     .Invoke(Lambda(asyncMethod.Invoke(clientImplMethod.ParameterList.AsArguments())))
-                                    .Member(nameof(gax::TaskExtensions.ResultWithUnwrappedExceptions)).Invoke());
+                                    .Member(nameof(GAX::TaskExtensions.ResultWithUnwrappedExceptions)).Invoke());
                             userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplSyncMethod);
 
                             var clientImplAsyncMethod = clientImplMethod.ToAsync();
@@ -240,7 +238,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             // copyright notice and generated code warnings in its leading trivia.
             // We also need a using directive for GAX, so that we can use ResultWithUnwrappedExceptions.
             var usings = syntaxTree.GetCompilationUnitRoot().Usings
-                .Add(UsingDirective(ParseName(typeof(gax::TaskExtensions).Namespace)));
+                .Add(UsingDirective(ParseName(typeof(GAX::TaskExtensions).Namespace)));
             var compilationUnit = CompilationUnit().WithUsings(usings);
 
             // Add in the namespace with the ...Client and ...ClientImpl classes.
