@@ -11,7 +11,7 @@
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
     <PackageReference Include="Google.Cloud.ErrorReporting.V1Beta1" VersionOverride="[3.0.0-beta03, 4.0.0)" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" VersionOverride="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NSubstitute" />
     <PackageReference Include="System.Linq.Async" />

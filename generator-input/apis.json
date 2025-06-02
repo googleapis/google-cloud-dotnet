@@ -2198,13 +2198,13 @@
         "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.Logging.V2": "4.4.0",
         "Google.Cloud.Trace.V1": "3.4.0",
-        "Microsoft.Extensions.Http": "6.0.0",
-        "System.Diagnostics.StackTrace": "4.3.0"
+        "Microsoft.Extensions.Http": "default",
+        "System.Diagnostics.StackTrace": "default"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default",
         "Google.Cloud.ErrorReporting.V1Beta1": "3.0.0-beta03",
-        "Microsoft.Extensions.Hosting": "6.0.1"
+        "Microsoft.Extensions.Hosting": "default"
       },
       "projects": [
         "IntegrationTests",
@@ -3310,7 +3310,7 @@
         "Console"
       ],
       "dependencies": {
-        "Microsoft.Extensions.Logging.Console": "6.0.1"
+        "Microsoft.Extensions.Logging.Console": "default"
       },
       "projects": [
         "Tests",
@@ -4397,9 +4397,9 @@
       "testDependencies": {
         "Google.Api.Gax.Testing": "default",
         "Google.Apis.CloudResourceManager.v1": "1.68.0.3356",
-        "Microsoft.Extensions.DependencyInjection": "6.0.1",
-        "Microsoft.Extensions.Hosting": "6.0.1",
-        "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
+        "Microsoft.Extensions.DependencyInjection": "default",
+        "Microsoft.Extensions.Hosting": "default",
+        "Microsoft.Extensions.Hosting.Abstractions": "default",
         "System.ValueTuple": "default",
         "Xunit.Combinatorial": "default"
       },
@@ -5183,13 +5183,13 @@
         "Google.Cloud.Spanner.Admin.Instance.V1": "project",
         "Google.Cloud.Spanner.V1": "project",
         "Grpc.Core": "default",
-        "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        "Microsoft.Extensions.Configuration.Abstractions": "default"
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Api.Gax.Testing": "default",
-        "Microsoft.Extensions.Configuration": "6.0.1",
-        "Microsoft.Extensions.DependencyInjection": "6.0.1",
+        "Microsoft.Extensions.Configuration": "default",
+        "Microsoft.Extensions.DependencyInjection": "default",
         "System.ValueTuple": "default",
         "Xunit.Combinatorial": "default"
       },
