@@ -164,7 +164,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-30T12:46:31.911768652Z",
-            "lastGeneratedCommit": "07daa3dc9b190ab871d93614efee10c02d786245",
+            "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "lastReleasedCommit": "07daa3dc9b190ab871d93614efee10c02d786245",
             "apiPaths": [
                 "google/area120/tables/v1alpha1"
