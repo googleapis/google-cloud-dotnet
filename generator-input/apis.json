@@ -144,7 +144,7 @@
       "type": "grpc",
       "productName": "Google Workspace Events",
       "productUrl": "https://developers.google.com/workspace/events",
-      "description": "The Google Workspace Events API lets you subscribe to events and manage change notifications across Google Workspace applications.",
+      "description": "The Google Workspace Events API (v1) lets you subscribe to events and manage change notifications across Google Workspace applications.",
       "tags": [
         "events",
         "workspace"
@@ -157,6 +157,28 @@
       "includeCommonResourcesProto": true,
       "shortName": "workspaceevents",
       "serviceConfigFile": "workspaceevents_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
+      "id": "Google.Apps.Events.Subscriptions.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Workspace Events",
+      "productUrl": "https://developers.google.com/workspace/events",
+      "description": "The Google Workspace Events API (v1beta) lets you subscribe to events and manage change notifications across Google Workspace applications.",
+      "tags": [
+        "events",
+        "workspace"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/apps/events/subscriptions/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "workspaceevents",
+      "serviceConfigFile": "workspaceevents_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
