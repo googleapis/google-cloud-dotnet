@@ -21,6 +21,7 @@ using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.IO;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,14 +34,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal sealed class SpannerClientCreationOptions : IEquatable<SpannerClientCreationOptions>
     {
-        private static readonly Lazy<Task<ChannelCredentials>> s_defaultCredentialsTaskProvider = new Lazy<Task<ChannelCredentials>>(CreatedScopedDefaultCredentials);
-
-        private static async Task<ChannelCredentials> CreatedScopedDefaultCredentials()
-        {
-            var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            return ConvertGoogleCredential(appDefaultCredentials);
-        }
-
         /// <summary>
         /// The gRPC adapter to create clients with; never null.
         /// </summary>
@@ -79,28 +72,44 @@ namespace Google.Cloud.Spanner.Data
         // are non-null (which should only happen when connecting to the emulator)
         private readonly GoogleCredential _googleCredential;
 
-        private string EffectiveUniverseEndpoint { get; }
         internal string UniverseDomain { get; }
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            var emulatorBuilder = new SpannerClientBuilder
+            var gcpCallInvokerBuilder = new GcpCallInvokerBuilder
             {
+                UniverseDomain = builder.UniverseDomain,
+                GoogleCredential = builder.GoogleCredential,
+                ChannelCredentials = builder.CredentialOverride,
+                // If Host and Port are default (i.e. not set by the customer),
+                // then set it to null and let EffectiveEndpoint in ClientBuilderBase figure out the endpoint
+                Endpoint = SpannerConnectionStringBuilder.DefaultHost.Equals(builder.Host)
+                && SpannerConnectionStringBuilder.DefaultPort.Equals(builder.Port) ? null : builder.EndPoint,
+                CredentialsPath = !string.IsNullOrEmpty(builder.CredentialFile) ? builder.CredentialFile : null,
+                UseJwtAccessWithScopes = true,
                 EmulatorDetection = builder.EmulatorDetection,
                 EnvironmentVariableProvider = builder.EnvironmentVariableProvider
-            }.MaybeCreateEmulatorClientBuilder();
-            UsesEmulator = emulatorBuilder is object;
-            // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
-            Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
-            _credentialsFile = builder.CredentialFile;
+            };
+
+            // Set special emulator properties if necessary
+            gcpCallInvokerBuilder.MaybeSetEmulatorProperties();
+            UsesEmulator = gcpCallInvokerBuilder.UseEmulator;
+
+            Endpoint = gcpCallInvokerBuilder.UseEmulator ? gcpCallInvokerBuilder.Endpoint : gcpCallInvokerBuilder.InvokerEffectiveEndpoint;
+            _credentialsFile = gcpCallInvokerBuilder.CredentialsPath;
 
             // If the client connects to the emulator, use its credentials (regardless of builder.CredentialOverride)
-            _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? builder.CredentialOverride;
-            _googleCredential = builder.GoogleCredential;
+            _credentialsOverride = gcpCallInvokerBuilder.ChannelCredentials;
+            _googleCredential = gcpCallInvokerBuilder.GoogleCredential;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
             LeaderRoutingEnabled = builder.EnableLeaderRouting;
             DirectedReadOptions = builder.DirectedReadOptions;
+
+            // Set UniverseDomain related properties
+            UniverseDomain = gcpCallInvokerBuilder.UniverseDomain;
+            // This sets a task, callers on the EffectiveChannelCredentials responsible for waiting for the result of this task
+            EffectiveChannelCredentials = gcpCallInvokerBuilder.CheckAndGetChannelCredentials();
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
@@ -201,48 +210,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 return _credentialsOverride;
             }
-            if (_googleCredential is not null)
-            {
-                return ConvertGoogleCredential(_googleCredential);
-            }
-            if (string.IsNullOrEmpty(_credentialsFile))
-            {
-                return await s_defaultCredentialsTaskProvider.Value.ConfigureAwait(false);
-            }
 
-            string file = _credentialsFile;
-            string extension = Path.GetExtension(file);
-            if (!extension.Equals(".json", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new InvalidOperationException($"{nameof(SpannerConnectionStringBuilder.CredentialFile)} should only be set to a JSON file.");
-            }
-
-            if (!File.Exists(file) && !Path.IsPathRooted(file))
-            {
-                string applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-                // Try to find a file relative to the application's base directory.
-                file = Path.Combine(applicationFolder, file);
-                if (!File.Exists(file))
-                {
-                    // throw a meaningful error that tells the developer where we looked.
-                    throw new FileNotFoundException($"Could not find {_credentialsFile}. (Also looked for {file})");
-                }
-            }
-
-            var credential = await GoogleCredential.FromFileAsync(file, cancellationToken: default).ConfigureAwait(false);
-            return ConvertGoogleCredential(credential);
-        }
-
-        private static ChannelCredentials ConvertGoogleCredential(GoogleCredential credential)
-        {
-            credential = credential.CreateScoped(SpannerClient.DefaultScopes);
-            // Use self-signed JWTs for service accounts.
-            if (credential.UnderlyingCredential is ServiceAccountCredential serviceCredential)
-            {
-                credential = GoogleCredential.FromServiceAccountCredential(serviceCredential.WithUseJwtAccessWithScopes(true));
-            }
-            return credential.ToChannelCredentials();
+            // ClientBuilderBase should take care of fetching right creds GoogleCredentials, file based creds or application default creds
+            var creds = await EffectiveChannelCredentials.ConfigureAwait(false);
+            return creds;
         }
 
         internal class GcpCallInvokerBuilder : ClientBuilderBase<SpannerClient>
