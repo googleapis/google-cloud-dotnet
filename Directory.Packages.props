@@ -44,7 +44,7 @@
     <PackageVersion Include="Xunit.Combinatorial" Version="1.6.24" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.1" />
     <PackageVersion Include="log4net" Version="2.0.17" />
-    <PackageVersion Include="NLog" Version="5.4.0" />
+    <PackageVersion Include="NLog" Version="5.5.0" />
     <PackageVersion Include="Grpc.AspNetCore" Version="2.40.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Server.Kestrel.Core" Version="2.3.0" />
   </ItemGroup>
