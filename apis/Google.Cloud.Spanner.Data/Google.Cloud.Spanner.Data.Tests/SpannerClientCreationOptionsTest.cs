@@ -114,20 +114,23 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.NotNull(await options.GetCredentialsAsync());
         }
 
-        [Fact]
-        public void CredentialFileP12Error()
-        {
-            var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
-            // Exception will be thrown if bad CredentialFile is set while creating the client options itself
-            Assert.Throws<InvalidOperationException>(() => new SpannerClientCreationOptions(builder));
-        }
+        // We can remove this test as we use in built creds validation capability of Auth library and that takes care of those unit tests
+        //[Fact]
+        //public async Task CredentialFileP12Error()
+        //{
+        //    var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
+        //    // Exception will be thrown if bad CredentialFile is set while creating the client options itself
+        //    //Assert.Throws<InvalidOperationException>(() => new SpannerClientCreationOptions(builder));
+        //    var options = new SpannerClientCreationOptions(builder);
+        //    await Assert.ThrowsAsync<InvalidOperationException>(() => options.GetCredentialsAsync());
+        //}
 
         [Fact]
-        public void CredentialFileNotFound()
+        public async Task CredentialFileNotFound()
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
-            // Exception will be thrown if bad CredentialFile is set while creating the client options itself
-            Assert.Throws<FileNotFoundException>(() => new SpannerClientCreationOptions(builder));
+            var options = new SpannerClientCreationOptions(builder);
+            await Assert.ThrowsAsync<FileNotFoundException>(() => options.GetCredentialsAsync());
         }
 
         [Fact]
@@ -140,18 +143,18 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Theory]
-        // InlineData format: ConnectionString, UniverseDomain, ExpectedEndpoint 
+        // InlineData format: ConnectionString, ExpectedUniverseDomain, ExpectedEndpoint 
         [InlineData("UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "spanner.test-domain.test.goog:443")]
-        [InlineData("Host=test-host;Port=567", null, "test-host:567")]
+        [InlineData("Host=test-host;Port=567", "googleapis.com", "test-host:567")]
         [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "test-host:567")]
         [InlineData("Data Spurce=projects/p1/instances/i1/databases/d1","googleapis.com","spanner.googleapis.com:443")]
-        public void Equality_UniverseDomainAndEndpoint(string connectionString, string universeDomain, string expectedEndpoint)
+        public void Equality_UniverseDomainAndEndpoint(string connectionString, string expectedUniverseDomain, string expectedEndpoint)
         {
             //string universeDomain = "test-domain.test.goog";
             var builder = new SpannerConnectionStringBuilder(connectionString);
             var options = new SpannerClientCreationOptions(builder);
 
-            Assert.Equal(universeDomain, options.UniverseDomain);
+            Assert.Equal(expectedUniverseDomain, options.UniverseDomain);
             Assert.Equal(expectedEndpoint, options.Endpoint);
         }
     }

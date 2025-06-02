@@ -12,17 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
 using Grpc.Core;
+using Grpc.Net.Client;
 using System;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using GrpcChannelOptions = Google.Api.Gax.Grpc.GrpcChannelOptions;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -76,19 +80,7 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            var emulatorBuilder = new SpannerClientBuilder
-            {
-                EmulatorDetection = builder.EmulatorDetection,
-                EnvironmentVariableProvider = builder.EnvironmentVariableProvider
-            }.MaybeCreateEmulatorClientBuilder();
-            UsesEmulator = emulatorBuilder is object;
-
-            if(!string.IsNullOrEmpty(builder.CredentialFile))
-            {
-                ValidateCredentialsFileOrThrow(builder.CredentialFile);
-            }
-
-            var gcpCallInvokerBuilder = new GcpCallInvokerConfigBuilder
+            var gcpCallInvokerBuilder = new GcpCallInvokerBuilder
             {
                 UniverseDomain = builder.UniverseDomain,
                 GoogleCredential = builder.GoogleCredential,
@@ -98,16 +90,22 @@ namespace Google.Cloud.Spanner.Data
                 Endpoint = SpannerConnectionStringBuilder.DefaultHost.Equals(builder.Host)
                 && SpannerConnectionStringBuilder.DefaultPort.Equals(builder.Port) ? null : builder.EndPoint,
                 CredentialsPath = !string.IsNullOrEmpty(builder.CredentialFile) ? builder.CredentialFile : null,
-                UseJwtAccessWithScopes = true
+                UseJwtAccessWithScopes = true,
+                EmulatorDetection = builder.EmulatorDetection,
+                EnvironmentVariableProvider = builder.EnvironmentVariableProvider
             };
+
+            // Set special emulator properties if necessary
+            gcpCallInvokerBuilder.MaybeSetEmulatorProperties();
+            UsesEmulator = gcpCallInvokerBuilder.UseEmulator;
 
 
             // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
-            Endpoint = emulatorBuilder?.Endpoint ?? gcpCallInvokerBuilder.InvokerEffectiveEndpoint;
+            Endpoint = gcpCallInvokerBuilder.UseEmulator ? gcpCallInvokerBuilder.Endpoint : gcpCallInvokerBuilder.InvokerEffectiveEndpoint;
             _credentialsFile = gcpCallInvokerBuilder.CredentialsPath;
 
             // If the client connects to the emulator, use its credentials (regardless of builder.CredentialOverride)
-            _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? gcpCallInvokerBuilder.ChannelCredentials;
+            _credentialsOverride = gcpCallInvokerBuilder.ChannelCredentials;
             _googleCredential = gcpCallInvokerBuilder.GoogleCredential;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
@@ -126,21 +124,50 @@ namespace Google.Cloud.Spanner.Data
             Console.WriteLine($"Client options -- Endpoint={Endpoint}, UniverseDomain={UniverseDomain}");
         }
 
+        internal async Task<GcpCallInvoker> GetGcpCallInvoker(MethodConfig[] methodConfigs, GrpcChannelOptions grpcChannelOptions)
+        {
+            var credentials = await GetCredentialsAsync().ConfigureAwait(false);
+
+            var apiConfig = new ApiConfig
+            {
+                ChannelPool = new ChannelPoolConfig
+                {
+                    MaxSize = (uint) MaximumGrpcChannels,
+                    MaxConcurrentStreamsLowWatermark = MaximumConcurrentStreamsLowWatermark
+                },
+                Method = { methodConfigs }
+            };
+
+            return new GcpCallInvoker(SpannerClient.ServiceMetadata, Endpoint, credentials, grpcChannelOptions, apiConfig, GrpcAdapter);
+        }
+
         internal Task<ChannelCredentials> EffectiveChannelCredentials
         {
             get;
             set;
         }
 
-        internal class GcpCallInvokerConfigBuilder : ClientBuilderBase<SpannerClient>
+        internal class GcpCallInvokerBuilder : ClientBuilderBase<SpannerClient>
         {
-            public GcpCallInvokerConfigBuilder() : base(SpannerClient.ServiceMetadata)
+            private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
+            private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+            public GcpCallInvokerBuilder() : base(SpannerClient.ServiceMetadata)
             {
             }
 
             public override SpannerClient Build() => throw new NotImplementedException();
 
             internal string InvokerEffectiveEndpoint => base.EffectiveEndpoint;
+
+            internal new EmulatorDetection EmulatorDetection
+            {
+                get => base.EmulatorDetection;
+                set => base.EmulatorDetection = value;
+            }
+
+            internal Boolean UseEmulator { get; set; }
+
+            internal Func<string, string> EnvironmentVariableProvider { get; set; }
 
             internal async Task<ChannelCredentials> CheckAndGetChannelCredentials()
             {
@@ -149,6 +176,23 @@ namespace Google.Cloud.Spanner.Data
 
             public override Task<SpannerClient> BuildAsync(CancellationToken cancellationToken = default) => throw new NotImplementedException();
             protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
+
+            internal void MaybeSetEmulatorProperties()
+            {
+                var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables, EnvironmentVariableProvider);
+                if (emulatorEnvironment is null)
+                {
+                    UseEmulator = false;
+                    return;
+                }
+
+                // Set Emulator based properties on this builder object
+                UseEmulator = true;
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable];
+                ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure;
+
+                // Settings = ? Check if we need to set any more SpannerSettings here.
+            }
         }
 
 

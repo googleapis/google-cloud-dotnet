@@ -344,15 +344,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder($"UniverseDomain={universeDomain}");
 
             Assert.Equal(universeDomain, builder.UniverseDomain);
-            Assert.Null(builder.Host);
-            Assert.Null(builder.EndPoint);
+            Assert.Equal(SpannerConnectionStringBuilder.DefaultHost, builder.Host);
+            Assert.Equal($"{SpannerConnectionStringBuilder.DefaultHost}:{SpannerConnectionStringBuilder.DefaultPort}",builder.EndPoint);
 
             string host = "h1";
-            string port = "p1";
+            string port = "567";
             builder = new SpannerConnectionStringBuilder($"Host={host};Port={port};UniverseDomain={universeDomain}");
 
             Assert.Equal(host,builder.Host);
-            Assert.NotNull(builder.EndPoint);
+            Assert.Equal($"{host}:{port}",builder.EndPoint);
         }
     }
 }
