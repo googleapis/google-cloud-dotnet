@@ -11,9 +11,9 @@
     <PackageReference Include="Google.Apis.CloudResourceManager.v1" VersionOverride="[1.68.0.3356, 2.0.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" VersionOverride="6.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" VersionOverride="6.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" VersionOverride="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NSubstitute" />
     <PackageReference Include="System.Linq.Async" />

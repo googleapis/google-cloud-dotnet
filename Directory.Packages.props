@@ -19,6 +19,16 @@
     <PackageVersion Include="Google.Api.CommonProtos" Version="[2.17.0, 3.0.0)" />
     <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
 
+    <!-- MS Extensions packages -->    
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="6.0.2" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version= "6.0.1" />
+
+    <!-- Misc packages (might warrant a reorganization at some point) -->
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.assert" Version="2.9.3" />
     <PackageVersion Include="xunit.core" Version="2.9.3" />
@@ -42,6 +52,7 @@
     <PackageVersion Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" />
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.12" />
     <PackageVersion Include="Xunit.Combinatorial" Version="1.6.24" />
+    <PackageVersion Include="System.Diagnostics.StackTrace" Version="4.3.0" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.1" />
     <PackageVersion Include="log4net" Version="2.0.17" />
     <PackageVersion Include="NLog" Version="5.5.0" />
