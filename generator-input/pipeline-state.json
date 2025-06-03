@@ -422,7 +422,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-28T17:36:29Z",
-            "lastGeneratedCommit": "0508422394f552e96680f5536f3bd9f23b37100d",
+            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/asset/v1"
             ],
