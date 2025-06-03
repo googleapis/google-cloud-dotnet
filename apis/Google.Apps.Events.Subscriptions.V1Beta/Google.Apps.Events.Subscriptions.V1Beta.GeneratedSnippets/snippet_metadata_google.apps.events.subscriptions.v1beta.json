@@ -1,0 +1,1475 @@
+{
+  "clientLibrary": {
+    "name": "Google.Apps.Events.Subscriptions.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.apps.events.subscriptions.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_CreateSubscription_sync",
+      "title": "CreateSubscriptionRequestObject",
+      "description": "Snippet for CreateSubscription",
+      "file": "SubscriptionsServiceClient.CreateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.CreateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.CreateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.CreateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_CreateSubscription_async",
+      "title": "CreateSubscriptionRequestObjectAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.CreateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.CreateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.CreateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.CreateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.CreateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_CreateSubscription_sync_flattened",
+      "title": "CreateSubscription",
+      "description": "Snippet for CreateSubscription",
+      "file": "SubscriptionsServiceClient.CreateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.CreateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.CreateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_CreateSubscription_async_flattened",
+      "title": "CreateSubscriptionAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.CreateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.CreateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.CreateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.CreateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_DeleteSubscription_sync",
+      "title": "DeleteSubscriptionRequestObject",
+      "description": "Snippet for DeleteSubscription",
+      "file": "SubscriptionsServiceClient.DeleteSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.DeleteSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_DeleteSubscription_async",
+      "title": "DeleteSubscriptionRequestObjectAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.DeleteSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.DeleteSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.DeleteSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_DeleteSubscription_sync_flattened",
+      "title": "DeleteSubscription",
+      "description": "Snippet for DeleteSubscription",
+      "file": "SubscriptionsServiceClient.DeleteSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.DeleteSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_DeleteSubscription_async_flattened",
+      "title": "DeleteSubscriptionAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.DeleteSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.DeleteSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.DeleteSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_DeleteSubscription_sync_flattened_resourceNames",
+      "title": "DeleteSubscriptionResourceNames",
+      "description": "Snippet for DeleteSubscription",
+      "file": "SubscriptionsServiceClient.DeleteSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.DeleteSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_DeleteSubscription_async_flattened_resourceNames",
+      "title": "DeleteSubscriptionResourceNamesAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.DeleteSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.DeleteSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Apps.Events.Subscriptions.V1Beta.DeleteSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.DeleteSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_GetSubscription_sync",
+      "title": "GetSubscriptionRequestObject",
+      "description": "Snippet for GetSubscription",
+      "file": "SubscriptionsServiceClient.GetSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.GetSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.GetSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.GetSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_GetSubscription_async",
+      "title": "GetSubscriptionRequestObjectAsync",
+      "description": "Snippet for GetSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.GetSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.GetSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.GetSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.GetSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_GetSubscription_sync_flattened",
+      "title": "GetSubscription",
+      "description": "Snippet for GetSubscription",
+      "file": "SubscriptionsServiceClient.GetSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.GetSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.GetSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_GetSubscription_async_flattened",
+      "title": "GetSubscriptionAsync",
+      "description": "Snippet for GetSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.GetSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.GetSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.GetSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_GetSubscription_sync_flattened_resourceNames",
+      "title": "GetSubscriptionResourceNames",
+      "description": "Snippet for GetSubscription",
+      "file": "SubscriptionsServiceClient.GetSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.GetSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.GetSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_GetSubscription_async_flattened_resourceNames",
+      "title": "GetSubscriptionResourceNamesAsync",
+      "description": "Snippet for GetSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.GetSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.GetSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.GetSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ListSubscriptions_sync",
+      "title": "ListSubscriptionsRequestObject",
+      "description": "Snippet for ListSubscriptions",
+      "file": "SubscriptionsServiceClient.ListSubscriptionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.ListSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Events.Subscriptions.V1Beta.ListSubscriptionsResponse, Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ListSubscriptions",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ListSubscriptions_async",
+      "title": "ListSubscriptionsRequestObjectAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "SubscriptionsServiceClient.ListSubscriptionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ListSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.ListSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Events.Subscriptions.V1Beta.ListSubscriptionsResponse, Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ListSubscriptions",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ListSubscriptions_sync_flattened",
+      "title": "ListSubscriptions",
+      "description": "Snippet for ListSubscriptions",
+      "file": "SubscriptionsServiceClient.ListSubscriptionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Events.Subscriptions.V1Beta.ListSubscriptionsResponse, Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ListSubscriptions",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ListSubscriptions_async_flattened",
+      "title": "ListSubscriptionsAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "SubscriptionsServiceClient.ListSubscriptionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ListSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Events.Subscriptions.V1Beta.ListSubscriptionsResponse, Google.Apps.Events.Subscriptions.V1Beta.Subscription>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ListSubscriptions",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_UpdateSubscription_sync",
+      "title": "UpdateSubscriptionRequestObject",
+      "description": "Snippet for UpdateSubscription",
+      "file": "SubscriptionsServiceClient.UpdateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.UpdateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.UpdateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.UpdateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.UpdateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_UpdateSubscription_async",
+      "title": "UpdateSubscriptionRequestObjectAsync",
+      "description": "Snippet for UpdateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.UpdateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.UpdateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.UpdateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.UpdateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.UpdateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_UpdateSubscription_sync_flattened",
+      "title": "UpdateSubscription",
+      "description": "Snippet for UpdateSubscription",
+      "file": "SubscriptionsServiceClient.UpdateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.UpdateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.UpdateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.UpdateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_UpdateSubscription_async_flattened",
+      "title": "UpdateSubscriptionAsync",
+      "description": "Snippet for UpdateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.UpdateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.UpdateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.UpdateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.UpdateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ReactivateSubscription_sync",
+      "title": "ReactivateSubscriptionRequestObject",
+      "description": "Snippet for ReactivateSubscription",
+      "file": "SubscriptionsServiceClient.ReactivateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ReactivateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ReactivateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ReactivateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ReactivateSubscription_async",
+      "title": "ReactivateSubscriptionRequestObjectAsync",
+      "description": "Snippet for ReactivateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.ReactivateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ReactivateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ReactivateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ReactivateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ReactivateSubscription_sync_flattened",
+      "title": "ReactivateSubscription",
+      "description": "Snippet for ReactivateSubscription",
+      "file": "SubscriptionsServiceClient.ReactivateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ReactivateSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ReactivateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ReactivateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ReactivateSubscription_async_flattened",
+      "title": "ReactivateSubscriptionAsync",
+      "description": "Snippet for ReactivateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.ReactivateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ReactivateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ReactivateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ReactivateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ReactivateSubscription_sync_flattened_resourceNames",
+      "title": "ReactivateSubscriptionResourceNames",
+      "description": "Snippet for ReactivateSubscription",
+      "file": "SubscriptionsServiceClient.ReactivateSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateSubscription",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ReactivateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionMetadata>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ReactivateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ReactivateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workspaceevents_v1beta_generated_SubscriptionsService_ReactivateSubscription_async_flattened_resourceNames",
+      "title": "ReactivateSubscriptionResourceNamesAsync",
+      "description": "Snippet for ReactivateSubscriptionAsync",
+      "file": "SubscriptionsServiceClient.ReactivateSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateSubscriptionAsync",
+        "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient.ReactivateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Apps.Events.Subscriptions.V1Beta.Subscription, Google.Apps.Events.Subscriptions.V1Beta.ReactivateSubscriptionMetadata>>",
+        "client": {
+          "shortName": "SubscriptionsServiceClient",
+          "fullName": "Google.Apps.Events.Subscriptions.V1Beta.SubscriptionsServiceClient"
+        },
+        "method": {
+          "shortName": "ReactivateSubscription",
+          "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService.ReactivateSubscription",
+          "service": {
+            "shortName": "SubscriptionsService",
+            "fullName": "google.apps.events.subscriptions.v1beta.SubscriptionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

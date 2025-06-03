@@ -16,6 +16,7 @@
     "apis/Google.Apps.Card.V1/Google.Apps.Card.V1/**",
     "apis/Google.Apps.Chat.V1/Google.Apps.Chat.V1/**",
     "apis/Google.Apps.Events.Subscriptions.V1/Google.Apps.Events.Subscriptions.V1/**",
+    "apis/Google.Apps.Events.Subscriptions.V1Beta/Google.Apps.Events.Subscriptions.V1Beta/**",
     "apis/Google.Apps.Meet.V2/Google.Apps.Meet.V2/**",
     "apis/Google.Apps.Meet.V2Beta/Google.Apps.Meet.V2Beta/**",
     "apis/Google.Apps.Script.Type/Google.Apps.Script.Type/**",
