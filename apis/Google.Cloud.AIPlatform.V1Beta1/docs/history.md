@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta33, released 2025-06-03
+
+### New features
+
+- Add json schema support to structured output and function declaration
+- A new field `include_thoughts` is added to message `.google.cloud.aiplatform.v1.GenerationConfig.ThinkingConfig`
+- A new field `thought_signature` is added to message `.google.cloud.aiplatform.v1.Part`
+- A new field `thought` is added to message `.google.cloud.aiplatform.v1.Part`
+- Expose URL Context API to v1beta1
+
+### Bug fixes
+
+- Upgrade gRPC service registration func
+
+### Documentation improvements
+
+- Allow field `thought` to be set as input
+
 ## Version 1.0.0-beta32, released 2025-05-28
 
 ### New features
