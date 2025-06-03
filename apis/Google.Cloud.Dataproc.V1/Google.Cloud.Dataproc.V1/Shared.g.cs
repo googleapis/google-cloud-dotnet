@@ -115,31 +115,31 @@ namespace Google.Cloud.Dataproc.V1 {
             "LkF1dGhlbnRpY2F0aW9uQ29uZmlnLkF1dGhlbnRpY2F0aW9uVHlwZUID4EEB",
             "ImgKEkF1dGhlbnRpY2F0aW9uVHlwZRIjCh9BVVRIRU5USUNBVElPTl9UWVBF",
             "X1VOU1BFQ0lGSUVEEAASEwoPU0VSVklDRV9BQ0NPVU5UEAESGAoURU5EX1VT",
-            "RVJfQ1JFREVOVElBTFMQAiK3AQoQQXV0b3R1bmluZ0NvbmZpZxJLCglzY2Vu",
+            "RVJfQ1JFREVOVElBTFMQAiLLAQoQQXV0b3R1bmluZ0NvbmZpZxJLCglzY2Vu",
             "YXJpb3MYAiADKA4yMy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3R1",
-            "bmluZ0NvbmZpZy5TY2VuYXJpb0ID4EEBIlYKCFNjZW5hcmlvEhgKFFNDRU5B",
+            "bmluZ0NvbmZpZy5TY2VuYXJpb0ID4EEBImoKCFNjZW5hcmlvEhgKFFNDRU5B",
             "UklPX1VOU1BFQ0lGSUVEEAASCwoHU0NBTElORxACEhcKE0JST0FEQ0FTVF9I",
-            "QVNIX0pPSU4QAxIKCgZNRU1PUlkQBCJnChBSZXBvc2l0b3J5Q29uZmlnElMK",
-            "FnB5cGlfcmVwb3NpdG9yeV9jb25maWcYASABKAsyLi5nb29nbGUuY2xvdWQu",
-            "ZGF0YXByb2MudjEuUHlQaVJlcG9zaXRvcnlDb25maWdCA+BBASI0ChRQeVBp",
-            "UmVwb3NpdG9yeUNvbmZpZxIcCg9weXBpX3JlcG9zaXRvcnkYASABKAlCA+BB",
-            "ASrUAQoJQ29tcG9uZW50EhkKFUNPTVBPTkVOVF9VTlNQRUNJRklFRBAAEgwK",
-            "CEFOQUNPTkRBEAUSCgoGRE9DS0VSEA0SCQoFRFJVSUQQCRIJCgVGTElOSxAO",
-            "EgkKBUhCQVNFEAsSEAoMSElWRV9XRUJIQ0FUEAMSCAoESFVESRASEgsKB0pV",
-            "UFlURVIQARIKCgZQUkVTVE8QBhIJCgVUUklOTxAREgoKBlJBTkdFUhAMEggK",
-            "BFNPTFIQChIMCghaRVBQRUxJThAEEg0KCVpPT0tFRVBFUhAIKkoKDUZhaWx1",
-            "cmVBY3Rpb24SHgoaRkFJTFVSRV9BQ1RJT05fVU5TUEVDSUZJRUQQABINCglO",
-            "T19BQ1RJT04QARIKCgZERUxFVEUQAkKnAwocY29tLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MUILU2hhcmVkUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kYXRhcHJvYy92Mi9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGLqQV4K",
-            "IGNvbnRhaW5lci5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0",
-            "ZXJ96kFeCiBtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vU2VydmljZRI6cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2Vz",
-            "L3tzZXJ2aWNlfepBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
-            "S2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "a2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIG",
-            "cHJvdG8z"));
+            "QVNIX0pPSU4QAxIKCgZNRU1PUlkQBBIICgROT05FEAUSCAoEQVVUTxAGImcK",
+            "EFJlcG9zaXRvcnlDb25maWcSUwoWcHlwaV9yZXBvc2l0b3J5X2NvbmZpZxgB",
+            "IAEoCzIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5QeVBpUmVwb3NpdG9y",
+            "eUNvbmZpZ0ID4EEBIjQKFFB5UGlSZXBvc2l0b3J5Q29uZmlnEhwKD3B5cGlf",
+            "cmVwb3NpdG9yeRgBIAEoCUID4EEBKtQBCglDb21wb25lbnQSGQoVQ09NUE9O",
+            "RU5UX1VOU1BFQ0lGSUVEEAASDAoIQU5BQ09OREEQBRIKCgZET0NLRVIQDRIJ",
+            "CgVEUlVJRBAJEgkKBUZMSU5LEA4SCQoFSEJBU0UQCxIQCgxISVZFX1dFQkhD",
+            "QVQQAxIICgRIVURJEBISCwoHSlVQWVRFUhABEgoKBlBSRVNUTxAGEgkKBVRS",
+            "SU5PEBESCgoGUkFOR0VSEAwSCAoEU09MUhAKEgwKCFpFUFBFTElOEAQSDQoJ",
+            "Wk9PS0VFUEVSEAgqSgoNRmFpbHVyZUFjdGlvbhIeChpGQUlMVVJFX0FDVElP",
+            "Tl9VTlNQRUNJRklFRBAAEg0KCU5PX0FDVElPThABEgoKBkRFTEVURRACQqcD",
+            "Chxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQgtTaGFyZWRQcm90b1AB",
+            "WjtjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFw",
+            "cm9jcGI7ZGF0YXByb2NwYupBXgogY29udGFpbmVyLmdvb2dsZWFwaXMuY29t",
+            "L0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn3qQV4KIG1ldGFzdG9yZS5nb29nbGVh",
+            "cGlzLmNvbS9TZXJ2aWNlEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vc2VydmljZXMve3NlcnZpY2V96kF4CiFjbG91ZGttcy5n",
+            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0",
+            "b0tleXMve2NyeXB0b19rZXl9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -5986,6 +5986,14 @@ namespace Google.Cloud.Dataproc.V1 {
         /// Memory management for workloads.
         /// </summary>
         [pbr::OriginalName("MEMORY")] Memory = 4,
+        /// <summary>
+        /// No autotuning.
+        /// </summary>
+        [pbr::OriginalName("NONE")] None = 5,
+        /// <summary>
+        /// Automatic selection of scenarios.
+        /// </summary>
+        [pbr::OriginalName("AUTO")] Auto = 6,
       }
 
     }
