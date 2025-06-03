@@ -534,7 +534,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-16T16:36:25Z",
-            "lastGeneratedCommit": "c15e2b199067905e2c9372da116a0d83ac003c1b",
+            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/batch/v1alpha"
             ],
