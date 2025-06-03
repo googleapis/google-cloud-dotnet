@@ -4168,6 +4168,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "315d3b21a4e64130a904219030cbf58f48868061",
             "apiPaths": [
                 "google/apps/events/subscriptions/v1beta"
             ],
