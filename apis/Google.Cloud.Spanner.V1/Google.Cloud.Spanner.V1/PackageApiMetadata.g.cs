@@ -30,6 +30,7 @@ namespace Google.Cloud.Spanner.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return ChangeStreamReflection.Descriptor;
             yield return CommitResponseReflection.Descriptor;
             yield return KeysReflection.Descriptor;
             yield return MutationReflection.Descriptor;
