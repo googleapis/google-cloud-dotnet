@@ -380,7 +380,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-31T16:14:22Z",
-            "lastGeneratedCommit": "f4a56c163276d5b42d3849a57cd7c92b5152a697",
+            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/apphub/v1"
             ],
