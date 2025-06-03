@@ -864,7 +864,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-06-05T06:56:24Z",
-            "lastGeneratedCommit": "3f103ea2269aafa78eca65d29092870d1eb61d48",
+            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/certificatemanager/v1"
             ],
