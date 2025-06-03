@@ -506,7 +506,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-06-05T06:54:21Z",
-            "lastGeneratedCommit": "6caf69b6f1d3f80255fa46e504acf96e38ef34c0",
+            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/baremetalsolution/v2"
             ],
