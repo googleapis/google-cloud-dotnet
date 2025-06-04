@@ -268,7 +268,9 @@ internal class GenerateApisCommand : ICommand
         string productionDirectory = Path.Combine(apiLayout.ProductionDirectory);
         Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
-        _protobufCompiler.Execute(GetApiProtosDirectory(api),
+        _protobufCompiler.Execute(
+            _rootLayout.Googleapis,
+            GetApiProtosDirectory(api),
             $"--csharp_out={productionDirectory}",
             $"--csharp_opt=base_namespace={api.Id}",
             "--csharp_opt=file_extension=.g.cs");
