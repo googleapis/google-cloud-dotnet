@@ -34,8 +34,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             {
                 {
                     "google.longrunning.Operations.CancelOperation",
-                    // { "post": "/v1/{name=projects/*/operations/*}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/branches/*/operations/*}:cancel", "body": "*" }, { "post": "/v1/{name=projects/*/locations/*/dataStores/*/branches/*/operations/*}:cancel", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IikvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKlpgIlsvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEqWlIiTS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                    // { "post": "/v1/{name=projects/*/operations/*}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/branches/*/operations/*}:cancel", "body": "*" }, { "post": "/v1/{name=projects/*/locations/*/collections/*/engines/*/operations/*}:cancel", "body": "*" }, { "post": "/v1/{name=projects/*/locations/*/dataStores/*/branches/*/operations/*}:cancel", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IikvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKlpgIlsvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEqWlIiTS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZW5naW5lcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEqWlIiTS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
@@ -53,6 +53,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             yield return AnswerReflection.Descriptor;
             yield return ChunkReflection.Descriptor;
+            yield return CmekConfigServiceReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CompletionReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
@@ -70,6 +71,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return EngineServiceReflection.Descriptor;
             yield return GroundedGenerationServiceReflection.Descriptor;
             yield return GroundingReflection.Descriptor;
+            yield return IdentityMappingStoreReflection.Descriptor;
+            yield return IdentityMappingStoreServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
             yield return ProjectReflection.Descriptor;
             yield return ProjectServiceReflection.Descriptor;
@@ -88,6 +91,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return SiteSearchEngineServiceReflection.Descriptor;
             yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
+            yield return UserLicenseReflection.Descriptor;
+            yield return UserLicenseServiceReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
