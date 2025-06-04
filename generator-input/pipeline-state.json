@@ -4032,7 +4032,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-01T06:49:00Z",
-            "lastGeneratedCommit": "c6b8b89c8d623f69e7f2175c3658f74534d7f2fd",
+            "lastGeneratedCommit": "85d120d7cf5e006ac07789d2fd8fa2f831ca5388",
             "lastReleasedCommit": "c6b8b89c8d623f69e7f2175c3658f74534d7f2fd",
             "apiPaths": [
                 "google/cloud/lustre/v1"
