@@ -6638,7 +6638,9 @@
         "shopping",
         "issues"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta06"
+      },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/issueresolution/v1beta",
       "includeCommonResourcesProto": true,
