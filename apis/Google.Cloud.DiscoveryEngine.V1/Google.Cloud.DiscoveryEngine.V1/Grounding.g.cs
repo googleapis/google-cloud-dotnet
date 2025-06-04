@@ -31,22 +31,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "UgoKYXR0cmlidXRlcxgCIAMoCzI+Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
             "bmdpbmUudjEuR3JvdW5kaW5nRmFjdC5BdHRyaWJ1dGVzRW50cnkaMQoPQXR0",
             "cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
-            "zgEKCUZhY3RDaHVuaxISCgpjaHVua190ZXh0GAEgASgJEg4KBnNvdXJjZRgC",
+            "+gEKCUZhY3RDaHVuaxISCgpjaHVua190ZXh0GAEgASgJEg4KBnNvdXJjZRgC",
             "IAEoCRINCgVpbmRleBgEIAEoBRJXCg9zb3VyY2VfbWV0YWRhdGEYAyADKAsy",
             "Pi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkZhY3RDaHVuay5T",
-            "b3VyY2VNZXRhZGF0YUVudHJ5GjUKE1NvdXJjZU1ldGFkYXRhRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUKBAgojY29tLmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCDkdyb3VuZGluZ1Byb3RvUAFaTWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2Nv",
-            "dmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5H",
-            "SU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2ds",
-            "ZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpE",
-            "aXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "b3VyY2VNZXRhZGF0YUVudHJ5EgsKA3VyaRgFIAEoCRINCgV0aXRsZRgGIAEo",
+            "CRIOCgZkb21haW4YByABKAkaNQoTU291cmNlTWV0YWRhdGFFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQoECCiNjb20uZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MUIOR3JvdW5kaW5nUHJvdG9QAVpNY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292",
+            "ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJ",
+            "TkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xl",
+            "XENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRp",
+            "c2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.GroundingFact), global::Google.Cloud.DiscoveryEngine.V1.GroundingFact.Parser, new[]{ "FactText", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.FactChunk), global::Google.Cloud.DiscoveryEngine.V1.FactChunk.Parser, new[]{ "ChunkText", "Source", "Index", "SourceMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.FactChunk), global::Google.Cloud.DiscoveryEngine.V1.FactChunk.Parser, new[]{ "ChunkText", "Source", "Index", "SourceMetadata", "Uri", "Title", "Domain" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -322,6 +323,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       source_ = other.source_;
       index_ = other.index_;
       sourceMetadata_ = other.sourceMetadata_.Clone();
+      uri_ = other.uri_;
+      title_ = other.title_;
+      domain_ = other.domain_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -393,6 +397,51 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return sourceMetadata_; }
     }
 
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 5;
+    private string uri_ = "";
+    /// <summary>
+    /// The URI of the source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 6;
+    private string title_ = "";
+    /// <summary>
+    /// The title of the source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Title {
+      get { return title_; }
+      set {
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "domain" field.</summary>
+    public const int DomainFieldNumber = 7;
+    private string domain_ = "";
+    /// <summary>
+    /// The domain of the source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Domain {
+      get { return domain_; }
+      set {
+        domain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -412,6 +461,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Source != other.Source) return false;
       if (Index != other.Index) return false;
       if (!SourceMetadata.Equals(other.SourceMetadata)) return false;
+      if (Uri != other.Uri) return false;
+      if (Title != other.Title) return false;
+      if (Domain != other.Domain) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -423,6 +475,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Source.Length != 0) hash ^= Source.GetHashCode();
       if (Index != 0) hash ^= Index.GetHashCode();
       hash ^= SourceMetadata.GetHashCode();
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (Title.Length != 0) hash ^= Title.GetHashCode();
+      if (Domain.Length != 0) hash ^= Domain.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -454,6 +509,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(Index);
       }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Uri);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Title);
+      }
+      if (Domain.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Domain);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -477,6 +544,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(Index);
       }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Uri);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Title);
+      }
+      if (Domain.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Domain);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -497,6 +576,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
       }
       size += sourceMetadata_.CalculateSize(_map_sourceMetadata_codec);
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (Title.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
+      if (Domain.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Domain);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -519,6 +607,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         Index = other.Index;
       }
       sourceMetadata_.MergeFrom(other.sourceMetadata_);
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      if (other.Title.Length != 0) {
+        Title = other.Title;
+      }
+      if (other.Domain.Length != 0) {
+        Domain = other.Domain;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -550,6 +647,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             Index = input.ReadInt32();
             break;
           }
+          case 42: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 50: {
+            Title = input.ReadString();
+            break;
+          }
+          case 58: {
+            Domain = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -579,6 +688,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 32: {
             Index = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 50: {
+            Title = input.ReadString();
+            break;
+          }
+          case 58: {
+            Domain = input.ReadString();
             break;
           }
         }
