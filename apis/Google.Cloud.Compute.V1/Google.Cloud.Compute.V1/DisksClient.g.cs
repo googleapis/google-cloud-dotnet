@@ -51,6 +51,8 @@ namespace Google.Cloud.Compute.V1
             AggregatedListSettings = existing.AggregatedListSettings;
             BulkInsertSettings = existing.BulkInsertSettings;
             BulkInsertOperationsSettings = existing.BulkInsertOperationsSettings.Clone();
+            BulkSetLabelsSettings = existing.BulkSetLabelsSettings;
+            BulkSetLabelsOperationsSettings = existing.BulkSetLabelsOperationsSettings.Clone();
             CreateSnapshotSettings = existing.CreateSnapshotSettings;
             CreateSnapshotOperationsSettings = existing.CreateSnapshotOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
@@ -158,6 +160,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings BulkInsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DisksClient.BulkSetLabels</c>
+        ///  and <c>DisksClient.BulkSetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkSetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DisksClient.BulkSetLabels</c> and
+        /// <c>DisksClient.BulkSetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkSetLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1013,6 +1045,120 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(string project, string zone, BulkInsertDiskResource bulkInsertDiskResourceResource, st::CancellationToken cancellationToken) =>
             BulkInsertAsync(project, zone, bulkInsertDiskResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> BulkSetLabels(BulkSetLabelsDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkSetLabelsAsync(BulkSetLabelsDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkSetLabelsAsync(BulkSetLabelsDiskRequest request, st::CancellationToken cancellationToken) =>
+            BulkSetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkSetLabels</c>.</summary>
+        public virtual lro::OperationsClient BulkSetLabelsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BulkSetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceBulkSetLabels(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkSetLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkSetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceBulkSetLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkSetLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="bulkZoneSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> BulkSetLabels(string project, string zone, BulkZoneSetLabelsRequest bulkZoneSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            BulkSetLabels(new BulkSetLabelsDiskRequest
+            {
+                BulkZoneSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(bulkZoneSetLabelsRequestResource, nameof(bulkZoneSetLabelsRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="bulkZoneSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkSetLabelsAsync(string project, string zone, BulkZoneSetLabelsRequest bulkZoneSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            BulkSetLabelsAsync(new BulkSetLabelsDiskRequest
+            {
+                BulkZoneSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(bulkZoneSetLabelsRequestResource, nameof(bulkZoneSetLabelsRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="bulkZoneSetLabelsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkSetLabelsAsync(string project, string zone, BulkZoneSetLabelsRequest bulkZoneSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
+            BulkSetLabelsAsync(project, zone, bulkZoneSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
@@ -2703,6 +2849,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<BulkInsertDiskRequest, Operation> _callBulkInsert;
 
+        private readonly gaxgrpc::ApiCall<BulkSetLabelsDiskRequest, Operation> _callBulkSetLabels;
+
         private readonly gaxgrpc::ApiCall<CreateSnapshotDiskRequest, Operation> _callCreateSnapshot;
 
         private readonly gaxgrpc::ApiCall<DeleteDiskRequest, Operation> _callDelete;
@@ -2750,6 +2898,7 @@ namespace Google.Cloud.Compute.V1
             });
             AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings, logger);
             BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);
+            BulkSetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.BulkSetLabelsOperationsSettings, logger);
             CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.CreateSnapshotOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
@@ -2769,6 +2918,9 @@ namespace Google.Cloud.Compute.V1
             _callBulkInsert = clientHelper.BuildApiCall<BulkInsertDiskRequest, Operation>("BulkInsert", grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callBulkInsert);
             Modify_BulkInsertApiCall(ref _callBulkInsert);
+            _callBulkSetLabels = clientHelper.BuildApiCall<BulkSetLabelsDiskRequest, Operation>("BulkSetLabels", grpcClient.BulkSetLabelsAsync, grpcClient.BulkSetLabels, effectiveSettings.BulkSetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
+            Modify_ApiCall(ref _callBulkSetLabels);
+            Modify_BulkSetLabelsApiCall(ref _callBulkSetLabels);
             _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotDiskRequest, Operation>("CreateSnapshot", grpcClient.CreateSnapshotAsync, grpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("disk", request => request.Disk);
             Modify_ApiCall(ref _callCreateSnapshot);
             Modify_CreateSnapshotApiCall(ref _callCreateSnapshot);
@@ -2825,6 +2977,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_BulkInsertApiCall(ref gaxgrpc::ApiCall<BulkInsertDiskRequest, Operation> call);
 
+        partial void Modify_BulkSetLabelsApiCall(ref gaxgrpc::ApiCall<BulkSetLabelsDiskRequest, Operation> call);
+
         partial void Modify_CreateSnapshotApiCall(ref gaxgrpc::ApiCall<CreateSnapshotDiskRequest, Operation> call);
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteDiskRequest, Operation> call);
@@ -2865,6 +3019,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_AggregatedListDisksRequest(ref AggregatedListDisksRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BulkInsertDiskRequest(ref BulkInsertDiskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BulkSetLabelsDiskRequest(ref BulkSetLabelsDiskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateSnapshotDiskRequest(ref CreateSnapshotDiskRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2986,6 +3142,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkSetLabels</c>.</summary>
+        public override lro::OperationsClient BulkSetLabelsOperationsClient { get; }
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> BulkSetLabels(BulkSetLabelsDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkSetLabelsDiskRequest(ref request, ref callSettings);
+            Operation response = _callBulkSetLabels.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkSetLabelsOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> BulkSetLabelsAsync(BulkSetLabelsDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkSetLabelsDiskRequest(ref request, ref callSettings);
+            Operation response = await _callBulkSetLabels.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkSetLabelsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateSnapshot</c>.</summary>

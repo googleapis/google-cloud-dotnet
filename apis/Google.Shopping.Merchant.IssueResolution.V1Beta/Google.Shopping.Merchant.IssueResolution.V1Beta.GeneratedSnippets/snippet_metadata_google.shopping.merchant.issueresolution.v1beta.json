@@ -11,6 +11,325 @@
   },
   "snippets": [
     {
+      "regionTag": "merchantapi_v1beta_generated_AggregateProductStatusesService_ListAggregateProductStatuses_sync",
+      "title": "ListAggregateProductStatusesRequestObject",
+      "description": "Snippet for ListAggregateProductStatuses",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatuses",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient.ListAggregateProductStatuses",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AggregateProductStatusesService_ListAggregateProductStatuses_async",
+      "title": "ListAggregateProductStatusesRequestObjectAsync",
+      "description": "Snippet for ListAggregateProductStatusesAsync",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatusesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AggregateProductStatusesService_ListAggregateProductStatuses_sync_flattened",
+      "title": "ListAggregateProductStatuses",
+      "description": "Snippet for ListAggregateProductStatuses",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatuses",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient.ListAggregateProductStatuses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AggregateProductStatusesService_ListAggregateProductStatuses_async_flattened",
+      "title": "ListAggregateProductStatusesAsync",
+      "description": "Snippet for ListAggregateProductStatusesAsync",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatusesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AggregateProductStatusesService_ListAggregateProductStatuses_sync_flattened_resourceNames",
+      "title": "ListAggregateProductStatusesResourceNames",
+      "description": "Snippet for ListAggregateProductStatuses",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatuses",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient.ListAggregateProductStatuses",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AggregateProductStatusesService_ListAggregateProductStatuses_async_flattened_resourceNames",
+      "title": "ListAggregateProductStatusesResourceNamesAsync",
+      "description": "Snippet for ListAggregateProductStatusesAsync",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatusesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.IssueResolution.V1Beta.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1Beta.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1beta.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1beta_generated_IssueResolutionService_RenderAccountIssues_sync",
       "title": "RenderAccountIssuesRequestObject",
       "description": "Snippet for RenderAccountIssues",

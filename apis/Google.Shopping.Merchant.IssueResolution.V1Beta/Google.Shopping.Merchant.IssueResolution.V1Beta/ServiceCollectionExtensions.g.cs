@@ -27,6 +27,42 @@ namespace Microsoft.Extensions.DependencyInjection
     public static partial class ServiceCollectionExtensions
     {
         /// <summary>
+        /// Adds a singleton <see cref="gsmiv::AggregateProductStatusesServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAggregateProductStatusesServiceClient(this IServiceCollection services, sys::Action<gsmiv::AggregateProductStatusesServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gsmiv::AggregateProductStatusesServiceClientBuilder builder = new gsmiv::AggregateProductStatusesServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmiv::AggregateProductStatusesServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAggregateProductStatusesServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmiv::AggregateProductStatusesServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmiv::AggregateProductStatusesServiceClientBuilder builder = new gsmiv::AggregateProductStatusesServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gsmiv::IssueResolutionServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

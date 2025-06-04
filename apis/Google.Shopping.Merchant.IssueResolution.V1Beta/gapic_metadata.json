@@ -5,6 +5,21 @@
   "protoPackage": "google.shopping.merchant.issueresolution.v1beta",
   "libraryPackage": "Google.Shopping.Merchant.IssueResolution.V1Beta",
   "services": {
+    "AggregateProductStatusesService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AggregateProductStatusesServiceClient",
+          "rpcs": {
+            "ListAggregateProductStatuses": {
+              "methods": [
+                "ListAggregateProductStatuses",
+                "ListAggregateProductStatusesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "IssueResolutionService": {
       "clients": {
         "grpc": {
