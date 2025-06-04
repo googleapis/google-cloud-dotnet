@@ -1,4 +1,4 @@
-# Copyright 2024 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-timeout: 21600s  # 6 hours
-options:
-  logging: CLOUD_LOGGING_ONLY
 steps:
 - id: 'build'
   name: gcr.io/cloud-builders/docker
@@ -22,11 +19,11 @@ steps:
   args: [
     'build',
     '-t',
-    'us-central1-docker.pkg.dev/$PROJECT_ID/images-dev/google-cloud-dotnet-generator:$SHORT_SHA',
+    'us-central1-docker.pkg.dev/$PROJECT_ID/images-dev/google-cloud-dotnet-generator',
     '-f',
     'Dockerfile.generator',
     '.'
   ]
 
 images:
-  - us-central1-docker.pkg.dev/$PROJECT_ID/images-dev/google-cloud-dotnet-generator:$SHORT_SHA
+  - us-central1-docker.pkg.dev/$PROJECT_ID/images-dev/google-cloud-dotnet-generator
