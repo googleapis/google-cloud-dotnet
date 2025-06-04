@@ -78,6 +78,7 @@ namespace Google.Cloud.Spanner.Data
         private int _lastDmlSequenceNumber = 0;
 
         /// <inheritdoc />
+        /// This is currently unused, but if ever it is used we need to convert it to <see cref="Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel" />
         public override IsolationLevel IsolationLevel => IsolationLevel.Serializable;
 
         /// <summary>

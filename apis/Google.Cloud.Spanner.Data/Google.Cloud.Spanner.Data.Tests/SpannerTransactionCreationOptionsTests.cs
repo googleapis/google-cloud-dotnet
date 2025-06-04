@@ -16,6 +16,7 @@ using Google.Cloud.Spanner.V1;
 using System;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
+using IsolationLevel = System.Data.IsolationLevel;
 
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerTransactionCreationOptionsTests
@@ -59,6 +60,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readWrite.IsSingleUse);
         Assert.False(readWrite.IsPartitionedDml);
         Assert.False(readWrite.ExcludeFromChangeStreams);
+        Assert.Equal(IsolationLevel.Unspecified, readWrite.IsolationLevel);
         Assert.Equal(new TransactionOptions { ReadWrite = new ReadWrite() }, readWrite.GetTransactionOptions());
     }
 
@@ -74,6 +76,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(partitionedDml.IsSingleUse);
         Assert.True(partitionedDml.IsPartitionedDml);
         Assert.False(partitionedDml.ExcludeFromChangeStreams);
+        Assert.Equal(IsolationLevel.Unspecified, partitionedDml.IsolationLevel);
         Assert.Equal(new TransactionOptions { PartitionedDml = new PartitionedDml() }, partitionedDml.GetTransactionOptions());
     }
 
@@ -89,6 +92,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readOnly.IsSingleUse);
         Assert.False (readOnly.IsPartitionedDml);
         Assert.False(readOnly.ExcludeFromChangeStreams);
+        Assert.Equal(IsolationLevel.Unspecified, readOnly.IsolationLevel);
         Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), readOnly.GetTransactionOptions());
     }
 
@@ -103,6 +107,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
+        Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
         Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.GetTransactionOptions());
     }
 
@@ -118,6 +123,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.True(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
+        Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
         Assert.Equal(timestampBound.ToTransactionOptions(), options.GetTransactionOptions());
     }
 
@@ -138,6 +144,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
+        Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
         Assert.Null(options.GetTransactionOptions());
     }
 
@@ -218,5 +225,23 @@ public class SpannerTransactionCreationOptionsTests
     {
         var options = SpannerTransactionCreationOptions.PartitionedDml.WithExcludeFromChangeStreams(true);
         Assert.True(options.ExcludeFromChangeStreams);
+    }
+
+    [Fact]
+    public void IsolationLevel_ReadOnly() =>
+        Assert.Throws<ArgumentException>(() => SpannerTransactionCreationOptions.ReadOnly.WithIsolationLevel(IsolationLevel.RepeatableRead));
+
+    [Fact]
+    public void IsolationLevel_ReadWrite()
+    {
+        var options = SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(IsolationLevel.RepeatableRead);
+        Assert.Equal(IsolationLevel.RepeatableRead, options.IsolationLevel);
+    }
+
+    [Fact]
+    public void IsolationLevel_PartitionedDml()
+    {
+        var options = SpannerTransactionCreationOptions.PartitionedDml.WithIsolationLevel(IsolationLevel.RepeatableRead);
+        Assert.Equal(IsolationLevel.RepeatableRead, options.IsolationLevel);
     }
 }
