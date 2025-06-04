@@ -39,7 +39,7 @@ namespace Google.Cloud.Lustre.V1 {
             "dG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24YCCABKAlCA+BB",
             "ARJBCgZsYWJlbHMYCSADKAsyLC5nb29nbGUuY2xvdWQubHVzdHJlLnYxLklu",
             "c3RhbmNlLkxhYmVsc0VudHJ5QgPgQQESKAobcGVyX3VuaXRfc3RvcmFnZV90",
-            "aHJvdWdocHV0GAsgASgDQgPgQQESIAoTZ2tlX3N1cHBvcnRfZW5hYmxlZBgM",
+            "aHJvdWdocHV0GAsgASgDQgPgQQISIAoTZ2tlX3N1cHBvcnRfZW5hYmxlZBgM",
             "IAEoCEID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
             "ZRgCIAEoCToCOAEicQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIK",
             "CgZBQ1RJVkUQARIMCghDUkVBVElORxACEgwKCERFTEVUSU5HEAMSDQoJVVBH",
@@ -187,7 +187,7 @@ namespace Google.Cloud.Lustre.V1 {
     private long capacityGib_;
     /// <summary>
     /// Required. The storage capacity of the instance in gibibytes (GiB). Allowed
-    /// values are from `18000` to `936000`, in increments of 9000.
+    /// values are from `18000` to `954000`, in increments of 9000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -309,9 +309,8 @@ namespace Google.Cloud.Lustre.V1 {
     public const int PerUnitStorageThroughputFieldNumber = 11;
     private long perUnitStorageThroughput_;
     /// <summary>
-    /// Optional. The throughput of the instance in MB/s/TiB.
-    /// Valid values are 250, 500, 1000.
-    /// Default value is 1000.
+    /// Required. The throughput of the instance in MB/s/TiB.
+    /// Valid values are 125, 250, 500, 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
