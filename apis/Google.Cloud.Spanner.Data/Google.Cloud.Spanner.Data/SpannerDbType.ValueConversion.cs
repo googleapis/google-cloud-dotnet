@@ -286,6 +286,16 @@ namespace Google.Cloud.Spanner.Data
                         }
                         throw new ArgumentException("Numeric parameters must be of one of the following types: float, double, decimal, sbyte, short, int, long, byte, ushort, uint, ulong or string");
                     }
+                case TypeCode.Interval:
+                    if (value is Interval intervalValue)
+                    {
+                        return Value.ForString(intervalValue.ToString());
+                    }
+                    if (value is string stringValue)
+                    {
+                        return Value.ForString(V1.Interval.Parse(stringValue).ToString());
+                    }
+                    throw new ArgumentException($"Interval parameters must be of type {typeof(Interval).FullName} or string");
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }
@@ -673,7 +683,19 @@ namespace Google.Cloud.Spanner.Data
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
                 }
             }
-
+            if (targetClrType == typeof(Interval))
+            {
+                switch(wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return V1.Interval.Parse(wireValue.StringValue);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
             if (typeof(IList).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IList))
