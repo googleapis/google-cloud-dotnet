@@ -2728,6 +2728,7 @@
       "shortName": "firestore",
       "serviceConfigFile": "firestore_v1.yaml",
       "restNumericEnums": true,
+      "transport": "grpc+rest",
       "includeCommonResourcesProto": true,
       "projects": [
         "Tests"
