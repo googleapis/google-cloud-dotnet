@@ -32,6 +32,8 @@ namespace Google.Cloud.PubSub.V1.Tests
 {
     public class SubscriberClientTest
     {
+        private const StatusCode RetryableStatusCode = StatusCode.DeadlineExceeded;
+
         private struct TimedId
         {
             public TimedId(DateTime time, string id)
@@ -560,7 +562,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         /// <remarks>
         /// This test method is useful to test exactly once subscription only.
         /// </remarks>
-        private static RpcException GetExactlyOnceDeliveryMixedException(Rpc.ErrorInfo errorInfo = null)
+        private static RpcException GetExactlyOnceDeliveryMixedException(Rpc.ErrorInfo errorInfo = null, StatusCode statusCode = StatusCode.OK)
         {
             // If caller has not initialized and sent the parameter, do it here (mostly for reuse in tests).
             errorInfo ??= new Rpc.ErrorInfo
@@ -577,7 +579,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             var status = new Google.Rpc.Status { Details = { Any.Pack(errorInfo) } };
             var metadata = new Metadata { { "grpc-status-details-bin", status.ToByteArray() } };
-            return new RpcException(new Status(StatusCode.OK, ""), metadata);
+            return new RpcException(new Status(statusCode, ""), metadata);
         }
 
         [Theory, CombinatorialData]
@@ -1554,7 +1556,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
 
             // Message 1 is success, 2 is temporary failure and 3 is permanent failure.
-            var exception = GetExactlyOnceDeliveryMixedException();
+            // Error information in the metadata should supercede the transient status code. Only 2 should be retried and not 3.
+            var exception = GetExactlyOnceDeliveryMixedException(null, RetryableStatusCode);
             // We have both temporary and permanent failures.
             // Temporary failure in ack/nack request should be retried.
             // If ackOrNack is true, then it is acknowledge request. Acknowledge RPC will throw the supplied exception.
@@ -1591,7 +1594,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
 
             // Message 1, 4 are success, 2 is temporary failure and 3 is permanent failure.
-            var exception = GetExactlyOnceDeliveryMixedException();
+            // Error information in the metadata should supercede the transient status code. Only 2 should be retried and not 3.
+            var exception = GetExactlyOnceDeliveryMixedException(null, RetryableStatusCode);
             // This is an extend request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 2);
 
@@ -1661,7 +1665,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
 
             // Message 1,4 is success, 2 is temporary failure and 3 is permanent failure.
-            var exception = GetExactlyOnceDeliveryMixedException();
+            // Error information in the metadata should supercede the transient status code. if succeedOnRetry is true, Only 2 should be retried and not 3.
+            var exception = GetExactlyOnceDeliveryMixedException(null, RetryableStatusCode);
             // We have both temporary and permanent failures.
             // Temporary failure in extend request should be retried.
             // Based on succeedOnRetry parameter, message 2 should either succeed or fail.
@@ -1713,7 +1718,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
             };
 
-            var exception = GetExactlyOnceDeliveryMixedException(ackError);
+            // Error information in the metadata should supercede the transient status code.
+            var exception = GetExactlyOnceDeliveryMixedException(ackError, RetryableStatusCode);
 
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 4);
 
@@ -1762,7 +1768,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
             };
 
-            var exception = GetExactlyOnceDeliveryMixedException(ackError);
+            // Error information in the metadata should supercede the transient status code.
+            var exception = GetExactlyOnceDeliveryMixedException(ackError, RetryableStatusCode);
 
             // 400 is a large arbitrary number to ensure that the retry is not successful.
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 3 : 400);
@@ -1785,6 +1792,82 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.Equal(succeedOnRetry ? 4 : 0, handledMsgs.Count);
                 Assert.Equal(succeedOnRetry ? new[] { "1", "2", "3", "4" } : Array.Empty<string>(), handledMsgs);
             });
+        }
+
+        [Fact]
+        public void TestAckErrorForMixedErrorInfoMetadata()
+        {
+            // ErrorInfo.Metadata contains transient and/or permanent failures
+            var errorInfo = new Rpc.ErrorInfo
+            {
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata =
+                {
+                    { "1", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "2", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "3", "PERMANENT_FAILURE_INVALID_ACK_ID" },
+                    { "4", "PERMANENT_FAILURE_INVALID_ACK_ID" }
+                }
+            };
+
+            var exception = GetExactlyOnceDeliveryMixedException(errorInfo, RetryableStatusCode);
+            var ackError = AckError.ForRpcException(exception, ids: new[] { "1", "2", "3", "4" });
+            var tempFailureIds = ackError.TemporaryFailureIds;
+            var permFailureIds = ackError.PermanentFailureIds;
+
+            // Error information in the metadata should supercede the transient status code.
+            Assert.Contains("1", tempFailureIds);
+            Assert.Contains("2", tempFailureIds);
+            Assert.Contains("3", permFailureIds);
+            Assert.Contains("4", permFailureIds);
+        }
+
+        [Fact]
+        public void TestAckErrorForRetryableException()
+        {
+            // ErrorInfo.Metadata is empty and the exception has a retryable status code
+            var errorInfo = new Rpc.ErrorInfo
+            {
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata = { }
+            };
+            var exception = GetExactlyOnceDeliveryMixedException(errorInfo, RetryableStatusCode);
+            var ackError = AckError.ForRpcException(exception, ids: new[] { "1", "2", "3", "4" });
+            var tempFailureIds = ackError.TemporaryFailureIds;
+            var permFailureIds = ackError.PermanentFailureIds;
+
+            // Retryable status code (DeadlineExceeded) should cause all Ids to be marked as temporary failures
+            Assert.Contains("1", tempFailureIds);
+            Assert.Contains("2", tempFailureIds);
+            Assert.Contains("3", tempFailureIds);
+            Assert.Contains("4", tempFailureIds);
+            Assert.Equal(0, permFailureIds.Count());
+        }
+
+        [Fact]
+        public void TestAckErrorForNonRetryableException()
+        {
+            // ErrorInfo.Metadata is empty and the exception has a non-retryable status code (FailedPrecondition)
+            var errorInfo = new Rpc.ErrorInfo
+            {
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata = { }
+            };
+
+            var exception = GetExactlyOnceDeliveryMixedException(errorInfo, StatusCode.FailedPrecondition);
+            var ackError = AckError.ForRpcException(exception, ids: new[] { "1", "2", "3", "4" });
+            var tempFailureIds = ackError.TemporaryFailureIds;
+            var permFailureIds = ackError.PermanentFailureIds;
+
+            // Non-retryable status code (FailedPrecondition) should cause all Ids to be marked as permanent failures
+            Assert.Contains("1", permFailureIds);
+            Assert.Contains("2", permFailureIds);
+            Assert.Contains("3", permFailureIds);
+            Assert.Contains("4", permFailureIds);
+            Assert.Equal(0, tempFailureIds.Count());
         }
 
         [Fact]
