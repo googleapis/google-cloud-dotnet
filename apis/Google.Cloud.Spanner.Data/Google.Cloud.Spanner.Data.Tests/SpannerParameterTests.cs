@@ -46,12 +46,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
             // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb,
-            // SpannerDbType.PgOid, or SpannerDbType protobuf.
+            // SpannerDbType.PgOid, SpannerDbType protobuf or SpannerDbType.Interval.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
             yield return new object[] { SpannerDbType.PgJsonb, DbType.String, false };
             yield return new object[] { SpannerDbType.PgOid, DbType.Int64, false };
             yield return new object[] { SpannerDbType.FromClrType(typeof(Duration)), DbType.Object, false };
             yield return new object[] { SpannerDbType.FromClrType(typeof(Rectangle)), DbType.Object, false };
+            yield return new object[] { SpannerDbType.Interval, DbType.Object, false };
         }
 
         [Theory]
@@ -95,6 +96,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
             yield return new object[] { (PgNumeric)3.14m, SpannerDbType.PgNumeric, DbType.VarNumeric, typeof(PgNumeric) };
             yield return new object[] { "test", SpannerDbType.String, DbType.String, typeof(string) };
+
+            yield return new object[] { Interval.Parse("P1Y2M3D"), SpannerDbType.Interval, DbType.Object, typeof(Interval) };
 
             // Tests for protobuf
             // Note that the default CLR type here is always Value, because in general, we only know the the name of the protobuf type and from there
@@ -204,6 +207,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Timestamp };
             yield return new object[] { SpannerDbType.Json };
             yield return new object[] { SpannerDbType.PgJsonb };
+            yield return new object[] { SpannerDbType.Interval };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bytes) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.String) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bool) };
@@ -217,6 +221,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Json) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgJsonb) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Interval) };
         }
 
         [Theory]
