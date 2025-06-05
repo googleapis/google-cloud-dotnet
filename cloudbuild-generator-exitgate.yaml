@@ -19,11 +19,11 @@ steps:
   args: [
     'build',
     '-t',
-    'us-central1-docker.pkg.dev/$PROJECT_ID/images-dev/google-cloud-dotnet-generator',
+    'us-central1-docker.pkg.dev/cloud-sdk-production-pipeline/images-dev/google-cloud-dotnet-generator',
     '-f',
     'Dockerfile.generator',
     '.'
   ]
 
 images:
-  - us-central1-docker.pkg.dev/$PROJECT_ID/images-dev/google-cloud-dotnet-generator
+  - us-central1-docker.pkg.dev/cloud-sdk-production-pipeline/images-dev/google-cloud-dotnet-generator
