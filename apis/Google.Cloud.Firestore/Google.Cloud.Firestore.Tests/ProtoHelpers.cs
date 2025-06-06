@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 using Google.Cloud.Firestore.V1;
 using System.Linq;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -24,8 +24,8 @@ namespace Google.Cloud.Firestore.Tests
     /// </summary>
     internal static class ProtoHelpers
     {
-        internal static wkt::Timestamp CreateProtoTimestamp(long seconds, int nanos) =>
-            new wkt::Timestamp { Seconds = seconds, Nanos = nanos };
+        internal static WKT::Timestamp CreateProtoTimestamp(long seconds, int nanos) =>
+            new WKT::Timestamp { Seconds = seconds, Nanos = nanos };
 
         // Allows tests to use dynamic calls to CreateValue but still use previously-constructed Value references.
         internal static Value CreateValue(Value value) => value;
@@ -39,7 +39,7 @@ namespace Google.Cloud.Firestore.Tests
         internal static Value CreateValue(string value) => new Value { StringValue = value };
         internal static Value CreateValue(DocumentReference reference) => new Value { ReferenceValue = reference.Path };
 
-        internal static Value CreateNullValue() => new Value { NullValue = wkt.NullValue.NullValue };
+        internal static Value CreateNullValue() => new Value { NullValue = WKT.NullValue.NullValue };
 
         internal static Value CreateReference(string value) => new Value { ReferenceValue = value };
 
