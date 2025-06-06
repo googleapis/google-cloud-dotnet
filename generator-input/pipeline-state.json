@@ -78,7 +78,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-04-17T16:56:21Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/apps/card/v1"
             ],
