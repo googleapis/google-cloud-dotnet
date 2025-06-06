@@ -2179,7 +2179,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
-      "testTargetFrameworks": "net6.0",
+      "testTargetFrameworks": "net8.0",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3.",
       "tags": [
         "Error",
@@ -3324,7 +3324,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0",
-      "testTargetFrameworks": "net6.0",
+      "testTargetFrameworks": "net8.0",
       "description": "ConsoleFormatter for Google Cloud Logging.",
       "tags": [
         "Logging",
