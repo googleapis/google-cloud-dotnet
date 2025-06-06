@@ -2329,7 +2329,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-03-27T04:42:19Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "9ec67d424cd823b06c1b974d67df9ecb6e36edcd",
             "apiPaths": [
                 "google/cloud/oslogin/common"
             ],

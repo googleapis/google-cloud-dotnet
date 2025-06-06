@@ -733,8 +733,7 @@ namespace Google.Cloud.OsLogin.Common {
     private string key_ = "";
     /// <summary>
     /// Public key text in SSH format, defined by
-    /// &lt;a href="https://www.ietf.org/rfc/rfc4253.txt" target="_blank">RFC4253&lt;/a>
-    /// section 6.6.
+    /// [RFC4253](https://www.ietf.org/rfc/rfc4253.txt) section 6.6.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
