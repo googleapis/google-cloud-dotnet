@@ -19,7 +19,7 @@ using System.Dynamic;
 using System.IO;
 using Xunit;
 using BclType = System.Type;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 using System.Collections;
 using System.Linq;
@@ -158,7 +158,7 @@ namespace Google.Cloud.Firestore.Tests
                     {
                         { "Name", new Value { StringValue = "test" } },
                         { "Guid", new Value { StringValue = guid.ToString("N") } },
-                        { "GuidOrNull", new Value { NullValue = wkt::NullValue.NullValue } },
+                        { "GuidOrNull", new Value { NullValue = WKT::NullValue.NullValue } },
                     }
                 }
             };
@@ -205,9 +205,9 @@ namespace Google.Cloud.Firestore.Tests
             { new Value { MapValue = new MapValue() }, typeof(IUnsupportedDictionary) }, // See below
             // Invalid original value
             { new Value(), typeof(object) },
-            { new Value { NullValue = wkt::NullValue.NullValue }, typeof(int) },
-            { new Value { NullValue = wkt::NullValue.NullValue }, typeof(Guid) },
-            { new Value { NullValue = wkt::NullValue.NullValue }, typeof(Blob) }
+            { new Value { NullValue = WKT::NullValue.NullValue }, typeof(int) },
+            { new Value { NullValue = WKT::NullValue.NullValue }, typeof(Guid) },
+            { new Value { NullValue = WKT::NullValue.NullValue }, typeof(Blob) }
         };
 
         [Theory]
@@ -252,14 +252,14 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData(typeof(SerializationTestData.GameResult))]
         public void DeserializeNull(BclType targetType)
         {
-            var value = new Value { NullValue = wkt::NullValue.NullValue };
+            var value = new Value { NullValue = WKT::NullValue.NullValue };
             Assert.Null(DeserializeDefault(value, targetType));
         }
 
         [Fact]
         public void DeserializeNullToValue()
         {
-            var value = new Value { NullValue = wkt::NullValue.NullValue };
+            var value = new Value { NullValue = WKT::NullValue.NullValue };
             var deserialized = DeserializeDefault(value, typeof(Value));
             // We should get a clone back.
             Assert.NotSame(value, deserialized);

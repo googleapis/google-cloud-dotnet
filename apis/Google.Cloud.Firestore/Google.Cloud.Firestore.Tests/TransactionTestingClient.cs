@@ -21,7 +21,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -155,6 +155,6 @@ namespace Google.Cloud.Firestore.Tests
             }
         }
 
-        private wkt::Timestamp GetNextTimestamp() => CreateProtoTimestamp(0, Interlocked.Increment(ref _nanos));
+        private WKT::Timestamp GetNextTimestamp() => CreateProtoTimestamp(0, Interlocked.Increment(ref _nanos));
     }
 }
