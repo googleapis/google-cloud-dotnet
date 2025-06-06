@@ -386,5 +386,29 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.Equal(expected, new HashSet<string>(client.HandledMessages));
             });
         }
+
+        [Fact]
+        public void OrderingKey_OneMessageAfterAnother()
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper);
+            var settings = MakeSettings(scheduler, enableMessageOrdering: true);
+
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () => Task.CompletedTask, taskHelper);
+            scheduler.Run(async () =>
+            {
+                await pub.PublishAsync("ordering-key", "message 1");
+                Assert.Equal(0, pub.PendingKeysCount);
+                await pub.PublishAsync("ordering-key", "message 2");
+
+                await taskHelper.ConfigureAwait(pub.ShutdownAsync(new CancellationToken()));
+
+                var expectedMessages = new string[] { "message 1", "message 2" };
+
+                Assert.Equal(expectedMessages, client.HandledMessages);
+            });
+        }
     }
 }
