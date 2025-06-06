@@ -60,13 +60,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
             { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" },
-            { "PgOidField", SpannerDbType.PgOid, 3L }
+            { "PgOidField", SpannerDbType.PgOid, 3L },
+            { "IntervalField", SpannerDbType.Interval, Interval.Parse("P1Y2M3D") }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\", \"P1Y2M3D\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -131,6 +132,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return PgNumeric.MinValue;
             yield return PgNumeric.MaxValue;
             yield return PgNumeric.NaN;
+        }
+
+        private static IEnumerable<Interval> GetIntervalsForArray()
+        {
+            yield return Interval.Parse("P1Y");
+            yield return Interval.Parse("P1Y2M3DT4H5M6.5S");
+            yield return Interval.Parse("PT0.9S");
         }
 
         private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
@@ -320,6 +328,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "1", SpannerDbType.PgNumeric, Quote("1") };
             yield return new object[] { "1.5", SpannerDbType.PgNumeric, Quote("1.5") };
             yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
+            // Interval tests
+            yield return new object[] { "P0Y", SpannerDbType.Interval, Quote("P0Y") };
+            yield return new object[] { Interval.Parse("P1Y2M3DT4H5M6S"), SpannerDbType.Interval, Quote("P1Y2M3DT4H5M6S") };
 
             // Note the difference in C# conversions from special floats and doubles.
             yield return new object[] { float.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
@@ -403,6 +414,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<PgNumeric>(GetPgNumericsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgNumeric),
                 "[ \""+ExpectedMinValueForPgNumeric+"\", \""+ExpectedMaxValueForPgNumeric+"\", \"NaN\" ]"
+            };
+            yield return new object[]
+            {
+                new List<Interval>(GetIntervalsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Interval),
+                "[ \"P1Y\", \"P1Y2M3DT4H5M6.5S\", \"PT0.9S\" ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
@@ -661,6 +677,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { double.NegativeInfinity, SpannerDbType.PgNumeric };
             yield return new object[] { double.PositiveInfinity, SpannerDbType.PgNumeric };
             yield return new object[] { double.NaN, SpannerDbType.PgNumeric };
+
+            // Spanner type = Interval tests.
+            yield return new object[] { "invalid", SpannerDbType.Interval };
+            yield return new object[] { "1Y2M", SpannerDbType.Interval };
+            yield return new object[] { "P1H", SpannerDbType.Interval };
+            yield return new object[] { TimeSpan.FromDays(3), SpannerDbType.Interval };
         }
 
         private static readonly CultureInfo[] s_cultures = new[]
