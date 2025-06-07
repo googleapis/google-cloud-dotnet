@@ -190,7 +190,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
 
             // Register a method that sets the updated trace context information on the response.
             services.AddSingleton<Action<HttpResponse, ITraceContext>>(
-                (response, traceContext) => response.Headers.Add("custom_trace_id", traceContext.TraceId));
+                (response, traceContext) => response.Headers.Append("custom_trace_id", traceContext.TraceId));
 
             // Now you can register Google Trace normally.
 
