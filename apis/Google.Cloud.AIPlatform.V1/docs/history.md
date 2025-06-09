@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.33.0, released 2025-06-09
+
+### New features
+
+- Expose UrlContextMetadata API to v1
+- Add network_attachment to PscInterfaceConfig
+- Add psc_interface_config to CustomJobSpec
+- Add psc_interface_config to PersistentResource
+- Add psc_interface_config to PipelineJob
+- Add json schema support to structured output and function declaration
+- Expose URL Context API to v1
+
+### Bug fixes
+
+- Upgrade gRPC service registration func
+
 ## Version 3.32.0, released 2025-05-29
 
 ### New features
