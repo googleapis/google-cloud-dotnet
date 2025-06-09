@@ -50,6 +50,9 @@ internal class Program
             {
                 await adminClient.DeleteDatabaseAsync(dbName);
                 Console.WriteLine($"Success deleting {dbName.DatabaseId}");
+                // Firestore has a default quota of 60 database operations per minute.
+                // We wait 1 second in between database deletes.
+                await Task.Delay(1000);
             }
             catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
