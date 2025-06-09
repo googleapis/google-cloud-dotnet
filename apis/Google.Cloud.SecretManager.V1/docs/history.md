@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.6.0, released 2025-06-09
+
+### New features
+
+- Update secret manager protos for tags
+
+### Documentation improvements
+
+- Updated comment for `customer_managed_encryption` in message `.google.cloud.secretmanager.v1.Secret`
+- Updated comment for `scheduled_destroy_time` in message `.google.cloud.secretmanager.v1.SecretVersion`
+- Updated comment for `customer_managed_encryption` in message `.google.cloud.secretmanager.v1.SecretVersion`
+- Updated comment for `Replication`
+- Updated comment for `name` in message `.google.cloud.secretmanager.v1.Topic`
+
 ## Version 2.5.0, released 2024-05-14
 
 ### New features
