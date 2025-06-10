@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 BucketId = "",
                 PredefinedAcl = "",
                 PredefinedDefaultObjectAcl = "",
+                EnableObjectRetention = false,
             };
             // Make the request
             Bucket response = await storageClient.CreateBucketAsync(request);
