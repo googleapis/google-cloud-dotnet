@@ -62,6 +62,8 @@ public class ContainerOptions
         ReleaseNotes = options.GetValueOrDefault(ReleaseNotesOption);
     }
 
+    internal static ContainerOptions FromArgs(params string[] args) => FromArgs((IEnumerable<string>) args);
+
     internal static ContainerOptions FromArgs(IEnumerable<string> args)
     {
         return new(args.Select(SplitNameAndValue).ToDictionary(pair => pair.name, pair => pair.value));
