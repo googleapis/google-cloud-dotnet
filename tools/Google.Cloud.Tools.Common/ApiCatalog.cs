@@ -38,16 +38,19 @@ namespace Google.Cloud.Tools.Common
         /// <summary>
         /// Groups of related packages which need to be released together.
         /// </summary>
+        [JsonProperty("packageGroups")]
         public List<PackageGroup> PackageGroups { get; set; }
 
         /// <summary>
         /// The APIs within the catalog.
         /// </summary>
+        [JsonProperty("apis")]
         public List<ApiMetadata> Apis { get; set; }
 
         /// <summary>
         /// Proto paths for APIs we knowingly don't generate. The values are the reasons for not generating.
         /// </summary>
+        [JsonProperty("ignoredPaths")]
         public Dictionary<string, string> IgnoredPaths { get; set; }
 
         /// <summary>
@@ -61,6 +64,12 @@ namespace Google.Cloud.Tools.Common
         /// Formats <see cref="Json"/>.
         /// </summary>
         public string FormatJson() => Json.ToString(Formatting.Indented);
+
+        /// <summary>
+        /// Recreates <see cref="Json"/> from the in-memory representation of this object, ignoring
+        /// any previous JSON.
+        /// </summary>
+        public void RecreateJson() => Json = JObject.FromObject(this);
 
         /// <summary>
         /// Retrieves an API by ID.
@@ -160,10 +169,14 @@ namespace Google.Cloud.Tools.Common
             {
                 followingApi.Json.AddBeforeSelf(api.Json);
             }
-            else
+            else if (Apis.Count > 0)
             {
                 // Looks like this API will be last in the list.
                 Apis.Last().Json.AddAfterSelf(api.Json);
+            }
+            else
+            {
+                Json["apis"] = new JArray(api.Json);
             }
         }
     }
