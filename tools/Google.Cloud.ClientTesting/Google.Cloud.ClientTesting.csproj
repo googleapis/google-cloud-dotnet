@@ -13,7 +13,7 @@
     <PackageReference Include="xunit.assert" />
     <PackageReference Include="xunit.core" />
     <PackageReference Include="Xunit.SkippableFact" />
-    <PackageReference Include="Google.Apis" VersionOverride="1.69.0" />
+    <PackageReference Include="Google.Apis" VersionOverride="1.70.0" />
     <PackageReference Include="Grpc.Core.Api" VersionOverride="2.66.0" />
     <PackageReference Include="Google.Api.Gax" />
     <PackageReference Include="Google.Protobuf" />
