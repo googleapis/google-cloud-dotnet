@@ -257,6 +257,28 @@ namespace Google.Cloud.Spanner.Data
         public string EndPoint => $"{Host}:{Port}";
 
         /// <summary>
+        /// The universe domain to connect to, or null to use the default universe domain <see cref="DefaultDomain"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// <see cref="UniverseDomain"/> is used to build the endpoint to connect to, unless <see cref="EndPoint"/>
+        /// is set, in which case <see cref="EndPoint"/> will be used without further modification.
+        /// </para>
+        /// <para>
+        /// If default credentials or one of <see cref="GoogleCredential"/> or <see cref="CredentialFile"/>
+        /// is used, <see cref="GoogleCredential.GetUniverseDomain"/> should be:
+        /// <list type="bullet">
+        /// <item>The same as <see cref="UniverseDomain"/> if <see cref="UniverseDomain"/> has been set.</item>
+        /// </list>
+        /// </para>
+        /// </remarks>
+        public string UniverseDomain
+        {
+            get => GetValueOrDefault(nameof(UniverseDomain), DefaultDomain);
+            set => this[nameof(UniverseDomain)] = value;
+        }
+
+        /// <summary>
         /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
         /// host will be used.
         /// </summary>

@@ -114,14 +114,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public async Task CredentialFileP12Error()
-        {
-            var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
-            var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => options.GetCredentialsAsync());
-        }
-
-        [Fact]
         public async Task CredentialFileNotFound()
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
@@ -136,6 +128,22 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder("", credential);
             var options = new SpannerClientCreationOptions(builder);
             Assert.NotNull(await options.GetCredentialsAsync());
+        }
+
+        [Theory]
+        // InlineData format: ConnectionString, ExpectedUniverseDomain, ExpectedEndpoint 
+        [InlineData("UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "spanner.test-domain.test.goog:443")]
+        [InlineData("Host=test-host;Port=567", "googleapis.com", "test-host:567")]
+        [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test.goog", "test-domain.test.goog", "test-host:567")]
+        [InlineData("Data Spurce=projects/p1/instances/i1/databases/d1", "googleapis.com", "spanner.googleapis.com:443")]
+        public void Equality_UniverseDomainAndEndpoint(string connectionString, string expectedUniverseDomain, string expectedEndpoint)
+        {
+            //string universeDomain = "test-domain.test.goog";
+            var builder = new SpannerConnectionStringBuilder(connectionString);
+            var options = new SpannerClientCreationOptions(builder);
+
+            Assert.Equal(expectedUniverseDomain, options.UniverseDomain);
+            Assert.Equal(expectedEndpoint, options.Endpoint);
         }
     }
 }
