@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 CommonObjectRequestParams = new CommonObjectRequestParams(),
                 PredefinedAcl = "",
+                OverrideUnlockedRetention = false,
             };
             // Make the request
             Object response = storageClient.UpdateObject(request);

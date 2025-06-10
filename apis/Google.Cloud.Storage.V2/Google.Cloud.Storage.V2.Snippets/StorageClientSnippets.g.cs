@@ -231,6 +231,7 @@ namespace GoogleCSharpSnippets
                 BucketId = "",
                 PredefinedAcl = "",
                 PredefinedDefaultObjectAcl = "",
+                EnableObjectRetention = false,
             };
             // Make the request
             gcsv::Bucket response = storageClient.CreateBucket(request);
@@ -252,6 +253,7 @@ namespace GoogleCSharpSnippets
                 BucketId = "",
                 PredefinedAcl = "",
                 PredefinedDefaultObjectAcl = "",
+                EnableObjectRetention = false,
             };
             // Make the request
             gcsv::Bucket response = await storageClient.CreateBucketAsync(request);
@@ -1800,6 +1802,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 CommonObjectRequestParams = new gcsv::CommonObjectRequestParams(),
                 PredefinedAcl = "",
+                OverrideUnlockedRetention = false,
             };
             // Make the request
             gcsv::Object response = storageClient.UpdateObject(request);
@@ -1824,6 +1827,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 CommonObjectRequestParams = new gcsv::CommonObjectRequestParams(),
                 PredefinedAcl = "",
+                OverrideUnlockedRetention = false,
             };
             // Make the request
             gcsv::Object response = await storageClient.UpdateObjectAsync(request);
