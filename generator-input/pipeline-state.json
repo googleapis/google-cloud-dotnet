@@ -222,7 +222,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-14T17:01:42.974024895Z",
-            "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "lastGeneratedCommit": "ed9b0f14f9c2252078f1c6e9847afad838776435",
             "lastReleasedCommit": "dc06efa54b7c53b3ff1bc69c379330676b990495",
             "apiPaths": [
                 "google/cloud/alloydb/v1alpha"

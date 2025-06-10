@@ -26,18 +26,18 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvYWxsb3lkYi92MWFscGhhL2dlbWluaS5wcm90bxIc",
             "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFhbHBoYRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90byIsChNHZW1pbmlDbHVzdGVyQ29uZmlnEhUKCGVu",
-            "dGl0bGVkGAEgASgIQgPgQQMiLQoUR2VtaW5pSW5zdGFuY2VDb25maWcSFQoI",
-            "ZW50aXRsZWQYASABKAhCA+BBAyJjChFHQ0FJbnN0YW5jZUNvbmZpZxJOCg9n",
-            "Y2FfZW50aXRsZW1lbnQYASABKA4yMC5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MWFscGhhLkdDQUVudGl0bGVtZW50VHlwZUID4EEDKkwKEkdDQUVudGl0bGVt",
-            "ZW50VHlwZRIkCiBHQ0FfRU5USVRMRU1FTlRfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhAKDEdDQV9TVEFOREFSRBABQs0BCiBjb20uZ29vZ2xlLmNsb3VkLmFsbG95",
-            "ZGIudjFhbHBoYUILR2VtaW5pUHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9hbGxveWRiL2FwaXYxYWxwaGEvYWxsb3lkYnBiO2FsbG95ZGJwYqoCHEdv",
-            "b2dsZS5DbG91ZC5BbGxveURiLlYxQWxwaGHKAhxHb29nbGVcQ2xvdWRcQWxs",
-            "b3lEYlxWMWFscGhh6gIfR29vZ2xlOjpDbG91ZDo6QWxsb3lEQjo6VjFhbHBo",
-            "YWIGcHJvdG8z"));
+            "ZF9iZWhhdmlvci5wcm90byIuChNHZW1pbmlDbHVzdGVyQ29uZmlnEhcKCGVu",
+            "dGl0bGVkGAEgASgIQgUYAeBBAyIvChRHZW1pbmlJbnN0YW5jZUNvbmZpZxIX",
+            "CghlbnRpdGxlZBgBIAEoCEIFGAHgQQMiYwoRR0NBSW5zdGFuY2VDb25maWcS",
+            "TgoPZ2NhX2VudGl0bGVtZW50GAEgASgOMjAuZ29vZ2xlLmNsb3VkLmFsbG95",
+            "ZGIudjFhbHBoYS5HQ0FFbnRpdGxlbWVudFR5cGVCA+BBAypMChJHQ0FFbnRp",
+            "dGxlbWVudFR5cGUSJAogR0NBX0VOVElUTEVNRU5UX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxHQ0FfU1RBTkRBUkQQAULNAQogY29tLmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxYWxwaGFCC0dlbWluaVByb3RvUAFaOmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWxsb3lkYi9hcGl2MWFscGhhL2FsbG95ZGJwYjthbGxveWRicGKq",
+            "AhxHb29nbGUuQ2xvdWQuQWxsb3lEYi5WMUFscGhhygIcR29vZ2xlXENsb3Vk",
+            "XEFsbG95RGJcVjFhbHBoYeoCH0dvb2dsZTo6Q2xvdWQ6OkFsbG95REI6OlYx",
+            "YWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -68,8 +68,7 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
 
   #region Messages
   /// <summary>
-  /// Cluster level configuration parameters related to the Gemini in Databases
-  /// add-on.
+  /// Deprecated and unused. This message will be removed in the near future.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeminiClusterConfig : pb::IMessage<GeminiClusterConfig>
@@ -120,11 +119,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
     public const int EntitledFieldNumber = 1;
     private bool entitled_;
     /// <summary>
-    /// Output only. Whether the Gemini in Databases add-on is enabled for the
-    /// cluster. It will be true only if the add-on has been enabled for the
-    /// billing account corresponding to the cluster. Its status is toggled from
-    /// the Admin Control Center (ACC) and cannot be toggled using AlloyDB's APIs.
+    /// Output only. Deprecated and unused. This field will be removed in the near
+    /// future.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Entitled {
@@ -268,8 +266,7 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
   }
 
   /// <summary>
-  /// Instance level configuration parameters related to the Gemini in Databases
-  /// add-on.
+  /// Deprecated and unused. This message will be removed in the near future.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeminiInstanceConfig : pb::IMessage<GeminiInstanceConfig>
@@ -320,11 +317,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
     public const int EntitledFieldNumber = 1;
     private bool entitled_;
     /// <summary>
-    /// Output only. Whether the Gemini in Databases add-on is enabled for the
-    /// instance. It will be true only if the add-on has been enabled for the
-    /// billing account corresponding to the instance. Its status is toggled from
-    /// the Admin Control Center (ACC) and cannot be toggled using AlloyDB's APIs.
+    /// Output only. Deprecated and unused. This field will be removed in the near
+    /// future.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Entitled {
