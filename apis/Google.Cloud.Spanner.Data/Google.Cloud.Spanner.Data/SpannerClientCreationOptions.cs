@@ -12,15 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
 using Grpc.Core;
+using Grpc.Net.Client;
+using Grpc.Net.Client.Configuration;
 using System;
+using System.CodeDom;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using MethodConfig = Google.Api.Gax.Grpc.Gcp.MethodConfig;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -214,6 +221,76 @@ namespace Google.Cloud.Spanner.Data
                 credential = GoogleCredential.FromServiceAccountCredential(serviceCredential.WithUseJwtAccessWithScopes(true));
             }
             return credential.ToChannelCredentials();
+        }
+
+        internal class GcpCallInvokerBuilder : ClientBuilderBase<GcpCallInvoker>
+        {
+            private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
+            private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+            internal int MaximumGrpcChannels { get; }
+            internal uint MaximumConcurrentStreamsLowWatermark { get; }
+            internal MethodConfig[] MethodConfigs { get; }
+            public GcpCallInvokerBuilder() : base(SpannerClient.ServiceMetadata)
+            {
+            }
+
+            public override GcpCallInvoker Build() => BuildAsync().Result;
+
+            internal string InvokerEffectiveEndpoint => base.EffectiveEndpoint;
+
+            internal new EmulatorDetection EmulatorDetection
+            {
+                get => base.EmulatorDetection;
+                set => base.EmulatorDetection = value;
+            }
+
+            internal Boolean UseEmulator { get; set; }
+
+            internal Func<string, string> EnvironmentVariableProvider { get; set; }
+
+            internal async Task<ChannelCredentials> CheckAndGetChannelCredentials()
+            {
+                return await base.GetChannelCredentialsAsync(CancellationToken.None).ConfigureAwait(false);
+            }
+
+            public override async Task<GcpCallInvoker> BuildAsync(CancellationToken cancellationToken = default)
+            {
+                MaybeSetEmulatorProperties();
+                var endpoint = UseEmulator ? Endpoint : EffectiveEndpoint;
+                var credentials = await CheckAndGetChannelCredentials().ConfigureAwait(false);
+
+                var apiConfig = new ApiConfig
+                {
+                    ChannelPool = new ChannelPoolConfig
+                    {
+                        MaxSize = (uint)MaximumGrpcChannels,
+                        MaxConcurrentStreamsLowWatermark = MaximumConcurrentStreamsLowWatermark
+                    },
+                    Method = { MethodConfigs }
+                };
+
+                var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, endpoint, credentials, GrpcChannelOptions, apiConfig, GrpcAdapter);
+                return callInvoker;
+
+            }
+            protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
+
+            internal void MaybeSetEmulatorProperties()
+            {
+                var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables, EnvironmentVariableProvider);
+                if (emulatorEnvironment is null)
+                {
+                    UseEmulator = false;
+                    return;
+                }
+
+                // Set Emulator based properties on this builder object
+                UseEmulator = true;
+                Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable];
+                ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure;
+
+                // TODO: Check if we need to set any more SpannerSettings for the Emulator here. From previous implementation there is no explicit use of the SpannerSettings set in the Builder created for the Emulator.
+            }
         }
     }
 }
