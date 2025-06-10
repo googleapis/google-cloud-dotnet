@@ -27,67 +27,68 @@ namespace Google.Cloud.NetworkServices.V1 {
             "Ci9nb29nbGUvY2xvdWQvbmV0d29ya3NlcnZpY2VzL3YxL3RjcF9yb3V0ZS5w",
             "cm90bxIfZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iwAgKCFRjcFJvdXRlEhEK",
-            "BG5hbWUYASABKAlCA+BBAhIWCglzZWxmX2xpbmsYCyABKAlCA+BBAxI0Cgtj",
-            "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxIYCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBEkcKBXJ1",
-            "bGVzGAUgAygLMjMuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5U",
-            "Y3BSb3V0ZS5Sb3V0ZVJ1bGVCA+BBAhI7CgZtZXNoZXMYCCADKAlCK+BBAfpB",
-            "JQojbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL01lc2gSQAoIZ2F0",
-            "ZXdheXMYCSADKAlCLuBBAfpBKAombmV0d29ya3NlcnZpY2VzLmdvb2dsZWFw",
-            "aXMuY29tL0dhdGV3YXkSSgoGbGFiZWxzGAogAygLMjUuZ29vZ2xlLmNsb3Vk",
-            "Lm5ldHdvcmtzZXJ2aWNlcy52MS5UY3BSb3V0ZS5MYWJlbHNFbnRyeUID4EEB",
-            "GqMBCglSb3V0ZVJ1bGUSSgoHbWF0Y2hlcxgBIAMoCzI0Lmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3Jrc2VydmljZXMudjEuVGNwUm91dGUuUm91dGVNYXRjaEID4EEB",
-            "EkoKBmFjdGlvbhgCIAEoCzI1Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vydmlj",
-            "ZXMudjEuVGNwUm91dGUuUm91dGVBY3Rpb25CA+BBAho1CgpSb3V0ZU1hdGNo",
-            "EhQKB2FkZHJlc3MYASABKAlCA+BBAhIRCgRwb3J0GAIgASgJQgPgQQIahwEK",
-            "C1JvdXRlQWN0aW9uElUKDGRlc3RpbmF0aW9ucxgBIAMoCzI6Lmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuVGNwUm91dGUuUm91dGVEZXN0aW5h",
-            "dGlvbkID4EEBEiEKFG9yaWdpbmFsX2Rlc3RpbmF0aW9uGAMgASgIQgPgQQEa",
-            "bAoQUm91dGVEZXN0aW5hdGlvbhJDCgxzZXJ2aWNlX25hbWUYASABKAlCLeBB",
-            "AvpBJwolY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9CYWNrZW5kU2VydmljZRIT",
-            "CgZ3ZWlnaHQYAiABKAVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBOmvqQWgKJ25ldHdvcmtzZXJ2aWNlcy5n",
-            "b29nbGVhcGlzLmNvbS9UY3BSb3V0ZRI9cHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L3RjcFJvdXRlcy97dGNwX3JvdXRlfSJ+ChRM",
-            "aXN0VGNwUm91dGVzUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+BBAvpBKRIn",
-            "bmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL1RjcFJvdXRlEhEKCXBh",
-            "Z2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIm8KFUxpc3RUY3BS",
-            "b3V0ZXNSZXNwb25zZRI9Cgp0Y3Bfcm91dGVzGAEgAygLMikuZ29vZ2xlLmNs",
-            "b3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5UY3BSb3V0ZRIXCg9uZXh0X3BhZ2Vf",
-            "dG9rZW4YAiABKAkiUwoSR2V0VGNwUm91dGVSZXF1ZXN0Ej0KBG5hbWUYASAB",
-            "KAlCL+BBAvpBKQonbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL1Rj",
-            "cFJvdXRlIrYBChVDcmVhdGVUY3BSb3V0ZVJlcXVlc3QSPwoGcGFyZW50GAEg",
-            "ASgJQi/gQQL6QSkSJ25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9U",
-            "Y3BSb3V0ZRIZCgx0Y3Bfcm91dGVfaWQYAiABKAlCA+BBAhJBCgl0Y3Bfcm91",
-            "dGUYAyABKAsyKS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLlRj",
-            "cFJvdXRlQgPgQQIikAEKFVVwZGF0ZVRjcFJvdXRlUmVxdWVzdBI0Cgt1cGRh",
-            "dGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
-            "ARJBCgl0Y3Bfcm91dGUYAiABKAsyKS5nb29nbGUuY2xvdWQubmV0d29ya3Nl",
-            "cnZpY2VzLnYxLlRjcFJvdXRlQgPgQQIiVgoVRGVsZXRlVGNwUm91dGVSZXF1",
-            "ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonbmV0d29ya3NlcnZpY2VzLmdv",
-            "b2dsZWFwaXMuY29tL1RjcFJvdXRlQuMCCiNjb20uZ29vZ2xlLmNsb3VkLm5l",
-            "dHdvcmtzZXJ2aWNlcy52MUINVGNwUm91dGVQcm90b1ABWk1jbG91ZC5nb29n",
-            "bGUuY29tL2dvL25ldHdvcmtzZXJ2aWNlcy9hcGl2MS9uZXR3b3Jrc2Vydmlj",
-            "ZXNwYjtuZXR3b3Jrc2VydmljZXNwYqoCH0dvb2dsZS5DbG91ZC5OZXR3b3Jr",
-            "U2VydmljZXMuVjHKAh9Hb29nbGVcQ2xvdWRcTmV0d29ya1NlcnZpY2VzXFYx",
-            "6gIiR29vZ2xlOjpDbG91ZDo6TmV0d29ya1NlcnZpY2VzOjpWMepBcgolY29t",
-            "cHV0ZS5nb29nbGVhcGlzLmNvbS9CYWNrZW5kU2VydmljZRJJcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2JhY2tlbmRTZXJ2aWNl",
-            "cy97YmFja2VuZF9zZXJ2aWNlfWIGcHJvdG8z"));
+            "ZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGiBnb29n",
+            "bGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90byL2CAoIVGNwUm91dGUSEQoEbmFtZRgBIAEoCUID",
+            "4EEIEhYKCXNlbGZfbGluaxgLIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
+            "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPgQQESRwoFcnVsZXMYBSADKAsyMy5n",
+            "b29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLlRjcFJvdXRlLlJvdXRl",
+            "UnVsZUID4EECEjsKBm1lc2hlcxgIIAMoCUIr4EEB+kElCiNuZXR3b3Jrc2Vy",
+            "dmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaBJACghnYXRld2F5cxgJIAMoCUIu",
+            "4EEB+kEoCiZuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vR2F0ZXdh",
+            "eRJKCgZsYWJlbHMYCiADKAsyNS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZp",
+            "Y2VzLnYxLlRjcFJvdXRlLkxhYmVsc0VudHJ5QgPgQQEaowEKCVJvdXRlUnVs",
+            "ZRJKCgdtYXRjaGVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2",
+            "aWNlcy52MS5UY3BSb3V0ZS5Sb3V0ZU1hdGNoQgPgQQESSgoGYWN0aW9uGAIg",
+            "ASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5UY3BSb3V0",
+            "ZS5Sb3V0ZUFjdGlvbkID4EECGjUKClJvdXRlTWF0Y2gSFAoHYWRkcmVzcxgB",
+            "IAEoCUID4EECEhEKBHBvcnQYAiABKAlCA+BBAhq9AQoLUm91dGVBY3Rpb24S",
+            "VQoMZGVzdGluYXRpb25zGAEgAygLMjouZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
+            "ZXJ2aWNlcy52MS5UY3BSb3V0ZS5Sb3V0ZURlc3RpbmF0aW9uQgPgQQESIQoU",
+            "b3JpZ2luYWxfZGVzdGluYXRpb24YAyABKAhCA+BBARI0CgxpZGxlX3RpbWVv",
+            "dXQYBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARpsChBS",
+            "b3V0ZURlc3RpbmF0aW9uEkMKDHNlcnZpY2VfbmFtZRgBIAEoCUIt4EEC+kEn",
+            "CiVjb21wdXRlLmdvb2dsZWFwaXMuY29tL0JhY2tlbmRTZXJ2aWNlEhMKBndl",
+            "aWdodBgCIAEoBUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAE6a+pBaAonbmV0d29ya3NlcnZpY2VzLmdvb2ds",
+            "ZWFwaXMuY29tL1RjcFJvdXRlEj1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vdGNwUm91dGVzL3t0Y3Bfcm91dGV9IqMBChRMaXN0",
+            "VGNwUm91dGVzUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+BBAvpBKRInbmV0",
+            "d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL1RjcFJvdXRlEhEKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEiMKFnJldHVybl9wYXJ0",
+            "aWFsX3N1Y2Nlc3MYBCABKAhCA+BBASKEAQoVTGlzdFRjcFJvdXRlc1Jlc3Bv",
+            "bnNlEj0KCnRjcF9yb3V0ZXMYASADKAsyKS5nb29nbGUuY2xvdWQubmV0d29y",
+            "a3NlcnZpY2VzLnYxLlRjcFJvdXRlEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CRITCgt1bnJlYWNoYWJsZRgDIAMoCSJTChJHZXRUY3BSb3V0ZVJlcXVlc3QS",
+            "PQoEbmFtZRgBIAEoCUIv4EEC+kEpCiduZXR3b3Jrc2VydmljZXMuZ29vZ2xl",
+            "YXBpcy5jb20vVGNwUm91dGUitgEKFUNyZWF0ZVRjcFJvdXRlUmVxdWVzdBI/",
+            "CgZwYXJlbnQYASABKAlCL+BBAvpBKRInbmV0d29ya3NlcnZpY2VzLmdvb2ds",
+            "ZWFwaXMuY29tL1RjcFJvdXRlEhkKDHRjcF9yb3V0ZV9pZBgCIAEoCUID4EEC",
+            "EkEKCXRjcF9yb3V0ZRgDIAEoCzIpLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vy",
+            "dmljZXMudjEuVGNwUm91dGVCA+BBAiKQAQoVVXBkYXRlVGNwUm91dGVSZXF1",
+            "ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFza0ID4EEBEkEKCXRjcF9yb3V0ZRgCIAEoCzIpLmdvb2dsZS5jbG91",
+            "ZC5uZXR3b3Jrc2VydmljZXMudjEuVGNwUm91dGVCA+BBAiJWChVEZWxldGVU",
+            "Y3BSb3V0ZVJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCiduZXR3b3Jr",
+            "c2VydmljZXMuZ29vZ2xlYXBpcy5jb20vVGNwUm91dGVC7gEKI2NvbS5nb29n",
+            "bGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxQg1UY3BSb3V0ZVByb3RvUAFa",
+            "TWNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25l",
+            "dHdvcmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNs",
+            "b3VkLk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3Jr",
+            "U2VydmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TcpRoute), global::Google.Cloud.NetworkServices.V1.TcpRoute.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Description", "Rules", "Meshes", "Gateways", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteRule), global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteRule.Parser, new[]{ "Matches", "Action" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteMatch), global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteMatch.Parser, new[]{ "Address", "Port" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteAction), global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteAction.Parser, new[]{ "Destinations", "OriginalDestination" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteAction), global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteAction.Parser, new[]{ "Destinations", "OriginalDestination", "IdleTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteDestination), global::Google.Cloud.NetworkServices.V1.TcpRoute.Types.RouteDestination.Parser, new[]{ "ServiceName", "Weight" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListTcpRoutesRequest), global::Google.Cloud.NetworkServices.V1.ListTcpRoutesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListTcpRoutesResponse), global::Google.Cloud.NetworkServices.V1.ListTcpRoutesResponse.Parser, new[]{ "TcpRoutes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListTcpRoutesRequest), global::Google.Cloud.NetworkServices.V1.ListTcpRoutesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListTcpRoutesResponse), global::Google.Cloud.NetworkServices.V1.ListTcpRoutesResponse.Parser, new[]{ "TcpRoutes", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.GetTcpRouteRequest), global::Google.Cloud.NetworkServices.V1.GetTcpRouteRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.CreateTcpRouteRequest), global::Google.Cloud.NetworkServices.V1.CreateTcpRouteRequest.Parser, new[]{ "Parent", "TcpRouteId", "TcpRoute" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.UpdateTcpRouteRequest), global::Google.Cloud.NetworkServices.V1.UpdateTcpRouteRequest.Parser, new[]{ "UpdateMask", "TcpRoute" }, null, null, null, null),
@@ -159,7 +160,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the TcpRoute resource. It matches pattern
+    /// Identifier. Name of the TcpRoute resource. It matches pattern
     /// `projects/*/locations/global/tcpRoutes/tcp_route_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -903,12 +904,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         /// Required. Must be specified in the CIDR range format. A CIDR range
         /// consists of an IP Address and a prefix length to construct the subnet
         /// mask. By default, the prefix length is 32 (i.e. matches a single IP
-        /// address). Only IPV4 addresses are supported.
-        /// Examples:
-        /// "10.0.0.1" - matches against this exact IP address.
-        /// "10.0.0.0/8" - matches against any IP address within the 10.0.0.0 subnet
-        /// and 255.255.255.0 mask.
-        /// "0.0.0.0/0" - matches against any IP address'.
+        /// address). Only IPV4 addresses are supported. Examples: "10.0.0.1" -
+        /// matches against this exact IP address. "10.0.0.0/8" - matches against any
+        /// IP address within the 10.0.0.0 subnet and 255.255.255.0 mask. "0.0.0.0/0"
+        /// - matches against any IP address'.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1131,6 +1130,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         public RouteAction(RouteAction other) : this() {
           destinations_ = other.destinations_.Clone();
           originalDestination_ = other.originalDestination_;
+          idleTimeout_ = other.idleTimeout_ != null ? other.idleTimeout_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1173,6 +1173,25 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
         }
 
+        /// <summary>Field number for the "idle_timeout" field.</summary>
+        public const int IdleTimeoutFieldNumber = 5;
+        private global::Google.Protobuf.WellKnownTypes.Duration idleTimeout_;
+        /// <summary>
+        /// Optional. Specifies the idle timeout for the selected route. The idle
+        /// timeout is defined as the period in which there are no bytes sent or
+        /// received on either the upstream or downstream connection. If not set, the
+        /// default idle timeout is 30 seconds. If set to 0s, the timeout will be
+        /// disabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration IdleTimeout {
+          get { return idleTimeout_; }
+          set {
+            idleTimeout_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1190,6 +1209,7 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           if(!destinations_.Equals(other.destinations_)) return false;
           if (OriginalDestination != other.OriginalDestination) return false;
+          if (!object.Equals(IdleTimeout, other.IdleTimeout)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1199,6 +1219,7 @@ namespace Google.Cloud.NetworkServices.V1 {
           int hash = 1;
           hash ^= destinations_.GetHashCode();
           if (OriginalDestination != false) hash ^= OriginalDestination.GetHashCode();
+          if (idleTimeout_ != null) hash ^= IdleTimeout.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1222,6 +1243,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(24);
             output.WriteBool(OriginalDestination);
           }
+          if (idleTimeout_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(IdleTimeout);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1237,6 +1262,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(24);
             output.WriteBool(OriginalDestination);
           }
+          if (idleTimeout_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(IdleTimeout);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1250,6 +1279,9 @@ namespace Google.Cloud.NetworkServices.V1 {
           size += destinations_.CalculateSize(_repeated_destinations_codec);
           if (OriginalDestination != false) {
             size += 1 + 1;
+          }
+          if (idleTimeout_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdleTimeout);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1266,6 +1298,12 @@ namespace Google.Cloud.NetworkServices.V1 {
           destinations_.Add(other.destinations_);
           if (other.OriginalDestination != false) {
             OriginalDestination = other.OriginalDestination;
+          }
+          if (other.idleTimeout_ != null) {
+            if (idleTimeout_ == null) {
+              IdleTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            IdleTimeout.MergeFrom(other.IdleTimeout);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1290,6 +1328,13 @@ namespace Google.Cloud.NetworkServices.V1 {
                 OriginalDestination = input.ReadBool();
                 break;
               }
+              case 42: {
+                if (idleTimeout_ == null) {
+                  IdleTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(IdleTimeout);
+                break;
+              }
             }
           }
         #endif
@@ -1311,6 +1356,13 @@ namespace Google.Cloud.NetworkServices.V1 {
               }
               case 24: {
                 OriginalDestination = input.ReadBool();
+                break;
+              }
+              case 42: {
+                if (idleTimeout_ == null) {
+                  IdleTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(IdleTimeout);
                 break;
               }
             }
@@ -1615,6 +1667,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1672,6 +1725,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 4;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// Optional. If true, allow partial responses for multi-regional Aggregated
+    /// List requests. Otherwise if one of the locations is down or unreachable,
+    /// the Aggregated List request will fail.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1690,6 +1760,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1700,6 +1771,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1730,6 +1802,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1752,6 +1828,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1770,6 +1850,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1791,6 +1874,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1819,6 +1905,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1844,6 +1934,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -1893,6 +1987,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public ListTcpRoutesResponse(ListTcpRoutesResponse other) : this() {
       tcpRoutes_ = other.tcpRoutes_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1933,6 +2028,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable resources. Populated when the request opts into
+    /// [return_partial_success][google.cloud.networkservices.v1.ListTcpRoutesRequest.return_partial_success]
+    /// and reading across collections e.g. when attempting to list all resources
+    /// across all supported locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1950,6 +2062,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if(!tcpRoutes_.Equals(other.tcpRoutes_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1959,6 +2072,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       int hash = 1;
       hash ^= tcpRoutes_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1982,6 +2096,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1997,6 +2112,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2011,6 +2127,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2027,6 +2144,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2050,6 +2168,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2071,6 +2193,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

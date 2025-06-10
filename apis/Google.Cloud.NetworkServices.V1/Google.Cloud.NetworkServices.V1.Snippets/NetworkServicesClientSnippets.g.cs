@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> response = networkServicesClient.ListEndpointPolicies(request);
@@ -86,6 +87,7 @@ namespace GoogleCSharpSnippets
             ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> response = networkServicesClient.ListEndpointPoliciesAsync(request);
@@ -1776,6 +1778,7 @@ namespace GoogleCSharpSnippets
             ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListGrpcRoutesResponse, GrpcRoute> response = networkServicesClient.ListGrpcRoutes(request);
@@ -1824,6 +1827,7 @@ namespace GoogleCSharpSnippets
             ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListGrpcRoutesResponse, GrpcRoute> response = networkServicesClient.ListGrpcRoutesAsync(request);
@@ -2645,6 +2649,7 @@ namespace GoogleCSharpSnippets
             ListHttpRoutesRequest request = new ListHttpRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListHttpRoutesResponse, HttpRoute> response = networkServicesClient.ListHttpRoutes(request);
@@ -2693,6 +2698,7 @@ namespace GoogleCSharpSnippets
             ListHttpRoutesRequest request = new ListHttpRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListHttpRoutesResponse, HttpRoute> response = networkServicesClient.ListHttpRoutesAsync(request);
@@ -3514,6 +3520,7 @@ namespace GoogleCSharpSnippets
             ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListTcpRoutesResponse, TcpRoute> response = networkServicesClient.ListTcpRoutes(request);
@@ -3562,6 +3569,7 @@ namespace GoogleCSharpSnippets
             ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListTcpRoutesResponse, TcpRoute> response = networkServicesClient.ListTcpRoutesAsync(request);
@@ -4383,6 +4391,7 @@ namespace GoogleCSharpSnippets
             ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListTlsRoutesResponse, TlsRoute> response = networkServicesClient.ListTlsRoutes(request);
@@ -4431,6 +4440,7 @@ namespace GoogleCSharpSnippets
             ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListTlsRoutesResponse, TlsRoute> response = networkServicesClient.ListTlsRoutesAsync(request);
@@ -5800,6 +5810,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateServiceBinding</summary>
+        public void UpdateServiceBindingRequestObject()
+        {
+            // Snippet: UpdateServiceBinding(UpdateServiceBindingRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            UpdateServiceBindingRequest request = new UpdateServiceBindingRequest
+            {
+                UpdateMask = new FieldMask(),
+                ServiceBinding = new ServiceBinding(),
+            };
+            // Make the request
+            Operation<ServiceBinding, OperationMetadata> response = networkServicesClient.UpdateServiceBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceBinding, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateServiceBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceBindingAsync</summary>
+        public async Task UpdateServiceBindingRequestObjectAsync()
+        {
+            // Snippet: UpdateServiceBindingAsync(UpdateServiceBindingRequest, CallSettings)
+            // Additional: UpdateServiceBindingAsync(UpdateServiceBindingRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateServiceBindingRequest request = new UpdateServiceBindingRequest
+            {
+                UpdateMask = new FieldMask(),
+                ServiceBinding = new ServiceBinding(),
+            };
+            // Make the request
+            Operation<ServiceBinding, OperationMetadata> response = await networkServicesClient.UpdateServiceBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceBinding, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateServiceBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceBinding</summary>
+        public void UpdateServiceBinding()
+        {
+            // Snippet: UpdateServiceBinding(ServiceBinding, FieldMask, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ServiceBinding serviceBinding = new ServiceBinding();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ServiceBinding, OperationMetadata> response = networkServicesClient.UpdateServiceBinding(serviceBinding, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceBinding, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateServiceBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceBindingAsync</summary>
+        public async Task UpdateServiceBindingAsync()
+        {
+            // Snippet: UpdateServiceBindingAsync(ServiceBinding, FieldMask, CallSettings)
+            // Additional: UpdateServiceBindingAsync(ServiceBinding, FieldMask, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceBinding serviceBinding = new ServiceBinding();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ServiceBinding, OperationMetadata> response = await networkServicesClient.UpdateServiceBindingAsync(serviceBinding, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceBinding, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateServiceBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteServiceBinding</summary>
         public void DeleteServiceBindingRequestObject()
         {
@@ -5993,6 +6131,7 @@ namespace GoogleCSharpSnippets
             ListMeshesRequest request = new ListMeshesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListMeshesResponse, Mesh> response = networkServicesClient.ListMeshes(request);
@@ -6041,6 +6180,7 @@ namespace GoogleCSharpSnippets
             ListMeshesRequest request = new ListMeshesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMeshesResponse, Mesh> response = networkServicesClient.ListMeshesAsync(request);
@@ -6849,6 +6989,1601 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServiceLbPolicies</summary>
+        public void ListServiceLbPoliciesRequestObject()
+        {
+            // Snippet: ListServiceLbPolicies(ListServiceLbPoliciesRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ListServiceLbPoliciesRequest request = new ListServiceLbPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListServiceLbPoliciesResponse, ServiceLbPolicy> response = networkServicesClient.ListServiceLbPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ServiceLbPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListServiceLbPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ServiceLbPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ServiceLbPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ServiceLbPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServiceLbPoliciesAsync</summary>
+        public async Task ListServiceLbPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListServiceLbPoliciesAsync(ListServiceLbPoliciesRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListServiceLbPoliciesRequest request = new ListServiceLbPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListServiceLbPoliciesResponse, ServiceLbPolicy> response = networkServicesClient.ListServiceLbPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ServiceLbPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListServiceLbPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ServiceLbPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ServiceLbPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ServiceLbPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServiceLbPolicies</summary>
+        public void ListServiceLbPolicies()
+        {
+            // Snippet: ListServiceLbPolicies(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListServiceLbPoliciesResponse, ServiceLbPolicy> response = networkServicesClient.ListServiceLbPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ServiceLbPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListServiceLbPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ServiceLbPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ServiceLbPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ServiceLbPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServiceLbPoliciesAsync</summary>
+        public async Task ListServiceLbPoliciesAsync()
+        {
+            // Snippet: ListServiceLbPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListServiceLbPoliciesResponse, ServiceLbPolicy> response = networkServicesClient.ListServiceLbPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ServiceLbPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListServiceLbPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ServiceLbPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ServiceLbPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ServiceLbPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServiceLbPolicies</summary>
+        public void ListServiceLbPoliciesResourceNames()
+        {
+            // Snippet: ListServiceLbPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListServiceLbPoliciesResponse, ServiceLbPolicy> response = networkServicesClient.ListServiceLbPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ServiceLbPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListServiceLbPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ServiceLbPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ServiceLbPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ServiceLbPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListServiceLbPoliciesAsync</summary>
+        public async Task ListServiceLbPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListServiceLbPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListServiceLbPoliciesResponse, ServiceLbPolicy> response = networkServicesClient.ListServiceLbPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ServiceLbPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListServiceLbPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ServiceLbPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ServiceLbPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ServiceLbPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServiceLbPolicy</summary>
+        public void GetServiceLbPolicyRequestObject()
+        {
+            // Snippet: GetServiceLbPolicy(GetServiceLbPolicyRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GetServiceLbPolicyRequest request = new GetServiceLbPolicyRequest
+            {
+                ServiceLbPolicyName = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]"),
+            };
+            // Make the request
+            ServiceLbPolicy response = networkServicesClient.GetServiceLbPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServiceLbPolicyAsync</summary>
+        public async Task GetServiceLbPolicyRequestObjectAsync()
+        {
+            // Snippet: GetServiceLbPolicyAsync(GetServiceLbPolicyRequest, CallSettings)
+            // Additional: GetServiceLbPolicyAsync(GetServiceLbPolicyRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetServiceLbPolicyRequest request = new GetServiceLbPolicyRequest
+            {
+                ServiceLbPolicyName = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]"),
+            };
+            // Make the request
+            ServiceLbPolicy response = await networkServicesClient.GetServiceLbPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServiceLbPolicy</summary>
+        public void GetServiceLbPolicy()
+        {
+            // Snippet: GetServiceLbPolicy(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/serviceLbPolicies/[SERVICE_LB_POLICY]";
+            // Make the request
+            ServiceLbPolicy response = networkServicesClient.GetServiceLbPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServiceLbPolicyAsync</summary>
+        public async Task GetServiceLbPolicyAsync()
+        {
+            // Snippet: GetServiceLbPolicyAsync(string, CallSettings)
+            // Additional: GetServiceLbPolicyAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/serviceLbPolicies/[SERVICE_LB_POLICY]";
+            // Make the request
+            ServiceLbPolicy response = await networkServicesClient.GetServiceLbPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServiceLbPolicy</summary>
+        public void GetServiceLbPolicyResourceNames()
+        {
+            // Snippet: GetServiceLbPolicy(ServiceLbPolicyName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ServiceLbPolicyName name = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]");
+            // Make the request
+            ServiceLbPolicy response = networkServicesClient.GetServiceLbPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetServiceLbPolicyAsync</summary>
+        public async Task GetServiceLbPolicyResourceNamesAsync()
+        {
+            // Snippet: GetServiceLbPolicyAsync(ServiceLbPolicyName, CallSettings)
+            // Additional: GetServiceLbPolicyAsync(ServiceLbPolicyName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceLbPolicyName name = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]");
+            // Make the request
+            ServiceLbPolicy response = await networkServicesClient.GetServiceLbPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceLbPolicy</summary>
+        public void CreateServiceLbPolicyRequestObject()
+        {
+            // Snippet: CreateServiceLbPolicy(CreateServiceLbPolicyRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            CreateServiceLbPolicyRequest request = new CreateServiceLbPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ServiceLbPolicyId = "",
+                ServiceLbPolicy = new ServiceLbPolicy(),
+            };
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = networkServicesClient.CreateServiceLbPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceLbPolicyAsync</summary>
+        public async Task CreateServiceLbPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateServiceLbPolicyAsync(CreateServiceLbPolicyRequest, CallSettings)
+            // Additional: CreateServiceLbPolicyAsync(CreateServiceLbPolicyRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateServiceLbPolicyRequest request = new CreateServiceLbPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ServiceLbPolicyId = "",
+                ServiceLbPolicy = new ServiceLbPolicy(),
+            };
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = await networkServicesClient.CreateServiceLbPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceLbPolicy</summary>
+        public void CreateServiceLbPolicy()
+        {
+            // Snippet: CreateServiceLbPolicy(string, ServiceLbPolicy, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ServiceLbPolicy serviceLbPolicy = new ServiceLbPolicy();
+            string serviceLbPolicyId = "";
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = networkServicesClient.CreateServiceLbPolicy(parent, serviceLbPolicy, serviceLbPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceLbPolicyAsync</summary>
+        public async Task CreateServiceLbPolicyAsync()
+        {
+            // Snippet: CreateServiceLbPolicyAsync(string, ServiceLbPolicy, string, CallSettings)
+            // Additional: CreateServiceLbPolicyAsync(string, ServiceLbPolicy, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ServiceLbPolicy serviceLbPolicy = new ServiceLbPolicy();
+            string serviceLbPolicyId = "";
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = await networkServicesClient.CreateServiceLbPolicyAsync(parent, serviceLbPolicy, serviceLbPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceLbPolicy</summary>
+        public void CreateServiceLbPolicyResourceNames()
+        {
+            // Snippet: CreateServiceLbPolicy(LocationName, ServiceLbPolicy, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ServiceLbPolicy serviceLbPolicy = new ServiceLbPolicy();
+            string serviceLbPolicyId = "";
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = networkServicesClient.CreateServiceLbPolicy(parent, serviceLbPolicy, serviceLbPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceLbPolicyAsync</summary>
+        public async Task CreateServiceLbPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateServiceLbPolicyAsync(LocationName, ServiceLbPolicy, string, CallSettings)
+            // Additional: CreateServiceLbPolicyAsync(LocationName, ServiceLbPolicy, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ServiceLbPolicy serviceLbPolicy = new ServiceLbPolicy();
+            string serviceLbPolicyId = "";
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = await networkServicesClient.CreateServiceLbPolicyAsync(parent, serviceLbPolicy, serviceLbPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceLbPolicy</summary>
+        public void UpdateServiceLbPolicyRequestObject()
+        {
+            // Snippet: UpdateServiceLbPolicy(UpdateServiceLbPolicyRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            UpdateServiceLbPolicyRequest request = new UpdateServiceLbPolicyRequest
+            {
+                UpdateMask = new FieldMask(),
+                ServiceLbPolicy = new ServiceLbPolicy(),
+            };
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = networkServicesClient.UpdateServiceLbPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceLbPolicyAsync</summary>
+        public async Task UpdateServiceLbPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateServiceLbPolicyAsync(UpdateServiceLbPolicyRequest, CallSettings)
+            // Additional: UpdateServiceLbPolicyAsync(UpdateServiceLbPolicyRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateServiceLbPolicyRequest request = new UpdateServiceLbPolicyRequest
+            {
+                UpdateMask = new FieldMask(),
+                ServiceLbPolicy = new ServiceLbPolicy(),
+            };
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = await networkServicesClient.UpdateServiceLbPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceLbPolicy</summary>
+        public void UpdateServiceLbPolicy()
+        {
+            // Snippet: UpdateServiceLbPolicy(ServiceLbPolicy, FieldMask, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ServiceLbPolicy serviceLbPolicy = new ServiceLbPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = networkServicesClient.UpdateServiceLbPolicy(serviceLbPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateServiceLbPolicyAsync</summary>
+        public async Task UpdateServiceLbPolicyAsync()
+        {
+            // Snippet: UpdateServiceLbPolicyAsync(ServiceLbPolicy, FieldMask, CallSettings)
+            // Additional: UpdateServiceLbPolicyAsync(ServiceLbPolicy, FieldMask, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceLbPolicy serviceLbPolicy = new ServiceLbPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ServiceLbPolicy, OperationMetadata> response = await networkServicesClient.UpdateServiceLbPolicyAsync(serviceLbPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ServiceLbPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ServiceLbPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ServiceLbPolicy, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ServiceLbPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteServiceLbPolicy</summary>
+        public void DeleteServiceLbPolicyRequestObject()
+        {
+            // Snippet: DeleteServiceLbPolicy(DeleteServiceLbPolicyRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            DeleteServiceLbPolicyRequest request = new DeleteServiceLbPolicyRequest
+            {
+                ServiceLbPolicyName = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteServiceLbPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteServiceLbPolicyAsync</summary>
+        public async Task DeleteServiceLbPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteServiceLbPolicyAsync(DeleteServiceLbPolicyRequest, CallSettings)
+            // Additional: DeleteServiceLbPolicyAsync(DeleteServiceLbPolicyRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteServiceLbPolicyRequest request = new DeleteServiceLbPolicyRequest
+            {
+                ServiceLbPolicyName = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteServiceLbPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteServiceLbPolicy</summary>
+        public void DeleteServiceLbPolicy()
+        {
+            // Snippet: DeleteServiceLbPolicy(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/serviceLbPolicies/[SERVICE_LB_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteServiceLbPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteServiceLbPolicyAsync</summary>
+        public async Task DeleteServiceLbPolicyAsync()
+        {
+            // Snippet: DeleteServiceLbPolicyAsync(string, CallSettings)
+            // Additional: DeleteServiceLbPolicyAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/serviceLbPolicies/[SERVICE_LB_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteServiceLbPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteServiceLbPolicy</summary>
+        public void DeleteServiceLbPolicyResourceNames()
+        {
+            // Snippet: DeleteServiceLbPolicy(ServiceLbPolicyName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ServiceLbPolicyName name = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteServiceLbPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteServiceLbPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteServiceLbPolicyAsync</summary>
+        public async Task DeleteServiceLbPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteServiceLbPolicyAsync(ServiceLbPolicyName, CallSettings)
+            // Additional: DeleteServiceLbPolicyAsync(ServiceLbPolicyName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ServiceLbPolicyName name = ServiceLbPolicyName.FromProjectLocationServiceLbPolicy("[PROJECT]", "[LOCATION]", "[SERVICE_LB_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteServiceLbPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteServiceLbPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayRouteView</summary>
+        public void GetGatewayRouteViewRequestObject()
+        {
+            // Snippet: GetGatewayRouteView(GetGatewayRouteViewRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GetGatewayRouteViewRequest request = new GetGatewayRouteViewRequest
+            {
+                GatewayRouteViewName = GatewayRouteViewName.FromProjectLocationGatewayRouteView("[PROJECT]", "[LOCATION]", "[GATEWAY]", "[ROUTE_VIEW]"),
+            };
+            // Make the request
+            GatewayRouteView response = networkServicesClient.GetGatewayRouteView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayRouteViewAsync</summary>
+        public async Task GetGatewayRouteViewRequestObjectAsync()
+        {
+            // Snippet: GetGatewayRouteViewAsync(GetGatewayRouteViewRequest, CallSettings)
+            // Additional: GetGatewayRouteViewAsync(GetGatewayRouteViewRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGatewayRouteViewRequest request = new GetGatewayRouteViewRequest
+            {
+                GatewayRouteViewName = GatewayRouteViewName.FromProjectLocationGatewayRouteView("[PROJECT]", "[LOCATION]", "[GATEWAY]", "[ROUTE_VIEW]"),
+            };
+            // Make the request
+            GatewayRouteView response = await networkServicesClient.GetGatewayRouteViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayRouteView</summary>
+        public void GetGatewayRouteView()
+        {
+            // Snippet: GetGatewayRouteView(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/gateways/[GATEWAY]/routeViews/[ROUTE_VIEW]";
+            // Make the request
+            GatewayRouteView response = networkServicesClient.GetGatewayRouteView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayRouteViewAsync</summary>
+        public async Task GetGatewayRouteViewAsync()
+        {
+            // Snippet: GetGatewayRouteViewAsync(string, CallSettings)
+            // Additional: GetGatewayRouteViewAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/gateways/[GATEWAY]/routeViews/[ROUTE_VIEW]";
+            // Make the request
+            GatewayRouteView response = await networkServicesClient.GetGatewayRouteViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayRouteView</summary>
+        public void GetGatewayRouteViewResourceNames()
+        {
+            // Snippet: GetGatewayRouteView(GatewayRouteViewName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GatewayRouteViewName name = GatewayRouteViewName.FromProjectLocationGatewayRouteView("[PROJECT]", "[LOCATION]", "[GATEWAY]", "[ROUTE_VIEW]");
+            // Make the request
+            GatewayRouteView response = networkServicesClient.GetGatewayRouteView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayRouteViewAsync</summary>
+        public async Task GetGatewayRouteViewResourceNamesAsync()
+        {
+            // Snippet: GetGatewayRouteViewAsync(GatewayRouteViewName, CallSettings)
+            // Additional: GetGatewayRouteViewAsync(GatewayRouteViewName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GatewayRouteViewName name = GatewayRouteViewName.FromProjectLocationGatewayRouteView("[PROJECT]", "[LOCATION]", "[GATEWAY]", "[ROUTE_VIEW]");
+            // Make the request
+            GatewayRouteView response = await networkServicesClient.GetGatewayRouteViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMeshRouteView</summary>
+        public void GetMeshRouteViewRequestObject()
+        {
+            // Snippet: GetMeshRouteView(GetMeshRouteViewRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GetMeshRouteViewRequest request = new GetMeshRouteViewRequest
+            {
+                MeshRouteViewName = MeshRouteViewName.FromProjectLocationMeshRouteView("[PROJECT]", "[LOCATION]", "[MESH]", "[ROUTE_VIEW]"),
+            };
+            // Make the request
+            MeshRouteView response = networkServicesClient.GetMeshRouteView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMeshRouteViewAsync</summary>
+        public async Task GetMeshRouteViewRequestObjectAsync()
+        {
+            // Snippet: GetMeshRouteViewAsync(GetMeshRouteViewRequest, CallSettings)
+            // Additional: GetMeshRouteViewAsync(GetMeshRouteViewRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMeshRouteViewRequest request = new GetMeshRouteViewRequest
+            {
+                MeshRouteViewName = MeshRouteViewName.FromProjectLocationMeshRouteView("[PROJECT]", "[LOCATION]", "[MESH]", "[ROUTE_VIEW]"),
+            };
+            // Make the request
+            MeshRouteView response = await networkServicesClient.GetMeshRouteViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMeshRouteView</summary>
+        public void GetMeshRouteView()
+        {
+            // Snippet: GetMeshRouteView(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/meshes/[MESH]/routeViews/[ROUTE_VIEW]";
+            // Make the request
+            MeshRouteView response = networkServicesClient.GetMeshRouteView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMeshRouteViewAsync</summary>
+        public async Task GetMeshRouteViewAsync()
+        {
+            // Snippet: GetMeshRouteViewAsync(string, CallSettings)
+            // Additional: GetMeshRouteViewAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/meshes/[MESH]/routeViews/[ROUTE_VIEW]";
+            // Make the request
+            MeshRouteView response = await networkServicesClient.GetMeshRouteViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMeshRouteView</summary>
+        public void GetMeshRouteViewResourceNames()
+        {
+            // Snippet: GetMeshRouteView(MeshRouteViewName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            MeshRouteViewName name = MeshRouteViewName.FromProjectLocationMeshRouteView("[PROJECT]", "[LOCATION]", "[MESH]", "[ROUTE_VIEW]");
+            // Make the request
+            MeshRouteView response = networkServicesClient.GetMeshRouteView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMeshRouteViewAsync</summary>
+        public async Task GetMeshRouteViewResourceNamesAsync()
+        {
+            // Snippet: GetMeshRouteViewAsync(MeshRouteViewName, CallSettings)
+            // Additional: GetMeshRouteViewAsync(MeshRouteViewName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            MeshRouteViewName name = MeshRouteViewName.FromProjectLocationMeshRouteView("[PROJECT]", "[LOCATION]", "[MESH]", "[ROUTE_VIEW]");
+            // Make the request
+            MeshRouteView response = await networkServicesClient.GetMeshRouteViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayRouteViews</summary>
+        public void ListGatewayRouteViewsRequestObject()
+        {
+            // Snippet: ListGatewayRouteViews(ListGatewayRouteViewsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ListGatewayRouteViewsRequest request = new ListGatewayRouteViewsRequest
+            {
+                ParentAsGatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListGatewayRouteViewsResponse, GatewayRouteView> response = networkServicesClient.ListGatewayRouteViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GatewayRouteView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGatewayRouteViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayRouteView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayRouteViewsAsync</summary>
+        public async Task ListGatewayRouteViewsRequestObjectAsync()
+        {
+            // Snippet: ListGatewayRouteViewsAsync(ListGatewayRouteViewsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGatewayRouteViewsRequest request = new ListGatewayRouteViewsRequest
+            {
+                ParentAsGatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGatewayRouteViewsResponse, GatewayRouteView> response = networkServicesClient.ListGatewayRouteViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GatewayRouteView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGatewayRouteViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayRouteView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayRouteViews</summary>
+        public void ListGatewayRouteViews()
+        {
+            // Snippet: ListGatewayRouteViews(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/gateways/[GATEWAY]";
+            // Make the request
+            PagedEnumerable<ListGatewayRouteViewsResponse, GatewayRouteView> response = networkServicesClient.ListGatewayRouteViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GatewayRouteView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGatewayRouteViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayRouteView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayRouteViewsAsync</summary>
+        public async Task ListGatewayRouteViewsAsync()
+        {
+            // Snippet: ListGatewayRouteViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/gateways/[GATEWAY]";
+            // Make the request
+            PagedAsyncEnumerable<ListGatewayRouteViewsResponse, GatewayRouteView> response = networkServicesClient.ListGatewayRouteViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GatewayRouteView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGatewayRouteViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayRouteView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayRouteViews</summary>
+        public void ListGatewayRouteViewsResourceNames()
+        {
+            // Snippet: ListGatewayRouteViews(GatewayName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GatewayName parent = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]");
+            // Make the request
+            PagedEnumerable<ListGatewayRouteViewsResponse, GatewayRouteView> response = networkServicesClient.ListGatewayRouteViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GatewayRouteView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGatewayRouteViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayRouteView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayRouteViewsAsync</summary>
+        public async Task ListGatewayRouteViewsResourceNamesAsync()
+        {
+            // Snippet: ListGatewayRouteViewsAsync(GatewayName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GatewayName parent = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]");
+            // Make the request
+            PagedAsyncEnumerable<ListGatewayRouteViewsResponse, GatewayRouteView> response = networkServicesClient.ListGatewayRouteViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((GatewayRouteView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGatewayRouteViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayRouteView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMeshRouteViews</summary>
+        public void ListMeshRouteViewsRequestObject()
+        {
+            // Snippet: ListMeshRouteViews(ListMeshRouteViewsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ListMeshRouteViewsRequest request = new ListMeshRouteViewsRequest
+            {
+                ParentAsMeshName = MeshName.FromProjectLocationMesh("[PROJECT]", "[LOCATION]", "[MESH]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMeshRouteViewsResponse, MeshRouteView> response = networkServicesClient.ListMeshRouteViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MeshRouteView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMeshRouteViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MeshRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MeshRouteView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MeshRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMeshRouteViewsAsync</summary>
+        public async Task ListMeshRouteViewsRequestObjectAsync()
+        {
+            // Snippet: ListMeshRouteViewsAsync(ListMeshRouteViewsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMeshRouteViewsRequest request = new ListMeshRouteViewsRequest
+            {
+                ParentAsMeshName = MeshName.FromProjectLocationMesh("[PROJECT]", "[LOCATION]", "[MESH]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMeshRouteViewsResponse, MeshRouteView> response = networkServicesClient.ListMeshRouteViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MeshRouteView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMeshRouteViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MeshRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MeshRouteView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MeshRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMeshRouteViews</summary>
+        public void ListMeshRouteViews()
+        {
+            // Snippet: ListMeshRouteViews(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/meshes/[MESH]";
+            // Make the request
+            PagedEnumerable<ListMeshRouteViewsResponse, MeshRouteView> response = networkServicesClient.ListMeshRouteViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MeshRouteView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMeshRouteViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MeshRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MeshRouteView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MeshRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMeshRouteViewsAsync</summary>
+        public async Task ListMeshRouteViewsAsync()
+        {
+            // Snippet: ListMeshRouteViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/meshes/[MESH]";
+            // Make the request
+            PagedAsyncEnumerable<ListMeshRouteViewsResponse, MeshRouteView> response = networkServicesClient.ListMeshRouteViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MeshRouteView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMeshRouteViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MeshRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MeshRouteView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MeshRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMeshRouteViews</summary>
+        public void ListMeshRouteViewsResourceNames()
+        {
+            // Snippet: ListMeshRouteViews(MeshName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            MeshName parent = MeshName.FromProjectLocationMesh("[PROJECT]", "[LOCATION]", "[MESH]");
+            // Make the request
+            PagedEnumerable<ListMeshRouteViewsResponse, MeshRouteView> response = networkServicesClient.ListMeshRouteViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MeshRouteView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMeshRouteViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MeshRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MeshRouteView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MeshRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMeshRouteViewsAsync</summary>
+        public async Task ListMeshRouteViewsResourceNamesAsync()
+        {
+            // Snippet: ListMeshRouteViewsAsync(MeshName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            MeshName parent = MeshName.FromProjectLocationMesh("[PROJECT]", "[LOCATION]", "[MESH]");
+            // Make the request
+            PagedAsyncEnumerable<ListMeshRouteViewsResponse, MeshRouteView> response = networkServicesClient.ListMeshRouteViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MeshRouteView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMeshRouteViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MeshRouteView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MeshRouteView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MeshRouteView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }
