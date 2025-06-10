@@ -123,23 +123,24 @@ namespace Google.Cloud.Dataproc.V1 {
             "EFJlcG9zaXRvcnlDb25maWcSUwoWcHlwaV9yZXBvc2l0b3J5X2NvbmZpZxgB",
             "IAEoCzIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5QeVBpUmVwb3NpdG9y",
             "eUNvbmZpZ0ID4EEBIjQKFFB5UGlSZXBvc2l0b3J5Q29uZmlnEhwKD3B5cGlf",
-            "cmVwb3NpdG9yeRgBIAEoCUID4EEBKtQBCglDb21wb25lbnQSGQoVQ09NUE9O",
-            "RU5UX1VOU1BFQ0lGSUVEEAASDAoIQU5BQ09OREEQBRIKCgZET0NLRVIQDRIJ",
-            "CgVEUlVJRBAJEgkKBUZMSU5LEA4SCQoFSEJBU0UQCxIQCgxISVZFX1dFQkhD",
-            "QVQQAxIICgRIVURJEBISCwoHSlVQWVRFUhABEgoKBlBSRVNUTxAGEgkKBVRS",
-            "SU5PEBESCgoGUkFOR0VSEAwSCAoEU09MUhAKEgwKCFpFUFBFTElOEAQSDQoJ",
-            "Wk9PS0VFUEVSEAgqSgoNRmFpbHVyZUFjdGlvbhIeChpGQUlMVVJFX0FDVElP",
-            "Tl9VTlNQRUNJRklFRBAAEg0KCU5PX0FDVElPThABEgoKBkRFTEVURRACQqcD",
-            "Chxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQgtTaGFyZWRQcm90b1AB",
-            "WjtjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFw",
-            "cm9jcGI7ZGF0YXByb2NwYupBXgogY29udGFpbmVyLmdvb2dsZWFwaXMuY29t",
-            "L0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn3qQV4KIG1ldGFzdG9yZS5nb29nbGVh",
-            "cGlzLmNvbS9TZXJ2aWNlEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vc2VydmljZXMve3NlcnZpY2V96kF4CiFjbG91ZGttcy5n",
-            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0",
-            "b0tleXMve2NyeXB0b19rZXl9YgZwcm90bzM="));
+            "cmVwb3NpdG9yeRgBIAEoCUID4EEBKvUBCglDb21wb25lbnQSGQoVQ09NUE9O",
+            "RU5UX1VOU1BFQ0lGSUVEEAASDAoIQU5BQ09OREEQBRIJCgVERUxUQRAUEgoK",
+            "BkRPQ0tFUhANEgkKBURSVUlEEAkSCQoFRkxJTksQDhIJCgVIQkFTRRALEhAK",
+            "DEhJVkVfV0VCSENBVBADEggKBEhVREkQEhILCgdJQ0VCRVJHEBMSCwoHSlVQ",
+            "WVRFUhABEgcKA1BJRxAVEgoKBlBSRVNUTxAGEgkKBVRSSU5PEBESCgoGUkFO",
+            "R0VSEAwSCAoEU09MUhAKEgwKCFpFUFBFTElOEAQSDQoJWk9PS0VFUEVSEAgq",
+            "SgoNRmFpbHVyZUFjdGlvbhIeChpGQUlMVVJFX0FDVElPTl9VTlNQRUNJRklF",
+            "RBAAEg0KCU5PX0FDVElPThABEgoKBkRFTEVURRACQqcDChxjb20uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwcm9jLnYxQgtTaGFyZWRQcm90b1ABWjtjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFwcm9jcGI7ZGF0YXBy",
+            "b2NwYupBXgogY29udGFpbmVyLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXISOnBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jbHVzdGVy",
+            "cy97Y2x1c3Rlcn3qQV4KIG1ldGFzdG9yZS5nb29nbGVhcGlzLmNvbS9TZXJ2",
+            "aWNlEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c2VydmljZXMve3NlcnZpY2V96kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNv",
+            "bS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
+            "b19rZXl9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -185,6 +186,10 @@ namespace Google.Cloud.Dataproc.V1 {
     /// </summary>
     [pbr::OriginalName("ANACONDA")] Anaconda = 5,
     /// <summary>
+    /// Delta Lake.
+    /// </summary>
+    [pbr::OriginalName("DELTA")] Delta = 20,
+    /// <summary>
     /// Docker
     /// </summary>
     [pbr::OriginalName("DOCKER")] Docker = 13,
@@ -209,9 +214,17 @@ namespace Google.Cloud.Dataproc.V1 {
     /// </summary>
     [pbr::OriginalName("HUDI")] Hudi = 18,
     /// <summary>
+    /// Iceberg.
+    /// </summary>
+    [pbr::OriginalName("ICEBERG")] Iceberg = 19,
+    /// <summary>
     /// The Jupyter Notebook.
     /// </summary>
     [pbr::OriginalName("JUPYTER")] Jupyter = 1,
+    /// <summary>
+    /// The Pig component.
+    /// </summary>
+    [pbr::OriginalName("PIG")] Pig = 21,
     /// <summary>
     /// The Presto query engine.
     /// </summary>
