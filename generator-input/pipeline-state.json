@@ -4178,6 +4178,18 @@
             "sourcePaths": [
                 "apis/Google.Apps.Events.Subscriptions.V1Beta/Google.Apps.Events.Subscriptions.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.ConfigDelivery.V1Alpha",
+            "nextVersion": "1.0.0-alpha01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/configdelivery/v1alpha"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.ConfigDelivery.V1Alpha/Google.Cloud.ConfigDelivery.V1Alpha"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
