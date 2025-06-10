@@ -160,10 +160,10 @@
         },
         {
             "id": "Google.Area120.Tables.V1Alpha1",
-            "currentVersion": "2.0.0-alpha17",
+            "currentVersion": "2.0.0-alpha18",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-05T14:12:12.594220298Z",
+            "releaseTimestamp": "2025-06-10T18:58:02.663664452Z",
             "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
