@@ -210,7 +210,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     /// <summary>
     /// Resource name of this QuotaInfo.
     /// The ID component following "locations/" must be "global".
-    /// Example:
+    /// For example,
     /// `projects/123/locations/global/services/compute.googleapis.com/quotaInfos/CpusPerProjectPerRegion`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -227,7 +227,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     private string quotaId_ = "";
     /// <summary>
     /// The id of the quota, which is unquie within the service.
-    /// Example: `CpusPerProjectPerRegion`
+    /// For example, `CpusPerProjectPerRegion`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -244,7 +244,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     /// <summary>
     /// The metric of the quota. It specifies the resources consumption the quota
     /// is defined for.
-    /// Example: `compute.googleapis.com/cpus`
+    /// For example, `compute.googleapis.com/cpus`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -260,7 +260,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     private string service_ = "";
     /// <summary>
     /// The name of the service in which the quota is defined.
-    /// Example: `compute.googleapis.com`
+    /// For example, `compute.googleapis.com`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -293,8 +293,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     /// <summary>
     /// The reset time interval for the quota. Refresh interval applies to rate
     /// quota only.
-    /// Example: "minute" for per minute, "day" for per day, or "10 seconds" for
-    /// every 10 seconds.
+    /// For example, "minute" for per minute, "day" for per day, or "10 seconds"
+    /// for every 10 seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1308,8 +1308,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     /// <summary>
     /// Required except in the CREATE requests.
     /// The resource name of the quota preference.
-    /// The ID component following "locations/" must be "global".
-    /// Example:
+    /// The path that follows `/locations` must be `/global`.
+    /// For example:
     /// `projects/123/locations/global/quotaPreferences/my-config-for-us-east1`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1328,19 +1328,20 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     private readonly pbc::MapField<string, string> dimensions_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Immutable. The dimensions that this quota preference applies to. The key of
-    /// the map entry is the name of a dimension, such as "region", "zone",
-    /// "network_id", and the value of the map entry is the dimension value.
+    /// the map entry is the name of a dimension, such as `region`, `zone`,
+    /// `network_id`, and the value of the map entry is the dimension value.
     ///
     /// If a dimension is missing from the map of dimensions, the quota preference
     /// applies to all the dimension values except for those that have other quota
     /// preferences configured for the specific value.
     ///
-    /// NOTE: QuotaPreferences can only be applied across all values of "user" and
-    /// "resource" dimension. Do not set values for "user" or "resource" in the
+    /// Note: QuotaPreferences can only be applied across all values of `user` and
+    /// `resource` dimension. Do not set values for `user` or `resource` in the
     /// dimension map.
     ///
-    /// Example: {"provider", "Foo Inc"} where "provider" is a service specific
-    /// dimension.
+    /// For example: `{"provider" : "Example Organization"}` where `provider` is a
+    /// service-specific quota dimension and `Example Organization` is the provider
+    /// name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1431,7 +1432,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     private string quotaId_ = "";
     /// <summary>
     /// Required. The id of the quota to which the quota preference is applied. A
-    /// quota name is unique in the service. Example: `CpusPerProjectPerRegion`
+    /// quota name is unique in the service. For example, `CpusPerProjectPerRegion`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1477,9 +1478,9 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int ContactEmailFieldNumber = 12;
     private string contactEmail_ = "";
     /// <summary>
-    /// Input only. An email address that can be used to contact the the user, in
-    /// case Google Cloud needs more information to make a decision before
-    /// additional quota can be granted.
+    /// Input only. An email address that can be used to contact the user, in case
+    /// Google Cloud needs more information to make a decision before additional
+    /// quota can be granted.
     ///
     /// When requesting a quota increase, the email address is required.
     /// When requesting a quota decrease, the email address is optional.
@@ -2369,14 +2370,15 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
     private readonly pbc::MapField<string, string> dimensions_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The map of dimensions for this dimensions info. The key of a map entry
-    /// is "region", "zone" or the name of a service specific dimension, and the
-    /// value of a map entry is the value of the dimension.  If a dimension does
+    /// The map of dimensions in key-value pairs. The key of a map entry
+    /// is "region", "zone", or the name of a service-specific dimension, and the
+    /// value of a map entry is the value of the dimension. If a dimension does
     /// not appear in the map of dimensions, the dimensions info applies to all
-    /// the dimension values except for those that have another DimenisonInfo
+    /// the dimension values except for those that have another DimensionInfo
     /// instance configured for the specific value.
-    /// Example: {"provider" : "Foo Inc"} where "provider" is a service specific
-    /// dimension of a quota.
+    /// For example: `{"provider" : "Example Organization"}` where `provider` is a
+    /// service-specific quota dimension and `Example Organization` is the provider
+    /// name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2405,7 +2407,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> applicableLocations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The applicable regions or zones of this dimensions info. The field will be
+    /// The applicable regions or zones of this dimension. The field is
     /// set to ['global'] for quotas that are not per region or per zone.
     /// Otherwise, it will be set to the list of locations this dimension info is
     /// applicable to.

@@ -37,43 +37,55 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
             "ASgLMjQuZ29vZ2xlLmFwaS5jbG91ZHF1b3Rhcy52MWJldGEuUXVvdGFBZGp1",
             "c3RlclNldHRpbmdzQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESGgoNdmFsaWRhdGVfb25seRgD",
-            "IAEoCEID4EEBIrsDChVRdW90YUFkanVzdGVyU2V0dGluZ3MSEQoEbmFtZRgB",
+            "IAEoCEID4EEBIvYEChVRdW90YUFkanVzdGVyU2V0dGluZ3MSEQoEbmFtZRgB",
             "IAEoCUID4EEIElgKCmVuYWJsZW1lbnQYAiABKA4yPy5nb29nbGUuYXBpLmNs",
             "b3VkcXVvdGFzLnYxYmV0YS5RdW90YUFkanVzdGVyU2V0dGluZ3MuRW5hYmxl",
-            "bWVudEID4EECEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYBiABKAlCA+BBASJDCgpFbmFi",
-            "bGVtZW50EhoKFkVOQUJMRU1FTlRfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVE",
-            "EAISDAoIRElTQUJMRUQQAzqmAepBogEKMGNsb3VkcXVvdGFzLmdvb2dsZWFw",
-            "aXMuY29tL1F1b3RhQWRqdXN0ZXJTZXR0aW5ncxI9cHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhQWRqdXN0ZXJTZXR0aW5n",
-            "cyoVcXVvdGFBZGp1c3RlclNldHRpbmdzMhVxdW90YUFkanVzdGVyU2V0dGlu",
-            "Z3NSAQEygwUKHFF1b3RhQWRqdXN0ZXJTZXR0aW5nc01hbmFnZXISswIKG1Vw",
-            "ZGF0ZVF1b3RhQWRqdXN0ZXJTZXR0aW5ncxJBLmdvb2dsZS5hcGkuY2xvdWRx",
-            "dW90YXMudjFiZXRhLlVwZGF0ZVF1b3RhQWRqdXN0ZXJTZXR0aW5nc1JlcXVl",
+            "bWVudEID4EEBEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYBiABKAlCA+BBARIWCglpbmhl",
+            "cml0ZWQYByABKAhCA+BBARIbCg5pbmhlcml0ZWRfZnJvbRgIIAEoCUID4EED",
+            "IkMKCkVuYWJsZW1lbnQSGgoWRU5BQkxFTUVOVF9VTlNQRUNJRklFRBAAEgsK",
+            "B0VOQUJMRUQQAhIMCghESVNBQkxFRBADOqwC6kGoAgowY2xvdWRxdW90YXMu",
+            "Z29vZ2xlYXBpcy5jb20vUXVvdGFBZGp1c3RlclNldHRpbmdzEj1wcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcXVvdGFBZGp1c3Rl",
+            "clNldHRpbmdzEkdvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3F1b3RhQWRqdXN0ZXJTZXR0aW5ncxI7Zm9sZGVy",
+            "cy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9xdW90YUFkanVzdGVy",
+            "U2V0dGluZ3MqFXF1b3RhQWRqdXN0ZXJTZXR0aW5nczIVcXVvdGFBZGp1c3Rl",
+            "clNldHRpbmdzUgEBMuwHChxRdW90YUFkanVzdGVyU2V0dGluZ3NNYW5hZ2Vy",
+            "EpgEChtVcGRhdGVRdW90YUFkanVzdGVyU2V0dGluZ3MSQS5nb29nbGUuYXBp",
+            "LmNsb3VkcXVvdGFzLnYxYmV0YS5VcGRhdGVRdW90YUFkanVzdGVyU2V0dGlu",
+            "Z3NSZXF1ZXN0GjQuZ29vZ2xlLmFwaS5jbG91ZHF1b3Rhcy52MWJldGEuUXVv",
+            "dGFBZGp1c3RlclNldHRpbmdzIv8C2kEjcXVvdGFfYWRqdXN0ZXJfc2V0dGlu",
+            "Z3MsdXBkYXRlX21hc2uC0+STAtICMlMvdjFiZXRhL3txdW90YV9hZGp1c3Rl",
+            "cl9zZXR0aW5ncy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVvdGFB",
+            "ZGp1c3RlclNldHRpbmdzfToXcXVvdGFfYWRqdXN0ZXJfc2V0dGluZ3NabTJS",
+            "L3YxYmV0YS97cXVvdGFfYWRqdXN0ZXJfc2V0dGluZ3MubmFtZT1mb2xkZXJz",
+            "LyovbG9jYXRpb25zLyovcXVvdGFBZGp1c3RlclNldHRpbmdzfToXcXVvdGFf",
+            "YWRqdXN0ZXJfc2V0dGluZ3NaczJYL3YxYmV0YS97cXVvdGFfYWRqdXN0ZXJf",
+            "c2V0dGluZ3MubmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovcXVv",
+            "dGFBZGp1c3RlclNldHRpbmdzfToXcXVvdGFfYWRqdXN0ZXJfc2V0dGluZ3MS",
+            "4AIKGEdldFF1b3RhQWRqdXN0ZXJTZXR0aW5ncxI+Lmdvb2dsZS5hcGkuY2xv",
+            "dWRxdW90YXMudjFiZXRhLkdldFF1b3RhQWRqdXN0ZXJTZXR0aW5nc1JlcXVl",
             "c3QaNC5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxYmV0YS5RdW90YUFkanVz",
-            "dGVyU2V0dGluZ3MimgHaQSNxdW90YV9hZGp1c3Rlcl9zZXR0aW5ncyx1cGRh",
-            "dGVfbWFza4LT5JMCbjJTL3YxYmV0YS97cXVvdGFfYWRqdXN0ZXJfc2V0dGlu",
-            "Z3MubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1b3RhQWRqdXN0ZXJT",
-            "ZXR0aW5nc306F3F1b3RhX2FkanVzdGVyX3NldHRpbmdzEtwBChhHZXRRdW90",
-            "YUFkanVzdGVyU2V0dGluZ3MSPi5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYx",
-            "YmV0YS5HZXRRdW90YUFkanVzdGVyU2V0dGluZ3NSZXF1ZXN0GjQuZ29vZ2xl",
-            "LmFwaS5jbG91ZHF1b3Rhcy52MWJldGEuUXVvdGFBZGp1c3RlclNldHRpbmdz",
-            "IkraQQRuYW1lgtPkkwI9EjsvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovcXVvdGFBZGp1c3RlclNldHRpbmdzfRpOykEaY2xvdWRxdW90",
-            "YXMuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQvEBCiFjb20uZ29vZ2xlLmFwaS5jbG91",
-            "ZHF1b3Rhcy52MWJldGFCGlF1b3RhQWRqdXN0ZXJTZXR0aW5nc1Byb3RvUAFa",
-            "RWNsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWRxdW90YXMvYXBpdjFiZXRhL2Ns",
-            "b3VkcXVvdGFzcGI7Y2xvdWRxdW90YXNwYqoCH0dvb2dsZS5DbG91ZC5DbG91",
-            "ZFF1b3Rhcy5WMUJldGHKAh9Hb29nbGVcQ2xvdWRcQ2xvdWRRdW90YXNcVjFi",
-            "ZXRh6gIiR29vZ2xlOjpDbG91ZDo6Q2xvdWRRdW90YXM6OlYxYmV0YWIGcHJv",
-            "dG8z"));
+            "dGVyU2V0dGluZ3MizQHaQQRuYW1lgtPkkwK/ARI7L3YxYmV0YS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1b3RhQWRqdXN0ZXJTZXR0aW5nc31a",
+            "PBI6L3YxYmV0YS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovcXVvdGFB",
+            "ZGp1c3RlclNldHRpbmdzfVpCEkAvdjFiZXRhL3tuYW1lPW9yZ2FuaXphdGlv",
+            "bnMvKi9sb2NhdGlvbnMvKi9xdW90YUFkanVzdGVyU2V0dGluZ3N9Gk7KQRpj",
+            "bG91ZHF1b3Rhcy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C8QEKIWNvbS5nb29nbGUu",
+            "YXBpLmNsb3VkcXVvdGFzLnYxYmV0YUIaUXVvdGFBZGp1c3RlclNldHRpbmdz",
+            "UHJvdG9QAVpFY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHF1b3Rhcy9hcGl2",
+            "MWJldGEvY2xvdWRxdW90YXNwYjtjbG91ZHF1b3Rhc3BiqgIfR29vZ2xlLkNs",
+            "b3VkLkNsb3VkUXVvdGFzLlYxQmV0YcoCH0dvb2dsZVxDbG91ZFxDbG91ZFF1",
+            "b3Rhc1xWMWJldGHqAiJHb29nbGU6OkNsb3VkOjpDbG91ZFF1b3Rhczo6VjFi",
+            "ZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1Beta.GetQuotaAdjusterSettingsRequest), global::Google.Cloud.CloudQuotas.V1Beta.GetQuotaAdjusterSettingsRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1Beta.UpdateQuotaAdjusterSettingsRequest), global::Google.Cloud.CloudQuotas.V1Beta.UpdateQuotaAdjusterSettingsRequest.Parser, new[]{ "QuotaAdjusterSettings", "UpdateMask", "ValidateOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings), global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Parser, new[]{ "Name", "Enablement", "UpdateTime", "Etag" }, null, new[]{ typeof(global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Types.Enablement) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings), global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Parser, new[]{ "Name", "Enablement", "UpdateTime", "Etag", "Inherited", "InheritedFrom" }, null, new[]{ typeof(global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Types.Enablement) }, null, null)
           }));
     }
     #endregion
@@ -616,6 +628,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       enablement_ = other.enablement_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
+      inherited_ = other.inherited_;
+      inheritedFrom_ = other.inheritedFrom_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -629,9 +643,10 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. Name of the configuration, in the following format:
-    ///   `projects/PROJECT_NUMBER/locations/global/quotaAdjusterSettings`.
-    /// Replace PROJECT_NUMBER with the project number for your project.
+    /// Identifier. Name of the config would be of the format:
+    ///   projects/PROJECT_NUMBER/locations/global/quotaAdjusterSettings
+    ///   folders/FOLDER_NUMBER/locations/global/quotaAdjusterSettings
+    ///   organizations/ORGANIZATION_NUMBER/locations/global/quotaAdjusterSettings
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -646,7 +661,7 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int EnablementFieldNumber = 2;
     private global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Types.Enablement enablement_ = global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Types.Enablement.Unspecified;
     /// <summary>
-    /// Required. The configured value of the enablement at the given resource.
+    /// Optional. The configured value of the enablement at the given resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -691,6 +706,42 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "inherited" field.</summary>
+    public const int InheritedFieldNumber = 7;
+    private bool inherited_;
+    /// <summary>
+    /// Optional. Indicates whether the setting is inherited or explicitly
+    /// specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Inherited {
+      get { return inherited_; }
+      set {
+        inherited_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inherited_from" field.</summary>
+    public const int InheritedFromFieldNumber = 8;
+    private string inheritedFrom_ = "";
+    /// <summary>
+    /// Output only. The resource container from which the setting is inherited.
+    /// This refers to the  nearest ancestor with enablement set (either ENABLED or
+    /// DISABLED). The value can be an organizations/{organization_id},
+    /// folders/{folder_id}, or can be 'default' if no ancestor exists with
+    /// enablement set. The value will be empty when enablement is directly set on
+    /// this container.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InheritedFrom {
+      get { return inheritedFrom_; }
+      set {
+        inheritedFrom_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -710,6 +761,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       if (Enablement != other.Enablement) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
+      if (Inherited != other.Inherited) return false;
+      if (InheritedFrom != other.InheritedFrom) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -721,6 +774,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       if (Enablement != global::Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings.Types.Enablement.Unspecified) hash ^= Enablement.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (Inherited != false) hash ^= Inherited.GetHashCode();
+      if (InheritedFrom.Length != 0) hash ^= InheritedFrom.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -755,6 +810,14 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      if (Inherited != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(Inherited);
+      }
+      if (InheritedFrom.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(InheritedFrom);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -781,6 +844,14 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      if (Inherited != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(Inherited);
+      }
+      if (InheritedFrom.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(InheritedFrom);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -802,6 +873,12 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (Inherited != false) {
+        size += 1 + 1;
+      }
+      if (InheritedFrom.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InheritedFrom);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -829,6 +906,12 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.Inherited != false) {
+        Inherited = other.Inherited;
+      }
+      if (other.InheritedFrom.Length != 0) {
+        InheritedFrom = other.InheritedFrom;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -864,6 +947,14 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
             Etag = input.ReadString();
             break;
           }
+          case 56: {
+            Inherited = input.ReadBool();
+            break;
+          }
+          case 66: {
+            InheritedFrom = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -896,6 +987,14 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
           }
           case 50: {
             Etag = input.ReadString();
+            break;
+          }
+          case 56: {
+            Inherited = input.ReadBool();
+            break;
+          }
+          case 66: {
+            InheritedFrom = input.ReadString();
             break;
           }
         }
