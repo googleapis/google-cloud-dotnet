@@ -16,7 +16,7 @@ using Google.Cloud.Firestore.Converters;
 using System;
 using Xunit;
 using BclType = System.Type;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 
 namespace Google.Cloud.Firestore.Tests.Converters
@@ -107,7 +107,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             [FirestoreDocumentCreateTimestamp] public DateTime? NullableCreateDateTime { get; set; } = s_sampleOtherTimestamp.ToDateTime();
             [FirestoreDocumentCreateTimestamp] public DateTimeOffset? NullableCreateDateTimeOffset { get; set; } = s_sampleOtherTimestamp.ToDateTimeOffset();
             [FirestoreDocumentCreateTimestamp] public Timestamp? NullableCreateTimestamp { get; set; } = s_sampleOtherTimestamp;
-            [FirestoreDocumentCreateTimestamp] public wkt::Timestamp CreateTimestampProto { get; set; } = s_sampleOtherTimestamp.ToProto();
+            [FirestoreDocumentCreateTimestamp] public WKT::Timestamp CreateTimestampProto { get; set; } = s_sampleOtherTimestamp.ToProto();
 
             [FirestoreDocumentUpdateTimestamp] public DateTime UpdateDateTime { get; set; } = s_sampleOtherTimestamp.ToDateTime();
             [FirestoreDocumentUpdateTimestamp] public DateTimeOffset UpdateDateTimeOffset { get; set; } = s_sampleOtherTimestamp.ToDateTimeOffset();
@@ -115,7 +115,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             [FirestoreDocumentUpdateTimestamp] public DateTime? NullableUpdateDateTime { get; set; } = s_sampleOtherTimestamp.ToDateTime();
             [FirestoreDocumentUpdateTimestamp] public DateTimeOffset? NullableUpdateDateTimeOffset { get; set; } = s_sampleOtherTimestamp.ToDateTimeOffset();
             [FirestoreDocumentUpdateTimestamp] public Timestamp? NullableUpdateTimestamp { get; set; } = s_sampleOtherTimestamp;
-            [FirestoreDocumentUpdateTimestamp] public wkt::Timestamp UpdateTimestampProto { get; set; } = s_sampleOtherTimestamp.ToProto();
+            [FirestoreDocumentUpdateTimestamp] public WKT::Timestamp UpdateTimestampProto { get; set; } = s_sampleOtherTimestamp.ToProto();
 
             [FirestoreDocumentReadTimestamp] public DateTime ReadDateTime { get; set; } = s_sampleOtherTimestamp.ToDateTime();
             [FirestoreDocumentReadTimestamp] public DateTimeOffset ReadDateTimeOffset { get; set; } = s_sampleOtherTimestamp.ToDateTimeOffset();
@@ -123,7 +123,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             [FirestoreDocumentReadTimestamp] public DateTime? NullableReadDateTime { get; set; } = s_sampleOtherTimestamp.ToDateTime();
             [FirestoreDocumentReadTimestamp] public DateTimeOffset? NullableReadDateTimeOffset { get; set; } = s_sampleOtherTimestamp.ToDateTimeOffset();
             [FirestoreDocumentReadTimestamp] public Timestamp? NullableReadTimestamp { get; set; }
-            [FirestoreDocumentReadTimestamp] public wkt::Timestamp ReadTimestampProto { get; set; } = s_sampleOtherTimestamp.ToProto();
+            [FirestoreDocumentReadTimestamp] public WKT::Timestamp ReadTimestampProto { get; set; } = s_sampleOtherTimestamp.ToProto();
         }
 
         [Theory]

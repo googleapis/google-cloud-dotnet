@@ -194,6 +194,8 @@ namespace Google.Cloud.Lustre.V1 {
     public const int GcsPathFieldNumber = 2;
     /// <summary>
     /// The Cloud Storage source bucket and, optionally, path inside the bucket.
+    /// If a path inside the bucket is specified, it must end with a forward
+    /// slash (`/`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -224,7 +226,8 @@ namespace Google.Cloud.Lustre.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the resource.
+    /// Required. The name of the Managed Lustre instance in the format
+    /// `projects/{project}/locations/{location}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -255,7 +258,7 @@ namespace Google.Cloud.Lustre.V1 {
     private string serviceAccount_ = "";
     /// <summary>
     /// Optional. User-specified service account used to perform the transfer.
-    /// If unspecified, the default Lustre P4 service account will be used.
+    /// If unspecified, the default Managed Lustre service agent will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -572,7 +575,7 @@ namespace Google.Cloud.Lustre.V1 {
   }
 
   /// <summary>
-  /// Message for exporting data from Lustre.
+  /// Export data from Managed Lustre to a Cloud Storage bucket.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataRequest : pb::IMessage<ExportDataRequest>
@@ -636,7 +639,8 @@ namespace Google.Cloud.Lustre.V1 {
     /// <summary>Field number for the "lustre_path" field.</summary>
     public const int LustrePathFieldNumber = 2;
     /// <summary>
-    /// Lustre path source.
+    /// The root directory path to the Managed Lustre file system. Must start
+    /// with `/`. Default is `/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -651,7 +655,10 @@ namespace Google.Cloud.Lustre.V1 {
     /// <summary>Field number for the "gcs_path" field.</summary>
     public const int GcsPathFieldNumber = 3;
     /// <summary>
-    /// Cloud Storage destination.
+    /// The URI to a Cloud Storage bucket, or a path within a bucket, using
+    /// the format `gs://&lt;bucket_name>/&lt;optional_path_inside_bucket>/`. If a
+    /// path inside the bucket is specified, it must end with a forward slash
+    /// (`/`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -667,7 +674,8 @@ namespace Google.Cloud.Lustre.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the resource.
+    /// Required. The name of the Managed Lustre instance in the format
+    /// `projects/{project}/locations/{location}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2303,7 +2311,7 @@ namespace Google.Cloud.Lustre.V1 {
   }
 
   /// <summary>
-  /// Cloud Storage as the source of a data transfer.
+  /// Specifies a Cloud Storage bucket and, optionally, a path inside the bucket.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsPath : pb::IMessage<GcsPath>
@@ -2354,8 +2362,10 @@ namespace Google.Cloud.Lustre.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required. URI to a Cloud Storage path in the format:
-    /// `gs://&lt;bucket_name>`.
+    /// Required. The URI to a Cloud Storage bucket, or a path within a bucket,
+    /// using the format `gs://&lt;bucket_name>/&lt;optional_path_inside_bucket>/`. If a
+    /// path inside the bucket is specified, it must end with a forward slash
+    /// (`/`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2500,7 +2510,7 @@ namespace Google.Cloud.Lustre.V1 {
   }
 
   /// <summary>
-  /// LustrePath represents a path in the Lustre file system.
+  /// The root directory path to the Lustre file system.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LustrePath : pb::IMessage<LustrePath>
@@ -2551,8 +2561,10 @@ namespace Google.Cloud.Lustre.V1 {
     public const int PathFieldNumber = 1;
     private string path_ = "";
     /// <summary>
-    /// Optional. Root directory path to the Managed Lustre file system, starting
-    /// with `/`. Defaults to `/` if unset.
+    /// Optional. The root directory path to the Managed Lustre file system. Must
+    /// start with
+    /// `/`. Default is `/`. If you're importing data into Managed Lustre, any
+    /// path other than the default must already exist on the file system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

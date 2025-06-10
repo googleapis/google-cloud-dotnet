@@ -575,7 +575,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             {
                 if (!string.IsNullOrEmpty(headerValue))
                 {
-                    response.Headers.Add(headerKey, headerValue);
+                    response.Headers.Append(headerKey, headerValue);
                 }
             }
         }

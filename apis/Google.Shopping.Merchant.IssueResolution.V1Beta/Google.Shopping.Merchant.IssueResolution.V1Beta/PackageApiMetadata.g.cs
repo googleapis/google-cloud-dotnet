@@ -30,6 +30,7 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AggregateproductstatusesReflection.Descriptor;
             yield return IssueresolutionReflection.Descriptor;
         }
     }

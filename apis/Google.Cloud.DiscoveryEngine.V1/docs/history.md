@@ -1,5 +1,26 @@
 # Version history
 
+## Version 1.8.0, released 2025-06-09
+
+### New features
+
+- Add CMEK config service
+- Add identity mapping service
+- Add user license config service
+- Add HealthcareFhirConfig to FHIR data store
+- Add ConnectorRunErrorContext to error log
+- Support structured content for chunk
+- Support ACL data store and document
+- Add more options for layout parser config
+- Support media recommendation engine
+- Enable claim level score for grounding
+- Add custom search operators for Workspace search
+- Add more indexing state for site search engine
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes
+
 ## Version 1.7.0, released 2025-03-31
 
 ### New features

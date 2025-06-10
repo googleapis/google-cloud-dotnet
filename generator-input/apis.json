@@ -238,7 +238,7 @@
     },
     {
       "id": "Google.Area120.Tables.V1Alpha1",
-      "version": "2.0.0-alpha16",
+      "version": "2.0.0-alpha17",
       "type": "grpc",
       "productName": "Google Area 120 Tables",
       "description": "Recommended Google client library to access the Area 120 Tables API",
@@ -395,7 +395,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1Beta1",
-      "version": "1.0.0-beta32",
+      "version": "1.0.0-beta33",
       "type": "grpc",
       "productName": "Vertex AI",
       "productUrl": "https://cloud.google.com/vertex-ai/docs",
@@ -419,7 +419,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "3.32.0",
+      "version": "3.33.0",
       "type": "grpc",
       "productName": "Vertex AI",
       "productUrl": "https://cloud.google.com/vertex-ai/docs",
@@ -1943,7 +1943,7 @@
       "protoPath": "google/cloud/dataproc/v1",
       "productName": "Google Cloud Dataproc",
       "productUrl": "https://cloud.google.com/dataproc/docs/concepts/overview",
-      "version": "5.17.0",
+      "version": "5.18.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Dataproc API, which manages Hadoop-based clusters and jobs on Google Cloud Platform.",
       "tags": [
@@ -2179,7 +2179,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
-      "testTargetFrameworks": "net6.0",
+      "testTargetFrameworks": "net8.0",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3.",
       "tags": [
         "Error",
@@ -2306,7 +2306,7 @@
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "type": "grpc",
       "productName": "Discovery Engine",
       "productUrl": "https://cloud.google.com/discovery-engine/docs",
@@ -2728,6 +2728,7 @@
       "shortName": "firestore",
       "serviceConfigFile": "firestore_v1.yaml",
       "restNumericEnums": true,
+      "transport": "grpc+rest",
       "includeCommonResourcesProto": true,
       "projects": [
         "Tests"
@@ -3323,7 +3324,7 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0",
-      "testTargetFrameworks": "net6.0",
+      "testTargetFrameworks": "net8.0",
       "description": "ConsoleFormatter for Google Cloud Logging.",
       "tags": [
         "Logging",
@@ -3405,7 +3406,7 @@
     },
     {
       "id": "Google.Cloud.Lustre.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Google Cloud Managed Lustre",
       "productUrl": "https://cloud.google.com/managed-lustre/docs",
@@ -4703,7 +4704,7 @@
       "protoPath": "google/cloud/secretmanager/v1",
       "productName": "Secret Manager",
       "productUrl": "https://cloud.google.com/secret-manager",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Secret Manager API (v1).",
       "dependencies": {
@@ -6629,7 +6630,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
@@ -6638,7 +6639,9 @@
         "shopping",
         "issues"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta06"
+      },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/issueresolution/v1beta",
       "includeCommonResourcesProto": true,

@@ -153,54 +153,57 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bWFnZU1ldGFkYXRhLldlYnNpdGVJbmZvGikKC1dlYnNpdGVJbmZvEgsKA3Vy",
             "aRgBIAEoCRINCgV0aXRsZRgCIAEoCRozCgVJbWFnZRILCgN1cmkYASABKAkS",
             "DQoFd2lkdGgYAiABKAUSDgoGaGVpZ2h0GAMgASgFQhIKEF9ncm91bmRpbmdf",
-            "c2NvcmUiTAoSQ2hlY2tHcm91bmRpbmdTcGVjEh8KEmNpdGF0aW9uX3RocmVz",
-            "aG9sZBgBIAEoAUgAiAEBQhUKE19jaXRhdGlvbl90aHJlc2hvbGQinwMKFUNo",
-            "ZWNrR3JvdW5kaW5nUmVxdWVzdBJQChBncm91bmRpbmdfY29uZmlnGAEgASgJ",
-            "QjbgQQL6QTAKLmRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Hcm91",
-            "bmRpbmdDb25maWcSGAoQYW5zd2VyX2NhbmRpZGF0ZRgCIAEoCRI9CgVmYWN0",
-            "cxgDIAMoCzIuLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuR3Jv",
-            "dW5kaW5nRmFjdBJLCg5ncm91bmRpbmdfc3BlYxgEIAEoCzIzLmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ2hlY2tHcm91bmRpbmdTcGVjElsK",
-            "C3VzZXJfbGFiZWxzGAUgAygLMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MS5DaGVja0dyb3VuZGluZ1JlcXVlc3QuVXNlckxhYmVsc0VudHJ5",
-            "GjEKD1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBIrAEChZDaGVja0dyb3VuZGluZ1Jlc3BvbnNlEhoKDXN1cHBvcnRf",
-            "c2NvcmUYASABKAJIAIgBARJACgxjaXRlZF9jaHVua3MYAyADKAsyKi5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkZhY3RDaHVuaxJkCgtjaXRl",
-            "ZF9mYWN0cxgGIAMoCzJPLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djEuQ2hlY2tHcm91bmRpbmdSZXNwb25zZS5DaGVja0dyb3VuZGluZ0ZhY3RD",
-            "aHVuaxJNCgZjbGFpbXMYBCADKAsyPS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxLkNoZWNrR3JvdW5kaW5nUmVzcG9uc2UuQ2xhaW0aLQoXQ2hl",
-            "Y2tHcm91bmRpbmdGYWN0Q2h1bmsSEgoKY2h1bmtfdGV4dBgBIAEoCRrBAQoF",
-            "Q2xhaW0SFgoJc3RhcnRfcG9zGAEgASgFSACIAQESFAoHZW5kX3BvcxgCIAEo",
-            "BUgBiAEBEhIKCmNsYWltX3RleHQYAyABKAkSGAoQY2l0YXRpb25faW5kaWNl",
-            "cxgEIAMoBRIlChhncm91bmRpbmdfY2hlY2tfcmVxdWlyZWQYBiABKAhIAogB",
-            "AUIMCgpfc3RhcnRfcG9zQgoKCF9lbmRfcG9zQhsKGV9ncm91bmRpbmdfY2hl",
-            "Y2tfcmVxdWlyZWRCEAoOX3N1cHBvcnRfc2NvcmUyqAYKGUdyb3VuZGVkR2Vu",
-            "ZXJhdGlvblNlcnZpY2US9gEKHVN0cmVhbUdlbmVyYXRlR3JvdW5kZWRDb250",
-            "ZW50Ej8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5HZW5lcmF0",
-            "ZUdyb3VuZGVkQ29udGVudFJlcXVlc3QaQC5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxLkdlbmVyYXRlR3JvdW5kZWRDb250ZW50UmVzcG9uc2Ui",
-            "ToLT5JMCSCJDL3YxL3tsb2NhdGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fTpzdHJlYW1HZW5lcmF0ZUdyb3VuZGVkQ29udGVudDoBKigBMAES5gEKF0dl",
-            "bmVyYXRlR3JvdW5kZWRDb250ZW50Ej8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MS5HZW5lcmF0ZUdyb3VuZGVkQ29udGVudFJlcXVlc3QaQC5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkdlbmVyYXRlR3JvdW5k",
-            "ZWRDb250ZW50UmVzcG9uc2UiSILT5JMCQiI9L3YxL3tsb2NhdGlvbj1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfTpnZW5lcmF0ZUdyb3VuZGVkQ29udGVudDoB",
-            "KhLUAQoOQ2hlY2tHcm91bmRpbmcSNi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxLkNoZWNrR3JvdW5kaW5nUmVxdWVzdBo3Lmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ2hlY2tHcm91bmRpbmdSZXNwb25zZSJR",
-            "gtPkkwJLIkYvdjEve2dyb3VuZGluZ19jb25maWc9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9ncm91bmRpbmdDb25maWdzLyp9OmNoZWNrOgEqGlLKQR5kaXNj",
-            "b3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpECCiNjb20uZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIeR3JvdW5kZWRHZW5lcmF0aW9u",
-            "U2VydmljZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5",
-            "ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2lu",
-            "ZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVy",
-            "eUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHq",
-            "AiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "c2NvcmUikAEKEkNoZWNrR3JvdW5kaW5nU3BlYxIfChJjaXRhdGlvbl90aHJl",
+            "c2hvbGQYASABKAFIAIgBARIlChhlbmFibGVfY2xhaW1fbGV2ZWxfc2NvcmUY",
+            "BCABKAhIAYgBAUIVChNfY2l0YXRpb25fdGhyZXNob2xkQhsKGV9lbmFibGVf",
+            "Y2xhaW1fbGV2ZWxfc2NvcmUinwMKFUNoZWNrR3JvdW5kaW5nUmVxdWVzdBJQ",
+            "ChBncm91bmRpbmdfY29uZmlnGAEgASgJQjbgQQL6QTAKLmRpc2NvdmVyeWVu",
+            "Z2luZS5nb29nbGVhcGlzLmNvbS9Hcm91bmRpbmdDb25maWcSGAoQYW5zd2Vy",
+            "X2NhbmRpZGF0ZRgCIAEoCRI9CgVmYWN0cxgDIAMoCzIuLmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuR3JvdW5kaW5nRmFjdBJLCg5ncm91bmRp",
+            "bmdfc3BlYxgEIAEoCzIzLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djEuQ2hlY2tHcm91bmRpbmdTcGVjElsKC3VzZXJfbGFiZWxzGAUgAygLMkYu",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5DaGVja0dyb3VuZGlu",
+            "Z1JlcXVlc3QuVXNlckxhYmVsc0VudHJ5GjEKD1VzZXJMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIs4EChZDaGVja0dyb3Vu",
+            "ZGluZ1Jlc3BvbnNlEhoKDXN1cHBvcnRfc2NvcmUYASABKAJIAIgBARJACgxj",
+            "aXRlZF9jaHVua3MYAyADKAsyKi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxLkZhY3RDaHVuaxJkCgtjaXRlZF9mYWN0cxgGIAMoCzJPLmdvb2ds",
+            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ2hlY2tHcm91bmRpbmdSZXNw",
+            "b25zZS5DaGVja0dyb3VuZGluZ0ZhY3RDaHVuaxJNCgZjbGFpbXMYBCADKAsy",
+            "PS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkNoZWNrR3JvdW5k",
+            "aW5nUmVzcG9uc2UuQ2xhaW0aLQoXQ2hlY2tHcm91bmRpbmdGYWN0Q2h1bmsS",
+            "EgoKY2h1bmtfdGV4dBgBIAEoCRrfAQoFQ2xhaW0SFgoJc3RhcnRfcG9zGAEg",
+            "ASgFSACIAQESFAoHZW5kX3BvcxgCIAEoBUgBiAEBEhIKCmNsYWltX3RleHQY",
+            "AyABKAkSGAoQY2l0YXRpb25faW5kaWNlcxgEIAMoBRIlChhncm91bmRpbmdf",
+            "Y2hlY2tfcmVxdWlyZWQYBiABKAhIAogBARISCgVzY29yZRgHIAEoAUgDiAEB",
+            "QgwKCl9zdGFydF9wb3NCCgoIX2VuZF9wb3NCGwoZX2dyb3VuZGluZ19jaGVj",
+            "a19yZXF1aXJlZEIICgZfc2NvcmVCEAoOX3N1cHBvcnRfc2NvcmUyqAYKGUdy",
+            "b3VuZGVkR2VuZXJhdGlvblNlcnZpY2US9gEKHVN0cmVhbUdlbmVyYXRlR3Jv",
+            "dW5kZWRDb250ZW50Ej8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5HZW5lcmF0ZUdyb3VuZGVkQ29udGVudFJlcXVlc3QaQC5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkdlbmVyYXRlR3JvdW5kZWRDb250ZW50",
+            "UmVzcG9uc2UiToLT5JMCSCJDL3YxL3tsb2NhdGlvbj1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfTpzdHJlYW1HZW5lcmF0ZUdyb3VuZGVkQ29udGVudDoBKigB",
+            "MAES5gEKF0dlbmVyYXRlR3JvdW5kZWRDb250ZW50Ej8uZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5HZW5lcmF0ZUdyb3VuZGVkQ29udGVudFJl",
+            "cXVlc3QaQC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkdlbmVy",
+            "YXRlR3JvdW5kZWRDb250ZW50UmVzcG9uc2UiSILT5JMCQiI9L3YxL3tsb2Nh",
+            "dGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpnZW5lcmF0ZUdyb3VuZGVk",
+            "Q29udGVudDoBKhLUAQoOQ2hlY2tHcm91bmRpbmcSNi5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxLkNoZWNrR3JvdW5kaW5nUmVxdWVzdBo3Lmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ2hlY2tHcm91bmRpbmdS",
+            "ZXNwb25zZSJRgtPkkwJLIkYvdjEve2dyb3VuZGluZ19jb25maWc9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9ncm91bmRpbmdDb25maWdzLyp9OmNoZWNrOgEq",
+            "GlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpECCiNj",
+            "b20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIeR3JvdW5kZWRH",
+            "ZW5lcmF0aW9uU2VydmljZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2Nv",
+            "dmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3Vk",
+            "LkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlF",
+            "bmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.GroundingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,10 +223,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.GroundingSupport), global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.GroundingSupport.Parser, new[]{ "ClaimText", "SupportChunkIndices", "SupportScore" }, new[]{ "SupportScore" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.ImageMetadata), global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.ImageMetadata.Parser, new[]{ "Image", "Thumbnail", "Source" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.ImageMetadata.Types.WebsiteInfo), global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.ImageMetadata.Types.WebsiteInfo.Parser, new[]{ "Uri", "Title" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.ImageMetadata.Types.Image), global::Google.Cloud.DiscoveryEngine.V1.GenerateGroundedContentResponse.Types.Candidate.Types.GroundingMetadata.Types.ImageMetadata.Types.Image.Parser, new[]{ "Uri", "Width", "Height" }, null, null, null, null)})})})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingSpec), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingSpec.Parser, new[]{ "CitationThreshold" }, new[]{ "CitationThreshold" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingSpec), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingSpec.Parser, new[]{ "CitationThreshold", "EnableClaimLevelScore" }, new[]{ "CitationThreshold", "EnableClaimLevelScore" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingRequest.Parser, new[]{ "GroundingConfig", "AnswerCandidate", "Facts", "GroundingSpec", "UserLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Parser, new[]{ "SupportScore", "CitedChunks", "CitedFacts", "Claims" }, new[]{ "SupportScore" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Types.CheckGroundingFactChunk), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Types.CheckGroundingFactChunk.Parser, new[]{ "ChunkText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Types.Claim), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Types.Claim.Parser, new[]{ "StartPos", "EndPos", "ClaimText", "CitationIndices", "GroundingCheckRequired" }, new[]{ "StartPos", "EndPos", "GroundingCheckRequired" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Types.Claim), global::Google.Cloud.DiscoveryEngine.V1.CheckGroundingResponse.Types.Claim.Parser, new[]{ "StartPos", "EndPos", "ClaimText", "CitationIndices", "GroundingCheckRequired", "Score" }, new[]{ "StartPos", "EndPos", "GroundingCheckRequired", "Score" }, null, null, null)})
           }));
     }
     #endregion
@@ -6828,6 +6831,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public CheckGroundingSpec(CheckGroundingSpec other) : this() {
       _hasBits0 = other._hasBits0;
       citationThreshold_ = other.citationThreshold_;
+      enableClaimLevelScore_ = other.enableClaimLevelScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6871,6 +6875,36 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "enable_claim_level_score" field.</summary>
+    public const int EnableClaimLevelScoreFieldNumber = 4;
+    private readonly static bool EnableClaimLevelScoreDefaultValue = false;
+
+    private bool enableClaimLevelScore_;
+    /// <summary>
+    /// The control flag that enables claim-level grounding score in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableClaimLevelScore {
+      get { if ((_hasBits0 & 2) != 0) { return enableClaimLevelScore_; } else { return EnableClaimLevelScoreDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        enableClaimLevelScore_ = value;
+      }
+    }
+    /// <summary>Gets whether the "enable_claim_level_score" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnableClaimLevelScore {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "enable_claim_level_score" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnableClaimLevelScore() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6887,6 +6921,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return true;
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CitationThreshold, other.CitationThreshold)) return false;
+      if (EnableClaimLevelScore != other.EnableClaimLevelScore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6895,6 +6930,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasCitationThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CitationThreshold);
+      if (HasEnableClaimLevelScore) hash ^= EnableClaimLevelScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6917,6 +6953,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(9);
         output.WriteDouble(CitationThreshold);
       }
+      if (HasEnableClaimLevelScore) {
+        output.WriteRawTag(32);
+        output.WriteBool(EnableClaimLevelScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6931,6 +6971,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(9);
         output.WriteDouble(CitationThreshold);
       }
+      if (HasEnableClaimLevelScore) {
+        output.WriteRawTag(32);
+        output.WriteBool(EnableClaimLevelScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6943,6 +6987,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       int size = 0;
       if (HasCitationThreshold) {
         size += 1 + 8;
+      }
+      if (HasEnableClaimLevelScore) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6958,6 +7005,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.HasCitationThreshold) {
         CitationThreshold = other.CitationThreshold;
+      }
+      if (other.HasEnableClaimLevelScore) {
+        EnableClaimLevelScore = other.EnableClaimLevelScore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6978,6 +7028,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             CitationThreshold = input.ReadDouble();
             break;
           }
+          case 32: {
+            EnableClaimLevelScore = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -6995,6 +7049,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             break;
           case 9: {
             CitationThreshold = input.ReadDouble();
+            break;
+          }
+          case 32: {
+            EnableClaimLevelScore = input.ReadBool();
             break;
           }
         }
@@ -7917,6 +7975,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           claimText_ = other.claimText_;
           citationIndices_ = other.citationIndices_.Clone();
           groundingCheckRequired_ = other.groundingCheckRequired_;
+          score_ = other.score_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -8067,6 +8126,38 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           _hasBits0 &= ~4;
         }
 
+        /// <summary>Field number for the "score" field.</summary>
+        public const int ScoreFieldNumber = 7;
+        private readonly static double ScoreDefaultValue = 0D;
+
+        private double score_;
+        /// <summary>
+        /// Confidence score for the claim in the answer candidate, in the range of
+        /// [0, 1]. This is set only when
+        /// `CheckGroundingRequest.grounding_spec.enable_claim_level_score` is true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Score {
+          get { if ((_hasBits0 & 8) != 0) { return score_; } else { return ScoreDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            score_ = value;
+          }
+        }
+        /// <summary>Gets whether the "score" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasScore {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "score" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearScore() {
+          _hasBits0 &= ~8;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -8087,6 +8178,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (ClaimText != other.ClaimText) return false;
           if(!citationIndices_.Equals(other.citationIndices_)) return false;
           if (GroundingCheckRequired != other.GroundingCheckRequired) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Score, other.Score)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -8099,6 +8191,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (ClaimText.Length != 0) hash ^= ClaimText.GetHashCode();
           hash ^= citationIndices_.GetHashCode();
           if (HasGroundingCheckRequired) hash ^= GroundingCheckRequired.GetHashCode();
+          if (HasScore) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Score);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -8134,6 +8227,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(48);
             output.WriteBool(GroundingCheckRequired);
           }
+          if (HasScore) {
+            output.WriteRawTag(57);
+            output.WriteDouble(Score);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -8161,6 +8258,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(48);
             output.WriteBool(GroundingCheckRequired);
           }
+          if (HasScore) {
+            output.WriteRawTag(57);
+            output.WriteDouble(Score);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -8183,6 +8284,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           size += citationIndices_.CalculateSize(_repeated_citationIndices_codec);
           if (HasGroundingCheckRequired) {
             size += 1 + 1;
+          }
+          if (HasScore) {
+            size += 1 + 8;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -8208,6 +8312,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           citationIndices_.Add(other.citationIndices_);
           if (other.HasGroundingCheckRequired) {
             GroundingCheckRequired = other.GroundingCheckRequired;
+          }
+          if (other.HasScore) {
+            Score = other.Score;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -8245,6 +8352,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 GroundingCheckRequired = input.ReadBool();
                 break;
               }
+              case 57: {
+                Score = input.ReadDouble();
+                break;
+              }
             }
           }
         #endif
@@ -8279,6 +8390,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 48: {
                 GroundingCheckRequired = input.ReadBool();
+                break;
+              }
+              case 57: {
+                Score = input.ReadDouble();
                 break;
               }
             }

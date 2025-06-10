@@ -11,6 +11,1059 @@
   },
   "snippets": [
     {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_UpdateCmekConfig_sync",
+      "title": "UpdateCmekConfigRequestObject",
+      "description": "Snippet for UpdateCmekConfig",
+      "file": "CmekConfigServiceClient.UpdateCmekConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.UpdateCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.CmekConfig, Google.Cloud.DiscoveryEngine.V1.UpdateCmekConfigMetadata>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.UpdateCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_UpdateCmekConfig_async",
+      "title": "UpdateCmekConfigRequestObjectAsync",
+      "description": "Snippet for UpdateCmekConfigAsync",
+      "file": "CmekConfigServiceClient.UpdateCmekConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.UpdateCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.CmekConfig, Google.Cloud.DiscoveryEngine.V1.UpdateCmekConfigMetadata>>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.UpdateCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_UpdateCmekConfig_sync_flattened",
+      "title": "UpdateCmekConfig",
+      "description": "Snippet for UpdateCmekConfig",
+      "file": "CmekConfigServiceClient.UpdateCmekConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.UpdateCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CmekConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.CmekConfig, Google.Cloud.DiscoveryEngine.V1.UpdateCmekConfigMetadata>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.UpdateCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_UpdateCmekConfig_async_flattened",
+      "title": "UpdateCmekConfigAsync",
+      "description": "Snippet for UpdateCmekConfigAsync",
+      "file": "CmekConfigServiceClient.UpdateCmekConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.UpdateCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CmekConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.CmekConfig, Google.Cloud.DiscoveryEngine.V1.UpdateCmekConfigMetadata>>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.UpdateCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_GetCmekConfig_sync",
+      "title": "GetCmekConfigRequestObject",
+      "description": "Snippet for GetCmekConfig",
+      "file": "CmekConfigServiceClient.GetCmekConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.GetCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.CmekConfig",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.GetCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_GetCmekConfig_async",
+      "title": "GetCmekConfigRequestObjectAsync",
+      "description": "Snippet for GetCmekConfigAsync",
+      "file": "CmekConfigServiceClient.GetCmekConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.GetCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.CmekConfig>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.GetCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_GetCmekConfig_sync_flattened",
+      "title": "GetCmekConfig",
+      "description": "Snippet for GetCmekConfig",
+      "file": "CmekConfigServiceClient.GetCmekConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.GetCmekConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.CmekConfig",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.GetCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_GetCmekConfig_async_flattened",
+      "title": "GetCmekConfigAsync",
+      "description": "Snippet for GetCmekConfigAsync",
+      "file": "CmekConfigServiceClient.GetCmekConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.GetCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.CmekConfig>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.GetCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_GetCmekConfig_sync_flattened_resourceNames",
+      "title": "GetCmekConfigResourceNames",
+      "description": "Snippet for GetCmekConfig",
+      "file": "CmekConfigServiceClient.GetCmekConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.GetCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CmekConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.CmekConfig",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.GetCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_GetCmekConfig_async_flattened_resourceNames",
+      "title": "GetCmekConfigResourceNamesAsync",
+      "description": "Snippet for GetCmekConfigAsync",
+      "file": "CmekConfigServiceClient.GetCmekConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.GetCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CmekConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.CmekConfig>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.GetCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_ListCmekConfigs_sync",
+      "title": "ListCmekConfigsRequestObject",
+      "description": "Snippet for ListCmekConfigs",
+      "file": "CmekConfigServiceClient.ListCmekConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCmekConfigs",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.ListCmekConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsResponse",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListCmekConfigs",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.ListCmekConfigs",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_ListCmekConfigs_async",
+      "title": "ListCmekConfigsRequestObjectAsync",
+      "description": "Snippet for ListCmekConfigsAsync",
+      "file": "CmekConfigServiceClient.ListCmekConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCmekConfigsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.ListCmekConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsResponse>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListCmekConfigs",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.ListCmekConfigs",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_ListCmekConfigs_sync_flattened",
+      "title": "ListCmekConfigs",
+      "description": "Snippet for ListCmekConfigs",
+      "file": "CmekConfigServiceClient.ListCmekConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCmekConfigs",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.ListCmekConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsResponse",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListCmekConfigs",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.ListCmekConfigs",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_ListCmekConfigs_async_flattened",
+      "title": "ListCmekConfigsAsync",
+      "description": "Snippet for ListCmekConfigsAsync",
+      "file": "CmekConfigServiceClient.ListCmekConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCmekConfigsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.ListCmekConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsResponse>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListCmekConfigs",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.ListCmekConfigs",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_ListCmekConfigs_sync_flattened_resourceNames",
+      "title": "ListCmekConfigsResourceNames",
+      "description": "Snippet for ListCmekConfigs",
+      "file": "CmekConfigServiceClient.ListCmekConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCmekConfigs",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.ListCmekConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsResponse",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListCmekConfigs",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.ListCmekConfigs",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_ListCmekConfigs_async_flattened_resourceNames",
+      "title": "ListCmekConfigsResourceNamesAsync",
+      "description": "Snippet for ListCmekConfigsAsync",
+      "file": "CmekConfigServiceClient.ListCmekConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCmekConfigsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.ListCmekConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.ListCmekConfigsResponse>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListCmekConfigs",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.ListCmekConfigs",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_DeleteCmekConfig_sync",
+      "title": "DeleteCmekConfigRequestObject",
+      "description": "Snippet for DeleteCmekConfig",
+      "file": "CmekConfigServiceClient.DeleteCmekConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.DeleteCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigMetadata>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.DeleteCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_DeleteCmekConfig_async",
+      "title": "DeleteCmekConfigRequestObjectAsync",
+      "description": "Snippet for DeleteCmekConfigAsync",
+      "file": "CmekConfigServiceClient.DeleteCmekConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.DeleteCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigMetadata>>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.DeleteCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_DeleteCmekConfig_sync_flattened",
+      "title": "DeleteCmekConfig",
+      "description": "Snippet for DeleteCmekConfig",
+      "file": "CmekConfigServiceClient.DeleteCmekConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.DeleteCmekConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigMetadata>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.DeleteCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_DeleteCmekConfig_async_flattened",
+      "title": "DeleteCmekConfigAsync",
+      "description": "Snippet for DeleteCmekConfigAsync",
+      "file": "CmekConfigServiceClient.DeleteCmekConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.DeleteCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigMetadata>>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.DeleteCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_DeleteCmekConfig_sync_flattened_resourceNames",
+      "title": "DeleteCmekConfigResourceNames",
+      "description": "Snippet for DeleteCmekConfig",
+      "file": "CmekConfigServiceClient.DeleteCmekConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCmekConfig",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.DeleteCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CmekConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigMetadata>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.DeleteCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CmekConfigService_DeleteCmekConfig_async_flattened_resourceNames",
+      "title": "DeleteCmekConfigResourceNamesAsync",
+      "description": "Snippet for DeleteCmekConfigAsync",
+      "file": "CmekConfigServiceClient.DeleteCmekConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCmekConfigAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient.DeleteCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CmekConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteCmekConfigMetadata>>",
+        "client": {
+          "shortName": "CmekConfigServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCmekConfig",
+          "fullName": "google.cloud.discoveryengine.v1.CmekConfigService.DeleteCmekConfig",
+          "service": {
+            "shortName": "CmekConfigService",
+            "fullName": "google.cloud.discoveryengine.v1.CmekConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_CompletionService_CompleteQuery_sync",
       "title": "CompleteQueryRequestObject",
       "description": "Snippet for CompleteQuery",
@@ -5685,12 +6738,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -5734,12 +6787,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -10599,6 +11652,1509 @@
         {
           "start": 35,
           "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_CreateIdentityMappingStore_sync",
+      "title": "CreateIdentityMappingStoreRequestObject",
+      "description": "Snippet for CreateIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.CreateIdentityMappingStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.CreateIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateIdentityMappingStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.CreateIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_CreateIdentityMappingStore_async",
+      "title": "CreateIdentityMappingStoreRequestObjectAsync",
+      "description": "Snippet for CreateIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.CreateIdentityMappingStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.CreateIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateIdentityMappingStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.CreateIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_CreateIdentityMappingStore_sync_flattened",
+      "title": "CreateIdentityMappingStore",
+      "description": "Snippet for CreateIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.CreateIdentityMappingStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.CreateIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+            "name": "identityMappingStore"
+          },
+          {
+            "type": "System.String",
+            "name": "identityMappingStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.CreateIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_CreateIdentityMappingStore_async_flattened",
+      "title": "CreateIdentityMappingStoreAsync",
+      "description": "Snippet for CreateIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.CreateIdentityMappingStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.CreateIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+            "name": "identityMappingStore"
+          },
+          {
+            "type": "System.String",
+            "name": "identityMappingStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.CreateIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_CreateIdentityMappingStore_sync_flattened_resourceNames",
+      "title": "CreateIdentityMappingStoreResourceNames",
+      "description": "Snippet for CreateIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.CreateIdentityMappingStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.CreateIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+            "name": "identityMappingStore"
+          },
+          {
+            "type": "System.String",
+            "name": "identityMappingStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.CreateIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_CreateIdentityMappingStore_async_flattened_resourceNames",
+      "title": "CreateIdentityMappingStoreResourceNamesAsync",
+      "description": "Snippet for CreateIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.CreateIdentityMappingStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.CreateIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+            "name": "identityMappingStore"
+          },
+          {
+            "type": "System.String",
+            "name": "identityMappingStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.CreateIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_GetIdentityMappingStore_sync",
+      "title": "GetIdentityMappingStoreRequestObject",
+      "description": "Snippet for GetIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.GetIdentityMappingStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.GetIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetIdentityMappingStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.GetIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_GetIdentityMappingStore_async",
+      "title": "GetIdentityMappingStoreRequestObjectAsync",
+      "description": "Snippet for GetIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.GetIdentityMappingStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.GetIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetIdentityMappingStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.GetIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_GetIdentityMappingStore_sync_flattened",
+      "title": "GetIdentityMappingStore",
+      "description": "Snippet for GetIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.GetIdentityMappingStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.GetIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.GetIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_GetIdentityMappingStore_async_flattened",
+      "title": "GetIdentityMappingStoreAsync",
+      "description": "Snippet for GetIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.GetIdentityMappingStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.GetIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.GetIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_GetIdentityMappingStore_sync_flattened_resourceNames",
+      "title": "GetIdentityMappingStoreResourceNames",
+      "description": "Snippet for GetIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.GetIdentityMappingStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.GetIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.GetIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_GetIdentityMappingStore_async_flattened_resourceNames",
+      "title": "GetIdentityMappingStoreResourceNamesAsync",
+      "description": "Snippet for GetIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.GetIdentityMappingStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.GetIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.GetIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_DeleteIdentityMappingStore_sync",
+      "title": "DeleteIdentityMappingStoreRequestObject",
+      "description": "Snippet for DeleteIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.DeleteIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreMetadata>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.DeleteIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_DeleteIdentityMappingStore_async",
+      "title": "DeleteIdentityMappingStoreRequestObjectAsync",
+      "description": "Snippet for DeleteIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreMetadata>>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.DeleteIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_DeleteIdentityMappingStore_sync_flattened",
+      "title": "DeleteIdentityMappingStore",
+      "description": "Snippet for DeleteIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.DeleteIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreMetadata>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.DeleteIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_DeleteIdentityMappingStore_async_flattened",
+      "title": "DeleteIdentityMappingStoreAsync",
+      "description": "Snippet for DeleteIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreMetadata>>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.DeleteIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_DeleteIdentityMappingStore_sync_flattened_resourceNames",
+      "title": "DeleteIdentityMappingStoreResourceNames",
+      "description": "Snippet for DeleteIdentityMappingStore",
+      "file": "IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIdentityMappingStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.DeleteIdentityMappingStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreMetadata>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.DeleteIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_DeleteIdentityMappingStore_async_flattened_resourceNames",
+      "title": "DeleteIdentityMappingStoreResourceNamesAsync",
+      "description": "Snippet for DeleteIdentityMappingStoreAsync",
+      "file": "IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIdentityMappingStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.DeleteIdentityMappingStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteIdentityMappingStoreMetadata>>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteIdentityMappingStore",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.DeleteIdentityMappingStore",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ImportIdentityMappings_sync",
+      "title": "ImportIdentityMappingsRequestObject",
+      "description": "Snippet for ImportIdentityMappings",
+      "file": "IdentityMappingStoreServiceClient.ImportIdentityMappingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIdentityMappings",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ImportIdentityMappings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ImportIdentityMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.ImportIdentityMappingsResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntryOperationMetadata>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ImportIdentityMappings",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ImportIdentityMappings",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ImportIdentityMappings_async",
+      "title": "ImportIdentityMappingsRequestObjectAsync",
+      "description": "Snippet for ImportIdentityMappingsAsync",
+      "file": "IdentityMappingStoreServiceClient.ImportIdentityMappingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIdentityMappingsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ImportIdentityMappingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ImportIdentityMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.ImportIdentityMappingsResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntryOperationMetadata>>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ImportIdentityMappings",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ImportIdentityMappings",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_PurgeIdentityMappings_sync",
+      "title": "PurgeIdentityMappingsRequestObject",
+      "description": "Snippet for PurgeIdentityMappings",
+      "file": "IdentityMappingStoreServiceClient.PurgeIdentityMappingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeIdentityMappings",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.PurgeIdentityMappings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.PurgeIdentityMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntryOperationMetadata>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeIdentityMappings",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.PurgeIdentityMappings",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_PurgeIdentityMappings_async",
+      "title": "PurgeIdentityMappingsRequestObjectAsync",
+      "description": "Snippet for PurgeIdentityMappingsAsync",
+      "file": "IdentityMappingStoreServiceClient.PurgeIdentityMappingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeIdentityMappingsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.PurgeIdentityMappingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.PurgeIdentityMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntryOperationMetadata>>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeIdentityMappings",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.PurgeIdentityMappings",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappings_sync",
+      "title": "ListIdentityMappingsRequestObject",
+      "description": "Snippet for ListIdentityMappings",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappings",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingsResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntry>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappings",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappings",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappings_async",
+      "title": "ListIdentityMappingsRequestObjectAsync",
+      "description": "Snippet for ListIdentityMappingsAsync",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingsResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntry>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappings",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappings",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappingStores_sync",
+      "title": "ListIdentityMappingStoresRequestObject",
+      "description": "Snippet for ListIdentityMappingStores",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingStoresRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingStores",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingStores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappingStores",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappingStores",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappingStores_async",
+      "title": "ListIdentityMappingStoresRequestObjectAsync",
+      "description": "Snippet for ListIdentityMappingStoresAsync",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingStoresRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingStoresAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappingStores",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappingStores",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappingStores_sync_flattened",
+      "title": "ListIdentityMappingStores",
+      "description": "Snippet for ListIdentityMappingStores",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingStoresSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingStores",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingStores",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappingStores",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappingStores",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappingStores_async_flattened",
+      "title": "ListIdentityMappingStoresAsync",
+      "description": "Snippet for ListIdentityMappingStoresAsync",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingStoresAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingStoresAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappingStores",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappingStores",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappingStores_sync_flattened_resourceNames",
+      "title": "ListIdentityMappingStoresResourceNames",
+      "description": "Snippet for ListIdentityMappingStores",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingStoresResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingStores",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingStores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappingStores",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappingStores",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_IdentityMappingStoreService_ListIdentityMappingStores_async_flattened_resourceNames",
+      "title": "ListIdentityMappingStoresResourceNamesAsync",
+      "description": "Snippet for ListIdentityMappingStoresAsync",
+      "file": "IdentityMappingStoreServiceClient.ListIdentityMappingStoresResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIdentityMappingStoresAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient.ListIdentityMappingStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListIdentityMappingStoresResponse, Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore>",
+        "client": {
+          "shortName": "IdentityMappingStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.IdentityMappingStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListIdentityMappingStores",
+          "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService.ListIdentityMappingStores",
+          "service": {
+            "shortName": "IdentityMappingStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.IdentityMappingStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -16485,6 +19041,422 @@
           "service": {
             "shortName": "UserEventService",
             "fullName": "google.cloud.discoveryengine.v1.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_ListUserLicenses_sync",
+      "title": "ListUserLicensesRequestObject",
+      "description": "Snippet for ListUserLicenses",
+      "file": "UserLicenseServiceClient.ListUserLicensesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLicenses",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.ListUserLicenses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.UserLicense>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.ListUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_ListUserLicenses_async",
+      "title": "ListUserLicensesRequestObjectAsync",
+      "description": "Snippet for ListUserLicensesAsync",
+      "file": "UserLicenseServiceClient.ListUserLicensesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLicensesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.ListUserLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.UserLicense>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.ListUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_ListUserLicenses_sync_flattened",
+      "title": "ListUserLicenses",
+      "description": "Snippet for ListUserLicenses",
+      "file": "UserLicenseServiceClient.ListUserLicensesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLicenses",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.ListUserLicenses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.UserLicense>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.ListUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_ListUserLicenses_async_flattened",
+      "title": "ListUserLicensesAsync",
+      "description": "Snippet for ListUserLicensesAsync",
+      "file": "UserLicenseServiceClient.ListUserLicensesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLicensesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.ListUserLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.UserLicense>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.ListUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_ListUserLicenses_sync_flattened_resourceNames",
+      "title": "ListUserLicensesResourceNames",
+      "description": "Snippet for ListUserLicenses",
+      "file": "UserLicenseServiceClient.ListUserLicensesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLicenses",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.ListUserLicenses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UserStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.UserLicense>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.ListUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_ListUserLicenses_async_flattened_resourceNames",
+      "title": "ListUserLicensesResourceNamesAsync",
+      "description": "Snippet for ListUserLicensesAsync",
+      "file": "UserLicenseServiceClient.ListUserLicensesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserLicensesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.ListUserLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UserStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.UserLicense>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.ListUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_BatchUpdateUserLicenses_sync",
+      "title": "BatchUpdateUserLicensesRequestObject",
+      "description": "Snippet for BatchUpdateUserLicenses",
+      "file": "UserLicenseServiceClient.BatchUpdateUserLicensesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateUserLicenses",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.BatchUpdateUserLicenses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesMetadata>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.BatchUpdateUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_UserLicenseService_BatchUpdateUserLicenses_async",
+      "title": "BatchUpdateUserLicensesRequestObjectAsync",
+      "description": "Snippet for BatchUpdateUserLicensesAsync",
+      "file": "UserLicenseServiceClient.BatchUpdateUserLicensesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateUserLicensesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient.BatchUpdateUserLicensesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesResponse, Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesMetadata>>",
+        "client": {
+          "shortName": "UserLicenseServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateUserLicenses",
+          "fullName": "google.cloud.discoveryengine.v1.UserLicenseService.BatchUpdateUserLicenses",
+          "service": {
+            "shortName": "UserLicenseService",
+            "fullName": "google.cloud.discoveryengine.v1.UserLicenseService"
           }
         }
       },

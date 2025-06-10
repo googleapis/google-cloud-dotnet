@@ -76,7 +76,7 @@ internal sealed class NonSourceGenerator
         { ApiType.Other, $"{DefaultNetstandardTarget};net462" }
     };
 
-    private const string DefaultTestTargetFrameworks = "net6.0;net462";
+    private const string DefaultTestTargetFrameworks = "net8.0;net462";
 
     private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
     {

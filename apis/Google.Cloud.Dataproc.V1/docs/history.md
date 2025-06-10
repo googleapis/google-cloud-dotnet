@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.18.0, released 2025-06-09
+
+### New features
+
+- Add scenarios AUTO/NONE to autotuning config
+
 ## Version 5.17.0, released 2025-02-25
 
 ### New features

@@ -205,7 +205,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// Optional. Query regex to match the whole search query.
     /// Cannot be set when
     /// [Condition.query_terms][google.cloud.discoveryengine.v1.Condition.query_terms]
-    /// is set. This is currently supporting promotion use case.
+    /// is set. Only supported for Basic Site Search promotion serving controls.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1024,8 +1024,6 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int PromoteActionFieldNumber = 15;
     /// <summary>
     /// Promote certain links based on predefined trigger queries.
-    ///
-    /// This now only supports basic site search.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

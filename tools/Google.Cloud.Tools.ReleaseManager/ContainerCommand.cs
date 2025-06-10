@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 using System;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
@@ -66,6 +67,10 @@ public sealed class ContainerCommand : ICommand
 
         try
         {
+            if (options.RepoRoot is string repoRoot && !File.Exists(Path.Combine(repoRoot, ApiCatalog.PathInRepository)))
+            {
+                return NonGoogleCloudDotnetCommands.Execute(args[0], options);
+            }
             if (options.UtilityDocsName is not null)
             {
                 return UtilityDocCommands.Execute(args[0], options);

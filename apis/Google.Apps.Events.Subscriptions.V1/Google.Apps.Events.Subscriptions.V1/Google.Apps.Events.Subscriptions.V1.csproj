@@ -4,7 +4,7 @@
     <Version>1.0.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>The Google Workspace Events API lets you subscribe to events and manage change notifications across Google Workspace applications.</Description>
+    <Description>The Google Workspace Events API (v1) lets you subscribe to events and manage change notifications across Google Workspace applications.</Description>
     <PackageTags>events;workspace;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>

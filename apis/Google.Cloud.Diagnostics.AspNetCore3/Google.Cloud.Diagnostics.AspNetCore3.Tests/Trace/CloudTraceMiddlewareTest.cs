@@ -55,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         }
 
         private static void CustomTraceContextPropagator(HttpResponse response, ITraceContext context) =>
-                response.Headers.Add("custom_trace", context.TraceId);
+                response.Headers.Append("custom_trace", context.TraceId);
 
         private static void AssertCustomTraceContext(HttpResponse response)
         {
