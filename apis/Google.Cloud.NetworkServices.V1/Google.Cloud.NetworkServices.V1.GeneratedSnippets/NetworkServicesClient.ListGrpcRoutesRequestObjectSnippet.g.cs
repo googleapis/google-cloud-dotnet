@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListGrpcRoutesRequest request = new ListGrpcRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListGrpcRoutesResponse, GrpcRoute> response = networkServicesClient.ListGrpcRoutes(request);

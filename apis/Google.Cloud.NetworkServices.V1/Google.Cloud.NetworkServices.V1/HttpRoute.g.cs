@@ -29,8 +29,8 @@ namespace Google.Cloud.NetworkServices.V1 {
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
             "Y2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxogZ29v",
             "Z2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8i5h4KCUh0dHBSb3V0ZRIRCgRuYW1lGAEgASgJ",
-            "QgPgQQISFgoJc2VsZl9saW5rGAsgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24Y",
+            "Zi90aW1lc3RhbXAucHJvdG8ijyQKCUh0dHBSb3V0ZRIRCgRuYW1lGAEgASgJ",
+            "QgPgQQgSFgoJc2VsZl9saW5rGAsgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24Y",
             "AiABKAlCA+BBARI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
             "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIWCglob3N0bmFtZXMYBSAD",
@@ -56,110 +56,129 @@ namespace Google.Cloud.NetworkServices.V1 {
             "ZWFkZXJzGAUgAygLMjYuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52",
             "MS5IdHRwUm91dGUuSGVhZGVyTWF0Y2gSWAoQcXVlcnlfcGFyYW1ldGVycxgG",
             "IAMoCzI+Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJv",
-            "dXRlLlF1ZXJ5UGFyYW1ldGVyTWF0Y2hCCwoJUGF0aE1hdGNoGl8KC0Rlc3Rp",
-            "bmF0aW9uEkAKDHNlcnZpY2VfbmFtZRgBIAEoCUIq+kEnCiVjb21wdXRlLmdv",
-            "b2dsZWFwaXMuY29tL0JhY2tlbmRTZXJ2aWNlEg4KBndlaWdodBgCIAEoBRqG",
-            "AwoIUmVkaXJlY3QSFQoNaG9zdF9yZWRpcmVjdBgBIAEoCRIVCg1wYXRoX3Jl",
-            "ZGlyZWN0GAIgASgJEhYKDnByZWZpeF9yZXdyaXRlGAMgASgJElcKDXJlc3Bv",
-            "bnNlX2NvZGUYBCABKA4yQC5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2Vz",
-            "LnYxLkh0dHBSb3V0ZS5SZWRpcmVjdC5SZXNwb25zZUNvZGUSFgoOaHR0cHNf",
-            "cmVkaXJlY3QYBSABKAgSEwoLc3RyaXBfcXVlcnkYBiABKAgSFQoNcG9ydF9y",
-            "ZWRpcmVjdBgHIAEoBSKWAQoMUmVzcG9uc2VDb2RlEh0KGVJFU1BPTlNFX0NP",
-            "REVfVU5TUEVDSUZJRUQQABIdChlNT1ZFRF9QRVJNQU5FTlRMWV9ERUZBVUxU",
-            "EAESCQoFRk9VTkQQAhINCglTRUVfT1RIRVIQAxIWChJURU1QT1JBUllfUkVE",
-            "SVJFQ1QQBBIWChJQRVJNQU5FTlRfUkVESVJFQ1QQBRrBAgoURmF1bHRJbmpl",
-            "Y3Rpb25Qb2xpY3kSVAoFZGVsYXkYASABKAsyRS5nb29nbGUuY2xvdWQubmV0",
+            "dXRlLlF1ZXJ5UGFyYW1ldGVyTWF0Y2hCCwoJUGF0aE1hdGNoGqICCgtEZXN0",
+            "aW5hdGlvbhJACgxzZXJ2aWNlX25hbWUYASABKAlCKvpBJwolY29tcHV0ZS5n",
+            "b29nbGVhcGlzLmNvbS9CYWNrZW5kU2VydmljZRIOCgZ3ZWlnaHQYAiABKAUS",
+            "XwoXcmVxdWVzdF9oZWFkZXJfbW9kaWZpZXIYAyABKAsyOS5nb29nbGUuY2xv",
+            "dWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5IZWFkZXJNb2RpZmll",
+            "ckID4EEBEmAKGHJlc3BvbnNlX2hlYWRlcl9tb2RpZmllchgEIAEoCzI5Lmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLkhlYWRl",
+            "ck1vZGlmaWVyQgPgQQEahgMKCFJlZGlyZWN0EhUKDWhvc3RfcmVkaXJlY3QY",
+            "ASABKAkSFQoNcGF0aF9yZWRpcmVjdBgCIAEoCRIWCg5wcmVmaXhfcmV3cml0",
+            "ZRgDIAEoCRJXCg1yZXNwb25zZV9jb2RlGAQgASgOMkAuZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGUuUmVkaXJlY3QuUmVzcG9u",
+            "c2VDb2RlEhYKDmh0dHBzX3JlZGlyZWN0GAUgASgIEhMKC3N0cmlwX3F1ZXJ5",
+            "GAYgASgIEhUKDXBvcnRfcmVkaXJlY3QYByABKAUilgEKDFJlc3BvbnNlQ29k",
+            "ZRIdChlSRVNQT05TRV9DT0RFX1VOU1BFQ0lGSUVEEAASHQoZTU9WRURfUEVS",
+            "TUFORU5UTFlfREVGQVVMVBABEgkKBUZPVU5EEAISDQoJU0VFX09USEVSEAMS",
+            "FgoSVEVNUE9SQVJZX1JFRElSRUNUEAQSFgoSUEVSTUFORU5UX1JFRElSRUNU",
+            "EAUawQIKFEZhdWx0SW5qZWN0aW9uUG9saWN5ElQKBWRlbGF5GAEgASgLMkUu",
+            "Z29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGUuRmF1",
+            "bHRJbmplY3Rpb25Qb2xpY3kuRGVsYXkSVAoFYWJvcnQYAiABKAsyRS5nb29n",
+            "bGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5GYXVsdElu",
+            "amVjdGlvblBvbGljeS5BYm9ydBpLCgVEZWxheRIuCgtmaXhlZF9kZWxheRgB",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhISCgpwZXJjZW50YWdl",
+            "GAIgASgFGjAKBUFib3J0EhMKC2h0dHBfc3RhdHVzGAEgASgFEhIKCnBlcmNl",
+            "bnRhZ2UYAiABKAUaUwodU3RhdGVmdWxTZXNzaW9uQWZmaW5pdHlQb2xpY3kS",
+            "MgoKY29va2llX3R0bBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkID4EECGpoCCg5IZWFkZXJNb2RpZmllchJPCgNzZXQYASADKAsyQi5nb29n",
+            "bGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5IZWFkZXJN",
+            "b2RpZmllci5TZXRFbnRyeRJPCgNhZGQYAiADKAsyQi5nb29nbGUuY2xvdWQu",
+            "bmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5IZWFkZXJNb2RpZmllci5B",
+            "ZGRFbnRyeRIOCgZyZW1vdmUYAyADKAkaKgoIU2V0RW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARoqCghBZGRFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGj8KClVSTFJld3JpdGUSGwoTcGF0aF9w",
+            "cmVmaXhfcmV3cml0ZRgBIAEoCRIUCgxob3N0X3Jld3JpdGUYAiABKAkacAoL",
+            "UmV0cnlQb2xpY3kSGAoQcmV0cnlfY29uZGl0aW9ucxgBIAMoCRITCgtudW1f",
+            "cmV0cmllcxgCIAEoBRIyCg9wZXJfdHJ5X3RpbWVvdXQYAyABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb24afwoTUmVxdWVzdE1pcnJvclBvbGljeRJL",
+            "CgtkZXN0aW5hdGlvbhgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vy",
+            "dmljZXMudjEuSHR0cFJvdXRlLkRlc3RpbmF0aW9uEhsKDm1pcnJvcl9wZXJj",
+            "ZW50GAIgASgCQgPgQQEaxQEKCkNvcnNQb2xpY3kSFQoNYWxsb3dfb3JpZ2lu",
+            "cxgBIAMoCRIcChRhbGxvd19vcmlnaW5fcmVnZXhlcxgCIAMoCRIVCg1hbGxv",
+            "d19tZXRob2RzGAMgAygJEhUKDWFsbG93X2hlYWRlcnMYBCADKAkSFgoOZXhw",
+            "b3NlX2hlYWRlcnMYBSADKAkSDwoHbWF4X2FnZRgGIAEoCRIZChFhbGxvd19j",
+            "cmVkZW50aWFscxgHIAEoCBIQCghkaXNhYmxlZBgIIAEoCBpsChJIdHRwRGly",
+            "ZWN0UmVzcG9uc2USGgoLc3RyaW5nX2JvZHkYAiABKAlCA+BBAUgAEhkKCmJ5",
+            "dGVzX2JvZHkYAyABKAxCA+BBAUgAEhMKBnN0YXR1cxgBIAEoBUID4EECQgoK",
+            "CEh0dHBCb2R5GrIICgtSb3V0ZUFjdGlvbhJMCgxkZXN0aW5hdGlvbnMYASAD",
+            "KAsyNi5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0",
+            "ZS5EZXN0aW5hdGlvbhJFCghyZWRpcmVjdBgCIAEoCzIzLmdvb2dsZS5jbG91",
+            "ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLlJlZGlyZWN0El8KFmZh",
+            "dWx0X2luamVjdGlvbl9wb2xpY3kYBCABKAsyPy5nb29nbGUuY2xvdWQubmV0",
             "d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5GYXVsdEluamVjdGlvblBvbGlj",
-            "eS5EZWxheRJUCgVhYm9ydBgCIAEoCzJFLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "c2VydmljZXMudjEuSHR0cFJvdXRlLkZhdWx0SW5qZWN0aW9uUG9saWN5LkFi",
-            "b3J0GksKBURlbGF5Ei4KC2ZpeGVkX2RlbGF5GAEgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uEhIKCnBlcmNlbnRhZ2UYAiABKAUaMAoFQWJvcnQS",
-            "EwoLaHR0cF9zdGF0dXMYASABKAUSEgoKcGVyY2VudGFnZRgCIAEoBRqaAgoO",
-            "SGVhZGVyTW9kaWZpZXISTwoDc2V0GAEgAygLMkIuZ29vZ2xlLmNsb3VkLm5l",
-            "dHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGUuSGVhZGVyTW9kaWZpZXIuU2V0",
-            "RW50cnkSTwoDYWRkGAIgAygLMkIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2",
-            "aWNlcy52MS5IdHRwUm91dGUuSGVhZGVyTW9kaWZpZXIuQWRkRW50cnkSDgoG",
-            "cmVtb3ZlGAMgAygJGioKCFNldEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEaKgoIQWRkRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ARo/CgpVUkxSZXdyaXRlEhsKE3BhdGhfcHJlZml4X3Jld3Jp",
-            "dGUYASABKAkSFAoMaG9zdF9yZXdyaXRlGAIgASgJGnAKC1JldHJ5UG9saWN5",
-            "EhgKEHJldHJ5X2NvbmRpdGlvbnMYASADKAkSEwoLbnVtX3JldHJpZXMYAiAB",
-            "KAUSMgoPcGVyX3RyeV90aW1lb3V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uGmIKE1JlcXVlc3RNaXJyb3JQb2xpY3kSSwoLZGVzdGluYXRp",
-            "b24YASABKAsyNi5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0",
-            "dHBSb3V0ZS5EZXN0aW5hdGlvbhrFAQoKQ29yc1BvbGljeRIVCg1hbGxvd19v",
-            "cmlnaW5zGAEgAygJEhwKFGFsbG93X29yaWdpbl9yZWdleGVzGAIgAygJEhUK",
-            "DWFsbG93X21ldGhvZHMYAyADKAkSFQoNYWxsb3dfaGVhZGVycxgEIAMoCRIW",
-            "Cg5leHBvc2VfaGVhZGVycxgFIAMoCRIPCgdtYXhfYWdlGAYgASgJEhkKEWFs",
-            "bG93X2NyZWRlbnRpYWxzGAcgASgIEhAKCGRpc2FibGVkGAggASgIGq0GCgtS",
-            "b3V0ZUFjdGlvbhJMCgxkZXN0aW5hdGlvbnMYASADKAsyNi5nb29nbGUuY2xv",
-            "dWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5EZXN0aW5hdGlvbhJF",
-            "CghyZWRpcmVjdBgCIAEoCzIzLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vydmlj",
-            "ZXMudjEuSHR0cFJvdXRlLlJlZGlyZWN0El8KFmZhdWx0X2luamVjdGlvbl9w",
-            "b2xpY3kYBCABKAsyPy5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYx",
-            "Lkh0dHBSb3V0ZS5GYXVsdEluamVjdGlvblBvbGljeRJaChdyZXF1ZXN0X2hl",
-            "YWRlcl9tb2RpZmllchgFIAEoCzI5Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vy",
-            "dmljZXMudjEuSHR0cFJvdXRlLkhlYWRlck1vZGlmaWVyElsKGHJlc3BvbnNl",
-            "X2hlYWRlcl9tb2RpZmllchgGIAEoCzI5Lmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "c2VydmljZXMudjEuSHR0cFJvdXRlLkhlYWRlck1vZGlmaWVyEkoKC3VybF9y",
-            "ZXdyaXRlGAcgASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52",
-            "MS5IdHRwUm91dGUuVVJMUmV3cml0ZRIqCgd0aW1lb3V0GAggASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEkwKDHJldHJ5X3BvbGljeRgJIAEoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLlJl",
-            "dHJ5UG9saWN5El0KFXJlcXVlc3RfbWlycm9yX3BvbGljeRgKIAEoCzI+Lmdv",
-            "b2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLlJlcXVl",
-            "c3RNaXJyb3JQb2xpY3kSSgoLY29yc19wb2xpY3kYCyABKAsyNS5nb29nbGUu",
-            "Y2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZS5Db3JzUG9saWN5",
-            "GpsBCglSb3V0ZVJ1bGUSRgoHbWF0Y2hlcxgBIAMoCzI1Lmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLlJvdXRlTWF0Y2gSRgoG",
-            "YWN0aW9uGAIgASgLMjYuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52",
-            "MS5IdHRwUm91dGUuUm91dGVBY3Rpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpu6kFrCihuZXR3b3Jrc2Vydmlj",
-            "ZXMuZ29vZ2xlYXBpcy5jb20vSHR0cFJvdXRlEj9wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaHR0cFJvdXRlcy97aHR0cF9yb3V0",
-            "ZX0igAEKFUxpc3RIdHRwUm91dGVzUmVxdWVzdBJACgZwYXJlbnQYASABKAlC",
-            "MOBBAvpBKhIobmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0h0dHBS",
-            "b3V0ZRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJy",
-            "ChZMaXN0SHR0cFJvdXRlc1Jlc3BvbnNlEj8KC2h0dHBfcm91dGVzGAEgAygL",
-            "MiouZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGUS",
-            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlUKE0dldEh0dHBSb3V0ZVJlcXVl",
+            "eRJaChdyZXF1ZXN0X2hlYWRlcl9tb2RpZmllchgFIAEoCzI5Lmdvb2dsZS5j",
+            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLkhlYWRlck1vZGlm",
+            "aWVyElsKGHJlc3BvbnNlX2hlYWRlcl9tb2RpZmllchgGIAEoCzI5Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLkhlYWRlck1v",
+            "ZGlmaWVyEkoKC3VybF9yZXdyaXRlGAcgASgLMjUuZ29vZ2xlLmNsb3VkLm5l",
+            "dHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGUuVVJMUmV3cml0ZRIqCgd0aW1l",
+            "b3V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkwKDHJldHJ5",
+            "X3BvbGljeRgJIAEoCzI2Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMu",
+            "djEuSHR0cFJvdXRlLlJldHJ5UG9saWN5El0KFXJlcXVlc3RfbWlycm9yX3Bv",
+            "bGljeRgKIAEoCzI+Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEu",
+            "SHR0cFJvdXRlLlJlcXVlc3RNaXJyb3JQb2xpY3kSSgoLY29yc19wb2xpY3kY",
+            "CyABKAsyNS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBS",
+            "b3V0ZS5Db3JzUG9saWN5EnAKGXN0YXRlZnVsX3Nlc3Npb25fYWZmaW5pdHkY",
+            "DCABKAsySC5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBS",
+            "b3V0ZS5TdGF0ZWZ1bFNlc3Npb25BZmZpbml0eVBvbGljeUID4EEBElsKD2Rp",
+            "cmVjdF9yZXNwb25zZRgNIAEoCzI9Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vy",
+            "dmljZXMudjEuSHR0cFJvdXRlLkh0dHBEaXJlY3RSZXNwb25zZUID4EEBEjQK",
+            "DGlkbGVfdGltZW91dBgOIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkID4EEBGpsBCglSb3V0ZVJ1bGUSRgoHbWF0Y2hlcxgBIAMoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuSHR0cFJvdXRlLlJvdXRlTWF0",
+            "Y2gSRgoGYWN0aW9uGAIgASgLMjYuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2",
+            "aWNlcy52MS5IdHRwUm91dGUuUm91dGVBY3Rpb24aLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpu6kFrCihuZXR3b3Jr",
+            "c2VydmljZXMuZ29vZ2xlYXBpcy5jb20vSHR0cFJvdXRlEj9wcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaHR0cFJvdXRlcy97aHR0",
+            "cF9yb3V0ZX0ipQEKFUxpc3RIdHRwUm91dGVzUmVxdWVzdBJACgZwYXJlbnQY",
+            "ASABKAlCMOBBAvpBKhIobmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29t",
+            "L0h0dHBSb3V0ZRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCRIjChZyZXR1cm5fcGFydGlhbF9zdWNjZXNzGAQgASgIQgPgQQEihwEK",
+            "Fkxpc3RIdHRwUm91dGVzUmVzcG9uc2USPwoLaHR0cF9yb3V0ZXMYASADKAsy",
+            "Ki5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0ZRIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAki",
+            "VQoTR2V0SHR0cFJvdXRlUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoK",
+            "KG5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9IdHRwUm91dGUiuwEK",
+            "FkNyZWF0ZUh0dHBSb3V0ZVJlcXVlc3QSQAoGcGFyZW50GAEgASgJQjDgQQL6",
+            "QSoSKG5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9IdHRwUm91dGUS",
+            "GgoNaHR0cF9yb3V0ZV9pZBgCIAEoCUID4EECEkMKCmh0dHBfcm91dGUYAyAB",
+            "KAsyKi5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkh0dHBSb3V0",
+            "ZUID4EECIpMBChZVcGRhdGVIdHRwUm91dGVSZXF1ZXN0EjQKC3VwZGF0ZV9t",
+            "YXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEkMK",
+            "Cmh0dHBfcm91dGUYAiABKAsyKi5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZp",
+            "Y2VzLnYxLkh0dHBSb3V0ZUID4EECIlgKFkRlbGV0ZUh0dHBSb3V0ZVJlcXVl",
             "c3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihuZXR3b3Jrc2VydmljZXMuZ29v",
-            "Z2xlYXBpcy5jb20vSHR0cFJvdXRlIrsBChZDcmVhdGVIdHRwUm91dGVSZXF1",
-            "ZXN0EkAKBnBhcmVudBgBIAEoCUIw4EEC+kEqEihuZXR3b3Jrc2VydmljZXMu",
-            "Z29vZ2xlYXBpcy5jb20vSHR0cFJvdXRlEhoKDWh0dHBfcm91dGVfaWQYAiAB",
-            "KAlCA+BBAhJDCgpodHRwX3JvdXRlGAMgASgLMiouZ29vZ2xlLmNsb3VkLm5l",
-            "dHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGVCA+BBAiKTAQoWVXBkYXRlSHR0",
-            "cFJvdXRlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBARJDCgpodHRwX3JvdXRlGAIgASgLMiou",
-            "Z29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5IdHRwUm91dGVCA+BB",
-            "AiJYChZEZWxldGVIdHRwUm91dGVSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBB",
-            "AvpBKgoobmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0h0dHBSb3V0",
-            "ZULvAQojY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjFCDkh0",
-            "dHBSb3V0ZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3Nl",
-            "cnZpY2VzL2FwaXYxL25ldHdvcmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNl",
-            "c3BiqgIfR29vZ2xlLkNsb3VkLk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2ds",
-            "ZVxDbG91ZFxOZXR3b3JrU2VydmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpO",
-            "ZXR3b3JrU2VydmljZXM6OlYxYgZwcm90bzM="));
+            "Z2xlYXBpcy5jb20vSHR0cFJvdXRlQu8BCiNjb20uZ29vZ2xlLmNsb3VkLm5l",
+            "dHdvcmtzZXJ2aWNlcy52MUIOSHR0cFJvdXRlUHJvdG9QAVpNY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9uZXR3b3Jrc2VydmljZXMvYXBpdjEvbmV0d29ya3NlcnZp",
+            "Y2VzcGI7bmV0d29ya3NlcnZpY2VzcGKqAh9Hb29nbGUuQ2xvdWQuTmV0d29y",
+            "a1NlcnZpY2VzLlYxygIfR29vZ2xlXENsb3VkXE5ldHdvcmtTZXJ2aWNlc1xW",
+            "MeoCIkdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtTZXJ2aWNlczo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute), global::Google.Cloud.NetworkServices.V1.HttpRoute.Parser, new[]{ "Name", "SelfLink", "Description", "CreateTime", "UpdateTime", "Hostnames", "Meshes", "Gateways", "Labels", "Rules" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderMatch), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderMatch.Parser, new[]{ "ExactMatch", "RegexMatch", "PrefixMatch", "PresentMatch", "SuffixMatch", "RangeMatch", "Header", "InvertMatch" }, new[]{ "MatchType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderMatch.Types.IntegerRange), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderMatch.Types.IntegerRange.Parser, new[]{ "Start", "End" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.QueryParameterMatch), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.QueryParameterMatch.Parser, new[]{ "ExactMatch", "RegexMatch", "PresentMatch", "QueryParameter" }, new[]{ "MatchType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteMatch), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteMatch.Parser, new[]{ "FullPathMatch", "PrefixMatch", "RegexMatch", "IgnoreCase", "Headers", "QueryParameters" }, new[]{ "PathMatch" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Destination), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Destination.Parser, new[]{ "ServiceName", "Weight" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Destination), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Destination.Parser, new[]{ "ServiceName", "Weight", "RequestHeaderModifier", "ResponseHeaderModifier" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Redirect), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Redirect.Parser, new[]{ "HostRedirect", "PathRedirect", "PrefixRewrite", "ResponseCode", "HttpsRedirect", "StripQuery", "PortRedirect" }, null, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Redirect.Types.ResponseCode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.FaultInjectionPolicy), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.FaultInjectionPolicy.Parser, new[]{ "Delay", "Abort" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.FaultInjectionPolicy.Types.Delay), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.FaultInjectionPolicy.Types.Delay.Parser, new[]{ "FixedDelay", "Percentage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.FaultInjectionPolicy.Types.Abort), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.FaultInjectionPolicy.Types.Abort.Parser, new[]{ "HttpStatus", "Percentage" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy.Parser, new[]{ "CookieTtl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier.Parser, new[]{ "Set", "Add", "Remove" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.URLRewrite), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.URLRewrite.Parser, new[]{ "PathPrefixRewrite", "HostRewrite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RetryPolicy), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RetryPolicy.Parser, new[]{ "RetryConditions", "NumRetries", "PerTryTimeout" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RequestMirrorPolicy), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RequestMirrorPolicy.Parser, new[]{ "Destination" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RequestMirrorPolicy), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RequestMirrorPolicy.Parser, new[]{ "Destination", "MirrorPercent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.CorsPolicy), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.CorsPolicy.Parser, new[]{ "AllowOrigins", "AllowOriginRegexes", "AllowMethods", "AllowHeaders", "ExposeHeaders", "MaxAge", "AllowCredentials", "Disabled" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteAction), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteAction.Parser, new[]{ "Destinations", "Redirect", "FaultInjectionPolicy", "RequestHeaderModifier", "ResponseHeaderModifier", "UrlRewrite", "Timeout", "RetryPolicy", "RequestMirrorPolicy", "CorsPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse.Parser, new[]{ "StringBody", "BytesBody", "Status" }, new[]{ "HttpBody" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteAction), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteAction.Parser, new[]{ "Destinations", "Redirect", "FaultInjectionPolicy", "RequestHeaderModifier", "ResponseHeaderModifier", "UrlRewrite", "Timeout", "RetryPolicy", "RequestMirrorPolicy", "CorsPolicy", "StatefulSessionAffinity", "DirectResponse", "IdleTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteRule), global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.RouteRule.Parser, new[]{ "Matches", "Action" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListHttpRoutesRequest), global::Google.Cloud.NetworkServices.V1.ListHttpRoutesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListHttpRoutesResponse), global::Google.Cloud.NetworkServices.V1.ListHttpRoutesResponse.Parser, new[]{ "HttpRoutes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListHttpRoutesRequest), global::Google.Cloud.NetworkServices.V1.ListHttpRoutesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListHttpRoutesResponse), global::Google.Cloud.NetworkServices.V1.ListHttpRoutesResponse.Parser, new[]{ "HttpRoutes", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.GetHttpRouteRequest), global::Google.Cloud.NetworkServices.V1.GetHttpRouteRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.CreateHttpRouteRequest), global::Google.Cloud.NetworkServices.V1.CreateHttpRouteRequest.Parser, new[]{ "Parent", "HttpRouteId", "HttpRoute" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.UpdateHttpRouteRequest), global::Google.Cloud.NetworkServices.V1.UpdateHttpRouteRequest.Parser, new[]{ "UpdateMask", "HttpRoute" }, null, null, null, null),
@@ -232,7 +251,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the HttpRoute resource. It matches pattern
+    /// Identifier. Name of the HttpRoute resource. It matches pattern
     /// `projects/*/locations/global/httpRoutes/http_route_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2500,6 +2519,8 @@ namespace Google.Cloud.NetworkServices.V1 {
         public Destination(Destination other) : this() {
           serviceName_ = other.serviceName_;
           weight_ = other.weight_;
+          requestHeaderModifier_ = other.requestHeaderModifier_ != null ? other.requestHeaderModifier_.Clone() : null;
+          responseHeaderModifier_ = other.responseHeaderModifier_ != null ? other.responseHeaderModifier_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2552,6 +2573,43 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
         }
 
+        /// <summary>Field number for the "request_header_modifier" field.</summary>
+        public const int RequestHeaderModifierFieldNumber = 3;
+        private global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier requestHeaderModifier_;
+        /// <summary>
+        /// Optional. The specification for modifying the headers of a matching
+        /// request prior to delivery of the request to the destination. If
+        /// HeaderModifiers are set on both the Destination and the RouteAction, they
+        /// will be merged. Conflicts between the two will not be resolved on the
+        /// configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier RequestHeaderModifier {
+          get { return requestHeaderModifier_; }
+          set {
+            requestHeaderModifier_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "response_header_modifier" field.</summary>
+        public const int ResponseHeaderModifierFieldNumber = 4;
+        private global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier responseHeaderModifier_;
+        /// <summary>
+        /// Optional. The specification for modifying the headers of a response prior
+        /// to sending the response back to the client. If HeaderModifiers are set on
+        /// both the Destination and the RouteAction, they will be merged. Conflicts
+        /// between the two will not be resolved on the configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier ResponseHeaderModifier {
+          get { return responseHeaderModifier_; }
+          set {
+            responseHeaderModifier_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2569,6 +2627,8 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           if (ServiceName != other.ServiceName) return false;
           if (Weight != other.Weight) return false;
+          if (!object.Equals(RequestHeaderModifier, other.RequestHeaderModifier)) return false;
+          if (!object.Equals(ResponseHeaderModifier, other.ResponseHeaderModifier)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2578,6 +2638,8 @@ namespace Google.Cloud.NetworkServices.V1 {
           int hash = 1;
           if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
           if (Weight != 0) hash ^= Weight.GetHashCode();
+          if (requestHeaderModifier_ != null) hash ^= RequestHeaderModifier.GetHashCode();
+          if (responseHeaderModifier_ != null) hash ^= ResponseHeaderModifier.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2604,6 +2666,14 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(16);
             output.WriteInt32(Weight);
           }
+          if (requestHeaderModifier_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RequestHeaderModifier);
+          }
+          if (responseHeaderModifier_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(ResponseHeaderModifier);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2622,6 +2692,14 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(16);
             output.WriteInt32(Weight);
           }
+          if (requestHeaderModifier_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RequestHeaderModifier);
+          }
+          if (responseHeaderModifier_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(ResponseHeaderModifier);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2637,6 +2715,12 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           if (Weight != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(Weight);
+          }
+          if (requestHeaderModifier_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestHeaderModifier);
+          }
+          if (responseHeaderModifier_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResponseHeaderModifier);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2655,6 +2739,18 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           if (other.Weight != 0) {
             Weight = other.Weight;
+          }
+          if (other.requestHeaderModifier_ != null) {
+            if (requestHeaderModifier_ == null) {
+              RequestHeaderModifier = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier();
+            }
+            RequestHeaderModifier.MergeFrom(other.RequestHeaderModifier);
+          }
+          if (other.responseHeaderModifier_ != null) {
+            if (responseHeaderModifier_ == null) {
+              ResponseHeaderModifier = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier();
+            }
+            ResponseHeaderModifier.MergeFrom(other.ResponseHeaderModifier);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2679,6 +2775,20 @@ namespace Google.Cloud.NetworkServices.V1 {
                 Weight = input.ReadInt32();
                 break;
               }
+              case 26: {
+                if (requestHeaderModifier_ == null) {
+                  RequestHeaderModifier = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier();
+                }
+                input.ReadMessage(RequestHeaderModifier);
+                break;
+              }
+              case 34: {
+                if (responseHeaderModifier_ == null) {
+                  ResponseHeaderModifier = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier();
+                }
+                input.ReadMessage(ResponseHeaderModifier);
+                break;
+              }
             }
           }
         #endif
@@ -2700,6 +2810,20 @@ namespace Google.Cloud.NetworkServices.V1 {
               }
               case 16: {
                 Weight = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                if (requestHeaderModifier_ == null) {
+                  RequestHeaderModifier = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier();
+                }
+                input.ReadMessage(RequestHeaderModifier);
+                break;
+              }
+              case 34: {
+                if (responseHeaderModifier_ == null) {
+                  ResponseHeaderModifier = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HeaderModifier();
+                }
+                input.ReadMessage(ResponseHeaderModifier);
                 break;
               }
             }
@@ -3956,6 +4080,223 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
 
       /// <summary>
+      /// The specification for cookie-based stateful session affinity where the
+      /// date plane supplies a “session cookie”  with the name "GSSA" which encodes
+      /// a specific destination host and each request containing that cookie will
+      /// be directed to that host as long as the destination host remains up and
+      /// healthy.
+      ///
+      /// The gRPC proxyless mesh library or sidecar proxy will manage the session
+      /// cookie but the client application code is responsible for copying the
+      /// cookie from each RPC in the session to the next.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StatefulSessionAffinityPolicy : pb::IMessage<StatefulSessionAffinityPolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StatefulSessionAffinityPolicy> _parser = new pb::MessageParser<StatefulSessionAffinityPolicy>(() => new StatefulSessionAffinityPolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StatefulSessionAffinityPolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatefulSessionAffinityPolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatefulSessionAffinityPolicy(StatefulSessionAffinityPolicy other) : this() {
+          cookieTtl_ = other.cookieTtl_ != null ? other.cookieTtl_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatefulSessionAffinityPolicy Clone() {
+          return new StatefulSessionAffinityPolicy(this);
+        }
+
+        /// <summary>Field number for the "cookie_ttl" field.</summary>
+        public const int CookieTtlFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Duration cookieTtl_;
+        /// <summary>
+        /// Required. The cookie TTL value for the Set-Cookie header generated by
+        /// the data plane. The lifetime of the cookie may be set to a value from 0
+        /// to 86400 seconds (24 hours) inclusive.
+        ///
+        /// Set this to 0s to use a session cookie and disable cookie expiration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration CookieTtl {
+          get { return cookieTtl_; }
+          set {
+            cookieTtl_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StatefulSessionAffinityPolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StatefulSessionAffinityPolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(CookieTtl, other.CookieTtl)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (cookieTtl_ != null) hash ^= CookieTtl.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (cookieTtl_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CookieTtl);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (cookieTtl_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CookieTtl);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (cookieTtl_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CookieTtl);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StatefulSessionAffinityPolicy other) {
+          if (other == null) {
+            return;
+          }
+          if (other.cookieTtl_ != null) {
+            if (cookieTtl_ == null) {
+              CookieTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            CookieTtl.MergeFrom(other.CookieTtl);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (cookieTtl_ == null) {
+                  CookieTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(CookieTtl);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (cookieTtl_ == null) {
+                  CookieTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(CookieTtl);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// The specification for modifying HTTP header in HTTP request and HTTP
       /// response.
       /// </summary>
@@ -3974,7 +4315,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[6]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4220,7 +4561,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[7]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[8]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4458,7 +4799,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[8]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4741,6 +5082,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       /// destination service. The proxy does not wait for responses from the
       /// shadow service. Prior to sending traffic to the shadow service, the
       /// host/authority header is suffixed with -shadow.
+      /// Mirroring is currently not supported for Cloud Run destinations.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RequestMirrorPolicy : pb::IMessage<RequestMirrorPolicy>
@@ -4757,7 +5099,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[9]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[10]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4778,6 +5120,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RequestMirrorPolicy(RequestMirrorPolicy other) : this() {
           destination_ = other.destination_ != null ? other.destination_.Clone() : null;
+          mirrorPercent_ = other.mirrorPercent_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4803,6 +5146,22 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
         }
 
+        /// <summary>Field number for the "mirror_percent" field.</summary>
+        public const int MirrorPercentFieldNumber = 2;
+        private float mirrorPercent_;
+        /// <summary>
+        /// Optional. The percentage of requests to get mirrored to the desired
+        /// destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float MirrorPercent {
+          get { return mirrorPercent_; }
+          set {
+            mirrorPercent_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4819,6 +5178,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             return true;
           }
           if (!object.Equals(Destination, other.Destination)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MirrorPercent, other.MirrorPercent)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4827,6 +5187,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (destination_ != null) hash ^= Destination.GetHashCode();
+          if (MirrorPercent != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MirrorPercent);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4849,6 +5210,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Destination);
           }
+          if (MirrorPercent != 0F) {
+            output.WriteRawTag(21);
+            output.WriteFloat(MirrorPercent);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4863,6 +5228,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Destination);
           }
+          if (MirrorPercent != 0F) {
+            output.WriteRawTag(21);
+            output.WriteFloat(MirrorPercent);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4875,6 +5244,9 @@ namespace Google.Cloud.NetworkServices.V1 {
           int size = 0;
           if (destination_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Destination);
+          }
+          if (MirrorPercent != 0F) {
+            size += 1 + 4;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4893,6 +5265,9 @@ namespace Google.Cloud.NetworkServices.V1 {
               Destination = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Destination();
             }
             Destination.MergeFrom(other.Destination);
+          }
+          if (other.MirrorPercent != 0F) {
+            MirrorPercent = other.MirrorPercent;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4916,6 +5291,10 @@ namespace Google.Cloud.NetworkServices.V1 {
                 input.ReadMessage(Destination);
                 break;
               }
+              case 21: {
+                MirrorPercent = input.ReadFloat();
+                break;
+              }
             }
           }
         #endif
@@ -4936,6 +5315,10 @@ namespace Google.Cloud.NetworkServices.V1 {
                   Destination = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.Destination();
                 }
                 input.ReadMessage(Destination);
+                break;
+              }
+              case 21: {
+                MirrorPercent = input.ReadFloat();
                 break;
               }
             }
@@ -4963,7 +5346,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[10]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5377,6 +5760,345 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
 
       /// <summary>
+      /// Static HTTP response object to be returned.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class HttpDirectResponse : pb::IMessage<HttpDirectResponse>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HttpDirectResponse> _parser = new pb::MessageParser<HttpDirectResponse>(() => new HttpDirectResponse());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<HttpDirectResponse> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[12]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HttpDirectResponse() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HttpDirectResponse(HttpDirectResponse other) : this() {
+          status_ = other.status_;
+          switch (other.HttpBodyCase) {
+            case HttpBodyOneofCase.StringBody:
+              StringBody = other.StringBody;
+              break;
+            case HttpBodyOneofCase.BytesBody:
+              BytesBody = other.BytesBody;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HttpDirectResponse Clone() {
+          return new HttpDirectResponse(this);
+        }
+
+        /// <summary>Field number for the "string_body" field.</summary>
+        public const int StringBodyFieldNumber = 2;
+        /// <summary>
+        /// Optional. Response body as a string. Maximum body length is 1024
+        /// characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string StringBody {
+          get { return HasStringBody ? (string) httpBody_ : ""; }
+          set {
+            httpBody_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            httpBodyCase_ = HttpBodyOneofCase.StringBody;
+          }
+        }
+        /// <summary>Gets whether the "string_body" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasStringBody {
+          get { return httpBodyCase_ == HttpBodyOneofCase.StringBody; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "string_body" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStringBody() {
+          if (HasStringBody) {
+            ClearHttpBody();
+          }
+        }
+
+        /// <summary>Field number for the "bytes_body" field.</summary>
+        public const int BytesBodyFieldNumber = 3;
+        /// <summary>
+        /// Optional. Response body as bytes. Maximum body size is 4096B.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString BytesBody {
+          get { return HasBytesBody ? (pb::ByteString) httpBody_ : pb::ByteString.Empty; }
+          set {
+            httpBody_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            httpBodyCase_ = HttpBodyOneofCase.BytesBody;
+          }
+        }
+        /// <summary>Gets whether the "bytes_body" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBytesBody {
+          get { return httpBodyCase_ == HttpBodyOneofCase.BytesBody; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "bytes_body" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBytesBody() {
+          if (HasBytesBody) {
+            ClearHttpBody();
+          }
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 1;
+        private int status_;
+        /// <summary>
+        /// Required. Status to return as part of HTTP Response. Must be a positive
+        /// integer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Status {
+          get { return status_; }
+          set {
+            status_ = value;
+          }
+        }
+
+        private object httpBody_;
+        /// <summary>Enum of possible cases for the "HttpBody" oneof.</summary>
+        public enum HttpBodyOneofCase {
+          None = 0,
+          StringBody = 2,
+          BytesBody = 3,
+        }
+        private HttpBodyOneofCase httpBodyCase_ = HttpBodyOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HttpBodyOneofCase HttpBodyCase {
+          get { return httpBodyCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearHttpBody() {
+          httpBodyCase_ = HttpBodyOneofCase.None;
+          httpBody_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as HttpDirectResponse);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(HttpDirectResponse other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (StringBody != other.StringBody) return false;
+          if (BytesBody != other.BytesBody) return false;
+          if (Status != other.Status) return false;
+          if (HttpBodyCase != other.HttpBodyCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasStringBody) hash ^= StringBody.GetHashCode();
+          if (HasBytesBody) hash ^= BytesBody.GetHashCode();
+          if (Status != 0) hash ^= Status.GetHashCode();
+          hash ^= (int) httpBodyCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Status != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(Status);
+          }
+          if (HasStringBody) {
+            output.WriteRawTag(18);
+            output.WriteString(StringBody);
+          }
+          if (HasBytesBody) {
+            output.WriteRawTag(26);
+            output.WriteBytes(BytesBody);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Status != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(Status);
+          }
+          if (HasStringBody) {
+            output.WriteRawTag(18);
+            output.WriteString(StringBody);
+          }
+          if (HasBytesBody) {
+            output.WriteRawTag(26);
+            output.WriteBytes(BytesBody);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasStringBody) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(StringBody);
+          }
+          if (HasBytesBody) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(BytesBody);
+          }
+          if (Status != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Status);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(HttpDirectResponse other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Status != 0) {
+            Status = other.Status;
+          }
+          switch (other.HttpBodyCase) {
+            case HttpBodyOneofCase.StringBody:
+              StringBody = other.StringBody;
+              break;
+            case HttpBodyOneofCase.BytesBody:
+              BytesBody = other.BytesBody;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Status = input.ReadInt32();
+                break;
+              }
+              case 18: {
+                StringBody = input.ReadString();
+                break;
+              }
+              case 26: {
+                BytesBody = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Status = input.ReadInt32();
+                break;
+              }
+              case 18: {
+                StringBody = input.ReadString();
+                break;
+              }
+              case 26: {
+                BytesBody = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// The specifications for routing traffic and applying associated policies.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5394,7 +6116,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[11]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[13]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5424,6 +6146,9 @@ namespace Google.Cloud.NetworkServices.V1 {
           retryPolicy_ = other.retryPolicy_ != null ? other.retryPolicy_.Clone() : null;
           requestMirrorPolicy_ = other.requestMirrorPolicy_ != null ? other.requestMirrorPolicy_.Clone() : null;
           corsPolicy_ = other.corsPolicy_ != null ? other.corsPolicy_.Clone() : null;
+          statefulSessionAffinity_ = other.statefulSessionAffinity_ != null ? other.statefulSessionAffinity_.Clone() : null;
+          directResponse_ = other.directResponse_ != null ? other.directResponse_.Clone() : null;
+          idleTimeout_ = other.idleTimeout_ != null ? other.idleTimeout_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5603,6 +6328,56 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
         }
 
+        /// <summary>Field number for the "stateful_session_affinity" field.</summary>
+        public const int StatefulSessionAffinityFieldNumber = 12;
+        private global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy statefulSessionAffinity_;
+        /// <summary>
+        /// Optional. Specifies cookie-based stateful session affinity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy StatefulSessionAffinity {
+          get { return statefulSessionAffinity_; }
+          set {
+            statefulSessionAffinity_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "direct_response" field.</summary>
+        public const int DirectResponseFieldNumber = 13;
+        private global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse directResponse_;
+        /// <summary>
+        /// Optional. Static HTTP Response object to be returned regardless of the
+        /// request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse DirectResponse {
+          get { return directResponse_; }
+          set {
+            directResponse_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "idle_timeout" field.</summary>
+        public const int IdleTimeoutFieldNumber = 14;
+        private global::Google.Protobuf.WellKnownTypes.Duration idleTimeout_;
+        /// <summary>
+        /// Optional. Specifies the idle timeout for the selected route. The idle
+        /// timeout is defined as the period in which there are no bytes sent or
+        /// received on either the upstream or downstream connection. If not set, the
+        /// default idle timeout is 1 hour. If set to 0s, the timeout will be
+        /// disabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration IdleTimeout {
+          get { return idleTimeout_; }
+          set {
+            idleTimeout_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5628,6 +6403,9 @@ namespace Google.Cloud.NetworkServices.V1 {
           if (!object.Equals(RetryPolicy, other.RetryPolicy)) return false;
           if (!object.Equals(RequestMirrorPolicy, other.RequestMirrorPolicy)) return false;
           if (!object.Equals(CorsPolicy, other.CorsPolicy)) return false;
+          if (!object.Equals(StatefulSessionAffinity, other.StatefulSessionAffinity)) return false;
+          if (!object.Equals(DirectResponse, other.DirectResponse)) return false;
+          if (!object.Equals(IdleTimeout, other.IdleTimeout)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5645,6 +6423,9 @@ namespace Google.Cloud.NetworkServices.V1 {
           if (retryPolicy_ != null) hash ^= RetryPolicy.GetHashCode();
           if (requestMirrorPolicy_ != null) hash ^= RequestMirrorPolicy.GetHashCode();
           if (corsPolicy_ != null) hash ^= CorsPolicy.GetHashCode();
+          if (statefulSessionAffinity_ != null) hash ^= StatefulSessionAffinity.GetHashCode();
+          if (directResponse_ != null) hash ^= DirectResponse.GetHashCode();
+          if (idleTimeout_ != null) hash ^= IdleTimeout.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5700,6 +6481,18 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(90);
             output.WriteMessage(CorsPolicy);
           }
+          if (statefulSessionAffinity_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(StatefulSessionAffinity);
+          }
+          if (directResponse_ != null) {
+            output.WriteRawTag(106);
+            output.WriteMessage(DirectResponse);
+          }
+          if (idleTimeout_ != null) {
+            output.WriteRawTag(114);
+            output.WriteMessage(IdleTimeout);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5747,6 +6540,18 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(90);
             output.WriteMessage(CorsPolicy);
           }
+          if (statefulSessionAffinity_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(StatefulSessionAffinity);
+          }
+          if (directResponse_ != null) {
+            output.WriteRawTag(106);
+            output.WriteMessage(DirectResponse);
+          }
+          if (idleTimeout_ != null) {
+            output.WriteRawTag(114);
+            output.WriteMessage(IdleTimeout);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5784,6 +6589,15 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           if (corsPolicy_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(CorsPolicy);
+          }
+          if (statefulSessionAffinity_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StatefulSessionAffinity);
+          }
+          if (directResponse_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DirectResponse);
+          }
+          if (idleTimeout_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdleTimeout);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5851,6 +6665,24 @@ namespace Google.Cloud.NetworkServices.V1 {
               CorsPolicy = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.CorsPolicy();
             }
             CorsPolicy.MergeFrom(other.CorsPolicy);
+          }
+          if (other.statefulSessionAffinity_ != null) {
+            if (statefulSessionAffinity_ == null) {
+              StatefulSessionAffinity = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy();
+            }
+            StatefulSessionAffinity.MergeFrom(other.StatefulSessionAffinity);
+          }
+          if (other.directResponse_ != null) {
+            if (directResponse_ == null) {
+              DirectResponse = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse();
+            }
+            DirectResponse.MergeFrom(other.DirectResponse);
+          }
+          if (other.idleTimeout_ != null) {
+            if (idleTimeout_ == null) {
+              IdleTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            IdleTimeout.MergeFrom(other.IdleTimeout);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5932,6 +6764,27 @@ namespace Google.Cloud.NetworkServices.V1 {
                   CorsPolicy = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.CorsPolicy();
                 }
                 input.ReadMessage(CorsPolicy);
+                break;
+              }
+              case 98: {
+                if (statefulSessionAffinity_ == null) {
+                  StatefulSessionAffinity = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy();
+                }
+                input.ReadMessage(StatefulSessionAffinity);
+                break;
+              }
+              case 106: {
+                if (directResponse_ == null) {
+                  DirectResponse = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse();
+                }
+                input.ReadMessage(DirectResponse);
+                break;
+              }
+              case 114: {
+                if (idleTimeout_ == null) {
+                  IdleTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(IdleTimeout);
                 break;
               }
             }
@@ -6016,6 +6869,27 @@ namespace Google.Cloud.NetworkServices.V1 {
                 input.ReadMessage(CorsPolicy);
                 break;
               }
+              case 98: {
+                if (statefulSessionAffinity_ == null) {
+                  StatefulSessionAffinity = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.StatefulSessionAffinityPolicy();
+                }
+                input.ReadMessage(StatefulSessionAffinity);
+                break;
+              }
+              case 106: {
+                if (directResponse_ == null) {
+                  DirectResponse = new global::Google.Cloud.NetworkServices.V1.HttpRoute.Types.HttpDirectResponse();
+                }
+                input.ReadMessage(DirectResponse);
+                break;
+              }
+              case 114: {
+                if (idleTimeout_ == null) {
+                  IdleTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(IdleTimeout);
+                break;
+              }
             }
           }
         }
@@ -6042,7 +6916,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[12]; }
+          get { return global::Google.Cloud.NetworkServices.V1.HttpRoute.Descriptor.NestedTypes[14]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6312,6 +7186,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6369,6 +7244,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 4;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// Optional. If true, allow partial responses for multi-regional Aggregated
+    /// List requests. Otherwise if one of the locations is down or unreachable,
+    /// the Aggregated List request will fail.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6387,6 +7279,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6397,6 +7290,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6427,6 +7321,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6449,6 +7347,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6467,6 +7369,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6488,6 +7393,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6516,6 +7424,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -6541,6 +7453,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -6590,6 +7506,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public ListHttpRoutesResponse(ListHttpRoutesResponse other) : this() {
       httpRoutes_ = other.httpRoutes_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6630,6 +7547,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable resources. Populated when the request opts into
+    /// [return_partial_success][google.cloud.networkservices.v1.ListHttpRoutesRequest.return_partial_success]
+    /// and reading across collections e.g. when attempting to list all resources
+    /// across all supported locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6647,6 +7581,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if(!httpRoutes_.Equals(other.httpRoutes_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6656,6 +7591,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       int hash = 1;
       hash ^= httpRoutes_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6679,6 +7615,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6694,6 +7631,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6708,6 +7646,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6724,6 +7663,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6747,6 +7687,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -6768,6 +7712,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

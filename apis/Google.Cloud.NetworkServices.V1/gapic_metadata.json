@@ -115,6 +115,12 @@
                 "CreateServiceBindingAsync"
               ]
             },
+            "CreateServiceLbPolicy": {
+              "methods": [
+                "CreateServiceLbPolicy",
+                "CreateServiceLbPolicyAsync"
+              ]
+            },
             "CreateTcpRoute": {
               "methods": [
                 "CreateTcpRoute",
@@ -163,6 +169,12 @@
                 "DeleteServiceBindingAsync"
               ]
             },
+            "DeleteServiceLbPolicy": {
+              "methods": [
+                "DeleteServiceLbPolicy",
+                "DeleteServiceLbPolicyAsync"
+              ]
+            },
             "DeleteTcpRoute": {
               "methods": [
                 "DeleteTcpRoute",
@@ -187,6 +199,12 @@
                 "GetGatewayAsync"
               ]
             },
+            "GetGatewayRouteView": {
+              "methods": [
+                "GetGatewayRouteView",
+                "GetGatewayRouteViewAsync"
+              ]
+            },
             "GetGrpcRoute": {
               "methods": [
                 "GetGrpcRoute",
@@ -205,10 +223,22 @@
                 "GetMeshAsync"
               ]
             },
+            "GetMeshRouteView": {
+              "methods": [
+                "GetMeshRouteView",
+                "GetMeshRouteViewAsync"
+              ]
+            },
             "GetServiceBinding": {
               "methods": [
                 "GetServiceBinding",
                 "GetServiceBindingAsync"
+              ]
+            },
+            "GetServiceLbPolicy": {
+              "methods": [
+                "GetServiceLbPolicy",
+                "GetServiceLbPolicyAsync"
               ]
             },
             "GetTcpRoute": {
@@ -229,6 +259,12 @@
                 "ListEndpointPoliciesAsync"
               ]
             },
+            "ListGatewayRouteViews": {
+              "methods": [
+                "ListGatewayRouteViews",
+                "ListGatewayRouteViewsAsync"
+              ]
+            },
             "ListGateways": {
               "methods": [
                 "ListGateways",
@@ -247,6 +283,12 @@
                 "ListHttpRoutesAsync"
               ]
             },
+            "ListMeshRouteViews": {
+              "methods": [
+                "ListMeshRouteViews",
+                "ListMeshRouteViewsAsync"
+              ]
+            },
             "ListMeshes": {
               "methods": [
                 "ListMeshes",
@@ -257,6 +299,12 @@
               "methods": [
                 "ListServiceBindings",
                 "ListServiceBindingsAsync"
+              ]
+            },
+            "ListServiceLbPolicies": {
+              "methods": [
+                "ListServiceLbPolicies",
+                "ListServiceLbPoliciesAsync"
               ]
             },
             "ListTcpRoutes": {
@@ -299,6 +347,18 @@
               "methods": [
                 "UpdateMesh",
                 "UpdateMeshAsync"
+              ]
+            },
+            "UpdateServiceBinding": {
+              "methods": [
+                "UpdateServiceBinding",
+                "UpdateServiceBindingAsync"
+              ]
+            },
+            "UpdateServiceLbPolicy": {
+              "methods": [
+                "UpdateServiceLbPolicy",
+                "UpdateServiceLbPolicyAsync"
               ]
             },
             "UpdateTcpRoute": {

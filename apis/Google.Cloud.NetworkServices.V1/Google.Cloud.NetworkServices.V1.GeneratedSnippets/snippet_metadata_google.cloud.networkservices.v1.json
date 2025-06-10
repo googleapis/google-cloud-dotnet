@@ -2872,12 +2872,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -2921,12 +2921,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -5696,12 +5696,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -5745,12 +5745,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -7108,12 +7108,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -7157,12 +7157,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -8520,12 +8520,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -8569,12 +8569,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -9932,12 +9932,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -9981,12 +9981,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -12232,6 +12232,206 @@
       ]
     },
     {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceBinding_sync",
+      "title": "UpdateServiceBindingRequestObject",
+      "description": "Snippet for UpdateServiceBinding",
+      "file": "NetworkServicesClient.UpdateServiceBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceBinding",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceBinding, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceBinding",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceBinding",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceBinding_async",
+      "title": "UpdateServiceBindingRequestObjectAsync",
+      "description": "Snippet for UpdateServiceBindingAsync",
+      "file": "NetworkServicesClient.UpdateServiceBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceBindingAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceBinding, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceBinding",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceBinding",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceBinding_sync_flattened",
+      "title": "UpdateServiceBinding",
+      "description": "Snippet for UpdateServiceBinding",
+      "file": "NetworkServicesClient.UpdateServiceBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceBinding",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceBinding",
+            "name": "serviceBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceBinding, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceBinding",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceBinding",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceBinding_async_flattened",
+      "title": "UpdateServiceBindingAsync",
+      "description": "Snippet for UpdateServiceBindingAsync",
+      "file": "NetworkServicesClient.UpdateServiceBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceBindingAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceBinding",
+            "name": "serviceBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceBinding, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceBinding",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceBinding",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceBinding_sync",
       "title": "DeleteServiceBindingRequestObject",
       "description": "Snippet for DeleteServiceBinding",
@@ -12556,12 +12756,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -12605,12 +12805,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -13926,6 +14126,2630 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListServiceLbPolicies_sync",
+      "title": "ListServiceLbPoliciesRequestObject",
+      "description": "Snippet for ListServiceLbPolicies",
+      "file": "NetworkServicesClient.ListServiceLbPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServiceLbPolicies",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListServiceLbPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse, Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListServiceLbPolicies",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListServiceLbPolicies",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListServiceLbPolicies_async",
+      "title": "ListServiceLbPoliciesRequestObjectAsync",
+      "description": "Snippet for ListServiceLbPoliciesAsync",
+      "file": "NetworkServicesClient.ListServiceLbPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServiceLbPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListServiceLbPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse, Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListServiceLbPolicies",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListServiceLbPolicies",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListServiceLbPolicies_sync_flattened",
+      "title": "ListServiceLbPolicies",
+      "description": "Snippet for ListServiceLbPolicies",
+      "file": "NetworkServicesClient.ListServiceLbPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServiceLbPolicies",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListServiceLbPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse, Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListServiceLbPolicies",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListServiceLbPolicies",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListServiceLbPolicies_async_flattened",
+      "title": "ListServiceLbPoliciesAsync",
+      "description": "Snippet for ListServiceLbPoliciesAsync",
+      "file": "NetworkServicesClient.ListServiceLbPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServiceLbPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListServiceLbPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse, Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListServiceLbPolicies",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListServiceLbPolicies",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListServiceLbPolicies_sync_flattened_resourceNames",
+      "title": "ListServiceLbPoliciesResourceNames",
+      "description": "Snippet for ListServiceLbPolicies",
+      "file": "NetworkServicesClient.ListServiceLbPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServiceLbPolicies",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListServiceLbPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse, Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListServiceLbPolicies",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListServiceLbPolicies",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListServiceLbPolicies_async_flattened_resourceNames",
+      "title": "ListServiceLbPoliciesResourceNamesAsync",
+      "description": "Snippet for ListServiceLbPoliciesAsync",
+      "file": "NetworkServicesClient.ListServiceLbPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServiceLbPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListServiceLbPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse, Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListServiceLbPolicies",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListServiceLbPolicies",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetServiceLbPolicy_sync",
+      "title": "GetServiceLbPolicyRequestObject",
+      "description": "Snippet for GetServiceLbPolicy",
+      "file": "NetworkServicesClient.GetServiceLbPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetServiceLbPolicy_async",
+      "title": "GetServiceLbPolicyRequestObjectAsync",
+      "description": "Snippet for GetServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.GetServiceLbPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetServiceLbPolicy_sync_flattened",
+      "title": "GetServiceLbPolicy",
+      "description": "Snippet for GetServiceLbPolicy",
+      "file": "NetworkServicesClient.GetServiceLbPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetServiceLbPolicy_async_flattened",
+      "title": "GetServiceLbPolicyAsync",
+      "description": "Snippet for GetServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.GetServiceLbPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetServiceLbPolicy_sync_flattened_resourceNames",
+      "title": "GetServiceLbPolicyResourceNames",
+      "description": "Snippet for GetServiceLbPolicy",
+      "file": "NetworkServicesClient.GetServiceLbPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetServiceLbPolicy_async_flattened_resourceNames",
+      "title": "GetServiceLbPolicyResourceNamesAsync",
+      "description": "Snippet for GetServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.GetServiceLbPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.ServiceLbPolicy>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateServiceLbPolicy_sync",
+      "title": "CreateServiceLbPolicyRequestObject",
+      "description": "Snippet for CreateServiceLbPolicy",
+      "file": "NetworkServicesClient.CreateServiceLbPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateServiceLbPolicy_async",
+      "title": "CreateServiceLbPolicyRequestObjectAsync",
+      "description": "Snippet for CreateServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.CreateServiceLbPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateServiceLbPolicy_sync_flattened",
+      "title": "CreateServiceLbPolicy",
+      "description": "Snippet for CreateServiceLbPolicy",
+      "file": "NetworkServicesClient.CreateServiceLbPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+            "name": "serviceLbPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceLbPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateServiceLbPolicy_async_flattened",
+      "title": "CreateServiceLbPolicyAsync",
+      "description": "Snippet for CreateServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.CreateServiceLbPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+            "name": "serviceLbPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceLbPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateServiceLbPolicy_sync_flattened_resourceNames",
+      "title": "CreateServiceLbPolicyResourceNames",
+      "description": "Snippet for CreateServiceLbPolicy",
+      "file": "NetworkServicesClient.CreateServiceLbPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+            "name": "serviceLbPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceLbPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateServiceLbPolicy_async_flattened_resourceNames",
+      "title": "CreateServiceLbPolicyResourceNamesAsync",
+      "description": "Snippet for CreateServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.CreateServiceLbPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+            "name": "serviceLbPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceLbPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceLbPolicy_sync",
+      "title": "UpdateServiceLbPolicyRequestObject",
+      "description": "Snippet for UpdateServiceLbPolicy",
+      "file": "NetworkServicesClient.UpdateServiceLbPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceLbPolicy_async",
+      "title": "UpdateServiceLbPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.UpdateServiceLbPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceLbPolicy_sync_flattened",
+      "title": "UpdateServiceLbPolicy",
+      "description": "Snippet for UpdateServiceLbPolicy",
+      "file": "NetworkServicesClient.UpdateServiceLbPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+            "name": "serviceLbPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateServiceLbPolicy_async_flattened",
+      "title": "UpdateServiceLbPolicyAsync",
+      "description": "Snippet for UpdateServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.UpdateServiceLbPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicy",
+            "name": "serviceLbPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.ServiceLbPolicy, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceLbPolicy_sync",
+      "title": "DeleteServiceLbPolicyRequestObject",
+      "description": "Snippet for DeleteServiceLbPolicy",
+      "file": "NetworkServicesClient.DeleteServiceLbPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceLbPolicy_async",
+      "title": "DeleteServiceLbPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.DeleteServiceLbPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceLbPolicy_sync_flattened",
+      "title": "DeleteServiceLbPolicy",
+      "description": "Snippet for DeleteServiceLbPolicy",
+      "file": "NetworkServicesClient.DeleteServiceLbPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceLbPolicy_async_flattened",
+      "title": "DeleteServiceLbPolicyAsync",
+      "description": "Snippet for DeleteServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.DeleteServiceLbPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceLbPolicy_sync_flattened_resourceNames",
+      "title": "DeleteServiceLbPolicyResourceNames",
+      "description": "Snippet for DeleteServiceLbPolicy",
+      "file": "NetworkServicesClient.DeleteServiceLbPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceLbPolicy",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteServiceLbPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteServiceLbPolicy_async_flattened_resourceNames",
+      "title": "DeleteServiceLbPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteServiceLbPolicyAsync",
+      "file": "NetworkServicesClient.DeleteServiceLbPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceLbPolicyAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteServiceLbPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ServiceLbPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteServiceLbPolicy",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteServiceLbPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetGatewayRouteView_sync",
+      "title": "GetGatewayRouteViewRequestObject",
+      "description": "Snippet for GetGatewayRouteView",
+      "file": "NetworkServicesClient.GetGatewayRouteViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayRouteView",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetGatewayRouteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.GatewayRouteView",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetGatewayRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetGatewayRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetGatewayRouteView_async",
+      "title": "GetGatewayRouteViewRequestObjectAsync",
+      "description": "Snippet for GetGatewayRouteViewAsync",
+      "file": "NetworkServicesClient.GetGatewayRouteViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayRouteViewAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetGatewayRouteViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetGatewayRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetGatewayRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetGatewayRouteView_sync_flattened",
+      "title": "GetGatewayRouteView",
+      "description": "Snippet for GetGatewayRouteView",
+      "file": "NetworkServicesClient.GetGatewayRouteViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayRouteView",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetGatewayRouteView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.GatewayRouteView",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetGatewayRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetGatewayRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetGatewayRouteView_async_flattened",
+      "title": "GetGatewayRouteViewAsync",
+      "description": "Snippet for GetGatewayRouteViewAsync",
+      "file": "NetworkServicesClient.GetGatewayRouteViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayRouteViewAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetGatewayRouteViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetGatewayRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetGatewayRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetGatewayRouteView_sync_flattened_resourceNames",
+      "title": "GetGatewayRouteViewResourceNames",
+      "description": "Snippet for GetGatewayRouteView",
+      "file": "NetworkServicesClient.GetGatewayRouteViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayRouteView",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetGatewayRouteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GatewayRouteViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.GatewayRouteView",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetGatewayRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetGatewayRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetGatewayRouteView_async_flattened_resourceNames",
+      "title": "GetGatewayRouteViewResourceNamesAsync",
+      "description": "Snippet for GetGatewayRouteViewAsync",
+      "file": "NetworkServicesClient.GetGatewayRouteViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayRouteViewAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetGatewayRouteViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GatewayRouteViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetGatewayRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetGatewayRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetMeshRouteView_sync",
+      "title": "GetMeshRouteViewRequestObject",
+      "description": "Snippet for GetMeshRouteView",
+      "file": "NetworkServicesClient.GetMeshRouteViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMeshRouteView",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetMeshRouteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.MeshRouteView",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetMeshRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetMeshRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetMeshRouteView_async",
+      "title": "GetMeshRouteViewRequestObjectAsync",
+      "description": "Snippet for GetMeshRouteViewAsync",
+      "file": "NetworkServicesClient.GetMeshRouteViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMeshRouteViewAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetMeshRouteViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetMeshRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetMeshRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetMeshRouteView_sync_flattened",
+      "title": "GetMeshRouteView",
+      "description": "Snippet for GetMeshRouteView",
+      "file": "NetworkServicesClient.GetMeshRouteViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMeshRouteView",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetMeshRouteView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.MeshRouteView",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetMeshRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetMeshRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetMeshRouteView_async_flattened",
+      "title": "GetMeshRouteViewAsync",
+      "description": "Snippet for GetMeshRouteViewAsync",
+      "file": "NetworkServicesClient.GetMeshRouteViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMeshRouteViewAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetMeshRouteViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetMeshRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetMeshRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetMeshRouteView_sync_flattened_resourceNames",
+      "title": "GetMeshRouteViewResourceNames",
+      "description": "Snippet for GetMeshRouteView",
+      "file": "NetworkServicesClient.GetMeshRouteViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMeshRouteView",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetMeshRouteView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.MeshRouteViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.MeshRouteView",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetMeshRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetMeshRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetMeshRouteView_async_flattened_resourceNames",
+      "title": "GetMeshRouteViewResourceNamesAsync",
+      "description": "Snippet for GetMeshRouteViewAsync",
+      "file": "NetworkServicesClient.GetMeshRouteViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMeshRouteViewAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetMeshRouteViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.MeshRouteViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetMeshRouteView",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetMeshRouteView",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListGatewayRouteViews_sync",
+      "title": "ListGatewayRouteViewsRequestObject",
+      "description": "Snippet for ListGatewayRouteViews",
+      "file": "NetworkServicesClient.ListGatewayRouteViewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayRouteViews",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListGatewayRouteViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse, Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListGatewayRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListGatewayRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListGatewayRouteViews_async",
+      "title": "ListGatewayRouteViewsRequestObjectAsync",
+      "description": "Snippet for ListGatewayRouteViewsAsync",
+      "file": "NetworkServicesClient.ListGatewayRouteViewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayRouteViewsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListGatewayRouteViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse, Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListGatewayRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListGatewayRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListGatewayRouteViews_sync_flattened",
+      "title": "ListGatewayRouteViews",
+      "description": "Snippet for ListGatewayRouteViews",
+      "file": "NetworkServicesClient.ListGatewayRouteViewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayRouteViews",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListGatewayRouteViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse, Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListGatewayRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListGatewayRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListGatewayRouteViews_async_flattened",
+      "title": "ListGatewayRouteViewsAsync",
+      "description": "Snippet for ListGatewayRouteViewsAsync",
+      "file": "NetworkServicesClient.ListGatewayRouteViewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayRouteViewsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListGatewayRouteViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse, Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListGatewayRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListGatewayRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListGatewayRouteViews_sync_flattened_resourceNames",
+      "title": "ListGatewayRouteViewsResourceNames",
+      "description": "Snippet for ListGatewayRouteViews",
+      "file": "NetworkServicesClient.ListGatewayRouteViewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayRouteViews",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListGatewayRouteViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GatewayName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse, Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListGatewayRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListGatewayRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListGatewayRouteViews_async_flattened_resourceNames",
+      "title": "ListGatewayRouteViewsResourceNamesAsync",
+      "description": "Snippet for ListGatewayRouteViewsAsync",
+      "file": "NetworkServicesClient.ListGatewayRouteViewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayRouteViewsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListGatewayRouteViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GatewayName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse, Google.Cloud.NetworkServices.V1.GatewayRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListGatewayRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListGatewayRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListMeshRouteViews_sync",
+      "title": "ListMeshRouteViewsRequestObject",
+      "description": "Snippet for ListMeshRouteViews",
+      "file": "NetworkServicesClient.ListMeshRouteViewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMeshRouteViews",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListMeshRouteViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse, Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListMeshRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListMeshRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListMeshRouteViews_async",
+      "title": "ListMeshRouteViewsRequestObjectAsync",
+      "description": "Snippet for ListMeshRouteViewsAsync",
+      "file": "NetworkServicesClient.ListMeshRouteViewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMeshRouteViewsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListMeshRouteViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse, Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListMeshRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListMeshRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListMeshRouteViews_sync_flattened",
+      "title": "ListMeshRouteViews",
+      "description": "Snippet for ListMeshRouteViews",
+      "file": "NetworkServicesClient.ListMeshRouteViewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMeshRouteViews",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListMeshRouteViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse, Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListMeshRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListMeshRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListMeshRouteViews_async_flattened",
+      "title": "ListMeshRouteViewsAsync",
+      "description": "Snippet for ListMeshRouteViewsAsync",
+      "file": "NetworkServicesClient.ListMeshRouteViewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMeshRouteViewsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListMeshRouteViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse, Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListMeshRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListMeshRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListMeshRouteViews_sync_flattened_resourceNames",
+      "title": "ListMeshRouteViewsResourceNames",
+      "description": "Snippet for ListMeshRouteViews",
+      "file": "NetworkServicesClient.ListMeshRouteViewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMeshRouteViews",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListMeshRouteViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.MeshName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse, Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListMeshRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListMeshRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListMeshRouteViews_async_flattened_resourceNames",
+      "title": "ListMeshRouteViewsResourceNamesAsync",
+      "description": "Snippet for ListMeshRouteViewsAsync",
+      "file": "NetworkServicesClient.ListMeshRouteViewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMeshRouteViewsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListMeshRouteViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.MeshName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse, Google.Cloud.NetworkServices.V1.MeshRouteView>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListMeshRouteViews",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListMeshRouteViews",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]

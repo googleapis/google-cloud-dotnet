@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListEndpointPoliciesRequest request = new ListEndpointPoliciesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListEndpointPoliciesResponse, EndpointPolicy> response = networkServicesClient.ListEndpointPolicies(request);
