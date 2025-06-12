@@ -3937,7 +3937,7 @@
             "id": "Google.Cloud.Iam.V3",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "8fe4ca0046ec135a6d5423965e170e149b14ef95",
             "apiPaths": [
                 "google/iam/v3"
@@ -3950,7 +3950,7 @@
             "id": "Google.Cloud.Iam.V3Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "8fe4ca0046ec135a6d5423965e170e149b14ef95",
             "apiPaths": [
                 "google/iam/v3beta"
