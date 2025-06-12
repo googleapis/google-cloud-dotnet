@@ -117,7 +117,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUmFnQ29ycHVzEj9wcm9qZWN0cy97",
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmFnQ29ycG9yYS97cmFn",
             "X2NvcnB1c30qCnJhZ0NvcnBvcmEyCXJhZ0NvcnB1c0IQCg5iYWNrZW5kX2Nv",
-            "bmZpZyLGCAoHUmFnRmlsZRJFCgpnY3Nfc291cmNlGAggASgLMiouZ29vZ2xl",
+            "bmZpZyLiCAoHUmFnRmlsZRJFCgpnY3Nfc291cmNlGAggASgLMiouZ29vZ2xl",
             "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HY3NTb3VyY2VCA+BBA0gAElYK",
             "E2dvb2dsZV9kcml2ZV9zb3VyY2UYCSABKAsyMi5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MWJldGExLkdvb2dsZURyaXZlU291cmNlQgPgQQNIABJYChRk",
@@ -135,89 +135,106 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
             "NAoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
             "YW1wQgPgQQMSRQoLZmlsZV9zdGF0dXMYDSABKAsyKy5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLkZpbGVTdGF0dXNCA+BBAyJaCgtSYWdGaWxl",
-            "VHlwZRIdChlSQUdfRklMRV9UWVBFX1VOU1BFQ0lGSUVEEAASFQoRUkFHX0ZJ",
-            "TEVfVFlQRV9UWFQQARIVChFSQUdfRklMRV9UWVBFX1BERhACOo8B6kGLAQoh",
-            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SYWdGaWxlElNwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmFnQ29ycG9yYS97cmFn",
-            "X2NvcnB1c30vcmFnRmlsZXMve3JhZ19maWxlfSoIcmFnRmlsZXMyB3JhZ0Zp",
-            "bGVCEQoPcmFnX2ZpbGVfc291cmNlIqUBCghSYWdDaHVuaxIMCgR0ZXh0GAEg",
-            "ASgJEkoKCXBhZ2Vfc3BhbhgCIAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxYmV0YTEuUmFnQ2h1bmsuUGFnZVNwYW5IAIgBARoxCghQYWdlU3Bh",
-            "bhISCgpmaXJzdF9wYWdlGAEgASgFEhEKCWxhc3RfcGFnZRgCIAEoBUIMCgpf",
-            "cGFnZV9zcGFuIowCChVSYWdGaWxlQ2h1bmtpbmdDb25maWcSawoVZml4ZWRf",
-            "bGVuZ3RoX2NodW5raW5nGAMgASgLMkouZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5SYWdGaWxlQ2h1bmtpbmdDb25maWcuRml4ZWRMZW5ndGhD",
-            "aHVua2luZ0gAEhYKCmNodW5rX3NpemUYASABKAVCAhgBEhkKDWNodW5rX292",
-            "ZXJsYXAYAiABKAVCAhgBGkAKE0ZpeGVkTGVuZ3RoQ2h1bmtpbmcSEgoKY2h1",
-            "bmtfc2l6ZRgBIAEoBRIVCg1jaHVua19vdmVybGFwGAIgASgFQhEKD2NodW5r",
-            "aW5nX2NvbmZpZyJ3ChtSYWdGaWxlVHJhbnNmb3JtYXRpb25Db25maWcSWAoY",
-            "cmFnX2ZpbGVfY2h1bmtpbmdfY29uZmlnGAEgASgLMjYuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlQ2h1bmtpbmdDb25maWcingUK",
-            "FFJhZ0ZpbGVQYXJzaW5nQ29uZmlnEl8KD2FkdmFuY2VkX3BhcnNlchgDIAEo",
-            "CzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZVBh",
-            "cnNpbmdDb25maWcuQWR2YW5jZWRQYXJzZXJIABJbCg1sYXlvdXRfcGFyc2Vy",
-            "GAQgASgLMkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdG",
-            "aWxlUGFyc2luZ0NvbmZpZy5MYXlvdXRQYXJzZXJIABJVCgpsbG1fcGFyc2Vy",
-            "GAUgASgLMj8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdG",
-            "aWxlUGFyc2luZ0NvbmZpZy5MbG1QYXJzZXJIABIkChh1c2VfYWR2YW5jZWRf",
-            "cGRmX3BhcnNpbmcYAiABKAhCAhgBGjIKDkFkdmFuY2VkUGFyc2VyEiAKGHVz",
-            "ZV9hZHZhbmNlZF9wZGZfcGFyc2luZxgBIAEoCBp5CgxMYXlvdXRQYXJzZXIS",
-            "FgoOcHJvY2Vzc29yX25hbWUYASABKAkSJAocbWF4X3BhcnNpbmdfcmVxdWVz",
-            "dHNfcGVyX21pbhgCIAEoBRIrCiNnbG9iYWxfbWF4X3BhcnNpbmdfcmVxdWVz",
-            "dHNfcGVyX21pbhgDIAEoBRqRAQoJTGxtUGFyc2VyEhIKCm1vZGVsX25hbWUY",
-            "ASABKAkSJAocbWF4X3BhcnNpbmdfcmVxdWVzdHNfcGVyX21pbhgCIAEoBRIr",
-            "CiNnbG9iYWxfbWF4X3BhcnNpbmdfcmVxdWVzdHNfcGVyX21pbhgEIAEoBRId",
-            "ChVjdXN0b21fcGFyc2luZ19wcm9tcHQYAyABKAlCCAoGcGFyc2VyItkBChNV",
-            "cGxvYWRSYWdGaWxlQ29uZmlnElwKGHJhZ19maWxlX2NodW5raW5nX2NvbmZp",
-            "ZxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFn",
-            "RmlsZUNodW5raW5nQ29uZmlnQgIYARJkCh5yYWdfZmlsZV90cmFuc2Zvcm1h",
-            "dGlvbl9jb25maWcYAyABKAsyPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLlJhZ0ZpbGVUcmFuc2Zvcm1hdGlvbkNvbmZpZyLQCQoUSW1wb3J0",
-            "UmFnRmlsZXNDb25maWcSQAoKZ2NzX3NvdXJjZRgCIAEoCzIqLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2NzU291cmNlSAASUQoTZ29vZ2xl",
-            "X2RyaXZlX3NvdXJjZRgDIAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuR29vZ2xlRHJpdmVTb3VyY2VIABJECgxzbGFja19zb3VyY2UY",
-            "BiABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNsYWNr",
-            "U291cmNlSAASQgoLamlyYV9zb3VyY2UYByABKAsyKy5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLkppcmFTb3VyY2VIABJRChNzaGFyZV9wb2lu",
-            "dF9zb3VyY2VzGA0gASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5TaGFyZVBvaW50U291cmNlc0gAElcKGHBhcnRpYWxfZmFpbHVyZV9n",
-            "Y3Nfc2luaxgLIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuR2NzRGVzdGluYXRpb25CAhgBSAESYQodcGFydGlhbF9mYWlsdXJlX2Jp",
-            "Z3F1ZXJ5X3NpbmsYDCABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkJpZ1F1ZXJ5RGVzdGluYXRpb25CAhgBSAESUQoWaW1wb3J0X3Jl",
-            "c3VsdF9nY3Nfc2luaxgOIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuR2NzRGVzdGluYXRpb25IAhJbChtpbXBvcnRfcmVzdWx0X2Jp",
-            "Z3F1ZXJ5X3NpbmsYDyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkJpZ1F1ZXJ5RGVzdGluYXRpb25IAhJcChhyYWdfZmlsZV9jaHVu",
-            "a2luZ19jb25maWcYBCABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLlJhZ0ZpbGVDaHVua2luZ0NvbmZpZ0ICGAESZAoecmFnX2ZpbGVf",
-            "dHJhbnNmb3JtYXRpb25fY29uZmlnGBAgASgLMjwuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlVHJhbnNmb3JtYXRpb25Db25maWcS",
-            "WwoXcmFnX2ZpbGVfcGFyc2luZ19jb25maWcYCCABKAsyNS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29uZmlnQgPg",
-            "QQESKwoebWF4X2VtYmVkZGluZ19yZXF1ZXN0c19wZXJfbWluGAUgASgFQgPg",
-            "QQESMgolZ2xvYmFsX21heF9lbWJlZGRpbmdfcmVxdWVzdHNfcGVyX21pbhgS",
-            "IAEoBUID4EEBEhkKEXJlYnVpbGRfYW5uX2luZGV4GBMgASgIQg8KDWltcG9y",
-            "dF9zb3VyY2VCFgoUcGFydGlhbF9mYWlsdXJlX3NpbmtCFAoSaW1wb3J0X3Jl",
-            "c3VsdF9zaW5rItUBChJSYWdNYW5hZ2VkRGJDb25maWcSVAoKZW50ZXJwcmlz",
-            "ZRgBIAEoCzI+Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFn",
-            "TWFuYWdlZERiQ29uZmlnLkVudGVycHJpc2VIABJKCgViYXNpYxgCIAEoCzI5",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnTWFuYWdlZERi",
-            "Q29uZmlnLkJhc2ljSAAaDAoKRW50ZXJwcmlzZRoHCgVCYXNpY0IGCgR0aWVy",
-            "IoYCCg9SYWdFbmdpbmVDb25maWcSEQoEbmFtZRgBIAEoCUID4EEIElIKFXJh",
-            "Z19tYW5hZ2VkX2RiX2NvbmZpZxgCIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuUmFnTWFuYWdlZERiQ29uZmlnOosB6kGHAQopYWlw",
-            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SYWdFbmdpbmVDb25maWcSN3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yYWdFbmdpbmVD",
-            "b25maWcqEHJhZ0VuZ2luZUNvbmZpZ3MyD3JhZ0VuZ2luZUNvbmZpZ0LpAQoj",
-            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCElZlcnRleFJh",
-            "Z0RhdGFQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWJldGExYgZwcm90bzM="));
+            "YWlwbGF0Zm9ybS52MWJldGExLkZpbGVTdGF0dXNCA+BBAxIaCg11c2VyX21l",
+            "dGFkYXRhGA8gASgJQgPgQQMiWgoLUmFnRmlsZVR5cGUSHQoZUkFHX0ZJTEVf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEhUKEVJBR19GSUxFX1RZUEVfVFhUEAESFQoR",
+            "UkFHX0ZJTEVfVFlQRV9QREYQAjqPAepBiwEKIWFpcGxhdGZvcm0uZ29vZ2xl",
+            "YXBpcy5jb20vUmFnRmlsZRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3JhZ0NvcnBvcmEve3JhZ19jb3JwdXN9L3JhZ0ZpbGVz",
+            "L3tyYWdfZmlsZX0qCHJhZ0ZpbGVzMgdyYWdGaWxlQhEKD3JhZ19maWxlX3Nv",
+            "dXJjZSKlAQoIUmFnQ2h1bmsSDAoEdGV4dBgBIAEoCRJKCglwYWdlX3NwYW4Y",
+            "AiABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0No",
+            "dW5rLlBhZ2VTcGFuSACIAQEaMQoIUGFnZVNwYW4SEgoKZmlyc3RfcGFnZRgB",
+            "IAEoBRIRCglsYXN0X3BhZ2UYAiABKAVCDAoKX3BhZ2Vfc3BhbiKMAgoVUmFn",
+            "RmlsZUNodW5raW5nQ29uZmlnEmsKFWZpeGVkX2xlbmd0aF9jaHVua2luZxgD",
+            "IAEoCzJKLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmls",
+            "ZUNodW5raW5nQ29uZmlnLkZpeGVkTGVuZ3RoQ2h1bmtpbmdIABIWCgpjaHVu",
+            "a19zaXplGAEgASgFQgIYARIZCg1jaHVua19vdmVybGFwGAIgASgFQgIYARpA",
+            "ChNGaXhlZExlbmd0aENodW5raW5nEhIKCmNodW5rX3NpemUYASABKAUSFQoN",
+            "Y2h1bmtfb3ZlcmxhcBgCIAEoBUIRCg9jaHVua2luZ19jb25maWcidwobUmFn",
+            "RmlsZVRyYW5zZm9ybWF0aW9uQ29uZmlnElgKGHJhZ19maWxlX2NodW5raW5n",
+            "X2NvbmZpZxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuUmFnRmlsZUNodW5raW5nQ29uZmlnIp4FChRSYWdGaWxlUGFyc2luZ0Nv",
+            "bmZpZxJfCg9hZHZhbmNlZF9wYXJzZXIYAyABKAsyRC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29uZmlnLkFkdmFu",
+            "Y2VkUGFyc2VySAASWwoNbGF5b3V0X3BhcnNlchgEIAEoCzJCLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZVBhcnNpbmdDb25maWcu",
+            "TGF5b3V0UGFyc2VySAASVQoKbGxtX3BhcnNlchgFIAEoCzI/Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZVBhcnNpbmdDb25maWcu",
+            "TGxtUGFyc2VySAASJAoYdXNlX2FkdmFuY2VkX3BkZl9wYXJzaW5nGAIgASgI",
+            "QgIYARoyCg5BZHZhbmNlZFBhcnNlchIgChh1c2VfYWR2YW5jZWRfcGRmX3Bh",
+            "cnNpbmcYASABKAgaeQoMTGF5b3V0UGFyc2VyEhYKDnByb2Nlc3Nvcl9uYW1l",
+            "GAEgASgJEiQKHG1heF9wYXJzaW5nX3JlcXVlc3RzX3Blcl9taW4YAiABKAUS",
+            "KwojZ2xvYmFsX21heF9wYXJzaW5nX3JlcXVlc3RzX3Blcl9taW4YAyABKAUa",
+            "kQEKCUxsbVBhcnNlchISCgptb2RlbF9uYW1lGAEgASgJEiQKHG1heF9wYXJz",
+            "aW5nX3JlcXVlc3RzX3Blcl9taW4YAiABKAUSKwojZ2xvYmFsX21heF9wYXJz",
+            "aW5nX3JlcXVlc3RzX3Blcl9taW4YBCABKAUSHQoVY3VzdG9tX3BhcnNpbmdf",
+            "cHJvbXB0GAMgASgJQggKBnBhcnNlciLrAwoVUmFnRmlsZU1ldGFkYXRhQ29u",
+            "ZmlnElAKGmdjc19tZXRhZGF0YV9zY2hlbWFfc291cmNlGAEgASgLMiouZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HY3NTb3VyY2VIABJhCiNn",
+            "b29nbGVfZHJpdmVfbWV0YWRhdGFfc2NoZW1hX3NvdXJjZRgCIAEoCzIyLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR29vZ2xlRHJpdmVTb3Vy",
+            "Y2VIABInCh1pbmxpbmVfbWV0YWRhdGFfc2NoZW1hX3NvdXJjZRgDIAEoCUgA",
+            "EkkKE2djc19tZXRhZGF0YV9zb3VyY2UYBCABKAsyKi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkdjc1NvdXJjZUgBEloKHGdvb2dsZV9kcml2",
+            "ZV9tZXRhZGF0YV9zb3VyY2UYBSABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MWJldGExLkdvb2dsZURyaXZlU291cmNlSAESIAoWaW5saW5lX21l",
+            "dGFkYXRhX3NvdXJjZRgGIAEoCUgBQhgKFm1ldGFkYXRhX3NjaGVtYV9zb3Vy",
+            "Y2VCEQoPbWV0YWRhdGFfc291cmNlIpADChNVcGxvYWRSYWdGaWxlQ29uZmln",
+            "ElwKGHJhZ19maWxlX2NodW5raW5nX2NvbmZpZxgBIAEoCzI2Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZUNodW5raW5nQ29uZmln",
+            "QgIYARJkCh5yYWdfZmlsZV90cmFuc2Zvcm1hdGlvbl9jb25maWcYAyABKAsy",
+            "PC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVUcmFu",
+            "c2Zvcm1hdGlvbkNvbmZpZxJYChhyYWdfZmlsZV9tZXRhZGF0YV9jb25maWcY",
+            "BCABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0Zp",
+            "bGVNZXRhZGF0YUNvbmZpZxJbChdyYWdfZmlsZV9wYXJzaW5nX2NvbmZpZxgF",
+            "IAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmls",
+            "ZVBhcnNpbmdDb25maWdCA+BBASKqCgoUSW1wb3J0UmFnRmlsZXNDb25maWcS",
+            "QAoKZ2NzX3NvdXJjZRgCIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuR2NzU291cmNlSAASUQoTZ29vZ2xlX2RyaXZlX3NvdXJjZRgD",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR29vZ2xl",
+            "RHJpdmVTb3VyY2VIABJECgxzbGFja19zb3VyY2UYBiABKAsyLC5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNsYWNrU291cmNlSAASQgoLamly",
+            "YV9zb3VyY2UYByABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLkppcmFTb3VyY2VIABJRChNzaGFyZV9wb2ludF9zb3VyY2VzGA0gASgL",
+            "MjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TaGFyZVBvaW50",
+            "U291cmNlc0gAElcKGHBhcnRpYWxfZmFpbHVyZV9nY3Nfc2luaxgLIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2NzRGVzdGluYXRp",
+            "b25CAhgBSAESYQodcGFydGlhbF9mYWlsdXJlX2JpZ3F1ZXJ5X3NpbmsYDCAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkJpZ1F1ZXJ5",
+            "RGVzdGluYXRpb25CAhgBSAESUQoWaW1wb3J0X3Jlc3VsdF9nY3Nfc2luaxgO",
+            "IAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2NzRGVz",
+            "dGluYXRpb25IAhJbChtpbXBvcnRfcmVzdWx0X2JpZ3F1ZXJ5X3NpbmsYDyAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkJpZ1F1ZXJ5",
+            "RGVzdGluYXRpb25IAhJcChhyYWdfZmlsZV9jaHVua2luZ19jb25maWcYBCAB",
+            "KAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVD",
+            "aHVua2luZ0NvbmZpZ0ICGAESZAoecmFnX2ZpbGVfdHJhbnNmb3JtYXRpb25f",
+            "Y29uZmlnGBAgASgLMjwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5SYWdGaWxlVHJhbnNmb3JtYXRpb25Db25maWcSWwoXcmFnX2ZpbGVfcGFy",
+            "c2luZ19jb25maWcYCCABKAsyNS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLlJhZ0ZpbGVQYXJzaW5nQ29uZmlnQgPgQQESWAoYcmFnX2ZpbGVf",
+            "bWV0YWRhdGFfY29uZmlnGBEgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMS5SYWdGaWxlTWV0YWRhdGFDb25maWcSKwoebWF4X2VtYmVk",
+            "ZGluZ19yZXF1ZXN0c19wZXJfbWluGAUgASgFQgPgQQESMgolZ2xvYmFsX21h",
+            "eF9lbWJlZGRpbmdfcmVxdWVzdHNfcGVyX21pbhgSIAEoBUID4EEBEhkKEXJl",
+            "YnVpbGRfYW5uX2luZGV4GBMgASgIQg8KDWltcG9ydF9zb3VyY2VCFgoUcGFy",
+            "dGlhbF9mYWlsdXJlX3NpbmtCFAoSaW1wb3J0X3Jlc3VsdF9zaW5rItUBChJS",
+            "YWdNYW5hZ2VkRGJDb25maWcSVAoKZW50ZXJwcmlzZRgBIAEoCzI+Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnTWFuYWdlZERiQ29uZmln",
+            "LkVudGVycHJpc2VIABJKCgViYXNpYxgCIAEoCzI5Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxYmV0YTEuUmFnTWFuYWdlZERiQ29uZmlnLkJhc2ljSAAa",
+            "DAoKRW50ZXJwcmlzZRoHCgVCYXNpY0IGCgR0aWVyIoYCCg9SYWdFbmdpbmVD",
+            "b25maWcSEQoEbmFtZRgBIAEoCUID4EEIElIKFXJhZ19tYW5hZ2VkX2RiX2Nv",
+            "bmZpZxgCIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "UmFnTWFuYWdlZERiQ29uZmlnOosB6kGHAQopYWlwbGF0Zm9ybS5nb29nbGVh",
+            "cGlzLmNvbS9SYWdFbmdpbmVDb25maWcSN3Byb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9yYWdFbmdpbmVDb25maWcqEHJhZ0VuZ2lu",
+            "ZUNvbmZpZ3MyD3JhZ0VuZ2luZUNvbmZpZ0LpAQojY29tLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxYmV0YTFCElZlcnRleFJhZ0RhdGFQcm90b1ABWkNj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBs",
+            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
+            "cm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHq",
+            "AiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ApiAuthReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -235,15 +252,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus), global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus.Parser, new[]{ "State", "ErrorStatus" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.CorpusStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Parser, new[]{ "VectorDbConfig", "VertexAiSearchConfig", "Name", "DisplayName", "Description", "RagEmbeddingModelConfig", "RagVectorDbConfig", "CreateTime", "UpdateTime", "CorpusStatus", "RagFilesCount", "EncryptionSpec", "CorpusTypeConfig" }, new[]{ "BackendConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Types.CorpusTypeConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Types.CorpusTypeConfig.Parser, new[]{ "DocumentCorpus", "MemoryCorpus" }, new[]{ "CorpusTypeConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Types.CorpusTypeConfig.Types.DocumentCorpus), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Types.CorpusTypeConfig.Types.DocumentCorpus.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Types.CorpusTypeConfig.Types.MemoryCorpus), global::Google.Cloud.AIPlatform.V1Beta1.RagCorpus.Types.CorpusTypeConfig.Types.MemoryCorpus.Parser, new[]{ "LlmParser" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile), global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Parser, new[]{ "GcsSource", "GoogleDriveSource", "DirectUploadSource", "SlackSource", "JiraSource", "SharePointSources", "Name", "DisplayName", "Description", "SizeBytes", "RagFileType", "CreateTime", "UpdateTime", "FileStatus" }, new[]{ "RagFileSource" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Types.RagFileType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile), global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Parser, new[]{ "GcsSource", "GoogleDriveSource", "DirectUploadSource", "SlackSource", "JiraSource", "SharePointSources", "Name", "DisplayName", "Description", "SizeBytes", "RagFileType", "CreateTime", "UpdateTime", "FileStatus", "UserMetadata" }, new[]{ "RagFileSource" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFile.Types.RagFileType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagChunk), global::Google.Cloud.AIPlatform.V1Beta1.RagChunk.Parser, new[]{ "Text", "PageSpan" }, new[]{ "PageSpan" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagChunk.Types.PageSpan), global::Google.Cloud.AIPlatform.V1Beta1.RagChunk.Types.PageSpan.Parser, new[]{ "FirstPage", "LastPage" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Parser, new[]{ "FixedLengthChunking", "ChunkSize", "ChunkOverlap" }, new[]{ "ChunkingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Parser, new[]{ "AdvancedParser", "LayoutParser", "LlmParser", "UseAdvancedPdfParsing" }, new[]{ "Parser" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser.Parser, new[]{ "UseAdvancedPdfParsing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser.Parser, new[]{ "ProcessorName", "MaxParsingRequestsPerMin", "GlobalMaxParsingRequestsPerMin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LlmParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LlmParser.Parser, new[]{ "ModelName", "MaxParsingRequestsPerMin", "GlobalMaxParsingRequestsPerMin", "CustomParsingPrompt" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig", "RagFileTransformationConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "ImportResultGcsSink", "ImportResultBigquerySink", "RagFileChunkingConfig", "RagFileTransformationConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin", "GlobalMaxEmbeddingRequestsPerMin", "RebuildAnnIndex" }, new[]{ "ImportSource", "PartialFailureSink", "ImportResultSink" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig.Parser, new[]{ "GcsMetadataSchemaSource", "GoogleDriveMetadataSchemaSource", "InlineMetadataSchemaSource", "GcsMetadataSource", "GoogleDriveMetadataSource", "InlineMetadataSource" }, new[]{ "MetadataSchemaSource", "MetadataSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig", "RagFileTransformationConfig", "RagFileMetadataConfig", "RagFileParsingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "ImportResultGcsSink", "ImportResultBigquerySink", "RagFileChunkingConfig", "RagFileTransformationConfig", "RagFileParsingConfig", "RagFileMetadataConfig", "MaxEmbeddingRequestsPerMin", "GlobalMaxEmbeddingRequestsPerMin", "RebuildAnnIndex" }, new[]{ "ImportSource", "PartialFailureSink", "ImportResultSink" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagManagedDbConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagManagedDbConfig.Parser, new[]{ "Enterprise", "Basic" }, new[]{ "Tier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagManagedDbConfig.Types.Enterprise), global::Google.Cloud.AIPlatform.V1Beta1.RagManagedDbConfig.Types.Enterprise.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagManagedDbConfig.Types.Basic), global::Google.Cloud.AIPlatform.V1Beta1.RagManagedDbConfig.Types.Basic.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagEngineConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagEngineConfig.Parser, new[]{ "Name", "RagManagedDbConfig" }, null, null, null, null)
@@ -6070,6 +6088,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       fileStatus_ = other.fileStatus_ != null ? other.fileStatus_.Clone() : null;
+      userMetadata_ = other.userMetadata_;
       switch (other.RagFileSourceCase) {
         case RagFileSourceOneofCase.GcsSource:
           GcsSource = other.GcsSource.Clone();
@@ -6315,6 +6334,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "user_metadata" field.</summary>
+    public const int UserMetadataFieldNumber = 15;
+    private string userMetadata_ = "";
+    /// <summary>
+    /// Output only. The metadata for metadata search. The contents will be
+    /// be in JSON format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserMetadata {
+      get { return userMetadata_; }
+      set {
+        userMetadata_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object ragFileSource_;
     /// <summary>Enum of possible cases for the "rag_file_source" oneof.</summary>
     public enum RagFileSourceOneofCase {
@@ -6369,6 +6404,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(FileStatus, other.FileStatus)) return false;
+      if (UserMetadata != other.UserMetadata) return false;
       if (RagFileSourceCase != other.RagFileSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6391,6 +6427,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (fileStatus_ != null) hash ^= FileStatus.GetHashCode();
+      if (UserMetadata.Length != 0) hash ^= UserMetadata.GetHashCode();
       hash ^= (int) ragFileSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6466,6 +6503,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(SharePointSources);
       }
+      if (UserMetadata.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(UserMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6532,6 +6573,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(SharePointSources);
       }
+      if (UserMetadata.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(UserMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6584,6 +6629,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (fileStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FileStatus);
       }
+      if (UserMetadata.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserMetadata);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6628,6 +6676,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           FileStatus = new global::Google.Cloud.AIPlatform.V1Beta1.FileStatus();
         }
         FileStatus.MergeFrom(other.FileStatus);
+      }
+      if (other.UserMetadata.Length != 0) {
+        UserMetadata = other.UserMetadata;
       }
       switch (other.RagFileSourceCase) {
         case RagFileSourceOneofCase.GcsSource:
@@ -6778,6 +6829,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             SharePointSources = subBuilder;
             break;
           }
+          case 122: {
+            UserMetadata = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6886,6 +6941,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             }
             input.ReadMessage(subBuilder);
             SharePointSources = subBuilder;
+            break;
+          }
+          case 122: {
+            UserMetadata = input.ReadString();
             break;
           }
         }
@@ -9398,6 +9457,570 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
+  /// Metadata config for RagFile.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RagFileMetadataConfig : pb::IMessage<RagFileMetadataConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RagFileMetadataConfig> _parser = new pb::MessageParser<RagFileMetadataConfig>(() => new RagFileMetadataConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RagFileMetadataConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileMetadataConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileMetadataConfig(RagFileMetadataConfig other) : this() {
+      switch (other.MetadataSchemaSourceCase) {
+        case MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource:
+          GcsMetadataSchemaSource = other.GcsMetadataSchemaSource.Clone();
+          break;
+        case MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource:
+          GoogleDriveMetadataSchemaSource = other.GoogleDriveMetadataSchemaSource.Clone();
+          break;
+        case MetadataSchemaSourceOneofCase.InlineMetadataSchemaSource:
+          InlineMetadataSchemaSource = other.InlineMetadataSchemaSource;
+          break;
+      }
+
+      switch (other.MetadataSourceCase) {
+        case MetadataSourceOneofCase.GcsMetadataSource:
+          GcsMetadataSource = other.GcsMetadataSource.Clone();
+          break;
+        case MetadataSourceOneofCase.GoogleDriveMetadataSource:
+          GoogleDriveMetadataSource = other.GoogleDriveMetadataSource.Clone();
+          break;
+        case MetadataSourceOneofCase.InlineMetadataSource:
+          InlineMetadataSource = other.InlineMetadataSource;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileMetadataConfig Clone() {
+      return new RagFileMetadataConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_metadata_schema_source" field.</summary>
+    public const int GcsMetadataSchemaSourceFieldNumber = 1;
+    /// <summary>
+    /// Google Cloud Storage location. Supports importing individual files as
+    /// well as entire Google Cloud Storage directories. Sample formats:
+    /// - `gs://bucket_name/my_directory/object_name/metadata_schema.json`
+    /// - `gs://bucket_name/my_directory`
+    /// If providing a directory, the metadata schema will be read from
+    /// the files that ends with "metadata_schema.json" in the directory.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.GcsSource GcsMetadataSchemaSource {
+      get { return metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource ? (global::Google.Cloud.AIPlatform.V1Beta1.GcsSource) metadataSchemaSource_ : null; }
+      set {
+        metadataSchemaSource_ = value;
+        metadataSchemaSourceCase_ = value == null ? MetadataSchemaSourceOneofCase.None : MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource;
+      }
+    }
+
+    /// <summary>Field number for the "google_drive_metadata_schema_source" field.</summary>
+    public const int GoogleDriveMetadataSchemaSourceFieldNumber = 2;
+    /// <summary>
+    /// Google Drive location. Supports importing individual files as
+    /// well as Google Drive folders.
+    /// If providing a folder, the metadata schema will be read from
+    /// the files that ends with "metadata_schema.json" in the directory.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource GoogleDriveMetadataSchemaSource {
+      get { return metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource ? (global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource) metadataSchemaSource_ : null; }
+      set {
+        metadataSchemaSource_ = value;
+        metadataSchemaSourceCase_ = value == null ? MetadataSchemaSourceOneofCase.None : MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource;
+      }
+    }
+
+    /// <summary>Field number for the "inline_metadata_schema_source" field.</summary>
+    public const int InlineMetadataSchemaSourceFieldNumber = 3;
+    /// <summary>
+    /// Inline metadata schema source. Must be a JSON string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InlineMetadataSchemaSource {
+      get { return HasInlineMetadataSchemaSource ? (string) metadataSchemaSource_ : ""; }
+      set {
+        metadataSchemaSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        metadataSchemaSourceCase_ = MetadataSchemaSourceOneofCase.InlineMetadataSchemaSource;
+      }
+    }
+    /// <summary>Gets whether the "inline_metadata_schema_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInlineMetadataSchemaSource {
+      get { return metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.InlineMetadataSchemaSource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "inline_metadata_schema_source" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInlineMetadataSchemaSource() {
+      if (HasInlineMetadataSchemaSource) {
+        ClearMetadataSchemaSource();
+      }
+    }
+
+    /// <summary>Field number for the "gcs_metadata_source" field.</summary>
+    public const int GcsMetadataSourceFieldNumber = 4;
+    /// <summary>
+    /// Google Cloud Storage location. Supports importing individual files as
+    /// well as entire Google Cloud Storage directories. Sample formats:
+    /// - `gs://bucket_name/my_directory/object_name/metadata.json`
+    /// - `gs://bucket_name/my_directory`
+    /// If providing a directory, the metadata will be read from
+    /// the files that ends with "metadata.json" in the directory.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.GcsSource GcsMetadataSource {
+      get { return metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource ? (global::Google.Cloud.AIPlatform.V1Beta1.GcsSource) metadataSource_ : null; }
+      set {
+        metadataSource_ = value;
+        metadataSourceCase_ = value == null ? MetadataSourceOneofCase.None : MetadataSourceOneofCase.GcsMetadataSource;
+      }
+    }
+
+    /// <summary>Field number for the "google_drive_metadata_source" field.</summary>
+    public const int GoogleDriveMetadataSourceFieldNumber = 5;
+    /// <summary>
+    /// Google Drive location. Supports importing individual files as
+    /// well as Google Drive folders.
+    /// If providing a directory, the metadata will be read from
+    /// the files that ends with "metadata.json" in the directory.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource GoogleDriveMetadataSource {
+      get { return metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource ? (global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource) metadataSource_ : null; }
+      set {
+        metadataSource_ = value;
+        metadataSourceCase_ = value == null ? MetadataSourceOneofCase.None : MetadataSourceOneofCase.GoogleDriveMetadataSource;
+      }
+    }
+
+    /// <summary>Field number for the "inline_metadata_source" field.</summary>
+    public const int InlineMetadataSourceFieldNumber = 6;
+    /// <summary>
+    /// Inline metadata source. Must be a JSON string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InlineMetadataSource {
+      get { return HasInlineMetadataSource ? (string) metadataSource_ : ""; }
+      set {
+        metadataSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        metadataSourceCase_ = MetadataSourceOneofCase.InlineMetadataSource;
+      }
+    }
+    /// <summary>Gets whether the "inline_metadata_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInlineMetadataSource {
+      get { return metadataSourceCase_ == MetadataSourceOneofCase.InlineMetadataSource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "inline_metadata_source" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInlineMetadataSource() {
+      if (HasInlineMetadataSource) {
+        ClearMetadataSource();
+      }
+    }
+
+    private object metadataSchemaSource_;
+    /// <summary>Enum of possible cases for the "metadata_schema_source" oneof.</summary>
+    public enum MetadataSchemaSourceOneofCase {
+      None = 0,
+      GcsMetadataSchemaSource = 1,
+      GoogleDriveMetadataSchemaSource = 2,
+      InlineMetadataSchemaSource = 3,
+    }
+    private MetadataSchemaSourceOneofCase metadataSchemaSourceCase_ = MetadataSchemaSourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetadataSchemaSourceOneofCase MetadataSchemaSourceCase {
+      get { return metadataSchemaSourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMetadataSchemaSource() {
+      metadataSchemaSourceCase_ = MetadataSchemaSourceOneofCase.None;
+      metadataSchemaSource_ = null;
+    }
+
+    private object metadataSource_;
+    /// <summary>Enum of possible cases for the "metadata_source" oneof.</summary>
+    public enum MetadataSourceOneofCase {
+      None = 0,
+      GcsMetadataSource = 4,
+      GoogleDriveMetadataSource = 5,
+      InlineMetadataSource = 6,
+    }
+    private MetadataSourceOneofCase metadataSourceCase_ = MetadataSourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetadataSourceOneofCase MetadataSourceCase {
+      get { return metadataSourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMetadataSource() {
+      metadataSourceCase_ = MetadataSourceOneofCase.None;
+      metadataSource_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RagFileMetadataConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RagFileMetadataConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsMetadataSchemaSource, other.GcsMetadataSchemaSource)) return false;
+      if (!object.Equals(GoogleDriveMetadataSchemaSource, other.GoogleDriveMetadataSchemaSource)) return false;
+      if (InlineMetadataSchemaSource != other.InlineMetadataSchemaSource) return false;
+      if (!object.Equals(GcsMetadataSource, other.GcsMetadataSource)) return false;
+      if (!object.Equals(GoogleDriveMetadataSource, other.GoogleDriveMetadataSource)) return false;
+      if (InlineMetadataSource != other.InlineMetadataSource) return false;
+      if (MetadataSchemaSourceCase != other.MetadataSchemaSourceCase) return false;
+      if (MetadataSourceCase != other.MetadataSourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource) hash ^= GcsMetadataSchemaSource.GetHashCode();
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource) hash ^= GoogleDriveMetadataSchemaSource.GetHashCode();
+      if (HasInlineMetadataSchemaSource) hash ^= InlineMetadataSchemaSource.GetHashCode();
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource) hash ^= GcsMetadataSource.GetHashCode();
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource) hash ^= GoogleDriveMetadataSource.GetHashCode();
+      if (HasInlineMetadataSource) hash ^= InlineMetadataSource.GetHashCode();
+      hash ^= (int) metadataSchemaSourceCase_;
+      hash ^= (int) metadataSourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsMetadataSchemaSource);
+      }
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GoogleDriveMetadataSchemaSource);
+      }
+      if (HasInlineMetadataSchemaSource) {
+        output.WriteRawTag(26);
+        output.WriteString(InlineMetadataSchemaSource);
+      }
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource) {
+        output.WriteRawTag(34);
+        output.WriteMessage(GcsMetadataSource);
+      }
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GoogleDriveMetadataSource);
+      }
+      if (HasInlineMetadataSource) {
+        output.WriteRawTag(50);
+        output.WriteString(InlineMetadataSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsMetadataSchemaSource);
+      }
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GoogleDriveMetadataSchemaSource);
+      }
+      if (HasInlineMetadataSchemaSource) {
+        output.WriteRawTag(26);
+        output.WriteString(InlineMetadataSchemaSource);
+      }
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource) {
+        output.WriteRawTag(34);
+        output.WriteMessage(GcsMetadataSource);
+      }
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GoogleDriveMetadataSource);
+      }
+      if (HasInlineMetadataSource) {
+        output.WriteRawTag(50);
+        output.WriteString(InlineMetadataSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsMetadataSchemaSource);
+      }
+      if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleDriveMetadataSchemaSource);
+      }
+      if (HasInlineMetadataSchemaSource) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InlineMetadataSchemaSource);
+      }
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsMetadataSource);
+      }
+      if (metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleDriveMetadataSource);
+      }
+      if (HasInlineMetadataSource) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InlineMetadataSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RagFileMetadataConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.MetadataSchemaSourceCase) {
+        case MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource:
+          if (GcsMetadataSchemaSource == null) {
+            GcsMetadataSchemaSource = new global::Google.Cloud.AIPlatform.V1Beta1.GcsSource();
+          }
+          GcsMetadataSchemaSource.MergeFrom(other.GcsMetadataSchemaSource);
+          break;
+        case MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource:
+          if (GoogleDriveMetadataSchemaSource == null) {
+            GoogleDriveMetadataSchemaSource = new global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource();
+          }
+          GoogleDriveMetadataSchemaSource.MergeFrom(other.GoogleDriveMetadataSchemaSource);
+          break;
+        case MetadataSchemaSourceOneofCase.InlineMetadataSchemaSource:
+          InlineMetadataSchemaSource = other.InlineMetadataSchemaSource;
+          break;
+      }
+
+      switch (other.MetadataSourceCase) {
+        case MetadataSourceOneofCase.GcsMetadataSource:
+          if (GcsMetadataSource == null) {
+            GcsMetadataSource = new global::Google.Cloud.AIPlatform.V1Beta1.GcsSource();
+          }
+          GcsMetadataSource.MergeFrom(other.GcsMetadataSource);
+          break;
+        case MetadataSourceOneofCase.GoogleDriveMetadataSource:
+          if (GoogleDriveMetadataSource == null) {
+            GoogleDriveMetadataSource = new global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource();
+          }
+          GoogleDriveMetadataSource.MergeFrom(other.GoogleDriveMetadataSource);
+          break;
+        case MetadataSourceOneofCase.InlineMetadataSource:
+          InlineMetadataSource = other.InlineMetadataSource;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GcsSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GcsSource();
+            if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource) {
+              subBuilder.MergeFrom(GcsMetadataSchemaSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsMetadataSchemaSource = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource();
+            if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource) {
+              subBuilder.MergeFrom(GoogleDriveMetadataSchemaSource);
+            }
+            input.ReadMessage(subBuilder);
+            GoogleDriveMetadataSchemaSource = subBuilder;
+            break;
+          }
+          case 26: {
+            InlineMetadataSchemaSource = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GcsSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GcsSource();
+            if (metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource) {
+              subBuilder.MergeFrom(GcsMetadataSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsMetadataSource = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource();
+            if (metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource) {
+              subBuilder.MergeFrom(GoogleDriveMetadataSource);
+            }
+            input.ReadMessage(subBuilder);
+            GoogleDriveMetadataSource = subBuilder;
+            break;
+          }
+          case 50: {
+            InlineMetadataSource = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GcsSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GcsSource();
+            if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GcsMetadataSchemaSource) {
+              subBuilder.MergeFrom(GcsMetadataSchemaSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsMetadataSchemaSource = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource();
+            if (metadataSchemaSourceCase_ == MetadataSchemaSourceOneofCase.GoogleDriveMetadataSchemaSource) {
+              subBuilder.MergeFrom(GoogleDriveMetadataSchemaSource);
+            }
+            input.ReadMessage(subBuilder);
+            GoogleDriveMetadataSchemaSource = subBuilder;
+            break;
+          }
+          case 26: {
+            InlineMetadataSchemaSource = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GcsSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GcsSource();
+            if (metadataSourceCase_ == MetadataSourceOneofCase.GcsMetadataSource) {
+              subBuilder.MergeFrom(GcsMetadataSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsMetadataSource = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GoogleDriveSource();
+            if (metadataSourceCase_ == MetadataSourceOneofCase.GoogleDriveMetadataSource) {
+              subBuilder.MergeFrom(GoogleDriveMetadataSource);
+            }
+            input.ReadMessage(subBuilder);
+            GoogleDriveMetadataSource = subBuilder;
+            break;
+          }
+          case 50: {
+            InlineMetadataSource = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Config for uploading RagFile.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -9415,7 +10038,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9437,6 +10060,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public UploadRagFileConfig(UploadRagFileConfig other) : this() {
       ragFileChunkingConfig_ = other.ragFileChunkingConfig_ != null ? other.ragFileChunkingConfig_.Clone() : null;
       ragFileTransformationConfig_ = other.ragFileTransformationConfig_ != null ? other.ragFileTransformationConfig_.Clone() : null;
+      ragFileMetadataConfig_ = other.ragFileMetadataConfig_ != null ? other.ragFileMetadataConfig_.Clone() : null;
+      ragFileParsingConfig_ = other.ragFileParsingConfig_ != null ? other.ragFileParsingConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9477,6 +10102,39 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "rag_file_metadata_config" field.</summary>
+    public const int RagFileMetadataConfigFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig ragFileMetadataConfig_;
+    /// <summary>
+    /// Specifies the metadata config for RagFiles.
+    /// Including paths for metadata schema and metadata.
+    /// Alteratively, inline metadata schema and metadata can be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig RagFileMetadataConfig {
+      get { return ragFileMetadataConfig_; }
+      set {
+        ragFileMetadataConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rag_file_parsing_config" field.</summary>
+    public const int RagFileParsingConfigFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig ragFileParsingConfig_;
+    /// <summary>
+    /// Optional. Specifies the parsing config for RagFiles.
+    /// RAG will use the default parser if this field is not set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig RagFileParsingConfig {
+      get { return ragFileParsingConfig_; }
+      set {
+        ragFileParsingConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9494,6 +10152,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (!object.Equals(RagFileChunkingConfig, other.RagFileChunkingConfig)) return false;
       if (!object.Equals(RagFileTransformationConfig, other.RagFileTransformationConfig)) return false;
+      if (!object.Equals(RagFileMetadataConfig, other.RagFileMetadataConfig)) return false;
+      if (!object.Equals(RagFileParsingConfig, other.RagFileParsingConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9503,6 +10163,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (ragFileChunkingConfig_ != null) hash ^= RagFileChunkingConfig.GetHashCode();
       if (ragFileTransformationConfig_ != null) hash ^= RagFileTransformationConfig.GetHashCode();
+      if (ragFileMetadataConfig_ != null) hash ^= RagFileMetadataConfig.GetHashCode();
+      if (ragFileParsingConfig_ != null) hash ^= RagFileParsingConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9529,6 +10191,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(RagFileTransformationConfig);
       }
+      if (ragFileMetadataConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RagFileMetadataConfig);
+      }
+      if (ragFileParsingConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RagFileParsingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9547,6 +10217,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(RagFileTransformationConfig);
       }
+      if (ragFileMetadataConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RagFileMetadataConfig);
+      }
+      if (ragFileParsingConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RagFileParsingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9562,6 +10240,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (ragFileTransformationConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileTransformationConfig);
+      }
+      if (ragFileMetadataConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileMetadataConfig);
+      }
+      if (ragFileParsingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileParsingConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9586,6 +10270,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
         }
         RagFileTransformationConfig.MergeFrom(other.RagFileTransformationConfig);
+      }
+      if (other.ragFileMetadataConfig_ != null) {
+        if (ragFileMetadataConfig_ == null) {
+          RagFileMetadataConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig();
+        }
+        RagFileMetadataConfig.MergeFrom(other.RagFileMetadataConfig);
+      }
+      if (other.ragFileParsingConfig_ != null) {
+        if (ragFileParsingConfig_ == null) {
+          RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig();
+        }
+        RagFileParsingConfig.MergeFrom(other.RagFileParsingConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9614,6 +10310,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
             }
             input.ReadMessage(RagFileTransformationConfig);
+            break;
+          }
+          case 34: {
+            if (ragFileMetadataConfig_ == null) {
+              RagFileMetadataConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig();
+            }
+            input.ReadMessage(RagFileMetadataConfig);
+            break;
+          }
+          case 42: {
+            if (ragFileParsingConfig_ == null) {
+              RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig();
+            }
+            input.ReadMessage(RagFileParsingConfig);
             break;
           }
         }
@@ -9645,6 +10355,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(RagFileTransformationConfig);
             break;
           }
+          case 34: {
+            if (ragFileMetadataConfig_ == null) {
+              RagFileMetadataConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig();
+            }
+            input.ReadMessage(RagFileMetadataConfig);
+            break;
+          }
+          case 42: {
+            if (ragFileParsingConfig_ == null) {
+              RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig();
+            }
+            input.ReadMessage(RagFileParsingConfig);
+            break;
+          }
         }
       }
     }
@@ -9670,7 +10394,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9693,6 +10417,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       ragFileChunkingConfig_ = other.ragFileChunkingConfig_ != null ? other.ragFileChunkingConfig_.Clone() : null;
       ragFileTransformationConfig_ = other.ragFileTransformationConfig_ != null ? other.ragFileTransformationConfig_.Clone() : null;
       ragFileParsingConfig_ = other.ragFileParsingConfig_ != null ? other.ragFileParsingConfig_.Clone() : null;
+      ragFileMetadataConfig_ = other.ragFileMetadataConfig_ != null ? other.ragFileMetadataConfig_.Clone() : null;
       maxEmbeddingRequestsPerMin_ = other.maxEmbeddingRequestsPerMin_;
       globalMaxEmbeddingRequestsPerMin_ = other.globalMaxEmbeddingRequestsPerMin_;
       rebuildAnnIndex_ = other.rebuildAnnIndex_;
@@ -9941,6 +10666,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "rag_file_metadata_config" field.</summary>
+    public const int RagFileMetadataConfigFieldNumber = 17;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig ragFileMetadataConfig_;
+    /// <summary>
+    /// Specifies the metadata config for RagFiles.
+    /// Including paths for metadata schema and metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig RagFileMetadataConfig {
+      get { return ragFileMetadataConfig_; }
+      set {
+        ragFileMetadataConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "max_embedding_requests_per_min" field.</summary>
     public const int MaxEmbeddingRequestsPerMinFieldNumber = 5;
     private int maxEmbeddingRequestsPerMin_;
@@ -10094,6 +10835,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(RagFileChunkingConfig, other.RagFileChunkingConfig)) return false;
       if (!object.Equals(RagFileTransformationConfig, other.RagFileTransformationConfig)) return false;
       if (!object.Equals(RagFileParsingConfig, other.RagFileParsingConfig)) return false;
+      if (!object.Equals(RagFileMetadataConfig, other.RagFileMetadataConfig)) return false;
       if (MaxEmbeddingRequestsPerMin != other.MaxEmbeddingRequestsPerMin) return false;
       if (GlobalMaxEmbeddingRequestsPerMin != other.GlobalMaxEmbeddingRequestsPerMin) return false;
       if (RebuildAnnIndex != other.RebuildAnnIndex) return false;
@@ -10119,6 +10861,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ragFileChunkingConfig_ != null) hash ^= RagFileChunkingConfig.GetHashCode();
       if (ragFileTransformationConfig_ != null) hash ^= RagFileTransformationConfig.GetHashCode();
       if (ragFileParsingConfig_ != null) hash ^= RagFileParsingConfig.GetHashCode();
+      if (ragFileMetadataConfig_ != null) hash ^= RagFileMetadataConfig.GetHashCode();
       if (MaxEmbeddingRequestsPerMin != 0) hash ^= MaxEmbeddingRequestsPerMin.GetHashCode();
       if (GlobalMaxEmbeddingRequestsPerMin != 0) hash ^= GlobalMaxEmbeddingRequestsPerMin.GetHashCode();
       if (RebuildAnnIndex != false) hash ^= RebuildAnnIndex.GetHashCode();
@@ -10195,6 +10938,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(RagFileTransformationConfig);
       }
+      if (ragFileMetadataConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(RagFileMetadataConfig);
+      }
       if (GlobalMaxEmbeddingRequestsPerMin != 0) {
         output.WriteRawTag(144, 1);
         output.WriteInt32(GlobalMaxEmbeddingRequestsPerMin);
@@ -10265,6 +11012,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(RagFileTransformationConfig);
       }
+      if (ragFileMetadataConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(RagFileMetadataConfig);
+      }
       if (GlobalMaxEmbeddingRequestsPerMin != 0) {
         output.WriteRawTag(144, 1);
         output.WriteInt32(GlobalMaxEmbeddingRequestsPerMin);
@@ -10319,6 +11070,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ragFileParsingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileParsingConfig);
       }
+      if (ragFileMetadataConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RagFileMetadataConfig);
+      }
       if (MaxEmbeddingRequestsPerMin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxEmbeddingRequestsPerMin);
       }
@@ -10357,6 +11111,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig();
         }
         RagFileParsingConfig.MergeFrom(other.RagFileParsingConfig);
+      }
+      if (other.ragFileMetadataConfig_ != null) {
+        if (ragFileMetadataConfig_ == null) {
+          RagFileMetadataConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig();
+        }
+        RagFileMetadataConfig.MergeFrom(other.RagFileMetadataConfig);
       }
       if (other.MaxEmbeddingRequestsPerMin != 0) {
         MaxEmbeddingRequestsPerMin = other.MaxEmbeddingRequestsPerMin;
@@ -10551,6 +11311,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(RagFileTransformationConfig);
             break;
           }
+          case 138: {
+            if (ragFileMetadataConfig_ == null) {
+              RagFileMetadataConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig();
+            }
+            input.ReadMessage(RagFileMetadataConfig);
+            break;
+          }
           case 144: {
             GlobalMaxEmbeddingRequestsPerMin = input.ReadInt32();
             break;
@@ -10680,6 +11447,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(RagFileTransformationConfig);
             break;
           }
+          case 138: {
+            if (ragFileMetadataConfig_ == null) {
+              RagFileMetadataConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileMetadataConfig();
+            }
+            input.ReadMessage(RagFileMetadataConfig);
+            break;
+          }
           case 144: {
             GlobalMaxEmbeddingRequestsPerMin = input.ReadInt32();
             break;
@@ -10713,7 +11487,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11338,7 +12112,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
