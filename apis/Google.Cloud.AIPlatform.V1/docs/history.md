@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.34.0, released 2025-06-13
+
+### New features
+
+- Add EncryptionSpec field for RagCorpus CMEK feature to v1
+
 ## Version 3.33.0, released 2025-06-09
 
 ### New features
