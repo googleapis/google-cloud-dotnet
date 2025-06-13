@@ -3088,7 +3088,7 @@
     },
     {
       "id": "Google.Cloud.Iam.V3Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/docs/overview",
