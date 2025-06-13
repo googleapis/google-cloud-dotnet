@@ -3877,7 +3877,7 @@
     },
     {
       "id": "Google.Cloud.NetworkServices.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Network Services",
       "productUrl": "https://cloud.google.com/products/networking",
