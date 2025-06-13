@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.19.0, released 2025-06-13
+
+### New features
+
+- Added support for DELTA, ICEBERG, PIG components
+
 ## Version 5.18.0, released 2025-06-09
 
 ### New features
