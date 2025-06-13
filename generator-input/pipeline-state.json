@@ -2989,11 +2989,12 @@
         },
         {
             "id": "Google.Cloud.Speech.V2",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-06T18:06:22Z",
+            "releaseTimestamp": "2025-06-13T07:04:33.124041143Z",
             "lastGeneratedCommit": "b38aab7e8498d5503af7bd3c991ac0dd85c4a405",
+            "lastReleasedCommit": "b38aab7e8498d5503af7bd3c991ac0dd85c4a405",
             "apiPaths": [
                 "google/cloud/speech/v2"
             ],

@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.5.0, released 2025-06-13
+
+### New features
+
+- Add denoiser related configuration
+
+### Documentation improvements
+
+- Updated description of sample_rate_hertz
+
 ## Version 1.4.0, released 2025-01-06
 
 ### New features
