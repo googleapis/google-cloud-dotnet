@@ -323,7 +323,7 @@
     },
     {
       "id": "Google.Cloud.AlloyDb.V1Alpha",
-      "version": "1.0.0-alpha11",
+      "version": "1.0.0-alpha12",
       "type": "grpc",
       "productName": "AlloyDB",
       "productUrl": "https://cloud.google.com/alloydb/docs",
