@@ -124,14 +124,6 @@ internal sealed class AckError
         GaxPreconditions.CheckNotNull(rpcException, nameof(rpcException));
         GaxPreconditions.CheckNotNull(ids, nameof(ids));
 
-        // Check the gRPC StatusCode. For certain StatusCodes, we need to retry all ids.
-        bool retryAll = ShouldRetryAll(rpcException);
-        if (retryAll)
-        {
-            // Return all ids in temporary failures and empty permanent failures, so that the caller can retry the whole temporary batch.
-            return new AckError(ids, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()), Enumerable.Empty<KeyValuePair<string, string>>());
-        }
-
         // We can have complete or partial failure. We classify the error as temporary or permanent
         // based on the error message starting from TRANSIENT_FAILURE_ or PERMANENT_FAILURE_ (which is ugly but that's the way it is)
         // and return:
@@ -146,18 +138,20 @@ internal sealed class AckError
         var metadata = rpcException.GetErrorInfo()?.Metadata ?? Enumerable.Empty<KeyValuePair<string, string>>();
         var temporaryErrors = metadata.Where(j => j.Value.StartsWith("TRANSIENT_FAILURE_", StringComparison.Ordinal));
         var permanentErrors = metadata.Where(j => j.Value.StartsWith("PERMANENT_FAILURE_", StringComparison.Ordinal));
-
         if (temporaryErrors.Any() || permanentErrors.Any())
         {
             // If temporary or permanent error messages are present, it means the entire request hasn't failed with a permanent error.
             return new AckError(ids, temporaryErrors, permanentErrors);
         }
-        else
+        // If there's no metadata, we may still retry all, depending on the gRPC status code.
+        if (ShouldRetryAll(rpcException)) 
         {
-            // Now, if temporary or permanent error messages are *not* present, it means the entire request has failed with a permanent error.
-            // It may be due to a gRPC error like a failed precondition or a permission denied error or other permanent error.
-            return new AckError(ids, temporaryErrors, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()));
+            // Return all ids in temporary failures and empty permanent failures, so that the caller can retry the whole temporary batch.
+            return new AckError(ids, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()), permanentErrors);
         }
+        // Now, if there's no metadata and the gRPC status code is not retryable, it means the entire request has failed with a permanent error.
+        // It may be due to a gRPC error like a failed precondition or a permission denied error or other permanent error.
+        return new AckError(ids, temporaryErrors, ids.ToDictionary(key => key, value => rpcException.Status.StatusCode.ToString()));
     }
 
     /// <summary>
