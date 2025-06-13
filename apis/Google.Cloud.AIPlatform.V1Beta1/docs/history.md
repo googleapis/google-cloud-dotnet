@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta34, released 2025-06-13
+
+### New features
+
+- Introduce RagFileMetadataConfig for importing metadata to Rag
+
 ## Version 1.0.0-beta33, released 2025-06-09
 
 ### New features
