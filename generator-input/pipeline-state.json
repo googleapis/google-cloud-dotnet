@@ -2513,7 +2513,7 @@
             "id": "Google.Cloud.PubSub.V1",
             "currentVersion": "3.24.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-31T16:12:32Z",
             "lastGeneratedCommit": "c1af7f23f557e8690a9e16bc41b1a2fae43e9a3e",
             "apiPaths": [
@@ -3863,7 +3863,7 @@
             "id": "Google.Cloud.Spanner",
             "currentVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-17T07:00:39Z",
             "lastGeneratedCommit": "2bea1fccad5117e9f026488570a4eb533df17b7c",
             "apiPaths": [
@@ -4177,7 +4177,7 @@
             "id": "Google.Apps.Events.Subscriptions.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "315d3b21a4e64130a904219030cbf58f48868061",
             "apiPaths": [
                 "google/apps/events/subscriptions/v1beta"
