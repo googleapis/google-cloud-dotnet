@@ -2387,7 +2387,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-14T17:20:27Z",
-            "lastGeneratedCommit": "021fc2e17e44fb13c0583b24ea8a27364632211e",
+            "lastGeneratedCommit": "1de7d6fbed8f10ea52bd7c557f68e9410a265212",
             "apiPaths": [
                 "google/cloud/parallelstore/v1beta"
             ],
