@@ -32,7 +32,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 FieldDelimiter = "gronkle",
                 // Again, doesn't make sense for JSON, but we don't validate.
                 UseAvroLogicalTypes = true,
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                Reservation = "Reservation"
             };
 
             JobConfigurationExtract extract = new JobConfigurationExtract();
