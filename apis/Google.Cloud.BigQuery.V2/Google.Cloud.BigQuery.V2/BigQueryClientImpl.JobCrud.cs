@@ -264,7 +264,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
             options?.ModifyRequest(extract);
-            return CreateInsertJobRequest(new JobConfiguration { Extract = extract }, options);
+            return CreateInsertJobRequest(new JobConfiguration { Extract = extract, Reservation = options?.Reservation }, options);
         }
 
         private InsertRequest CreateCopyJobRequest(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options)
@@ -276,7 +276,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var copy = new JobConfigurationTableCopy { SourceTables = sourceList, DestinationTable = destination };
             options?.ModifyRequest(copy);
-            return CreateInsertJobRequest(new JobConfiguration { Copy = copy }, options);
+            return CreateInsertJobRequest(new JobConfiguration { Copy = copy, Reservation = options?.Reservation }, options);
         }
 
         private InsertRequest CreateLoadJobRequest(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options)
@@ -288,7 +288,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var load = new JobConfigurationLoad { SourceUris = sourceList, DestinationTable = destination, Schema = schema };
             options?.ModifyRequest(load);
-            var request = CreateInsertJobRequest(new JobConfiguration { Load = load }, options);
+            var request = CreateInsertJobRequest(new JobConfiguration { Load = load, Reservation = options?.Reservation }, options);
             return request;
         }
 

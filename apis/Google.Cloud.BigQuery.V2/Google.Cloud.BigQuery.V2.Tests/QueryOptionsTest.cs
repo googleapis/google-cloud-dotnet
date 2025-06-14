@@ -40,7 +40,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
                 TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromHours(1), "field"),
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                Reservation = "Reservation"
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();

@@ -37,6 +37,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         private readonly BigQueryFixture _fixture;
 
+        private const String Reservation = "Reservation";
+
         public JobsTest(BigQueryFixture fixture)
         {
             _fixture = fixture;
@@ -135,8 +137,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
-            var options = new QueryOptions { Labels = JobLabels };
+            var options = new QueryOptions { Labels = JobLabels, Reservation = Reservation };
             var jobToFind = client.CreateQueryJob($"SELECT * FROM {table}", null, options);
+            Assert.Equal(Reservation, jobToFind.Resource.Configuration.Reservation);
 
             var jobFound = client.GetJob(jobToFind.Reference);
 
@@ -173,9 +176,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var destinationBucket = _fixture.StorageBucketName;
             var destinationObject = _fixture.GenerateStorageObjectName();
             var destinationUri = $"gs://{destinationBucket}/{destinationObject}";
-            var options = new CreateExtractJobOptions { Labels = JobLabels };
+            var options = new CreateExtractJobOptions { Labels = JobLabels, Reservation = Reservation };
 
             var extractJob = bqClient.CreateExtractJob(originReference, destinationUri, options);
+            Assert.Equal(Reservation, extractJob.Resource.Configuration.Reservation);
             VerifyJobLabels(extractJob?.Resource?.Configuration?.Labels);
 
             extractJob = extractJob.PollUntilCompleted().ThrowOnAnyError();
@@ -188,9 +192,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var bqClient = BigQueryClient.Create(_fixture.ProjectId);
             var originReference = bqClient.GetTableReference(_fixture.DatasetId, _fixture.PeopleTableId);
             var destinationReference = bqClient.GetTableReference(_fixture.DatasetId, _fixture.CreateTableId());
-            var options = new CreateCopyJobOptions { Labels = JobLabels };
+            var options = new CreateCopyJobOptions { Labels = JobLabels, Reservation = Reservation };
 
             var copyJob = bqClient.CreateCopyJob(originReference, destinationReference, options);
+            Assert.Equal(Reservation, copyJob.Resource.Configuration.Reservation);
             VerifyJobLabels(copyJob?.Resource?.Configuration?.Labels);
 
             copyJob = copyJob.PollUntilCompleted().ThrowOnAnyError();
@@ -213,7 +218,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var loadJob = bqClient.CreateLoadJob(
                 destinationUri, destinationReference, originTable.Schema,
-                new CreateLoadJobOptions { SkipLeadingRows = 1, Labels = JobLabels });
+                new CreateLoadJobOptions { SkipLeadingRows = 1, Labels = JobLabels, Reservation = Reservation });
+            Assert.Equal(Reservation, loadJob.Resource.Configuration.Reservation);
             VerifyJobLabels(loadJob?.Resource?.Configuration?.Labels);
 
             loadJob = loadJob.PollUntilCompleted().ThrowOnAnyError();

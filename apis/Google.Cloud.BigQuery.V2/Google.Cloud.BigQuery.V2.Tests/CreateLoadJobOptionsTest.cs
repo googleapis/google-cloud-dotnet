@@ -42,7 +42,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
                 UseAvroLogicalTypes = true,
                 Encoding = "encoding-test",
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                Reservation = "Reservation"
             };
 
             JobConfigurationLoad load = new JobConfigurationLoad();
