@@ -874,11 +874,12 @@
         },
         {
             "id": "Google.Cloud.Channel.V1",
-            "currentVersion": "2.14.0",
+            "currentVersion": "2.15.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-10-08T22:02:24Z",
+            "releaseTimestamp": "2025-06-16T15:15:38.249440936Z",
             "lastGeneratedCommit": "c61890928ac3737f390f2b1f8e2ee5c6b00f8c46",
+            "lastReleasedCommit": "c61890928ac3737f390f2b1f8e2ee5c6b00f8c46",
             "apiPaths": [
                 "google/cloud/channel/v1"
             ],
