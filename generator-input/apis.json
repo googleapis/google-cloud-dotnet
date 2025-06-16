@@ -162,7 +162,7 @@
     },
     {
       "id": "Google.Apps.Events.Subscriptions.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Google Workspace Events",
       "productUrl": "https://developers.google.com/workspace/events",
