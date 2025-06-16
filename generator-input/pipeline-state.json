@@ -878,7 +878,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-10-08T22:02:24Z",
-            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastGeneratedCommit": "c61890928ac3737f390f2b1f8e2ee5c6b00f8c46",
             "apiPaths": [
                 "google/cloud/channel/v1"
             ],
