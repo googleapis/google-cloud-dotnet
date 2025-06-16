@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_ProvisionSubproperty_async]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSubpropertySyncConfig_async_flattened]
     using Google.Analytics.Admin.V1Alpha;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for ProvisionSubpropertyAsync</summary>
+        /// <summary>Snippet for UpdateSubpropertySyncConfigAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +31,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ProvisionSubpropertyRequestObjectAsync()
+        public async Task UpdateSubpropertySyncConfigAsync()
         {
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProvisionSubpropertyRequest request = new ProvisionSubpropertyRequest
-            {
-                Subproperty = new Property(),
-                SubpropertyEventFilter = new SubpropertyEventFilter(),
-                CustomDimensionAndMetricSynchronizationMode = SubpropertySyncConfig.Types.SynchronizationMode.Unspecified,
-            };
+            SubpropertySyncConfig subpropertySyncConfig = new SubpropertySyncConfig();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            ProvisionSubpropertyResponse response = await analyticsAdminServiceClient.ProvisionSubpropertyAsync(request);
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.UpdateSubpropertySyncConfigAsync(subpropertySyncConfig, updateMask);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_ProvisionSubproperty_async]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSubpropertySyncConfig_async_flattened]
 }

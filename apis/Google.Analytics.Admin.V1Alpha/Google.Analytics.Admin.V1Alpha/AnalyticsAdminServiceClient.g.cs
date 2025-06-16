@@ -204,6 +204,9 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateReportingDataAnnotationSettings = existing.UpdateReportingDataAnnotationSettings;
             DeleteReportingDataAnnotationSettings = existing.DeleteReportingDataAnnotationSettings;
             SubmitUserDeletionSettings = existing.SubmitUserDeletionSettings;
+            ListSubpropertySyncConfigsSettings = existing.ListSubpropertySyncConfigsSettings;
+            UpdateSubpropertySyncConfigSettings = existing.UpdateSubpropertySyncConfigSettings;
+            GetSubpropertySyncConfigSettings = existing.GetSubpropertySyncConfigSettings;
             OnCopy(existing);
         }
 
@@ -3450,6 +3453,72 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SubmitUserDeletionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListSubpropertySyncConfigs</c> and
+        /// <c>AnalyticsAdminServiceClient.ListSubpropertySyncConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSubpropertySyncConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateSubpropertySyncConfig</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateSubpropertySyncConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSubpropertySyncConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetSubpropertySyncConfig</c> and
+        /// <c>AnalyticsAdminServiceClient.GetSubpropertySyncConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSubpropertySyncConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -20849,6 +20918,373 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SubmitUserDeletionResponse> SubmitUserDeletionAsync(PropertyName name, st::CancellationToken cancellationToken) =>
             SubmitUserDeletionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigs(ListSubpropertySyncConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigsAsync(ListSubpropertySyncConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertySyncConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertySyncConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigs(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertySyncConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubpropertySyncConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertySyncConfig UpdateSubpropertySyncConfig(UpdateSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSubpropertySyncConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="subpropertySyncConfig">
+        /// Required. The SubpropertySyncConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertySyncConfig UpdateSubpropertySyncConfig(SubpropertySyncConfig subpropertySyncConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubpropertySyncConfig(new UpdateSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfig = gax::GaxPreconditions.CheckNotNull(subpropertySyncConfig, nameof(subpropertySyncConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="subpropertySyncConfig">
+        /// Required. The SubpropertySyncConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(SubpropertySyncConfig subpropertySyncConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubpropertySyncConfigAsync(new UpdateSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfig = gax::GaxPreconditions.CheckNotNull(subpropertySyncConfig, nameof(subpropertySyncConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="subpropertySyncConfig">
+        /// Required. The SubpropertySyncConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(SubpropertySyncConfig subpropertySyncConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSubpropertySyncConfigAsync(subpropertySyncConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertySyncConfig GetSubpropertySyncConfig(GetSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetSubpropertySyncConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the SubpropertySyncConfig to lookup.
+        /// Format:
+        /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+        /// Example: properties/1234/subpropertySyncConfigs/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertySyncConfig GetSubpropertySyncConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertySyncConfig(new GetSubpropertySyncConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the SubpropertySyncConfig to lookup.
+        /// Format:
+        /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+        /// Example: properties/1234/subpropertySyncConfigs/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertySyncConfigAsync(new GetSubpropertySyncConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the SubpropertySyncConfig to lookup.
+        /// Format:
+        /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+        /// Example: properties/1234/subpropertySyncConfigs/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSubpropertySyncConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the SubpropertySyncConfig to lookup.
+        /// Format:
+        /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+        /// Example: properties/1234/subpropertySyncConfigs/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertySyncConfig GetSubpropertySyncConfig(SubpropertySyncConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertySyncConfig(new GetSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the SubpropertySyncConfig to lookup.
+        /// Format:
+        /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+        /// Example: properties/1234/subpropertySyncConfigs/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(SubpropertySyncConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertySyncConfigAsync(new GetSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the SubpropertySyncConfig to lookup.
+        /// Format:
+        /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+        /// Example: properties/1234/subpropertySyncConfigs/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(SubpropertySyncConfigName name, st::CancellationToken cancellationToken) =>
+            GetSubpropertySyncConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -21168,6 +21604,12 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<DeleteReportingDataAnnotationRequest, wkt::Empty> _callDeleteReportingDataAnnotation;
 
         private readonly gaxgrpc::ApiCall<SubmitUserDeletionRequest, SubmitUserDeletionResponse> _callSubmitUserDeletion;
+
+        private readonly gaxgrpc::ApiCall<ListSubpropertySyncConfigsRequest, ListSubpropertySyncConfigsResponse> _callListSubpropertySyncConfigs;
+
+        private readonly gaxgrpc::ApiCall<UpdateSubpropertySyncConfigRequest, SubpropertySyncConfig> _callUpdateSubpropertySyncConfig;
+
+        private readonly gaxgrpc::ApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig> _callGetSubpropertySyncConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -21663,6 +22105,15 @@ namespace Google.Analytics.Admin.V1Alpha
             _callSubmitUserDeletion = clientHelper.BuildApiCall<SubmitUserDeletionRequest, SubmitUserDeletionResponse>("SubmitUserDeletion", grpcClient.SubmitUserDeletionAsync, grpcClient.SubmitUserDeletion, effectiveSettings.SubmitUserDeletionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSubmitUserDeletion);
             Modify_SubmitUserDeletionApiCall(ref _callSubmitUserDeletion);
+            _callListSubpropertySyncConfigs = clientHelper.BuildApiCall<ListSubpropertySyncConfigsRequest, ListSubpropertySyncConfigsResponse>("ListSubpropertySyncConfigs", grpcClient.ListSubpropertySyncConfigsAsync, grpcClient.ListSubpropertySyncConfigs, effectiveSettings.ListSubpropertySyncConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSubpropertySyncConfigs);
+            Modify_ListSubpropertySyncConfigsApiCall(ref _callListSubpropertySyncConfigs);
+            _callUpdateSubpropertySyncConfig = clientHelper.BuildApiCall<UpdateSubpropertySyncConfigRequest, SubpropertySyncConfig>("UpdateSubpropertySyncConfig", grpcClient.UpdateSubpropertySyncConfigAsync, grpcClient.UpdateSubpropertySyncConfig, effectiveSettings.UpdateSubpropertySyncConfigSettings).WithGoogleRequestParam("subproperty_sync_config.name", request => request.SubpropertySyncConfig?.Name);
+            Modify_ApiCall(ref _callUpdateSubpropertySyncConfig);
+            Modify_UpdateSubpropertySyncConfigApiCall(ref _callUpdateSubpropertySyncConfig);
+            _callGetSubpropertySyncConfig = clientHelper.BuildApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig>("GetSubpropertySyncConfig", grpcClient.GetSubpropertySyncConfigAsync, grpcClient.GetSubpropertySyncConfig, effectiveSettings.GetSubpropertySyncConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSubpropertySyncConfig);
+            Modify_GetSubpropertySyncConfigApiCall(ref _callGetSubpropertySyncConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -21980,6 +22431,12 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_SubmitUserDeletionApiCall(ref gaxgrpc::ApiCall<SubmitUserDeletionRequest, SubmitUserDeletionResponse> call);
 
+        partial void Modify_ListSubpropertySyncConfigsApiCall(ref gaxgrpc::ApiCall<ListSubpropertySyncConfigsRequest, ListSubpropertySyncConfigsResponse> call);
+
+        partial void Modify_UpdateSubpropertySyncConfigApiCall(ref gaxgrpc::ApiCall<UpdateSubpropertySyncConfigRequest, SubpropertySyncConfig> call);
+
+        partial void Modify_GetSubpropertySyncConfigApiCall(ref gaxgrpc::ApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig> call);
+
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsAdminService client</summary>
@@ -22296,6 +22753,12 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteReportingDataAnnotationRequest(ref DeleteReportingDataAnnotationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SubmitUserDeletionRequest(ref SubmitUserDeletionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSubpropertySyncConfigsRequest(ref ListSubpropertySyncConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSubpropertySyncConfigRequest(ref UpdateSubpropertySyncConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSubpropertySyncConfigRequest(ref GetSubpropertySyncConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -26284,6 +26747,78 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_SubmitUserDeletionRequest(ref request, ref callSettings);
             return _callSubmitUserDeletion.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigs(ListSubpropertySyncConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubpropertySyncConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSubpropertySyncConfigsRequest, ListSubpropertySyncConfigsResponse, SubpropertySyncConfig>(_callListSubpropertySyncConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// List all Subproperty Sync Configs on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertySyncConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> ListSubpropertySyncConfigsAsync(ListSubpropertySyncConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubpropertySyncConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubpropertySyncConfigsRequest, ListSubpropertySyncConfigsResponse, SubpropertySyncConfig>(_callListSubpropertySyncConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SubpropertySyncConfig UpdateSubpropertySyncConfig(UpdateSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubpropertySyncConfigRequest(ref request, ref callSettings);
+            return _callUpdateSubpropertySyncConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubpropertySyncConfigRequest(ref request, ref callSettings);
+            return _callUpdateSubpropertySyncConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SubpropertySyncConfig GetSubpropertySyncConfig(GetSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubpropertySyncConfigRequest(ref request, ref callSettings);
+            return _callGetSubpropertySyncConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single Subproperty Sync Config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubpropertySyncConfigRequest(ref request, ref callSettings);
+            return _callGetSubpropertySyncConfig.Async(request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -26395,6 +26930,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListReportingDataAnnotationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSubpropertySyncConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -26621,6 +27160,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ReportingDataAnnotation> GetEnumerator() => ReportingDataAnnotations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSubpropertySyncConfigsResponse : gaxgrpc::IPageResponse<SubpropertySyncConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SubpropertySyncConfig> GetEnumerator() => SubpropertySyncConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -15584,6 +15584,7 @@ namespace GoogleCSharpSnippets
             {
                 Subproperty = new Property(),
                 SubpropertyEventFilter = new SubpropertyEventFilter(),
+                CustomDimensionAndMetricSynchronizationMode = SubpropertySyncConfig.Types.SynchronizationMode.Unspecified,
             };
             // Make the request
             ProvisionSubpropertyResponse response = analyticsAdminServiceClient.ProvisionSubproperty(request);
@@ -15602,6 +15603,7 @@ namespace GoogleCSharpSnippets
             {
                 Subproperty = new Property(),
                 SubpropertyEventFilter = new SubpropertyEventFilter(),
+                CustomDimensionAndMetricSynchronizationMode = SubpropertySyncConfig.Types.SynchronizationMode.Unspecified,
             };
             // Make the request
             ProvisionSubpropertyResponse response = await analyticsAdminServiceClient.ProvisionSubpropertyAsync(request);
@@ -16910,6 +16912,433 @@ namespace GoogleCSharpSnippets
             PropertyName name = PropertyName.FromProperty("[PROPERTY]");
             // Make the request
             SubmitUserDeletionResponse response = await analyticsAdminServiceClient.SubmitUserDeletionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigs</summary>
+        public void ListSubpropertySyncConfigsRequestObject()
+        {
+            // Snippet: ListSubpropertySyncConfigs(ListSubpropertySyncConfigsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertySyncConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertySyncConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigsAsync</summary>
+        public async Task ListSubpropertySyncConfigsRequestObjectAsync()
+        {
+            // Snippet: ListSubpropertySyncConfigsAsync(ListSubpropertySyncConfigsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertySyncConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertySyncConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigs</summary>
+        public void ListSubpropertySyncConfigs()
+        {
+            // Snippet: ListSubpropertySyncConfigs(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertySyncConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertySyncConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigsAsync</summary>
+        public async Task ListSubpropertySyncConfigsAsync()
+        {
+            // Snippet: ListSubpropertySyncConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertySyncConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertySyncConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigs</summary>
+        public void ListSubpropertySyncConfigsResourceNames()
+        {
+            // Snippet: ListSubpropertySyncConfigs(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertySyncConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertySyncConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigsAsync</summary>
+        public async Task ListSubpropertySyncConfigsResourceNamesAsync()
+        {
+            // Snippet: ListSubpropertySyncConfigsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertySyncConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertySyncConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfig</summary>
+        public void UpdateSubpropertySyncConfigRequestObject()
+        {
+            // Snippet: UpdateSubpropertySyncConfig(UpdateSubpropertySyncConfigRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSubpropertySyncConfigRequest request = new UpdateSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfig = new SubpropertySyncConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.UpdateSubpropertySyncConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfigAsync</summary>
+        public async Task UpdateSubpropertySyncConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest, CallSettings)
+            // Additional: UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubpropertySyncConfigRequest request = new UpdateSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfig = new SubpropertySyncConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.UpdateSubpropertySyncConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfig</summary>
+        public void UpdateSubpropertySyncConfig()
+        {
+            // Snippet: UpdateSubpropertySyncConfig(SubpropertySyncConfig, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertySyncConfig subpropertySyncConfig = new SubpropertySyncConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.UpdateSubpropertySyncConfig(subpropertySyncConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfigAsync</summary>
+        public async Task UpdateSubpropertySyncConfigAsync()
+        {
+            // Snippet: UpdateSubpropertySyncConfigAsync(SubpropertySyncConfig, FieldMask, CallSettings)
+            // Additional: UpdateSubpropertySyncConfigAsync(SubpropertySyncConfig, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertySyncConfig subpropertySyncConfig = new SubpropertySyncConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.UpdateSubpropertySyncConfigAsync(subpropertySyncConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfig</summary>
+        public void GetSubpropertySyncConfigRequestObject()
+        {
+            // Snippet: GetSubpropertySyncConfig(GetSubpropertySyncConfigRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetSubpropertySyncConfigRequest request = new GetSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfigName = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]"),
+            };
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.GetSubpropertySyncConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfigAsync</summary>
+        public async Task GetSubpropertySyncConfigRequestObjectAsync()
+        {
+            // Snippet: GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest, CallSettings)
+            // Additional: GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSubpropertySyncConfigRequest request = new GetSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfigName = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]"),
+            };
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfig</summary>
+        public void GetSubpropertySyncConfig()
+        {
+            // Snippet: GetSubpropertySyncConfig(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertySyncConfigs/[SUBPROPERTY_SYNC_CONFIG]";
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.GetSubpropertySyncConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfigAsync</summary>
+        public async Task GetSubpropertySyncConfigAsync()
+        {
+            // Snippet: GetSubpropertySyncConfigAsync(string, CallSettings)
+            // Additional: GetSubpropertySyncConfigAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertySyncConfigs/[SUBPROPERTY_SYNC_CONFIG]";
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfig</summary>
+        public void GetSubpropertySyncConfigResourceNames()
+        {
+            // Snippet: GetSubpropertySyncConfig(SubpropertySyncConfigName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertySyncConfigName name = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]");
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.GetSubpropertySyncConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfigAsync</summary>
+        public async Task GetSubpropertySyncConfigResourceNamesAsync()
+        {
+            // Snippet: GetSubpropertySyncConfigAsync(SubpropertySyncConfigName, CallSettings)
+            // Additional: GetSubpropertySyncConfigAsync(SubpropertySyncConfigName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertySyncConfigName name = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]");
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(name);
             // End snippet
         }
     }

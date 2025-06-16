@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             {
                 Subproperty = new Property(),
                 SubpropertyEventFilter = new SubpropertyEventFilter(),
+                CustomDimensionAndMetricSynchronizationMode = SubpropertySyncConfig.Types.SynchronizationMode.Unspecified,
             };
             // Make the request
             ProvisionSubpropertyResponse response = analyticsAdminServiceClient.ProvisionSubproperty(request);

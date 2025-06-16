@@ -529,6 +529,16 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest> __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest> __Marshaller_google_analytics_admin_v1alpha_ListSubpropertySyncConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse> __Marshaller_google_analytics_admin_v1alpha_ListSubpropertySyncConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertySyncConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> __Marshaller_google_analytics_admin_v1alpha_SubpropertySyncConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest> __Marshaller_google_analytics_admin_v1alpha_GetSubpropertySyncConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -1777,6 +1787,30 @@ namespace Google.Analytics.Admin.V1Alpha {
         "SubmitUserDeletion",
         __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionRequest,
         __Marshaller_google_analytics_admin_v1alpha_SubmitUserDeletionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse> __Method_ListSubpropertySyncConfigs = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSubpropertySyncConfigs",
+        __Marshaller_google_analytics_admin_v1alpha_ListSubpropertySyncConfigsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListSubpropertySyncConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> __Method_UpdateSubpropertySyncConfig = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSubpropertySyncConfig",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertySyncConfigRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertySyncConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> __Method_GetSubpropertySyncConfig = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSubpropertySyncConfig",
+        __Marshaller_google_analytics_admin_v1alpha_GetSubpropertySyncConfigRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertySyncConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -3775,6 +3809,42 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse> SubmitUserDeletion(global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all Subproperty Sync Configs on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse> ListSubpropertySyncConfigs(global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> UpdateSubpropertySyncConfig(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> GetSubpropertySyncConfig(global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -11772,6 +11842,150 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SubmitUserDeletion, null, options, request);
       }
+      /// <summary>
+      /// List all Subproperty Sync Configs on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse ListSubpropertySyncConfigs(global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubpropertySyncConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all Subproperty Sync Configs on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse ListSubpropertySyncConfigs(global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSubpropertySyncConfigs, null, options, request);
+      }
+      /// <summary>
+      /// List all Subproperty Sync Configs on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse> ListSubpropertySyncConfigsAsync(global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubpropertySyncConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all Subproperty Sync Configs on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse> ListSubpropertySyncConfigsAsync(global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSubpropertySyncConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig UpdateSubpropertySyncConfig(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubpropertySyncConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig UpdateSubpropertySyncConfig(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSubpropertySyncConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubpropertySyncConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> UpdateSubpropertySyncConfigAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSubpropertySyncConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig GetSubpropertySyncConfig(global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubpropertySyncConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig GetSubpropertySyncConfig(global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSubpropertySyncConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> GetSubpropertySyncConfigAsync(global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubpropertySyncConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single Subproperty Sync Config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig> GetSubpropertySyncConfigAsync(global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSubpropertySyncConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -11941,7 +12155,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_ListReportingDataAnnotations, serviceImpl.ListReportingDataAnnotations)
           .AddMethod(__Method_UpdateReportingDataAnnotation, serviceImpl.UpdateReportingDataAnnotation)
           .AddMethod(__Method_DeleteReportingDataAnnotation, serviceImpl.DeleteReportingDataAnnotation)
-          .AddMethod(__Method_SubmitUserDeletion, serviceImpl.SubmitUserDeletion).Build();
+          .AddMethod(__Method_SubmitUserDeletion, serviceImpl.SubmitUserDeletion)
+          .AddMethod(__Method_ListSubpropertySyncConfigs, serviceImpl.ListSubpropertySyncConfigs)
+          .AddMethod(__Method_UpdateSubpropertySyncConfig, serviceImpl.UpdateSubpropertySyncConfig)
+          .AddMethod(__Method_GetSubpropertySyncConfig, serviceImpl.GetSubpropertySyncConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -12107,6 +12324,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_UpdateReportingDataAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateReportingDataAnnotationRequest, global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation>(serviceImpl.UpdateReportingDataAnnotation));
       serviceBinder.AddMethod(__Method_DeleteReportingDataAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteReportingDataAnnotationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReportingDataAnnotation));
       serviceBinder.AddMethod(__Method_SubmitUserDeletion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionRequest, global::Google.Analytics.Admin.V1Alpha.SubmitUserDeletionResponse>(serviceImpl.SubmitUserDeletion));
+      serviceBinder.AddMethod(__Method_ListSubpropertySyncConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertySyncConfigsResponse>(serviceImpl.ListSubpropertySyncConfigs));
+      serviceBinder.AddMethod(__Method_UpdateSubpropertySyncConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig>(serviceImpl.UpdateSubpropertySyncConfig));
+      serviceBinder.AddMethod(__Method_GetSubpropertySyncConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSubpropertySyncConfigRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig>(serviceImpl.GetSubpropertySyncConfig));
     }
 
   }

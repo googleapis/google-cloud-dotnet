@@ -1655,4 +1655,28 @@ namespace Google.Analytics.Admin.V1Alpha
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetSubpropertySyncConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::SubpropertySyncConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::SubpropertySyncConfigName SubpropertySyncConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SubpropertySyncConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSubpropertySyncConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }
