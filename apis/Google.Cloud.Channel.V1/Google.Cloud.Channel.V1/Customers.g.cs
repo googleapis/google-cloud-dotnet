@@ -29,7 +29,7 @@ namespace Google.Cloud.Channel.V1 {
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUv",
             "Y2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
             "Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNz",
-            "LnByb3RvIu4ECghDdXN0b21lchIRCgRuYW1lGAEgASgJQgPgQQMSHQoQb3Jn",
+            "LnByb3RvIskGCghDdXN0b21lchIRCgRuYW1lGAEgASgJQgPgQQMSHQoQb3Jn",
             "X2Rpc3BsYXlfbmFtZRgCIAEoCUID4EECEjsKEm9yZ19wb3N0YWxfYWRkcmVz",
             "cxgDIAEoCzIaLmdvb2dsZS50eXBlLlBvc3RhbEFkZHJlc3NCA+BBAhJCChRw",
             "cmltYXJ5X2NvbnRhY3RfaW5mbxgEIAEoCzIkLmdvb2dsZS5jbG91ZC5jaGFu",
@@ -41,18 +41,23 @@ namespace Google.Cloud.Channel.V1 {
             "KAlCA+BBARJMChNjbG91ZF9pZGVudGl0eV9pbmZvGAwgASgLMiouZ29vZ2xl",
             "LmNsb3VkLmNoYW5uZWwudjEuQ2xvdWRJZGVudGl0eUluZm9CA+BBAxIaChJj",
             "aGFubmVsX3BhcnRuZXJfaWQYDSABKAkSGwoOY29ycmVsYXRpb25faWQYDiAB",
-            "KAlCA+BBATpS6kFPCiRjbG91ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vQ3Vz",
-            "dG9tZXISJ2FjY291bnRzL3thY2NvdW50fS9jdXN0b21lcnMve2N1c3RvbWVy",
-            "fSKBAQoLQ29udGFjdEluZm8SEgoKZmlyc3RfbmFtZRgBIAEoCRIRCglsYXN0",
-            "X25hbWUYAiABKAkSGQoMZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSDQoFZW1h",
-            "aWwYBSABKAkSEgoFdGl0bGUYBiABKAlCA+BBARINCgVwaG9uZRgHIAEoCUJm",
-            "Chtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCDkN1c3RvbWVyc1Byb3Rv",
-            "UAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vY2hhbm5lbC9hcGl2MS9jaGFubmVs",
-            "cGI7Y2hhbm5lbHBiYgZwcm90bzM="));
+            "KAlCA+BBARJjChpjdXN0b21lcl9hdHRlc3RhdGlvbl9zdGF0ZRgQIAEoDjI6",
+            "Lmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkN1c3RvbWVyLkN1c3RvbWVyQXR0",
+            "ZXN0YXRpb25TdGF0ZUID4EEBInQKGEN1c3RvbWVyQXR0ZXN0YXRpb25TdGF0",
+            "ZRIqCiZDVVNUT01FUl9BVFRFU1RBVElPTl9TVEFURV9VTlNQRUNJRklFRBAA",
+            "EgoKBkVYRU1QVBABEiAKHE5PTl9FWEVNUFRfQU5EX0lORk9fVkVSSUZJRUQQ",
+            "AjpS6kFPCiRjbG91ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vQ3VzdG9tZXIS",
+            "J2FjY291bnRzL3thY2NvdW50fS9jdXN0b21lcnMve2N1c3RvbWVyfSKBAQoL",
+            "Q29udGFjdEluZm8SEgoKZmlyc3RfbmFtZRgBIAEoCRIRCglsYXN0X25hbWUY",
+            "AiABKAkSGQoMZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSDQoFZW1haWwYBSAB",
+            "KAkSEgoFdGl0bGUYBiABKAlCA+BBARINCgVwaG9uZRgHIAEoCUJmChtjb20u",
+            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCDkN1c3RvbWVyc1Byb3RvUAFaNWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vY2hhbm5lbC9hcGl2MS9jaGFubmVscGI7Y2hh",
+            "bm5lbHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Customer), global::Google.Cloud.Channel.V1.Customer.Parser, new[]{ "Name", "OrgDisplayName", "OrgPostalAddress", "PrimaryContactInfo", "AlternateEmail", "Domain", "CreateTime", "UpdateTime", "CloudIdentityId", "LanguageCode", "CloudIdentityInfo", "ChannelPartnerId", "CorrelationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Customer), global::Google.Cloud.Channel.V1.Customer.Parser, new[]{ "Name", "OrgDisplayName", "OrgPostalAddress", "PrimaryContactInfo", "AlternateEmail", "Domain", "CreateTime", "UpdateTime", "CloudIdentityId", "LanguageCode", "CloudIdentityInfo", "ChannelPartnerId", "CorrelationId", "CustomerAttestationState" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ContactInfo), global::Google.Cloud.Channel.V1.ContactInfo.Parser, new[]{ "FirstName", "LastName", "DisplayName", "Email", "Title", "Phone" }, null, null, null, null)
           }));
     }
@@ -111,6 +116,7 @@ namespace Google.Cloud.Channel.V1 {
       cloudIdentityInfo_ = other.cloudIdentityInfo_ != null ? other.cloudIdentityInfo_.Clone() : null;
       channelPartnerId_ = other.channelPartnerId_;
       correlationId_ = other.correlationId_;
+      customerAttestationState_ = other.customerAttestationState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -330,6 +336,22 @@ namespace Google.Cloud.Channel.V1 {
       }
     }
 
+    /// <summary>Field number for the "customer_attestation_state" field.</summary>
+    public const int CustomerAttestationStateFieldNumber = 16;
+    private global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState customerAttestationState_ = global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified;
+    /// <summary>
+    /// Optional. Indicate whether a customer is attesting about the correctness of
+    /// provided information. Only required if creating a GCP Entitlement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState CustomerAttestationState {
+      get { return customerAttestationState_; }
+      set {
+        customerAttestationState_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -358,6 +380,7 @@ namespace Google.Cloud.Channel.V1 {
       if (!object.Equals(CloudIdentityInfo, other.CloudIdentityInfo)) return false;
       if (ChannelPartnerId != other.ChannelPartnerId) return false;
       if (CorrelationId != other.CorrelationId) return false;
+      if (CustomerAttestationState != other.CustomerAttestationState) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -378,6 +401,7 @@ namespace Google.Cloud.Channel.V1 {
       if (cloudIdentityInfo_ != null) hash ^= CloudIdentityInfo.GetHashCode();
       if (ChannelPartnerId.Length != 0) hash ^= ChannelPartnerId.GetHashCode();
       if (CorrelationId.Length != 0) hash ^= CorrelationId.GetHashCode();
+      if (CustomerAttestationState != global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified) hash ^= CustomerAttestationState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -448,6 +472,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(114);
         output.WriteString(CorrelationId);
       }
+      if (CustomerAttestationState != global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) CustomerAttestationState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -510,6 +538,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(114);
         output.WriteString(CorrelationId);
       }
+      if (CustomerAttestationState != global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) CustomerAttestationState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -558,6 +590,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (CorrelationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CorrelationId);
+      }
+      if (CustomerAttestationState != global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CustomerAttestationState);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -624,6 +659,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (other.CorrelationId.Length != 0) {
         CorrelationId = other.CorrelationId;
+      }
+      if (other.CustomerAttestationState != global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified) {
+        CustomerAttestationState = other.CustomerAttestationState;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -705,6 +743,10 @@ namespace Google.Cloud.Channel.V1 {
           }
           case 114: {
             CorrelationId = input.ReadString();
+            break;
+          }
+          case 128: {
+            CustomerAttestationState = (global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState) input.ReadEnum();
             break;
           }
         }
@@ -789,10 +831,43 @@ namespace Google.Cloud.Channel.V1 {
             CorrelationId = input.ReadString();
             break;
           }
+          case 128: {
+            CustomerAttestationState = (global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Customer message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The enum represents whether a customer belongs to public sector
+      /// </summary>
+      public enum CustomerAttestationState {
+        /// <summary>
+        /// Default value if not set yet
+        /// </summary>
+        [pbr::OriginalName("CUSTOMER_ATTESTATION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Customer is exempt from attesting based on exemption list at
+        /// https://cloud.google.com/terms/direct-tos-exemptions. Contact information
+        /// of customer will be mandatory.
+        /// </summary>
+        [pbr::OriginalName("EXEMPT")] Exempt = 1,
+        /// <summary>
+        /// Customer is not exempt and has verified the information provided is
+        /// correct. Contact information of customer will be mandatory.
+        /// </summary>
+        [pbr::OriginalName("NON_EXEMPT_AND_INFO_VERIFIED")] NonExemptAndInfoVerified = 2,
+      }
+
+    }
+    #endregion
 
   }
 
