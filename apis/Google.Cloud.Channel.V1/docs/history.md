@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.15.0, released 2025-06-16
+
+### New features
+
+- A new enum `CustomerAttestationState` is added
+- A new field `customer_attestation_state` is added to message `.google.cloud.channel.v1.Customer`
+
 ## Version 2.14.0, released 2024-10-07
 
 ### New features
