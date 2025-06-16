@@ -4197,6 +4197,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.ConfigDelivery.V1Alpha/Google.Cloud.ConfigDelivery.V1Alpha"
             ]
+        },
+        {
+            "id": "Google.Cloud.Geminidataanalytics.V1Alpha",
+            "nextVersion": "1.0.0-alpha01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/geminidataanalytics/v1alpha"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Geminidataanalytics.V1Alpha/Google.Cloud.Geminidataanalytics.V1Alpha"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [

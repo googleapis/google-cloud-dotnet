@@ -2870,6 +2870,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Geminidataanalytics.V1Alpha",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data Analytics API with Gemini",
+      "productUrl": "https://cloud.google.com/gemini/docs/conversational-analytics-api/overview",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/geminidataanalytics/v1alpha",
+      "includeCommonResourcesProto": true,
+      "shortName": "geminidataanalytics",
+      "serviceConfigFile": "geminidataanalytics_v1alpha.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.GkeBackup.V1",
       "version": "2.8.0",
       "type": "grpc",
