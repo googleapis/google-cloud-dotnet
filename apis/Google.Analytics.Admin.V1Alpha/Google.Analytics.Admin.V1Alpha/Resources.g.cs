@@ -153,14 +153,14 @@ namespace Google.Analytics.Admin.V1Alpha {
             "ZRgDIAEoDjIpLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY3Rv",
             "clR5cGUSGAoQdXNlcl9hY3Rvcl9lbWFpbBgEIAEoCRIYChBjaGFuZ2VzX2Zp",
             "bHRlcmVkGAUgASgIEkQKB2NoYW5nZXMYBiADKAsyMy5nb29nbGUuYW5hbHl0",
-            "aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZSL8EwoTQ2hh",
+            "aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZSLWFAoTQ2hh",
             "bmdlSGlzdG9yeUNoYW5nZRIQCghyZXNvdXJjZRgBIAEoCRI6CgZhY3Rpb24Y",
             "AiABKA4yKi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWN0aW9u",
             "VHlwZRJpChZyZXNvdXJjZV9iZWZvcmVfY2hhbmdlGAMgASgLMkkuZ29vZ2xl",
             "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFuZ2Uu",
             "Q2hhbmdlSGlzdG9yeVJlc291cmNlEmgKFXJlc291cmNlX2FmdGVyX2NoYW5n",
             "ZRgEIAEoCzJJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DaGFu",
-            "Z2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhpc3RvcnlSZXNvdXJjZRrBEQoVQ2hh",
+            "Z2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhpc3RvcnlSZXNvdXJjZRqbEgoVQ2hh",
             "bmdlSGlzdG9yeVJlc291cmNlEjoKB2FjY291bnQYASABKAsyJy5nb29nbGUu",
             "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWNjb3VudEgAEjwKCHByb3BlcnR5",
             "GAIgASgLMiguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlByb3Bl",
@@ -210,7 +210,9 @@ namespace Google.Analytics.Admin.V1Alpha {
             "aWMYHyABKAsyMC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2Fs",
             "Y3VsYXRlZE1ldHJpY0gAElwKGXJlcG9ydGluZ19kYXRhX2Fubm90YXRpb24Y",
             "ICABKAsyNy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUmVwb3J0",
-            "aW5nRGF0YUFubm90YXRpb25IAEIKCghyZXNvdXJjZSLfAwodRGlzcGxheVZp",
+            "aW5nRGF0YUFubm90YXRpb25IABJYChdzdWJwcm9wZXJ0eV9zeW5jX2NvbmZp",
+            "ZxghIAEoCzI1Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TdWJw",
+            "cm9wZXJ0eVN5bmNDb25maWdIAEIKCghyZXNvdXJjZSLfAwodRGlzcGxheVZp",
             "ZGVvMzYwQWR2ZXJ0aXNlckxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhoKDWFk",
             "dmVydGlzZXJfaWQYAiABKAlCA+BBBRIkChdhZHZlcnRpc2VyX2Rpc3BsYXlf",
             "bmFtZRgDIAEoCUID4EEDEj8KG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxl",
@@ -442,65 +444,76 @@ namespace Google.Analytics.Admin.V1Alpha {
             "cnRpbmdEYXRhQW5ub3RhdGlvbhJKcHJvcGVydGllcy97cHJvcGVydHl9L3Jl",
             "cG9ydGluZ0RhdGFBbm5vdGF0aW9ucy97cmVwb3J0aW5nX2RhdGFfYW5ub3Rh",
             "dGlvbn0qGHJlcG9ydGluZ0RhdGFBbm5vdGF0aW9uczIXcmVwb3J0aW5nRGF0",
-            "YUFubm90YXRpb25CCAoGdGFyZ2V0KqoEChBJbmR1c3RyeUNhdGVnb3J5EiEK",
-            "HUlORFVTVFJZX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASDgoKQVVUT01PVElW",
-            "RRABEiMKH0JVU0lORVNTX0FORF9JTkRVU1RSSUFMX01BUktFVFMQAhILCgdG",
-            "SU5BTkNFEAMSDgoKSEVBTFRIQ0FSRRAEEg4KClRFQ0hOT0xPR1kQBRIKCgZU",
-            "UkFWRUwQBhIJCgVPVEhFUhAHEhoKFkFSVFNfQU5EX0VOVEVSVEFJTk1FTlQQ",
-            "CBIWChJCRUFVVFlfQU5EX0ZJVE5FU1MQCRIYChRCT09LU19BTkRfTElURVJB",
-            "VFVSRRAKEhIKDkZPT0RfQU5EX0RSSU5LEAsSCQoFR0FNRVMQDBIXChNIT0JC",
-            "SUVTX0FORF9MRUlTVVJFEA0SEwoPSE9NRV9BTkRfR0FSREVOEA4SGAoUSU5U",
-            "RVJORVRfQU5EX1RFTEVDT00QDxIWChJMQVdfQU5EX0dPVkVSTk1FTlQQEBII",
-            "CgRORVdTEBESFgoST05MSU5FX0NPTU1VTklUSUVTEBISFgoSUEVPUExFX0FO",
-            "RF9TT0NJRVRZEBMSFAoQUEVUU19BTkRfQU5JTUFMUxAUEg8KC1JFQUxfRVNU",
-            "QVRFEBUSDQoJUkVGRVJFTkNFEBYSCwoHU0NJRU5DRRAXEgoKBlNQT1JUUxAY",
-            "EhYKEkpPQlNfQU5EX0VEVUNBVElPThAZEgwKCFNIT1BQSU5HEBoqZgoMU2Vy",
-            "dmljZUxldmVsEh0KGVNFUlZJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIdChlH",
-            "T09HTEVfQU5BTFlUSUNTX1NUQU5EQVJEEAESGAoUR09PR0xFX0FOQUxZVElD",
-            "U18zNjAQAipKCglBY3RvclR5cGUSGgoWQUNUT1JfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEggKBFVTRVIQARIKCgZTWVNURU0QAhILCgdTVVBQT1JUEAMqUAoKQWN0",
-            "aW9uVHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEgsKB0NSRUFU",
-            "RUQQARILCgdVUERBVEVEEAISCwoHREVMRVRFRBADKuMFChlDaGFuZ2VIaXN0",
-            "b3J5UmVzb3VyY2VUeXBlEiwKKENIQU5HRV9ISVNUT1JZX1JFU09VUkNFX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABILCgdBQ0NPVU5UEAESDAoIUFJPUEVSVFkQAhIR",
-            "Cg1GSVJFQkFTRV9MSU5LEAYSEwoPR09PR0xFX0FEU19MSU5LEAcSGwoXR09P",
-            "R0xFX1NJR05BTFNfU0VUVElOR1MQCBIUChBDT05WRVJTSU9OX0VWRU5UEAkS",
-            "HwobTUVBU1VSRU1FTlRfUFJPVE9DT0xfU0VDUkVUEAoSFAoQQ1VTVE9NX0RJ",
-            "TUVOU0lPThALEhEKDUNVU1RPTV9NRVRSSUMQDBIbChdEQVRBX1JFVEVOVElP",
-            "Tl9TRVRUSU5HUxANEiUKIURJU1BMQVlfVklERU9fMzYwX0FEVkVSVElTRVJf",
-            "TElOSxAOEi4KKkRJU1BMQVlfVklERU9fMzYwX0FEVkVSVElTRVJfTElOS19Q",
-            "Uk9QT1NBTBAPEhcKE1NFQVJDSF9BRFNfMzYwX0xJTksQEBIPCgtEQVRBX1NU",
-            "UkVBTRASEhgKFEFUVFJJQlVUSU9OX1NFVFRJTkdTEBQSFQoRRVhQQU5ERURf",
-            "REFUQV9TRVQQFRIRCg1DSEFOTkVMX0dST1VQEBYSEQoNQklHUVVFUllfTElO",
-            "SxAXEiEKHUVOSEFOQ0VEX01FQVNVUkVNRU5UX1NFVFRJTkdTEBgSGwoXREFU",
-            "QV9SRURBQ1RJT05fU0VUVElOR1MQGRInCiNTS0FETkVUV09SS19DT05WRVJT",
-            "SU9OX1ZBTFVFX1NDSEVNQRAaEhAKDEFEU0VOU0VfTElOSxAbEgwKCEFVRElF",
-            "TkNFEBwSFQoRRVZFTlRfQ1JFQVRFX1JVTEUQHRINCglLRVlfRVZFTlQQHhIV",
-            "ChFDQUxDVUxBVEVEX01FVFJJQxAfEh0KGVJFUE9SVElOR19EQVRBX0FOTk9U",
-            "QVRJT04QICpzChJHb29nbGVTaWduYWxzU3RhdGUSJAogR09PR0xFX1NJR05B",
-            "TFNfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZHT09HTEVfU0lHTkFMU19FTkFC",
-            "TEVEEAESGwoXR09PR0xFX1NJR05BTFNfRElTQUJMRUQQAiqOAQoUR29vZ2xl",
-            "U2lnbmFsc0NvbnNlbnQSJgoiR09PR0xFX1NJR05BTFNfQ09OU0VOVF9VTlNQ",
-            "RUNJRklFRBAAEiQKIEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfQ09OU0VOVEVE",
-            "EAISKAokR09PR0xFX1NJR05BTFNfQ09OU0VOVF9OT1RfQ09OU0VOVEVEEAEq",
-            "ewodTGlua1Byb3Bvc2FsSW5pdGlhdGluZ1Byb2R1Y3QSMAosTElOS19QUk9Q",
-            "T1NBTF9JTklUSUFUSU5HX1BST0RVQ1RfVU5TUEVDSUZJRUQQABIUChBHT09H",
-            "TEVfQU5BTFlUSUNTEAESEgoOTElOS0VEX1BST0RVQ1QQAirEAQoRTGlua1By",
-            "b3Bvc2FsU3RhdGUSIwofTElOS19QUk9QT1NBTF9TVEFURV9VTlNQRUNJRklF",
-            "RBAAEikKJUFXQUlUSU5HX1JFVklFV19GUk9NX0dPT0dMRV9BTkFMWVRJQ1MQ",
-            "ARInCiNBV0FJVElOR19SRVZJRVdfRlJPTV9MSU5LRURfUFJPRFVDVBACEg0K",
-            "CVdJVEhEUkFXThADEgwKCERFQ0xJTkVEEAQSCwoHRVhQSVJFRBAFEgwKCE9C",
-            "U09MRVRFEAYqggEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEh0KGVBS",
-            "T1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQAhIYChRQUk9QRVJUWV9UWVBFX1JP",
-            "TExVUBADKnEKC0NvYXJzZVZhbHVlEhwKGENPQVJTRV9WQUxVRV9VTlNQRUNJ",
-            "RklFRBAAEhQKEENPQVJTRV9WQUxVRV9MT1cQARIXChNDT0FSU0VfVkFMVUVf",
-            "TUVESVVNEAISFQoRQ09BUlNFX1ZBTFVFX0hJR0gQA0LLAQoiY29tLmdvb2ds",
-            "ZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIOUmVzb3VyY2VzUHJvdG9QAVo+",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFseXRpY3MvYWRtaW4vYXBpdjFhbHBo",
-            "YS9hZG1pbnBiO2FkbWlucGLqQVIKMm1hcmtldGluZ3BsYXRmb3JtYWRtaW4u",
-            "Z29vZ2xlYXBpcy5jb20vT3JnYW5pemF0aW9uEhxvcmdhbml6YXRpb25zL3tv",
-            "cmdhbml6YXRpb259YgZwcm90bzM="));
+            "YUFubm90YXRpb25CCAoGdGFyZ2V0ItIDChVTdWJwcm9wZXJ0eVN5bmNDb25m",
+            "aWcSFAoEbmFtZRgBIAEoCUIG4EEI4EEDEiEKEWFwcGx5X3RvX3Byb3BlcnR5",
+            "GAIgASgJQgbgQQXgQQMSfQolY3VzdG9tX2RpbWVuc2lvbl9hbmRfbWV0cmlj",
+            "X3N5bmNfbW9kZRgDIAEoDjJJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
+            "bHBoYS5TdWJwcm9wZXJ0eVN5bmNDb25maWcuU3luY2hyb25pemF0aW9uTW9k",
+            "ZUID4EECIk4KE1N5bmNocm9uaXphdGlvbk1vZGUSJAogU1lOQ0hST05JWkFU",
+            "SU9OX01PREVfVU5TUEVDSUZJRUQQABIICgROT05FEAESBwoDQUxMEAI6sAHq",
+            "QawBCjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9TdWJwcm9wZXJ0",
+            "eVN5bmNDb25maWcSRnByb3BlcnRpZXMve3Byb3BlcnR5fS9zdWJwcm9wZXJ0",
+            "eVN5bmNDb25maWdzL3tzdWJwcm9wZXJ0eV9zeW5jX2NvbmZpZ30qFnN1YnBy",
+            "b3BlcnR5U3luY0NvbmZpZ3MyFXN1YnByb3BlcnR5U3luY0NvbmZpZyqqBAoQ",
+            "SW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09SWV9VTlNQRUNJ",
+            "RklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19BTkRfSU5EVVNU",
+            "UklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxUSENBUkUQBBIO",
+            "CgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQBxIaChZBUlRT",
+            "X0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9GSVRORVNTEAkS",
+            "GAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FORF9EUklOSxAL",
+            "EgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRANEhMKD0hPTUVf",
+            "QU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09NEA8SFgoSTEFX",
+            "X0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElORV9DT01NVU5J",
+            "VElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBFVFNfQU5EX0FO",
+            "SU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5DRRAWEgsKB1ND",
+            "SUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVDQVRJT04QGRIM",
+            "CghTSE9QUElORxAaKmYKDFNlcnZpY2VMZXZlbBIdChlTRVJWSUNFX0xFVkVM",
+            "X1VOU1BFQ0lGSUVEEAASHQoZR09PR0xFX0FOQUxZVElDU19TVEFOREFSRBAB",
+            "EhgKFEdPT0dMRV9BTkFMWVRJQ1NfMzYwEAIqSgoJQWN0b3JUeXBlEhoKFkFD",
+            "VE9SX1RZUEVfVU5TUEVDSUZJRUQQABIICgRVU0VSEAESCgoGU1lTVEVNEAIS",
+            "CwoHU1VQUE9SVBADKlAKCkFjdGlvblR5cGUSGwoXQUNUSU9OX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoHVVBEQVRFRBACEgsKB0RFTEVU",
+            "RUQQAyqABgoZQ2hhbmdlSGlzdG9yeVJlc291cmNlVHlwZRIsCihDSEFOR0Vf",
+            "SElTVE9SWV9SRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQUNDT1VO",
+            "VBABEgwKCFBST1BFUlRZEAISEQoNRklSRUJBU0VfTElOSxAGEhMKD0dPT0dM",
+            "RV9BRFNfTElOSxAHEhsKF0dPT0dMRV9TSUdOQUxTX1NFVFRJTkdTEAgSFAoQ",
+            "Q09OVkVSU0lPTl9FVkVOVBAJEh8KG01FQVNVUkVNRU5UX1BST1RPQ09MX1NF",
+            "Q1JFVBAKEhQKEENVU1RPTV9ESU1FTlNJT04QCxIRCg1DVVNUT01fTUVUUklD",
+            "EAwSGwoXREFUQV9SRVRFTlRJT05fU0VUVElOR1MQDRIlCiFESVNQTEFZX1ZJ",
+            "REVPXzM2MF9BRFZFUlRJU0VSX0xJTksQDhIuCipESVNQTEFZX1ZJREVPXzM2",
+            "MF9BRFZFUlRJU0VSX0xJTktfUFJPUE9TQUwQDxIXChNTRUFSQ0hfQURTXzM2",
+            "MF9MSU5LEBASDwoLREFUQV9TVFJFQU0QEhIYChRBVFRSSUJVVElPTl9TRVRU",
+            "SU5HUxAUEhUKEUVYUEFOREVEX0RBVEFfU0VUEBUSEQoNQ0hBTk5FTF9HUk9V",
+            "UBAWEhEKDUJJR1FVRVJZX0xJTksQFxIhCh1FTkhBTkNFRF9NRUFTVVJFTUVO",
+            "VF9TRVRUSU5HUxAYEhsKF0RBVEFfUkVEQUNUSU9OX1NFVFRJTkdTEBkSJwoj",
+            "U0tBRE5FVFdPUktfQ09OVkVSU0lPTl9WQUxVRV9TQ0hFTUEQGhIQCgxBRFNF",
+            "TlNFX0xJTksQGxIMCghBVURJRU5DRRAcEhUKEUVWRU5UX0NSRUFURV9SVUxF",
+            "EB0SDQoJS0VZX0VWRU5UEB4SFQoRQ0FMQ1VMQVRFRF9NRVRSSUMQHxIdChlS",
+            "RVBPUlRJTkdfREFUQV9BTk5PVEFUSU9OECASGwoXU1VCUFJPUEVSVFlfU1lO",
+            "Q19DT05GSUcQISpzChJHb29nbGVTaWduYWxzU3RhdGUSJAogR09PR0xFX1NJ",
+            "R05BTFNfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZHT09HTEVfU0lHTkFMU19F",
+            "TkFCTEVEEAESGwoXR09PR0xFX1NJR05BTFNfRElTQUJMRUQQAiqOAQoUR29v",
+            "Z2xlU2lnbmFsc0NvbnNlbnQSJgoiR09PR0xFX1NJR05BTFNfQ09OU0VOVF9V",
+            "TlNQRUNJRklFRBAAEiQKIEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfQ09OU0VO",
+            "VEVEEAISKAokR09PR0xFX1NJR05BTFNfQ09OU0VOVF9OT1RfQ09OU0VOVEVE",
+            "EAEqewodTGlua1Byb3Bvc2FsSW5pdGlhdGluZ1Byb2R1Y3QSMAosTElOS19Q",
+            "Uk9QT1NBTF9JTklUSUFUSU5HX1BST0RVQ1RfVU5TUEVDSUZJRUQQABIUChBH",
+            "T09HTEVfQU5BTFlUSUNTEAESEgoOTElOS0VEX1BST0RVQ1QQAirEAQoRTGlu",
+            "a1Byb3Bvc2FsU3RhdGUSIwofTElOS19QUk9QT1NBTF9TVEFURV9VTlNQRUNJ",
+            "RklFRBAAEikKJUFXQUlUSU5HX1JFVklFV19GUk9NX0dPT0dMRV9BTkFMWVRJ",
+            "Q1MQARInCiNBV0FJVElOR19SRVZJRVdfRlJPTV9MSU5LRURfUFJPRFVDVBAC",
+            "Eg0KCVdJVEhEUkFXThADEgwKCERFQ0xJTkVEEAQSCwoHRVhQSVJFRBAFEgwK",
+            "CE9CU09MRVRFEAYqggEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEh0K",
+            "GVBST1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQAhIYChRQUk9QRVJUWV9UWVBF",
+            "X1JPTExVUBADKnEKC0NvYXJzZVZhbHVlEhwKGENPQVJTRV9WQUxVRV9VTlNQ",
+            "RUNJRklFRBAAEhQKEENPQVJTRV9WQUxVRV9MT1cQARIXChNDT0FSU0VfVkFM",
+            "VUVfTUVESVVNEAISFQoRQ09BUlNFX1ZBTFVFX0hJR0gQA0LLAQoiY29tLmdv",
+            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIOUmVzb3VyY2VzUHJvdG9Q",
+            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFseXRpY3MvYWRtaW4vYXBpdjFh",
+            "bHBoYS9hZG1pbnBiO2FkbWlucGLqQVIKMm1hcmtldGluZ3BsYXRmb3JtYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vT3JnYW5pemF0aW9uEhxvcmdhbml6YXRpb25z",
+            "L3tvcmdhbml6YXRpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.AudienceReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ChannelGroupReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), typeof(global::Google.Analytics.Admin.V1Alpha.CoarseValue), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -521,7 +534,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionValues), global::Google.Analytics.Admin.V1Alpha.ConversionValues.Parser, new[]{ "DisplayName", "FineValue", "CoarseValue", "EventMappings", "LockEnabled" }, new[]{ "FineValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EventMapping), global::Google.Analytics.Admin.V1Alpha.EventMapping.Parser, new[]{ "EventName", "MinEventCount", "MaxEventCount", "MinEventValue", "MaxEventValue" }, new[]{ "MinEventCount", "MaxEventCount", "MinEventValue", "MaxEventValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "SearchAds360Link", "DataStream", "AttributionSettings", "ExpandedDataSet", "ChannelGroup", "BigqueryLink", "EnhancedMeasurementSettings", "DataRedactionSettings", "SkadnetworkConversionValueSchema", "AdsenseLink", "Audience", "EventCreateRule", "KeyEvent", "CalculatedMetric", "ReportingDataAnnotation" }, new[]{ "Resource" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "SearchAds360Link", "DataStream", "AttributionSettings", "ExpandedDataSet", "ChannelGroup", "BigqueryLink", "EnhancedMeasurementSettings", "DataRedactionSettings", "SkadnetworkConversionValueSchema", "AdsenseLink", "Audience", "EventCreateRule", "KeyEvent", "CalculatedMetric", "ReportingDataAnnotation", "SubpropertySyncConfig" }, new[]{ "Resource" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink.Parser, new[]{ "Name", "AdvertiserId", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal.Parser, new[]{ "Name", "AdvertiserId", "LinkProposalStatusDetails", "AdvertiserDisplayName", "ValidationEmail", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.SearchAds360Link), global::Google.Analytics.Admin.V1Alpha.SearchAds360Link.Parser, new[]{ "Name", "AdvertiserId", "CampaignDataSharingEnabled", "CostDataSharingEnabled", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "SiteStatsSharingEnabled" }, null, null, null, null),
@@ -541,7 +554,8 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings), global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings.Parser, new[]{ "Name", "EmailRedactionEnabled", "QueryParameterRedactionEnabled", "QueryParameterKeys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AdSenseLink), global::Google.Analytics.Admin.V1Alpha.AdSenseLink.Parser, new[]{ "Name", "AdClientCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink), global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink.Parser, new[]{ "Name", "SourceProperty" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation), global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Parser, new[]{ "AnnotationDate", "AnnotationDateRange", "Name", "Title", "Description", "Color", "SystemGenerated" }, new[]{ "Target" }, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Types.Color) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Types.DateRange), global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Types.DateRange.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation), global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Parser, new[]{ "AnnotationDate", "AnnotationDateRange", "Name", "Title", "Description", "Color", "SystemGenerated" }, new[]{ "Target" }, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Types.Color) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Types.DateRange), global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation.Types.DateRange.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig), global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Parser, new[]{ "Name", "ApplyToProperty", "CustomDimensionAndMetricSyncMode" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode) }, null, null)
           }));
     }
     #endregion
@@ -841,6 +855,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// ReportingDataAnnotation resource
     /// </summary>
     [pbr::OriginalName("REPORTING_DATA_ANNOTATION")] ReportingDataAnnotation = 32,
+    /// <summary>
+    /// SubpropertySyncConfig resource
+    /// </summary>
+    [pbr::OriginalName("SUBPROPERTY_SYNC_CONFIG")] SubpropertySyncConfig = 33,
   }
 
   /// <summary>
@@ -8194,6 +8212,9 @@ namespace Google.Analytics.Admin.V1Alpha {
             case ResourceOneofCase.ReportingDataAnnotation:
               ReportingDataAnnotation = other.ReportingDataAnnotation.Clone();
               break;
+            case ResourceOneofCase.SubpropertySyncConfig:
+              SubpropertySyncConfig = other.SubpropertySyncConfig.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -8613,6 +8634,21 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "subproperty_sync_config" field.</summary>
+        public const int SubpropertySyncConfigFieldNumber = 33;
+        /// <summary>
+        /// A snapshot of a SubpropertySyncConfig resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig SubpropertySyncConfig {
+          get { return resourceCase_ == ResourceOneofCase.SubpropertySyncConfig ? (global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.SubpropertySyncConfig;
+          }
+        }
+
         private object resource_;
         /// <summary>Enum of possible cases for the "resource" oneof.</summary>
         public enum ResourceOneofCase {
@@ -8644,6 +8680,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           KeyEvent = 30,
           CalculatedMetric = 31,
           ReportingDataAnnotation = 32,
+          SubpropertySyncConfig = 33,
         }
         private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8701,6 +8738,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (!object.Equals(KeyEvent, other.KeyEvent)) return false;
           if (!object.Equals(CalculatedMetric, other.CalculatedMetric)) return false;
           if (!object.Equals(ReportingDataAnnotation, other.ReportingDataAnnotation)) return false;
+          if (!object.Equals(SubpropertySyncConfig, other.SubpropertySyncConfig)) return false;
           if (ResourceCase != other.ResourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -8736,6 +8774,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.KeyEvent) hash ^= KeyEvent.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.CalculatedMetric) hash ^= CalculatedMetric.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.ReportingDataAnnotation) hash ^= ReportingDataAnnotation.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.SubpropertySyncConfig) hash ^= SubpropertySyncConfig.GetHashCode();
           hash ^= (int) resourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -8863,6 +8902,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(130, 2);
             output.WriteMessage(ReportingDataAnnotation);
           }
+          if (resourceCase_ == ResourceOneofCase.SubpropertySyncConfig) {
+            output.WriteRawTag(138, 2);
+            output.WriteMessage(SubpropertySyncConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -8981,6 +9024,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(130, 2);
             output.WriteMessage(ReportingDataAnnotation);
           }
+          if (resourceCase_ == ResourceOneofCase.SubpropertySyncConfig) {
+            output.WriteRawTag(138, 2);
+            output.WriteMessage(SubpropertySyncConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -9071,6 +9118,9 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           if (resourceCase_ == ResourceOneofCase.ReportingDataAnnotation) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReportingDataAnnotation);
+          }
+          if (resourceCase_ == ResourceOneofCase.SubpropertySyncConfig) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(SubpropertySyncConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -9246,6 +9296,12 @@ namespace Google.Analytics.Admin.V1Alpha {
                 ReportingDataAnnotation = new global::Google.Analytics.Admin.V1Alpha.ReportingDataAnnotation();
               }
               ReportingDataAnnotation.MergeFrom(other.ReportingDataAnnotation);
+              break;
+            case ResourceOneofCase.SubpropertySyncConfig:
+              if (SubpropertySyncConfig == null) {
+                SubpropertySyncConfig = new global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig();
+              }
+              SubpropertySyncConfig.MergeFrom(other.SubpropertySyncConfig);
               break;
           }
 
@@ -9507,6 +9563,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 ReportingDataAnnotation = subBuilder;
                 break;
               }
+              case 266: {
+                global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig subBuilder = new global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig();
+                if (resourceCase_ == ResourceOneofCase.SubpropertySyncConfig) {
+                  subBuilder.MergeFrom(SubpropertySyncConfig);
+                }
+                input.ReadMessage(subBuilder);
+                SubpropertySyncConfig = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -9763,6 +9828,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 }
                 input.ReadMessage(subBuilder);
                 ReportingDataAnnotation = subBuilder;
+                break;
+              }
+              case 266: {
+                global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig subBuilder = new global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig();
+                if (resourceCase_ == ResourceOneofCase.SubpropertySyncConfig) {
+                  subBuilder.MergeFrom(SubpropertySyncConfig);
+                }
+                input.ReadMessage(subBuilder);
+                SubpropertySyncConfig = subBuilder;
                 break;
               }
             }
@@ -18982,6 +19056,326 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
         #endif
 
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Subproperty synchronization configuration controls how ordinary property
+  /// configurations are synchronized to subproperties. This resource is
+  /// provisioned automatically for each subproperty.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SubpropertySyncConfig : pb::IMessage<SubpropertySyncConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SubpropertySyncConfig> _parser = new pb::MessageParser<SubpropertySyncConfig>(() => new SubpropertySyncConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SubpropertySyncConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubpropertySyncConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubpropertySyncConfig(SubpropertySyncConfig other) : this() {
+      name_ = other.name_;
+      applyToProperty_ = other.applyToProperty_;
+      customDimensionAndMetricSyncMode_ = other.customDimensionAndMetricSyncMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubpropertySyncConfig Clone() {
+      return new SubpropertySyncConfig(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Identifier. Format:
+    /// properties/{ordinary_property_id}/subpropertySyncConfigs/{subproperty_id}
+    /// Example: properties/1234/subpropertySyncConfigs/5678
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "apply_to_property" field.</summary>
+    public const int ApplyToPropertyFieldNumber = 2;
+    private string applyToProperty_ = "";
+    /// <summary>
+    /// Output only. Immutable. Resource name of the Subproperty that these
+    /// settings apply to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ApplyToProperty {
+      get { return applyToProperty_; }
+      set {
+        applyToProperty_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_dimension_and_metric_sync_mode" field.</summary>
+    public const int CustomDimensionAndMetricSyncModeFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode customDimensionAndMetricSyncMode_ = global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode.Unspecified;
+    /// <summary>
+    /// Required. Specifies the Custom Dimension / Metric synchronization mode for
+    /// the Subproperty.
+    ///
+    /// If set to ALL, Custom Dimension / Metric synchronization will be
+    /// immediately enabled.  Local configuration of Custom Dimensions / Metrics
+    /// will not be allowed on the Subproperty so long as the synchronization mode
+    /// is set to ALL.
+    ///
+    /// If set to NONE, Custom Dimensions / Metric synchronization is disabled.
+    /// Custom Dimensions / Metrics must be configured explicitly on the
+    /// Subproperty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode CustomDimensionAndMetricSyncMode {
+      get { return customDimensionAndMetricSyncMode_; }
+      set {
+        customDimensionAndMetricSyncMode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SubpropertySyncConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SubpropertySyncConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (ApplyToProperty != other.ApplyToProperty) return false;
+      if (CustomDimensionAndMetricSyncMode != other.CustomDimensionAndMetricSyncMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ApplyToProperty.Length != 0) hash ^= ApplyToProperty.GetHashCode();
+      if (CustomDimensionAndMetricSyncMode != global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode.Unspecified) hash ^= CustomDimensionAndMetricSyncMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (ApplyToProperty.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ApplyToProperty);
+      }
+      if (CustomDimensionAndMetricSyncMode != global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CustomDimensionAndMetricSyncMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (ApplyToProperty.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ApplyToProperty);
+      }
+      if (CustomDimensionAndMetricSyncMode != global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CustomDimensionAndMetricSyncMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ApplyToProperty.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplyToProperty);
+      }
+      if (CustomDimensionAndMetricSyncMode != global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CustomDimensionAndMetricSyncMode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SubpropertySyncConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.ApplyToProperty.Length != 0) {
+        ApplyToProperty = other.ApplyToProperty;
+      }
+      if (other.CustomDimensionAndMetricSyncMode != global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode.Unspecified) {
+        CustomDimensionAndMetricSyncMode = other.CustomDimensionAndMetricSyncMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ApplyToProperty = input.ReadString();
+            break;
+          }
+          case 24: {
+            CustomDimensionAndMetricSyncMode = (global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ApplyToProperty = input.ReadString();
+            break;
+          }
+          case 24: {
+            CustomDimensionAndMetricSyncMode = (global::Google.Analytics.Admin.V1Alpha.SubpropertySyncConfig.Types.SynchronizationMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SubpropertySyncConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Synchronization modes for a Subproperty
+      /// </summary>
+      public enum SynchronizationMode {
+        /// <summary>
+        /// Synchronization mode unknown or not specified.
+        /// </summary>
+        [pbr::OriginalName("SYNCHRONIZATION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Entities are not synchronized.
+        /// Local edits are allowed on the Subproperty.
+        /// </summary>
+        [pbr::OriginalName("NONE")] None = 1,
+        /// <summary>
+        /// Entities are synchronized from Parent Property.
+        /// Local mutations are not allowed on the Subproperty (Create / Update /
+        /// Delete)
+        /// </summary>
+        [pbr::OriginalName("ALL")] All = 2,
       }
 
     }
