@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.0.0-alpha26, released 2025-06-16
+
+### New features
+
+- Add the `GetSubpropertySyncConfigRequest` method
+- Add the `ListSubpropertySyncConfigsRequest` method
+- Add the `UpdateSubpropertySyncConfigRequest` method
+
 ## Version 2.0.0-alpha25, released 2025-05-16
 
 Test release only; still no change from 2.0.0-alpha23.
