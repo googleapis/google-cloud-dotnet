@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.26.0, released 2025-06-17
+
+### Bug fixes
+
+- Change HandleAck retry behavior to check metadata before the exception code
+
 ## Version 3.25.0, released 2025-06-16
 
 ### New features
