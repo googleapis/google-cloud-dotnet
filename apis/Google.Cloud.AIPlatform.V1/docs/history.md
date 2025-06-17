@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.35.0, released 2025-06-17
+
+### New features
+
+- Add DnsPeeringConfig in service_networking.proto
+- Add dns_peering_configs to PscInterfaceConfig
+- Add RagEngineConfig update/get APIs to v1
+- Add Unprovisioned tier to RagEngineConfig to disable RagEngine service and delete all data within the service.
+
 ## Version 3.34.0, released 2025-06-13
 
 ### New features
