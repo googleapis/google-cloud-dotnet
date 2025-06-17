@@ -1,5 +1,14 @@
 # Version history
 
+## Version 5.1.0, released 2025-06-17
+
+### New features
+
+- Support Interval for parameter binding and queries.
+- Add the Interval type.
+- Add new change_stream.proto
+- Add throughput_mode to UpdateDatabaseDdlRequest to be used by Spanner Migration Tool. See https://github.com/GoogleCloudPlatform/spanner-migration-tool
+
 ## Version 5.0.0, released 2025-04-16
 
 ### New features
