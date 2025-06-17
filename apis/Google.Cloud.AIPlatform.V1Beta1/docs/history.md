@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta35, released 2025-06-17
+
+### New features
+
+- Add DnsPeeringConfig in service_networking.proto
+- Add dns_peering_configs to PscInterfaceConfig
+- Add Scaled tier for RagEngineConfig to v1beta, equivalent to Enterprise
+- Add Unprovisioned tier to RagEngineConfig in v1beta1 that can disable RagEngine service and delete all data within the service
+
+### Documentation improvements
+
+- Enterprise tier in RagEngineConfig, use Scaled tier instead.
+
 ## Version 1.0.0-beta34, released 2025-06-13
 
 ### New features
