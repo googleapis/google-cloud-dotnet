@@ -33,9 +33,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Y29ubmVjdBgBIAEoCEID4EECEhkKEXByb2plY3RfYWxsb3dsaXN0GAIgAygJ",
             "Eh8KEnNlcnZpY2VfYXR0YWNobWVudBgFIAEoCUID4EEDIlMKFVBzY0F1dG9t",
             "YXRlZEVuZHBvaW50cxISCgpwcm9qZWN0X2lkGAEgASgJEg8KB25ldHdvcmsY",
-            "AiABKAkSFQoNbWF0Y2hfYWRkcmVzcxgDIAEoCSJiChJQc2NJbnRlcmZhY2VD",
-            "b25maWcSTAoSbmV0d29ya19hdHRhY2htZW50GAEgASgJQjDgQQH6QSoKKGNv",
-            "bXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29ya0F0dGFjaG1lbnRCzQIKHmNv",
+            "AiABKAkSFQoNbWF0Y2hfYWRkcmVzcxgDIAEoCSKyAQoSUHNjSW50ZXJmYWNl",
+            "Q29uZmlnEkwKEm5ldHdvcmtfYXR0YWNobWVudBgBIAEoCUIw4EEB+kEqCihj",
+            "b21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmtBdHRhY2htZW50Ek4KE2Ru",
+            "c19wZWVyaW5nX2NvbmZpZ3MYAiADKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5EbnNQZWVyaW5nQ29uZmlnQgPgQQEiYQoQRG5zUGVlcmluZ0Nv",
+            "bmZpZxITCgZkb21haW4YASABKAlCA+BBAhIbCg50YXJnZXRfcHJvamVjdBgC",
+            "IAEoCUID4EECEhsKDnRhcmdldF9uZXR3b3JrGAMgASgJQgPgQQJCzQIKHmNv",
             "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIWU2VydmljZU5ldHdvcmtp",
             "bmdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
             "djEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5B",
@@ -50,7 +54,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig), global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser, new[]{ "ProjectId", "Network" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints), global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints.Parser, new[]{ "ProjectId", "Network", "MatchAddress" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig), global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig.Parser, new[]{ "NetworkAttachment" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig), global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig.Parser, new[]{ "NetworkAttachment", "DnsPeeringConfigs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig), global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig.Parser, new[]{ "Domain", "TargetProject", "TargetNetwork" }, null, null, null, null)
           }));
     }
     #endregion
@@ -883,6 +888,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PscInterfaceConfig(PscInterfaceConfig other) : this() {
       networkAttachment_ = other.networkAttachment_;
+      dnsPeeringConfigs_ = other.dnsPeeringConfigs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -913,6 +919,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "dns_peering_configs" field.</summary>
+    public const int DnsPeeringConfigsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig> _repeated_dnsPeeringConfigs_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig> dnsPeeringConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig>();
+    /// <summary>
+    /// Optional. DNS peering configurations. When specified, Vertex AI will
+    /// attempt to configure DNS peering zones in the tenant project VPC
+    /// to resolve the specified domains using the target network's Cloud DNS.
+    /// The user must grant the dns.peer role to the Vertex AI Service Agent
+    /// on the target project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig> DnsPeeringConfigs {
+      get { return dnsPeeringConfigs_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -929,6 +953,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (NetworkAttachment != other.NetworkAttachment) return false;
+      if(!dnsPeeringConfigs_.Equals(other.dnsPeeringConfigs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -937,6 +962,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (NetworkAttachment.Length != 0) hash ^= NetworkAttachment.GetHashCode();
+      hash ^= dnsPeeringConfigs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -959,6 +985,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(10);
         output.WriteString(NetworkAttachment);
       }
+      dnsPeeringConfigs_.WriteTo(output, _repeated_dnsPeeringConfigs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -973,6 +1000,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(10);
         output.WriteString(NetworkAttachment);
       }
+      dnsPeeringConfigs_.WriteTo(ref output, _repeated_dnsPeeringConfigs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -986,6 +1014,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (NetworkAttachment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkAttachment);
       }
+      size += dnsPeeringConfigs_.CalculateSize(_repeated_dnsPeeringConfigs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1001,6 +1030,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.NetworkAttachment.Length != 0) {
         NetworkAttachment = other.NetworkAttachment;
       }
+      dnsPeeringConfigs_.Add(other.dnsPeeringConfigs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1020,6 +1050,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             NetworkAttachment = input.ReadString();
             break;
           }
+          case 18: {
+            dnsPeeringConfigs_.AddEntriesFrom(input, _repeated_dnsPeeringConfigs_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1037,6 +1071,294 @@ namespace Google.Cloud.AIPlatform.V1 {
             break;
           case 10: {
             NetworkAttachment = input.ReadString();
+            break;
+          }
+          case 18: {
+            dnsPeeringConfigs_.AddEntriesFrom(ref input, _repeated_dnsPeeringConfigs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// DNS peering configuration. These configurations are used to create
+  /// DNS peering zones in the Vertex tenant project VPC, enabling resolution
+  /// of records within the specified domain hosted in the target network's
+  /// Cloud DNS.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DnsPeeringConfig : pb::IMessage<DnsPeeringConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DnsPeeringConfig> _parser = new pb::MessageParser<DnsPeeringConfig>(() => new DnsPeeringConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DnsPeeringConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsPeeringConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsPeeringConfig(DnsPeeringConfig other) : this() {
+      domain_ = other.domain_;
+      targetProject_ = other.targetProject_;
+      targetNetwork_ = other.targetNetwork_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsPeeringConfig Clone() {
+      return new DnsPeeringConfig(this);
+    }
+
+    /// <summary>Field number for the "domain" field.</summary>
+    public const int DomainFieldNumber = 1;
+    private string domain_ = "";
+    /// <summary>
+    /// Required. The DNS name suffix of the zone being peered to, e.g.,
+    /// "my-internal-domain.corp.". Must end with a dot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Domain {
+      get { return domain_; }
+      set {
+        domain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_project" field.</summary>
+    public const int TargetProjectFieldNumber = 2;
+    private string targetProject_ = "";
+    /// <summary>
+    /// Required. The project ID hosting the Cloud DNS managed zone that
+    /// contains the 'domain'. The Vertex AI Service Agent requires the
+    /// dns.peer role on this project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetProject {
+      get { return targetProject_; }
+      set {
+        targetProject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_network" field.</summary>
+    public const int TargetNetworkFieldNumber = 3;
+    private string targetNetwork_ = "";
+    /// <summary>
+    /// Required. The VPC network name
+    /// in the target_project where the DNS zone specified by 'domain' is
+    /// visible.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetNetwork {
+      get { return targetNetwork_; }
+      set {
+        targetNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DnsPeeringConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DnsPeeringConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Domain != other.Domain) return false;
+      if (TargetProject != other.TargetProject) return false;
+      if (TargetNetwork != other.TargetNetwork) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Domain.Length != 0) hash ^= Domain.GetHashCode();
+      if (TargetProject.Length != 0) hash ^= TargetProject.GetHashCode();
+      if (TargetNetwork.Length != 0) hash ^= TargetNetwork.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Domain.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Domain);
+      }
+      if (TargetProject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TargetProject);
+      }
+      if (TargetNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TargetNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Domain.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Domain);
+      }
+      if (TargetProject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TargetProject);
+      }
+      if (TargetNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TargetNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Domain.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Domain);
+      }
+      if (TargetProject.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetProject);
+      }
+      if (TargetNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetNetwork);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DnsPeeringConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Domain.Length != 0) {
+        Domain = other.Domain;
+      }
+      if (other.TargetProject.Length != 0) {
+        TargetProject = other.TargetProject;
+      }
+      if (other.TargetNetwork.Length != 0) {
+        TargetNetwork = other.TargetNetwork;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Domain = input.ReadString();
+            break;
+          }
+          case 18: {
+            TargetProject = input.ReadString();
+            break;
+          }
+          case 26: {
+            TargetNetwork = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Domain = input.ReadString();
+            break;
+          }
+          case 18: {
+            TargetProject = input.ReadString();
+            break;
+          }
+          case 26: {
+            TargetNetwork = input.ReadString();
             break;
           }
         }
