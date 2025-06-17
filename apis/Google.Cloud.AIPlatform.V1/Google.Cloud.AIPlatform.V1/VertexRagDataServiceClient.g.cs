@@ -65,6 +65,9 @@ namespace Google.Cloud.AIPlatform.V1
             ListRagFilesSettings = existing.ListRagFilesSettings;
             DeleteRagFileSettings = existing.DeleteRagFileSettings;
             DeleteRagFileOperationsSettings = existing.DeleteRagFileOperationsSettings.Clone();
+            UpdateRagEngineConfigSettings = existing.UpdateRagEngineConfigSettings;
+            UpdateRagEngineConfigOperationsSettings = existing.UpdateRagEngineConfigOperationsSettings.Clone();
+            GetRagEngineConfigSettings = existing.GetRagEngineConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -284,6 +287,50 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.UpdateRagEngineConfig</c> and
+        /// <c>VertexRagDataServiceClient.UpdateRagEngineConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRagEngineConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VertexRagDataServiceClient.UpdateRagEngineConfig</c> and
+        /// <c>VertexRagDataServiceClient.UpdateRagEngineConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRagEngineConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VertexRagDataServiceClient.GetRagEngineConfig</c> and
+        /// <c>VertexRagDataServiceClient.GetRagEngineConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRagEngineConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1871,6 +1918,225 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteRagFileAsync(RagFileName name, st::CancellationToken cancellationToken) =>
             DeleteRagFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> UpdateRagEngineConfig(UpdateRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>> UpdateRagEngineConfigAsync(UpdateRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>> UpdateRagEngineConfigAsync(UpdateRagEngineConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRagEngineConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRagEngineConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateRagEngineConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRagEngineConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> PollOnceUpdateRagEngineConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRagEngineConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRagEngineConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>> PollOnceUpdateRagEngineConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRagEngineConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="ragEngineConfig">
+        /// Required. The updated RagEngineConfig.
+        /// 
+        /// NOTE: Downgrading your RagManagedDb's ComputeTier could temporarily
+        /// increase request latencies until the operation is fully complete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> UpdateRagEngineConfig(RagEngineConfig ragEngineConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRagEngineConfig(new UpdateRagEngineConfigRequest
+            {
+                RagEngineConfig = gax::GaxPreconditions.CheckNotNull(ragEngineConfig, nameof(ragEngineConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="ragEngineConfig">
+        /// Required. The updated RagEngineConfig.
+        /// 
+        /// NOTE: Downgrading your RagManagedDb's ComputeTier could temporarily
+        /// increase request latencies until the operation is fully complete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>> UpdateRagEngineConfigAsync(RagEngineConfig ragEngineConfig, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRagEngineConfigAsync(new UpdateRagEngineConfigRequest
+            {
+                RagEngineConfig = gax::GaxPreconditions.CheckNotNull(ragEngineConfig, nameof(ragEngineConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="ragEngineConfig">
+        /// Required. The updated RagEngineConfig.
+        /// 
+        /// NOTE: Downgrading your RagManagedDb's ComputeTier could temporarily
+        /// increase request latencies until the operation is fully complete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>> UpdateRagEngineConfigAsync(RagEngineConfig ragEngineConfig, st::CancellationToken cancellationToken) =>
+            UpdateRagEngineConfigAsync(ragEngineConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagEngineConfig GetRagEngineConfig(GetRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(GetRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(GetRagEngineConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetRagEngineConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagEngineConfig resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragEngineConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagEngineConfig GetRagEngineConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagEngineConfig(new GetRagEngineConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagEngineConfig resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragEngineConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagEngineConfigAsync(new GetRagEngineConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagEngineConfig resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragEngineConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRagEngineConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagEngineConfig resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragEngineConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RagEngineConfig GetRagEngineConfig(RagEngineConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagEngineConfig(new GetRagEngineConfigRequest
+            {
+                RagEngineConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagEngineConfig resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragEngineConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(RagEngineConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRagEngineConfigAsync(new GetRagEngineConfigRequest
+            {
+                RagEngineConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the RagEngineConfig resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/ragEngineConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RagEngineConfig> GetRagEngineConfigAsync(RagEngineConfigName name, st::CancellationToken cancellationToken) =>
+            GetRagEngineConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VertexRagDataService client wrapper implementation, for convenient use.</summary>
@@ -1899,6 +2165,10 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<DeleteRagFileRequest, lro::Operation> _callDeleteRagFile;
 
+        private readonly gaxgrpc::ApiCall<UpdateRagEngineConfigRequest, lro::Operation> _callUpdateRagEngineConfig;
+
+        private readonly gaxgrpc::ApiCall<GetRagEngineConfigRequest, RagEngineConfig> _callGetRagEngineConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the VertexRagDataService service, with the specified gRPC client and
         /// settings.
@@ -1920,6 +2190,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteRagCorpusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRagCorpusOperationsSettings, logger);
             ImportRagFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportRagFilesOperationsSettings, logger);
             DeleteRagFileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRagFileOperationsSettings, logger);
+            UpdateRagEngineConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRagEngineConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateRagCorpus = clientHelper.BuildApiCall<CreateRagCorpusRequest, lro::Operation>("CreateRagCorpus", grpcClient.CreateRagCorpusAsync, grpcClient.CreateRagCorpus, effectiveSettings.CreateRagCorpusSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -1952,6 +2223,12 @@ namespace Google.Cloud.AIPlatform.V1
             _callDeleteRagFile = clientHelper.BuildApiCall<DeleteRagFileRequest, lro::Operation>("DeleteRagFile", grpcClient.DeleteRagFileAsync, grpcClient.DeleteRagFile, effectiveSettings.DeleteRagFileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRagFile);
             Modify_DeleteRagFileApiCall(ref _callDeleteRagFile);
+            _callUpdateRagEngineConfig = clientHelper.BuildApiCall<UpdateRagEngineConfigRequest, lro::Operation>("UpdateRagEngineConfig", grpcClient.UpdateRagEngineConfigAsync, grpcClient.UpdateRagEngineConfig, effectiveSettings.UpdateRagEngineConfigSettings).WithGoogleRequestParam("rag_engine_config.name", request => request.RagEngineConfig?.Name);
+            Modify_ApiCall(ref _callUpdateRagEngineConfig);
+            Modify_UpdateRagEngineConfigApiCall(ref _callUpdateRagEngineConfig);
+            _callGetRagEngineConfig = clientHelper.BuildApiCall<GetRagEngineConfigRequest, RagEngineConfig>("GetRagEngineConfig", grpcClient.GetRagEngineConfigAsync, grpcClient.GetRagEngineConfig, effectiveSettings.GetRagEngineConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRagEngineConfig);
+            Modify_GetRagEngineConfigApiCall(ref _callGetRagEngineConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1976,6 +2253,10 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ListRagFilesApiCall(ref gaxgrpc::ApiCall<ListRagFilesRequest, ListRagFilesResponse> call);
 
         partial void Modify_DeleteRagFileApiCall(ref gaxgrpc::ApiCall<DeleteRagFileRequest, lro::Operation> call);
+
+        partial void Modify_UpdateRagEngineConfigApiCall(ref gaxgrpc::ApiCall<UpdateRagEngineConfigRequest, lro::Operation> call);
+
+        partial void Modify_GetRagEngineConfigApiCall(ref gaxgrpc::ApiCall<GetRagEngineConfigRequest, RagEngineConfig> call);
 
         partial void OnConstruction(VertexRagDataService.VertexRagDataServiceClient grpcClient, VertexRagDataServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2007,6 +2288,10 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ListRagFilesRequest(ref ListRagFilesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRagFileRequest(ref DeleteRagFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRagEngineConfigRequest(ref UpdateRagEngineConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRagEngineConfigRequest(ref GetRagEngineConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateRagCorpus</c>.</summary>
         public override lro::OperationsClient CreateRagCorpusOperationsClient { get; }
@@ -2261,6 +2546,57 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DeleteRagFileRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteRagFile.Async(request, callSettings).ConfigureAwait(false), DeleteRagFileOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateRagEngineConfig</c>.</summary>
+        public override lro::OperationsClient UpdateRagEngineConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> UpdateRagEngineConfig(UpdateRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRagEngineConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>(_callUpdateRagEngineConfig.Sync(request, callSettings), UpdateRagEngineConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>> UpdateRagEngineConfigAsync(UpdateRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRagEngineConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata>(await _callUpdateRagEngineConfig.Async(request, callSettings).ConfigureAwait(false), UpdateRagEngineConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RagEngineConfig GetRagEngineConfig(GetRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRagEngineConfigRequest(ref request, ref callSettings);
+            return _callGetRagEngineConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a RagEngineConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RagEngineConfig> GetRagEngineConfigAsync(GetRagEngineConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRagEngineConfigRequest(ref request, ref callSettings);
+            return _callGetRagEngineConfig.Async(request, callSettings);
         }
     }
 
