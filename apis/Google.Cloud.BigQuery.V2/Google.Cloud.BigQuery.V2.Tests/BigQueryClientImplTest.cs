@@ -100,13 +100,21 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var projectId = "project";
             var datasetId = "dataset";
+            var accessPolicyVersion = 1;
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl(projectId, service);
             var reference = client.GetDatasetReference(projectId, datasetId);
+            var insertRequest = service.Datasets.Insert(new Dataset { DatasetReference = reference }, projectId);
+            insertRequest.AccessPolicyVersion = accessPolicyVersion;
             service.ExpectRequest(
-                service.Datasets.Insert(new Dataset { DatasetReference = reference }, projectId),
+                insertRequest,
                 new Dataset { DatasetReference = reference });
-            var result = client.CreateDataset(reference);
+            var result = client.CreateDataset(
+                reference,
+                options: new CreateDatasetOptions
+                {
+                    RequestModifier = request => request.AccessPolicyVersion = accessPolicyVersion
+                });
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(datasetId, result.Reference.DatasetId);
         }
@@ -157,6 +165,40 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 service.Datasets.Get(projectId, datasetId),
                 new Dataset { DatasetReference = reference });
             var result = client.GetDataset(reference);
+            service.Verify();
+            Assert.Equal(projectId, result.Reference.ProjectId);
+            Assert.Equal(datasetId, result.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void PatchDataset()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var accessPolicyVersion = 1;
+            var updateMode = PatchRequest.UpdateModeEnum.UPDATEMETADATA;
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            var dataset = new Dataset { FriendlyName = "Foo", ETag = "\"etag\"" };
+            var patchRequest = service.Datasets.Patch(dataset, projectId, datasetId);
+            patchRequest.AccessPolicyVersion = accessPolicyVersion;
+            patchRequest.UpdateMode = updateMode;
+
+            service.ExpectRequest(
+                patchRequest,
+                new Dataset { DatasetReference = reference });
+            var result = client.PatchDataset(
+                reference,
+                dataset,
+                new PatchDatasetOptions
+                {
+                    RequestModifier = request =>
+                    {
+                        request.AccessPolicyVersion = accessPolicyVersion;
+                        request.UpdateMode = updateMode;
+                    }
+                });
             service.Verify();
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(datasetId, result.Reference.DatasetId);
