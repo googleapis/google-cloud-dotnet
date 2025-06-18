@@ -1,0 +1,27 @@
+command: clean
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Test.V1'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Test.V1
+    target: repo/apis/Google.Test.V1
+  - source: Google.Test.V2
+    target: repo/apis/Google.Test.V2
+  - source: global.json
+    target: repo/global.json
+  - source: irrelevant-content
+    target: repo/README.md
+  - source: irrelevant-content
+    target: repo/.github/renovate.json
+fileExpectations:
+  absent:
+  - repo/apis/Google.Test.V1/Google.Test.V1/GeneratedSource.g.cs
+  - repo/renovate.json
+  - repo/README.json
+  present:
+  - repo/apis/Google.Test.V1/Google.Test.V1/Handwritten.cs
+  - repo/apis/Google.Test.V2/Google.Test.V2/GeneratedSource.g.cs

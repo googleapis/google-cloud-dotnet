@@ -64,8 +64,12 @@ namespace Google.Cloud.ClientTesting
         /// <summary>
         /// Determines whether or not the test is running on Windows.
         /// </summary>
-        /// <returns></returns>
         public static bool IsWindows() => RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
+        /// <summary>
+        /// Determines whether or not the test is running on Linux.
+        /// </summary>
+        public static bool IsLinux() => RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
 
         /// <summary>
         /// Throws a <see cref="SkipException"/> if the tests are running in a VPC-SC constrained environment.

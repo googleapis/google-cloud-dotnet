@@ -1,0 +1,15 @@
+command: generate-raw
+args:
+- '--api-root=/test/api-root'
+- '--api-path=google/test/v3'
+- '--output=/test/output'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: googleapis
+    target: api-root
+expectedExitCode: 1
+fileExpectations:
+  absent:
+  - output/google/test/v3/gapic_metadata.json

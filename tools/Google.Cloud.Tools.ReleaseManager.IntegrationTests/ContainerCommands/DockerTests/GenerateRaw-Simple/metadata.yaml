@@ -1,0 +1,23 @@
+command: generate-raw
+args:
+- '--api-root=/test/api-root'
+- '--api-path=google/test/v3'
+- '--output=/test/output'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: googleapis
+    target: api-root
+fileExpectations:
+  present:
+  - output/google/test/v3/Google.Test.V3.sln
+  - output/google/test/v3/Google.Test.V3/Google.Test.V3.csproj
+  - output/google/test/v3/Google.Test.V3/PackageApiMetadata.g.cs
+  - output/google/test/v3/Google.Test.V3/Service.g.cs
+  - output/google/test/v3/Google.Test.V3/ServiceCollectionExtensions.g.cs
+  - output/google/test/v3/Google.Test.V3/ServiceGrpc.g.cs
+  - output/google/test/v3/Google.Test.V3/TestServiceClient.g.cs
+  - output/google/test/v3/Google.Test.V3.GeneratedSnippets
+  - output/google/test/v3/Google.Test.V3.Snippets
+  - output/google/test/v3/gapic_metadata.json
