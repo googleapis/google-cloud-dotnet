@@ -6320,7 +6320,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       }
 
       /// <summary>
-      /// Details regarding the upgrade of instaces associated with a cluster.
+      /// Details regarding the upgrade of instances associated with a cluster.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InstanceUpgradeDetails : pb::IMessage<InstanceUpgradeDetails>
@@ -7976,6 +7976,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// <summary>
   /// Message for restoring a Cluster from a backup or another cluster at a given
   /// point in time.
+  /// NEXT_ID: 11
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestoreClusterRequest : pb::IMessage<RestoreClusterRequest>
