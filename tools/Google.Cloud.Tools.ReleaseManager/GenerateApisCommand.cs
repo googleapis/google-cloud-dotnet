@@ -378,8 +378,7 @@ internal class GenerateApisCommand : ICommand
         }
         catch (Exception e)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed during initial FileDescriptorSet generation: {e.Message}");
-            return;
+            throw new UserErrorException($"API {arg} failed during initial FileDescriptorSet generation: {e.Message}");
         }
 
         FileDescriptorSet descriptorSet = FileDescriptorSet.Parser.ParseFrom(File.ReadAllBytes(descriptorFile));
@@ -392,8 +391,7 @@ internal class GenerateApisCommand : ICommand
 
         if (namespaces.Count != 1)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed: Inconsistent namespaces: {string.Join(", ", namespaces.Select(ns => $"'{ns}'"))}");
-            return;
+            throw new UserErrorException($"API {arg} failed: Inconsistent namespaces: {string.Join(", ", namespaces.Select(ns => $"'{ns}'"))}");
         }
 
         var id = namespaces[0];
@@ -421,8 +419,7 @@ internal class GenerateApisCommand : ICommand
         }
         catch (Exception e)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed during message/service generation: {e.Message}");
-            return;
+            throw new UserErrorException($"API {arg} failed during message/service generation: {e.Message}");
         }
 
         // GAPIC generation, which requires rather more configuration.
@@ -460,8 +457,7 @@ internal class GenerateApisCommand : ICommand
         }
         catch (Exception e)
         {
-            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z API {arg} failed during GAPIC generation: {e.Message}");
-            return;
+            throw new UserErrorException($"API {arg} failed during GAPIC generation: {e.Message}");
         }
 
         var sln = Path.Combine(sourceDirectory, $"{id}.sln");
