@@ -22,11 +22,9 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// <summary>
 /// Builds code generated for an API, without any other context (no handwritten code etc). Expected options:
 /// - generator-output: the directory containing the results of a previous generate command; required
-/// - api-path: (relative to api-root) e.g. google/cloud/functions/v2; required
+/// - api-path: (as provided to generate-raw) e.g. google/cloud/functions/v2; required
 ///
-/// Exactly one of repo-root or generator-output must be specified. When repo-root is specified,
-/// the library is built including handwritten code etc. When generator-output is specified, this
-/// builds the result of "raw" generation, without any additional configuration etc.
+/// This builds the result of "raw" generation, without any additional configuration etc.
 /// </summary>
 public class BuildRawCommand : IContainerCommand
 {
