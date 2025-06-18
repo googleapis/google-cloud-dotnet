@@ -23,7 +23,7 @@ namespace Google.Cloud.Tools.ReleaseManager.IntegrationTests.ContainerCommands;
 [CollectionDefinition(nameof(ContainerCommandFixture))]
 public sealed class ContainerCommandFixture : ICollectionFixture<ContainerCommandFixture>
 {
-    private static readonly bool DeleteContextDirectoriesOnExit = false;
+    private static readonly bool DeleteDirectoriesOnExit = false;
 
     private readonly List<ContainerCommandTestContext> _contexts;
     private readonly string _contextRoot;
@@ -36,16 +36,21 @@ public sealed class ContainerCommandFixture : ICollectionFixture<ContainerComman
 
     public ContainerCommandTestContext CreateContext([CallerFilePath] string callerFile = null, [CallerMemberName] string callerMember = null)
     {
-        var file = Path.GetFileNameWithoutExtension(callerFile);
-        var context = new ContainerCommandTestContext(Path.Combine(_contextRoot, $"{file}-{callerMember}"));
+        var context = new ContainerCommandTestContext(GetPathFromCaller(callerFile, callerMember));
         _contexts.Add(context);
         return context;
     }
 
+    public GeneratorOutputFolder CreateGeneratorOutputFolder([CallerFilePath] string callerFile = null, [CallerMemberName] string callerMember = null) =>
+        new GeneratorOutputFolder(GetPathFromCaller(callerFile, callerMember));
+
+    private string GetPathFromCaller(string callerFile, string callerMember) =>
+        Path.Combine(_contextRoot, $"{Path.GetFileNameWithoutExtension(callerFile)}-{callerMember}");
+
     public void Dispose()
     {
         _contexts.ForEach(c => c.Dispose());
-        if (DeleteContextDirectoriesOnExit)
+        if (DeleteDirectoriesOnExit)
         {
             Directory.Delete(_contextRoot, true);
         }
