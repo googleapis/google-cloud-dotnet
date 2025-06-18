@@ -22,6 +22,8 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 public class ContainerOptions
 {
+    internal const string DefaultDotnetPath = "/usr/bin/dotnet";
+
     internal const string UtilityDocsLibraryPrefix = "docs-";
     internal const string ApiPathOption = "api-path";
     internal const string LibraryIdOption = "library-id";
@@ -34,6 +36,7 @@ public class ContainerOptions
     internal const string OutputOption = "output";
     internal const string VersionOption = "version";
     internal const string ReleaseNotesOption = "release-notes";
+    internal const string DotnetPathOption = "dotnet-path";
 
     internal string ApiPath { get; set; }
     internal string LibraryId { get; set; }
@@ -46,6 +49,7 @@ public class ContainerOptions
     internal string Version { get; set; }
     internal string Output { get; set; }
     internal string ReleaseNotes { get; set; }
+    internal string DotnetPath { get; set; }
 
     internal ContainerOptions(Dictionary<string, string> options)
     {
@@ -60,6 +64,7 @@ public class ContainerOptions
         Version = options.GetValueOrDefault(VersionOption);
         Output = options.GetValueOrDefault(OutputOption);
         ReleaseNotes = options.GetValueOrDefault(ReleaseNotesOption);
+        DotnetPath = options.GetValueOrDefault(DotnetPathOption) ?? DefaultDotnetPath;
     }
 
     internal static ContainerOptions FromArgs(params string[] args) => FromArgs((IEnumerable<string>) args);
