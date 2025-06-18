@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="ContainerCommands\DockerTests\**" />
+  </ItemGroup>
+
 </Project>
