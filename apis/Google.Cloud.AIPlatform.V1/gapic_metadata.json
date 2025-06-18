@@ -1270,6 +1270,12 @@
         "grpc": {
           "libraryClient": "ModelGardenServiceClient",
           "rpcs": {
+            "Deploy": {
+              "methods": [
+                "Deploy",
+                "DeployAsync"
+              ]
+            },
             "GetPublisherModel": {
               "methods": [
                 "GetPublisherModel",
