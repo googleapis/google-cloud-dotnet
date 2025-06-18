@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -17,6 +17,12 @@
 
   <ItemGroup>
     <None Include="ContainerCommands\DockerTests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ContainerCommands\DockerTests\CommonFiles\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
