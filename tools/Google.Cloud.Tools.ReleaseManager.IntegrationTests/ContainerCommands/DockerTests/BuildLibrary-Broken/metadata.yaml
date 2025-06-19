@@ -1,0 +1,23 @@
+command: build-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Test.V1'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Test.V1
+    target: repo/apis/Google.Test.V1
+  - source: Google.Test.V2
+    target: repo/apis/Google.Test.V2
+  - source: Broken.cs
+    target: repo/apis/Google.Test.V1/Google.Test.V1/Broken.cs
+repoFiles:
+  - source: global.json
+    target: repo/global.json
+  - source: build.sh
+    target: repo/build.sh
+  - source: toolversions.sh
+    target: repo/toolversions.sh
+expectedExitCode: 1
