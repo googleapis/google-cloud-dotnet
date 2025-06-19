@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <None Include="ContainerCommands\DockerTests\**" />
-    <None Include="ContainerCommands\MockScripts\**" />
+    <None Include="ContainerCommands\CommonFiles\**" />
   </ItemGroup>
 
 </Project>

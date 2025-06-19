@@ -30,12 +30,12 @@ public static class TestFiles
     /// <summary>
     /// Path to the CommonFiles directory (which contains test data shared across multiple tests).
     /// </summary>
-    public static string CommonFilesDirectory => Path.Combine(ContainerCommandsDirectory, "DockerTests", "CommonFiles");
+    public static string CommonFilesDirectory => Path.Combine(ContainerCommandsDirectory, "CommonFiles");
 
     /// <summary>
     /// Path to the directory containing mock scripts.
     /// </summary>
-    public static string MockScriptsDirectory => Path.Combine(ContainerCommandsDirectory, "MockScripts");
+    public static string MockScriptsDirectory => Path.Combine(CommonFilesDirectory, "MockScripts");
 
     static TestFiles()
     {
