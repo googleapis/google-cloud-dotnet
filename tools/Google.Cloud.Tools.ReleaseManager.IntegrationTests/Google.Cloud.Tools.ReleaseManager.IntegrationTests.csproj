@@ -17,16 +17,7 @@
 
   <ItemGroup>
     <None Include="ContainerCommands\DockerTests\**" />
-    <Folder Include="ContainerCommands\MockScripts\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="ContainerCommands\DockerTests\CommonFiles\**">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ContainerCommands\MockScripts\**">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="ContainerCommands\MockScripts\**" />
   </ItemGroup>
 
 </Project>

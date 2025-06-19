@@ -16,37 +16,16 @@ using System.IO;
 using IO = System.IO;
 
 namespace Google.Cloud.Tools.ReleaseManager.IntegrationTests.ContainerCommands;
+
 public class GeneratorOutputFolder
 {
     public string Directory { get; }
 
     public GeneratorOutputFolder(string directory) => IO::Directory.CreateDirectory(Directory = directory);
 
-    public void CopyDirectory(string sourceDirectory, bool recursive)
+    public GeneratorOutputFolder CopyDirectory(string sourceDirectory, string relativeTarget, bool recursive = true)
     {
-        CopyDirectoryImpl(sourceDirectory, Directory, recursive);
-
-        static void CopyDirectoryImpl(string source, string target, bool recursive)
-        {
-            var sourceDir = new DirectoryInfo(source);
-            DirectoryInfo[] dirs = sourceDir.GetDirectories();
-
-            IO::Directory.CreateDirectory(target);
-
-            foreach (FileInfo file in sourceDir.GetFiles())
-            {
-                string targetFilePath = Path.Combine(target, file.Name);
-                file.CopyTo(targetFilePath);
-            }
-
-            if (recursive)
-            {
-                foreach (DirectoryInfo subDir in dirs)
-                {
-                    string newTarget = Path.Combine(target, subDir.Name);
-                    CopyDirectoryImpl(subDir.FullName, newTarget, true);
-                }
-            }
-        }
+        TestFiles.CopyDirectory(sourceDirectory, Path.Combine(Directory, relativeTarget), recursive);
+        return this;
     }
 }
