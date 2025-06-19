@@ -46,6 +46,12 @@ public class TestRepo : IDisposable
         return this;
     }
 
+    public TestRepo AddScriptMocks()
+    {
+        CopyDirectory("ContainerCommands\\MockScripts", "", true);
+        return this;
+    }
+
     public TestRepo AddProjectAndSource(ApiMetadata api, string suffix) =>
         AddFile($"apis/{api.Id}/{api.Id}{suffix}/{api.Id}{suffix}.csproj")
         .AddFile($"apis/{api.Id}/{api.Id}{suffix}/SourceCode.g.cs");
@@ -66,6 +72,36 @@ public class TestRepo : IDisposable
         .AddFile($"apis/{api.Id}/{api.Id}.sln")
         .AddFile($"apis/{api.Id}/gapic_metadata.json")
         .AddFile($"apis/{api.Id}/.repo-metadata.json");
+
+    public TestRepo CopyDirectory(string sourceDirectory, string relativeTarget, bool recursive)
+    {
+        CopyDirectoryImpl(sourceDirectory, Path.Combine(Directory, relativeTarget), recursive);
+
+        return this;
+
+        static void CopyDirectoryImpl(string source, string target, bool recursive)
+        {
+            var sourceDir = new DirectoryInfo(source);
+            DirectoryInfo[] dirs = sourceDir.GetDirectories();
+
+            IO::Directory.CreateDirectory(target);
+
+            foreach (FileInfo file in sourceDir.GetFiles())
+            {
+                string targetFilePath = Path.Combine(target, file.Name);
+                file.CopyTo(targetFilePath);
+            }
+
+            if (recursive)
+            {
+                foreach (DirectoryInfo subDir in dirs)
+                {
+                    string newTarget = Path.Combine(target, subDir.Name);
+                    CopyDirectoryImpl(subDir.FullName, newTarget, true);
+                }
+            }
+        }
+    }
 
     public Commit CommitAll(string message = "commit")
     {
