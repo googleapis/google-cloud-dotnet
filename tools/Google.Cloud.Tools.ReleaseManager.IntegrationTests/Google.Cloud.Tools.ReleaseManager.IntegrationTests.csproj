@@ -18,6 +18,8 @@
   <ItemGroup>
     <None Include="ContainerCommands\DockerTests\**" />
     <None Include="ContainerCommands\CommonFiles\**" />
+    <Compile Remove="ContainerCommands\DockerTests\**" />
+    <Compile Remove="ContainerCommands\CommonFiles\**" />
   </ItemGroup>
 
 </Project>
