@@ -48,7 +48,7 @@ public class TestRepo : IDisposable
 
     public TestRepo AddScriptMocks()
     {
-        CopyDirectory("ContainerCommands\\MockScripts", "", true);
+        CopyDirectory(TestFiles.MockScriptsDirectory, "", true);
         return this;
     }
 
@@ -75,32 +75,8 @@ public class TestRepo : IDisposable
 
     public TestRepo CopyDirectory(string sourceDirectory, string relativeTarget, bool recursive)
     {
-        CopyDirectoryImpl(sourceDirectory, Path.Combine(Directory, relativeTarget), recursive);
-
+        TestFiles.CopyDirectory(sourceDirectory, Path.Combine(Directory, relativeTarget), recursive);
         return this;
-
-        static void CopyDirectoryImpl(string source, string target, bool recursive)
-        {
-            var sourceDir = new DirectoryInfo(source);
-            DirectoryInfo[] dirs = sourceDir.GetDirectories();
-
-            IO::Directory.CreateDirectory(target);
-
-            foreach (FileInfo file in sourceDir.GetFiles())
-            {
-                string targetFilePath = Path.Combine(target, file.Name);
-                file.CopyTo(targetFilePath);
-            }
-
-            if (recursive)
-            {
-                foreach (DirectoryInfo subDir in dirs)
-                {
-                    string newTarget = Path.Combine(target, subDir.Name);
-                    CopyDirectoryImpl(subDir.FullName, newTarget, true);
-                }
-            }
-        }
     }
 
     public Commit CommitAll(string message = "commit")

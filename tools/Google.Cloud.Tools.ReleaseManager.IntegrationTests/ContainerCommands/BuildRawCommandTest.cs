@@ -29,17 +29,19 @@ public class BuildRawCommandTest
     public void BuildRaw()
     {
         var outputFolder = _fixture.CreateGeneratorOutputFolder();
-        outputFolder.CopyDirectory("ContainerCommands\\DockerTests\\CommonFiles", true);
-        var solutionFolder = "Google.Test.V1";
+        outputFolder
+            .CopyDirectory(Path.Combine(TestFiles.CommonFilesDirectory, "Google.Test.V1"), "google/test/v1")
+            .CopyDirectory(Path.Combine(TestFiles.CommonFilesDirectory, "Google.Test.V2"), "google/test/v2");
+        var apiPath = "google/test/v1";
 
         var command = new BuildRawCommand();
         var options = ContainerOptions.FromArgs(
             $"--generator-output={outputFolder.Directory}",
-            $"--api-path={solutionFolder}",
+            $"--api-path={apiPath}",
             "--dotnet-path=dotnet");
         Assert.Equal(0, command.Execute(options));
 
-        Assert.True(Directory.Exists(Path.Combine(outputFolder.Directory, solutionFolder, solutionFolder, "bin")));
-        Assert.False(Directory.Exists(Path.Combine(outputFolder.Directory, "Google.Test.V2", "Google.Test.V2", "bin")));
+        Assert.True(Directory.Exists(Path.Combine(outputFolder.Directory, apiPath, "Google.Test.V1", "bin")));
+        Assert.False(Directory.Exists(Path.Combine(outputFolder.Directory, "google/test/v2", "Google.Test.V2", "bin")));
     }
 }
