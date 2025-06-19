@@ -699,6 +699,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcav::MemoryBankServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMemoryBankServiceClient(this IServiceCollection services, sys::Action<gcav::MemoryBankServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::MemoryBankServiceClientBuilder builder = new gcav::MemoryBankServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::MemoryBankServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMemoryBankServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::MemoryBankServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::MemoryBankServiceClientBuilder builder = new gcav::MemoryBankServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcav::MetadataServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

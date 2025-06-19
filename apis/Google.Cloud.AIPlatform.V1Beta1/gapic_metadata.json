@@ -1256,6 +1256,57 @@
         }
       }
     },
+    "MemoryBankService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MemoryBankServiceClient",
+          "rpcs": {
+            "CreateMemory": {
+              "methods": [
+                "CreateMemory",
+                "CreateMemoryAsync"
+              ]
+            },
+            "DeleteMemory": {
+              "methods": [
+                "DeleteMemory",
+                "DeleteMemoryAsync"
+              ]
+            },
+            "GenerateMemories": {
+              "methods": [
+                "GenerateMemories",
+                "GenerateMemoriesAsync"
+              ]
+            },
+            "GetMemory": {
+              "methods": [
+                "GetMemory",
+                "GetMemoryAsync"
+              ]
+            },
+            "ListMemories": {
+              "methods": [
+                "ListMemories",
+                "ListMemoriesAsync"
+              ]
+            },
+            "RetrieveMemories": {
+              "methods": [
+                "RetrieveMemories",
+                "RetrieveMemoriesAsync"
+              ]
+            },
+            "UpdateMemory": {
+              "methods": [
+                "UpdateMemory",
+                "UpdateMemoryAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "MetadataService": {
       "clients": {
         "grpc": {

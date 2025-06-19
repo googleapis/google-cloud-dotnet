@@ -295,4 +295,41 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ReasoningEngineContextSpec
+    {
+        public partial class Types
+        {
+            public partial class MemoryBankConfig
+            {
+                public partial class Types
+                {
+                    public partial class GenerationConfig
+                    {
+                        /// <summary>
+                        /// <see cref="EndpointName"/>-typed view over the <see cref="Model"/> resource name property.
+                        /// </summary>
+                        public EndpointName ModelAsEndpointName
+                        {
+                            get => string.IsNullOrEmpty(Model) ? null : EndpointName.Parse(Model, allowUnparsed: true);
+                            set => Model = value?.ToString() ?? "";
+                        }
+                    }
+
+                    public partial class SimilaritySearchConfig
+                    {
+                        /// <summary>
+                        /// <see cref="EndpointName"/>-typed view over the <see cref="EmbeddingModel"/> resource name
+                        /// property.
+                        /// </summary>
+                        public EndpointName EmbeddingModelAsEndpointName
+                        {
+                            get => string.IsNullOrEmpty(EmbeddingModel) ? null : EndpointName.Parse(EmbeddingModel, allowUnparsed: true);
+                            set => EmbeddingModel = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
