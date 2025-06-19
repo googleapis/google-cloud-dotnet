@@ -19,7 +19,7 @@ launchSettings.json
 # Used when generating APIs
 tmp
 nuget
-googleapis
+/googleapis
 googleapis-discovery
 gapic-generator
 gapic-generator-csharp
