@@ -72,27 +72,28 @@ public class DockerCommandTest
         {
             TestFiles.CopyDirectory(subdirectory, Path.Combine(outputDirectory, Path.GetFileName(subdirectory)));
         }
-        foreach (var item in metadata.CommonFiles)
-        {
-            var source = Path.Combine(TestFiles.CommonFilesDirectory, item.Source);
+        CopyAll(metadata.CommonFiles, TestFiles.CommonFilesDirectory);
+        CopyAll(metadata.RepoFiles, TestFiles.RepoRoot);
 
-            // Handle global.json separately: always copy it from the repo root.
-            if (item.Source == "global.json")
+        void CopyAll(IEnumerable<FileCopy> items, string sourceDirectory)
+        {
+            foreach (var item in items)
             {
-                source = Path.Combine(TestEnvironment.FindRepositoryRootDirectory(), "global.json");
-            }
-            var target = Path.Combine(outputDirectory, item.Target);
-            if (Directory.Exists(source))
-            {
-                TestFiles.CopyDirectory(source, target);
-            }
-            else
-            {
-                var targetDirectory = Path.GetDirectoryName(target);
-                Directory.CreateDirectory(targetDirectory);
-                File.Copy(source, target);
+                var source = Path.Combine(sourceDirectory, item.Source);
+                var target = Path.Combine(outputDirectory, item.Target);
+                if (Directory.Exists(source))
+                {
+                    TestFiles.CopyDirectory(source, target);
+                }
+                else
+                {
+                    var targetDirectory = Path.GetDirectoryName(target);
+                    Directory.CreateDirectory(targetDirectory);
+                    File.Copy(source, target);
+                }
             }
         }
+
         return outputDirectory;
     }
 
@@ -108,15 +109,20 @@ public class DockerCommandTest
         /// </summary>
         public string[] Args { get; set; } = [];
 
-    /// <summary>
-    /// The expected exit code of the Docker command. (Defaults to 0, for success.)
-    /// </summary>
+        /// <summary>
+        /// The expected exit code of the Docker command. (Defaults to 0, for success.)
+        /// </summary>
         public int ExpectedExitCode { get; set; }
 
         /// <summary>
         /// Files/directories to copy from the CommonFiles directory
         /// </summary>
         public List<FileCopy> CommonFiles { get; set; } = [];
+
+        /// <summary>
+        /// Real files/directories to copy from the repo root directory
+        /// </summary>
+        public List<FileCopy> RepoFiles { get; set; } = [];
 
         /// <summary>
         /// Expectations of the files after the test

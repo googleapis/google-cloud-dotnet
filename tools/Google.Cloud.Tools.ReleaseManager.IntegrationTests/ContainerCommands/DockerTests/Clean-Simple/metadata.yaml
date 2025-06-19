@@ -11,12 +11,13 @@ commonFiles:
     target: repo/apis/Google.Test.V1
   - source: Google.Test.V2
     target: repo/apis/Google.Test.V2
-  - source: global.json
-    target: repo/global.json
   - source: irrelevant-content
     target: repo/README.md
   - source: irrelevant-content
     target: repo/.github/renovate.json
+repoFiles:
+  - source: global.json
+    target: repo/global.json
 fileExpectations:
   absent:
   - repo/apis/Google.Test.V1/Google.Test.V1/GeneratedSource.g.cs
