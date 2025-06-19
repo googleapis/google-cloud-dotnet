@@ -36,6 +36,8 @@ public class ContainerOptions
     internal const string OutputOption = "output";
     internal const string VersionOption = "version";
     internal const string ReleaseNotesOption = "release-notes";
+    // Used in tests, to be able to pass either a dotnet mock or a differnt path
+    // to dotnet than what librarian is passing.
     internal const string DotnetPathOption = "dotnet-path";
 
     internal string ApiPath { get; set; }
