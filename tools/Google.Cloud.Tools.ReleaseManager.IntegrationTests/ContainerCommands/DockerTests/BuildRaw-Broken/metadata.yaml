@@ -7,4 +7,6 @@ commonFiles:
     target: output/google/test/v1
   - source: Google.Test.V2
     target: output/google/test/v2
+  - source: Broken.cs
+    target: output/google/test/v1/Google.Test.V1/Broken.cs
 expectedExitCode: 1

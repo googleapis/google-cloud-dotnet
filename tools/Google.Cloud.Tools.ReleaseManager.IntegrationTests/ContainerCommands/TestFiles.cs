@@ -23,6 +23,10 @@ namespace Google.Cloud.Tools.ReleaseManager.IntegrationTests.ContainerCommands;
 public static class TestFiles
 {
     /// <summary>
+    /// The repository root directory (for copying real scripts etc).
+    /// </summary>
+    public static string RepoRoot { get; }
+    /// <summary>
     /// Path to the ContainerCommands directory (the directory containing the source file for this class)
     /// </summary>
     public static string ContainerCommandsDirectory { get; }
@@ -39,8 +43,8 @@ public static class TestFiles
 
     static TestFiles()
     {
-        var root = TestEnvironment.FindRepositoryRootDirectory();
-        ContainerCommandsDirectory = Path.Combine(root, "tools", typeof(DockerCommandTest).Assembly.GetName().Name, "ContainerCommands");
+        RepoRoot = TestEnvironment.FindRepositoryRootDirectory();
+        ContainerCommandsDirectory = Path.Combine(RepoRoot, "tools", typeof(DockerCommandTest).Assembly.GetName().Name, "ContainerCommands");
     }
 
     public static void CopyDirectory(string source, string target, bool recursive = true)
