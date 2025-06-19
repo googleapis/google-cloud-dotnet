@@ -23,7 +23,7 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// Builds code generated for an API, without any other context (no handwritten code etc). Expected options:
 /// - generator-output: the directory containing the results of a previous generate command; required
 /// - api-path: (as provided to generate-raw) e.g. google/cloud/functions/v2; required
-/// - dotnet-path: the path to the dotnet command; optional
+/// - dotnet-path: the path to the dotnet command; optional; for testing purposes
 ///
 /// This builds the result of "raw" generation, without any additional configuration etc.
 /// </summary>

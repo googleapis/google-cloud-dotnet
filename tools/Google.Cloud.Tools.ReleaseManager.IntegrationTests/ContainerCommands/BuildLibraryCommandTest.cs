@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 using System.IO;
 using Xunit;
@@ -95,5 +96,32 @@ public class BuildLibraryCommandTest
 
         codeRepo.AssertExist("build.sh.result.txt");
         Assert.Equal(new string[] { "build-start", "Google.Test.V1", "Google.Test.V2", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
+    }
+
+    [Fact]
+    public void PackageGroup()
+    {
+        var context = _fixture.CreateContext();
+        var catalog = context.CreateApiCatalog("Google.Test.V1", "Google.Test.V2", "Google.Other.V1");
+        var group = new PackageGroup
+        {
+            DisplayName = "Test build library",
+            Id = "Google.Test",
+            PackageIds = { "Google.Test.V1", "Google.Test.V2" }
+        };
+        catalog.PackageGroups.Add(group);
+        catalog["Google.Test.V1"].PackageGroup = group;
+        catalog["Google.Test.V2"].PackageGroup = group;
+        var codeRepo = context.CreateCodeRepo(catalog);
+        codeRepo.AddScriptMocks();
+
+        var command = new BuildLibraryCommand();
+        var options = ContainerOptions.FromArgs(
+            $"--repo-root={codeRepo.Directory}",
+            "--library-id=Google.Test");
+        Assert.Equal(0, command.Execute(options));
+
+        codeRepo.AssertExist("build.sh.result.txt");
+        Assert.Equal(new string[] { "build-start", "--notests", "Google.Test.V1", "Google.Test.V2", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
     }
 }
