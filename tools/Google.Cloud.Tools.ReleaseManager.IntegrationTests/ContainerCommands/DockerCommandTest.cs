@@ -30,7 +30,6 @@ public class DockerCommandTest
     public static IEnumerable<object[]> Tests { get; } =
         Directory.GetDirectories(TestDataDirectory)
             .Select(Path.GetFileName)
-            .Except(["CommonFiles"])
             .Select(p => new object[] { p });
 
     private static readonly IDeserializer s_yamlDeserializer = new DeserializerBuilder()
