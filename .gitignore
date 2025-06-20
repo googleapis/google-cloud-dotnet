@@ -9,6 +9,7 @@ _site
 site
 snippetoutput
 /output
+/docs/output
 *~
 .cr
 packages
