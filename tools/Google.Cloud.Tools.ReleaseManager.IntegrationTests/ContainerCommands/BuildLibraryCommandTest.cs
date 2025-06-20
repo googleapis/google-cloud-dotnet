@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Tools.ReleaseManager.IntegrationTests.ContainerCommands;
@@ -40,8 +41,7 @@ public class BuildLibraryCommandTest
             "--library-id=Google.Test.V1");
         Assert.Equal(0, command.Execute(options));
 
-        codeRepo.AssertExist("build.sh.result.txt");
-        Assert.Equal(new string[] { "build-start", "--notests", "Google.Test.V1", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
+        AssertScriptArguments(codeRepo, "--notests", "Google.Test.V1");
     }
 
     [Fact]
@@ -59,8 +59,7 @@ public class BuildLibraryCommandTest
             "--test=true");
         Assert.Equal(0, command.Execute(options));
 
-        codeRepo.AssertExist("build.sh.result.txt");
-        Assert.Equal(new string[] { "build-start", "Google.Test.V1", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
+        AssertScriptArguments(codeRepo, "Google.Test.V1");
     }
 
     [Fact]
@@ -76,8 +75,7 @@ public class BuildLibraryCommandTest
             $"--repo-root={codeRepo.Directory}");
         Assert.Equal(0, command.Execute(options));
 
-        codeRepo.AssertExist("build.sh.result.txt");
-        Assert.Equal(new string[] { "build-start", "--notests", "Google.Test.V1", "Google.Test.V2", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
+        AssertScriptArguments(codeRepo, "--notests", "Google.Test.V1", "Google.Test.V2");
     }
 
     [Fact]
@@ -94,8 +92,7 @@ public class BuildLibraryCommandTest
             "--test=true");
         Assert.Equal(0, command.Execute(options));
 
-        codeRepo.AssertExist("build.sh.result.txt");
-        Assert.Equal(new string[] { "build-start", "Google.Test.V1", "Google.Test.V2", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
+        AssertScriptArguments(codeRepo, "Google.Test.V1", "Google.Test.V2");
     }
 
     [Fact]
@@ -121,7 +118,15 @@ public class BuildLibraryCommandTest
             "--library-id=Google.Test");
         Assert.Equal(0, command.Execute(options));
 
-        codeRepo.AssertExist("build.sh.result.txt");
-        Assert.Equal(new string[] { "build-start", "--notests", "Google.Test.V1", "Google.Test.V2", "build-end" }, File.ReadAllLines(Path.Combine(codeRepo.Directory, "build.sh.result.txt")));
+        AssertScriptArguments(codeRepo, "--notests", "Google.Test.V1", "Google.Test.V2");
+    }
+
+    private void AssertScriptArguments(TestRepo repo, params string[] args) =>
+        AssertScriptOutput(repo, ["build-start", .. args, "build-end"]);
+
+    private void AssertScriptOutput(TestRepo repo, params string[] expectedOutput)
+    {
+        repo.AssertExist("build.sh.result.txt");
+        Assert.Equal(expectedOutput, File.ReadAllLines(Path.Combine(repo.Directory, "build.sh.result.txt")));
     }
 }
