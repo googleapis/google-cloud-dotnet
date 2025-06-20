@@ -18,6 +18,14 @@ repoFiles:
     target: repo/build.sh
   - source: toolversions.sh
     target: repo/toolversions.sh
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: apis/Directory.Build.props
+    target: repo/apis/Directory.Build.props
+  - source: apis/Directory.Build.targets
+    target: repo/apis/Directory.Build.targets
+  - source: apis/GoogleApis.snk
+    target: repo/apis/GoogleApis.snk
 fileExpectations:
   present:
   - repo/apis/Google.Test.V1/Google.Test.V1/bin
