@@ -1,0 +1,34 @@
+command: generate-library
+args:
+- '--api-root=/test/api-root'
+- '--output=/test/output'
+- '--generator-input=/test/generator-input'
+- '--library-id=Google.Test.V1'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: test-apis.json
+    target: generator-input/apis.json
+  - source: test-state.json
+    target: generator-input/pipeline-state.json
+  - source: CommonResourcesConfig.json
+    target: generator-input/CommonResourcesConfig.json
+  - source: googleapis
+    target: api-root
+  - source: README-template.md
+    target: generator-input/README-template.md
+  - source: renovate-template.json
+    target: generator-input/renovate-template.json
+fileExpectations:
+  present:
+  - output/apis/Google.Test.V1/Google.Test.V1.sln
+  - output/apis/Google.Test.V1/Google.Test.V1/Google.Test.V1.csproj
+  - output/apis/Google.Test.V1/Google.Test.V1/PackageApiMetadata.g.cs
+  - output/apis/Google.Test.V1/Google.Test.V1/Service.g.cs
+  - output/apis/Google.Test.V1/Google.Test.V1/ServiceCollectionExtensions.g.cs
+  - output/apis/Google.Test.V1/Google.Test.V1/ServiceGrpc.g.cs
+  - output/apis/Google.Test.V1/Google.Test.V1/TestServiceClient.g.cs
+  - output/apis/Google.Test.V1/Google.Test.V1.GeneratedSnippets
+  - output/apis/Google.Test.V1/Google.Test.V1.Snippets
+  - output/apis/Google.Test.V1/gapic_metadata.json
