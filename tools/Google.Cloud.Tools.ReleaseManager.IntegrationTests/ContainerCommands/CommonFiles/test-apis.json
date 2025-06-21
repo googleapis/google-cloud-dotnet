@@ -16,7 +16,7 @@
             "includeCommonResourcesProto": false,
             "shortName": "test",
             "serviceConfigFile": "test_v1.yaml",
-            "transport": "rest+grpc",
+            "transport": "grpc",
             "restNumericEnums": true
         },
         {
