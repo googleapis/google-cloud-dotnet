@@ -309,11 +309,8 @@ namespace Google.Cloud.Spanner.Data
         // Internal for testing.
         internal static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
         {
-            var gcpCallInvokerBuilder = clientCreationOptions.GetGcpCallInvokerBuilder();
-            gcpCallInvokerBuilder.MethodConfigs = s_methodConfigs;
-            gcpCallInvokerBuilder.GrpcChannelOptions = s_grpcChannelOptions;
+            var callInvoker =  await clientCreationOptions.GetGcpCallInvokerAsync(s_methodConfigs, s_grpcChannelOptions).ConfigureAwait(false);
 
-            var callInvoker = await gcpCallInvokerBuilder.BuildAsync().ConfigureAwait(false);
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
