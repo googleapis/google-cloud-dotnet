@@ -1024,7 +1024,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1065,7 +1066,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1106,7 +1108,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1139,7 +1142,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1180,7 +1184,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1221,7 +1226,8 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1279,13 +1285,15 @@ namespace Google.Cloud.Translate.V3
         /// <param name="sourceLanguageCode">
         /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-        /// listed in Language Support. If the source language isn't specified, the API
-        /// attempts to identify the source language automatically and returns the
-        /// source language within the response.
+        /// listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages). If the source
+        /// language isn't specified, the API attempts to identify the source language
+        /// automatically and returns the source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1354,13 +1362,15 @@ namespace Google.Cloud.Translate.V3
         /// <param name="sourceLanguageCode">
         /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-        /// listed in Language Support. If the source language isn't specified, the API
-        /// attempts to identify the source language automatically and returns the
-        /// source language within the response.
+        /// listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages). If the source
+        /// language isn't specified, the API attempts to identify the source language
+        /// automatically and returns the source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1429,13 +1439,15 @@ namespace Google.Cloud.Translate.V3
         /// <param name="sourceLanguageCode">
         /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-        /// listed in Language Support. If the source language isn't specified, the API
-        /// attempts to identify the source language automatically and returns the
-        /// source language within the response.
+        /// listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages). If the source
+        /// language isn't specified, the API attempts to identify the source language
+        /// automatically and returns the source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1493,13 +1505,15 @@ namespace Google.Cloud.Translate.V3
         /// <param name="sourceLanguageCode">
         /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-        /// listed in Language Support. If the source language isn't specified, the API
-        /// attempts to identify the source language automatically and returns the
-        /// source language within the response.
+        /// listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages). If the source
+        /// language isn't specified, the API attempts to identify the source language
+        /// automatically and returns the source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1568,13 +1582,15 @@ namespace Google.Cloud.Translate.V3
         /// <param name="sourceLanguageCode">
         /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-        /// listed in Language Support. If the source language isn't specified, the API
-        /// attempts to identify the source language automatically and returns the
-        /// source language within the response.
+        /// listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages). If the source
+        /// language isn't specified, the API attempts to identify the source language
+        /// automatically and returns the source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -1643,13 +1659,15 @@ namespace Google.Cloud.Translate.V3
         /// <param name="sourceLanguageCode">
         /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-        /// listed in Language Support. If the source language isn't specified, the API
-        /// attempts to identify the source language automatically and returns the
-        /// source language within the response.
+        /// listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages). If the source
+        /// language isn't specified, the API attempts to identify the source language
+        /// automatically and returns the source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// text, set to one of the language codes listed in Language Support.
+        /// text, set to one of the language codes listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
@@ -2630,7 +2648,9 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCodes">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// document. Specify up to 10 language codes here.
+        /// document. Specify up to 10 language codes here. Supported language codes
+        /// are listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
@@ -2688,7 +2708,9 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCodes">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// document. Specify up to 10 language codes here.
+        /// document. Specify up to 10 language codes here. Supported language codes
+        /// are listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
@@ -2746,7 +2768,9 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCodes">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// document. Specify up to 10 language codes here.
+        /// document. Specify up to 10 language codes here. Supported language codes
+        /// are listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
@@ -2791,7 +2815,9 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCodes">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// document. Specify up to 10 language codes here.
+        /// document. Specify up to 10 language codes here. Supported language codes
+        /// are listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
@@ -2849,7 +2875,9 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCodes">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// document. Specify up to 10 language codes here.
+        /// document. Specify up to 10 language codes here. Supported language codes
+        /// are listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.
@@ -2907,7 +2935,9 @@ namespace Google.Cloud.Translate.V3
         /// </param>
         /// <param name="targetLanguageCodes">
         /// Required. The ISO-639 language code to use for translation of the input
-        /// document. Specify up to 10 language codes here.
+        /// document. Specify up to 10 language codes here. Supported language codes
+        /// are listed in [Language
+        /// Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="inputConfigs">
         /// Required. Input configurations.

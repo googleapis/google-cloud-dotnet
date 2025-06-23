@@ -457,12 +457,12 @@ namespace Google.Cloud.Translate.V3 {
             "Ki9sb2NhdGlvbnMvKi9tb2RlbHMvKn0afspBGHRyYW5zbGF0ZS5nb29nbGVh",
             "cGlzLmNvbdJBYGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
             "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC10cmFuc2xhdGlvbkLZAQodY29tLmdvb2dsZS5jbG91ZC50cmFuc2xh",
+            "bG91ZC10cmFuc2xhdGlvbkLWAQodY29tLmdvb2dsZS5jbG91ZC50cmFuc2xh",
             "dGUudjNCF1RyYW5zbGF0aW9uU2VydmljZVByb3RvUAFaO2Nsb3VkLmdvb2ds",
             "ZS5jb20vZ28vdHJhbnNsYXRlL2FwaXYzL3RyYW5zbGF0ZXBiO3RyYW5zbGF0",
-            "ZXBi+AEBogIFQ1RSTDOqAhlHb29nbGUuQ2xvdWQuVHJhbnNsYXRlLlYzygIZ",
-            "R29vZ2xlXENsb3VkXFRyYW5zbGF0ZVxWM+oCHEdvb2dsZTo6Q2xvdWQ6OlRy",
-            "YW5zbGF0ZTo6VjNQAFABUAJiBnByb3RvMw=="));
+            "ZXBiogIFQ1RSTDOqAhlHb29nbGUuQ2xvdWQuVHJhbnNsYXRlLlYzygIZR29v",
+            "Z2xlXENsb3VkXFRyYW5zbGF0ZVxWM+oCHEdvb2dsZTo6Q2xvdWQ6OlRyYW5z",
+            "bGF0ZTo6VjNQAFABUAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Translate.V3.AdaptiveMtReflection.Descriptor, global::Google.Cloud.Translate.V3.AutomlTranslationReflection.Descriptor, global::Google.Cloud.Translate.V3.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -813,9 +813,10 @@ namespace Google.Cloud.Translate.V3 {
     /// <summary>
     /// Optional. The ISO-639 language code of the input text if
     /// known, for example, "en-US" or "sr-Latn". Supported language codes are
-    /// listed in Language Support. If the source language isn't specified, the API
-    /// attempts to identify the source language automatically and returns the
-    /// source language within the response.
+    /// listed in [Language
+    /// Support](https://cloud.google.com/translate/docs/languages). If the source
+    /// language isn't specified, the API attempts to identify the source language
+    /// automatically and returns the source language within the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -831,7 +832,8 @@ namespace Google.Cloud.Translate.V3 {
     private string targetLanguageCode_ = "";
     /// <summary>
     /// Required. The ISO-639 language code to use for translation of the input
-    /// text, set to one of the language codes listed in Language Support.
+    /// text, set to one of the language codes listed in [Language
+    /// Support](https://cloud.google.com/translate/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1924,9 +1926,12 @@ namespace Google.Cloud.Translate.V3 {
     private string sourceLanguageCode_ = "";
     /// <summary>
     /// Optional. The ISO-639 language code of the input text if
-    /// known, for example, "hi" or "zh". If the source language isn't specified,
-    /// the API attempts to identify the source language automatically and returns
-    /// the source language for each content in the response.
+    /// known, for example, "hi" or "zh". Supported language codes are
+    /// listed in [Language
+    /// Support](https://cloud.google.com/translate/docs/languages#roman). If the
+    /// source language isn't specified, the API attempts to identify the source
+    /// language automatically and returns the source language for each content in
+    /// the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5951,10 +5956,11 @@ namespace Google.Cloud.Translate.V3 {
     /// <summary>
     /// Optional. The ISO-639 language code of the input document if known, for
     /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-    /// Language Support. If the source language isn't specified, the API attempts
-    /// to identify the source language automatically and returns the source
-    /// language within the response. Source language must be specified if the
-    /// request contains a glossary or a custom model.
+    /// [Language Support] (https://cloud.google.com/translate/docs/languages). If
+    /// the source language isn't specified, the API attempts to identify the
+    /// source language automatically and returns the source language within the
+    /// response. Source language must be specified if the request contains a
+    /// glossary or a custom model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5970,7 +5976,8 @@ namespace Google.Cloud.Translate.V3 {
     private string targetLanguageCode_ = "";
     /// <summary>
     /// Required. The ISO-639 language code to use for translation of the input
-    /// document, set to one of the language codes listed in Language Support.
+    /// document, set to one of the language codes listed in [Language Support]
+    /// (https://cloud.google.com/translate/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7267,7 +7274,9 @@ namespace Google.Cloud.Translate.V3 {
     public const int SourceLanguageCodeFieldNumber = 2;
     private string sourceLanguageCode_ = "";
     /// <summary>
-    /// Required. Source language code.
+    /// Required. Source language code. Supported language codes are listed in
+    /// [Language
+    /// Support](https://cloud.google.com/translate/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7284,7 +7293,9 @@ namespace Google.Cloud.Translate.V3 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> targetLanguageCodes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Specify up to 10 language codes here.
+    /// Required. Specify up to 10 language codes here. Supported language codes
+    /// are listed in [Language
+    /// Support](https://cloud.google.com/translate/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13889,7 +13900,9 @@ namespace Google.Cloud.Translate.V3 {
     private readonly pbc::RepeatedField<string> targetLanguageCodes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The ISO-639 language code to use for translation of the input
-    /// document. Specify up to 10 language codes here.
+    /// document. Specify up to 10 language codes here. Supported language codes
+    /// are listed in [Language
+    /// Support](https://cloud.google.com/translate/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
