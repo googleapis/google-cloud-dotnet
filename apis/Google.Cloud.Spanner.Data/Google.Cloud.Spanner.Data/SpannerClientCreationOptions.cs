@@ -24,6 +24,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
 using MethodConfig = Google.Api.Gax.Grpc.Gcp.MethodConfig;
 
 namespace Google.Cloud.Spanner.Data
@@ -42,26 +43,26 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The end-point to connect to; never null.
         /// </summary>
-        internal string Endpoint { get; }
+        internal string Endpoint => _gcpCallInvokerBuilder.EffectiveEndpoint;
 
         /// <summary>
         /// The number of gRPC channels to use (passed to Grpc.Gcp)
         /// </summary>
-        internal int MaximumGrpcChannels { get; }
+        internal int MaximumGrpcChannels => _gcpCallInvokerBuilder.MaximumGrpcChannels;
 
         /// <summary>
         /// A complicated setting used by Grpc.Gcp :)
         /// (This is used to determine when to use a new channel).
         /// </summary>
-        internal uint MaximumConcurrentStreamsLowWatermark { get; }
+        internal uint MaximumConcurrentStreamsLowWatermark => _gcpCallInvokerBuilder.MaxConcurrentStreamsLowWatermark;
 
-        internal bool UsesEmulator { get; }
+        internal bool UsesEmulator => _gcpCallInvokerBuilder.UseEmulator;
 
         internal bool LeaderRoutingEnabled { get; }
 
         internal DirectedReadOptions DirectedReadOptions { get; }
 
-        internal string UniverseDomain { get; }
+        internal string UniverseDomain => _gcpCallInvokerBuilder.UniverseDomain;
 
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
@@ -74,6 +75,8 @@ namespace Google.Cloud.Spanner.Data
         // are non-null (which should only happen when connecting to the emulator)
         private readonly GoogleCredential _googleCredential;
         private readonly GcpCallInvokerBuilder _gcpCallInvokerBuilder;
+
+        
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
@@ -92,23 +95,15 @@ namespace Google.Cloud.Spanner.Data
                 EnvironmentVariableProvider = builder.EnvironmentVariableProvider,
                 MaximumGrpcChannels = builder.MaximumGrpcChannels,
                 MaxConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark
-            }.MaybeSetEmulatorProperties();
+            };
+            _gcpCallInvokerBuilder.MaybeSetEmulatorProperties();
 
-            // Set UniverseDomain related properties
-            UniverseDomain = _gcpCallInvokerBuilder.UniverseDomain;
-
-            // Set special emulator properties if necessary
-            UsesEmulator = _gcpCallInvokerBuilder.UseEmulator;
-
-            // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
-            Endpoint = _gcpCallInvokerBuilder.InvokerEffectiveEndpoint;
+            GaxPreconditions.CheckArgument(Endpoint != null, "Endpoint", $"Endpoint is {Endpoint}");
             _credentialsFile = builder.CredentialFile;
 
             // If the client connects to the emulator, its credentials will be used (regardless of builder.CredentialOverride)
             _credentialsOverride = _gcpCallInvokerBuilder.ChannelCredentials;
             _googleCredential = _gcpCallInvokerBuilder.GoogleCredential;
-            MaximumGrpcChannels = _gcpCallInvokerBuilder.MaximumGrpcChannels;
-            MaximumConcurrentStreamsLowWatermark = _gcpCallInvokerBuilder.MaxConcurrentStreamsLowWatermark;
             LeaderRoutingEnabled = builder.EnableLeaderRouting;
             DirectedReadOptions = builder.DirectedReadOptions;
 
@@ -191,29 +186,88 @@ namespace Google.Cloud.Spanner.Data
                 return _credentialsOverride;
             }
             // ClientBuilderBase should take care of fetching right creds GoogleCredentials, file based creds or application default creds
-            var creds = await _gcpCallInvokerBuilder.CheckAndGetChannelCredentialsAsync().ConfigureAwait(false);
+            var creds = await _gcpCallInvokerBuilder.GetChannelCredentialsAsync().ConfigureAwait(false);
             return creds;
         }
 
-        internal GcpCallInvokerBuilder GetGcpCallInvokerBuilder()
+        internal async Task<GcpCallInvoker> GetGcpCallInvokerAsync()
         {
-            return _gcpCallInvokerBuilder;
+            return await _gcpCallInvokerBuilder.BuildAsync().ConfigureAwait(false);
         }
 
-        internal class GcpCallInvokerBuilder : ClientBuilderBase<GcpCallInvoker>
+        private class GcpCallInvokerBuilder : ClientBuilderBase<GcpCallInvoker>
         {
             private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
             private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
+            // TODO: Should these be configurable?
+            private static readonly GrpcChannelOptions s_grpcChannelOptions = GrpcChannelOptions.Empty
+                .WithKeepAliveTime(TimeSpan.FromMinutes(1))
+                .WithEnableServiceConfigResolution(false)
+                .WithMaxReceiveMessageSize(int.MaxValue);
+
+            /// <summary>
+            /// The Grpc.Gcp method configurations for pool options. These are here rather than at the top of the file
+            /// as they're only used in CreateClientAsync.
+            /// </summary>
+            private static readonly MethodConfig[] s_methodConfigs = new[]
+            {
+            // Note: Can't use nameof for affinity keys, as we need the original proto field name.
+
+            // Creating a session isn't bound to a channel, but binds the resulting session to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/CreateSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bind }
+            },
+
+            // Batch creating sessions isn't bound to a channel, but binds the resulting sessions to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/BatchCreateSessions" },
+                Affinity = new AffinityConfig { AffinityKey = "session.name", Command = Command.Bind }
+            },
+
+            // Most methods are bound by the session within the request
+            new MethodConfig
+            {
+                // We don't currently use this, but include it for completeness...
+                Name = { "/google.spanner.v1.Spanner/GetSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bound }
+            },
+            new MethodConfig
+            {
+                Name =
+                {
+                    "/google.spanner.v1.Spanner/ExecuteSql",
+                    "/google.spanner.v1.Spanner/ExecuteStreamingSql",
+                    "/google.spanner.v1.Spanner/Read",
+                    "/google.spanner.v1.Spanner/StreamingRead",
+                    "/google.spanner.v1.Spanner/BeginTransaction",
+                    "/google.spanner.v1.Spanner/Commit",
+                    "/google.spanner.v1.Spanner/Rollback",
+                    "/google.spanner.v1.Spanner/PartitionQuery",
+                    "/google.spanner.v1.Spanner/PartitionRead",
+                },
+                Affinity = new AffinityConfig { AffinityKey = "session", Command = Command.Bound }
+            },
+
+            // DeleteSession is bound by the session within the request, and removes the key afterwards
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/DeleteSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Unbind }
+            }
+        };
             internal int MaximumGrpcChannels { get; set; }
             internal uint MaxConcurrentStreamsLowWatermark { get; set; }
-            internal MethodConfig[] MethodConfigs { private get; set; }
             public GcpCallInvokerBuilder() : base(SpannerClient.ServiceMetadata)
             {
             }
 
-            public override GcpCallInvoker Build() => BuildAsync().Result;
+            public override GcpCallInvoker Build() => throw new NotImplementedException();
 
-            internal string InvokerEffectiveEndpoint => UseEmulator ? Endpoint : EffectiveEndpoint;
+            internal new string EffectiveEndpoint =>  base.EffectiveEndpoint;
 
             internal new EmulatorDetection EmulatorDetection
             {
@@ -225,15 +279,13 @@ namespace Google.Cloud.Spanner.Data
 
             internal Func<string, string> EnvironmentVariableProvider { get; set; }
 
-            internal async Task<ChannelCredentials> CheckAndGetChannelCredentialsAsync(CancellationToken cancellationToken=default)
-            {
-                return await base.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
-            }
+            internal new async Task<ChannelCredentials> GetChannelCredentialsAsync(CancellationToken cancellationToken=default)
+                => await base.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
 
             public override async Task<GcpCallInvoker> BuildAsync(CancellationToken cancellationToken = default)
             {
-                var endpoint = UseEmulator ? Endpoint : EffectiveEndpoint;
-                var credentials = await CheckAndGetChannelCredentialsAsync().ConfigureAwait(false);
+                var endpoint = EffectiveEndpoint;
+                var credentials = await GetChannelCredentialsAsync().ConfigureAwait(false);
 
                 var apiConfig = new ApiConfig
                 {
@@ -242,30 +294,32 @@ namespace Google.Cloud.Spanner.Data
                         MaxSize = (uint)MaximumGrpcChannels,
                         MaxConcurrentStreamsLowWatermark = MaxConcurrentStreamsLowWatermark
                     },
-                    Method = { MethodConfigs }
+                    Method = { s_methodConfigs }
                 };
 
-                var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, endpoint, credentials, GrpcChannelOptions, apiConfig, GrpcAdapter);
+                var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, endpoint, credentials, s_grpcChannelOptions, apiConfig, GrpcAdapter);
                 return callInvoker;
             }
             protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
 
-            internal GcpCallInvokerBuilder MaybeSetEmulatorProperties()
+            /// <summary>
+            /// This method should be called wherever there is a possibility of us using the Emulator vs Prod backend.
+            /// The method takes care of setting the necessary properties to connect to the Emulator correctly.
+            /// </summary>
+            internal void MaybeSetEmulatorProperties()
             {
-                var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables, EnvironmentVariableProvider);
-                if (emulatorEnvironment is null)
+                var emulatorBuilder = new SpannerClientBuilder
                 {
-                    UseEmulator = false;
-                }
-                else
-                {
-                    // Set Emulator based properties on this builder object
-                    UseEmulator = true;
-                    Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable];
-                    ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure;
-                }
+                    EmulatorDetection = EmulatorDetection,
+                    EnvironmentVariableProvider = EnvironmentVariableProvider
+                }.MaybeCreateEmulatorClientBuilder();
 
-                return this;
+                UseEmulator = emulatorBuilder is object;
+                if(UseEmulator)
+                {
+                    Endpoint = emulatorBuilder.Endpoint;
+                    ChannelCredentials = emulatorBuilder.ChannelCredentials ?? ChannelCredentials;
+                }
             }
         }
     }
