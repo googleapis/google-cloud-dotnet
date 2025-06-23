@@ -1,0 +1,12 @@
+command: configure
+args:
+- '--api-root=/test/api-root'
+- '--generator-input=/test/generator-input'
+- '--api-path=google/test/v1'
+commonFiles:
+  - source: test-apis.json
+    target: generator-input/apis.json
+  - source: test-state.json
+    target: generator-input/pipeline-state.json
+# Configure command fails because google/test/v1 already exists in apis.json
+expectedExitCode: 1
