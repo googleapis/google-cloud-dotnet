@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using System;
-//using System.Data;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using IsolationLevel = System.Data.IsolationLevel;
 using SpannerIsolationLevel = Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel;
@@ -97,7 +96,7 @@ public sealed class SpannerTransactionCreationOptions
     public bool IsPartitionedDml { get; }
 
     /// <summary>
-    /// Snapshot Isolation Level set to <see cref="TransactionOptions.Types.IsolationLevel"/>.
+    /// Snapshot Isolation Level set to <see cref="System.Data.IsolationLevel"/>.
     /// Only meant to be set for read-write transactions.
     /// </summary>
     public IsolationLevel IsolationLevel {  get; }
@@ -147,11 +146,10 @@ public sealed class SpannerTransactionCreationOptions
             nameof(excludeFromChangeStreams),
             "Only read-write and partioned DML transactions can be marked for change stream exclusion.");
         ExcludeFromChangeStreams = excludeFromChangeStreams;
-        Console.WriteLine($"TransactionMode {TransactionMode}, IsolationLevel {isolationLevel}");
         GaxPreconditions.CheckArgument(
             TransactionMode == TransactionMode.ReadWrite || isolationLevel == IsolationLevel.Unspecified,
             nameof(isolationLevel),
-            $"Isolation Level can only be specified for read-write transactions. {TransactionMode}, {isolationLevel}");
+            $"Isolation Level can only be specified for read-write transactions. This transaction would be {TransactionMode} and the specified level is {isolationLevel}");
         IsolationLevel = isolationLevel;
     }
 
@@ -203,6 +201,17 @@ public sealed class SpannerTransactionCreationOptions
             options.ExcludeTxnFromChangeStreams = ExcludeFromChangeStreams;
             options.IsolationLevel = ConvertToSpannerIsolatonLevel(IsolationLevel);
         }
+
+        SpannerIsolationLevel ConvertToSpannerIsolatonLevel(IsolationLevel isolationLevel) => isolationLevel switch
+        {
+            IsolationLevel.Unspecified => SpannerIsolationLevel.Unspecified,
+            IsolationLevel.Serializable => SpannerIsolationLevel.Serializable,
+            IsolationLevel.RepeatableRead => SpannerIsolationLevel.RepeatableRead,
+            IsolationLevel.Snapshot => SpannerIsolationLevel.RepeatableRead,
+            _ => throw new NotSupportedException(
+                $"Cloud Spanner currently does not support {nameof(isolationLevel)}"),
+        };
+
         return options;
     }
 
@@ -235,13 +244,4 @@ public sealed class SpannerTransactionCreationOptions
     /// </summary>
     public SpannerTransactionCreationOptions WithIsolationLevel(IsolationLevel isolationLevel) =>
         isolationLevel == IsolationLevel ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, IsSingleUse, IsPartitionedDml, ExcludeFromChangeStreams, isolationLevel);
-
-    private SpannerIsolationLevel ConvertToSpannerIsolatonLevel(IsolationLevel isolationLevel) => isolationLevel switch
-    {
-        IsolationLevel.Unspecified => SpannerIsolationLevel.Unspecified,
-        IsolationLevel.Serializable => SpannerIsolationLevel.Serializable,
-        IsolationLevel.RepeatableRead => SpannerIsolationLevel.RepeatableRead,
-        _ => throw new NotSupportedException(
-            $"Cloud Spanner currently does not support {nameof(isolationLevel)}"),
-    };
 }

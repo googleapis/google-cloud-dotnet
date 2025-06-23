@@ -17,6 +17,7 @@ using System;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using IsolationLevel = System.Data.IsolationLevel;
+using SpannerIsolationLevel = Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel;
 
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerTransactionCreationOptionsTests
@@ -243,5 +244,29 @@ public class SpannerTransactionCreationOptionsTests
     {
         var options = SpannerTransactionCreationOptions.PartitionedDml.WithIsolationLevel(IsolationLevel.RepeatableRead);
         Assert.Equal(IsolationLevel.RepeatableRead, options.IsolationLevel);
+    }
+
+    [Theory]
+    [InlineData(IsolationLevel.RepeatableRead, SpannerIsolationLevel.RepeatableRead)]
+    [InlineData(IsolationLevel.Snapshot, SpannerIsolationLevel.RepeatableRead)]
+    [InlineData(IsolationLevel.Unspecified, SpannerIsolationLevel.Unspecified)]
+    [InlineData(IsolationLevel.Serializable, SpannerIsolationLevel.Serializable)]
+    public void IsolationLevel_ConversionCorrectness(IsolationLevel clientIsolationLevel, SpannerIsolationLevel expectedConvertedIsolationLevel)
+    {
+        var spannerTxnOptions = SpannerTransactionCreationOptions.PartitionedDml.WithIsolationLevel(clientIsolationLevel);
+        var transactionOptions = spannerTxnOptions.GetTransactionOptions();
+
+        Assert.Equal(expectedConvertedIsolationLevel, transactionOptions.IsolationLevel);
+    }
+
+    [Theory]
+    [InlineData(IsolationLevel.ReadCommitted)]
+    [InlineData(IsolationLevel.ReadUncommitted)]
+    [InlineData(IsolationLevel.Chaos)]
+    public void IsolationLevel_ConversionFailure(IsolationLevel clientIsolationLevel)
+    {
+        var spannerTxnOptions = SpannerTransactionCreationOptions.PartitionedDml.WithIsolationLevel(clientIsolationLevel);
+
+        Assert.Throws<NotSupportedException>(() => spannerTxnOptions.GetTransactionOptions());
     }
 }

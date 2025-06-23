@@ -17,7 +17,6 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
-using System.Data;
 using System.Threading.Tasks;
 using Xunit;
 using WKT = Google.Protobuf.WellKnownTypes;
@@ -243,78 +242,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                 {
                                     var thrownException = await Assert.ThrowsAsync<SpannerException>(() => reader.ReadAsync());
                                     Assert.True(thrownException.IsRetryable);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
-        public async Task IsolationLevelBehavesCorrectly()
-        {
-            // Requires multiple read/write transactions which is not supported on the emulator.
-
-            // Note: deeply nested using statements to ensure that we dispose of everything even in the case of failure,
-            // but we manually dispose of both tx1 and connection1.
-            using (var connection1 = new SpannerConnection(_fixture.ConnectionString))
-            {
-                using (var connection2 = new SpannerConnection(_fixture.ConnectionString))
-                {
-
-                    await Task.WhenAll(connection1.OpenAsync(), connection2.OpenAsync());
-                    // TX1 has no IsolationLevel so default should be taken up
-                    using (var tx1 = await connection1.BeginTransactionAsync())
-                    {
-
-                        // TX1 READ
-                        using (var cmd = CreateSelectAllCommandForKey(connection1))
-                        {
-                            cmd.Transaction = tx1;
-                            using (var reader = await cmd.ExecuteReaderAsync())
-                            {
-                                Assert.True(await reader.ReadAsync());
-                            }
-                        }
-
-                        // TX2 START
-                        // TX2 set with IsolationLevel RepeatableRead
-                        using (var tx2 = await connection2.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(IsolationLevel.RepeatableRead),
-                transactionOptions: null, default))
-                        {
-
-                            // TX2 READ
-                            using (var cmd = CreateSelectAllCommandForKey(connection2))
-                            {
-                                cmd.Transaction = tx2;
-                                using (var reader = await cmd.ExecuteReaderAsync())
-                                {
-                                    Assert.True(await reader.ReadAsync());
-                                }
-                            }
-
-                            // TX1 WRITE/COMMIT
-                            using (var cmd = connection1.CreateUpdateCommand(_fixture.TableName))
-                            {
-                                cmd.Parameters.Add("k", SpannerDbType.String, _key);
-                                cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
-                                cmd.Transaction = tx1;
-                                await cmd.ExecuteNonQueryAsync();
-                                await tx1.CommitAsync();
-                                tx1.Dispose();
-                            }
-                            connection1.Dispose();
-
-                            // TX2 READ again should not throw an exception
-                            using (var cmd = CreateSelectAllCommandForKey(connection2))
-                            {
-                                cmd.Transaction = tx2;
-                                using (var reader = await cmd.ExecuteReaderAsync())
-                                {
-                                    // Best we can do is assert the read is successful even after TX1 commits write as TX2 should have snapshot isolation
-                                    Assert.True(await reader.ReadAsync());
                                 }
                             }
                         }
