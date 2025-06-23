@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Tools.Common;
 using Google.Protobuf.WellKnownTypes;
 using Newtonsoft.Json;
@@ -20,6 +21,7 @@ using SharpCompress.Archives.Tar;
 using SharpCompress.Common;
 using SharpCompress.Writers.Tar;
 using System;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 
@@ -78,10 +80,17 @@ internal class PackageLibraryCommand : IContainerCommand
     private static void PackageDocumentation(RootLayout rootLayout, ApiMetadata api, string outputDirectory)
     {
         var docsDir = rootLayout.CreateDocsLayout(api.Id).OutputDirectory;
+        if (!Directory.Exists(docsDir))
+        {
+            return;
+        }
         // Note: a comment in uploaddocs.sh claims we don't generate documentation for all packages.
         // I believe this is no longer true.
         var siteDir = Path.Combine(docsDir, "site");
-        FixDocfxOutput(siteDir, api);
+        if (Directory.Exists(siteDir))
+        {
+            FixDocfxOutput(siteDir, api);
+        }
 
         var devSiteDir = Path.Combine(docsDir, "devsite");
 

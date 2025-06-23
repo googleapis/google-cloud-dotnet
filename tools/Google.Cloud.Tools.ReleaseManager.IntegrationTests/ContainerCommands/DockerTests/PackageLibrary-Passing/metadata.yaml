@@ -1,0 +1,27 @@
+command: package-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Test.V1'
+- '--output=/test/output'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: Google.Test.V1
+    target: repo/apis/Google.Test.V1
+  - source: Google.Test.V1/Google.Test.V1.sln
+    target: repo/docs/Google.Cloud.DocTools.sln
+  - source: Google.Test.V1/Google.Test.V1/Google.Test.V1.csproj
+    target: repo/docs/Google.Test.V1/Google.Test.V1.csproj
+repoFiles:
+  - source: docs/builddocs.sh
+    target: repo/docs/builddocs.sh 
+  - source: toolversions.sh
+    target: repo/toolversions.sh
+fileExpectations:
+  present:
+  - output/Google.Test.V1.1.0.0.nupkg
+  - output/Google.Test.V1.1.0.0.nupkg-sbom.spdx.json
+  - output/package-owner.txt
