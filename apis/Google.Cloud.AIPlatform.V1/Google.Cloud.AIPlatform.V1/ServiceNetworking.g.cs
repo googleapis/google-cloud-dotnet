@@ -27,32 +27,40 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zZXJ2aWNlX25ldHdvcmtp",
             "bmcucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvIkQKE1BTQ0F1dG9tYXRpb25Db25maWcSFwoKcHJvamVjdF9pZBgB",
-            "IAEoCUID4EECEhQKB25ldHdvcmsYAiABKAlCA+BBAiKGAQobUHJpdmF0ZVNl",
-            "cnZpY2VDb25uZWN0Q29uZmlnEisKHmVuYWJsZV9wcml2YXRlX3NlcnZpY2Vf",
-            "Y29ubmVjdBgBIAEoCEID4EECEhkKEXByb2plY3RfYWxsb3dsaXN0GAIgAygJ",
-            "Eh8KEnNlcnZpY2VfYXR0YWNobWVudBgFIAEoCUID4EEDIlMKFVBzY0F1dG9t",
-            "YXRlZEVuZHBvaW50cxISCgpwcm9qZWN0X2lkGAEgASgJEg8KB25ldHdvcmsY",
-            "AiABKAkSFQoNbWF0Y2hfYWRkcmVzcxgDIAEoCSKyAQoSUHNjSW50ZXJmYWNl",
-            "Q29uZmlnEkwKEm5ldHdvcmtfYXR0YWNobWVudBgBIAEoCUIw4EEB+kEqCihj",
-            "b21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmtBdHRhY2htZW50Ek4KE2Ru",
-            "c19wZWVyaW5nX2NvbmZpZ3MYAiADKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5EbnNQZWVyaW5nQ29uZmlnQgPgQQEiYQoQRG5zUGVlcmluZ0Nv",
-            "bmZpZxITCgZkb21haW4YASABKAlCA+BBAhIbCg50YXJnZXRfcHJvamVjdBgC",
-            "IAEoCUID4EECEhsKDnRhcmdldF9uZXR3b3JrGAMgASgJQgPgQQJCzQIKHmNv",
-            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIWU2VydmljZU5ldHdvcmtp",
-            "bmdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
-            "djEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5B",
-            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
-            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMepBdgooY29tcHV0ZS5nb29n",
-            "bGVhcGlzLmNvbS9OZXR3b3JrQXR0YWNobWVudBJKcHJvamVjdHMve3Byb2pl",
-            "Y3R9L3JlZ2lvbnMve3JlZ2lvbn0vbmV0d29ya0F0dGFjaG1lbnRzL3tuZXR3",
-            "b3JrYXR0YWNobWVudH1iBnByb3RvMw=="));
+            "LnByb3RvItsBChNQU0NBdXRvbWF0aW9uQ29uZmlnEhcKCnByb2plY3RfaWQY",
+            "ASABKAlCA+BBAhIUCgduZXR3b3JrGAIgASgJQgPgQQISFwoKaXBfYWRkcmVz",
+            "cxgDIAEoCUID4EEDEhwKD2ZvcndhcmRpbmdfcnVsZRgEIAEoCUID4EEDEkIK",
+            "BXN0YXRlGAUgASgOMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUFND",
+            "QXV0b21hdGlvblN0YXRlQgPgQQMSGgoNZXJyb3JfbWVzc2FnZRgGIAEoCUID",
+            "4EEDItwBChtQcml2YXRlU2VydmljZUNvbm5lY3RDb25maWcSKwoeZW5hYmxl",
+            "X3ByaXZhdGVfc2VydmljZV9jb25uZWN0GAEgASgIQgPgQQISGQoRcHJvamVj",
+            "dF9hbGxvd2xpc3QYAiADKAkSVAoWcHNjX2F1dG9tYXRpb25fY29uZmlncxgD",
+            "IAMoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBTQ0F1dG9tYXRp",
+            "b25Db25maWdCA+BBARIfChJzZXJ2aWNlX2F0dGFjaG1lbnQYBSABKAlCA+BB",
+            "AyJTChVQc2NBdXRvbWF0ZWRFbmRwb2ludHMSEgoKcHJvamVjdF9pZBgBIAEo",
+            "CRIPCgduZXR3b3JrGAIgASgJEhUKDW1hdGNoX2FkZHJlc3MYAyABKAkisgEK",
+            "ElBzY0ludGVyZmFjZUNvbmZpZxJMChJuZXR3b3JrX2F0dGFjaG1lbnQYASAB",
+            "KAlCMOBBAfpBKgooY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrQXR0",
+            "YWNobWVudBJOChNkbnNfcGVlcmluZ19jb25maWdzGAIgAygLMiwuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRG5zUGVlcmluZ0NvbmZpZ0ID4EEBImEK",
+            "EERuc1BlZXJpbmdDb25maWcSEwoGZG9tYWluGAEgASgJQgPgQQISGwoOdGFy",
+            "Z2V0X3Byb2plY3QYAiABKAlCA+BBAhIbCg50YXJnZXRfbmV0d29yaxgDIAEo",
+            "CUID4EECKoABChJQU0NBdXRvbWF0aW9uU3RhdGUSJAogUFNDX0FVVE9NQVRJ",
+            "T05fU1RBVEVfVU5TUEVDSUZJRUQQABIjCh9QU0NfQVVUT01BVElPTl9TVEFU",
+            "RV9TVUNDRVNTRlVMEAESHwobUFNDX0FVVE9NQVRJT05fU1RBVEVfRkFJTEVE",
+            "EAJCzQIKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIWU2Vydmlj",
+            "ZU5ldHdvcmtpbmdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxh",
+            "dGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZv",
+            "cm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMepBdgooY29t",
+            "cHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrQXR0YWNobWVudBJKcHJvamVj",
+            "dHMve3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vbmV0d29ya0F0dGFjaG1l",
+            "bnRzL3tuZXR3b3JrYXR0YWNobWVudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig), global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser, new[]{ "ProjectId", "Network" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist", "ServiceAttachment" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig), global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser, new[]{ "ProjectId", "Network", "IpAddress", "ForwardingRule", "State", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist", "PscAutomationConfigs", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints), global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints.Parser, new[]{ "ProjectId", "Network", "MatchAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig), global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig.Parser, new[]{ "NetworkAttachment", "DnsPeeringConfigs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig), global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig.Parser, new[]{ "Domain", "TargetProject", "TargetNetwork" }, null, null, null, null)
@@ -61,10 +69,31 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The state of the PSC service automation.
+  /// </summary>
+  public enum PSCAutomationState {
+    /// <summary>
+    /// Should not be used.
+    /// </summary>
+    [pbr::OriginalName("PSC_AUTOMATION_STATE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The PSC service automation is successful.
+    /// </summary>
+    [pbr::OriginalName("PSC_AUTOMATION_STATE_SUCCESSFUL")] Successful = 1,
+    /// <summary>
+    /// The PSC service automation has failed.
+    /// </summary>
+    [pbr::OriginalName("PSC_AUTOMATION_STATE_FAILED")] Failed = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
-  /// PSC config that is used to automatically create forwarding rule via
-  /// ServiceConnectionMap.
+  /// PSC config that is used to automatically create PSC endpoints in the user
+  /// projects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PSCAutomationConfig : pb::IMessage<PSCAutomationConfig>
@@ -103,6 +132,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public PSCAutomationConfig(PSCAutomationConfig other) : this() {
       projectId_ = other.projectId_;
       network_ = other.network_;
+      ipAddress_ = other.ipAddress_;
+      forwardingRule_ = other.forwardingRule_;
+      state_ = other.state_;
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -133,10 +166,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The full name of the Google Compute Engine
     /// [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-    /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
+    /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/get):
     /// `projects/{project}/global/networks/{network}`.
-    /// Where {project} is a project number, as in '12345', and {network} is
-    /// network name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,6 +175,66 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return network_; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 3;
+    private string ipAddress_ = "";
+    /// <summary>
+    /// Output only. IP address rule created by the PSC service automation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "forwarding_rule" field.</summary>
+    public const int ForwardingRuleFieldNumber = 4;
+    private string forwardingRule_ = "";
+    /// <summary>
+    /// Output only. Forwarding rule created by the PSC service automation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ForwardingRule {
+      get { return forwardingRule_; }
+      set {
+        forwardingRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.PSCAutomationState state_ = global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified;
+    /// <summary>
+    /// Output only. The state of the PSC service automation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.PSCAutomationState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 6;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// Output only. Error message if the PSC service automation failed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -164,6 +255,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (ProjectId != other.ProjectId) return false;
       if (Network != other.Network) return false;
+      if (IpAddress != other.IpAddress) return false;
+      if (ForwardingRule != other.ForwardingRule) return false;
+      if (State != other.State) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,6 +268,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (ForwardingRule.Length != 0) hash ^= ForwardingRule.GetHashCode();
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) hash ^= State.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,6 +298,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(Network);
       }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IpAddress);
+      }
+      if (ForwardingRule.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ForwardingRule);
+      }
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -217,6 +332,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(Network);
       }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IpAddress);
+      }
+      if (ForwardingRule.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ForwardingRule);
+      }
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -232,6 +363,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (ForwardingRule.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ForwardingRule);
+      }
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -250,6 +393,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.Network.Length != 0) {
         Network = other.Network;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
+      }
+      if (other.ForwardingRule.Length != 0) {
+        ForwardingRule = other.ForwardingRule;
+      }
+      if (other.State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        State = other.State;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -274,6 +429,22 @@ namespace Google.Cloud.AIPlatform.V1 {
             Network = input.ReadString();
             break;
           }
+          case 26: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            ForwardingRule = input.ReadString();
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.AIPlatform.V1.PSCAutomationState) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -295,6 +466,22 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             Network = input.ReadString();
+            break;
+          }
+          case 26: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            ForwardingRule = input.ReadString();
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.AIPlatform.V1.PSCAutomationState) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -344,6 +531,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public PrivateServiceConnectConfig(PrivateServiceConnectConfig other) : this() {
       enablePrivateServiceConnect_ = other.enablePrivateServiceConnect_;
       projectAllowlist_ = other.projectAllowlist_.Clone();
+      pscAutomationConfigs_ = other.pscAutomationConfigs_.Clone();
       serviceAttachment_ = other.serviceAttachment_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -384,6 +572,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return projectAllowlist_; }
     }
 
+    /// <summary>Field number for the "psc_automation_configs" field.</summary>
+    public const int PscAutomationConfigsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig> _repeated_pscAutomationConfigs_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig> pscAutomationConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig>();
+    /// <summary>
+    /// Optional. List of projects and networks where the PSC endpoints will be
+    /// created. This field is used by Online Inference(Prediction) only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig> PscAutomationConfigs {
+      get { return pscAutomationConfigs_; }
+    }
+
     /// <summary>Field number for the "service_attachment" field.</summary>
     public const int ServiceAttachmentFieldNumber = 5;
     private string serviceAttachment_ = "";
@@ -418,6 +621,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (EnablePrivateServiceConnect != other.EnablePrivateServiceConnect) return false;
       if(!projectAllowlist_.Equals(other.projectAllowlist_)) return false;
+      if(!pscAutomationConfigs_.Equals(other.pscAutomationConfigs_)) return false;
       if (ServiceAttachment != other.ServiceAttachment) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -428,6 +632,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (EnablePrivateServiceConnect != false) hash ^= EnablePrivateServiceConnect.GetHashCode();
       hash ^= projectAllowlist_.GetHashCode();
+      hash ^= pscAutomationConfigs_.GetHashCode();
       if (ServiceAttachment.Length != 0) hash ^= ServiceAttachment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -452,6 +657,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnablePrivateServiceConnect);
       }
       projectAllowlist_.WriteTo(output, _repeated_projectAllowlist_codec);
+      pscAutomationConfigs_.WriteTo(output, _repeated_pscAutomationConfigs_codec);
       if (ServiceAttachment.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(ServiceAttachment);
@@ -471,6 +677,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnablePrivateServiceConnect);
       }
       projectAllowlist_.WriteTo(ref output, _repeated_projectAllowlist_codec);
+      pscAutomationConfigs_.WriteTo(ref output, _repeated_pscAutomationConfigs_codec);
       if (ServiceAttachment.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(ServiceAttachment);
@@ -489,6 +696,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + 1;
       }
       size += projectAllowlist_.CalculateSize(_repeated_projectAllowlist_codec);
+      size += pscAutomationConfigs_.CalculateSize(_repeated_pscAutomationConfigs_codec);
       if (ServiceAttachment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachment);
       }
@@ -508,6 +716,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         EnablePrivateServiceConnect = other.EnablePrivateServiceConnect;
       }
       projectAllowlist_.Add(other.projectAllowlist_);
+      pscAutomationConfigs_.Add(other.pscAutomationConfigs_);
       if (other.ServiceAttachment.Length != 0) {
         ServiceAttachment = other.ServiceAttachment;
       }
@@ -532,6 +741,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             projectAllowlist_.AddEntriesFrom(input, _repeated_projectAllowlist_codec);
+            break;
+          }
+          case 26: {
+            pscAutomationConfigs_.AddEntriesFrom(input, _repeated_pscAutomationConfigs_codec);
             break;
           }
           case 42: {
@@ -559,6 +772,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             projectAllowlist_.AddEntriesFrom(ref input, _repeated_projectAllowlist_codec);
+            break;
+          }
+          case 26: {
+            pscAutomationConfigs_.AddEntriesFrom(ref input, _repeated_pscAutomationConfigs_codec);
             break;
           }
           case 42: {
