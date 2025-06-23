@@ -241,6 +241,7 @@ public sealed class SpannerTransactionCreationOptions
         IsolationLevel.Unspecified => SpannerIsolationLevel.Unspecified,
         IsolationLevel.Serializable => SpannerIsolationLevel.Serializable,
         IsolationLevel.RepeatableRead => SpannerIsolationLevel.RepeatableRead,
+        IsolationLevel.Snapshot => SpannerIsolationLevel.RepeatableRead,
         _ => throw new NotSupportedException(
             $"Cloud Spanner currently does not support {nameof(isolationLevel)}"),
     };
