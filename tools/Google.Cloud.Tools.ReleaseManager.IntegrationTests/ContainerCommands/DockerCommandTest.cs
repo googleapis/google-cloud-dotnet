@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -61,6 +60,17 @@ public class DockerCommandTest
         {
             var path = Path.Combine(outputDirectory, expectedAbsent);
             Assert.False(Path.Exists(path), $"Path {path} should not exist");
+        }
+        var expectedDirectory = Path.Combine(outputDirectory, "expected");
+        if (Directory.Exists(expectedDirectory))
+        {
+            foreach (var expectedFilePath in Directory.GetFiles(expectedDirectory, "*.*", SearchOption.AllDirectories))
+            {
+                var actualFilePath = Path.Combine(outputDirectory, Path.GetRelativePath(expectedDirectory, expectedFilePath));
+                var expectedContent = File.ReadAllText(expectedFilePath);
+                var actualContent = File.ReadAllText(actualFilePath);
+                Assert.Equal(expectedContent, actualContent);
+            }
         }
     }
 
