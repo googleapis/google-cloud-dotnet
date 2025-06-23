@@ -2404,7 +2404,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-24T16:26:35Z",
-            "lastGeneratedCommit": "592aef543abdb51885ff85570d126f7885cec443",
+            "lastGeneratedCommit": "09243fddedfbaa8119be04f7fb8427e054c10f94",
             "apiPaths": [
                 "google/cloud/parametermanager/v1"
             ],
