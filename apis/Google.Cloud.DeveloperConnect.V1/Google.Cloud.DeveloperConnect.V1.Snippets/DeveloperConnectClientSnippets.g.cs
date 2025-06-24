@@ -2490,5 +2490,1722 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for ListAccountConnectors</summary>
+        public void ListAccountConnectorsRequestObject()
+        {
+            // Snippet: ListAccountConnectors(ListAccountConnectorsRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            ListAccountConnectorsRequest request = new ListAccountConnectorsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectors(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccountConnector item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccountConnectorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccountConnector item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccountConnector> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccountConnector item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccountConnectorsAsync</summary>
+        public async Task ListAccountConnectorsRequestObjectAsync()
+        {
+            // Snippet: ListAccountConnectorsAsync(ListAccountConnectorsRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAccountConnectorsRequest request = new ListAccountConnectorsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectorsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccountConnector item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccountConnectorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccountConnector item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccountConnector> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccountConnector item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccountConnectors</summary>
+        public void ListAccountConnectors()
+        {
+            // Snippet: ListAccountConnectors(string, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectors(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccountConnector item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccountConnectorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccountConnector item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccountConnector> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccountConnector item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccountConnectorsAsync</summary>
+        public async Task ListAccountConnectorsAsync()
+        {
+            // Snippet: ListAccountConnectorsAsync(string, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectorsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccountConnector item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccountConnectorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccountConnector item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccountConnector> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccountConnector item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccountConnectors</summary>
+        public void ListAccountConnectorsResourceNames()
+        {
+            // Snippet: ListAccountConnectors(LocationName, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectors(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AccountConnector item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAccountConnectorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccountConnector item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccountConnector> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccountConnector item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAccountConnectorsAsync</summary>
+        public async Task ListAccountConnectorsResourceNamesAsync()
+        {
+            // Snippet: ListAccountConnectorsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> response = developerConnectClient.ListAccountConnectorsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AccountConnector item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAccountConnectorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AccountConnector item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AccountConnector> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AccountConnector item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountConnector</summary>
+        public void GetAccountConnectorRequestObject()
+        {
+            // Snippet: GetAccountConnector(GetAccountConnectorRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            GetAccountConnectorRequest request = new GetAccountConnectorRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            AccountConnector response = developerConnectClient.GetAccountConnector(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountConnectorAsync</summary>
+        public async Task GetAccountConnectorRequestObjectAsync()
+        {
+            // Snippet: GetAccountConnectorAsync(GetAccountConnectorRequest, CallSettings)
+            // Additional: GetAccountConnectorAsync(GetAccountConnectorRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAccountConnectorRequest request = new GetAccountConnectorRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            AccountConnector response = await developerConnectClient.GetAccountConnectorAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountConnector</summary>
+        public void GetAccountConnector()
+        {
+            // Snippet: GetAccountConnector(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            AccountConnector response = developerConnectClient.GetAccountConnector(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountConnectorAsync</summary>
+        public async Task GetAccountConnectorAsync()
+        {
+            // Snippet: GetAccountConnectorAsync(string, CallSettings)
+            // Additional: GetAccountConnectorAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            AccountConnector response = await developerConnectClient.GetAccountConnectorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountConnector</summary>
+        public void GetAccountConnectorResourceNames()
+        {
+            // Snippet: GetAccountConnector(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            AccountConnector response = developerConnectClient.GetAccountConnector(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountConnectorAsync</summary>
+        public async Task GetAccountConnectorResourceNamesAsync()
+        {
+            // Snippet: GetAccountConnectorAsync(AccountConnectorName, CallSettings)
+            // Additional: GetAccountConnectorAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            AccountConnector response = await developerConnectClient.GetAccountConnectorAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccountConnector</summary>
+        public void CreateAccountConnectorRequestObject()
+        {
+            // Snippet: CreateAccountConnector(CreateAccountConnectorRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            CreateAccountConnectorRequest request = new CreateAccountConnectorRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AccountConnectorId = "",
+                AccountConnector = new AccountConnector(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = developerConnectClient.CreateAccountConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceCreateAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccountConnectorAsync</summary>
+        public async Task CreateAccountConnectorRequestObjectAsync()
+        {
+            // Snippet: CreateAccountConnectorAsync(CreateAccountConnectorRequest, CallSettings)
+            // Additional: CreateAccountConnectorAsync(CreateAccountConnectorRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAccountConnectorRequest request = new CreateAccountConnectorRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AccountConnectorId = "",
+                AccountConnector = new AccountConnector(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = await developerConnectClient.CreateAccountConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceCreateAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccountConnector</summary>
+        public void CreateAccountConnector()
+        {
+            // Snippet: CreateAccountConnector(string, AccountConnector, string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AccountConnector accountConnector = new AccountConnector();
+            string accountConnectorId = "";
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = developerConnectClient.CreateAccountConnector(parent, accountConnector, accountConnectorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceCreateAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccountConnectorAsync</summary>
+        public async Task CreateAccountConnectorAsync()
+        {
+            // Snippet: CreateAccountConnectorAsync(string, AccountConnector, string, CallSettings)
+            // Additional: CreateAccountConnectorAsync(string, AccountConnector, string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AccountConnector accountConnector = new AccountConnector();
+            string accountConnectorId = "";
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = await developerConnectClient.CreateAccountConnectorAsync(parent, accountConnector, accountConnectorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceCreateAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccountConnector</summary>
+        public void CreateAccountConnectorResourceNames()
+        {
+            // Snippet: CreateAccountConnector(LocationName, AccountConnector, string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AccountConnector accountConnector = new AccountConnector();
+            string accountConnectorId = "";
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = developerConnectClient.CreateAccountConnector(parent, accountConnector, accountConnectorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceCreateAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAccountConnectorAsync</summary>
+        public async Task CreateAccountConnectorResourceNamesAsync()
+        {
+            // Snippet: CreateAccountConnectorAsync(LocationName, AccountConnector, string, CallSettings)
+            // Additional: CreateAccountConnectorAsync(LocationName, AccountConnector, string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AccountConnector accountConnector = new AccountConnector();
+            string accountConnectorId = "";
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = await developerConnectClient.CreateAccountConnectorAsync(parent, accountConnector, accountConnectorId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceCreateAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccountConnector</summary>
+        public void UpdateAccountConnectorRequestObject()
+        {
+            // Snippet: UpdateAccountConnector(UpdateAccountConnectorRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            UpdateAccountConnectorRequest request = new UpdateAccountConnectorRequest
+            {
+                UpdateMask = new FieldMask(),
+                AccountConnector = new AccountConnector(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = developerConnectClient.UpdateAccountConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceUpdateAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccountConnectorAsync</summary>
+        public async Task UpdateAccountConnectorRequestObjectAsync()
+        {
+            // Snippet: UpdateAccountConnectorAsync(UpdateAccountConnectorRequest, CallSettings)
+            // Additional: UpdateAccountConnectorAsync(UpdateAccountConnectorRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAccountConnectorRequest request = new UpdateAccountConnectorRequest
+            {
+                UpdateMask = new FieldMask(),
+                AccountConnector = new AccountConnector(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = await developerConnectClient.UpdateAccountConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceUpdateAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccountConnector</summary>
+        public void UpdateAccountConnector()
+        {
+            // Snippet: UpdateAccountConnector(AccountConnector, FieldMask, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnector accountConnector = new AccountConnector();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = developerConnectClient.UpdateAccountConnector(accountConnector, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceUpdateAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAccountConnectorAsync</summary>
+        public async Task UpdateAccountConnectorAsync()
+        {
+            // Snippet: UpdateAccountConnectorAsync(AccountConnector, FieldMask, CallSettings)
+            // Additional: UpdateAccountConnectorAsync(AccountConnector, FieldMask, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnector accountConnector = new AccountConnector();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AccountConnector, OperationMetadata> response = await developerConnectClient.UpdateAccountConnectorAsync(accountConnector, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AccountConnector, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AccountConnector result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AccountConnector, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceUpdateAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AccountConnector retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccountConnector</summary>
+        public void DeleteAccountConnectorRequestObject()
+        {
+            // Snippet: DeleteAccountConnector(DeleteAccountConnectorRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            DeleteAccountConnectorRequest request = new DeleteAccountConnectorRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+                RequestId = "",
+                ValidateOnly = false,
+                Etag = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteAccountConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccountConnectorAsync</summary>
+        public async Task DeleteAccountConnectorRequestObjectAsync()
+        {
+            // Snippet: DeleteAccountConnectorAsync(DeleteAccountConnectorRequest, CallSettings)
+            // Additional: DeleteAccountConnectorAsync(DeleteAccountConnectorRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAccountConnectorRequest request = new DeleteAccountConnectorRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+                RequestId = "",
+                ValidateOnly = false,
+                Etag = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteAccountConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccountConnector</summary>
+        public void DeleteAccountConnector()
+        {
+            // Snippet: DeleteAccountConnector(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteAccountConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccountConnectorAsync</summary>
+        public async Task DeleteAccountConnectorAsync()
+        {
+            // Snippet: DeleteAccountConnectorAsync(string, CallSettings)
+            // Additional: DeleteAccountConnectorAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteAccountConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccountConnector</summary>
+        public void DeleteAccountConnectorResourceNames()
+        {
+            // Snippet: DeleteAccountConnector(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteAccountConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteAccountConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAccountConnectorAsync</summary>
+        public async Task DeleteAccountConnectorResourceNamesAsync()
+        {
+            // Snippet: DeleteAccountConnectorAsync(AccountConnectorName, CallSettings)
+            // Additional: DeleteAccountConnectorAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteAccountConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteAccountConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAccessToken</summary>
+        public void FetchAccessTokenRequestObject()
+        {
+            // Snippet: FetchAccessToken(FetchAccessTokenRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            FetchAccessTokenRequest request = new FetchAccessTokenRequest
+            {
+                AccountConnectorAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            FetchAccessTokenResponse response = developerConnectClient.FetchAccessToken(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAccessTokenAsync</summary>
+        public async Task FetchAccessTokenRequestObjectAsync()
+        {
+            // Snippet: FetchAccessTokenAsync(FetchAccessTokenRequest, CallSettings)
+            // Additional: FetchAccessTokenAsync(FetchAccessTokenRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchAccessTokenRequest request = new FetchAccessTokenRequest
+            {
+                AccountConnectorAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            FetchAccessTokenResponse response = await developerConnectClient.FetchAccessTokenAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAccessToken</summary>
+        public void FetchAccessToken()
+        {
+            // Snippet: FetchAccessToken(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string accountConnector = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            FetchAccessTokenResponse response = developerConnectClient.FetchAccessToken(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAccessTokenAsync</summary>
+        public async Task FetchAccessTokenAsync()
+        {
+            // Snippet: FetchAccessTokenAsync(string, CallSettings)
+            // Additional: FetchAccessTokenAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string accountConnector = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            FetchAccessTokenResponse response = await developerConnectClient.FetchAccessTokenAsync(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAccessToken</summary>
+        public void FetchAccessTokenResourceNames()
+        {
+            // Snippet: FetchAccessToken(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName accountConnector = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            FetchAccessTokenResponse response = developerConnectClient.FetchAccessToken(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAccessTokenAsync</summary>
+        public async Task FetchAccessTokenResourceNamesAsync()
+        {
+            // Snippet: FetchAccessTokenAsync(AccountConnectorName, CallSettings)
+            // Additional: FetchAccessTokenAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName accountConnector = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            FetchAccessTokenResponse response = await developerConnectClient.FetchAccessTokenAsync(accountConnector);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsers</summary>
+        public void ListUsersRequestObject()
+        {
+            // Snippet: ListUsers(ListUsersRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            ListUsersRequest request = new ListUsersRequest
+            {
+                ParentAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (User item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsersAsync</summary>
+        public async Task ListUsersRequestObjectAsync()
+        {
+            // Snippet: ListUsersAsync(ListUsersRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsersRequest request = new ListUsersRequest
+            {
+                ParentAsAccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((User item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsers</summary>
+        public void ListUsers()
+        {
+            // Snippet: ListUsers(string, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            PagedEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (User item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsersAsync</summary>
+        public async Task ListUsersAsync()
+        {
+            // Snippet: ListUsersAsync(string, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            PagedAsyncEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((User item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsers</summary>
+        public void ListUsersResourceNames()
+        {
+            // Snippet: ListUsers(AccountConnectorName, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName parent = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            PagedEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (User item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsersAsync</summary>
+        public async Task ListUsersResourceNamesAsync()
+        {
+            // Snippet: ListUsersAsync(AccountConnectorName, string, int?, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName parent = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            PagedAsyncEnumerable<ListUsersResponse, User> response = developerConnectClient.ListUsersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((User item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUser</summary>
+        public void DeleteUserRequestObject()
+        {
+            // Snippet: DeleteUser(DeleteUserRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            DeleteUserRequest request = new DeleteUserRequest
+            {
+                UserName = UserName.FromProjectLocationAccountConnectorUser("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]", "[USER]"),
+                RequestId = "",
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteUser(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteUser(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserAsync</summary>
+        public async Task DeleteUserRequestObjectAsync()
+        {
+            // Snippet: DeleteUserAsync(DeleteUserRequest, CallSettings)
+            // Additional: DeleteUserAsync(DeleteUserRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteUserRequest request = new DeleteUserRequest
+            {
+                UserName = UserName.FromProjectLocationAccountConnectorUser("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]", "[USER]"),
+                RequestId = "",
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteUserAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteUserAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUser</summary>
+        public void DeleteUser()
+        {
+            // Snippet: DeleteUser(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]/users/[USER]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteUser(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteUser(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserAsync</summary>
+        public async Task DeleteUserAsync()
+        {
+            // Snippet: DeleteUserAsync(string, CallSettings)
+            // Additional: DeleteUserAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]/users/[USER]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteUserAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteUserAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUser</summary>
+        public void DeleteUserResourceNames()
+        {
+            // Snippet: DeleteUser(UserName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            UserName name = UserName.FromProjectLocationAccountConnectorUser("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]", "[USER]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteUser(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteUser(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserAsync</summary>
+        public async Task DeleteUserResourceNamesAsync()
+        {
+            // Snippet: DeleteUserAsync(UserName, CallSettings)
+            // Additional: DeleteUserAsync(UserName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName name = UserName.FromProjectLocationAccountConnectorUser("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]", "[USER]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteUserAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteUserAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSelf</summary>
+        public void FetchSelfRequestObject()
+        {
+            // Snippet: FetchSelf(FetchSelfRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            FetchSelfRequest request = new FetchSelfRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            User response = developerConnectClient.FetchSelf(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSelfAsync</summary>
+        public async Task FetchSelfRequestObjectAsync()
+        {
+            // Snippet: FetchSelfAsync(FetchSelfRequest, CallSettings)
+            // Additional: FetchSelfAsync(FetchSelfRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchSelfRequest request = new FetchSelfRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            User response = await developerConnectClient.FetchSelfAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSelf</summary>
+        public void FetchSelf()
+        {
+            // Snippet: FetchSelf(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            User response = developerConnectClient.FetchSelf(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSelfAsync</summary>
+        public async Task FetchSelfAsync()
+        {
+            // Snippet: FetchSelfAsync(string, CallSettings)
+            // Additional: FetchSelfAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            User response = await developerConnectClient.FetchSelfAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSelf</summary>
+        public void FetchSelfResourceNames()
+        {
+            // Snippet: FetchSelf(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            User response = developerConnectClient.FetchSelf(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSelfAsync</summary>
+        public async Task FetchSelfResourceNamesAsync()
+        {
+            // Snippet: FetchSelfAsync(AccountConnectorName, CallSettings)
+            // Additional: FetchSelfAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            User response = await developerConnectClient.FetchSelfAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSelf</summary>
+        public void DeleteSelfRequestObject()
+        {
+            // Snippet: DeleteSelf(DeleteSelfRequest, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            DeleteSelfRequest request = new DeleteSelfRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteSelf(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteSelf(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSelfAsync</summary>
+        public async Task DeleteSelfRequestObjectAsync()
+        {
+            // Snippet: DeleteSelfAsync(DeleteSelfRequest, CallSettings)
+            // Additional: DeleteSelfAsync(DeleteSelfRequest, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSelfRequest request = new DeleteSelfRequest
+            {
+                AccountConnectorName = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteSelfAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteSelfAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSelf</summary>
+        public void DeleteSelf()
+        {
+            // Snippet: DeleteSelf(string, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteSelf(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteSelf(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSelfAsync</summary>
+        public async Task DeleteSelfAsync()
+        {
+            // Snippet: DeleteSelfAsync(string, CallSettings)
+            // Additional: DeleteSelfAsync(string, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/accountConnectors/[ACCOUNT_CONNECTOR]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteSelfAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteSelfAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSelf</summary>
+        public void DeleteSelfResourceNames()
+        {
+            // Snippet: DeleteSelf(AccountConnectorName, CallSettings)
+            // Create client
+            DeveloperConnectClient developerConnectClient = DeveloperConnectClient.Create();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = developerConnectClient.DeleteSelf(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = developerConnectClient.PollOnceDeleteSelf(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSelfAsync</summary>
+        public async Task DeleteSelfResourceNamesAsync()
+        {
+            // Snippet: DeleteSelfAsync(AccountConnectorName, CallSettings)
+            // Additional: DeleteSelfAsync(AccountConnectorName, CancellationToken)
+            // Create client
+            DeveloperConnectClient developerConnectClient = await DeveloperConnectClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountConnectorName name = AccountConnectorName.FromProjectLocationAccountConnector("[PROJECT]", "[LOCATION]", "[ACCOUNT_CONNECTOR]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await developerConnectClient.DeleteSelfAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await developerConnectClient.PollOnceDeleteSelfAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

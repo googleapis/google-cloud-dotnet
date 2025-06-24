@@ -4148,6 +4148,4194 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListAccountConnectors_sync",
+      "title": "ListAccountConnectorsRequestObject",
+      "description": "Snippet for ListAccountConnectors",
+      "file": "DeveloperConnectClient.ListAccountConnectorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountConnectors",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListAccountConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse, Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListAccountConnectors",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListAccountConnectors",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListAccountConnectors_async",
+      "title": "ListAccountConnectorsRequestObjectAsync",
+      "description": "Snippet for ListAccountConnectorsAsync",
+      "file": "DeveloperConnectClient.ListAccountConnectorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountConnectorsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListAccountConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse, Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListAccountConnectors",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListAccountConnectors",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListAccountConnectors_sync_flattened",
+      "title": "ListAccountConnectors",
+      "description": "Snippet for ListAccountConnectors",
+      "file": "DeveloperConnectClient.ListAccountConnectorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountConnectors",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListAccountConnectors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse, Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListAccountConnectors",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListAccountConnectors",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListAccountConnectors_async_flattened",
+      "title": "ListAccountConnectorsAsync",
+      "description": "Snippet for ListAccountConnectorsAsync",
+      "file": "DeveloperConnectClient.ListAccountConnectorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountConnectorsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListAccountConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse, Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListAccountConnectors",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListAccountConnectors",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListAccountConnectors_sync_flattened_resourceNames",
+      "title": "ListAccountConnectorsResourceNames",
+      "description": "Snippet for ListAccountConnectors",
+      "file": "DeveloperConnectClient.ListAccountConnectorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountConnectors",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListAccountConnectors",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse, Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListAccountConnectors",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListAccountConnectors",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListAccountConnectors_async_flattened_resourceNames",
+      "title": "ListAccountConnectorsResourceNamesAsync",
+      "description": "Snippet for ListAccountConnectorsAsync",
+      "file": "DeveloperConnectClient.ListAccountConnectorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountConnectorsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListAccountConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse, Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListAccountConnectors",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListAccountConnectors",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetAccountConnector_sync",
+      "title": "GetAccountConnectorRequestObject",
+      "description": "Snippet for GetAccountConnector",
+      "file": "DeveloperConnectClient.GetAccountConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetAccountConnector_async",
+      "title": "GetAccountConnectorRequestObjectAsync",
+      "description": "Snippet for GetAccountConnectorAsync",
+      "file": "DeveloperConnectClient.GetAccountConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetAccountConnector_sync_flattened",
+      "title": "GetAccountConnector",
+      "description": "Snippet for GetAccountConnector",
+      "file": "DeveloperConnectClient.GetAccountConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetAccountConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetAccountConnector_async_flattened",
+      "title": "GetAccountConnectorAsync",
+      "description": "Snippet for GetAccountConnectorAsync",
+      "file": "DeveloperConnectClient.GetAccountConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetAccountConnector_sync_flattened_resourceNames",
+      "title": "GetAccountConnectorResourceNames",
+      "description": "Snippet for GetAccountConnector",
+      "file": "DeveloperConnectClient.GetAccountConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetAccountConnector_async_flattened_resourceNames",
+      "title": "GetAccountConnectorResourceNamesAsync",
+      "description": "Snippet for GetAccountConnectorAsync",
+      "file": "DeveloperConnectClient.GetAccountConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.AccountConnector>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateAccountConnector_sync",
+      "title": "CreateAccountConnectorRequestObject",
+      "description": "Snippet for CreateAccountConnector",
+      "file": "DeveloperConnectClient.CreateAccountConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateAccountConnector_async",
+      "title": "CreateAccountConnectorRequestObjectAsync",
+      "description": "Snippet for CreateAccountConnectorAsync",
+      "file": "DeveloperConnectClient.CreateAccountConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateAccountConnector_sync_flattened",
+      "title": "CreateAccountConnector",
+      "description": "Snippet for CreateAccountConnector",
+      "file": "DeveloperConnectClient.CreateAccountConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateAccountConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+            "name": "accountConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "accountConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateAccountConnector_async_flattened",
+      "title": "CreateAccountConnectorAsync",
+      "description": "Snippet for CreateAccountConnectorAsync",
+      "file": "DeveloperConnectClient.CreateAccountConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+            "name": "accountConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "accountConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateAccountConnector_sync_flattened_resourceNames",
+      "title": "CreateAccountConnectorResourceNames",
+      "description": "Snippet for CreateAccountConnector",
+      "file": "DeveloperConnectClient.CreateAccountConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+            "name": "accountConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "accountConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateAccountConnector_async_flattened_resourceNames",
+      "title": "CreateAccountConnectorResourceNamesAsync",
+      "description": "Snippet for CreateAccountConnectorAsync",
+      "file": "DeveloperConnectClient.CreateAccountConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+            "name": "accountConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "accountConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateAccountConnector_sync",
+      "title": "UpdateAccountConnectorRequestObject",
+      "description": "Snippet for UpdateAccountConnector",
+      "file": "DeveloperConnectClient.UpdateAccountConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateAccountConnector_async",
+      "title": "UpdateAccountConnectorRequestObjectAsync",
+      "description": "Snippet for UpdateAccountConnectorAsync",
+      "file": "DeveloperConnectClient.UpdateAccountConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateAccountConnector_sync_flattened",
+      "title": "UpdateAccountConnector",
+      "description": "Snippet for UpdateAccountConnector",
+      "file": "DeveloperConnectClient.UpdateAccountConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateAccountConnector_async_flattened",
+      "title": "UpdateAccountConnectorAsync",
+      "description": "Snippet for UpdateAccountConnectorAsync",
+      "file": "DeveloperConnectClient.UpdateAccountConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnector",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.AccountConnector, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteAccountConnector_sync",
+      "title": "DeleteAccountConnectorRequestObject",
+      "description": "Snippet for DeleteAccountConnector",
+      "file": "DeveloperConnectClient.DeleteAccountConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteAccountConnector_async",
+      "title": "DeleteAccountConnectorRequestObjectAsync",
+      "description": "Snippet for DeleteAccountConnectorAsync",
+      "file": "DeveloperConnectClient.DeleteAccountConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteAccountConnector_sync_flattened",
+      "title": "DeleteAccountConnector",
+      "description": "Snippet for DeleteAccountConnector",
+      "file": "DeveloperConnectClient.DeleteAccountConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteAccountConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteAccountConnector_async_flattened",
+      "title": "DeleteAccountConnectorAsync",
+      "description": "Snippet for DeleteAccountConnectorAsync",
+      "file": "DeveloperConnectClient.DeleteAccountConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteAccountConnector_sync_flattened_resourceNames",
+      "title": "DeleteAccountConnectorResourceNames",
+      "description": "Snippet for DeleteAccountConnector",
+      "file": "DeveloperConnectClient.DeleteAccountConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountConnector",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteAccountConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteAccountConnector_async_flattened_resourceNames",
+      "title": "DeleteAccountConnectorResourceNamesAsync",
+      "description": "Snippet for DeleteAccountConnectorAsync",
+      "file": "DeveloperConnectClient.DeleteAccountConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountConnectorAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteAccountConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountConnector",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteAccountConnector",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchAccessToken_sync",
+      "title": "FetchAccessTokenRequestObject",
+      "description": "Snippet for FetchAccessToken",
+      "file": "DeveloperConnectClient.FetchAccessTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAccessToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchAccessToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchAccessToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchAccessToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchAccessToken_async",
+      "title": "FetchAccessTokenRequestObjectAsync",
+      "description": "Snippet for FetchAccessTokenAsync",
+      "file": "DeveloperConnectClient.FetchAccessTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAccessTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchAccessTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchAccessToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchAccessToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchAccessToken_sync_flattened",
+      "title": "FetchAccessToken",
+      "description": "Snippet for FetchAccessToken",
+      "file": "DeveloperConnectClient.FetchAccessTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAccessToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchAccessToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchAccessToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchAccessToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchAccessToken_async_flattened",
+      "title": "FetchAccessTokenAsync",
+      "description": "Snippet for FetchAccessTokenAsync",
+      "file": "DeveloperConnectClient.FetchAccessTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAccessTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchAccessTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchAccessToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchAccessToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchAccessToken_sync_flattened_resourceNames",
+      "title": "FetchAccessTokenResourceNames",
+      "description": "Snippet for FetchAccessToken",
+      "file": "DeveloperConnectClient.FetchAccessTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAccessToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchAccessToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchAccessToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchAccessToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchAccessToken_async_flattened_resourceNames",
+      "title": "FetchAccessTokenResourceNamesAsync",
+      "description": "Snippet for FetchAccessTokenAsync",
+      "file": "DeveloperConnectClient.FetchAccessTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAccessTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchAccessTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "accountConnector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchAccessToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchAccessToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListUsers_sync",
+      "title": "ListUsersRequestObject",
+      "description": "Snippet for ListUsers",
+      "file": "DeveloperConnectClient.ListUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListUsersResponse, Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListUsers",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListUsers_async",
+      "title": "ListUsersRequestObjectAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "DeveloperConnectClient.ListUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListUsersResponse, Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListUsers",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListUsers_sync_flattened",
+      "title": "ListUsers",
+      "description": "Snippet for ListUsers",
+      "file": "DeveloperConnectClient.ListUsersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListUsers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListUsersResponse, Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListUsers",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListUsers_async_flattened",
+      "title": "ListUsersAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "DeveloperConnectClient.ListUsersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListUsersResponse, Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListUsers",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListUsers_sync_flattened_resourceNames",
+      "title": "ListUsersResourceNames",
+      "description": "Snippet for ListUsers",
+      "file": "DeveloperConnectClient.ListUsersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListUsersResponse, Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListUsers",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListUsers_async_flattened_resourceNames",
+      "title": "ListUsersResourceNamesAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "DeveloperConnectClient.ListUsersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListUsersResponse, Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListUsers",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteUser_sync",
+      "title": "DeleteUserRequestObject",
+      "description": "Snippet for DeleteUser",
+      "file": "DeveloperConnectClient.DeleteUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteUser",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteUser_async",
+      "title": "DeleteUserRequestObjectAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "DeveloperConnectClient.DeleteUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteUser",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteUser_sync_flattened",
+      "title": "DeleteUser",
+      "description": "Snippet for DeleteUser",
+      "file": "DeveloperConnectClient.DeleteUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteUser",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteUser_async_flattened",
+      "title": "DeleteUserAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "DeveloperConnectClient.DeleteUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteUser",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteUser_sync_flattened_resourceNames",
+      "title": "DeleteUserResourceNames",
+      "description": "Snippet for DeleteUser",
+      "file": "DeveloperConnectClient.DeleteUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteUser",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteUser_async_flattened_resourceNames",
+      "title": "DeleteUserResourceNamesAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "DeveloperConnectClient.DeleteUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteUser",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchSelf_sync",
+      "title": "FetchSelfRequestObject",
+      "description": "Snippet for FetchSelf",
+      "file": "DeveloperConnectClient.FetchSelfRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSelf",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchSelf",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchSelfRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.User",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchSelf_async",
+      "title": "FetchSelfRequestObjectAsync",
+      "description": "Snippet for FetchSelfAsync",
+      "file": "DeveloperConnectClient.FetchSelfRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSelfAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchSelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchSelfRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchSelf_sync_flattened",
+      "title": "FetchSelf",
+      "description": "Snippet for FetchSelf",
+      "file": "DeveloperConnectClient.FetchSelfSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSelf",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchSelf",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.User",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchSelf_async_flattened",
+      "title": "FetchSelfAsync",
+      "description": "Snippet for FetchSelfAsync",
+      "file": "DeveloperConnectClient.FetchSelfAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSelfAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchSelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchSelf_sync_flattened_resourceNames",
+      "title": "FetchSelfResourceNames",
+      "description": "Snippet for FetchSelf",
+      "file": "DeveloperConnectClient.FetchSelfResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSelf",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchSelf",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.User",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchSelf_async_flattened_resourceNames",
+      "title": "FetchSelfResourceNamesAsync",
+      "description": "Snippet for FetchSelfAsync",
+      "file": "DeveloperConnectClient.FetchSelfResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSelfAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchSelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.User>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteSelf_sync",
+      "title": "DeleteSelfRequestObject",
+      "description": "Snippet for DeleteSelf",
+      "file": "DeveloperConnectClient.DeleteSelfRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSelf",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteSelf",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteSelf_async",
+      "title": "DeleteSelfRequestObjectAsync",
+      "description": "Snippet for DeleteSelfAsync",
+      "file": "DeveloperConnectClient.DeleteSelfRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSelfAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteSelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteSelf_sync_flattened",
+      "title": "DeleteSelf",
+      "description": "Snippet for DeleteSelf",
+      "file": "DeveloperConnectClient.DeleteSelfSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSelf",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteSelf",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteSelf_async_flattened",
+      "title": "DeleteSelfAsync",
+      "description": "Snippet for DeleteSelfAsync",
+      "file": "DeveloperConnectClient.DeleteSelfAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSelfAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteSelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteSelf_sync_flattened_resourceNames",
+      "title": "DeleteSelfResourceNames",
+      "description": "Snippet for DeleteSelf",
+      "file": "DeveloperConnectClient.DeleteSelfResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSelf",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteSelf",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteSelf_async_flattened_resourceNames",
+      "title": "DeleteSelfResourceNamesAsync",
+      "description": "Snippet for DeleteSelfAsync",
+      "file": "DeveloperConnectClient.DeleteSelfResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSelfAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteSelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.AccountConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteSelf",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteSelf",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_sync",
+      "title": "ListInsightsConfigsRequestObject",
+      "description": "Snippet for ListInsightsConfigs",
+      "file": "InsightsConfigServiceClient.ListInsightsConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightsConfigs",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListInsightsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse, Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListInsightsConfigs",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListInsightsConfigs",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_async",
+      "title": "ListInsightsConfigsRequestObjectAsync",
+      "description": "Snippet for ListInsightsConfigsAsync",
+      "file": "InsightsConfigServiceClient.ListInsightsConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightsConfigsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListInsightsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse, Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListInsightsConfigs",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListInsightsConfigs",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_sync_flattened",
+      "title": "ListInsightsConfigs",
+      "description": "Snippet for ListInsightsConfigs",
+      "file": "InsightsConfigServiceClient.ListInsightsConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightsConfigs",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListInsightsConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse, Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListInsightsConfigs",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListInsightsConfigs",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_async_flattened",
+      "title": "ListInsightsConfigsAsync",
+      "description": "Snippet for ListInsightsConfigsAsync",
+      "file": "InsightsConfigServiceClient.ListInsightsConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightsConfigsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListInsightsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse, Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListInsightsConfigs",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListInsightsConfigs",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_sync_flattened_resourceNames",
+      "title": "ListInsightsConfigsResourceNames",
+      "description": "Snippet for ListInsightsConfigs",
+      "file": "InsightsConfigServiceClient.ListInsightsConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightsConfigs",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListInsightsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse, Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListInsightsConfigs",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListInsightsConfigs",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_ListInsightsConfigs_async_flattened_resourceNames",
+      "title": "ListInsightsConfigsResourceNamesAsync",
+      "description": "Snippet for ListInsightsConfigsAsync",
+      "file": "InsightsConfigServiceClient.ListInsightsConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightsConfigsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.ListInsightsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListInsightsConfigsResponse, Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "ListInsightsConfigs",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.ListInsightsConfigs",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_CreateInsightsConfig_sync",
+      "title": "CreateInsightsConfigRequestObject",
+      "description": "Snippet for CreateInsightsConfig",
+      "file": "InsightsConfigServiceClient.CreateInsightsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.CreateInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.CreateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_CreateInsightsConfig_async",
+      "title": "CreateInsightsConfigRequestObjectAsync",
+      "description": "Snippet for CreateInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.CreateInsightsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.CreateInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.CreateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_CreateInsightsConfig_sync_flattened",
+      "title": "CreateInsightsConfig",
+      "description": "Snippet for CreateInsightsConfig",
+      "file": "InsightsConfigServiceClient.CreateInsightsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.CreateInsightsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+            "name": "insightsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "insightsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.CreateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_CreateInsightsConfig_async_flattened",
+      "title": "CreateInsightsConfigAsync",
+      "description": "Snippet for CreateInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.CreateInsightsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.CreateInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+            "name": "insightsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "insightsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.CreateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_CreateInsightsConfig_sync_flattened_resourceNames",
+      "title": "CreateInsightsConfigResourceNames",
+      "description": "Snippet for CreateInsightsConfig",
+      "file": "InsightsConfigServiceClient.CreateInsightsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.CreateInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+            "name": "insightsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "insightsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.CreateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_CreateInsightsConfig_async_flattened_resourceNames",
+      "title": "CreateInsightsConfigResourceNamesAsync",
+      "description": "Snippet for CreateInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.CreateInsightsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.CreateInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+            "name": "insightsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "insightsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.CreateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetInsightsConfig_sync",
+      "title": "GetInsightsConfigRequestObject",
+      "description": "Snippet for GetInsightsConfig",
+      "file": "InsightsConfigServiceClient.GetInsightsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetInsightsConfig_async",
+      "title": "GetInsightsConfigRequestObjectAsync",
+      "description": "Snippet for GetInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.GetInsightsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetInsightsConfig_sync_flattened",
+      "title": "GetInsightsConfig",
+      "description": "Snippet for GetInsightsConfig",
+      "file": "InsightsConfigServiceClient.GetInsightsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetInsightsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetInsightsConfig_async_flattened",
+      "title": "GetInsightsConfigAsync",
+      "description": "Snippet for GetInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.GetInsightsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetInsightsConfig_sync_flattened_resourceNames",
+      "title": "GetInsightsConfigResourceNames",
+      "description": "Snippet for GetInsightsConfig",
+      "file": "InsightsConfigServiceClient.GetInsightsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.InsightsConfig",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_GetInsightsConfig_async_flattened_resourceNames",
+      "title": "GetInsightsConfigResourceNamesAsync",
+      "description": "Snippet for GetInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.GetInsightsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.GetInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.InsightsConfig>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "GetInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.GetInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_UpdateInsightsConfig_sync",
+      "title": "UpdateInsightsConfigRequestObject",
+      "description": "Snippet for UpdateInsightsConfig",
+      "file": "InsightsConfigServiceClient.UpdateInsightsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.UpdateInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UpdateInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.UpdateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_UpdateInsightsConfig_async",
+      "title": "UpdateInsightsConfigRequestObjectAsync",
+      "description": "Snippet for UpdateInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.UpdateInsightsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.UpdateInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UpdateInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.InsightsConfig, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.UpdateInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_DeleteInsightsConfig_sync",
+      "title": "DeleteInsightsConfigRequestObject",
+      "description": "Snippet for DeleteInsightsConfig",
+      "file": "InsightsConfigServiceClient.DeleteInsightsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.DeleteInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.DeleteInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_DeleteInsightsConfig_async",
+      "title": "DeleteInsightsConfigRequestObjectAsync",
+      "description": "Snippet for DeleteInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.DeleteInsightsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.DeleteInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteInsightsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.DeleteInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_DeleteInsightsConfig_sync_flattened",
+      "title": "DeleteInsightsConfig",
+      "description": "Snippet for DeleteInsightsConfig",
+      "file": "InsightsConfigServiceClient.DeleteInsightsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.DeleteInsightsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.DeleteInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_DeleteInsightsConfig_async_flattened",
+      "title": "DeleteInsightsConfigAsync",
+      "description": "Snippet for DeleteInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.DeleteInsightsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.DeleteInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.DeleteInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_DeleteInsightsConfig_sync_flattened_resourceNames",
+      "title": "DeleteInsightsConfigResourceNames",
+      "description": "Snippet for DeleteInsightsConfig",
+      "file": "InsightsConfigServiceClient.DeleteInsightsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInsightsConfig",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.DeleteInsightsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.DeleteInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_InsightsConfigService_DeleteInsightsConfig_async_flattened_resourceNames",
+      "title": "DeleteInsightsConfigResourceNamesAsync",
+      "description": "Snippet for DeleteInsightsConfigAsync",
+      "file": "InsightsConfigServiceClient.DeleteInsightsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInsightsConfigAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient.DeleteInsightsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.InsightsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InsightsConfigServiceClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.InsightsConfigServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInsightsConfig",
+          "fullName": "google.cloud.developerconnect.v1.InsightsConfigService.DeleteInsightsConfig",
+          "service": {
+            "shortName": "InsightsConfigService",
+            "fullName": "google.cloud.developerconnect.v1.InsightsConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
