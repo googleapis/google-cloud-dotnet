@@ -67,6 +67,7 @@ namespace Google.Cloud.DeveloperConnect.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return DeveloperConnectReflection.Descriptor;
+            yield return InsightsConfigReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

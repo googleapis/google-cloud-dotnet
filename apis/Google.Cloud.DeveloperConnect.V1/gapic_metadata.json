@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "DeveloperConnectClient",
           "rpcs": {
+            "CreateAccountConnector": {
+              "methods": [
+                "CreateAccountConnector",
+                "CreateAccountConnectorAsync"
+              ]
+            },
             "CreateConnection": {
               "methods": [
                 "CreateConnection",
@@ -22,6 +28,12 @@
                 "CreateGitRepositoryLinkAsync"
               ]
             },
+            "DeleteAccountConnector": {
+              "methods": [
+                "DeleteAccountConnector",
+                "DeleteAccountConnectorAsync"
+              ]
+            },
             "DeleteConnection": {
               "methods": [
                 "DeleteConnection",
@@ -32,6 +44,24 @@
               "methods": [
                 "DeleteGitRepositoryLink",
                 "DeleteGitRepositoryLinkAsync"
+              ]
+            },
+            "DeleteSelf": {
+              "methods": [
+                "DeleteSelf",
+                "DeleteSelfAsync"
+              ]
+            },
+            "DeleteUser": {
+              "methods": [
+                "DeleteUser",
+                "DeleteUserAsync"
+              ]
+            },
+            "FetchAccessToken": {
+              "methods": [
+                "FetchAccessToken",
+                "FetchAccessTokenAsync"
               ]
             },
             "FetchGitHubInstallations": {
@@ -64,6 +94,18 @@
                 "FetchReadWriteTokenAsync"
               ]
             },
+            "FetchSelf": {
+              "methods": [
+                "FetchSelf",
+                "FetchSelfAsync"
+              ]
+            },
+            "GetAccountConnector": {
+              "methods": [
+                "GetAccountConnector",
+                "GetAccountConnectorAsync"
+              ]
+            },
             "GetConnection": {
               "methods": [
                 "GetConnection",
@@ -74,6 +116,12 @@
               "methods": [
                 "GetGitRepositoryLink",
                 "GetGitRepositoryLinkAsync"
+              ]
+            },
+            "ListAccountConnectors": {
+              "methods": [
+                "ListAccountConnectors",
+                "ListAccountConnectorsAsync"
               ]
             },
             "ListConnections": {
@@ -88,10 +136,61 @@
                 "ListGitRepositoryLinksAsync"
               ]
             },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
+              ]
+            },
+            "UpdateAccountConnector": {
+              "methods": [
+                "UpdateAccountConnector",
+                "UpdateAccountConnectorAsync"
+              ]
+            },
             "UpdateConnection": {
               "methods": [
                 "UpdateConnection",
                 "UpdateConnectionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "InsightsConfigService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "InsightsConfigServiceClient",
+          "rpcs": {
+            "CreateInsightsConfig": {
+              "methods": [
+                "CreateInsightsConfig",
+                "CreateInsightsConfigAsync"
+              ]
+            },
+            "DeleteInsightsConfig": {
+              "methods": [
+                "DeleteInsightsConfig",
+                "DeleteInsightsConfigAsync"
+              ]
+            },
+            "GetInsightsConfig": {
+              "methods": [
+                "GetInsightsConfig",
+                "GetInsightsConfigAsync"
+              ]
+            },
+            "ListInsightsConfigs": {
+              "methods": [
+                "ListInsightsConfigs",
+                "ListInsightsConfigsAsync"
+              ]
+            },
+            "UpdateInsightsConfig": {
+              "methods": [
+                "UpdateInsightsConfig",
+                "UpdateInsightsConfigAsync"
               ]
             }
           }
