@@ -19,6 +19,8 @@ using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using IsolationLevel = System.Data.IsolationLevel;
 using SpannerIsolationLevel = Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel;
 
+using TransactionReadLockMode = Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode;
+
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerTransactionCreationOptionsTests
 {
@@ -63,6 +65,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readWrite.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, readWrite.IsolationLevel);
         Assert.Equal(new TransactionOptions { ReadWrite = new ReadWrite() }, readWrite.GetTransactionOptions());
+        Assert.Equal(TransactionReadLockMode.Unspecified, readWrite.ReadLockMode);
     }
 
     [Fact]
@@ -79,6 +82,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(partitionedDml.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, partitionedDml.IsolationLevel);
         Assert.Equal(new TransactionOptions { PartitionedDml = new PartitionedDml() }, partitionedDml.GetTransactionOptions());
+        Assert.Equal(TransactionReadLockMode.Unspecified, partitionedDml.ReadLockMode);
     }
 
     [Fact]
@@ -95,6 +99,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(readOnly.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, readOnly.IsolationLevel);
         Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), readOnly.GetTransactionOptions());
+        Assert.Equal(TransactionReadLockMode.Unspecified, readOnly.ReadLockMode);
     }
 
     [Fact]
@@ -110,6 +115,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
         Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.GetTransactionOptions());
+        Assert.Equal(TransactionReadLockMode.Unspecified, options.ReadLockMode);
     }
 
     [Fact]
@@ -126,6 +132,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
         Assert.Equal(timestampBound.ToTransactionOptions(), options.GetTransactionOptions());
+        Assert.Equal(TransactionReadLockMode.Unspecified, options.ReadLockMode);
     }
 
     [Fact]
@@ -147,6 +154,7 @@ public class SpannerTransactionCreationOptionsTests
         Assert.False(options.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
         Assert.Null(options.GetTransactionOptions());
+        Assert.Equal(TransactionReadLockMode.Unspecified, options.ReadLockMode);
     }
 
     [Fact]
@@ -156,6 +164,38 @@ public class SpannerTransactionCreationOptionsTests
         Assert.True(options.IsDetached);
         options = options.WithIsDetached(false);
         Assert.False(options.IsDetached);
+    }
+
+    [Theory]
+    [InlineData(TransactionReadLockMode.Unspecified)]
+    [InlineData(TransactionReadLockMode.Pessimistic)]
+    [InlineData(TransactionReadLockMode.Optimistic)]
+    public void WithReadLockMode(TransactionReadLockMode readLockMode)
+    {
+        var options = SpannerTransactionCreationOptions.ReadWrite.WithReadLockMode(readLockMode);
+        Assert.Equal(readLockMode, options.ReadLockMode);
+    }
+
+    [Fact]
+    public void WithReadLockMode_ReadOnly()
+    {
+        var oldOptions = SpannerTransactionCreationOptions.ReadOnly;
+        var newOptions = oldOptions.WithReadLockMode(TransactionReadLockMode.Unspecified);
+
+        Assert.Same(oldOptions, newOptions);
+
+        Assert.Throws<ArgumentException>(() => newOptions.WithReadLockMode(TransactionReadLockMode.Optimistic));
+    }
+
+    [Fact]
+    public void WithReadLockMode_PartitionedDml()
+    {
+        var oldOptions = SpannerTransactionCreationOptions.PartitionedDml;
+        var newOptions = oldOptions.WithReadLockMode(TransactionReadLockMode.Unspecified);
+
+        Assert.Same(oldOptions, newOptions);
+
+        Assert.Throws<ArgumentException>(() => newOptions.WithReadLockMode(TransactionReadLockMode.Optimistic));
     }
 
     [Fact]
