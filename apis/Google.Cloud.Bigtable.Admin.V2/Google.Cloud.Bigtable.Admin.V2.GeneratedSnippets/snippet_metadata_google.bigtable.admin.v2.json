@@ -16988,6 +16988,1415 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateSchemaBundle_sync",
+      "title": "CreateSchemaBundleRequestObject",
+      "description": "Snippet for CreateSchemaBundle",
+      "file": "BigtableTableAdminClient.CreateSchemaBundleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateSchemaBundle_async",
+      "title": "CreateSchemaBundleRequestObjectAsync",
+      "description": "Snippet for CreateSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.CreateSchemaBundleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateSchemaBundle_sync_flattened",
+      "title": "CreateSchemaBundle",
+      "description": "Snippet for CreateSchemaBundle",
+      "file": "BigtableTableAdminClient.CreateSchemaBundleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateSchemaBundle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaBundleId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+            "name": "schemaBundle"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateSchemaBundle_async_flattened",
+      "title": "CreateSchemaBundleAsync",
+      "description": "Snippet for CreateSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.CreateSchemaBundleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaBundleId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+            "name": "schemaBundle"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateSchemaBundle_sync_flattened_resourceNames",
+      "title": "CreateSchemaBundleResourceNames",
+      "description": "Snippet for CreateSchemaBundle",
+      "file": "BigtableTableAdminClient.CreateSchemaBundleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaBundleId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+            "name": "schemaBundle"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateSchemaBundle_async_flattened_resourceNames",
+      "title": "CreateSchemaBundleResourceNamesAsync",
+      "description": "Snippet for CreateSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.CreateSchemaBundleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaBundleId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+            "name": "schemaBundle"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CreateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateSchemaBundle_sync",
+      "title": "UpdateSchemaBundleRequestObject",
+      "description": "Snippet for UpdateSchemaBundle",
+      "file": "BigtableTableAdminClient.UpdateSchemaBundleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateSchemaBundle_async",
+      "title": "UpdateSchemaBundleRequestObjectAsync",
+      "description": "Snippet for UpdateSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.UpdateSchemaBundleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateSchemaBundle_sync_flattened",
+      "title": "UpdateSchemaBundle",
+      "description": "Snippet for UpdateSchemaBundle",
+      "file": "BigtableTableAdminClient.UpdateSchemaBundleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+            "name": "schemaBundle"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_UpdateSchemaBundle_async_flattened",
+      "title": "UpdateSchemaBundleAsync",
+      "description": "Snippet for UpdateSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.UpdateSchemaBundleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+            "name": "schemaBundle"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.SchemaBundle, Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.UpdateSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetSchemaBundle_sync",
+      "title": "GetSchemaBundleRequestObject",
+      "description": "Snippet for GetSchemaBundle",
+      "file": "BigtableTableAdminClient.GetSchemaBundleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "GetSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetSchemaBundle_async",
+      "title": "GetSchemaBundleRequestObjectAsync",
+      "description": "Snippet for GetSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.GetSchemaBundleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "GetSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetSchemaBundle_sync_flattened",
+      "title": "GetSchemaBundle",
+      "description": "Snippet for GetSchemaBundle",
+      "file": "BigtableTableAdminClient.GetSchemaBundleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSchemaBundle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "GetSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetSchemaBundle_async_flattened",
+      "title": "GetSchemaBundleAsync",
+      "description": "Snippet for GetSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.GetSchemaBundleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "GetSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetSchemaBundle_sync_flattened_resourceNames",
+      "title": "GetSchemaBundleResourceNames",
+      "description": "Snippet for GetSchemaBundle",
+      "file": "BigtableTableAdminClient.GetSchemaBundleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.SchemaBundle",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "GetSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetSchemaBundle_async_flattened_resourceNames",
+      "title": "GetSchemaBundleResourceNamesAsync",
+      "description": "Snippet for GetSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.GetSchemaBundleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "GetSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.GetSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ListSchemaBundles_sync",
+      "title": "ListSchemaBundlesRequestObject",
+      "description": "Snippet for ListSchemaBundles",
+      "file": "BigtableTableAdminClient.ListSchemaBundlesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaBundles",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSchemaBundles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse, Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "ListSchemaBundles",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ListSchemaBundles_async",
+      "title": "ListSchemaBundlesRequestObjectAsync",
+      "description": "Snippet for ListSchemaBundlesAsync",
+      "file": "BigtableTableAdminClient.ListSchemaBundlesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaBundlesAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSchemaBundlesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse, Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "ListSchemaBundles",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ListSchemaBundles_sync_flattened",
+      "title": "ListSchemaBundles",
+      "description": "Snippet for ListSchemaBundles",
+      "file": "BigtableTableAdminClient.ListSchemaBundlesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaBundles",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSchemaBundles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse, Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "ListSchemaBundles",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ListSchemaBundles_async_flattened",
+      "title": "ListSchemaBundlesAsync",
+      "description": "Snippet for ListSchemaBundlesAsync",
+      "file": "BigtableTableAdminClient.ListSchemaBundlesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaBundlesAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSchemaBundlesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse, Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "ListSchemaBundles",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ListSchemaBundles_sync_flattened_resourceNames",
+      "title": "ListSchemaBundlesResourceNames",
+      "description": "Snippet for ListSchemaBundles",
+      "file": "BigtableTableAdminClient.ListSchemaBundlesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaBundles",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSchemaBundles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse, Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "ListSchemaBundles",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_ListSchemaBundles_async_flattened_resourceNames",
+      "title": "ListSchemaBundlesResourceNamesAsync",
+      "description": "Snippet for ListSchemaBundlesAsync",
+      "file": "BigtableTableAdminClient.ListSchemaBundlesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemaBundlesAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSchemaBundlesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse, Google.Cloud.Bigtable.Admin.V2.SchemaBundle>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "ListSchemaBundles",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.ListSchemaBundles",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteSchemaBundle_sync",
+      "title": "DeleteSchemaBundleRequestObject",
+      "description": "Snippet for DeleteSchemaBundle",
+      "file": "BigtableTableAdminClient.DeleteSchemaBundleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteSchemaBundle_async",
+      "title": "DeleteSchemaBundleRequestObjectAsync",
+      "description": "Snippet for DeleteSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.DeleteSchemaBundleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteSchemaBundle_sync_flattened",
+      "title": "DeleteSchemaBundle",
+      "description": "Snippet for DeleteSchemaBundle",
+      "file": "BigtableTableAdminClient.DeleteSchemaBundleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSchemaBundle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteSchemaBundle_async_flattened",
+      "title": "DeleteSchemaBundleAsync",
+      "description": "Snippet for DeleteSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.DeleteSchemaBundleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteSchemaBundle_sync_flattened_resourceNames",
+      "title": "DeleteSchemaBundleResourceNames",
+      "description": "Snippet for DeleteSchemaBundle",
+      "file": "BigtableTableAdminClient.DeleteSchemaBundleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaBundle",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSchemaBundle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_DeleteSchemaBundle_async_flattened_resourceNames",
+      "title": "DeleteSchemaBundleResourceNamesAsync",
+      "description": "Snippet for DeleteSchemaBundleAsync",
+      "file": "BigtableTableAdminClient.DeleteSchemaBundleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaBundleAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSchemaBundleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SchemaBundleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteSchemaBundle",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.DeleteSchemaBundle",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

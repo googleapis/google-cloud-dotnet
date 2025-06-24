@@ -4123,5 +4123,782 @@ namespace GoogleCSharpSnippets
             TestIamPermissionsResponse response = await bigtableTableAdminClient.TestIamPermissionsAsync(resource, permissions);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateSchemaBundle</summary>
+        public void CreateSchemaBundleRequestObject()
+        {
+            // Snippet: CreateSchemaBundle(CreateSchemaBundleRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            CreateSchemaBundleRequest request = new CreateSchemaBundleRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                SchemaBundleId = "",
+                SchemaBundle = new SchemaBundle(),
+            };
+            // Make the request
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> response = bigtableTableAdminClient.CreateSchemaBundle(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateSchemaBundle(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSchemaBundleAsync</summary>
+        public async Task CreateSchemaBundleRequestObjectAsync()
+        {
+            // Snippet: CreateSchemaBundleAsync(CreateSchemaBundleRequest, CallSettings)
+            // Additional: CreateSchemaBundleAsync(CreateSchemaBundleRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSchemaBundleRequest request = new CreateSchemaBundleRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                SchemaBundleId = "",
+                SchemaBundle = new SchemaBundle(),
+            };
+            // Make the request
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> response = await bigtableTableAdminClient.CreateSchemaBundleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateSchemaBundleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSchemaBundle</summary>
+        public void CreateSchemaBundle()
+        {
+            // Snippet: CreateSchemaBundle(string, string, SchemaBundle, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            string schemaBundleId = "";
+            SchemaBundle schemaBundle = new SchemaBundle();
+            // Make the request
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> response = bigtableTableAdminClient.CreateSchemaBundle(parent, schemaBundleId, schemaBundle);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateSchemaBundle(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSchemaBundleAsync</summary>
+        public async Task CreateSchemaBundleAsync()
+        {
+            // Snippet: CreateSchemaBundleAsync(string, string, SchemaBundle, CallSettings)
+            // Additional: CreateSchemaBundleAsync(string, string, SchemaBundle, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            string schemaBundleId = "";
+            SchemaBundle schemaBundle = new SchemaBundle();
+            // Make the request
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> response = await bigtableTableAdminClient.CreateSchemaBundleAsync(parent, schemaBundleId, schemaBundle);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateSchemaBundleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSchemaBundle</summary>
+        public void CreateSchemaBundleResourceNames()
+        {
+            // Snippet: CreateSchemaBundle(TableName, string, SchemaBundle, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            string schemaBundleId = "";
+            SchemaBundle schemaBundle = new SchemaBundle();
+            // Make the request
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> response = bigtableTableAdminClient.CreateSchemaBundle(parent, schemaBundleId, schemaBundle);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateSchemaBundle(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSchemaBundleAsync</summary>
+        public async Task CreateSchemaBundleResourceNamesAsync()
+        {
+            // Snippet: CreateSchemaBundleAsync(TableName, string, SchemaBundle, CallSettings)
+            // Additional: CreateSchemaBundleAsync(TableName, string, SchemaBundle, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            string schemaBundleId = "";
+            SchemaBundle schemaBundle = new SchemaBundle();
+            // Make the request
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> response = await bigtableTableAdminClient.CreateSchemaBundleAsync(parent, schemaBundleId, schemaBundle);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, CreateSchemaBundleMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateSchemaBundleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSchemaBundle</summary>
+        public void UpdateSchemaBundleRequestObject()
+        {
+            // Snippet: UpdateSchemaBundle(UpdateSchemaBundleRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateSchemaBundleRequest request = new UpdateSchemaBundleRequest
+            {
+                SchemaBundle = new SchemaBundle(),
+                UpdateMask = new FieldMask(),
+                IgnoreWarnings = false,
+            };
+            // Make the request
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> response = bigtableTableAdminClient.UpdateSchemaBundle(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUpdateSchemaBundle(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSchemaBundleAsync</summary>
+        public async Task UpdateSchemaBundleRequestObjectAsync()
+        {
+            // Snippet: UpdateSchemaBundleAsync(UpdateSchemaBundleRequest, CallSettings)
+            // Additional: UpdateSchemaBundleAsync(UpdateSchemaBundleRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSchemaBundleRequest request = new UpdateSchemaBundleRequest
+            {
+                SchemaBundle = new SchemaBundle(),
+                UpdateMask = new FieldMask(),
+                IgnoreWarnings = false,
+            };
+            // Make the request
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> response = await bigtableTableAdminClient.UpdateSchemaBundleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUpdateSchemaBundleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSchemaBundle</summary>
+        public void UpdateSchemaBundle()
+        {
+            // Snippet: UpdateSchemaBundle(SchemaBundle, FieldMask, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            SchemaBundle schemaBundle = new SchemaBundle();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> response = bigtableTableAdminClient.UpdateSchemaBundle(schemaBundle, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUpdateSchemaBundle(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSchemaBundleAsync</summary>
+        public async Task UpdateSchemaBundleAsync()
+        {
+            // Snippet: UpdateSchemaBundleAsync(SchemaBundle, FieldMask, CallSettings)
+            // Additional: UpdateSchemaBundleAsync(SchemaBundle, FieldMask, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaBundle schemaBundle = new SchemaBundle();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> response = await bigtableTableAdminClient.UpdateSchemaBundleAsync(schemaBundle, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SchemaBundle result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SchemaBundle, UpdateSchemaBundleMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUpdateSchemaBundleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SchemaBundle retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSchemaBundle</summary>
+        public void GetSchemaBundleRequestObject()
+        {
+            // Snippet: GetSchemaBundle(GetSchemaBundleRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            GetSchemaBundleRequest request = new GetSchemaBundleRequest
+            {
+                SchemaBundleName = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]"),
+            };
+            // Make the request
+            SchemaBundle response = bigtableTableAdminClient.GetSchemaBundle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSchemaBundleAsync</summary>
+        public async Task GetSchemaBundleRequestObjectAsync()
+        {
+            // Snippet: GetSchemaBundleAsync(GetSchemaBundleRequest, CallSettings)
+            // Additional: GetSchemaBundleAsync(GetSchemaBundleRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSchemaBundleRequest request = new GetSchemaBundleRequest
+            {
+                SchemaBundleName = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]"),
+            };
+            // Make the request
+            SchemaBundle response = await bigtableTableAdminClient.GetSchemaBundleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSchemaBundle</summary>
+        public void GetSchemaBundle()
+        {
+            // Snippet: GetSchemaBundle(string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/schemaBundles/[SCHEMA_BUNDLE]";
+            // Make the request
+            SchemaBundle response = bigtableTableAdminClient.GetSchemaBundle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSchemaBundleAsync</summary>
+        public async Task GetSchemaBundleAsync()
+        {
+            // Snippet: GetSchemaBundleAsync(string, CallSettings)
+            // Additional: GetSchemaBundleAsync(string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/schemaBundles/[SCHEMA_BUNDLE]";
+            // Make the request
+            SchemaBundle response = await bigtableTableAdminClient.GetSchemaBundleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSchemaBundle</summary>
+        public void GetSchemaBundleResourceNames()
+        {
+            // Snippet: GetSchemaBundle(SchemaBundleName, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            SchemaBundleName name = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]");
+            // Make the request
+            SchemaBundle response = bigtableTableAdminClient.GetSchemaBundle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSchemaBundleAsync</summary>
+        public async Task GetSchemaBundleResourceNamesAsync()
+        {
+            // Snippet: GetSchemaBundleAsync(SchemaBundleName, CallSettings)
+            // Additional: GetSchemaBundleAsync(SchemaBundleName, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaBundleName name = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]");
+            // Make the request
+            SchemaBundle response = await bigtableTableAdminClient.GetSchemaBundleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaBundles</summary>
+        public void ListSchemaBundlesRequestObject()
+        {
+            // Snippet: ListSchemaBundles(ListSchemaBundlesRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            ListSchemaBundlesRequest request = new ListSchemaBundlesRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SchemaBundle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSchemaBundlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SchemaBundle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SchemaBundle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SchemaBundle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaBundlesAsync</summary>
+        public async Task ListSchemaBundlesRequestObjectAsync()
+        {
+            // Snippet: ListSchemaBundlesAsync(ListSchemaBundlesRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSchemaBundlesRequest request = new ListSchemaBundlesRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundlesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SchemaBundle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSchemaBundlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SchemaBundle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SchemaBundle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SchemaBundle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaBundles</summary>
+        public void ListSchemaBundles()
+        {
+            // Snippet: ListSchemaBundles(string, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request
+            PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SchemaBundle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSchemaBundlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SchemaBundle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SchemaBundle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SchemaBundle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaBundlesAsync</summary>
+        public async Task ListSchemaBundlesAsync()
+        {
+            // Snippet: ListSchemaBundlesAsync(string, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request
+            PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundlesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SchemaBundle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSchemaBundlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SchemaBundle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SchemaBundle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SchemaBundle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaBundles</summary>
+        public void ListSchemaBundlesResourceNames()
+        {
+            // Snippet: ListSchemaBundles(TableName, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request
+            PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SchemaBundle item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSchemaBundlesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SchemaBundle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SchemaBundle> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SchemaBundle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSchemaBundlesAsync</summary>
+        public async Task ListSchemaBundlesResourceNamesAsync()
+        {
+            // Snippet: ListSchemaBundlesAsync(TableName, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request
+            PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> response = bigtableTableAdminClient.ListSchemaBundlesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SchemaBundle item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSchemaBundlesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SchemaBundle item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SchemaBundle> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SchemaBundle item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaBundle</summary>
+        public void DeleteSchemaBundleRequestObject()
+        {
+            // Snippet: DeleteSchemaBundle(DeleteSchemaBundleRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteSchemaBundleRequest request = new DeleteSchemaBundleRequest
+            {
+                SchemaBundleName = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]"),
+                Etag = "",
+            };
+            // Make the request
+            bigtableTableAdminClient.DeleteSchemaBundle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaBundleAsync</summary>
+        public async Task DeleteSchemaBundleRequestObjectAsync()
+        {
+            // Snippet: DeleteSchemaBundleAsync(DeleteSchemaBundleRequest, CallSettings)
+            // Additional: DeleteSchemaBundleAsync(DeleteSchemaBundleRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSchemaBundleRequest request = new DeleteSchemaBundleRequest
+            {
+                SchemaBundleName = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]"),
+                Etag = "",
+            };
+            // Make the request
+            await bigtableTableAdminClient.DeleteSchemaBundleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaBundle</summary>
+        public void DeleteSchemaBundle()
+        {
+            // Snippet: DeleteSchemaBundle(string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/schemaBundles/[SCHEMA_BUNDLE]";
+            // Make the request
+            bigtableTableAdminClient.DeleteSchemaBundle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaBundleAsync</summary>
+        public async Task DeleteSchemaBundleAsync()
+        {
+            // Snippet: DeleteSchemaBundleAsync(string, CallSettings)
+            // Additional: DeleteSchemaBundleAsync(string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/schemaBundles/[SCHEMA_BUNDLE]";
+            // Make the request
+            await bigtableTableAdminClient.DeleteSchemaBundleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaBundle</summary>
+        public void DeleteSchemaBundleResourceNames()
+        {
+            // Snippet: DeleteSchemaBundle(SchemaBundleName, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            SchemaBundleName name = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]");
+            // Make the request
+            bigtableTableAdminClient.DeleteSchemaBundle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSchemaBundleAsync</summary>
+        public async Task DeleteSchemaBundleResourceNamesAsync()
+        {
+            // Snippet: DeleteSchemaBundleAsync(SchemaBundleName, CallSettings)
+            // Additional: DeleteSchemaBundleAsync(SchemaBundleName, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaBundleName name = SchemaBundleName.FromProjectInstanceTableSchemaBundle("[PROJECT]", "[INSTANCE]", "[TABLE]", "[SCHEMA_BUNDLE]");
+            // Make the request
+            await bigtableTableAdminClient.DeleteSchemaBundleAsync(name);
+            // End snippet
+        }
     }
 }
