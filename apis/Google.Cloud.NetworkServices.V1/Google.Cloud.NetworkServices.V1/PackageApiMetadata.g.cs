@@ -89,6 +89,7 @@ namespace Google.Cloud.NetworkServices.V1
             yield return CommonReflection.Descriptor;
             yield return DepReflection.Descriptor;
             yield return EndpointPolicyReflection.Descriptor;
+            yield return ExtensibilityReflection.Descriptor;
             yield return GatewayReflection.Descriptor;
             yield return GrpcRouteReflection.Descriptor;
             yield return HttpRouteReflection.Descriptor;
