@@ -2402,11 +2402,12 @@
         },
         {
             "id": "Google.Cloud.ParameterManager.V1",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-24T16:26:35Z",
+            "releaseTimestamp": "2025-06-25T07:40:11.118548987Z",
             "lastGeneratedCommit": "09243fddedfbaa8119be04f7fb8427e054c10f94",
+            "lastReleasedCommit": "09243fddedfbaa8119be04f7fb8427e054c10f94",
             "apiPaths": [
                 "google/cloud/parametermanager/v1"
             ],
