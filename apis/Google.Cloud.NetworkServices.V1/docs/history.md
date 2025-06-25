@@ -1,5 +1,38 @@
 # Version history
 
+## Version 1.2.0, released 2025-06-25
+
+### New features
+
+- Add support for WasmPlugin resource in NetworkServices API
+
+### Documentation improvements
+
+- A comment for enum `LoadBalancingScheme` is changed
+- A comment for field `authority` in message `.google.cloud.networkservices.v1.ExtensionChain` is changed
+- A comment for field `service` in message `.google.cloud.networkservices.v1.ExtensionChain` is changed
+- A comment for field `supported_events` in message `.google.cloud.networkservices.v1.ExtensionChain` is changed
+- A comment for field `timeout` in message `.google.cloud.networkservices.v1.ExtensionChain` is changed
+- A comment for field `extensions` in message `.google.cloud.networkservices.v1.ExtensionChain` is changed
+- A comment for field `forwarding_rules` in message `.google.cloud.networkservices.v1.LbTrafficExtension` is changed
+- A comment for field `load_balancing_scheme` in message `.google.cloud.networkservices.v1.LbTrafficExtension` is changed
+- A comment for field `metadata` in message `.google.cloud.networkservices.v1.LbTrafficExtension` is changed
+- A comment for field `parent` in message `.google.cloud.networkservices.v1.ListLbTrafficExtensionsRequest` is changed
+- A comment for field `order_by` in message `.google.cloud.networkservices.v1.ListLbTrafficExtensionsRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.networkservices.v1.CreateLbTrafficExtensionRequest` is changed
+- A comment for field `update_mask` in message `.google.cloud.networkservices.v1.UpdateLbTrafficExtensionRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.networkservices.v1.UpdateLbTrafficExtensionRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.networkservices.v1.DeleteLbTrafficExtensionRequest` is changed
+- A comment for field `forwarding_rules` in message `.google.cloud.networkservices.v1.LbRouteExtension` is changed
+- A comment for field `load_balancing_scheme` in message `.google.cloud.networkservices.v1.LbRouteExtension` is changed
+- A comment for field `metadata` in message `.google.cloud.networkservices.v1.LbRouteExtension` is changed
+- A comment for field `parent` in message `.google.cloud.networkservices.v1.ListLbRouteExtensionsRequest` is changed
+- A comment for field `order_by` in message `.google.cloud.networkservices.v1.ListLbRouteExtensionsRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.networkservices.v1.CreateLbRouteExtensionRequest` is changed
+- A comment for field `update_mask` in message `.google.cloud.networkservices.v1.UpdateLbRouteExtensionRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.networkservices.v1.UpdateLbRouteExtensionRequest` is changed
+- A comment for field `request_id` in message `.google.cloud.networkservices.v1.DeleteLbRouteExtensionRequest` is changed
+
 ## Version 1.1.0, released 2025-06-13
 
 ### New features
