@@ -205,7 +205,7 @@ namespace Google.Cloud.Retail.V2 {
     /// 128 bytes. A session is an aggregation of an end user behavior in a time
     /// span.
     ///
-    /// A general guideline to populate the sesion_id:
+    /// A general guideline to populate the session_id:
     /// 1. If user has no activity for 30 min, a new session_id should be assigned.
     /// 2. The session_id should be unique across users, suggest use uuid or add
     /// visitor_id as prefix.
