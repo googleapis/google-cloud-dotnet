@@ -2177,12 +2177,12 @@
         },
         {
             "id": "Google.Cloud.NetworkServices.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-13T07:47:21.881922878Z",
+            "releaseTimestamp": "2025-06-25T07:38:31.793910072Z",
             "lastGeneratedCommit": "fc1e32c211bbb46c7213ffa68fe3273da16ab358",
-            "lastReleasedCommit": "ad56690468e8f6ea87207d054bd6ad6adceaf0d3",
+            "lastReleasedCommit": "fc1e32c211bbb46c7213ffa68fe3273da16ab358",
             "apiPaths": [
                 "google/cloud/networkservices/v1"
             ],
