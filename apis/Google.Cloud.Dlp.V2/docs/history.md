@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.19.0, released 2025-06-25
+
+### New features
+
+- Add SaveToGcsFindingsOutput
+
+### Documentation improvements
+
+- Minor doc revision
+
 ## Version 4.18.0, released 2025-05-28
 
 ### New features
