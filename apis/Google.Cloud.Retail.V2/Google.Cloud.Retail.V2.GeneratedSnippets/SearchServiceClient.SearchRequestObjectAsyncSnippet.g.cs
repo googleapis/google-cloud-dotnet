@@ -67,6 +67,13 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 RegionCode = "",
                 PlaceId = "",
+                UserAttributes =
+                {
+                    {
+                        "",
+                        new StringList()
+                    },
+                },
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
