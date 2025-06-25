@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.14.0, released 2025-06-25
+
+### New features
+
+- Add a user_attributes field in SearchRequest that can be used for personalization
+- Add a model_scores field in SearchResponse.results to expose model quality signals
+
 ## Version 2.13.0, released 2025-05-06
 
 ### New features
