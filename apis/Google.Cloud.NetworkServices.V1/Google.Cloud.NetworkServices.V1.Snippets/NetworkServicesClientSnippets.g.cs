@@ -899,6 +899,1618 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListWasmPluginVersions</summary>
+        public void ListWasmPluginVersionsRequestObject()
+        {
+            // Snippet: ListWasmPluginVersions(ListWasmPluginVersionsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ListWasmPluginVersionsRequest request = new ListWasmPluginVersionsRequest
+            {
+                ParentAsWasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+            };
+            // Make the request
+            PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> response = networkServicesClient.ListWasmPluginVersions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WasmPluginVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWasmPluginVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPluginVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPluginVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPluginVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginVersionsAsync</summary>
+        public async Task ListWasmPluginVersionsRequestObjectAsync()
+        {
+            // Snippet: ListWasmPluginVersionsAsync(ListWasmPluginVersionsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListWasmPluginVersionsRequest request = new ListWasmPluginVersionsRequest
+            {
+                ParentAsWasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> response = networkServicesClient.ListWasmPluginVersionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WasmPluginVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWasmPluginVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPluginVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPluginVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPluginVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginVersions</summary>
+        public void ListWasmPluginVersions()
+        {
+            // Snippet: ListWasmPluginVersions(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            // Make the request
+            PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> response = networkServicesClient.ListWasmPluginVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WasmPluginVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWasmPluginVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPluginVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPluginVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPluginVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginVersionsAsync</summary>
+        public async Task ListWasmPluginVersionsAsync()
+        {
+            // Snippet: ListWasmPluginVersionsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            // Make the request
+            PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> response = networkServicesClient.ListWasmPluginVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WasmPluginVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWasmPluginVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPluginVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPluginVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPluginVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginVersions</summary>
+        public void ListWasmPluginVersionsResourceNames()
+        {
+            // Snippet: ListWasmPluginVersions(WasmPluginName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPluginName parent = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            // Make the request
+            PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> response = networkServicesClient.ListWasmPluginVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WasmPluginVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWasmPluginVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPluginVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPluginVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPluginVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginVersionsAsync</summary>
+        public async Task ListWasmPluginVersionsResourceNamesAsync()
+        {
+            // Snippet: ListWasmPluginVersionsAsync(WasmPluginName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPluginName parent = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            // Make the request
+            PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> response = networkServicesClient.ListWasmPluginVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WasmPluginVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWasmPluginVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPluginVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPluginVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPluginVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginVersion</summary>
+        public void GetWasmPluginVersionRequestObject()
+        {
+            // Snippet: GetWasmPluginVersion(GetWasmPluginVersionRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GetWasmPluginVersionRequest request = new GetWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]"),
+            };
+            // Make the request
+            WasmPluginVersion response = networkServicesClient.GetWasmPluginVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginVersionAsync</summary>
+        public async Task GetWasmPluginVersionRequestObjectAsync()
+        {
+            // Snippet: GetWasmPluginVersionAsync(GetWasmPluginVersionRequest, CallSettings)
+            // Additional: GetWasmPluginVersionAsync(GetWasmPluginVersionRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetWasmPluginVersionRequest request = new GetWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]"),
+            };
+            // Make the request
+            WasmPluginVersion response = await networkServicesClient.GetWasmPluginVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginVersion</summary>
+        public void GetWasmPluginVersion()
+        {
+            // Snippet: GetWasmPluginVersion(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]/versions/[WASM_PLUGIN_VERSION]";
+            // Make the request
+            WasmPluginVersion response = networkServicesClient.GetWasmPluginVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginVersionAsync</summary>
+        public async Task GetWasmPluginVersionAsync()
+        {
+            // Snippet: GetWasmPluginVersionAsync(string, CallSettings)
+            // Additional: GetWasmPluginVersionAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]/versions/[WASM_PLUGIN_VERSION]";
+            // Make the request
+            WasmPluginVersion response = await networkServicesClient.GetWasmPluginVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginVersion</summary>
+        public void GetWasmPluginVersionResourceNames()
+        {
+            // Snippet: GetWasmPluginVersion(WasmPluginVersionName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPluginVersionName name = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]");
+            // Make the request
+            WasmPluginVersion response = networkServicesClient.GetWasmPluginVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginVersionAsync</summary>
+        public async Task GetWasmPluginVersionResourceNamesAsync()
+        {
+            // Snippet: GetWasmPluginVersionAsync(WasmPluginVersionName, CallSettings)
+            // Additional: GetWasmPluginVersionAsync(WasmPluginVersionName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPluginVersionName name = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]");
+            // Make the request
+            WasmPluginVersion response = await networkServicesClient.GetWasmPluginVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginVersion</summary>
+        public void CreateWasmPluginVersionRequestObject()
+        {
+            // Snippet: CreateWasmPluginVersion(CreateWasmPluginVersionRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            CreateWasmPluginVersionRequest request = new CreateWasmPluginVersionRequest
+            {
+                ParentAsWasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+                WasmPluginVersionId = "",
+                WasmPluginVersion = new WasmPluginVersion(),
+            };
+            // Make the request
+            Operation<WasmPluginVersion, OperationMetadata> response = networkServicesClient.CreateWasmPluginVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPluginVersion, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPluginVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPluginVersion, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateWasmPluginVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPluginVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginVersionAsync</summary>
+        public async Task CreateWasmPluginVersionRequestObjectAsync()
+        {
+            // Snippet: CreateWasmPluginVersionAsync(CreateWasmPluginVersionRequest, CallSettings)
+            // Additional: CreateWasmPluginVersionAsync(CreateWasmPluginVersionRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateWasmPluginVersionRequest request = new CreateWasmPluginVersionRequest
+            {
+                ParentAsWasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+                WasmPluginVersionId = "",
+                WasmPluginVersion = new WasmPluginVersion(),
+            };
+            // Make the request
+            Operation<WasmPluginVersion, OperationMetadata> response = await networkServicesClient.CreateWasmPluginVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPluginVersion, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPluginVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPluginVersion, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateWasmPluginVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPluginVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginVersion</summary>
+        public void CreateWasmPluginVersion()
+        {
+            // Snippet: CreateWasmPluginVersion(string, WasmPluginVersion, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            WasmPluginVersion wasmPluginVersion = new WasmPluginVersion();
+            string wasmPluginVersionId = "";
+            // Make the request
+            Operation<WasmPluginVersion, OperationMetadata> response = networkServicesClient.CreateWasmPluginVersion(parent, wasmPluginVersion, wasmPluginVersionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPluginVersion, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPluginVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPluginVersion, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateWasmPluginVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPluginVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginVersionAsync</summary>
+        public async Task CreateWasmPluginVersionAsync()
+        {
+            // Snippet: CreateWasmPluginVersionAsync(string, WasmPluginVersion, string, CallSettings)
+            // Additional: CreateWasmPluginVersionAsync(string, WasmPluginVersion, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            WasmPluginVersion wasmPluginVersion = new WasmPluginVersion();
+            string wasmPluginVersionId = "";
+            // Make the request
+            Operation<WasmPluginVersion, OperationMetadata> response = await networkServicesClient.CreateWasmPluginVersionAsync(parent, wasmPluginVersion, wasmPluginVersionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPluginVersion, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPluginVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPluginVersion, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateWasmPluginVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPluginVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginVersion</summary>
+        public void CreateWasmPluginVersionResourceNames()
+        {
+            // Snippet: CreateWasmPluginVersion(WasmPluginName, WasmPluginVersion, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPluginName parent = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            WasmPluginVersion wasmPluginVersion = new WasmPluginVersion();
+            string wasmPluginVersionId = "";
+            // Make the request
+            Operation<WasmPluginVersion, OperationMetadata> response = networkServicesClient.CreateWasmPluginVersion(parent, wasmPluginVersion, wasmPluginVersionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPluginVersion, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPluginVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPluginVersion, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateWasmPluginVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPluginVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginVersionAsync</summary>
+        public async Task CreateWasmPluginVersionResourceNamesAsync()
+        {
+            // Snippet: CreateWasmPluginVersionAsync(WasmPluginName, WasmPluginVersion, string, CallSettings)
+            // Additional: CreateWasmPluginVersionAsync(WasmPluginName, WasmPluginVersion, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPluginName parent = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            WasmPluginVersion wasmPluginVersion = new WasmPluginVersion();
+            string wasmPluginVersionId = "";
+            // Make the request
+            Operation<WasmPluginVersion, OperationMetadata> response = await networkServicesClient.CreateWasmPluginVersionAsync(parent, wasmPluginVersion, wasmPluginVersionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPluginVersion, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPluginVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPluginVersion, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateWasmPluginVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPluginVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginVersion</summary>
+        public void DeleteWasmPluginVersionRequestObject()
+        {
+            // Snippet: DeleteWasmPluginVersion(DeleteWasmPluginVersionRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            DeleteWasmPluginVersionRequest request = new DeleteWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteWasmPluginVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteWasmPluginVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginVersionAsync</summary>
+        public async Task DeleteWasmPluginVersionRequestObjectAsync()
+        {
+            // Snippet: DeleteWasmPluginVersionAsync(DeleteWasmPluginVersionRequest, CallSettings)
+            // Additional: DeleteWasmPluginVersionAsync(DeleteWasmPluginVersionRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteWasmPluginVersionRequest request = new DeleteWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteWasmPluginVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteWasmPluginVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginVersion</summary>
+        public void DeleteWasmPluginVersion()
+        {
+            // Snippet: DeleteWasmPluginVersion(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]/versions/[WASM_PLUGIN_VERSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteWasmPluginVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteWasmPluginVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginVersionAsync</summary>
+        public async Task DeleteWasmPluginVersionAsync()
+        {
+            // Snippet: DeleteWasmPluginVersionAsync(string, CallSettings)
+            // Additional: DeleteWasmPluginVersionAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]/versions/[WASM_PLUGIN_VERSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteWasmPluginVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteWasmPluginVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginVersion</summary>
+        public void DeleteWasmPluginVersionResourceNames()
+        {
+            // Snippet: DeleteWasmPluginVersion(WasmPluginVersionName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPluginVersionName name = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteWasmPluginVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteWasmPluginVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginVersionAsync</summary>
+        public async Task DeleteWasmPluginVersionResourceNamesAsync()
+        {
+            // Snippet: DeleteWasmPluginVersionAsync(WasmPluginVersionName, CallSettings)
+            // Additional: DeleteWasmPluginVersionAsync(WasmPluginVersionName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPluginVersionName name = WasmPluginVersionName.FromProjectLocationWasmPluginWasmPluginVersion("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]", "[WASM_PLUGIN_VERSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteWasmPluginVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteWasmPluginVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPlugins</summary>
+        public void ListWasmPluginsRequestObject()
+        {
+            // Snippet: ListWasmPlugins(ListWasmPluginsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ListWasmPluginsRequest request = new ListWasmPluginsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> response = networkServicesClient.ListWasmPlugins(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WasmPlugin item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWasmPluginsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPlugin item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPlugin> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPlugin item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginsAsync</summary>
+        public async Task ListWasmPluginsRequestObjectAsync()
+        {
+            // Snippet: ListWasmPluginsAsync(ListWasmPluginsRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListWasmPluginsRequest request = new ListWasmPluginsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> response = networkServicesClient.ListWasmPluginsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WasmPlugin item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWasmPluginsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPlugin item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPlugin> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPlugin item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPlugins</summary>
+        public void ListWasmPlugins()
+        {
+            // Snippet: ListWasmPlugins(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> response = networkServicesClient.ListWasmPlugins(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WasmPlugin item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWasmPluginsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPlugin item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPlugin> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPlugin item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginsAsync</summary>
+        public async Task ListWasmPluginsAsync()
+        {
+            // Snippet: ListWasmPluginsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> response = networkServicesClient.ListWasmPluginsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WasmPlugin item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWasmPluginsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPlugin item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPlugin> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPlugin item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPlugins</summary>
+        public void ListWasmPluginsResourceNames()
+        {
+            // Snippet: ListWasmPlugins(LocationName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> response = networkServicesClient.ListWasmPlugins(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WasmPlugin item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWasmPluginsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPlugin item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPlugin> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPlugin item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWasmPluginsAsync</summary>
+        public async Task ListWasmPluginsResourceNamesAsync()
+        {
+            // Snippet: ListWasmPluginsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> response = networkServicesClient.ListWasmPluginsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WasmPlugin item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWasmPluginsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WasmPlugin item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WasmPlugin> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WasmPlugin item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPlugin</summary>
+        public void GetWasmPluginRequestObject()
+        {
+            // Snippet: GetWasmPlugin(GetWasmPluginRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GetWasmPluginRequest request = new GetWasmPluginRequest
+            {
+                WasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+                View = WasmPluginView.Unspecified,
+            };
+            // Make the request
+            WasmPlugin response = networkServicesClient.GetWasmPlugin(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginAsync</summary>
+        public async Task GetWasmPluginRequestObjectAsync()
+        {
+            // Snippet: GetWasmPluginAsync(GetWasmPluginRequest, CallSettings)
+            // Additional: GetWasmPluginAsync(GetWasmPluginRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetWasmPluginRequest request = new GetWasmPluginRequest
+            {
+                WasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+                View = WasmPluginView.Unspecified,
+            };
+            // Make the request
+            WasmPlugin response = await networkServicesClient.GetWasmPluginAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPlugin</summary>
+        public void GetWasmPlugin()
+        {
+            // Snippet: GetWasmPlugin(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            // Make the request
+            WasmPlugin response = networkServicesClient.GetWasmPlugin(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginAsync</summary>
+        public async Task GetWasmPluginAsync()
+        {
+            // Snippet: GetWasmPluginAsync(string, CallSettings)
+            // Additional: GetWasmPluginAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            // Make the request
+            WasmPlugin response = await networkServicesClient.GetWasmPluginAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPlugin</summary>
+        public void GetWasmPluginResourceNames()
+        {
+            // Snippet: GetWasmPlugin(WasmPluginName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPluginName name = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            // Make the request
+            WasmPlugin response = networkServicesClient.GetWasmPlugin(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWasmPluginAsync</summary>
+        public async Task GetWasmPluginResourceNamesAsync()
+        {
+            // Snippet: GetWasmPluginAsync(WasmPluginName, CallSettings)
+            // Additional: GetWasmPluginAsync(WasmPluginName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPluginName name = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            // Make the request
+            WasmPlugin response = await networkServicesClient.GetWasmPluginAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPlugin</summary>
+        public void CreateWasmPluginRequestObject()
+        {
+            // Snippet: CreateWasmPlugin(CreateWasmPluginRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            CreateWasmPluginRequest request = new CreateWasmPluginRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                WasmPluginId = "",
+                WasmPlugin = new WasmPlugin(),
+            };
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = networkServicesClient.CreateWasmPlugin(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginAsync</summary>
+        public async Task CreateWasmPluginRequestObjectAsync()
+        {
+            // Snippet: CreateWasmPluginAsync(CreateWasmPluginRequest, CallSettings)
+            // Additional: CreateWasmPluginAsync(CreateWasmPluginRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateWasmPluginRequest request = new CreateWasmPluginRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                WasmPluginId = "",
+                WasmPlugin = new WasmPlugin(),
+            };
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = await networkServicesClient.CreateWasmPluginAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPlugin</summary>
+        public void CreateWasmPlugin()
+        {
+            // Snippet: CreateWasmPlugin(string, WasmPlugin, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            WasmPlugin wasmPlugin = new WasmPlugin();
+            string wasmPluginId = "";
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = networkServicesClient.CreateWasmPlugin(parent, wasmPlugin, wasmPluginId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginAsync</summary>
+        public async Task CreateWasmPluginAsync()
+        {
+            // Snippet: CreateWasmPluginAsync(string, WasmPlugin, string, CallSettings)
+            // Additional: CreateWasmPluginAsync(string, WasmPlugin, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            WasmPlugin wasmPlugin = new WasmPlugin();
+            string wasmPluginId = "";
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = await networkServicesClient.CreateWasmPluginAsync(parent, wasmPlugin, wasmPluginId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPlugin</summary>
+        public void CreateWasmPluginResourceNames()
+        {
+            // Snippet: CreateWasmPlugin(LocationName, WasmPlugin, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            WasmPlugin wasmPlugin = new WasmPlugin();
+            string wasmPluginId = "";
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = networkServicesClient.CreateWasmPlugin(parent, wasmPlugin, wasmPluginId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWasmPluginAsync</summary>
+        public async Task CreateWasmPluginResourceNamesAsync()
+        {
+            // Snippet: CreateWasmPluginAsync(LocationName, WasmPlugin, string, CallSettings)
+            // Additional: CreateWasmPluginAsync(LocationName, WasmPlugin, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            WasmPlugin wasmPlugin = new WasmPlugin();
+            string wasmPluginId = "";
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = await networkServicesClient.CreateWasmPluginAsync(parent, wasmPlugin, wasmPluginId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWasmPlugin</summary>
+        public void UpdateWasmPluginRequestObject()
+        {
+            // Snippet: UpdateWasmPlugin(UpdateWasmPluginRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            UpdateWasmPluginRequest request = new UpdateWasmPluginRequest
+            {
+                UpdateMask = new FieldMask(),
+                WasmPlugin = new WasmPlugin(),
+            };
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = networkServicesClient.UpdateWasmPlugin(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWasmPluginAsync</summary>
+        public async Task UpdateWasmPluginRequestObjectAsync()
+        {
+            // Snippet: UpdateWasmPluginAsync(UpdateWasmPluginRequest, CallSettings)
+            // Additional: UpdateWasmPluginAsync(UpdateWasmPluginRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateWasmPluginRequest request = new UpdateWasmPluginRequest
+            {
+                UpdateMask = new FieldMask(),
+                WasmPlugin = new WasmPlugin(),
+            };
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = await networkServicesClient.UpdateWasmPluginAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWasmPlugin</summary>
+        public void UpdateWasmPlugin()
+        {
+            // Snippet: UpdateWasmPlugin(WasmPlugin, FieldMask, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPlugin wasmPlugin = new WasmPlugin();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = networkServicesClient.UpdateWasmPlugin(wasmPlugin, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWasmPluginAsync</summary>
+        public async Task UpdateWasmPluginAsync()
+        {
+            // Snippet: UpdateWasmPluginAsync(WasmPlugin, FieldMask, CallSettings)
+            // Additional: UpdateWasmPluginAsync(WasmPlugin, FieldMask, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPlugin wasmPlugin = new WasmPlugin();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<WasmPlugin, OperationMetadata> response = await networkServicesClient.UpdateWasmPluginAsync(wasmPlugin, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<WasmPlugin, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            WasmPlugin result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<WasmPlugin, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                WasmPlugin retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPlugin</summary>
+        public void DeleteWasmPluginRequestObject()
+        {
+            // Snippet: DeleteWasmPlugin(DeleteWasmPluginRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            DeleteWasmPluginRequest request = new DeleteWasmPluginRequest
+            {
+                WasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteWasmPlugin(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginAsync</summary>
+        public async Task DeleteWasmPluginRequestObjectAsync()
+        {
+            // Snippet: DeleteWasmPluginAsync(DeleteWasmPluginRequest, CallSettings)
+            // Additional: DeleteWasmPluginAsync(DeleteWasmPluginRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteWasmPluginRequest request = new DeleteWasmPluginRequest
+            {
+                WasmPluginName = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteWasmPluginAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPlugin</summary>
+        public void DeleteWasmPlugin()
+        {
+            // Snippet: DeleteWasmPlugin(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteWasmPlugin(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginAsync</summary>
+        public async Task DeleteWasmPluginAsync()
+        {
+            // Snippet: DeleteWasmPluginAsync(string, CallSettings)
+            // Additional: DeleteWasmPluginAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/wasmPlugins/[WASM_PLUGIN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteWasmPluginAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPlugin</summary>
+        public void DeleteWasmPluginResourceNames()
+        {
+            // Snippet: DeleteWasmPlugin(WasmPluginName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            WasmPluginName name = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteWasmPlugin(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteWasmPlugin(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWasmPluginAsync</summary>
+        public async Task DeleteWasmPluginResourceNamesAsync()
+        {
+            // Snippet: DeleteWasmPluginAsync(WasmPluginName, CallSettings)
+            // Additional: DeleteWasmPluginAsync(WasmPluginName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            WasmPluginName name = WasmPluginName.FromProjectLocationWasmPlugin("[PROJECT]", "[LOCATION]", "[WASM_PLUGIN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteWasmPluginAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteWasmPluginAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListGateways</summary>
         public void ListGatewaysRequestObject()
         {

@@ -58,6 +58,20 @@ namespace Google.Cloud.NetworkServices.V1
             UpdateEndpointPolicyOperationsSettings = existing.UpdateEndpointPolicyOperationsSettings.Clone();
             DeleteEndpointPolicySettings = existing.DeleteEndpointPolicySettings;
             DeleteEndpointPolicyOperationsSettings = existing.DeleteEndpointPolicyOperationsSettings.Clone();
+            ListWasmPluginVersionsSettings = existing.ListWasmPluginVersionsSettings;
+            GetWasmPluginVersionSettings = existing.GetWasmPluginVersionSettings;
+            CreateWasmPluginVersionSettings = existing.CreateWasmPluginVersionSettings;
+            CreateWasmPluginVersionOperationsSettings = existing.CreateWasmPluginVersionOperationsSettings.Clone();
+            DeleteWasmPluginVersionSettings = existing.DeleteWasmPluginVersionSettings;
+            DeleteWasmPluginVersionOperationsSettings = existing.DeleteWasmPluginVersionOperationsSettings.Clone();
+            ListWasmPluginsSettings = existing.ListWasmPluginsSettings;
+            GetWasmPluginSettings = existing.GetWasmPluginSettings;
+            CreateWasmPluginSettings = existing.CreateWasmPluginSettings;
+            CreateWasmPluginOperationsSettings = existing.CreateWasmPluginOperationsSettings.Clone();
+            UpdateWasmPluginSettings = existing.UpdateWasmPluginSettings;
+            UpdateWasmPluginOperationsSettings = existing.UpdateWasmPluginOperationsSettings.Clone();
+            DeleteWasmPluginSettings = existing.DeleteWasmPluginSettings;
+            DeleteWasmPluginOperationsSettings = existing.DeleteWasmPluginOperationsSettings.Clone();
             ListGatewaysSettings = existing.ListGatewaysSettings;
             GetGatewaySettings = existing.GetGatewaySettings;
             CreateGatewaySettings = existing.CreateGatewaySettings;
@@ -247,6 +261,208 @@ namespace Google.Cloud.NetworkServices.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteEndpointPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.ListWasmPluginVersions</c> and <c>NetworkServicesClient.ListWasmPluginVersionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListWasmPluginVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.GetWasmPluginVersion</c> and <c>NetworkServicesClient.GetWasmPluginVersionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetWasmPluginVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.CreateWasmPluginVersion</c> and
+        /// <c>NetworkServicesClient.CreateWasmPluginVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateWasmPluginVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.CreateWasmPluginVersion</c> and
+        /// <c>NetworkServicesClient.CreateWasmPluginVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateWasmPluginVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.DeleteWasmPluginVersion</c> and
+        /// <c>NetworkServicesClient.DeleteWasmPluginVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteWasmPluginVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.DeleteWasmPluginVersion</c> and
+        /// <c>NetworkServicesClient.DeleteWasmPluginVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteWasmPluginVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.ListWasmPlugins</c> and <c>NetworkServicesClient.ListWasmPluginsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListWasmPluginsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.GetWasmPlugin</c> and <c>NetworkServicesClient.GetWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetWasmPluginSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.CreateWasmPlugin</c> and <c>NetworkServicesClient.CreateWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateWasmPluginSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.CreateWasmPlugin</c> and
+        /// <c>NetworkServicesClient.CreateWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateWasmPluginOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.UpdateWasmPlugin</c> and <c>NetworkServicesClient.UpdateWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateWasmPluginSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.UpdateWasmPlugin</c> and
+        /// <c>NetworkServicesClient.UpdateWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateWasmPluginOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.DeleteWasmPlugin</c> and <c>NetworkServicesClient.DeleteWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteWasmPluginSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.DeleteWasmPlugin</c> and
+        /// <c>NetworkServicesClient.DeleteWasmPluginAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteWasmPluginOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2082,6 +2298,1366 @@ namespace Google.Cloud.NetworkServices.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteEndpointPolicyAsync(EndpointPolicyName name, st::CancellationToken cancellationToken) =>
             DeleteEndpointPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersions(ListWasmPluginVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersionsAsync(ListWasmPluginVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `WasmPlugin` resource whose `WasmPluginVersion`s
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginVersionsRequest request = new ListWasmPluginVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPluginVersions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `WasmPlugin` resource whose `WasmPluginVersion`s
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginVersionsRequest request = new ListWasmPluginVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPluginVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `WasmPlugin` resource whose `WasmPluginVersion`s
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersions(WasmPluginName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginVersionsRequest request = new ListWasmPluginVersionsRequest
+            {
+                ParentAsWasmPluginName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPluginVersions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `WasmPlugin` resource whose `WasmPluginVersion`s
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersionsAsync(WasmPluginName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginVersionsRequest request = new ListWasmPluginVersionsRequest
+            {
+                ParentAsWasmPluginName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPluginVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WasmPluginVersion GetWasmPluginVersion(GetWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(GetWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(GetWasmPluginVersionRequest request, st::CancellationToken cancellationToken) =>
+            GetWasmPluginVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WasmPluginVersion GetWasmPluginVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPluginVersion(new GetWasmPluginVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPluginVersionAsync(new GetWasmPluginVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetWasmPluginVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WasmPluginVersion GetWasmPluginVersion(WasmPluginVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPluginVersion(new GetWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(WasmPluginVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPluginVersionAsync(new GetWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(WasmPluginVersionName name, st::CancellationToken cancellationToken) =>
+            GetWasmPluginVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPluginVersion, OperationMetadata> CreateWasmPluginVersion(CreateWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(CreateWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(CreateWasmPluginVersionRequest request, st::CancellationToken cancellationToken) =>
+            CreateWasmPluginVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateWasmPluginVersion</c>.</summary>
+        public virtual lro::OperationsClient CreateWasmPluginVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateWasmPluginVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<WasmPluginVersion, OperationMetadata> PollOnceCreateWasmPluginVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WasmPluginVersion, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWasmPluginVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateWasmPluginVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> PollOnceCreateWasmPluginVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WasmPluginVersion, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWasmPluginVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPluginVersion` resource. Must be
+        /// in the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="wasmPluginVersion">
+        /// Required. `WasmPluginVersion` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginVersionId">
+        /// Required. User-provided ID of the `WasmPluginVersion` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPluginVersion, OperationMetadata> CreateWasmPluginVersion(string parent, WasmPluginVersion wasmPluginVersion, string wasmPluginVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPluginVersion(new CreateWasmPluginVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WasmPluginVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginVersionId, nameof(wasmPluginVersionId)),
+                WasmPluginVersion = gax::GaxPreconditions.CheckNotNull(wasmPluginVersion, nameof(wasmPluginVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPluginVersion` resource. Must be
+        /// in the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="wasmPluginVersion">
+        /// Required. `WasmPluginVersion` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginVersionId">
+        /// Required. User-provided ID of the `WasmPluginVersion` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(string parent, WasmPluginVersion wasmPluginVersion, string wasmPluginVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPluginVersionAsync(new CreateWasmPluginVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WasmPluginVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginVersionId, nameof(wasmPluginVersionId)),
+                WasmPluginVersion = gax::GaxPreconditions.CheckNotNull(wasmPluginVersion, nameof(wasmPluginVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPluginVersion` resource. Must be
+        /// in the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="wasmPluginVersion">
+        /// Required. `WasmPluginVersion` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginVersionId">
+        /// Required. User-provided ID of the `WasmPluginVersion` resource to be
+        /// created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(string parent, WasmPluginVersion wasmPluginVersion, string wasmPluginVersionId, st::CancellationToken cancellationToken) =>
+            CreateWasmPluginVersionAsync(parent, wasmPluginVersion, wasmPluginVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPluginVersion` resource. Must be
+        /// in the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="wasmPluginVersion">
+        /// Required. `WasmPluginVersion` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginVersionId">
+        /// Required. User-provided ID of the `WasmPluginVersion` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPluginVersion, OperationMetadata> CreateWasmPluginVersion(WasmPluginName parent, WasmPluginVersion wasmPluginVersion, string wasmPluginVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPluginVersion(new CreateWasmPluginVersionRequest
+            {
+                ParentAsWasmPluginName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WasmPluginVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginVersionId, nameof(wasmPluginVersionId)),
+                WasmPluginVersion = gax::GaxPreconditions.CheckNotNull(wasmPluginVersion, nameof(wasmPluginVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPluginVersion` resource. Must be
+        /// in the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="wasmPluginVersion">
+        /// Required. `WasmPluginVersion` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginVersionId">
+        /// Required. User-provided ID of the `WasmPluginVersion` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(WasmPluginName parent, WasmPluginVersion wasmPluginVersion, string wasmPluginVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPluginVersionAsync(new CreateWasmPluginVersionRequest
+            {
+                ParentAsWasmPluginName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WasmPluginVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginVersionId, nameof(wasmPluginVersionId)),
+                WasmPluginVersion = gax::GaxPreconditions.CheckNotNull(wasmPluginVersion, nameof(wasmPluginVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPluginVersion` resource. Must be
+        /// in the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="wasmPluginVersion">
+        /// Required. `WasmPluginVersion` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginVersionId">
+        /// Required. User-provided ID of the `WasmPluginVersion` resource to be
+        /// created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(WasmPluginName parent, WasmPluginVersion wasmPluginVersion, string wasmPluginVersionId, st::CancellationToken cancellationToken) =>
+            CreateWasmPluginVersionAsync(parent, wasmPluginVersion, wasmPluginVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPluginVersion(DeleteWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(DeleteWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(DeleteWasmPluginVersionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteWasmPluginVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteWasmPluginVersion</c>.</summary>
+        public virtual lro::OperationsClient DeleteWasmPluginVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteWasmPluginVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteWasmPluginVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteWasmPluginVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteWasmPluginVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteWasmPluginVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteWasmPluginVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPluginVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPluginVersion(new DeleteWasmPluginVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPluginVersionAsync(new DeleteWasmPluginVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteWasmPluginVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPluginVersion(WasmPluginVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPluginVersion(new DeleteWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(WasmPluginVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPluginVersionAsync(new DeleteWasmPluginVersionRequest
+            {
+                WasmPluginVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPluginVersion` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(WasmPluginVersionName name, st::CancellationToken cancellationToken) =>
+            DeleteWasmPluginVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPlugins(ListWasmPluginsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPluginsAsync(ListWasmPluginsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `WasmPlugin` resources
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPlugins(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginsRequest request = new ListWasmPluginsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPlugins(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `WasmPlugin` resources
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPluginsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginsRequest request = new ListWasmPluginsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPluginsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `WasmPlugin` resources
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPlugins(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginsRequest request = new ListWasmPluginsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPlugins(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `WasmPlugin` resources
+        /// are listed, specified in the following format:
+        /// `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPluginsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWasmPluginsRequest request = new ListWasmPluginsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWasmPluginsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WasmPlugin GetWasmPlugin(GetWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPlugin> GetWasmPluginAsync(GetWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPlugin> GetWasmPluginAsync(GetWasmPluginRequest request, st::CancellationToken cancellationToken) =>
+            GetWasmPluginAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to get. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WasmPlugin GetWasmPlugin(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPlugin(new GetWasmPluginRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to get. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPlugin> GetWasmPluginAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPluginAsync(new GetWasmPluginRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to get. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPlugin> GetWasmPluginAsync(string name, st::CancellationToken cancellationToken) =>
+            GetWasmPluginAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to get. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual WasmPlugin GetWasmPlugin(WasmPluginName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPlugin(new GetWasmPluginRequest
+            {
+                WasmPluginName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to get. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPlugin> GetWasmPluginAsync(WasmPluginName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWasmPluginAsync(new GetWasmPluginRequest
+            {
+                WasmPluginName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to get. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<WasmPlugin> GetWasmPluginAsync(WasmPluginName name, st::CancellationToken cancellationToken) =>
+            GetWasmPluginAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> CreateWasmPlugin(CreateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(CreateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(CreateWasmPluginRequest request, st::CancellationToken cancellationToken) =>
+            CreateWasmPluginAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateWasmPlugin</c>.</summary>
+        public virtual lro::OperationsClient CreateWasmPluginOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateWasmPlugin</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> PollOnceCreateWasmPlugin(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WasmPlugin, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWasmPluginOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateWasmPlugin</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> PollOnceCreateWasmPluginAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WasmPlugin, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWasmPluginOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPlugin` resource. Must be in the
+        /// format `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="wasmPlugin">
+        /// Required. `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginId">
+        /// Required. User-provided ID of the `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> CreateWasmPlugin(string parent, WasmPlugin wasmPlugin, string wasmPluginId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPlugin(new CreateWasmPluginRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WasmPluginId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginId, nameof(wasmPluginId)),
+                WasmPlugin = gax::GaxPreconditions.CheckNotNull(wasmPlugin, nameof(wasmPlugin)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPlugin` resource. Must be in the
+        /// format `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="wasmPlugin">
+        /// Required. `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginId">
+        /// Required. User-provided ID of the `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(string parent, WasmPlugin wasmPlugin, string wasmPluginId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPluginAsync(new CreateWasmPluginRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                WasmPluginId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginId, nameof(wasmPluginId)),
+                WasmPlugin = gax::GaxPreconditions.CheckNotNull(wasmPlugin, nameof(wasmPlugin)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPlugin` resource. Must be in the
+        /// format `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="wasmPlugin">
+        /// Required. `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginId">
+        /// Required. User-provided ID of the `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(string parent, WasmPlugin wasmPlugin, string wasmPluginId, st::CancellationToken cancellationToken) =>
+            CreateWasmPluginAsync(parent, wasmPlugin, wasmPluginId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPlugin` resource. Must be in the
+        /// format `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="wasmPlugin">
+        /// Required. `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginId">
+        /// Required. User-provided ID of the `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> CreateWasmPlugin(gagr::LocationName parent, WasmPlugin wasmPlugin, string wasmPluginId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPlugin(new CreateWasmPluginRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WasmPluginId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginId, nameof(wasmPluginId)),
+                WasmPlugin = gax::GaxPreconditions.CheckNotNull(wasmPlugin, nameof(wasmPlugin)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPlugin` resource. Must be in the
+        /// format `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="wasmPlugin">
+        /// Required. `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginId">
+        /// Required. User-provided ID of the `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(gagr::LocationName parent, WasmPlugin wasmPlugin, string wasmPluginId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWasmPluginAsync(new CreateWasmPluginRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                WasmPluginId = gax::GaxPreconditions.CheckNotNullOrEmpty(wasmPluginId, nameof(wasmPluginId)),
+                WasmPlugin = gax::GaxPreconditions.CheckNotNull(wasmPlugin, nameof(wasmPlugin)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `WasmPlugin` resource. Must be in the
+        /// format `projects/{project}/locations/global`.
+        /// </param>
+        /// <param name="wasmPlugin">
+        /// Required. `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="wasmPluginId">
+        /// Required. User-provided ID of the `WasmPlugin` resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(gagr::LocationName parent, WasmPlugin wasmPlugin, string wasmPluginId, st::CancellationToken cancellationToken) =>
+            CreateWasmPluginAsync(parent, wasmPlugin, wasmPluginId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> UpdateWasmPlugin(UpdateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> UpdateWasmPluginAsync(UpdateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> UpdateWasmPluginAsync(UpdateWasmPluginRequest request, st::CancellationToken cancellationToken) =>
+            UpdateWasmPluginAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateWasmPlugin</c>.</summary>
+        public virtual lro::OperationsClient UpdateWasmPluginOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateWasmPlugin</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> PollOnceUpdateWasmPlugin(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WasmPlugin, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateWasmPluginOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateWasmPlugin</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> PollOnceUpdateWasmPluginAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<WasmPlugin, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateWasmPluginOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="wasmPlugin">
+        /// Required. Updated `WasmPlugin` resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Used to specify the fields to be overwritten in the
+        /// `WasmPlugin` resource by the update.
+        /// The fields specified in the `update_mask` field are relative to the
+        /// resource, not the full request.
+        /// An omitted `update_mask` field is treated as an implied `update_mask`
+        /// field equivalent to all fields that are populated (that have a non-empty
+        /// value).
+        /// The `update_mask` field supports a special value `*`, which means that
+        /// each field in the given `WasmPlugin` resource (including the empty ones)
+        /// replaces the current value.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<WasmPlugin, OperationMetadata> UpdateWasmPlugin(WasmPlugin wasmPlugin, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateWasmPlugin(new UpdateWasmPluginRequest
+            {
+                UpdateMask = updateMask,
+                WasmPlugin = gax::GaxPreconditions.CheckNotNull(wasmPlugin, nameof(wasmPlugin)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="wasmPlugin">
+        /// Required. Updated `WasmPlugin` resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Used to specify the fields to be overwritten in the
+        /// `WasmPlugin` resource by the update.
+        /// The fields specified in the `update_mask` field are relative to the
+        /// resource, not the full request.
+        /// An omitted `update_mask` field is treated as an implied `update_mask`
+        /// field equivalent to all fields that are populated (that have a non-empty
+        /// value).
+        /// The `update_mask` field supports a special value `*`, which means that
+        /// each field in the given `WasmPlugin` resource (including the empty ones)
+        /// replaces the current value.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> UpdateWasmPluginAsync(WasmPlugin wasmPlugin, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateWasmPluginAsync(new UpdateWasmPluginRequest
+            {
+                UpdateMask = updateMask,
+                WasmPlugin = gax::GaxPreconditions.CheckNotNull(wasmPlugin, nameof(wasmPlugin)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="wasmPlugin">
+        /// Required. Updated `WasmPlugin` resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Used to specify the fields to be overwritten in the
+        /// `WasmPlugin` resource by the update.
+        /// The fields specified in the `update_mask` field are relative to the
+        /// resource, not the full request.
+        /// An omitted `update_mask` field is treated as an implied `update_mask`
+        /// field equivalent to all fields that are populated (that have a non-empty
+        /// value).
+        /// The `update_mask` field supports a special value `*`, which means that
+        /// each field in the given `WasmPlugin` resource (including the empty ones)
+        /// replaces the current value.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> UpdateWasmPluginAsync(WasmPlugin wasmPlugin, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateWasmPluginAsync(wasmPlugin, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPlugin(DeleteWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(DeleteWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(DeleteWasmPluginRequest request, st::CancellationToken cancellationToken) =>
+            DeleteWasmPluginAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteWasmPlugin</c>.</summary>
+        public virtual lro::OperationsClient DeleteWasmPluginOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteWasmPlugin</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteWasmPlugin(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteWasmPluginOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteWasmPlugin</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteWasmPluginAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteWasmPluginOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to delete. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPlugin(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPlugin(new DeleteWasmPluginRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to delete. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPluginAsync(new DeleteWasmPluginRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to delete. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteWasmPluginAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to delete. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPlugin(WasmPluginName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPlugin(new DeleteWasmPluginRequest
+            {
+                WasmPluginName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to delete. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(WasmPluginName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteWasmPluginAsync(new DeleteWasmPluginRequest
+            {
+                WasmPluginName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `WasmPlugin` resource to delete. Must be in the
+        /// format `projects/{project}/locations/global/wasmPlugins/{wasm_plugin}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(WasmPluginName name, st::CancellationToken cancellationToken) =>
+            DeleteWasmPluginAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists Gateways in a given project and location.
@@ -8262,6 +9838,24 @@ namespace Google.Cloud.NetworkServices.V1
 
         private readonly gaxgrpc::ApiCall<DeleteEndpointPolicyRequest, lro::Operation> _callDeleteEndpointPolicy;
 
+        private readonly gaxgrpc::ApiCall<ListWasmPluginVersionsRequest, ListWasmPluginVersionsResponse> _callListWasmPluginVersions;
+
+        private readonly gaxgrpc::ApiCall<GetWasmPluginVersionRequest, WasmPluginVersion> _callGetWasmPluginVersion;
+
+        private readonly gaxgrpc::ApiCall<CreateWasmPluginVersionRequest, lro::Operation> _callCreateWasmPluginVersion;
+
+        private readonly gaxgrpc::ApiCall<DeleteWasmPluginVersionRequest, lro::Operation> _callDeleteWasmPluginVersion;
+
+        private readonly gaxgrpc::ApiCall<ListWasmPluginsRequest, ListWasmPluginsResponse> _callListWasmPlugins;
+
+        private readonly gaxgrpc::ApiCall<GetWasmPluginRequest, WasmPlugin> _callGetWasmPlugin;
+
+        private readonly gaxgrpc::ApiCall<CreateWasmPluginRequest, lro::Operation> _callCreateWasmPlugin;
+
+        private readonly gaxgrpc::ApiCall<UpdateWasmPluginRequest, lro::Operation> _callUpdateWasmPlugin;
+
+        private readonly gaxgrpc::ApiCall<DeleteWasmPluginRequest, lro::Operation> _callDeleteWasmPlugin;
+
         private readonly gaxgrpc::ApiCall<ListGatewaysRequest, ListGatewaysResponse> _callListGateways;
 
         private readonly gaxgrpc::ApiCall<GetGatewayRequest, Gateway> _callGetGateway;
@@ -8368,6 +9962,11 @@ namespace Google.Cloud.NetworkServices.V1
             CreateEndpointPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEndpointPolicyOperationsSettings, logger);
             UpdateEndpointPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateEndpointPolicyOperationsSettings, logger);
             DeleteEndpointPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointPolicyOperationsSettings, logger);
+            CreateWasmPluginVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWasmPluginVersionOperationsSettings, logger);
+            DeleteWasmPluginVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWasmPluginVersionOperationsSettings, logger);
+            CreateWasmPluginOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWasmPluginOperationsSettings, logger);
+            UpdateWasmPluginOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWasmPluginOperationsSettings, logger);
+            DeleteWasmPluginOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWasmPluginOperationsSettings, logger);
             CreateGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGatewayOperationsSettings, logger);
             UpdateGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGatewayOperationsSettings, logger);
             DeleteGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGatewayOperationsSettings, logger);
@@ -8409,6 +10008,33 @@ namespace Google.Cloud.NetworkServices.V1
             _callDeleteEndpointPolicy = clientHelper.BuildApiCall<DeleteEndpointPolicyRequest, lro::Operation>("DeleteEndpointPolicy", grpcClient.DeleteEndpointPolicyAsync, grpcClient.DeleteEndpointPolicy, effectiveSettings.DeleteEndpointPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEndpointPolicy);
             Modify_DeleteEndpointPolicyApiCall(ref _callDeleteEndpointPolicy);
+            _callListWasmPluginVersions = clientHelper.BuildApiCall<ListWasmPluginVersionsRequest, ListWasmPluginVersionsResponse>("ListWasmPluginVersions", grpcClient.ListWasmPluginVersionsAsync, grpcClient.ListWasmPluginVersions, effectiveSettings.ListWasmPluginVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListWasmPluginVersions);
+            Modify_ListWasmPluginVersionsApiCall(ref _callListWasmPluginVersions);
+            _callGetWasmPluginVersion = clientHelper.BuildApiCall<GetWasmPluginVersionRequest, WasmPluginVersion>("GetWasmPluginVersion", grpcClient.GetWasmPluginVersionAsync, grpcClient.GetWasmPluginVersion, effectiveSettings.GetWasmPluginVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetWasmPluginVersion);
+            Modify_GetWasmPluginVersionApiCall(ref _callGetWasmPluginVersion);
+            _callCreateWasmPluginVersion = clientHelper.BuildApiCall<CreateWasmPluginVersionRequest, lro::Operation>("CreateWasmPluginVersion", grpcClient.CreateWasmPluginVersionAsync, grpcClient.CreateWasmPluginVersion, effectiveSettings.CreateWasmPluginVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateWasmPluginVersion);
+            Modify_CreateWasmPluginVersionApiCall(ref _callCreateWasmPluginVersion);
+            _callDeleteWasmPluginVersion = clientHelper.BuildApiCall<DeleteWasmPluginVersionRequest, lro::Operation>("DeleteWasmPluginVersion", grpcClient.DeleteWasmPluginVersionAsync, grpcClient.DeleteWasmPluginVersion, effectiveSettings.DeleteWasmPluginVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteWasmPluginVersion);
+            Modify_DeleteWasmPluginVersionApiCall(ref _callDeleteWasmPluginVersion);
+            _callListWasmPlugins = clientHelper.BuildApiCall<ListWasmPluginsRequest, ListWasmPluginsResponse>("ListWasmPlugins", grpcClient.ListWasmPluginsAsync, grpcClient.ListWasmPlugins, effectiveSettings.ListWasmPluginsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListWasmPlugins);
+            Modify_ListWasmPluginsApiCall(ref _callListWasmPlugins);
+            _callGetWasmPlugin = clientHelper.BuildApiCall<GetWasmPluginRequest, WasmPlugin>("GetWasmPlugin", grpcClient.GetWasmPluginAsync, grpcClient.GetWasmPlugin, effectiveSettings.GetWasmPluginSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetWasmPlugin);
+            Modify_GetWasmPluginApiCall(ref _callGetWasmPlugin);
+            _callCreateWasmPlugin = clientHelper.BuildApiCall<CreateWasmPluginRequest, lro::Operation>("CreateWasmPlugin", grpcClient.CreateWasmPluginAsync, grpcClient.CreateWasmPlugin, effectiveSettings.CreateWasmPluginSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateWasmPlugin);
+            Modify_CreateWasmPluginApiCall(ref _callCreateWasmPlugin);
+            _callUpdateWasmPlugin = clientHelper.BuildApiCall<UpdateWasmPluginRequest, lro::Operation>("UpdateWasmPlugin", grpcClient.UpdateWasmPluginAsync, grpcClient.UpdateWasmPlugin, effectiveSettings.UpdateWasmPluginSettings).WithGoogleRequestParam("wasm_plugin.name", request => request.WasmPlugin?.Name);
+            Modify_ApiCall(ref _callUpdateWasmPlugin);
+            Modify_UpdateWasmPluginApiCall(ref _callUpdateWasmPlugin);
+            _callDeleteWasmPlugin = clientHelper.BuildApiCall<DeleteWasmPluginRequest, lro::Operation>("DeleteWasmPlugin", grpcClient.DeleteWasmPluginAsync, grpcClient.DeleteWasmPlugin, effectiveSettings.DeleteWasmPluginSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteWasmPlugin);
+            Modify_DeleteWasmPluginApiCall(ref _callDeleteWasmPlugin);
             _callListGateways = clientHelper.BuildApiCall<ListGatewaysRequest, ListGatewaysResponse>("ListGateways", grpcClient.ListGatewaysAsync, grpcClient.ListGateways, effectiveSettings.ListGatewaysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGateways);
             Modify_ListGatewaysApiCall(ref _callListGateways);
@@ -8556,6 +10182,24 @@ namespace Google.Cloud.NetworkServices.V1
 
         partial void Modify_DeleteEndpointPolicyApiCall(ref gaxgrpc::ApiCall<DeleteEndpointPolicyRequest, lro::Operation> call);
 
+        partial void Modify_ListWasmPluginVersionsApiCall(ref gaxgrpc::ApiCall<ListWasmPluginVersionsRequest, ListWasmPluginVersionsResponse> call);
+
+        partial void Modify_GetWasmPluginVersionApiCall(ref gaxgrpc::ApiCall<GetWasmPluginVersionRequest, WasmPluginVersion> call);
+
+        partial void Modify_CreateWasmPluginVersionApiCall(ref gaxgrpc::ApiCall<CreateWasmPluginVersionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteWasmPluginVersionApiCall(ref gaxgrpc::ApiCall<DeleteWasmPluginVersionRequest, lro::Operation> call);
+
+        partial void Modify_ListWasmPluginsApiCall(ref gaxgrpc::ApiCall<ListWasmPluginsRequest, ListWasmPluginsResponse> call);
+
+        partial void Modify_GetWasmPluginApiCall(ref gaxgrpc::ApiCall<GetWasmPluginRequest, WasmPlugin> call);
+
+        partial void Modify_CreateWasmPluginApiCall(ref gaxgrpc::ApiCall<CreateWasmPluginRequest, lro::Operation> call);
+
+        partial void Modify_UpdateWasmPluginApiCall(ref gaxgrpc::ApiCall<UpdateWasmPluginRequest, lro::Operation> call);
+
+        partial void Modify_DeleteWasmPluginApiCall(ref gaxgrpc::ApiCall<DeleteWasmPluginRequest, lro::Operation> call);
+
         partial void Modify_ListGatewaysApiCall(ref gaxgrpc::ApiCall<ListGatewaysRequest, ListGatewaysResponse> call);
 
         partial void Modify_GetGatewayApiCall(ref gaxgrpc::ApiCall<GetGatewayRequest, Gateway> call);
@@ -8664,6 +10308,24 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_UpdateEndpointPolicyRequest(ref UpdateEndpointPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteEndpointPolicyRequest(ref DeleteEndpointPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListWasmPluginVersionsRequest(ref ListWasmPluginVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetWasmPluginVersionRequest(ref GetWasmPluginVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateWasmPluginVersionRequest(ref CreateWasmPluginVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteWasmPluginVersionRequest(ref DeleteWasmPluginVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListWasmPluginsRequest(ref ListWasmPluginsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetWasmPluginRequest(ref GetWasmPluginRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateWasmPluginRequest(ref CreateWasmPluginRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateWasmPluginRequest(ref UpdateWasmPluginRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteWasmPluginRequest(ref DeleteWasmPluginRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListGatewaysRequest(ref ListGatewaysRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8880,6 +10542,245 @@ namespace Google.Cloud.NetworkServices.V1
         {
             Modify_DeleteEndpointPolicyRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteEndpointPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteEndpointPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public override gax::PagedEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersions(ListWasmPluginVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWasmPluginVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWasmPluginVersionsRequest, ListWasmPluginVersionsResponse, WasmPluginVersion>(_callListWasmPluginVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPluginVersion` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPluginVersion"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListWasmPluginVersionsResponse, WasmPluginVersion> ListWasmPluginVersionsAsync(ListWasmPluginVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWasmPluginVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWasmPluginVersionsRequest, ListWasmPluginVersionsResponse, WasmPluginVersion>(_callListWasmPluginVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override WasmPluginVersion GetWasmPluginVersion(GetWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWasmPluginVersionRequest(ref request, ref callSettings);
+            return _callGetWasmPluginVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<WasmPluginVersion> GetWasmPluginVersionAsync(GetWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWasmPluginVersionRequest(ref request, ref callSettings);
+            return _callGetWasmPluginVersion.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateWasmPluginVersion</c>.</summary>
+        public override lro::OperationsClient CreateWasmPluginVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<WasmPluginVersion, OperationMetadata> CreateWasmPluginVersion(CreateWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWasmPluginVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<WasmPluginVersion, OperationMetadata>(_callCreateWasmPluginVersion.Sync(request, callSettings), CreateWasmPluginVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new `WasmPluginVersion` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<WasmPluginVersion, OperationMetadata>> CreateWasmPluginVersionAsync(CreateWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWasmPluginVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<WasmPluginVersion, OperationMetadata>(await _callCreateWasmPluginVersion.Async(request, callSettings).ConfigureAwait(false), CreateWasmPluginVersionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteWasmPluginVersion</c>.</summary>
+        public override lro::OperationsClient DeleteWasmPluginVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPluginVersion(DeleteWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteWasmPluginVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteWasmPluginVersion.Sync(request, callSettings), DeleteWasmPluginVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified `WasmPluginVersion` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginVersionAsync(DeleteWasmPluginVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteWasmPluginVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteWasmPluginVersion.Async(request, callSettings).ConfigureAwait(false), DeleteWasmPluginVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public override gax::PagedEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPlugins(ListWasmPluginsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWasmPluginsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWasmPluginsRequest, ListWasmPluginsResponse, WasmPlugin>(_callListWasmPlugins, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `WasmPlugin` resources in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="WasmPlugin"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListWasmPluginsResponse, WasmPlugin> ListWasmPluginsAsync(ListWasmPluginsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWasmPluginsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWasmPluginsRequest, ListWasmPluginsResponse, WasmPlugin>(_callListWasmPlugins, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override WasmPlugin GetWasmPlugin(GetWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWasmPluginRequest(ref request, ref callSettings);
+            return _callGetWasmPlugin.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<WasmPlugin> GetWasmPluginAsync(GetWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWasmPluginRequest(ref request, ref callSettings);
+            return _callGetWasmPlugin.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateWasmPlugin</c>.</summary>
+        public override lro::OperationsClient CreateWasmPluginOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<WasmPlugin, OperationMetadata> CreateWasmPlugin(CreateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWasmPluginRequest(ref request, ref callSettings);
+            return new lro::Operation<WasmPlugin, OperationMetadata>(_callCreateWasmPlugin.Sync(request, callSettings), CreateWasmPluginOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new `WasmPlugin` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> CreateWasmPluginAsync(CreateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWasmPluginRequest(ref request, ref callSettings);
+            return new lro::Operation<WasmPlugin, OperationMetadata>(await _callCreateWasmPlugin.Async(request, callSettings).ConfigureAwait(false), CreateWasmPluginOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateWasmPlugin</c>.</summary>
+        public override lro::OperationsClient UpdateWasmPluginOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<WasmPlugin, OperationMetadata> UpdateWasmPlugin(UpdateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateWasmPluginRequest(ref request, ref callSettings);
+            return new lro::Operation<WasmPlugin, OperationMetadata>(_callUpdateWasmPlugin.Sync(request, callSettings), UpdateWasmPluginOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<WasmPlugin, OperationMetadata>> UpdateWasmPluginAsync(UpdateWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateWasmPluginRequest(ref request, ref callSettings);
+            return new lro::Operation<WasmPlugin, OperationMetadata>(await _callUpdateWasmPlugin.Async(request, callSettings).ConfigureAwait(false), UpdateWasmPluginOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteWasmPlugin</c>.</summary>
+        public override lro::OperationsClient DeleteWasmPluginOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteWasmPlugin(DeleteWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteWasmPluginRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteWasmPlugin.Sync(request, callSettings), DeleteWasmPluginOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified `WasmPlugin` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWasmPluginAsync(DeleteWasmPluginRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteWasmPluginRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteWasmPlugin.Async(request, callSettings).ConfigureAwait(false), DeleteWasmPluginOperationsClient);
         }
 
         /// <summary>
@@ -10015,6 +11916,14 @@ namespace Google.Cloud.NetworkServices.V1
     {
     }
 
+    public partial class ListWasmPluginVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListWasmPluginsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListGatewaysRequest : gaxgrpc::IPageRequest
     {
     }
@@ -10059,6 +11968,22 @@ namespace Google.Cloud.NetworkServices.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<EndpointPolicy> GetEnumerator() => EndpointPolicies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWasmPluginVersionsResponse : gaxgrpc::IPageResponse<WasmPluginVersion>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<WasmPluginVersion> GetEnumerator() => WasmPluginVersions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWasmPluginsResponse : gaxgrpc::IPageResponse<WasmPlugin>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<WasmPlugin> GetEnumerator() => WasmPlugins.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

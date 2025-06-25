@@ -556,6 +556,261 @@ namespace Google.Cloud.NetworkServices.V1
         public static bool operator !=(LbRouteExtensionName a, LbRouteExtensionName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AuthzExtension</c> resource.</summary>
+    public sealed partial class AuthzExtensionName : gax::IResourceName, sys::IEquatable<AuthzExtensionName>
+    {
+        /// <summary>The possible contents of <see cref="AuthzExtensionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>.
+            /// </summary>
+            ProjectLocationAuthzExtension = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationAuthzExtension = new gax::PathTemplate("projects/{project}/locations/{location}/authzExtensions/{authz_extension}");
+
+        /// <summary>Creates a <see cref="AuthzExtensionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AuthzExtensionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AuthzExtensionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AuthzExtensionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AuthzExtensionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authzExtensionId">The <c>AuthzExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuthzExtensionName"/> constructed from the provided ids.</returns>
+        public static AuthzExtensionName FromProjectLocationAuthzExtension(string projectId, string locationId, string authzExtensionId) =>
+            new AuthzExtensionName(ResourceNameType.ProjectLocationAuthzExtension, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), authzExtensionId: gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuthzExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authzExtensionId">The <c>AuthzExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuthzExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string authzExtensionId) =>
+            FormatProjectLocationAuthzExtension(projectId, locationId, authzExtensionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuthzExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authzExtensionId">The <c>AuthzExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuthzExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>.
+        /// </returns>
+        public static string FormatProjectLocationAuthzExtension(string projectId, string locationId, string authzExtensionId) =>
+            s_projectLocationAuthzExtension.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AuthzExtensionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="authzExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AuthzExtensionName"/> if successful.</returns>
+        public static AuthzExtensionName Parse(string authzExtensionName) => Parse(authzExtensionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AuthzExtensionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="authzExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AuthzExtensionName"/> if successful.</returns>
+        public static AuthzExtensionName Parse(string authzExtensionName, bool allowUnparsed) =>
+            TryParse(authzExtensionName, allowUnparsed, out AuthzExtensionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AuthzExtensionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="authzExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AuthzExtensionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string authzExtensionName, out AuthzExtensionName result) =>
+            TryParse(authzExtensionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AuthzExtensionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="authzExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AuthzExtensionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string authzExtensionName, bool allowUnparsed, out AuthzExtensionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(authzExtensionName, nameof(authzExtensionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationAuthzExtension.TryParseName(authzExtensionName, out resourceName))
+            {
+                result = FromProjectLocationAuthzExtension(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(authzExtensionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AuthzExtensionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string authzExtensionId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AuthzExtensionId = authzExtensionId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AuthzExtensionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/authzExtensions/{authz_extension}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authzExtensionId">The <c>AuthzExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        public AuthzExtensionName(string projectId, string locationId, string authzExtensionId) : this(ResourceNameType.ProjectLocationAuthzExtension, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), authzExtensionId: gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AuthzExtension</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string AuthzExtensionId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationAuthzExtension: return s_projectLocationAuthzExtension.Expand(ProjectId, LocationId, AuthzExtensionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AuthzExtensionName);
+
+        /// <inheritdoc/>
+        public bool Equals(AuthzExtensionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AuthzExtensionName a, AuthzExtensionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AuthzExtensionName a, AuthzExtensionName b) => !(a == b);
+    }
+
     public partial class LbTrafficExtension
     {
         /// <summary>
@@ -672,6 +927,66 @@ namespace Google.Cloud.NetworkServices.V1
         public gcnv::LbRouteExtensionName LbRouteExtensionName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcnv::LbRouteExtensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AuthzExtension
+    {
+        /// <summary>
+        /// <see cref="gcnv::AuthzExtensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::AuthzExtensionName AuthzExtensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::AuthzExtensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAuthzExtensionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAuthzExtensionRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::AuthzExtensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::AuthzExtensionName AuthzExtensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::AuthzExtensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAuthzExtensionRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAuthzExtensionRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::AuthzExtensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::AuthzExtensionName AuthzExtensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::AuthzExtensionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

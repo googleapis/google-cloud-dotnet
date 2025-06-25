@@ -66,6 +66,14 @@ namespace Google.Cloud.NetworkServices.V1
             UpdateLbRouteExtensionOperationsSettings = existing.UpdateLbRouteExtensionOperationsSettings.Clone();
             DeleteLbRouteExtensionSettings = existing.DeleteLbRouteExtensionSettings;
             DeleteLbRouteExtensionOperationsSettings = existing.DeleteLbRouteExtensionOperationsSettings.Clone();
+            ListAuthzExtensionsSettings = existing.ListAuthzExtensionsSettings;
+            GetAuthzExtensionSettings = existing.GetAuthzExtensionSettings;
+            CreateAuthzExtensionSettings = existing.CreateAuthzExtensionSettings;
+            CreateAuthzExtensionOperationsSettings = existing.CreateAuthzExtensionOperationsSettings.Clone();
+            UpdateAuthzExtensionSettings = existing.UpdateAuthzExtensionSettings;
+            UpdateAuthzExtensionOperationsSettings = existing.UpdateAuthzExtensionOperationsSettings.Clone();
+            DeleteAuthzExtensionSettings = existing.DeleteAuthzExtensionSettings;
+            DeleteAuthzExtensionOperationsSettings = existing.DeleteAuthzExtensionOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -302,6 +310,120 @@ namespace Google.Cloud.NetworkServices.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.ListAuthzExtensions</c> and <c>DepServiceClient.ListAuthzExtensionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAuthzExtensionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.GetAuthzExtension</c> and <c>DepServiceClient.GetAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAuthzExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.CreateAuthzExtension</c> and <c>DepServiceClient.CreateAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAuthzExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DepServiceClient.CreateAuthzExtension</c> and
+        /// <c>DepServiceClient.CreateAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAuthzExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.UpdateAuthzExtension</c> and <c>DepServiceClient.UpdateAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAuthzExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DepServiceClient.UpdateAuthzExtension</c> and
+        /// <c>DepServiceClient.UpdateAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAuthzExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.DeleteAuthzExtension</c> and <c>DepServiceClient.DeleteAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAuthzExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DepServiceClient.DeleteAuthzExtension</c> and
+        /// <c>DepServiceClient.DeleteAuthzExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAuthzExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -480,7 +602,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbTrafficExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -515,7 +637,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbTrafficExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -550,7 +672,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbTrafficExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -585,7 +707,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbTrafficExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -992,7 +1114,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <param name="updateMask">
         /// Optional. Used to specify the fields to be overwritten in the
         /// `LbTrafficExtension` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
+        /// The fields specified in the `update_mask` are relative to the resource, not
         /// the full request. A field is overwritten if it is in the mask. If the
         /// user does not specify a mask, then all fields are overwritten.
         /// </param>
@@ -1014,7 +1136,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <param name="updateMask">
         /// Optional. Used to specify the fields to be overwritten in the
         /// `LbTrafficExtension` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
+        /// The fields specified in the `update_mask` are relative to the resource, not
         /// the full request. A field is overwritten if it is in the mask. If the
         /// user does not specify a mask, then all fields are overwritten.
         /// </param>
@@ -1036,7 +1158,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <param name="updateMask">
         /// Optional. Used to specify the fields to be overwritten in the
         /// `LbTrafficExtension` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
+        /// The fields specified in the `update_mask` are relative to the resource, not
         /// the full request. A field is overwritten if it is in the mask. If the
         /// user does not specify a mask, then all fields are overwritten.
         /// </param>
@@ -1212,7 +1334,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbRouteExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -1247,7 +1369,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbRouteExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -1282,7 +1404,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbRouteExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -1317,7 +1439,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the `LbRouteExtension`
-        /// resources are listed, specified in the following format:
+        /// resources are listed. These values are specified in the following format:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -1715,7 +1837,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <param name="updateMask">
         /// Optional. Used to specify the fields to be overwritten in the
         /// `LbRouteExtension` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
+        /// The fields specified in the `update_mask` are relative to the resource, not
         /// the full request. A field is overwritten if it is in the mask. If the
         /// user does not specify a mask, then all fields are overwritten.
         /// </param>
@@ -1737,7 +1859,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <param name="updateMask">
         /// Optional. Used to specify the fields to be overwritten in the
         /// `LbRouteExtension` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
+        /// The fields specified in the `update_mask` are relative to the resource, not
         /// the full request. A field is overwritten if it is in the mask. If the
         /// user does not specify a mask, then all fields are overwritten.
         /// </param>
@@ -1759,7 +1881,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <param name="updateMask">
         /// Optional. Used to specify the fields to be overwritten in the
         /// `LbRouteExtension` resource by the update.
-        /// The fields specified in the update_mask are relative to the resource, not
+        /// The fields specified in the `update_mask` are relative to the resource, not
         /// the full request. A field is overwritten if it is in the mask. If the
         /// user does not specify a mask, then all fields are overwritten.
         /// </param>
@@ -1911,6 +2033,744 @@ namespace Google.Cloud.NetworkServices.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbRouteExtensionAsync(LbRouteExtensionName name, st::CancellationToken cancellationToken) =>
             DeleteLbRouteExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensions(ListAuthzExtensionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensionsAsync(ListAuthzExtensionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `AuthzExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthzExtensionsRequest request = new ListAuthzExtensionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthzExtensions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `AuthzExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthzExtensionsRequest request = new ListAuthzExtensionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthzExtensionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `AuthzExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthzExtensionsRequest request = new ListAuthzExtensionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthzExtensions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `AuthzExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthzExtensionsRequest request = new ListAuthzExtensionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthzExtensionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthzExtension GetAuthzExtension(GetAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthzExtension> GetAuthzExtensionAsync(GetAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthzExtension> GetAuthzExtensionAsync(GetAuthzExtensionRequest request, st::CancellationToken cancellationToken) =>
+            GetAuthzExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `AuthzExtension` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthzExtension GetAuthzExtension(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthzExtension(new GetAuthzExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `AuthzExtension` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthzExtension> GetAuthzExtensionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthzExtensionAsync(new GetAuthzExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `AuthzExtension` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthzExtension> GetAuthzExtensionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAuthzExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `AuthzExtension` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthzExtension GetAuthzExtension(AuthzExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthzExtension(new GetAuthzExtensionRequest
+            {
+                AuthzExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `AuthzExtension` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthzExtension> GetAuthzExtensionAsync(AuthzExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthzExtensionAsync(new GetAuthzExtensionRequest
+            {
+                AuthzExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `AuthzExtension` resource to get. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthzExtension> GetAuthzExtensionAsync(AuthzExtensionName name, st::CancellationToken cancellationToken) =>
+            GetAuthzExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> CreateAuthzExtension(CreateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(CreateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(CreateAuthzExtensionRequest request, st::CancellationToken cancellationToken) =>
+            CreateAuthzExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAuthzExtension</c>.</summary>
+        public virtual lro::OperationsClient CreateAuthzExtensionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAuthzExtension</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> PollOnceCreateAuthzExtension(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthzExtension, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAuthzExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAuthzExtension</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> PollOnceCreateAuthzExtensionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthzExtension, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAuthzExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `AuthzExtension` resource. Must
+        /// be in the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource to be created.
+        /// </param>
+        /// <param name="authzExtensionId">
+        /// Required. User-provided ID of the `AuthzExtension` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> CreateAuthzExtension(string parent, AuthzExtension authzExtension, string authzExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthzExtension(new CreateAuthzExtensionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuthzExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)),
+                AuthzExtension = gax::GaxPreconditions.CheckNotNull(authzExtension, nameof(authzExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `AuthzExtension` resource. Must
+        /// be in the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource to be created.
+        /// </param>
+        /// <param name="authzExtensionId">
+        /// Required. User-provided ID of the `AuthzExtension` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(string parent, AuthzExtension authzExtension, string authzExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthzExtensionAsync(new CreateAuthzExtensionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuthzExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)),
+                AuthzExtension = gax::GaxPreconditions.CheckNotNull(authzExtension, nameof(authzExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `AuthzExtension` resource. Must
+        /// be in the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource to be created.
+        /// </param>
+        /// <param name="authzExtensionId">
+        /// Required. User-provided ID of the `AuthzExtension` resource to be
+        /// created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(string parent, AuthzExtension authzExtension, string authzExtensionId, st::CancellationToken cancellationToken) =>
+            CreateAuthzExtensionAsync(parent, authzExtension, authzExtensionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `AuthzExtension` resource. Must
+        /// be in the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource to be created.
+        /// </param>
+        /// <param name="authzExtensionId">
+        /// Required. User-provided ID of the `AuthzExtension` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> CreateAuthzExtension(gagr::LocationName parent, AuthzExtension authzExtension, string authzExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthzExtension(new CreateAuthzExtensionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuthzExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)),
+                AuthzExtension = gax::GaxPreconditions.CheckNotNull(authzExtension, nameof(authzExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `AuthzExtension` resource. Must
+        /// be in the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource to be created.
+        /// </param>
+        /// <param name="authzExtensionId">
+        /// Required. User-provided ID of the `AuthzExtension` resource to be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(gagr::LocationName parent, AuthzExtension authzExtension, string authzExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthzExtensionAsync(new CreateAuthzExtensionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuthzExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(authzExtensionId, nameof(authzExtensionId)),
+                AuthzExtension = gax::GaxPreconditions.CheckNotNull(authzExtension, nameof(authzExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `AuthzExtension` resource. Must
+        /// be in the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource to be created.
+        /// </param>
+        /// <param name="authzExtensionId">
+        /// Required. User-provided ID of the `AuthzExtension` resource to be
+        /// created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(gagr::LocationName parent, AuthzExtension authzExtension, string authzExtensionId, st::CancellationToken cancellationToken) =>
+            CreateAuthzExtensionAsync(parent, authzExtension, authzExtensionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> UpdateAuthzExtension(UpdateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> UpdateAuthzExtensionAsync(UpdateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> UpdateAuthzExtensionAsync(UpdateAuthzExtensionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAuthzExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAuthzExtension</c>.</summary>
+        public virtual lro::OperationsClient UpdateAuthzExtensionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAuthzExtension</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> PollOnceUpdateAuthzExtension(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthzExtension, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAuthzExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAuthzExtension</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> PollOnceUpdateAuthzExtensionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthzExtension, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAuthzExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Used to specify the fields to be overwritten in the
+        /// `AuthzExtension` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not specify a mask, then all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthzExtension, OperationMetadata> UpdateAuthzExtension(AuthzExtension authzExtension, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuthzExtension(new UpdateAuthzExtensionRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                AuthzExtension = gax::GaxPreconditions.CheckNotNull(authzExtension, nameof(authzExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Used to specify the fields to be overwritten in the
+        /// `AuthzExtension` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not specify a mask, then all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> UpdateAuthzExtensionAsync(AuthzExtension authzExtension, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuthzExtensionAsync(new UpdateAuthzExtensionRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                AuthzExtension = gax::GaxPreconditions.CheckNotNull(authzExtension, nameof(authzExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="authzExtension">
+        /// Required. `AuthzExtension` resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Used to specify the fields to be overwritten in the
+        /// `AuthzExtension` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not specify a mask, then all fields are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> UpdateAuthzExtensionAsync(AuthzExtension authzExtension, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAuthzExtensionAsync(authzExtension, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthzExtension(DeleteAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(DeleteAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(DeleteAuthzExtensionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAuthzExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAuthzExtension</c>.</summary>
+        public virtual lro::OperationsClient DeleteAuthzExtensionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAuthzExtension</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAuthzExtension(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAuthzExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAuthzExtension</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAuthzExtensionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAuthzExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `AuthzExtension` resource to delete. Must
+        /// be in the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthzExtension(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthzExtension(new DeleteAuthzExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `AuthzExtension` resource to delete. Must
+        /// be in the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthzExtensionAsync(new DeleteAuthzExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `AuthzExtension` resource to delete. Must
+        /// be in the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAuthzExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `AuthzExtension` resource to delete. Must
+        /// be in the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthzExtension(AuthzExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthzExtension(new DeleteAuthzExtensionRequest
+            {
+                AuthzExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `AuthzExtension` resource to delete. Must
+        /// be in the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(AuthzExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthzExtensionAsync(new DeleteAuthzExtensionRequest
+            {
+                AuthzExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `AuthzExtension` resource to delete. Must
+        /// be in the format
+        /// `projects/{project}/locations/{location}/authzExtensions/{authz_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(AuthzExtensionName name, st::CancellationToken cancellationToken) =>
+            DeleteAuthzExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DepService client wrapper implementation, for convenient use.</summary>
@@ -1939,6 +2799,16 @@ namespace Google.Cloud.NetworkServices.V1
 
         private readonly gaxgrpc::ApiCall<DeleteLbRouteExtensionRequest, lro::Operation> _callDeleteLbRouteExtension;
 
+        private readonly gaxgrpc::ApiCall<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse> _callListAuthzExtensions;
+
+        private readonly gaxgrpc::ApiCall<GetAuthzExtensionRequest, AuthzExtension> _callGetAuthzExtension;
+
+        private readonly gaxgrpc::ApiCall<CreateAuthzExtensionRequest, lro::Operation> _callCreateAuthzExtension;
+
+        private readonly gaxgrpc::ApiCall<UpdateAuthzExtensionRequest, lro::Operation> _callUpdateAuthzExtension;
+
+        private readonly gaxgrpc::ApiCall<DeleteAuthzExtensionRequest, lro::Operation> _callDeleteAuthzExtension;
+
         /// <summary>
         /// Constructs a client wrapper for the DepService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1960,6 +2830,9 @@ namespace Google.Cloud.NetworkServices.V1
             CreateLbRouteExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLbRouteExtensionOperationsSettings, logger);
             UpdateLbRouteExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateLbRouteExtensionOperationsSettings, logger);
             DeleteLbRouteExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLbRouteExtensionOperationsSettings, logger);
+            CreateAuthzExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthzExtensionOperationsSettings, logger);
+            UpdateAuthzExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthzExtensionOperationsSettings, logger);
+            DeleteAuthzExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthzExtensionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListLbTrafficExtensions = clientHelper.BuildApiCall<ListLbTrafficExtensionsRequest, ListLbTrafficExtensionsResponse>("ListLbTrafficExtensions", grpcClient.ListLbTrafficExtensionsAsync, grpcClient.ListLbTrafficExtensions, effectiveSettings.ListLbTrafficExtensionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -1992,6 +2865,21 @@ namespace Google.Cloud.NetworkServices.V1
             _callDeleteLbRouteExtension = clientHelper.BuildApiCall<DeleteLbRouteExtensionRequest, lro::Operation>("DeleteLbRouteExtension", grpcClient.DeleteLbRouteExtensionAsync, grpcClient.DeleteLbRouteExtension, effectiveSettings.DeleteLbRouteExtensionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteLbRouteExtension);
             Modify_DeleteLbRouteExtensionApiCall(ref _callDeleteLbRouteExtension);
+            _callListAuthzExtensions = clientHelper.BuildApiCall<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse>("ListAuthzExtensions", grpcClient.ListAuthzExtensionsAsync, grpcClient.ListAuthzExtensions, effectiveSettings.ListAuthzExtensionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAuthzExtensions);
+            Modify_ListAuthzExtensionsApiCall(ref _callListAuthzExtensions);
+            _callGetAuthzExtension = clientHelper.BuildApiCall<GetAuthzExtensionRequest, AuthzExtension>("GetAuthzExtension", grpcClient.GetAuthzExtensionAsync, grpcClient.GetAuthzExtension, effectiveSettings.GetAuthzExtensionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAuthzExtension);
+            Modify_GetAuthzExtensionApiCall(ref _callGetAuthzExtension);
+            _callCreateAuthzExtension = clientHelper.BuildApiCall<CreateAuthzExtensionRequest, lro::Operation>("CreateAuthzExtension", grpcClient.CreateAuthzExtensionAsync, grpcClient.CreateAuthzExtension, effectiveSettings.CreateAuthzExtensionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAuthzExtension);
+            Modify_CreateAuthzExtensionApiCall(ref _callCreateAuthzExtension);
+            _callUpdateAuthzExtension = clientHelper.BuildApiCall<UpdateAuthzExtensionRequest, lro::Operation>("UpdateAuthzExtension", grpcClient.UpdateAuthzExtensionAsync, grpcClient.UpdateAuthzExtension, effectiveSettings.UpdateAuthzExtensionSettings).WithGoogleRequestParam("authz_extension.name", request => request.AuthzExtension?.Name);
+            Modify_ApiCall(ref _callUpdateAuthzExtension);
+            Modify_UpdateAuthzExtensionApiCall(ref _callUpdateAuthzExtension);
+            _callDeleteAuthzExtension = clientHelper.BuildApiCall<DeleteAuthzExtensionRequest, lro::Operation>("DeleteAuthzExtension", grpcClient.DeleteAuthzExtensionAsync, grpcClient.DeleteAuthzExtension, effectiveSettings.DeleteAuthzExtensionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAuthzExtension);
+            Modify_DeleteAuthzExtensionApiCall(ref _callDeleteAuthzExtension);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2016,6 +2904,16 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_UpdateLbRouteExtensionApiCall(ref gaxgrpc::ApiCall<UpdateLbRouteExtensionRequest, lro::Operation> call);
 
         partial void Modify_DeleteLbRouteExtensionApiCall(ref gaxgrpc::ApiCall<DeleteLbRouteExtensionRequest, lro::Operation> call);
+
+        partial void Modify_ListAuthzExtensionsApiCall(ref gaxgrpc::ApiCall<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse> call);
+
+        partial void Modify_GetAuthzExtensionApiCall(ref gaxgrpc::ApiCall<GetAuthzExtensionRequest, AuthzExtension> call);
+
+        partial void Modify_CreateAuthzExtensionApiCall(ref gaxgrpc::ApiCall<CreateAuthzExtensionRequest, lro::Operation> call);
+
+        partial void Modify_UpdateAuthzExtensionApiCall(ref gaxgrpc::ApiCall<UpdateAuthzExtensionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAuthzExtensionApiCall(ref gaxgrpc::ApiCall<DeleteAuthzExtensionRequest, lro::Operation> call);
 
         partial void OnConstruction(DepService.DepServiceClient grpcClient, DepServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2047,6 +2945,16 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_UpdateLbRouteExtensionRequest(ref UpdateLbRouteExtensionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteLbRouteExtensionRequest(ref DeleteLbRouteExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAuthzExtensionsRequest(ref ListAuthzExtensionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAuthzExtensionRequest(ref GetAuthzExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAuthzExtensionRequest(ref CreateAuthzExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAuthzExtensionRequest(ref UpdateAuthzExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAuthzExtensionRequest(ref DeleteAuthzExtensionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists `LbTrafficExtension` resources in a given project and location.
@@ -2307,6 +3215,139 @@ namespace Google.Cloud.NetworkServices.V1
             Modify_DeleteLbRouteExtensionRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteLbRouteExtension.Async(request, callSettings).ConfigureAwait(false), DeleteLbRouteExtensionOperationsClient);
         }
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensions(ListAuthzExtensionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthzExtensionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse, AuthzExtension>(_callListAuthzExtensions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `AuthzExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthzExtension"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> ListAuthzExtensionsAsync(ListAuthzExtensionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthzExtensionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse, AuthzExtension>(_callListAuthzExtensions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuthzExtension GetAuthzExtension(GetAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthzExtensionRequest(ref request, ref callSettings);
+            return _callGetAuthzExtension.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuthzExtension> GetAuthzExtensionAsync(GetAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthzExtensionRequest(ref request, ref callSettings);
+            return _callGetAuthzExtension.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAuthzExtension</c>.</summary>
+        public override lro::OperationsClient CreateAuthzExtensionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AuthzExtension, OperationMetadata> CreateAuthzExtension(CreateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuthzExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthzExtension, OperationMetadata>(_callCreateAuthzExtension.Sync(request, callSettings), CreateAuthzExtensionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new `AuthzExtension` resource in a given project
+        /// and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> CreateAuthzExtensionAsync(CreateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuthzExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthzExtension, OperationMetadata>(await _callCreateAuthzExtension.Async(request, callSettings).ConfigureAwait(false), CreateAuthzExtensionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAuthzExtension</c>.</summary>
+        public override lro::OperationsClient UpdateAuthzExtensionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AuthzExtension, OperationMetadata> UpdateAuthzExtension(UpdateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuthzExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthzExtension, OperationMetadata>(_callUpdateAuthzExtension.Sync(request, callSettings), UpdateAuthzExtensionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of the specified `AuthzExtension`
+        /// resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AuthzExtension, OperationMetadata>> UpdateAuthzExtensionAsync(UpdateAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuthzExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthzExtension, OperationMetadata>(await _callUpdateAuthzExtension.Async(request, callSettings).ConfigureAwait(false), UpdateAuthzExtensionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAuthzExtension</c>.</summary>
+        public override lro::OperationsClient DeleteAuthzExtensionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthzExtension(DeleteAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthzExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAuthzExtension.Sync(request, callSettings), DeleteAuthzExtensionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified `AuthzExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthzExtensionAsync(DeleteAuthzExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthzExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAuthzExtension.Async(request, callSettings).ConfigureAwait(false), DeleteAuthzExtensionOperationsClient);
+        }
     }
 
     public partial class ListLbTrafficExtensionsRequest : gaxgrpc::IPageRequest
@@ -2314,6 +3355,10 @@ namespace Google.Cloud.NetworkServices.V1
     }
 
     public partial class ListLbRouteExtensionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAuthzExtensionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2329,6 +3374,14 @@ namespace Google.Cloud.NetworkServices.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<LbRouteExtension> GetEnumerator() => LbRouteExtensions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAuthzExtensionsResponse : gaxgrpc::IPageResponse<AuthzExtension>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AuthzExtension> GetEnumerator() => AuthzExtensions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

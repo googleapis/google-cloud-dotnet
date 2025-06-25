@@ -2835,6 +2835,1418 @@
       ]
     },
     {
+      "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_sync",
+      "title": "ListAuthzExtensionsRequestObject",
+      "description": "Snippet for ListAuthzExtensions",
+      "file": "DepServiceClient.ListAuthzExtensionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthzExtensions",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListAuthzExtensions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse, Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListAuthzExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListAuthzExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_async",
+      "title": "ListAuthzExtensionsRequestObjectAsync",
+      "description": "Snippet for ListAuthzExtensionsAsync",
+      "file": "DepServiceClient.ListAuthzExtensionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthzExtensionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListAuthzExtensionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse, Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListAuthzExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListAuthzExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_sync_flattened",
+      "title": "ListAuthzExtensions",
+      "description": "Snippet for ListAuthzExtensions",
+      "file": "DepServiceClient.ListAuthzExtensionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthzExtensions",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListAuthzExtensions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse, Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListAuthzExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListAuthzExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_async_flattened",
+      "title": "ListAuthzExtensionsAsync",
+      "description": "Snippet for ListAuthzExtensionsAsync",
+      "file": "DepServiceClient.ListAuthzExtensionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthzExtensionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListAuthzExtensionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse, Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListAuthzExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListAuthzExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_sync_flattened_resourceNames",
+      "title": "ListAuthzExtensionsResourceNames",
+      "description": "Snippet for ListAuthzExtensions",
+      "file": "DepServiceClient.ListAuthzExtensionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthzExtensions",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListAuthzExtensions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse, Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListAuthzExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListAuthzExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_async_flattened_resourceNames",
+      "title": "ListAuthzExtensionsResourceNamesAsync",
+      "description": "Snippet for ListAuthzExtensionsAsync",
+      "file": "DepServiceClient.ListAuthzExtensionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthzExtensionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListAuthzExtensionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse, Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListAuthzExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListAuthzExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetAuthzExtension_sync",
+      "title": "GetAuthzExtensionRequestObject",
+      "description": "Snippet for GetAuthzExtension",
+      "file": "DepServiceClient.GetAuthzExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetAuthzExtension_async",
+      "title": "GetAuthzExtensionRequestObjectAsync",
+      "description": "Snippet for GetAuthzExtensionAsync",
+      "file": "DepServiceClient.GetAuthzExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetAuthzExtension_sync_flattened",
+      "title": "GetAuthzExtension",
+      "description": "Snippet for GetAuthzExtension",
+      "file": "DepServiceClient.GetAuthzExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetAuthzExtension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetAuthzExtension_async_flattened",
+      "title": "GetAuthzExtensionAsync",
+      "description": "Snippet for GetAuthzExtensionAsync",
+      "file": "DepServiceClient.GetAuthzExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetAuthzExtension_sync_flattened_resourceNames",
+      "title": "GetAuthzExtensionResourceNames",
+      "description": "Snippet for GetAuthzExtension",
+      "file": "DepServiceClient.GetAuthzExtensionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetAuthzExtension_async_flattened_resourceNames",
+      "title": "GetAuthzExtensionResourceNamesAsync",
+      "description": "Snippet for GetAuthzExtensionAsync",
+      "file": "DepServiceClient.GetAuthzExtensionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.AuthzExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateAuthzExtension_sync",
+      "title": "CreateAuthzExtensionRequestObject",
+      "description": "Snippet for CreateAuthzExtension",
+      "file": "DepServiceClient.CreateAuthzExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateAuthzExtension_async",
+      "title": "CreateAuthzExtensionRequestObjectAsync",
+      "description": "Snippet for CreateAuthzExtensionAsync",
+      "file": "DepServiceClient.CreateAuthzExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateAuthzExtension_sync_flattened",
+      "title": "CreateAuthzExtension",
+      "description": "Snippet for CreateAuthzExtension",
+      "file": "DepServiceClient.CreateAuthzExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateAuthzExtension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+            "name": "authzExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "authzExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateAuthzExtension_async_flattened",
+      "title": "CreateAuthzExtensionAsync",
+      "description": "Snippet for CreateAuthzExtensionAsync",
+      "file": "DepServiceClient.CreateAuthzExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+            "name": "authzExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "authzExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateAuthzExtension_sync_flattened_resourceNames",
+      "title": "CreateAuthzExtensionResourceNames",
+      "description": "Snippet for CreateAuthzExtension",
+      "file": "DepServiceClient.CreateAuthzExtensionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+            "name": "authzExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "authzExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateAuthzExtension_async_flattened_resourceNames",
+      "title": "CreateAuthzExtensionResourceNamesAsync",
+      "description": "Snippet for CreateAuthzExtensionAsync",
+      "file": "DepServiceClient.CreateAuthzExtensionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+            "name": "authzExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "authzExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateAuthzExtension_sync",
+      "title": "UpdateAuthzExtensionRequestObject",
+      "description": "Snippet for UpdateAuthzExtension",
+      "file": "DepServiceClient.UpdateAuthzExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateAuthzExtension_async",
+      "title": "UpdateAuthzExtensionRequestObjectAsync",
+      "description": "Snippet for UpdateAuthzExtensionAsync",
+      "file": "DepServiceClient.UpdateAuthzExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateAuthzExtension_sync_flattened",
+      "title": "UpdateAuthzExtension",
+      "description": "Snippet for UpdateAuthzExtension",
+      "file": "DepServiceClient.UpdateAuthzExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+            "name": "authzExtension"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateAuthzExtension_async_flattened",
+      "title": "UpdateAuthzExtensionAsync",
+      "description": "Snippet for UpdateAuthzExtensionAsync",
+      "file": "DepServiceClient.UpdateAuthzExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtension",
+            "name": "authzExtension"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AuthzExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteAuthzExtension_sync",
+      "title": "DeleteAuthzExtensionRequestObject",
+      "description": "Snippet for DeleteAuthzExtension",
+      "file": "DepServiceClient.DeleteAuthzExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteAuthzExtension_async",
+      "title": "DeleteAuthzExtensionRequestObjectAsync",
+      "description": "Snippet for DeleteAuthzExtensionAsync",
+      "file": "DepServiceClient.DeleteAuthzExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteAuthzExtension_sync_flattened",
+      "title": "DeleteAuthzExtension",
+      "description": "Snippet for DeleteAuthzExtension",
+      "file": "DepServiceClient.DeleteAuthzExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteAuthzExtension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteAuthzExtension_async_flattened",
+      "title": "DeleteAuthzExtensionAsync",
+      "description": "Snippet for DeleteAuthzExtensionAsync",
+      "file": "DepServiceClient.DeleteAuthzExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteAuthzExtension_sync_flattened_resourceNames",
+      "title": "DeleteAuthzExtensionResourceNames",
+      "description": "Snippet for DeleteAuthzExtension",
+      "file": "DepServiceClient.DeleteAuthzExtensionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthzExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteAuthzExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteAuthzExtension_async_flattened_resourceNames",
+      "title": "DeleteAuthzExtensionResourceNamesAsync",
+      "description": "Snippet for DeleteAuthzExtensionAsync",
+      "file": "DepServiceClient.DeleteAuthzExtensionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthzExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteAuthzExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AuthzExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthzExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteAuthzExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkservices_v1_generated_NetworkServices_ListEndpointPolicies_sync",
       "title": "ListEndpointPoliciesRequestObject",
       "description": "Snippet for ListEndpointPolicies",
@@ -4226,6 +5638,2630 @@
         "method": {
           "shortName": "DeleteEndpointPolicy",
           "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteEndpointPolicy",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPluginVersions_sync",
+      "title": "ListWasmPluginVersionsRequestObject",
+      "description": "Snippet for ListWasmPluginVersions",
+      "file": "NetworkServicesClient.ListWasmPluginVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginVersions",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse, Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPluginVersions",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPluginVersions",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPluginVersions_async",
+      "title": "ListWasmPluginVersionsRequestObjectAsync",
+      "description": "Snippet for ListWasmPluginVersionsAsync",
+      "file": "NetworkServicesClient.ListWasmPluginVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginVersionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse, Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPluginVersions",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPluginVersions",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPluginVersions_sync_flattened",
+      "title": "ListWasmPluginVersions",
+      "description": "Snippet for ListWasmPluginVersions",
+      "file": "NetworkServicesClient.ListWasmPluginVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginVersions",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse, Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPluginVersions",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPluginVersions",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPluginVersions_async_flattened",
+      "title": "ListWasmPluginVersionsAsync",
+      "description": "Snippet for ListWasmPluginVersionsAsync",
+      "file": "NetworkServicesClient.ListWasmPluginVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginVersionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse, Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPluginVersions",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPluginVersions",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPluginVersions_sync_flattened_resourceNames",
+      "title": "ListWasmPluginVersionsResourceNames",
+      "description": "Snippet for ListWasmPluginVersions",
+      "file": "NetworkServicesClient.ListWasmPluginVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginVersions",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse, Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPluginVersions",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPluginVersions",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPluginVersions_async_flattened_resourceNames",
+      "title": "ListWasmPluginVersionsResourceNamesAsync",
+      "description": "Snippet for ListWasmPluginVersionsAsync",
+      "file": "NetworkServicesClient.ListWasmPluginVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginVersionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse, Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPluginVersions",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPluginVersions",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPluginVersion_sync",
+      "title": "GetWasmPluginVersionRequestObject",
+      "description": "Snippet for GetWasmPluginVersion",
+      "file": "NetworkServicesClient.GetWasmPluginVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPluginVersion_async",
+      "title": "GetWasmPluginVersionRequestObjectAsync",
+      "description": "Snippet for GetWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.GetWasmPluginVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPluginVersion_sync_flattened",
+      "title": "GetWasmPluginVersion",
+      "description": "Snippet for GetWasmPluginVersion",
+      "file": "NetworkServicesClient.GetWasmPluginVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPluginVersion_async_flattened",
+      "title": "GetWasmPluginVersionAsync",
+      "description": "Snippet for GetWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.GetWasmPluginVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPluginVersion_sync_flattened_resourceNames",
+      "title": "GetWasmPluginVersionResourceNames",
+      "description": "Snippet for GetWasmPluginVersion",
+      "file": "NetworkServicesClient.GetWasmPluginVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPluginVersion_async_flattened_resourceNames",
+      "title": "GetWasmPluginVersionResourceNamesAsync",
+      "description": "Snippet for GetWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.GetWasmPluginVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.WasmPluginVersion>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPluginVersion_sync",
+      "title": "CreateWasmPluginVersionRequestObject",
+      "description": "Snippet for CreateWasmPluginVersion",
+      "file": "NetworkServicesClient.CreateWasmPluginVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPluginVersion, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPluginVersion_async",
+      "title": "CreateWasmPluginVersionRequestObjectAsync",
+      "description": "Snippet for CreateWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.CreateWasmPluginVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPluginVersion, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPluginVersion_sync_flattened",
+      "title": "CreateWasmPluginVersion",
+      "description": "Snippet for CreateWasmPluginVersion",
+      "file": "NetworkServicesClient.CreateWasmPluginVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+            "name": "wasmPluginVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPluginVersion, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPluginVersion_async_flattened",
+      "title": "CreateWasmPluginVersionAsync",
+      "description": "Snippet for CreateWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.CreateWasmPluginVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+            "name": "wasmPluginVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPluginVersion, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPluginVersion_sync_flattened_resourceNames",
+      "title": "CreateWasmPluginVersionResourceNames",
+      "description": "Snippet for CreateWasmPluginVersion",
+      "file": "NetworkServicesClient.CreateWasmPluginVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+            "name": "wasmPluginVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPluginVersion, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPluginVersion_async_flattened_resourceNames",
+      "title": "CreateWasmPluginVersionResourceNamesAsync",
+      "description": "Snippet for CreateWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.CreateWasmPluginVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersion",
+            "name": "wasmPluginVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPluginVersion, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPluginVersion_sync",
+      "title": "DeleteWasmPluginVersionRequestObject",
+      "description": "Snippet for DeleteWasmPluginVersion",
+      "file": "NetworkServicesClient.DeleteWasmPluginVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPluginVersion_async",
+      "title": "DeleteWasmPluginVersionRequestObjectAsync",
+      "description": "Snippet for DeleteWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.DeleteWasmPluginVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPluginVersion_sync_flattened",
+      "title": "DeleteWasmPluginVersion",
+      "description": "Snippet for DeleteWasmPluginVersion",
+      "file": "NetworkServicesClient.DeleteWasmPluginVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPluginVersion_async_flattened",
+      "title": "DeleteWasmPluginVersionAsync",
+      "description": "Snippet for DeleteWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.DeleteWasmPluginVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPluginVersion_sync_flattened_resourceNames",
+      "title": "DeleteWasmPluginVersionResourceNames",
+      "description": "Snippet for DeleteWasmPluginVersion",
+      "file": "NetworkServicesClient.DeleteWasmPluginVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginVersion",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPluginVersion_async_flattened_resourceNames",
+      "title": "DeleteWasmPluginVersionResourceNamesAsync",
+      "description": "Snippet for DeleteWasmPluginVersionAsync",
+      "file": "NetworkServicesClient.DeleteWasmPluginVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginVersionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPluginVersion",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPluginVersion",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPlugins_sync",
+      "title": "ListWasmPluginsRequestObject",
+      "description": "Snippet for ListWasmPlugins",
+      "file": "NetworkServicesClient.ListWasmPluginsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPlugins",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPlugins",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse, Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPlugins",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPlugins",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPlugins_async",
+      "title": "ListWasmPluginsRequestObjectAsync",
+      "description": "Snippet for ListWasmPluginsAsync",
+      "file": "NetworkServicesClient.ListWasmPluginsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse, Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPlugins",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPlugins",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPlugins_sync_flattened",
+      "title": "ListWasmPlugins",
+      "description": "Snippet for ListWasmPlugins",
+      "file": "NetworkServicesClient.ListWasmPluginsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPlugins",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPlugins",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse, Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPlugins",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPlugins",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPlugins_async_flattened",
+      "title": "ListWasmPluginsAsync",
+      "description": "Snippet for ListWasmPluginsAsync",
+      "file": "NetworkServicesClient.ListWasmPluginsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse, Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPlugins",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPlugins",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPlugins_sync_flattened_resourceNames",
+      "title": "ListWasmPluginsResourceNames",
+      "description": "Snippet for ListWasmPlugins",
+      "file": "NetworkServicesClient.ListWasmPluginsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPlugins",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPlugins",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse, Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPlugins",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPlugins",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListWasmPlugins_async_flattened_resourceNames",
+      "title": "ListWasmPluginsResourceNamesAsync",
+      "description": "Snippet for ListWasmPluginsAsync",
+      "file": "NetworkServicesClient.ListWasmPluginsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWasmPluginsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListWasmPluginsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse, Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListWasmPlugins",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListWasmPlugins",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPlugin_sync",
+      "title": "GetWasmPluginRequestObject",
+      "description": "Snippet for GetWasmPlugin",
+      "file": "NetworkServicesClient.GetWasmPluginRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPlugin_async",
+      "title": "GetWasmPluginRequestObjectAsync",
+      "description": "Snippet for GetWasmPluginAsync",
+      "file": "NetworkServicesClient.GetWasmPluginRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPlugin_sync_flattened",
+      "title": "GetWasmPlugin",
+      "description": "Snippet for GetWasmPlugin",
+      "file": "NetworkServicesClient.GetWasmPluginSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPlugin",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPlugin_async_flattened",
+      "title": "GetWasmPluginAsync",
+      "description": "Snippet for GetWasmPluginAsync",
+      "file": "NetworkServicesClient.GetWasmPluginAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPlugin_sync_flattened_resourceNames",
+      "title": "GetWasmPluginResourceNames",
+      "description": "Snippet for GetWasmPlugin",
+      "file": "NetworkServicesClient.GetWasmPluginResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetWasmPlugin_async_flattened_resourceNames",
+      "title": "GetWasmPluginResourceNamesAsync",
+      "description": "Snippet for GetWasmPluginAsync",
+      "file": "NetworkServicesClient.GetWasmPluginResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.WasmPlugin>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPlugin_sync",
+      "title": "CreateWasmPluginRequestObject",
+      "description": "Snippet for CreateWasmPlugin",
+      "file": "NetworkServicesClient.CreateWasmPluginRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPlugin_async",
+      "title": "CreateWasmPluginRequestObjectAsync",
+      "description": "Snippet for CreateWasmPluginAsync",
+      "file": "NetworkServicesClient.CreateWasmPluginRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPlugin_sync_flattened",
+      "title": "CreateWasmPlugin",
+      "description": "Snippet for CreateWasmPlugin",
+      "file": "NetworkServicesClient.CreateWasmPluginSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPlugin",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+            "name": "wasmPlugin"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPlugin_async_flattened",
+      "title": "CreateWasmPluginAsync",
+      "description": "Snippet for CreateWasmPluginAsync",
+      "file": "NetworkServicesClient.CreateWasmPluginAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+            "name": "wasmPlugin"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPlugin_sync_flattened_resourceNames",
+      "title": "CreateWasmPluginResourceNames",
+      "description": "Snippet for CreateWasmPlugin",
+      "file": "NetworkServicesClient.CreateWasmPluginResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+            "name": "wasmPlugin"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateWasmPlugin_async_flattened_resourceNames",
+      "title": "CreateWasmPluginResourceNamesAsync",
+      "description": "Snippet for CreateWasmPluginAsync",
+      "file": "NetworkServicesClient.CreateWasmPluginResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+            "name": "wasmPlugin"
+          },
+          {
+            "type": "System.String",
+            "name": "wasmPluginId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateWasmPlugin_sync",
+      "title": "UpdateWasmPluginRequestObject",
+      "description": "Snippet for UpdateWasmPlugin",
+      "file": "NetworkServicesClient.UpdateWasmPluginRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateWasmPlugin_async",
+      "title": "UpdateWasmPluginRequestObjectAsync",
+      "description": "Snippet for UpdateWasmPluginAsync",
+      "file": "NetworkServicesClient.UpdateWasmPluginRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateWasmPlugin_sync_flattened",
+      "title": "UpdateWasmPlugin",
+      "description": "Snippet for UpdateWasmPlugin",
+      "file": "NetworkServicesClient.UpdateWasmPluginSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+            "name": "wasmPlugin"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateWasmPlugin_async_flattened",
+      "title": "UpdateWasmPluginAsync",
+      "description": "Snippet for UpdateWasmPluginAsync",
+      "file": "NetworkServicesClient.UpdateWasmPluginAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPlugin",
+            "name": "wasmPlugin"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.WasmPlugin, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPlugin_sync",
+      "title": "DeleteWasmPluginRequestObject",
+      "description": "Snippet for DeleteWasmPlugin",
+      "file": "NetworkServicesClient.DeleteWasmPluginRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPlugin_async",
+      "title": "DeleteWasmPluginRequestObjectAsync",
+      "description": "Snippet for DeleteWasmPluginAsync",
+      "file": "NetworkServicesClient.DeleteWasmPluginRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPlugin_sync_flattened",
+      "title": "DeleteWasmPlugin",
+      "description": "Snippet for DeleteWasmPlugin",
+      "file": "NetworkServicesClient.DeleteWasmPluginSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPlugin",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPlugin_async_flattened",
+      "title": "DeleteWasmPluginAsync",
+      "description": "Snippet for DeleteWasmPluginAsync",
+      "file": "NetworkServicesClient.DeleteWasmPluginAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPlugin_sync_flattened_resourceNames",
+      "title": "DeleteWasmPluginResourceNames",
+      "description": "Snippet for DeleteWasmPlugin",
+      "file": "NetworkServicesClient.DeleteWasmPluginResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPlugin",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPlugin",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPlugin",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteWasmPlugin_async_flattened_resourceNames",
+      "title": "DeleteWasmPluginResourceNamesAsync",
+      "description": "Snippet for DeleteWasmPluginAsync",
+      "file": "NetworkServicesClient.DeleteWasmPluginResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWasmPluginAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteWasmPluginAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.WasmPluginName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteWasmPlugin",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteWasmPlugin",
           "service": {
             "shortName": "NetworkServices",
             "fullName": "google.cloud.networkservices.v1.NetworkServices"

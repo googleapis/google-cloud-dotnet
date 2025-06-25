@@ -93,6 +93,20 @@ namespace Google.Cloud.NetworkServices.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateLbRouteExtensionRequest> __Marshaller_google_cloud_networkservices_v1_UpdateLbRouteExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateLbRouteExtensionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest> __Marshaller_google_cloud_networkservices_v1_DeleteLbRouteExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest> __Marshaller_google_cloud_networkservices_v1_ListAuthzExtensionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse> __Marshaller_google_cloud_networkservices_v1_ListAuthzExtensionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest> __Marshaller_google_cloud_networkservices_v1_GetAuthzExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.AuthzExtension> __Marshaller_google_cloud_networkservices_v1_AuthzExtension = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.AuthzExtension.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest> __Marshaller_google_cloud_networkservices_v1_CreateAuthzExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest> __Marshaller_google_cloud_networkservices_v1_UpdateAuthzExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest> __Marshaller_google_cloud_networkservices_v1_DeleteAuthzExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListLbTrafficExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListLbTrafficExtensionsResponse> __Method_ListLbTrafficExtensions = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListLbTrafficExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListLbTrafficExtensionsResponse>(
@@ -172,6 +186,46 @@ namespace Google.Cloud.NetworkServices.V1 {
         __ServiceName,
         "DeleteLbRouteExtension",
         __Marshaller_google_cloud_networkservices_v1_DeleteLbRouteExtensionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse> __Method_ListAuthzExtensions = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAuthzExtensions",
+        __Marshaller_google_cloud_networkservices_v1_ListAuthzExtensionsRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListAuthzExtensionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest, global::Google.Cloud.NetworkServices.V1.AuthzExtension> __Method_GetAuthzExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest, global::Google.Cloud.NetworkServices.V1.AuthzExtension>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAuthzExtension",
+        __Marshaller_google_cloud_networkservices_v1_GetAuthzExtensionRequest,
+        __Marshaller_google_cloud_networkservices_v1_AuthzExtension);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest, global::Google.LongRunning.Operation> __Method_CreateAuthzExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAuthzExtension",
+        __Marshaller_google_cloud_networkservices_v1_CreateAuthzExtensionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest, global::Google.LongRunning.Operation> __Method_UpdateAuthzExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAuthzExtension",
+        __Marshaller_google_cloud_networkservices_v1_UpdateAuthzExtensionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest, global::Google.LongRunning.Operation> __Method_DeleteAuthzExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAuthzExtension",
+        __Marshaller_google_cloud_networkservices_v1_DeleteAuthzExtensionRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -301,6 +355,68 @@ namespace Google.Cloud.NetworkServices.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteLbRouteExtension(global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `AuthzExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse> ListAuthzExtensions(global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.AuthzExtension> GetAuthzExtension(global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `AuthzExtension` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAuthzExtension(global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of the specified `AuthzExtension`
+      /// resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAuthzExtension(global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAuthzExtension(global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -818,6 +934,254 @@ namespace Google.Cloud.NetworkServices.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLbRouteExtension, null, options, request);
       }
+      /// <summary>
+      /// Lists `AuthzExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse ListAuthzExtensions(global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuthzExtensions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `AuthzExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse ListAuthzExtensions(global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAuthzExtensions, null, options, request);
+      }
+      /// <summary>
+      /// Lists `AuthzExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse> ListAuthzExtensionsAsync(global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuthzExtensionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `AuthzExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse> ListAuthzExtensionsAsync(global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAuthzExtensions, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.AuthzExtension GetAuthzExtension(global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuthzExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.AuthzExtension GetAuthzExtension(global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.AuthzExtension> GetAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuthzExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.AuthzExtension> GetAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `AuthzExtension` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAuthzExtension(global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAuthzExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `AuthzExtension` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAuthzExtension(global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `AuthzExtension` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAuthzExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `AuthzExtension` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `AuthzExtension`
+      /// resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAuthzExtension(global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAuthzExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `AuthzExtension`
+      /// resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAuthzExtension(global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `AuthzExtension`
+      /// resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAuthzExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `AuthzExtension`
+      /// resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAuthzExtension(global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAuthzExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAuthzExtension(global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAuthzExtension, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAuthzExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `AuthzExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAuthzExtensionAsync(global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAuthzExtension, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DepServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -841,7 +1205,12 @@ namespace Google.Cloud.NetworkServices.V1 {
           .AddMethod(__Method_GetLbRouteExtension, serviceImpl.GetLbRouteExtension)
           .AddMethod(__Method_CreateLbRouteExtension, serviceImpl.CreateLbRouteExtension)
           .AddMethod(__Method_UpdateLbRouteExtension, serviceImpl.UpdateLbRouteExtension)
-          .AddMethod(__Method_DeleteLbRouteExtension, serviceImpl.DeleteLbRouteExtension).Build();
+          .AddMethod(__Method_DeleteLbRouteExtension, serviceImpl.DeleteLbRouteExtension)
+          .AddMethod(__Method_ListAuthzExtensions, serviceImpl.ListAuthzExtensions)
+          .AddMethod(__Method_GetAuthzExtension, serviceImpl.GetAuthzExtension)
+          .AddMethod(__Method_CreateAuthzExtension, serviceImpl.CreateAuthzExtension)
+          .AddMethod(__Method_UpdateAuthzExtension, serviceImpl.UpdateAuthzExtension)
+          .AddMethod(__Method_DeleteAuthzExtension, serviceImpl.DeleteAuthzExtension).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -861,6 +1230,11 @@ namespace Google.Cloud.NetworkServices.V1 {
       serviceBinder.AddMethod(__Method_CreateLbRouteExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateLbRouteExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateLbRouteExtension));
       serviceBinder.AddMethod(__Method_UpdateLbRouteExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateLbRouteExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateLbRouteExtension));
       serviceBinder.AddMethod(__Method_DeleteLbRouteExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteLbRouteExtension));
+      serviceBinder.AddMethod(__Method_ListAuthzExtensions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse>(serviceImpl.ListAuthzExtensions));
+      serviceBinder.AddMethod(__Method_GetAuthzExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest, global::Google.Cloud.NetworkServices.V1.AuthzExtension>(serviceImpl.GetAuthzExtension));
+      serviceBinder.AddMethod(__Method_CreateAuthzExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAuthzExtension));
+      serviceBinder.AddMethod(__Method_UpdateAuthzExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateAuthzExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAuthzExtension));
+      serviceBinder.AddMethod(__Method_DeleteAuthzExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteAuthzExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAuthzExtension));
     }
 
   }

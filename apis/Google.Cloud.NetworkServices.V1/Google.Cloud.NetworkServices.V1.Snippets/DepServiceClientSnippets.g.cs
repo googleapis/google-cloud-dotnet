@@ -1785,5 +1785,884 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListAuthzExtensions</summary>
+        public void ListAuthzExtensionsRequestObject()
+        {
+            // Snippet: ListAuthzExtensions(ListAuthzExtensionsRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            ListAuthzExtensionsRequest request = new ListAuthzExtensionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> response = depServiceClient.ListAuthzExtensions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuthzExtension item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuthzExtensionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthzExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthzExtension> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthzExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthzExtensionsAsync</summary>
+        public async Task ListAuthzExtensionsRequestObjectAsync()
+        {
+            // Snippet: ListAuthzExtensionsAsync(ListAuthzExtensionsRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAuthzExtensionsRequest request = new ListAuthzExtensionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> response = depServiceClient.ListAuthzExtensionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AuthzExtension item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAuthzExtensionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthzExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthzExtension> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthzExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthzExtensions</summary>
+        public void ListAuthzExtensions()
+        {
+            // Snippet: ListAuthzExtensions(string, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> response = depServiceClient.ListAuthzExtensions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuthzExtension item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuthzExtensionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthzExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthzExtension> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthzExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthzExtensionsAsync</summary>
+        public async Task ListAuthzExtensionsAsync()
+        {
+            // Snippet: ListAuthzExtensionsAsync(string, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> response = depServiceClient.ListAuthzExtensionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AuthzExtension item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAuthzExtensionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthzExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthzExtension> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthzExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthzExtensions</summary>
+        public void ListAuthzExtensionsResourceNames()
+        {
+            // Snippet: ListAuthzExtensions(LocationName, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuthzExtensionsResponse, AuthzExtension> response = depServiceClient.ListAuthzExtensions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuthzExtension item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuthzExtensionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthzExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthzExtension> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthzExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthzExtensionsAsync</summary>
+        public async Task ListAuthzExtensionsResourceNamesAsync()
+        {
+            // Snippet: ListAuthzExtensionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuthzExtensionsResponse, AuthzExtension> response = depServiceClient.ListAuthzExtensionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AuthzExtension item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAuthzExtensionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthzExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthzExtension> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthzExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthzExtension</summary>
+        public void GetAuthzExtensionRequestObject()
+        {
+            // Snippet: GetAuthzExtension(GetAuthzExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            GetAuthzExtensionRequest request = new GetAuthzExtensionRequest
+            {
+                AuthzExtensionName = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]"),
+            };
+            // Make the request
+            AuthzExtension response = depServiceClient.GetAuthzExtension(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthzExtensionAsync</summary>
+        public async Task GetAuthzExtensionRequestObjectAsync()
+        {
+            // Snippet: GetAuthzExtensionAsync(GetAuthzExtensionRequest, CallSettings)
+            // Additional: GetAuthzExtensionAsync(GetAuthzExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAuthzExtensionRequest request = new GetAuthzExtensionRequest
+            {
+                AuthzExtensionName = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]"),
+            };
+            // Make the request
+            AuthzExtension response = await depServiceClient.GetAuthzExtensionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthzExtension</summary>
+        public void GetAuthzExtension()
+        {
+            // Snippet: GetAuthzExtension(string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/authzExtensions/[AUTHZ_EXTENSION]";
+            // Make the request
+            AuthzExtension response = depServiceClient.GetAuthzExtension(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthzExtensionAsync</summary>
+        public async Task GetAuthzExtensionAsync()
+        {
+            // Snippet: GetAuthzExtensionAsync(string, CallSettings)
+            // Additional: GetAuthzExtensionAsync(string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/authzExtensions/[AUTHZ_EXTENSION]";
+            // Make the request
+            AuthzExtension response = await depServiceClient.GetAuthzExtensionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthzExtension</summary>
+        public void GetAuthzExtensionResourceNames()
+        {
+            // Snippet: GetAuthzExtension(AuthzExtensionName, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            AuthzExtensionName name = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]");
+            // Make the request
+            AuthzExtension response = depServiceClient.GetAuthzExtension(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthzExtensionAsync</summary>
+        public async Task GetAuthzExtensionResourceNamesAsync()
+        {
+            // Snippet: GetAuthzExtensionAsync(AuthzExtensionName, CallSettings)
+            // Additional: GetAuthzExtensionAsync(AuthzExtensionName, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AuthzExtensionName name = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]");
+            // Make the request
+            AuthzExtension response = await depServiceClient.GetAuthzExtensionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthzExtension</summary>
+        public void CreateAuthzExtensionRequestObject()
+        {
+            // Snippet: CreateAuthzExtension(CreateAuthzExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAuthzExtensionRequest request = new CreateAuthzExtensionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AuthzExtensionId = "",
+                AuthzExtension = new AuthzExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = depServiceClient.CreateAuthzExtension(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceCreateAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthzExtensionAsync</summary>
+        public async Task CreateAuthzExtensionRequestObjectAsync()
+        {
+            // Snippet: CreateAuthzExtensionAsync(CreateAuthzExtensionRequest, CallSettings)
+            // Additional: CreateAuthzExtensionAsync(CreateAuthzExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAuthzExtensionRequest request = new CreateAuthzExtensionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AuthzExtensionId = "",
+                AuthzExtension = new AuthzExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = await depServiceClient.CreateAuthzExtensionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceCreateAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthzExtension</summary>
+        public void CreateAuthzExtension()
+        {
+            // Snippet: CreateAuthzExtension(string, AuthzExtension, string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AuthzExtension authzExtension = new AuthzExtension();
+            string authzExtensionId = "";
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = depServiceClient.CreateAuthzExtension(parent, authzExtension, authzExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceCreateAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthzExtensionAsync</summary>
+        public async Task CreateAuthzExtensionAsync()
+        {
+            // Snippet: CreateAuthzExtensionAsync(string, AuthzExtension, string, CallSettings)
+            // Additional: CreateAuthzExtensionAsync(string, AuthzExtension, string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AuthzExtension authzExtension = new AuthzExtension();
+            string authzExtensionId = "";
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = await depServiceClient.CreateAuthzExtensionAsync(parent, authzExtension, authzExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceCreateAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthzExtension</summary>
+        public void CreateAuthzExtensionResourceNames()
+        {
+            // Snippet: CreateAuthzExtension(LocationName, AuthzExtension, string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AuthzExtension authzExtension = new AuthzExtension();
+            string authzExtensionId = "";
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = depServiceClient.CreateAuthzExtension(parent, authzExtension, authzExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceCreateAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthzExtensionAsync</summary>
+        public async Task CreateAuthzExtensionResourceNamesAsync()
+        {
+            // Snippet: CreateAuthzExtensionAsync(LocationName, AuthzExtension, string, CallSettings)
+            // Additional: CreateAuthzExtensionAsync(LocationName, AuthzExtension, string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AuthzExtension authzExtension = new AuthzExtension();
+            string authzExtensionId = "";
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = await depServiceClient.CreateAuthzExtensionAsync(parent, authzExtension, authzExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceCreateAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthzExtension</summary>
+        public void UpdateAuthzExtensionRequestObject()
+        {
+            // Snippet: UpdateAuthzExtension(UpdateAuthzExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAuthzExtensionRequest request = new UpdateAuthzExtensionRequest
+            {
+                UpdateMask = new FieldMask(),
+                AuthzExtension = new AuthzExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = depServiceClient.UpdateAuthzExtension(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceUpdateAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthzExtensionAsync</summary>
+        public async Task UpdateAuthzExtensionRequestObjectAsync()
+        {
+            // Snippet: UpdateAuthzExtensionAsync(UpdateAuthzExtensionRequest, CallSettings)
+            // Additional: UpdateAuthzExtensionAsync(UpdateAuthzExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAuthzExtensionRequest request = new UpdateAuthzExtensionRequest
+            {
+                UpdateMask = new FieldMask(),
+                AuthzExtension = new AuthzExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = await depServiceClient.UpdateAuthzExtensionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceUpdateAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthzExtension</summary>
+        public void UpdateAuthzExtension()
+        {
+            // Snippet: UpdateAuthzExtension(AuthzExtension, FieldMask, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            AuthzExtension authzExtension = new AuthzExtension();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = depServiceClient.UpdateAuthzExtension(authzExtension, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceUpdateAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthzExtensionAsync</summary>
+        public async Task UpdateAuthzExtensionAsync()
+        {
+            // Snippet: UpdateAuthzExtensionAsync(AuthzExtension, FieldMask, CallSettings)
+            // Additional: UpdateAuthzExtensionAsync(AuthzExtension, FieldMask, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AuthzExtension authzExtension = new AuthzExtension();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AuthzExtension, OperationMetadata> response = await depServiceClient.UpdateAuthzExtensionAsync(authzExtension, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthzExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthzExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthzExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceUpdateAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthzExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthzExtension</summary>
+        public void DeleteAuthzExtensionRequestObject()
+        {
+            // Snippet: DeleteAuthzExtension(DeleteAuthzExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteAuthzExtensionRequest request = new DeleteAuthzExtensionRequest
+            {
+                AuthzExtensionName = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = depServiceClient.DeleteAuthzExtension(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = depServiceClient.PollOnceDeleteAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthzExtensionAsync</summary>
+        public async Task DeleteAuthzExtensionRequestObjectAsync()
+        {
+            // Snippet: DeleteAuthzExtensionAsync(DeleteAuthzExtensionRequest, CallSettings)
+            // Additional: DeleteAuthzExtensionAsync(DeleteAuthzExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAuthzExtensionRequest request = new DeleteAuthzExtensionRequest
+            {
+                AuthzExtensionName = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await depServiceClient.DeleteAuthzExtensionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceDeleteAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthzExtension</summary>
+        public void DeleteAuthzExtension()
+        {
+            // Snippet: DeleteAuthzExtension(string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/authzExtensions/[AUTHZ_EXTENSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = depServiceClient.DeleteAuthzExtension(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = depServiceClient.PollOnceDeleteAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthzExtensionAsync</summary>
+        public async Task DeleteAuthzExtensionAsync()
+        {
+            // Snippet: DeleteAuthzExtensionAsync(string, CallSettings)
+            // Additional: DeleteAuthzExtensionAsync(string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/authzExtensions/[AUTHZ_EXTENSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await depServiceClient.DeleteAuthzExtensionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceDeleteAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthzExtension</summary>
+        public void DeleteAuthzExtensionResourceNames()
+        {
+            // Snippet: DeleteAuthzExtension(AuthzExtensionName, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            AuthzExtensionName name = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = depServiceClient.DeleteAuthzExtension(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = depServiceClient.PollOnceDeleteAuthzExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthzExtensionAsync</summary>
+        public async Task DeleteAuthzExtensionResourceNamesAsync()
+        {
+            // Snippet: DeleteAuthzExtensionAsync(AuthzExtensionName, CallSettings)
+            // Additional: DeleteAuthzExtensionAsync(AuthzExtensionName, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AuthzExtensionName name = AuthzExtensionName.FromProjectLocationAuthzExtension("[PROJECT]", "[LOCATION]", "[AUTHZ_EXTENSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await depServiceClient.DeleteAuthzExtensionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceDeleteAuthzExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
