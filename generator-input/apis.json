@@ -2149,7 +2149,7 @@
     },
     {
       "id": "Google.Cloud.DeveloperConnect.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Developer Connect",
       "productUrl": "https://cloud.google.com/developer-connect/docs/overview",
