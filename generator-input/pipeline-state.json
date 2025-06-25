@@ -3234,7 +3234,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-11-18T19:28:31Z",
-            "lastGeneratedCommit": "8b26dd3216f1e5be8f4d5fb585664969211d63dc",
+            "lastGeneratedCommit": "af2ae7d5b0d84cdfbdb6155d7982b8a0c681c223",
             "apiPaths": [
                 "google/cloud/translate/v3"
             ],
