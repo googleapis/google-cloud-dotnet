@@ -4196,6 +4196,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "b77ca55d5050c2286873659c28e74ad90ea3009e",
             "apiPaths": [
                 "google/cloud/configdelivery/v1beta"
             ],
