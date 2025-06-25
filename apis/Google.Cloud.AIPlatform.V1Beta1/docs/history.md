@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta36, released 2025-06-25
+
+### New features
+
+- Add PSCAutomationConfig to PrivateServiceConnectConfig in service_networking.proto
+- Add GenAiAdvancedFeaturesConfig to endpoint.proto
+- Reasoning Engine v1beta1 subresource updates
+- Add invoke_route_prefix to ModelContainerSpec in aiplatform v1beta1 models.proto
+
+### Documentation improvements
+
+- Update dedicateEndpointDns documentation
+- Clarify that the names for sessions and session_events are no longer required.
+
 ## Version 1.0.0-beta35, released 2025-06-17
 
 ### New features
