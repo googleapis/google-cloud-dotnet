@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.36.0, released 2025-06-25
+
+### New features
+
+- Add PSCAutomationConfig to PrivateServiceConnectConfig in service_networking.proto
+- Add GenAiAdvancedFeaturesConfig to endpoint.proto
+- Add Model Garden deploy OSS model API
+
+### Documentation improvements
+
+- Update dedicateEndpointDns documentation
+
 ## Version 3.35.0, released 2025-06-17
 
 ### New features
