@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.11.0, released 2025-06-25
+
+### New features
+
+- Instance.ActivationPolicy field
+- Cluster.DenyMaintenancePeriod field
+- InstanceNetworkConfig.network output field
+- InstanceNetworkConfig.allocated_ip_range_override field
+- Backup.create_completion_time output field
+
+### Documentation improvements
+
+- A comment for field `earliest_restorable_time`
+- A comment for field `status` in message `PscAutoConnectionConfig`
+
 ## Version 1.10.0, released 2025-05-14
 
 ### New features
