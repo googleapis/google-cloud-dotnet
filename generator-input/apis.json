@@ -4250,7 +4250,7 @@
     },
     {
       "id": "Google.Cloud.ParameterManager.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Parameter Manager",
       "productUrl": "https://cloud.google.com/secret-manager/parameter-manager/docs/overview",
