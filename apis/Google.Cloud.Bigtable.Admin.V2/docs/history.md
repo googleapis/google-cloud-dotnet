@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.27.0, released 2025-06-25
+
+### New features
+
+- Add SchemaBundles API
+
+### Documentation improvements
+
+- Improved comment formatting and product naming
+
 ## Version 3.26.0, released 2025-04-28
 
 ### New features
