@@ -86,7 +86,7 @@ public class TestRepo : IDisposable
         AddAll(status.Missing);
         AddAll(status.Untracked);
         _repo.Index.Write();
-        var signature = _repo.Config.BuildSignature(DateTimeOffset.UtcNow);
+        var signature = new Signature(new Identity("Test", "dotnet-container-test@google.com"), DateTimeOffset.UtcNow);
         return _repo.Commit(message, signature, signature);
 
         void AddAll(IEnumerable<StatusEntry> entries)
