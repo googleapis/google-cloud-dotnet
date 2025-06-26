@@ -45,7 +45,7 @@ public class UniverseDomainTest : IDisposable
         _objectName = "ud-test-object";
     }
 
-    [Fact(Skip = "b/384633853")]
+    [Fact]
     public void UniverseDomain()
     {
         _storage = new StorageClientBuilder { CredentialsPath = _credsPath, UniverseDomain = _universeDomain }.Build();
