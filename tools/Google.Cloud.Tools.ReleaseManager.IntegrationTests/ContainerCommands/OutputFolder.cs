@@ -17,15 +17,26 @@ using IO = System.IO;
 
 namespace Google.Cloud.Tools.ReleaseManager.IntegrationTests.ContainerCommands;
 
-public class GeneratorOutputFolder
+/// <summary>
+/// An output folder from an earlier command.
+/// </summary>
+public class OutputFolder
 {
     public string Directory { get; }
 
-    public GeneratorOutputFolder(string directory) => IO::Directory.CreateDirectory(Directory = directory);
+    public OutputFolder(string directory) => IO::Directory.CreateDirectory(Directory = directory);
 
-    public GeneratorOutputFolder CopyDirectory(string sourceDirectory, string relativeTarget, bool recursive = true)
+    public OutputFolder CopyDirectory(string sourceDirectory, string relativeTarget, bool recursive = true)
     {
         TestFiles.CopyDirectory(sourceDirectory, Path.Combine(Directory, relativeTarget), recursive);
+        return this;
+    }
+
+    public OutputFolder AddEmptyFile(string path) => AddTextFile(path, "");
+
+    public OutputFolder AddTextFile(string path, string text)
+    {
+        File.WriteAllText(Path.Combine(Directory, path), text);
         return this;
     }
 }
