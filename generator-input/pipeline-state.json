@@ -3902,7 +3902,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-08T05:59:41.071646697Z",
-            "lastGeneratedCommit": "079e5305050859d0e3a8c0768611283ee4863c07",
+            "lastGeneratedCommit": "2a76e34df73dc25816d6fcd55d6f8f92de1dcaca",
             "lastReleasedCommit": "079e5305050859d0e3a8c0768611283ee4863c07",
             "apiPaths": [
                 "google/devtools/containeranalysis/v1",
