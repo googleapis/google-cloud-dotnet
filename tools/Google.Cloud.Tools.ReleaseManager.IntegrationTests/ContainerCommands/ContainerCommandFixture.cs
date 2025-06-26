@@ -41,8 +41,8 @@ public sealed class ContainerCommandFixture : ICollectionFixture<ContainerComman
         return context;
     }
 
-    public GeneratorOutputFolder CreateGeneratorOutputFolder([CallerFilePath] string callerFile = null, [CallerMemberName] string callerMember = null) =>
-        new GeneratorOutputFolder(GetPathFromCaller(callerFile, callerMember));
+    public OutputFolder CreateOutputFolder([CallerFilePath] string callerFile = null, [CallerMemberName] string callerMember = null) =>
+        new OutputFolder(GetPathFromCaller(callerFile, callerMember));
 
     private string GetPathFromCaller(string callerFile, string callerMember) =>
         Path.Combine(_contextRoot, $"{Path.GetFileNameWithoutExtension(callerFile)}-{callerMember}");

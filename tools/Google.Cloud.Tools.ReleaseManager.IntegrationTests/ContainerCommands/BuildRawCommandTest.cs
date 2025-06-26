@@ -28,7 +28,7 @@ public class BuildRawCommandTest
     [Fact]
     public void BuildRaw()
     {
-        var outputFolder = _fixture.CreateGeneratorOutputFolder();
+        var outputFolder = _fixture.CreateOutputFolder();
         outputFolder
             .CopyDirectory(Path.Combine(TestFiles.CommonFilesDirectory, "Google.Test.V1"), "google/test/v1")
             .CopyDirectory(Path.Combine(TestFiles.CommonFilesDirectory, "Google.Test.V2"), "google/test/v2");

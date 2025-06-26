@@ -25,10 +25,10 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// <summary>
 /// Publishes a (previously-packaged) library to NuGet, and pushes the documentation tgz files.
 /// </summary>
-public sealed class PublishLibraryCommand : IContainerCommand
+public class PublishLibraryCommand : IContainerCommand
 {
-    private const string NuGetApiKeyEnvPrefix = "NUGET_API_KEY_";
-    private const string DocsBucketEnvPrefix = "DOCS_BUCKET_";
+    internal const string NuGetApiKeyEnvPrefix = "NUGET_API_KEY_";
+    internal const string DocsBucketEnvPrefix = "DOCS_BUCKET_";
 
     public int Execute(ContainerOptions options)
     {
@@ -38,8 +38,8 @@ public sealed class PublishLibraryCommand : IContainerCommand
         var nugetPackages = NuGetPackage.LoadPackages(packageOutput);
         var documentationBundles = DocumentationBundle.LoadBundles(packageOutput);
 
-        nugetPackages.ForEach(pkg => pkg.Push());
-        documentationBundles.ForEach(bundle => bundle.Upload());
+        nugetPackages.ForEach(PushPackage);
+        documentationBundles.ForEach(UploadDocumentation);
         return 0;
     }
 
@@ -53,20 +53,40 @@ public sealed class PublishLibraryCommand : IContainerCommand
         return value;
     }
 
-
-    private sealed class DocumentationBundle
+    // Virtual for testing purposes
+    internal virtual void PushPackage(NuGetPackage package)
     {
-        private readonly string _file;
-        private readonly string _destinationObject;
-        private readonly string _bucket;
+        Console.WriteLine($"Pushing {Path.GetFileName(package.File)}.");
+        Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
+            "nuget",
+            "push",
+            "-s", "https://api.nuget.org/v3/index.json",
+            "-k", package.ApiKey,
+            "--skip-duplicate", // Allows us to rerun a release step.
+            package.File);
+        Console.WriteLine($"Pushed {Path.GetFileName(package.File)} successfully.");
+    }
 
-        private DocumentationBundle(string file, string destinationObject, string bucket)
+    // Virtual for testing purposes
+    internal virtual void UploadDocumentation(DocumentationBundle bundle)
+    {
+        using var client = StorageClient.Create();
+        using var bundleStream = File.OpenRead(bundle.File);
+        Console.WriteLine($"Uploading {bundle.DestinationObject} to {bundle.Bucket}");
+        var options = new UploadObjectOptions { IfGenerationMatch = 0 };
+        try
         {
-            _file = file;
-            _destinationObject = destinationObject;
-            _bucket = bucket;
+            client.UploadObject(bundle.Bucket, bundle.DestinationObject, null, bundleStream, options);
+            Console.WriteLine($"Uploaded {bundle.DestinationObject} to {bundle.Bucket}");
         }
+        catch (GoogleApiException e) when (e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
+        {
+            Console.WriteLine("Documentation bundle already exists. Continuing.");
+        }
+    }
 
+    internal sealed record DocumentationBundle(string File, string DestinationObject, string Bucket)
+    {
         internal static List<DocumentationBundle> LoadBundles(string packageOutput)
         {
             var bundles = Directory.GetFiles(packageOutput, "*.tar.gz");
@@ -97,36 +117,10 @@ public sealed class PublishLibraryCommand : IContainerCommand
             }
             return list;
         }
-
-        internal void Upload()
-        {
-            using var client = StorageClient.Create();
-            using var bundleStream = File.OpenRead(_file);
-            Console.WriteLine($"Uploading {_destinationObject} to {_bucket}");
-            var options = new UploadObjectOptions { IfGenerationMatch = 0 };
-            try
-            {
-                client.UploadObject(_bucket, _destinationObject, null, bundleStream, options);
-                Console.WriteLine($"Uploaded {_destinationObject} to {_bucket}");
-            }
-            catch (GoogleApiException e) when (e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
-            {
-                Console.WriteLine("Documentation bundle already exists. Continuing.");
-            }
-        }
     }
 
-    private sealed class NuGetPackage
+    internal sealed record NuGetPackage(string ApiKey, string File)
     {
-        private readonly string _apiKey;
-        private readonly string _file;
-
-        private NuGetPackage(string apiKey, string file)
-        {
-            _apiKey = apiKey;
-            _file = file;
-        }
-
         internal static List<NuGetPackage> LoadPackages(string packageOutput)
         {
             var packages = Directory.GetFiles(packageOutput, "*.nupkg");
@@ -135,22 +129,9 @@ public sealed class PublishLibraryCommand : IContainerCommand
             {
                 return new List<NuGetPackage>();
             }
-            var packageOwner = File.ReadAllText(Path.Combine(packageOutput, PackageLibraryCommand.PackageOwnerFile));
+            var packageOwner = System.IO.File.ReadAllText(Path.Combine(packageOutput, PackageLibraryCommand.PackageOwnerFile));
             var apiKey = GetRequiredEnvironmentVariable(NuGetApiKeyEnvPrefix + packageOwner.ToUpperInvariant().Replace("-", "_"));
             return packages.Select(p => new NuGetPackage(apiKey, p)).ToList();
-        }
-
-        internal void Push()
-        {
-            Console.WriteLine($"Pushing {Path.GetFileName(_file)}.");
-            Processes.RunDotnetWithSensitiveArgs(Environment.CurrentDirectory,
-                "nuget",
-                "push",
-                "-s", "https://api.nuget.org/v3/index.json",
-                "-k", _apiKey,
-                "--skip-duplicate", // Allows us to rerun a release step.
-                _file);
-            Console.WriteLine($"Pushed {Path.GetFileName(_file)} successfully.");
         }
     }
 }
