@@ -33,6 +33,9 @@ public sealed class DockerCommandFixture : ICollectionFixture<DockerCommandFixtu
     private const string DockerExecutable = "/usr/bin/docker";
     private const string DockerImageEnvironmentVariable = "TEST_LIBRARIAN_DOTNET_DOCKER_IMAGE";
 
+    private readonly string _dockerHostRoot;
+    private readonly string _dockerMountRoot;
+
     /// <summary>
     /// The directory in which to create subdirectories for tests.
     /// </summary>
@@ -48,7 +51,22 @@ public sealed class DockerCommandFixture : ICollectionFixture<DockerCommandFixtu
         {
             return;
         }
-        TempTestDirectory = Path.Combine(Path.GetTempPath(), IdGenerator.FromDateTime(prefix: "DockerCommand-"));
+
+        // Handle Docker-in-Docker situations
+        // This is the source directory which is mounted from the upstream host.
+        _dockerHostRoot = Environment.GetEnvironmentVariable("KOKORO_HOST_ROOT_DIR");
+        // This is the target directory which is mounted in our current context
+        _dockerMountRoot = Environment.GetEnvironmentVariable("KOKORO_ROOT_DIR");
+
+        if (string.IsNullOrEmpty(_dockerMountRoot) != string.IsNullOrEmpty(_dockerHostRoot))
+        {
+            throw new InvalidOperationException($"Inconsistent environment variables: {_dockerHostRoot} and {_dockerMountRoot}");
+        }
+
+        var testRoot = string.IsNullOrEmpty(_dockerMountRoot)
+            ? Path.GetTempPath()
+            : Path.Combine(_dockerMountRoot, "docker-tmp");
+        TempTestDirectory = Path.Combine(testRoot, IdGenerator.FromDateTime(prefix: "DockerCommand-"));
         _enabled = true;
         _image = image;
         _userMapping = GetUserMapping();
@@ -58,6 +76,14 @@ public sealed class DockerCommandFixture : ICollectionFixture<DockerCommandFixtu
 
     public void RunDocker(string command, string[] args, string testMount, int expectedExitCode)
     {
+        // Handle Docker-in-Docker:
+        // If we've been asked to mount /mounted/xyz but we know that /mounted/ is actually /host/
+        // in the upstream host, we want to mount /host/xyz instead.
+        if (!string.IsNullOrEmpty(_dockerMountRoot) && testMount.StartsWith(_dockerMountRoot, StringComparison.Ordinal))
+        {
+            testMount = $"{_dockerHostRoot}{testMount[_dockerMountRoot.Length..]}";
+        }
+
         var psi = new ProcessStartInfo
         {
             FileName = DockerExecutable,
