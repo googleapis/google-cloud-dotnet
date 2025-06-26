@@ -78,6 +78,10 @@ internal class PackageLibraryCommand : IContainerCommand
     private static void PackageDocumentation(RootLayout rootLayout, ApiMetadata api, string outputDirectory)
     {
         var docsDir = rootLayout.CreateDocsLayout(api.Id).OutputDirectory;
+        if (!Directory.Exists(docsDir))
+        {
+            return;
+        }
         // Note: a comment in uploaddocs.sh claims we don't generate documentation for all packages.
         // I believe this is no longer true.
         var siteDir = Path.Combine(docsDir, "site");
