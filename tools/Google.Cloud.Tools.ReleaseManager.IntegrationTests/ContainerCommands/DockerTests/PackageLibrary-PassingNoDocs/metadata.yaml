@@ -1,0 +1,63 @@
+command: package-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Test.V1'
+- '--output=/test/output'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: Google.Test.V1
+    target: repo/apis/Google.Test.V1
+repoFiles:
+  - source: docs/builddocs.sh
+    target: repo/docs/builddocs.sh 
+  - source: toolversions.sh
+    target: repo/toolversions.sh
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: apis/Directory.Build.props
+    target: repo/apis/Directory.Build.props
+  - source: apis/Directory.Build.targets
+    target: repo/apis/Directory.Build.targets
+  - source: apis/GoogleApis.snk
+    target: repo/apis/GoogleApis.snk    
+  - source: LICENSE
+    target: repo/LICENSE
+  - source: NuGetIcon.png
+    target: repo/NuGetIcon.png
+  # Building documentation takes a lot of files, unfortunately.
+  # We might try to streamline this later.
+  - source: .config
+    target: repo/.config
+  - source: docs/Google.Cloud.DocTools.sln
+    target: repo/docs/Google.Cloud.DocTools.sln
+  - source: tools
+    target: repo/tools
+  - source: apis/Google.LongRunning
+    target: repo/apis/Google.LongRunning
+  - source: apis/Google.Cloud.PubSub.V1
+    target: repo/apis/Google.Cloud.PubSub.V1
+  - source: apis/Google.Cloud.Scheduler.V1
+    target: repo/apis/Google.Cloud.Scheduler.V1
+  - source: apis/Google.Cloud.Translation.V2
+    target: repo/apis/Google.Cloud.Translation.V2
+  - source: apis/Google.Cloud.Vision.V1
+    target: repo/apis/Google.Cloud.Vision.V1
+  - source: apis/Google.Cloud.Iam.V1
+    target: repo/apis/Google.Cloud.Iam.V1
+  - source: apis/Google.Cloud.Language.V1
+    target: repo/apis/Google.Cloud.Language.V1
+  - source: apis/Google.Cloud.BigQuery.Storage.V1
+    target: repo/apis/Google.Cloud.BigQuery.Storage.V1
+  - source: apis/Google.Cloud.BigQuery.V2
+    target: repo/apis/Google.Cloud.BigQuery.V2
+fileExpectations:
+  present:
+  - output/Google.Test.V1.1.0.0.nupkg
+  - output/Google.Test.V1.1.0.0.nupkg-sbom.spdx.json
+  - output/package-owner.txt
+  absent:
+  - output/googleapisdev-Google.Test.V1-1.0.0.tar.gz
