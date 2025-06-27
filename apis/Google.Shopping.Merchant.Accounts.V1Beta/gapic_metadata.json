@@ -176,6 +176,39 @@
         }
       }
     },
+    "CheckoutSettingsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CheckoutSettingsServiceClient",
+          "rpcs": {
+            "CreateCheckoutSettings": {
+              "methods": [
+                "CreateCheckoutSettings",
+                "CreateCheckoutSettingsAsync"
+              ]
+            },
+            "DeleteCheckoutSettings": {
+              "methods": [
+                "DeleteCheckoutSettings",
+                "DeleteCheckoutSettingsAsync"
+              ]
+            },
+            "GetCheckoutSettings": {
+              "methods": [
+                "GetCheckoutSettings",
+                "GetCheckoutSettingsAsync"
+              ]
+            },
+            "UpdateCheckoutSettings": {
+              "methods": [
+                "UpdateCheckoutSettings",
+                "UpdateCheckoutSettingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "EmailPreferencesService": {
       "clients": {
         "grpc": {
