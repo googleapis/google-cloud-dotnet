@@ -4463,6 +4463,1080 @@
       ]
     },
     {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_sync",
+      "title": "GetCheckoutSettingsRequestObject",
+      "description": "Snippet for GetCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_async",
+      "title": "GetCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for GetCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_sync_flattened",
+      "title": "GetCheckoutSettings",
+      "description": "Snippet for GetCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_async_flattened",
+      "title": "GetCheckoutSettingsAsync",
+      "description": "Snippet for GetCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_sync_flattened_resourceNames",
+      "title": "GetCheckoutSettingsResourceNames",
+      "description": "Snippet for GetCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_async_flattened_resourceNames",
+      "title": "GetCheckoutSettingsResourceNamesAsync",
+      "description": "Snippet for GetCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_sync",
+      "title": "CreateCheckoutSettingsRequestObject",
+      "description": "Snippet for CreateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_async",
+      "title": "CreateCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for CreateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_sync_flattened",
+      "title": "CreateCheckoutSettings",
+      "description": "Snippet for CreateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_async_flattened",
+      "title": "CreateCheckoutSettingsAsync",
+      "description": "Snippet for CreateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_sync_flattened_resourceNames",
+      "title": "CreateCheckoutSettingsResourceNames",
+      "description": "Snippet for CreateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ProgramName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_async_flattened_resourceNames",
+      "title": "CreateCheckoutSettingsResourceNamesAsync",
+      "description": "Snippet for CreateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ProgramName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_sync",
+      "title": "UpdateCheckoutSettingsRequestObject",
+      "description": "Snippet for UpdateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_async",
+      "title": "UpdateCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_sync_flattened",
+      "title": "UpdateCheckoutSettings",
+      "description": "Snippet for UpdateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_async_flattened",
+      "title": "UpdateCheckoutSettingsAsync",
+      "description": "Snippet for UpdateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_sync",
+      "title": "DeleteCheckoutSettingsRequestObject",
+      "description": "Snippet for DeleteCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.DeleteCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_async",
+      "title": "DeleteCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for DeleteCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.DeleteCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_sync_flattened",
+      "title": "DeleteCheckoutSettings",
+      "description": "Snippet for DeleteCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_async_flattened",
+      "title": "DeleteCheckoutSettingsAsync",
+      "description": "Snippet for DeleteCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_sync_flattened_resourceNames",
+      "title": "DeleteCheckoutSettingsResourceNames",
+      "description": "Snippet for DeleteCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_async_flattened_resourceNames",
+      "title": "DeleteCheckoutSettingsResourceNamesAsync",
+      "description": "Snippet for DeleteCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1beta_generated_EmailPreferencesService_GetEmailPreferences_sync",
       "title": "GetEmailPreferencesRequestObject",
       "description": "Snippet for GetEmailPreferences",
