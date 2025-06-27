@@ -1,0 +1,23 @@
+command: prepare-library-release
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Test.V1'
+- '--version=1.42.0'
+- '--release-notes=/test/inputs/release-notes.txt'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Test.V1
+    target: repo/apis/Google.Test.V1
+  - source: release-notes.txt
+    target: inputs/release-notes.txt
+  - source: README-template.md
+    target: repo/generator-input/README-template.md
+  - source: renovate-template.json
+    target: repo/generator-input/renovate-template.json
+  - source: history.md
+    target: repo/apis/Google.Test.V1/docs/history.md
+# fails because 1.42.0 is already marked as released in history.md
+expectedExitCode: 1
