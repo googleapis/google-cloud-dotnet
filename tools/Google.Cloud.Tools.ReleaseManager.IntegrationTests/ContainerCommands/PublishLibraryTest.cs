@@ -16,6 +16,7 @@ using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Tools.ReleaseManager.IntegrationTests.ContainerCommands;
@@ -75,7 +76,9 @@ public class PublishLibraryTest
             new PublishLibraryCommand.NuGetPackage(NuGetApiKey, Path.Combine(output.Directory, PackageFile)),
             new PublishLibraryCommand.NuGetPackage(NuGetApiKey, Path.Combine(output.Directory, "Google.Test.V2.1.0.0.nupkg")),
         };
-        Assert.Equal(expectedPublishedPackages, command.PublishedPackages);
+        Assert.Equal(
+            expectedPublishedPackages.OrderBy(p => p.File, StringComparer.Ordinal),
+            command.PublishedPackages.OrderBy(p => p.File, StringComparer.Ordinal));
         Assert.Empty(command.UploadedDocsBundles);
     }
 
@@ -99,7 +102,9 @@ public class PublishLibraryTest
                 DestinationObject: "dotnet-Google.Test.V2-1.0.0.tar.gz",
                 Bucket: DocsBucket),
         };
-        Assert.Equal(expectedUploadedDocsBundles, command.UploadedDocsBundles);
+        Assert.Equal(
+            expectedUploadedDocsBundles.OrderBy(b => b.File, StringComparer.Ordinal),
+            command.UploadedDocsBundles.OrderBy(b => b.File, StringComparer.Ordinal));
     }
 
     [Fact]
