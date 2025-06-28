@@ -157,6 +157,14 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         public Action<JobConfigurationLoad> ConfigurationModifier { get; set; }
 
+        ///<summary>
+        /// The reservation that job would use. User can specify a reservation to execute the
+        /// job.If reservation is not set, reservation is determined based on the rules defined by the
+        /// reservation assignments.The expected format is
+        /// `projects/{project}/locations/{location}/reservations/{reservation}`.
+        /// </summary>
+        public string Reservation { get; set; }
+
         internal void ModifyRequest(JobConfigurationLoad load)
         {
             if (SkipLeadingRows != null)
