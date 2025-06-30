@@ -28,28 +28,29 @@ namespace Google.Ads.AdManager.V1 {
             "bHVlX21lc3NhZ2VzLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRo6",
             "Z29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvY3VzdG9tX3RhcmdldGluZ192YWx1",
             "ZV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKTBAoUQ3VzdG9tVGFyZ2V0",
-            "aW5nVmFsdWUSEQoEbmFtZRgBIAEoCUID4EEIEhgKC2FkX3RhZ19uYW1lGAQg",
-            "ASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAUgASgJQgPgQQESdAoKbWF0Y2hf",
-            "dHlwZRgGIAEoDjJYLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRh",
-            "cmdldGluZ1ZhbHVlTWF0Y2hUeXBlRW51bS5DdXN0b21UYXJnZXRpbmdWYWx1",
-            "ZU1hdGNoVHlwZUIG4EEF4EECEmcKBnN0YXR1cxgHIAEoDjJSLmdvb2dsZS5h",
-            "ZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ1ZhbHVlU3RhdHVzRW51",
-            "bS5DdXN0b21UYXJnZXRpbmdWYWx1ZVN0YXR1c0ID4EEDOtMB6kHPAQotYWRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlEnFu",
-            "ZXR3b3Jrcy97bmV0d29ya19jb2RlfS9jdXN0b21UYXJnZXRpbmdLZXlzL3tj",
-            "dXN0b21fdGFyZ2V0aW5nX2tleX0vY3VzdG9tVGFyZ2V0aW5nVmFsdWVzL3tj",
-            "dXN0b21fdGFyZ2V0aW5nX3ZhbHVlfSoVY3VzdG9tVGFyZ2V0aW5nVmFsdWVz",
-            "MhRjdXN0b21UYXJnZXRpbmdWYWx1ZULVAQobY29tLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxQiFDdXN0b21UYXJnZXRpbmdWYWx1ZU1lc3NhZ2VzUHJvdG9Q",
-            "AVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMv",
-            "YWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2Vy",
-            "LlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6",
-            "QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byK+BAoUQ3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWUSEQoEbmFtZRgBIAEoCUID4EEIElQKFGN1c3RvbV90YXJnZXRp",
+            "bmdfa2V5GAggASgJQjbgQQLgQQX6QS0KK2FkbWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9DdXN0b21UYXJnZXRpbmdLZXkSGAoLYWRfdGFnX25hbWUYBCABKAlC",
+            "A+BBBRIZCgxkaXNwbGF5X25hbWUYBSABKAlCA+BBARJ0CgptYXRjaF90eXBl",
+            "GAYgASgOMlguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWVNYXRjaFR5cGVFbnVtLkN1c3RvbVRhcmdldGluZ1ZhbHVlTWF0",
+            "Y2hUeXBlQgbgQQXgQQISZwoGc3RhdHVzGAcgASgOMlIuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nVmFsdWVTdGF0dXNFbnVtLkN1",
+            "c3RvbVRhcmdldGluZ1ZhbHVlU3RhdHVzQgPgQQM6qAHqQaQBCi1hZG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQ3VzdG9tVGFyZ2V0aW5nVmFsdWUSRm5ldHdv",
+            "cmtzL3tuZXR3b3JrX2NvZGV9L2N1c3RvbVRhcmdldGluZ1ZhbHVlcy97Y3Vz",
+            "dG9tX3RhcmdldGluZ192YWx1ZX0qFWN1c3RvbVRhcmdldGluZ1ZhbHVlczIU",
+            "Y3VzdG9tVGFyZ2V0aW5nVmFsdWVC1QEKG2NvbS5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MUIhQ3VzdG9tVGFyZ2V0aW5nVmFsdWVNZXNzYWdlc1Byb3RvUAFa",
+            "QGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2Fk",
+            "bWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5W",
+            "McoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFk",
+            "TWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomTargetingValueEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingValue), global::Google.Ads.AdManager.V1.CustomTargetingValue.Parser, new[]{ "Name", "AdTagName", "DisplayName", "MatchType", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingValue), global::Google.Ads.AdManager.V1.CustomTargetingValue.Parser, new[]{ "Name", "CustomTargetingKey", "AdTagName", "DisplayName", "MatchType", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +96,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomTargetingValue(CustomTargetingValue other) : this() {
       name_ = other.name_;
+      customTargetingKey_ = other.customTargetingKey_;
       adTagName_ = other.adTagName_;
       displayName_ = other.displayName_;
       matchType_ = other.matchType_;
@@ -114,7 +116,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Identifier. The resource name of the `CustomTargetingValue`.
     /// Format:
-    /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+    /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,6 +124,23 @@ namespace Google.Ads.AdManager.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_targeting_key" field.</summary>
+    public const int CustomTargetingKeyFieldNumber = 8;
+    private string customTargetingKey_ = "";
+    /// <summary>
+    /// Required. Immutable. The resource name of the `CustomTargetingKey`.
+    /// Format:
+    /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomTargetingKey {
+      get { return customTargetingKey_; }
+      set {
+        customTargetingKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -206,6 +225,7 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (CustomTargetingKey != other.CustomTargetingKey) return false;
       if (AdTagName != other.AdTagName) return false;
       if (DisplayName != other.DisplayName) return false;
       if (MatchType != other.MatchType) return false;
@@ -218,6 +238,7 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (CustomTargetingKey.Length != 0) hash ^= CustomTargetingKey.GetHashCode();
       if (AdTagName.Length != 0) hash ^= AdTagName.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (MatchType != global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified) hash ^= MatchType.GetHashCode();
@@ -260,6 +281,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
+      if (CustomTargetingKey.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CustomTargetingKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -290,6 +315,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
+      if (CustomTargetingKey.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CustomTargetingKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -302,6 +331,9 @@ namespace Google.Ads.AdManager.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (CustomTargetingKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomTargetingKey);
       }
       if (AdTagName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdTagName);
@@ -329,6 +361,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.CustomTargetingKey.Length != 0) {
+        CustomTargetingKey = other.CustomTargetingKey;
       }
       if (other.AdTagName.Length != 0) {
         AdTagName = other.AdTagName;
@@ -377,6 +412,10 @@ namespace Google.Ads.AdManager.V1 {
             Status = (global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus) input.ReadEnum();
             break;
           }
+          case 66: {
+            CustomTargetingKey = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -410,6 +449,10 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 56: {
             Status = (global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            CustomTargetingKey = input.ReadString();
             break;
           }
         }

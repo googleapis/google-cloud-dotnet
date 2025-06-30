@@ -26,19 +26,19 @@ namespace Google.Ads.AdManager.V1 {
           string.Concat(
             "Citnb29nbGUvYWRzL2FkbWFuYWdlci92MS90ZWFtX21lc3NhZ2VzLnByb3Rv",
             "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKGAQoE",
-            "VGVhbRIRCgRuYW1lGAEgASgJQgPgQQgSFAoHdGVhbV9pZBgCIAEoA0ID4EED",
-            "OlXqQVIKHWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9UZWFtEiRuZXR3b3Jr",
-            "cy97bmV0d29ya19jb2RlfS90ZWFtcy97dGVhbX0qBXRlYW1zMgR0ZWFtQsUB",
-            "Chtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCEVRlYW1NZXNzYWdlc1By",
-            "b3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "YWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFu",
-            "YWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpB",
-            "ZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJwCgRU",
+            "ZWFtEhEKBG5hbWUYASABKAlCA+BBCDpV6kFSCh1hZG1hbmFnZXIuZ29vZ2xl",
+            "YXBpcy5jb20vVGVhbRIkbmV0d29ya3Mve25ldHdvcmtfY29kZX0vdGVhbXMv",
+            "e3RlYW19KgV0ZWFtczIEdGVhbULFAQobY29tLmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxQhFUZWFtTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5h",
+            "Z2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFk",
+            "TWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Team), global::Google.Ads.AdManager.V1.Team.Parser, new[]{ "Name", "TeamId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Team), global::Google.Ads.AdManager.V1.Team.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,7 +84,6 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Team(Team other) : this() {
       name_ = other.name_;
-      teamId_ = other.teamId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,22 +109,6 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
-    /// <summary>Field number for the "team_id" field.</summary>
-    public const int TeamIdFieldNumber = 2;
-    private long teamId_;
-    /// <summary>
-    /// Output only. The unique ID of the Team. This value is assigned by Google.
-    /// Teams that are created by Google will have negative IDs.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long TeamId {
-      get { return teamId_; }
-      set {
-        teamId_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -142,7 +125,6 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (TeamId != other.TeamId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -151,7 +133,6 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (TeamId != 0L) hash ^= TeamId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -174,10 +155,6 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (TeamId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(TeamId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -192,10 +169,6 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (TeamId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(TeamId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -208,9 +181,6 @@ namespace Google.Ads.AdManager.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (TeamId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TeamId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -226,9 +196,6 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
-      }
-      if (other.TeamId != 0L) {
-        TeamId = other.TeamId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -249,10 +216,6 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            TeamId = input.ReadInt64();
-            break;
-          }
         }
       }
     #endif
@@ -270,10 +233,6 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             Name = input.ReadString();
-            break;
-          }
-          case 16: {
-            TeamId = input.ReadInt64();
             break;
           }
         }

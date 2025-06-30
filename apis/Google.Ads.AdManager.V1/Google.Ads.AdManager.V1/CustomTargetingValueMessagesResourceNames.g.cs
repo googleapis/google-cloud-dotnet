@@ -31,15 +31,13 @@ namespace Google.Ads.AdManager.V1
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern
-            /// <c>
-            /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
+            /// A resource name with pattern <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>
             /// .
             /// </summary>
-            NetworkCodeCustomTargetingKeyCustomTargetingValue = 1,
+            NetworkCodeCustomTargetingValue = 1,
         }
 
-        private static gax::PathTemplate s_networkCodeCustomTargetingKeyCustomTargetingValue = new gax::PathTemplate("networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}");
+        private static gax::PathTemplate s_networkCodeCustomTargetingValue = new gax::PathTemplate("networks/{network_code}/customTargetingValues/{custom_targeting_value}");
 
         /// <summary>Creates a <see cref="CustomTargetingValueName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -52,66 +50,47 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Creates a <see cref="CustomTargetingValueName"/> with the pattern
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// .
+        /// <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>.
         /// </summary>
         /// <param name="networkCodeId">The <c>NetworkCode</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="customTargetingKeyId">
-        /// The <c>CustomTargetingKey</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
         /// <param name="customTargetingValueId">
         /// The <c>CustomTargetingValue</c> ID. Must not be <c>null</c> or empty.
         /// </param>
         /// <returns>
         /// A new instance of <see cref="CustomTargetingValueName"/> constructed from the provided ids.
         /// </returns>
-        public static CustomTargetingValueName FromNetworkCodeCustomTargetingKeyCustomTargetingValue(string networkCodeId, string customTargetingKeyId, string customTargetingValueId) =>
-            new CustomTargetingValueName(ResourceNameType.NetworkCodeCustomTargetingKeyCustomTargetingValue, networkCodeId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkCodeId, nameof(networkCodeId)), customTargetingKeyId: gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingKeyId, nameof(customTargetingKeyId)), customTargetingValueId: gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingValueId, nameof(customTargetingValueId)));
+        public static CustomTargetingValueName FromNetworkCodeCustomTargetingValue(string networkCodeId, string customTargetingValueId) =>
+            new CustomTargetingValueName(ResourceNameType.NetworkCodeCustomTargetingValue, networkCodeId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkCodeId, nameof(networkCodeId)), customTargetingValueId: gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingValueId, nameof(customTargetingValueId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CustomTargetingValueName"/> with pattern
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// .
+        /// <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>.
         /// </summary>
         /// <param name="networkCodeId">The <c>NetworkCode</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="customTargetingKeyId">
-        /// The <c>CustomTargetingKey</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
         /// <param name="customTargetingValueId">
         /// The <c>CustomTargetingValue</c> ID. Must not be <c>null</c> or empty.
         /// </param>
         /// <returns>
         /// The string representation of this <see cref="CustomTargetingValueName"/> with pattern
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// .
+        /// <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>.
         /// </returns>
-        public static string Format(string networkCodeId, string customTargetingKeyId, string customTargetingValueId) =>
-            FormatNetworkCodeCustomTargetingKeyCustomTargetingValue(networkCodeId, customTargetingKeyId, customTargetingValueId);
+        public static string Format(string networkCodeId, string customTargetingValueId) =>
+            FormatNetworkCodeCustomTargetingValue(networkCodeId, customTargetingValueId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="CustomTargetingValueName"/> with pattern
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// .
+        /// <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>.
         /// </summary>
         /// <param name="networkCodeId">The <c>NetworkCode</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="customTargetingKeyId">
-        /// The <c>CustomTargetingKey</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
         /// <param name="customTargetingValueId">
         /// The <c>CustomTargetingValue</c> ID. Must not be <c>null</c> or empty.
         /// </param>
         /// <returns>
         /// The string representation of this <see cref="CustomTargetingValueName"/> with pattern
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// .
+        /// <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>.
         /// </returns>
-        public static string FormatNetworkCodeCustomTargetingKeyCustomTargetingValue(string networkCodeId, string customTargetingKeyId, string customTargetingValueId) =>
-            s_networkCodeCustomTargetingKeyCustomTargetingValue.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(networkCodeId, nameof(networkCodeId)), gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingKeyId, nameof(customTargetingKeyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingValueId, nameof(customTargetingValueId)));
+        public static string FormatNetworkCodeCustomTargetingValue(string networkCodeId, string customTargetingValueId) =>
+            s_networkCodeCustomTargetingValue.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(networkCodeId, nameof(networkCodeId)), gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingValueId, nameof(customTargetingValueId)));
 
         /// <summary>
         /// Parses the given resource name string into a new <see cref="CustomTargetingValueName"/> instance.
@@ -120,10 +99,7 @@ namespace Google.Ads.AdManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description>
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// </description>
+        /// <description><c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c></description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -140,10 +116,7 @@ namespace Google.Ads.AdManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description>
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// </description>
+        /// <description><c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -165,10 +138,7 @@ namespace Google.Ads.AdManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description>
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// </description>
+        /// <description><c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c></description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -189,10 +159,7 @@ namespace Google.Ads.AdManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description>
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
-        /// </description>
+        /// <description><c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -212,9 +179,9 @@ namespace Google.Ads.AdManager.V1
         {
             gax::GaxPreconditions.CheckNotNull(customTargetingValueName, nameof(customTargetingValueName));
             gax::TemplatedResourceName resourceName;
-            if (s_networkCodeCustomTargetingKeyCustomTargetingValue.TryParseName(customTargetingValueName, out resourceName))
+            if (s_networkCodeCustomTargetingValue.TryParseName(customTargetingValueName, out resourceName))
             {
-                result = FromNetworkCodeCustomTargetingKeyCustomTargetingValue(resourceName[0], resourceName[1], resourceName[2]);
+                result = FromNetworkCodeCustomTargetingValue(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
@@ -229,29 +196,23 @@ namespace Google.Ads.AdManager.V1
             return false;
         }
 
-        private CustomTargetingValueName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string customTargetingKeyId = null, string customTargetingValueId = null, string networkCodeId = null)
+        private CustomTargetingValueName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string customTargetingValueId = null, string networkCodeId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
-            CustomTargetingKeyId = customTargetingKeyId;
             CustomTargetingValueId = customTargetingValueId;
             NetworkCodeId = networkCodeId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="CustomTargetingValueName"/> class from the component parts of
-        /// pattern
-        /// <c>
-        /// networks/{network_code}/customTargetingKeys/{custom_targeting_key}/customTargetingValues/{custom_targeting_value}</c>
+        /// pattern <c>networks/{network_code}/customTargetingValues/{custom_targeting_value}</c>
         /// </summary>
         /// <param name="networkCodeId">The <c>NetworkCode</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="customTargetingKeyId">
-        /// The <c>CustomTargetingKey</c> ID. Must not be <c>null</c> or empty.
-        /// </param>
         /// <param name="customTargetingValueId">
         /// The <c>CustomTargetingValue</c> ID. Must not be <c>null</c> or empty.
         /// </param>
-        public CustomTargetingValueName(string networkCodeId, string customTargetingKeyId, string customTargetingValueId) : this(ResourceNameType.NetworkCodeCustomTargetingKeyCustomTargetingValue, networkCodeId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkCodeId, nameof(networkCodeId)), customTargetingKeyId: gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingKeyId, nameof(customTargetingKeyId)), customTargetingValueId: gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingValueId, nameof(customTargetingValueId)))
+        public CustomTargetingValueName(string networkCodeId, string customTargetingValueId) : this(ResourceNameType.NetworkCodeCustomTargetingValue, networkCodeId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkCodeId, nameof(networkCodeId)), customTargetingValueId: gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetingValueId, nameof(customTargetingValueId)))
         {
         }
 
@@ -263,12 +224,6 @@ namespace Google.Ads.AdManager.V1
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
-
-        /// <summary>
-        /// The <c>CustomTargetingKey</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
-        /// </summary>
-        public string CustomTargetingKeyId { get; }
 
         /// <summary>
         /// The <c>CustomTargetingValue</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
@@ -291,7 +246,7 @@ namespace Google.Ads.AdManager.V1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.NetworkCodeCustomTargetingKeyCustomTargetingValue: return s_networkCodeCustomTargetingKeyCustomTargetingValue.Expand(NetworkCodeId, CustomTargetingKeyId, CustomTargetingValueId);
+                case ResourceNameType.NetworkCodeCustomTargetingValue: return s_networkCodeCustomTargetingValue.Expand(NetworkCodeId, CustomTargetingValueId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -333,6 +288,16 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::CustomTargetingValueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CustomTargetingKeyName"/>-typed view over the <see cref="CustomTargetingKey"/> resource name
+        /// property.
+        /// </summary>
+        public CustomTargetingKeyName CustomTargetingKeyAsCustomTargetingKeyName
+        {
+            get => string.IsNullOrEmpty(CustomTargetingKey) ? null : CustomTargetingKeyName.Parse(CustomTargetingKey, allowUnparsed: true);
+            set => CustomTargetingKey = value?.ToString() ?? "";
         }
     }
 }

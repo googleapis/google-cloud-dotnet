@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetCustomTargetingValueRequest request = new GetCustomTargetingValueRequest
             {
-                CustomTargetingValueName = CustomTargetingValueName.FromNetworkCodeCustomTargetingKeyCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]", "[CUSTOM_TARGETING_VALUE]"),
+                CustomTargetingValueName = CustomTargetingValueName.FromNetworkCodeCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_VALUE]"),
             };
             // Make the request
             CustomTargetingValue response = await customTargetingValueServiceClient.GetCustomTargetingValueAsync(request);

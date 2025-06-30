@@ -30,50 +30,59 @@ namespace Google.Ads.AdManager.V1 {
             "Z2VyL3YxL2N1c3RvbV9maWVsZF92YWx1ZS5wcm90bxopZ29vZ2xlL2Fkcy9h",
             "ZG1hbmFnZXIvdjEvb3JkZXJfZW51bXMucHJvdG8aH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ijwwKBU9yZGVyEhEK",
-            "BG5hbWUYASABKAlCA+BBCBIVCghvcmRlcl9pZBgEIAEoA0ID4EEDEhkKDGRp",
-            "c3BsYXlfbmFtZRgCIAEoCUID4EECEhkKDHByb2dyYW1tYXRpYxgDIAEoCEID",
-            "4EEBEjkKCnRyYWZmaWNrZXIYFyABKAlCJeBBAvpBHwodYWRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL1VzZXISRQoTYWR2ZXJ0aXNlcl9jb250YWN0cxgFIAMo",
-            "CUIo4EEB+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ29udGFjdBI8",
-            "CgphZHZlcnRpc2VyGAYgASgJQijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVh",
-            "cGlzLmNvbS9Db21wYW55EkEKD2FnZW5jeV9jb250YWN0cxgHIAMoCUIo4EEB",
-            "+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ29udGFjdBI4CgZhZ2Vu",
-            "Y3kYCCABKAlCKOBBAfpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Nv",
-            "bXBhbnkSPAoNYXBwbGllZF90ZWFtcxgJIAMoCUIl4EEB+kEfCh1hZG1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vVGVhbRI+Cg9lZmZlY3RpdmVfdGVhbXMYHCAD",
-            "KAlCJeBBA/pBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RlYW0SNgoH",
-            "Y3JlYXRvchgKIAEoCUIl4EED+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vVXNlchIaCg1jdXJyZW5jeV9jb2RlGAsgASgJQgPgQQMSMwoKc3RhcnRf",
-            "dGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIx",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ilg8KBU9yZGVyEhEK",
+            "BG5hbWUYASABKAlCA+BBCBIaCghvcmRlcl9pZBgEIAEoA0ID4EEDSACIAQES",
+            "HgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJIAYgBARIeCgxwcm9ncmFtbWF0",
+            "aWMYAyABKAhCA+BBAUgCiAEBEj4KCnRyYWZmaWNrZXIYFyABKAlCJeBBAvpB",
+            "HwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1VzZXJIA4gBARJFChNhZHZl",
+            "cnRpc2VyX2NvbnRhY3RzGAUgAygJQijgQQH6QSIKIGFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9Db250YWN0EkEKCmFkdmVydGlzZXIYBiABKAlCKOBBAvpB",
+            "IgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbXBhbnlIBIgBARJBCg9h",
+            "Z2VuY3lfY29udGFjdHMYByADKAlCKOBBAfpBIgogYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL0NvbnRhY3QSPQoGYWdlbmN5GAggASgJQijgQQH6QSIKIGFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55SAWIAQESPAoNYXBwbGll",
+            "ZF90ZWFtcxgJIAMoCUIl4EEB+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vVGVhbRI+Cg9lZmZlY3RpdmVfdGVhbXMYHCADKAlCJeBBA/pBHwodYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RlYW0SOwoHY3JlYXRvchgKIAEoCUIl",
+            "4EED+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVXNlckgGiAEBEh8K",
+            "DWN1cnJlbmN5X2NvZGUYCyABKAlCA+BBA0gHiAEBEjgKCnN0YXJ0X3RpbWUY",
+            "EyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNICIgBARI2",
             "CghlbmRfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxIfChJ1bmxpbWl0ZWRfZW5kX3RpbWUYLSABKAhCA+BBAxIeChFleHRl",
-            "cm5hbF9vcmRlcl9pZBgNIAEoA0ID4EEBEhUKCGFyY2hpdmVkGA4gASgIQgPg",
-            "QQMSIQoUbGFzdF9tb2RpZmllZF9ieV9hcHAYDyABKAlCA+BBAxI0Cgt1cGRh",
-            "dGVfdGltZRgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxISCgVub3RlcxgRIAEoCUID4EEBEhYKCXBvX251bWJlchgSIAEoCUID4EEB",
-            "EkkKBnN0YXR1cxgUIAEoDjI0Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk9y",
-            "ZGVyU3RhdHVzRW51bS5PcmRlclN0YXR1c0ID4EEDEjoKC3NhbGVzcGVyc29u",
+            "A+BBA0gJiAEBEiQKEnVubGltaXRlZF9lbmRfdGltZRgtIAEoCEID4EEDSAqI",
+            "AQESIwoRZXh0ZXJuYWxfb3JkZXJfaWQYDSABKAVCA+BBAUgLiAEBEhoKCGFy",
+            "Y2hpdmVkGA4gASgIQgPgQQNIDIgBARImChRsYXN0X21vZGlmaWVkX2J5X2Fw",
+            "cBgPIAEoCUID4EEDSA2IAQESOQoLdXBkYXRlX3RpbWUYECABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNIDogBARIXCgVub3RlcxgRIAEo",
+            "CUID4EEBSA+IAQESGwoJcG9fbnVtYmVyGBIgASgJQgPgQQFIEIgBARJOCgZz",
+            "dGF0dXMYFCABKA4yNC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5PcmRlclN0",
+            "YXR1c0VudW0uT3JkZXJTdGF0dXNCA+BBA0gRiAEBEj8KC3NhbGVzcGVyc29u",
             "GBUgASgJQiXgQQH6QR8KHWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Vc2Vy",
-            "EkcKFXNlY29uZGFyeV9zYWxlc3Blb3BsZRgWIAMoCUIo4EEB4EEG+kEfCh1h",
-            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVXNlchJHChVzZWNvbmRhcnlfdHJh",
-            "ZmZpY2tlcnMYGCADKAlCKOBBAeBBBvpBHwodYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL1VzZXISQgoOYXBwbGllZF9sYWJlbHMYGSADKAsyJS5nb29nbGUu",
-            "YWRzLmFkbWFuYWdlci52MS5BcHBsaWVkTGFiZWxCA+BBARJMChhlZmZlY3Rp",
-            "dmVfYXBwbGllZF9sYWJlbHMYGiADKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdl",
-            "ci52MS5BcHBsaWVkTGFiZWxCA+BBAxJLChNjdXN0b21fZmllbGRfdmFsdWVz",
-            "GCYgAygLMikuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmllbGRW",
-            "YWx1ZUID4EEBOlrqQVcKHmFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9PcmRl",
-            "chImbmV0d29ya3Mve25ldHdvcmtfY29kZX0vb3JkZXJzL3tvcmRlcn0qBm9y",
-            "ZGVyczIFb3JkZXJCxgEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIS",
-            "T3JkZXJNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
-            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
-            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "SBKIAQESRwoVc2Vjb25kYXJ5X3NhbGVzcGVvcGxlGBYgAygJQijgQQHgQQb6",
+            "QR8KHWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Vc2VyEkcKFXNlY29uZGFy",
+            "eV90cmFmZmlja2VycxgYIAMoCUIo4EEB4EEG+kEfCh1hZG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vVXNlchJCCg5hcHBsaWVkX2xhYmVscxgZIAMoCzIlLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFwcGxpZWRMYWJlbEID4EEBEkwKGGVm",
+            "ZmVjdGl2ZV9hcHBsaWVkX2xhYmVscxgaIAMoCzIlLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkFwcGxpZWRMYWJlbEID4EEDEksKE2N1c3RvbV9maWVsZF92",
+            "YWx1ZXMYJiADKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21G",
+            "aWVsZFZhbHVlQgPgQQE6WupBVwoeYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L09yZGVyEiZuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9vcmRlcnMve29yZGVy",
+            "fSoGb3JkZXJzMgVvcmRlckILCglfb3JkZXJfaWRCDwoNX2Rpc3BsYXlfbmFt",
+            "ZUIPCg1fcHJvZ3JhbW1hdGljQg0KC190cmFmZmlja2VyQg0KC19hZHZlcnRp",
+            "c2VyQgkKB19hZ2VuY3lCCgoIX2NyZWF0b3JCEAoOX2N1cnJlbmN5X2NvZGVC",
+            "DQoLX3N0YXJ0X3RpbWVCCwoJX2VuZF90aW1lQhUKE191bmxpbWl0ZWRfZW5k",
+            "X3RpbWVCFAoSX2V4dGVybmFsX29yZGVyX2lkQgsKCV9hcmNoaXZlZEIXChVf",
+            "bGFzdF9tb2RpZmllZF9ieV9hcHBCDgoMX3VwZGF0ZV90aW1lQggKBl9ub3Rl",
+            "c0IMCgpfcG9fbnVtYmVyQgkKB19zdGF0dXNCDgoMX3NhbGVzcGVyc29uQsYB",
+            "Chtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCEk9yZGVyTWVzc2FnZXNQ",
+            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1h",
+            "bmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6",
+            "QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.OrderEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Order), global::Google.Ads.AdManager.V1.Order.Parser, new[]{ "Name", "OrderId", "DisplayName", "Programmatic", "Trafficker", "AdvertiserContacts", "Advertiser", "AgencyContacts", "Agency", "AppliedTeams", "EffectiveTeams", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "SecondarySalespeople", "SecondaryTraffickers", "AppliedLabels", "EffectiveAppliedLabels", "CustomFieldValues" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Order), global::Google.Ads.AdManager.V1.Order.Parser, new[]{ "Name", "OrderId", "DisplayName", "Programmatic", "Trafficker", "AdvertiserContacts", "Advertiser", "AgencyContacts", "Agency", "AppliedTeams", "EffectiveTeams", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "SecondarySalespeople", "SecondaryTraffickers", "AppliedLabels", "EffectiveAppliedLabels", "CustomFieldValues" }, new[]{ "OrderId", "DisplayName", "Programmatic", "Trafficker", "Advertiser", "Agency", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson" }, null, null, null)
           }));
     }
     #endregion
@@ -91,6 +100,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Order> _parser = new pb::MessageParser<Order>(() => new Order());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Order> Parser { get { return _parser; } }
@@ -118,6 +128,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Order(Order other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       orderId_ = other.orderId_;
       displayName_ = other.displayName_;
@@ -174,6 +185,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 4;
+    private readonly static long OrderIdDefaultValue = 0L;
+
     private long orderId_;
     /// <summary>
     /// Output only. Order ID.
@@ -181,15 +194,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long OrderId {
-      get { return orderId_; }
+      get { if ((_hasBits0 & 2) != 0) { return orderId_; } else { return OrderIdDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         orderId_ = value;
       }
+    }
+    /// <summary>Gets whether the "order_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOrderId {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "order_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOrderId() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 2;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Required. The display name of the Order.  This value has a maximum length
     /// of 255 characters.
@@ -197,14 +225,28 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "programmatic" field.</summary>
     public const int ProgrammaticFieldNumber = 3;
+    private readonly static bool ProgrammaticDefaultValue = false;
+
     private bool programmatic_;
     /// <summary>
     /// Optional. Specifies whether or not the Order is a programmatic order.
@@ -212,15 +254,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Programmatic {
-      get { return programmatic_; }
+      get { if ((_hasBits0 & 1) != 0) { return programmatic_; } else { return ProgrammaticDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         programmatic_ = value;
       }
+    }
+    /// <summary>Gets whether the "programmatic" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProgrammatic {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "programmatic" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProgrammatic() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "trafficker" field.</summary>
     public const int TraffickerFieldNumber = 23;
-    private string trafficker_ = "";
+    private readonly static string TraffickerDefaultValue = "";
+
+    private string trafficker_;
     /// <summary>
     /// Required. The resource name of the User responsible for trafficking the
     /// Order. Format: "networks/{network_code}/users/{user_id}"
@@ -228,10 +285,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Trafficker {
-      get { return trafficker_; }
+      get { return trafficker_ ?? TraffickerDefaultValue; }
       set {
         trafficker_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "trafficker" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTrafficker {
+      get { return trafficker_ != null; }
+    }
+    /// <summary>Clears the value of the "trafficker" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTrafficker() {
+      trafficker_ = null;
     }
 
     /// <summary>Field number for the "advertiser_contacts" field.</summary>
@@ -251,7 +320,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "advertiser" field.</summary>
     public const int AdvertiserFieldNumber = 6;
-    private string advertiser_ = "";
+    private readonly static string AdvertiserDefaultValue = "";
+
+    private string advertiser_;
     /// <summary>
     /// Required. The resource name of the Company, which is of type
     /// Company.Type.ADVERTISER, to which this order belongs. Format:
@@ -260,10 +331,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Advertiser {
-      get { return advertiser_; }
+      get { return advertiser_ ?? AdvertiserDefaultValue; }
       set {
         advertiser_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "advertiser" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdvertiser {
+      get { return advertiser_ != null; }
+    }
+    /// <summary>Clears the value of the "advertiser" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdvertiser() {
+      advertiser_ = null;
     }
 
     /// <summary>Field number for the "agency_contacts" field.</summary>
@@ -283,7 +366,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "agency" field.</summary>
     public const int AgencyFieldNumber = 8;
-    private string agency_ = "";
+    private readonly static string AgencyDefaultValue = "";
+
+    private string agency_;
     /// <summary>
     /// Optional. The resource name of the Company, which is of type
     /// Company.Type.AGENCY, with which this order is associated. Format:
@@ -292,10 +377,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Agency {
-      get { return agency_; }
+      get { return agency_ ?? AgencyDefaultValue; }
       set {
         agency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "agency" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgency {
+      get { return agency_ != null; }
+    }
+    /// <summary>Clears the value of the "agency" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgency() {
+      agency_ = null;
     }
 
     /// <summary>Field number for the "applied_teams" field.</summary>
@@ -330,7 +427,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "creator" field.</summary>
     public const int CreatorFieldNumber = 10;
-    private string creator_ = "";
+    private readonly static string CreatorDefaultValue = "";
+
+    private string creator_;
     /// <summary>
     /// Output only. The resource name of the User who created the Order on behalf
     /// of the advertiser. This value is assigned by Google. Format:
@@ -339,15 +438,29 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Creator {
-      get { return creator_; }
+      get { return creator_ ?? CreatorDefaultValue; }
       set {
         creator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "creator" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreator {
+      get { return creator_ != null; }
+    }
+    /// <summary>Clears the value of the "creator" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreator() {
+      creator_ = null;
+    }
 
     /// <summary>Field number for the "currency_code" field.</summary>
     public const int CurrencyCodeFieldNumber = 11;
-    private string currencyCode_ = "";
+    private readonly static string CurrencyCodeDefaultValue = "";
+
+    private string currencyCode_;
     /// <summary>
     /// Output only. The ISO 4217 3-letter currency code for the currency used by
     /// the Order. This value is the network's currency code.
@@ -355,10 +468,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CurrencyCode {
-      get { return currencyCode_; }
+      get { return currencyCode_ ?? CurrencyCodeDefaultValue; }
       set {
         currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "currency_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCurrencyCode {
+      get { return currencyCode_ != null; }
+    }
+    /// <summary>Clears the value of the "currency_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCurrencyCode() {
+      currencyCode_ = null;
     }
 
     /// <summary>Field number for the "start_time" field.</summary>
@@ -397,6 +522,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "unlimited_end_time" field.</summary>
     public const int UnlimitedEndTimeFieldNumber = 45;
+    private readonly static bool UnlimitedEndTimeDefaultValue = false;
+
     private bool unlimitedEndTime_;
     /// <summary>
     /// Output only. Indicates whether or not this Order has an end time.
@@ -404,30 +531,60 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UnlimitedEndTime {
-      get { return unlimitedEndTime_; }
+      get { if ((_hasBits0 & 32) != 0) { return unlimitedEndTime_; } else { return UnlimitedEndTimeDefaultValue; } }
       set {
+        _hasBits0 |= 32;
         unlimitedEndTime_ = value;
       }
+    }
+    /// <summary>Gets whether the "unlimited_end_time" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUnlimitedEndTime {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "unlimited_end_time" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUnlimitedEndTime() {
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "external_order_id" field.</summary>
     public const int ExternalOrderIdFieldNumber = 13;
-    private long externalOrderId_;
+    private readonly static int ExternalOrderIdDefaultValue = 0;
+
+    private int externalOrderId_;
     /// <summary>
     /// Optional. An arbitrary ID to associate to the Order, which can be used as a
     /// key to an external system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ExternalOrderId {
-      get { return externalOrderId_; }
+    public int ExternalOrderId {
+      get { if ((_hasBits0 & 4) != 0) { return externalOrderId_; } else { return ExternalOrderIdDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         externalOrderId_ = value;
       }
+    }
+    /// <summary>Gets whether the "external_order_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExternalOrderId {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "external_order_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExternalOrderId() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "archived" field.</summary>
     public const int ArchivedFieldNumber = 14;
+    private readonly static bool ArchivedDefaultValue = false;
+
     private bool archived_;
     /// <summary>
     /// Output only. The archival status of the Order.
@@ -435,15 +592,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Archived {
-      get { return archived_; }
+      get { if ((_hasBits0 & 8) != 0) { return archived_; } else { return ArchivedDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         archived_ = value;
       }
+    }
+    /// <summary>Gets whether the "archived" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasArchived {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "archived" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearArchived() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "last_modified_by_app" field.</summary>
     public const int LastModifiedByAppFieldNumber = 15;
-    private string lastModifiedByApp_ = "";
+    private readonly static string LastModifiedByAppDefaultValue = "";
+
+    private string lastModifiedByApp_;
     /// <summary>
     /// Output only. The application which modified this order. This attribute is
     /// assigned by Google.
@@ -451,10 +623,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LastModifiedByApp {
-      get { return lastModifiedByApp_; }
+      get { return lastModifiedByApp_ ?? LastModifiedByAppDefaultValue; }
       set {
         lastModifiedByApp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "last_modified_by_app" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLastModifiedByApp {
+      get { return lastModifiedByApp_ != null; }
+    }
+    /// <summary>Clears the value of the "last_modified_by_app" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLastModifiedByApp() {
+      lastModifiedByApp_ = null;
     }
 
     /// <summary>Field number for the "update_time" field.</summary>
@@ -474,7 +658,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "notes" field.</summary>
     public const int NotesFieldNumber = 17;
-    private string notes_ = "";
+    private readonly static string NotesDefaultValue = "";
+
+    private string notes_;
     /// <summary>
     /// Optional. Provides any additional notes that may annotate the Order. This
     /// attribute has a maximum length of 65,535 characters.
@@ -482,15 +668,29 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Notes {
-      get { return notes_; }
+      get { return notes_ ?? NotesDefaultValue; }
       set {
         notes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "notes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNotes {
+      get { return notes_ != null; }
+    }
+    /// <summary>Clears the value of the "notes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNotes() {
+      notes_ = null;
+    }
 
     /// <summary>Field number for the "po_number" field.</summary>
     public const int PoNumberFieldNumber = 18;
-    private string poNumber_ = "";
+    private readonly static string PoNumberDefaultValue = "";
+
+    private string poNumber_;
     /// <summary>
     /// Optional. The purchase order number for the Order. This value has a maximum
     /// length of 63 characters.
@@ -498,30 +698,59 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PoNumber {
-      get { return poNumber_; }
+      get { return poNumber_ ?? PoNumberDefaultValue; }
       set {
         poNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "po_number" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPoNumber {
+      get { return poNumber_ != null; }
+    }
+    /// <summary>Clears the value of the "po_number" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPoNumber() {
+      poNumber_ = null;
+    }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 20;
-    private global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus status_ = global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus status_;
     /// <summary>
     /// Output only. The status of the Order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 16) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 16;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "salesperson" field.</summary>
     public const int SalespersonFieldNumber = 21;
-    private string salesperson_ = "";
+    private readonly static string SalespersonDefaultValue = "";
+
+    private string salesperson_;
     /// <summary>
     /// Optional. The resource name of the User responsible for the sales of the
     /// Order. Format: "networks/{network_code}/users/{user_id}"
@@ -529,10 +758,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Salesperson {
-      get { return salesperson_; }
+      get { return salesperson_ ?? SalespersonDefaultValue; }
       set {
         salesperson_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "salesperson" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSalesperson {
+      get { return salesperson_ != null; }
+    }
+    /// <summary>Clears the value of the "salesperson" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSalesperson() {
+      salesperson_ = null;
     }
 
     /// <summary>Field number for the "secondary_salespeople" field.</summary>
@@ -664,29 +905,29 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (OrderId != 0L) hash ^= OrderId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Programmatic != false) hash ^= Programmatic.GetHashCode();
-      if (Trafficker.Length != 0) hash ^= Trafficker.GetHashCode();
+      if (HasOrderId) hash ^= OrderId.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasProgrammatic) hash ^= Programmatic.GetHashCode();
+      if (HasTrafficker) hash ^= Trafficker.GetHashCode();
       hash ^= advertiserContacts_.GetHashCode();
-      if (Advertiser.Length != 0) hash ^= Advertiser.GetHashCode();
+      if (HasAdvertiser) hash ^= Advertiser.GetHashCode();
       hash ^= agencyContacts_.GetHashCode();
-      if (Agency.Length != 0) hash ^= Agency.GetHashCode();
+      if (HasAgency) hash ^= Agency.GetHashCode();
       hash ^= appliedTeams_.GetHashCode();
       hash ^= effectiveTeams_.GetHashCode();
-      if (Creator.Length != 0) hash ^= Creator.GetHashCode();
-      if (CurrencyCode.Length != 0) hash ^= CurrencyCode.GetHashCode();
+      if (HasCreator) hash ^= Creator.GetHashCode();
+      if (HasCurrencyCode) hash ^= CurrencyCode.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
-      if (UnlimitedEndTime != false) hash ^= UnlimitedEndTime.GetHashCode();
-      if (ExternalOrderId != 0L) hash ^= ExternalOrderId.GetHashCode();
-      if (Archived != false) hash ^= Archived.GetHashCode();
-      if (LastModifiedByApp.Length != 0) hash ^= LastModifiedByApp.GetHashCode();
+      if (HasUnlimitedEndTime) hash ^= UnlimitedEndTime.GetHashCode();
+      if (HasExternalOrderId) hash ^= ExternalOrderId.GetHashCode();
+      if (HasArchived) hash ^= Archived.GetHashCode();
+      if (HasLastModifiedByApp) hash ^= LastModifiedByApp.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (Notes.Length != 0) hash ^= Notes.GetHashCode();
-      if (PoNumber.Length != 0) hash ^= PoNumber.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified) hash ^= Status.GetHashCode();
-      if (Salesperson.Length != 0) hash ^= Salesperson.GetHashCode();
+      if (HasNotes) hash ^= Notes.GetHashCode();
+      if (HasPoNumber) hash ^= PoNumber.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasSalesperson) hash ^= Salesperson.GetHashCode();
       hash ^= secondarySalespeople_.GetHashCode();
       hash ^= secondaryTraffickers_.GetHashCode();
       hash ^= appliedLabels_.GetHashCode();
@@ -714,34 +955,34 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Programmatic != false) {
+      if (HasProgrammatic) {
         output.WriteRawTag(24);
         output.WriteBool(Programmatic);
       }
-      if (OrderId != 0L) {
+      if (HasOrderId) {
         output.WriteRawTag(32);
         output.WriteInt64(OrderId);
       }
       advertiserContacts_.WriteTo(output, _repeated_advertiserContacts_codec);
-      if (Advertiser.Length != 0) {
+      if (HasAdvertiser) {
         output.WriteRawTag(50);
         output.WriteString(Advertiser);
       }
       agencyContacts_.WriteTo(output, _repeated_agencyContacts_codec);
-      if (Agency.Length != 0) {
+      if (HasAgency) {
         output.WriteRawTag(66);
         output.WriteString(Agency);
       }
       appliedTeams_.WriteTo(output, _repeated_appliedTeams_codec);
-      if (Creator.Length != 0) {
+      if (HasCreator) {
         output.WriteRawTag(82);
         output.WriteString(Creator);
       }
-      if (CurrencyCode.Length != 0) {
+      if (HasCurrencyCode) {
         output.WriteRawTag(90);
         output.WriteString(CurrencyCode);
       }
@@ -749,15 +990,15 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(EndTime);
       }
-      if (ExternalOrderId != 0L) {
+      if (HasExternalOrderId) {
         output.WriteRawTag(104);
-        output.WriteInt64(ExternalOrderId);
+        output.WriteInt32(ExternalOrderId);
       }
-      if (Archived != false) {
+      if (HasArchived) {
         output.WriteRawTag(112);
         output.WriteBool(Archived);
       }
-      if (LastModifiedByApp.Length != 0) {
+      if (HasLastModifiedByApp) {
         output.WriteRawTag(122);
         output.WriteString(LastModifiedByApp);
       }
@@ -765,11 +1006,11 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(UpdateTime);
       }
-      if (Notes.Length != 0) {
+      if (HasNotes) {
         output.WriteRawTag(138, 1);
         output.WriteString(Notes);
       }
-      if (PoNumber.Length != 0) {
+      if (HasPoNumber) {
         output.WriteRawTag(146, 1);
         output.WriteString(PoNumber);
       }
@@ -777,16 +1018,16 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(StartTime);
       }
-      if (Status != global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) Status);
       }
-      if (Salesperson.Length != 0) {
+      if (HasSalesperson) {
         output.WriteRawTag(170, 1);
         output.WriteString(Salesperson);
       }
       secondarySalespeople_.WriteTo(output, _repeated_secondarySalespeople_codec);
-      if (Trafficker.Length != 0) {
+      if (HasTrafficker) {
         output.WriteRawTag(186, 1);
         output.WriteString(Trafficker);
       }
@@ -795,7 +1036,7 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.WriteTo(output, _repeated_effectiveAppliedLabels_codec);
       effectiveTeams_.WriteTo(output, _repeated_effectiveTeams_codec);
       customFieldValues_.WriteTo(output, _repeated_customFieldValues_codec);
-      if (UnlimitedEndTime != false) {
+      if (HasUnlimitedEndTime) {
         output.WriteRawTag(232, 2);
         output.WriteBool(UnlimitedEndTime);
       }
@@ -813,34 +1054,34 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Programmatic != false) {
+      if (HasProgrammatic) {
         output.WriteRawTag(24);
         output.WriteBool(Programmatic);
       }
-      if (OrderId != 0L) {
+      if (HasOrderId) {
         output.WriteRawTag(32);
         output.WriteInt64(OrderId);
       }
       advertiserContacts_.WriteTo(ref output, _repeated_advertiserContacts_codec);
-      if (Advertiser.Length != 0) {
+      if (HasAdvertiser) {
         output.WriteRawTag(50);
         output.WriteString(Advertiser);
       }
       agencyContacts_.WriteTo(ref output, _repeated_agencyContacts_codec);
-      if (Agency.Length != 0) {
+      if (HasAgency) {
         output.WriteRawTag(66);
         output.WriteString(Agency);
       }
       appliedTeams_.WriteTo(ref output, _repeated_appliedTeams_codec);
-      if (Creator.Length != 0) {
+      if (HasCreator) {
         output.WriteRawTag(82);
         output.WriteString(Creator);
       }
-      if (CurrencyCode.Length != 0) {
+      if (HasCurrencyCode) {
         output.WriteRawTag(90);
         output.WriteString(CurrencyCode);
       }
@@ -848,15 +1089,15 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(EndTime);
       }
-      if (ExternalOrderId != 0L) {
+      if (HasExternalOrderId) {
         output.WriteRawTag(104);
-        output.WriteInt64(ExternalOrderId);
+        output.WriteInt32(ExternalOrderId);
       }
-      if (Archived != false) {
+      if (HasArchived) {
         output.WriteRawTag(112);
         output.WriteBool(Archived);
       }
-      if (LastModifiedByApp.Length != 0) {
+      if (HasLastModifiedByApp) {
         output.WriteRawTag(122);
         output.WriteString(LastModifiedByApp);
       }
@@ -864,11 +1105,11 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(UpdateTime);
       }
-      if (Notes.Length != 0) {
+      if (HasNotes) {
         output.WriteRawTag(138, 1);
         output.WriteString(Notes);
       }
-      if (PoNumber.Length != 0) {
+      if (HasPoNumber) {
         output.WriteRawTag(146, 1);
         output.WriteString(PoNumber);
       }
@@ -876,16 +1117,16 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(StartTime);
       }
-      if (Status != global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(160, 1);
         output.WriteEnum((int) Status);
       }
-      if (Salesperson.Length != 0) {
+      if (HasSalesperson) {
         output.WriteRawTag(170, 1);
         output.WriteString(Salesperson);
       }
       secondarySalespeople_.WriteTo(ref output, _repeated_secondarySalespeople_codec);
-      if (Trafficker.Length != 0) {
+      if (HasTrafficker) {
         output.WriteRawTag(186, 1);
         output.WriteString(Trafficker);
       }
@@ -894,7 +1135,7 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.WriteTo(ref output, _repeated_effectiveAppliedLabels_codec);
       effectiveTeams_.WriteTo(ref output, _repeated_effectiveTeams_codec);
       customFieldValues_.WriteTo(ref output, _repeated_customFieldValues_codec);
-      if (UnlimitedEndTime != false) {
+      if (HasUnlimitedEndTime) {
         output.WriteRawTag(232, 2);
         output.WriteBool(UnlimitedEndTime);
       }
@@ -911,32 +1152,32 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (OrderId != 0L) {
+      if (HasOrderId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(OrderId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Programmatic != false) {
+      if (HasProgrammatic) {
         size += 1 + 1;
       }
-      if (Trafficker.Length != 0) {
+      if (HasTrafficker) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Trafficker);
       }
       size += advertiserContacts_.CalculateSize(_repeated_advertiserContacts_codec);
-      if (Advertiser.Length != 0) {
+      if (HasAdvertiser) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Advertiser);
       }
       size += agencyContacts_.CalculateSize(_repeated_agencyContacts_codec);
-      if (Agency.Length != 0) {
+      if (HasAgency) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Agency);
       }
       size += appliedTeams_.CalculateSize(_repeated_appliedTeams_codec);
       size += effectiveTeams_.CalculateSize(_repeated_effectiveTeams_codec);
-      if (Creator.Length != 0) {
+      if (HasCreator) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Creator);
       }
-      if (CurrencyCode.Length != 0) {
+      if (HasCurrencyCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
       }
       if (startTime_ != null) {
@@ -945,31 +1186,31 @@ namespace Google.Ads.AdManager.V1 {
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
-      if (UnlimitedEndTime != false) {
+      if (HasUnlimitedEndTime) {
         size += 2 + 1;
       }
-      if (ExternalOrderId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ExternalOrderId);
+      if (HasExternalOrderId) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ExternalOrderId);
       }
-      if (Archived != false) {
+      if (HasArchived) {
         size += 1 + 1;
       }
-      if (LastModifiedByApp.Length != 0) {
+      if (HasLastModifiedByApp) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LastModifiedByApp);
       }
       if (updateTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (Notes.Length != 0) {
+      if (HasNotes) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Notes);
       }
-      if (PoNumber.Length != 0) {
+      if (HasPoNumber) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PoNumber);
       }
-      if (Status != global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified) {
+      if (HasStatus) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (Salesperson.Length != 0) {
+      if (HasSalesperson) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Salesperson);
       }
       size += secondarySalespeople_.CalculateSize(_repeated_secondarySalespeople_codec);
@@ -992,32 +1233,32 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.OrderId != 0L) {
+      if (other.HasOrderId) {
         OrderId = other.OrderId;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.Programmatic != false) {
+      if (other.HasProgrammatic) {
         Programmatic = other.Programmatic;
       }
-      if (other.Trafficker.Length != 0) {
+      if (other.HasTrafficker) {
         Trafficker = other.Trafficker;
       }
       advertiserContacts_.Add(other.advertiserContacts_);
-      if (other.Advertiser.Length != 0) {
+      if (other.HasAdvertiser) {
         Advertiser = other.Advertiser;
       }
       agencyContacts_.Add(other.agencyContacts_);
-      if (other.Agency.Length != 0) {
+      if (other.HasAgency) {
         Agency = other.Agency;
       }
       appliedTeams_.Add(other.appliedTeams_);
       effectiveTeams_.Add(other.effectiveTeams_);
-      if (other.Creator.Length != 0) {
+      if (other.HasCreator) {
         Creator = other.Creator;
       }
-      if (other.CurrencyCode.Length != 0) {
+      if (other.HasCurrencyCode) {
         CurrencyCode = other.CurrencyCode;
       }
       if (other.startTime_ != null) {
@@ -1032,16 +1273,16 @@ namespace Google.Ads.AdManager.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
-      if (other.UnlimitedEndTime != false) {
+      if (other.HasUnlimitedEndTime) {
         UnlimitedEndTime = other.UnlimitedEndTime;
       }
-      if (other.ExternalOrderId != 0L) {
+      if (other.HasExternalOrderId) {
         ExternalOrderId = other.ExternalOrderId;
       }
-      if (other.Archived != false) {
+      if (other.HasArchived) {
         Archived = other.Archived;
       }
-      if (other.LastModifiedByApp.Length != 0) {
+      if (other.HasLastModifiedByApp) {
         LastModifiedByApp = other.LastModifiedByApp;
       }
       if (other.updateTime_ != null) {
@@ -1050,16 +1291,16 @@ namespace Google.Ads.AdManager.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.Notes.Length != 0) {
+      if (other.HasNotes) {
         Notes = other.Notes;
       }
-      if (other.PoNumber.Length != 0) {
+      if (other.HasPoNumber) {
         PoNumber = other.PoNumber;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.OrderStatusEnum.Types.OrderStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
-      if (other.Salesperson.Length != 0) {
+      if (other.HasSalesperson) {
         Salesperson = other.Salesperson;
       }
       secondarySalespeople_.Add(other.secondarySalespeople_);
@@ -1134,7 +1375,7 @@ namespace Google.Ads.AdManager.V1 {
             break;
           }
           case 104: {
-            ExternalOrderId = input.ReadInt64();
+            ExternalOrderId = input.ReadInt32();
             break;
           }
           case 112: {
@@ -1274,7 +1515,7 @@ namespace Google.Ads.AdManager.V1 {
             break;
           }
           case 104: {
-            ExternalOrderId = input.ReadInt64();
+            ExternalOrderId = input.ReadInt32();
             break;
           }
           case 112: {

@@ -28,33 +28,36 @@ namespace Google.Ads.AdManager.V1 {
             "ZXMucHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGjBnb29nbGUvYWRz",
             "L2FkbWFuYWdlci92MS9jdXN0b21fZmllbGRfZW51bXMucHJvdG8aH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8irAUKC0N1c3RvbUZpZWxkEhEKBG5hbWUYASABKAlCA+BBCBIc",
-            "Cg9jdXN0b21fZmllbGRfaWQYAiABKANCA+BBAxIZCgxkaXNwbGF5X25hbWUY",
-            "AyABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBElUKBnN0YXR1",
-            "cxgFIAEoDjJALmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbUZpZWxk",
-            "U3RhdHVzRW51bS5DdXN0b21GaWVsZFN0YXR1c0ID4EEDEmIKC2VudGl0eV90",
-            "eXBlGAcgASgOMkguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmll",
-            "bGRFbnRpdHlUeXBlRW51bS5DdXN0b21GaWVsZEVudGl0eVR5cGVCA+BBAhJc",
-            "CglkYXRhX3R5cGUYCCABKA4yRC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5D",
-            "dXN0b21GaWVsZERhdGFUeXBlRW51bS5DdXN0b21GaWVsZERhdGFUeXBlQgPg",
-            "QQISYQoKdmlzaWJpbGl0eRgJIAEoDjJILmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
-            "LnYxLkN1c3RvbUZpZWxkVmlzaWJpbGl0eUVudW0uQ3VzdG9tRmllbGRWaXNp",
-            "YmlsaXR5QgPgQQISQAoHb3B0aW9ucxgKIAMoCzIqLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLkN1c3RvbUZpZWxkT3B0aW9uQgPgQQE6eepBdgokYWRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL0N1c3RvbUZpZWxkEjNuZXR3b3Jrcy97bmV0",
-            "d29ya19jb2RlfS9jdXN0b21GaWVsZHMve2N1c3RvbV9maWVsZH0qDGN1c3Rv",
-            "bUZpZWxkczILY3VzdG9tRmllbGQiUwoRQ3VzdG9tRmllbGRPcHRpb24SIwoW",
-            "Y3VzdG9tX2ZpZWxkX29wdGlvbl9pZBgBIAEoA0ID4EEDEhkKDGRpc3BsYXlf",
-            "bmFtZRgCIAEoCUID4EECQswBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
-            "djFCGEN1c3RvbUZpZWxkTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRt",
-            "YW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRz",
-            "XEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZw",
-            "cm90bzM="));
+            "Y2UucHJvdG8ivAYKC0N1c3RvbUZpZWxkEhEKBG5hbWUYASABKAlCA+BBCBIh",
+            "Cg9jdXN0b21fZmllbGRfaWQYAiABKANCA+BBA0gAiAEBEh4KDGRpc3BsYXlf",
+            "bmFtZRgDIAEoCUID4EECSAGIAQESHQoLZGVzY3JpcHRpb24YBCABKAlCA+BB",
+            "AUgCiAEBEloKBnN0YXR1cxgFIAEoDjJALmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxLkN1c3RvbUZpZWxkU3RhdHVzRW51bS5DdXN0b21GaWVsZFN0YXR1c0ID",
+            "4EEDSAOIAQESZwoLZW50aXR5X3R5cGUYByABKA4ySC5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5DdXN0b21GaWVsZEVudGl0eVR5cGVFbnVtLkN1c3RvbUZp",
+            "ZWxkRW50aXR5VHlwZUID4EECSASIAQESYQoJZGF0YV90eXBlGAggASgOMkQu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmllbGREYXRhVHlwZUVu",
+            "dW0uQ3VzdG9tRmllbGREYXRhVHlwZUID4EECSAWIAQESZgoKdmlzaWJpbGl0",
+            "eRgJIAEoDjJILmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbUZpZWxk",
+            "VmlzaWJpbGl0eUVudW0uQ3VzdG9tRmllbGRWaXNpYmlsaXR5QgPgQQJIBogB",
+            "ARJACgdvcHRpb25zGAogAygLMiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "Q3VzdG9tRmllbGRPcHRpb25CA+BBATp56kF2CiRhZG1hbmFnZXIuZ29vZ2xl",
+            "YXBpcy5jb20vQ3VzdG9tRmllbGQSM25ldHdvcmtzL3tuZXR3b3JrX2NvZGV9",
+            "L2N1c3RvbUZpZWxkcy97Y3VzdG9tX2ZpZWxkfSoMY3VzdG9tRmllbGRzMgtj",
+            "dXN0b21GaWVsZEISChBfY3VzdG9tX2ZpZWxkX2lkQg8KDV9kaXNwbGF5X25h",
+            "bWVCDgoMX2Rlc2NyaXB0aW9uQgkKB19zdGF0dXNCDgoMX2VudGl0eV90eXBl",
+            "QgwKCl9kYXRhX3R5cGVCDQoLX3Zpc2liaWxpdHkiUwoRQ3VzdG9tRmllbGRP",
+            "cHRpb24SIwoWY3VzdG9tX2ZpZWxkX29wdGlvbl9pZBgBIAEoA0ID4EEDEhkK",
+            "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EECQswBChtjb20uZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjFCGEN1c3RvbUZpZWxkTWVzc2FnZXNQcm90b1ABWkBnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFn",
+            "ZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdH",
+            "b29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFn",
+            "ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomFieldEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomField), global::Google.Ads.AdManager.V1.CustomField.Parser, new[]{ "Name", "CustomFieldId", "DisplayName", "Description", "Status", "EntityType", "DataType", "Visibility", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomField), global::Google.Ads.AdManager.V1.CustomField.Parser, new[]{ "Name", "CustomFieldId", "DisplayName", "Description", "Status", "EntityType", "DataType", "Visibility", "Options" }, new[]{ "CustomFieldId", "DisplayName", "Description", "Status", "EntityType", "DataType", "Visibility" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomFieldOption), global::Google.Ads.AdManager.V1.CustomFieldOption.Parser, new[]{ "CustomFieldOptionId", "DisplayName" }, null, null, null, null)
           }));
     }
@@ -73,6 +76,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<CustomField> _parser = new pb::MessageParser<CustomField>(() => new CustomField());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomField> Parser { get { return _parser; } }
@@ -100,6 +104,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomField(CustomField other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       customFieldId_ = other.customFieldId_;
       displayName_ = other.displayName_;
@@ -123,7 +128,7 @@ namespace Google.Ads.AdManager.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the `CustomField`.
-    /// Format: `networks/{network_code}/customFields/{custom_field_id}`
+    /// Format: `networks/{network_code}/customFields/{custom_field}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,38 +141,69 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "custom_field_id" field.</summary>
     public const int CustomFieldIdFieldNumber = 2;
+    private readonly static long CustomFieldIdDefaultValue = 0L;
+
     private long customFieldId_;
     /// <summary>
-    /// Output only. Unique ID of the CustomField. This value is readonly and is
-    /// assigned by Google.
+    /// Output only. Unique ID of the CustomField. This attribute is assigned by
+    /// Google.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CustomFieldId {
-      get { return customFieldId_; }
+      get { if ((_hasBits0 & 1) != 0) { return customFieldId_; } else { return CustomFieldIdDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         customFieldId_ = value;
       }
+    }
+    /// <summary>Gets whether the "custom_field_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomFieldId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "custom_field_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomFieldId() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 3;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Required. Name of the CustomField. The max length is 127 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "description" field.</summary>
     public const int DescriptionFieldNumber = 4;
-    private string description_ = "";
+    private readonly static string DescriptionDefaultValue = "";
+
+    private string description_;
     /// <summary>
     /// Optional. A description of the custom field. The maximum length is 511
     /// characters.
@@ -175,70 +211,142 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
-      get { return description_; }
+      get { return description_ ?? DescriptionDefaultValue; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescription {
+      get { return description_ != null; }
+    }
+    /// <summary>Clears the value of the "description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescription() {
+      description_ = null;
+    }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 5;
-    private global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus status_ = global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus status_;
     /// <summary>
     /// Output only. The status of the `CustomField`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 2) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "entity_type" field.</summary>
     public const int EntityTypeFieldNumber = 7;
-    private global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType entityType_ = global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType EntityTypeDefaultValue = global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType entityType_;
     /// <summary>
     /// Required. The type of entity the `CustomField` can be applied to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType EntityType {
-      get { return entityType_; }
+      get { if ((_hasBits0 & 4) != 0) { return entityType_; } else { return EntityTypeDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         entityType_ = value;
       }
+    }
+    /// <summary>Gets whether the "entity_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityType {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "entity_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityType() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "data_type" field.</summary>
     public const int DataTypeFieldNumber = 8;
-    private global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType dataType_ = global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType DataTypeDefaultValue = global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType dataType_;
     /// <summary>
     /// Required. The data type of the `CustomField`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType DataType {
-      get { return dataType_; }
+      get { if ((_hasBits0 & 8) != 0) { return dataType_; } else { return DataTypeDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         dataType_ = value;
       }
+    }
+    /// <summary>Gets whether the "data_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDataType {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "data_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataType() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "visibility" field.</summary>
     public const int VisibilityFieldNumber = 9;
-    private global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility visibility_ = global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility VisibilityDefaultValue = global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility visibility_;
     /// <summary>
     /// Required. The visibility of the `CustomField`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility Visibility {
-      get { return visibility_; }
+      get { if ((_hasBits0 & 16) != 0) { return visibility_; } else { return VisibilityDefaultValue; } }
       set {
+        _hasBits0 |= 16;
         visibility_ = value;
       }
+    }
+    /// <summary>Gets whether the "visibility" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVisibility {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "visibility" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVisibility() {
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -289,13 +397,13 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (CustomFieldId != 0L) hash ^= CustomFieldId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified) hash ^= Status.GetHashCode();
-      if (EntityType != global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified) hash ^= EntityType.GetHashCode();
-      if (DataType != global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified) hash ^= DataType.GetHashCode();
-      if (Visibility != global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified) hash ^= Visibility.GetHashCode();
+      if (HasCustomFieldId) hash ^= CustomFieldId.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDescription) hash ^= Description.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasEntityType) hash ^= EntityType.GetHashCode();
+      if (HasDataType) hash ^= DataType.GetHashCode();
+      if (HasVisibility) hash ^= Visibility.GetHashCode();
       hash ^= options_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -319,31 +427,31 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (CustomFieldId != 0L) {
+      if (HasCustomFieldId) {
         output.WriteRawTag(16);
         output.WriteInt64(CustomFieldId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Status);
       }
-      if (EntityType != global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified) {
+      if (HasEntityType) {
         output.WriteRawTag(56);
         output.WriteEnum((int) EntityType);
       }
-      if (DataType != global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified) {
+      if (HasDataType) {
         output.WriteRawTag(64);
         output.WriteEnum((int) DataType);
       }
-      if (Visibility != global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified) {
+      if (HasVisibility) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Visibility);
       }
@@ -362,31 +470,31 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (CustomFieldId != 0L) {
+      if (HasCustomFieldId) {
         output.WriteRawTag(16);
         output.WriteInt64(CustomFieldId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Status);
       }
-      if (EntityType != global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified) {
+      if (HasEntityType) {
         output.WriteRawTag(56);
         output.WriteEnum((int) EntityType);
       }
-      if (DataType != global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified) {
+      if (HasDataType) {
         output.WriteRawTag(64);
         output.WriteEnum((int) DataType);
       }
-      if (Visibility != global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified) {
+      if (HasVisibility) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Visibility);
       }
@@ -404,25 +512,25 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (CustomFieldId != 0L) {
+      if (HasCustomFieldId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CustomFieldId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified) {
+      if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (EntityType != global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified) {
+      if (HasEntityType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntityType);
       }
-      if (DataType != global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified) {
+      if (HasDataType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataType);
       }
-      if (Visibility != global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified) {
+      if (HasVisibility) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Visibility);
       }
       size += options_.CalculateSize(_repeated_options_codec);
@@ -441,25 +549,25 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.CustomFieldId != 0L) {
+      if (other.HasCustomFieldId) {
         CustomFieldId = other.CustomFieldId;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.Description.Length != 0) {
+      if (other.HasDescription) {
         Description = other.Description;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.CustomFieldStatusEnum.Types.CustomFieldStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
-      if (other.EntityType != global::Google.Ads.AdManager.V1.CustomFieldEntityTypeEnum.Types.CustomFieldEntityType.Unspecified) {
+      if (other.HasEntityType) {
         EntityType = other.EntityType;
       }
-      if (other.DataType != global::Google.Ads.AdManager.V1.CustomFieldDataTypeEnum.Types.CustomFieldDataType.Unspecified) {
+      if (other.HasDataType) {
         DataType = other.DataType;
       }
-      if (other.Visibility != global::Google.Ads.AdManager.V1.CustomFieldVisibilityEnum.Types.CustomFieldVisibility.Unspecified) {
+      if (other.HasVisibility) {
         Visibility = other.Visibility;
       }
       options_.Add(other.options_);

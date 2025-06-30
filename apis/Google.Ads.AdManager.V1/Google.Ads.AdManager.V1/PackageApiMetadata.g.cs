@@ -33,22 +33,25 @@ namespace Google.Ads.AdManager.V1
             {
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=networks/*/operations/reports/runs/*}", "additionalBindings": [ { "get": "/v1/{name=networks/*/operations/reports/exports/*}" } ] }
-                    proto::ByteString.FromBase64("Ei8vdjEve25hbWU9bmV0d29ya3MvKi9vcGVyYXRpb25zL3JlcG9ydHMvcnVucy8qfVo0EjIvdjEve25hbWU9bmV0d29ya3MvKi9vcGVyYXRpb25zL3JlcG9ydHMvZXhwb3J0cy8qfQ==")
+                    // { "get": "/v1/{name=networks/*/operations/reports/runs/*}" }
+                    proto::ByteString.FromBase64("Ei8vdjEve25hbWU9bmV0d29ya3MvKi9vcGVyYXRpb25zL3JlcG9ydHMvcnVucy8qfQ==")
                 },
             });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AdBreakMessagesReflection.Descriptor;
+            yield return AdBreakServiceReflection.Descriptor;
             yield return AdUnitEnumsReflection.Descriptor;
             yield return AdUnitMessagesReflection.Descriptor;
             yield return AdUnitServiceReflection.Descriptor;
             yield return AdmanagerErrorReflection.Descriptor;
             yield return AppliedLabelReflection.Descriptor;
-            yield return CompanyCreditStatusEnumReflection.Descriptor;
+            yield return BandwidthGroupMessagesReflection.Descriptor;
+            yield return BandwidthGroupServiceReflection.Descriptor;
+            yield return CompanyEnumsReflection.Descriptor;
             yield return CompanyMessagesReflection.Descriptor;
             yield return CompanyServiceReflection.Descriptor;
-            yield return CompanyTypeEnumReflection.Descriptor;
             yield return ContactMessagesReflection.Descriptor;
             yield return CustomFieldEnumsReflection.Descriptor;
             yield return CustomFieldMessagesReflection.Descriptor;
@@ -60,25 +63,47 @@ namespace Google.Ads.AdManager.V1
             yield return CustomTargetingValueEnumsReflection.Descriptor;
             yield return CustomTargetingValueMessagesReflection.Descriptor;
             yield return CustomTargetingValueServiceReflection.Descriptor;
+            yield return DealBuyerPermissionTypeEnumReflection.Descriptor;
+            yield return DeviceCategoryMessagesReflection.Descriptor;
+            yield return DeviceCategoryServiceReflection.Descriptor;
+            yield return EarlyAdBreakNotificationEnumsReflection.Descriptor;
             yield return EntitySignalsMappingMessagesReflection.Descriptor;
             yield return EntitySignalsMappingServiceReflection.Descriptor;
             yield return EnvironmentTypeEnumReflection.Descriptor;
             yield return FrequencyCapReflection.Descriptor;
+            yield return GeoTargetMessagesReflection.Descriptor;
+            yield return GeoTargetServiceReflection.Descriptor;
             yield return LabelMessagesReflection.Descriptor;
+            yield return LiveStreamEventMessagesReflection.Descriptor;
             yield return NetworkMessagesReflection.Descriptor;
             yield return NetworkServiceReflection.Descriptor;
+            yield return OperatingSystemMessagesReflection.Descriptor;
+            yield return OperatingSystemServiceReflection.Descriptor;
+            yield return OperatingSystemVersionMessagesReflection.Descriptor;
+            yield return OperatingSystemVersionServiceReflection.Descriptor;
             yield return OrderEnumsReflection.Descriptor;
             yield return OrderMessagesReflection.Descriptor;
             yield return OrderServiceReflection.Descriptor;
             yield return PlacementEnumsReflection.Descriptor;
             yield return PlacementMessagesReflection.Descriptor;
             yield return PlacementServiceReflection.Descriptor;
+            yield return PrivateAuctionDealMessagesReflection.Descriptor;
+            yield return PrivateAuctionDealServiceReflection.Descriptor;
+            yield return PrivateAuctionMessagesReflection.Descriptor;
+            yield return PrivateAuctionServiceReflection.Descriptor;
+            yield return PrivateMarketplaceEnumsReflection.Descriptor;
+            yield return ProgrammaticBuyerMessagesReflection.Descriptor;
+            yield return ProgrammaticBuyerServiceReflection.Descriptor;
+            yield return ReportMessagesReflection.Descriptor;
             yield return ReportServiceReflection.Descriptor;
+            yield return RequestPlatformEnumReflection.Descriptor;
             yield return RoleEnumsReflection.Descriptor;
             yield return RoleMessagesReflection.Descriptor;
             yield return RoleServiceReflection.Descriptor;
             yield return SizeReflection.Descriptor;
             yield return SizeTypeEnumReflection.Descriptor;
+            yield return TargetedVideoBumperTypeEnumReflection.Descriptor;
+            yield return TargetingReflection.Descriptor;
             yield return TaxonomyCategoryMessagesReflection.Descriptor;
             yield return TaxonomyCategoryServiceReflection.Descriptor;
             yield return TaxonomyTypeEnumReflection.Descriptor;
@@ -86,6 +111,7 @@ namespace Google.Ads.AdManager.V1
             yield return TimeUnitEnumReflection.Descriptor;
             yield return UserMessagesReflection.Descriptor;
             yield return UserServiceReflection.Descriptor;
+            yield return VideoPositionEnumReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

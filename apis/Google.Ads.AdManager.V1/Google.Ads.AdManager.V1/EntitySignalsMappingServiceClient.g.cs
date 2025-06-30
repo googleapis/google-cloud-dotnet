@@ -207,8 +207,16 @@ namespace Google.Ads.AdManager.V1
         public static string DefaultEndpoint { get; } = "admanager.googleapis.com:443";
 
         /// <summary>The default EntitySignalsMappingService scopes.</summary>
-        /// <remarks>The default EntitySignalsMappingService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default EntitySignalsMappingService scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/admanager",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(EntitySignalsMappingService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);

@@ -26,20 +26,21 @@ namespace Google.Ads.AdManager.V1 {
           string.Concat(
             "Ci5nb29nbGUvYWRzL2FkbWFuYWdlci92MS9jb250YWN0X21lc3NhZ2VzLnBy",
             "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKb",
-            "AQoHQ29udGFjdBIRCgRuYW1lGAEgASgJQgPgQQgSFwoKY29udGFjdF9pZBgC",
-            "IAEoA0ID4EEDOmTqQWEKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db250",
-            "YWN0EipuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9jb250YWN0cy97Y29udGFj",
-            "dH0qCGNvbnRhY3RzMgdjb250YWN0QsgBChtjb20uZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjFCFENvbnRhY3RNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTth",
-            "ZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxB",
-            "ZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFi",
-            "BnByb3RvMw=="));
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLD",
+            "AQoHQ29udGFjdBIRCgRuYW1lGAEgASgJQgPgQQgSJgoUY29tcGFueV9kaXNw",
+            "bGF5X25hbWUYEyABKAlCA+BBA0gAiAEBOmTqQWEKIGFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9Db250YWN0EipuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9j",
+            "b250YWN0cy97Y29udGFjdH0qCGNvbnRhY3RzMgdjb250YWN0QhcKFV9jb21w",
+            "YW55X2Rpc3BsYXlfbmFtZULIAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxQhRDb250YWN0TWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5h",
+            "Z2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFk",
+            "TWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Contact), global::Google.Ads.AdManager.V1.Contact.Parser, new[]{ "Name", "ContactId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Contact), global::Google.Ads.AdManager.V1.Contact.Parser, new[]{ "Name", "CompanyDisplayName" }, new[]{ "CompanyDisplayName" }, null, null, null)
           }));
     }
     #endregion
@@ -88,7 +89,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Contact(Contact other) : this() {
       name_ = other.name_;
-      contactId_ = other.contactId_;
+      companyDisplayName_ = other.companyDisplayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -114,20 +115,33 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
-    /// <summary>Field number for the "contact_id" field.</summary>
-    public const int ContactIdFieldNumber = 2;
-    private long contactId_;
+    /// <summary>Field number for the "company_display_name" field.</summary>
+    public const int CompanyDisplayNameFieldNumber = 19;
+    private readonly static string CompanyDisplayNameDefaultValue = "";
+
+    private string companyDisplayName_;
     /// <summary>
-    /// Output only. The unique ID of the contact. This value is readonly and is
-    /// assigned by Google.
+    /// Output only. The display name of the Company.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ContactId {
-      get { return contactId_; }
+    public string CompanyDisplayName {
+      get { return companyDisplayName_ ?? CompanyDisplayNameDefaultValue; }
       set {
-        contactId_ = value;
+        companyDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "company_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCompanyDisplayName {
+      get { return companyDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "company_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCompanyDisplayName() {
+      companyDisplayName_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,7 +160,7 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (ContactId != other.ContactId) return false;
+      if (CompanyDisplayName != other.CompanyDisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -155,7 +169,7 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (ContactId != 0L) hash ^= ContactId.GetHashCode();
+      if (HasCompanyDisplayName) hash ^= CompanyDisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -178,9 +192,9 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (ContactId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ContactId);
+      if (HasCompanyDisplayName) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(CompanyDisplayName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -196,9 +210,9 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (ContactId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ContactId);
+      if (HasCompanyDisplayName) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(CompanyDisplayName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,8 +227,8 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (ContactId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ContactId);
+      if (HasCompanyDisplayName) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CompanyDisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,8 +245,8 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.ContactId != 0L) {
-        ContactId = other.ContactId;
+      if (other.HasCompanyDisplayName) {
+        CompanyDisplayName = other.CompanyDisplayName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -253,8 +267,8 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            ContactId = input.ReadInt64();
+          case 154: {
+            CompanyDisplayName = input.ReadString();
             break;
           }
         }
@@ -276,8 +290,8 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            ContactId = input.ReadInt64();
+          case 154: {
+            CompanyDisplayName = input.ReadString();
             break;
           }
         }

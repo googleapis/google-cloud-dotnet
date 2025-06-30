@@ -27,22 +27,24 @@ namespace Google.Ads.AdManager.V1 {
             "Citnb29nbGUvYWRzL2FkbWFuYWdlci92MS9yb2xlX21lc3NhZ2VzLnByb3Rv",
             "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRooZ29vZ2xlL2Fkcy9hZG1hbmFn",
             "ZXIvdjEvcm9sZV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKbAgoEUm9s",
-            "ZRIRCgRuYW1lGAEgASgJQgPgQQgSFAoHcm9sZV9pZBgCIAEoA0ID4EEDEhkK",
-            "DGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAQgASgJ",
-            "QgPgQQESFQoIYnVpbHRfaW4YBSABKAhCA+BBAxJHCgZzdGF0dXMYBiABKA4y",
-            "Mi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Sb2xlU3RhdHVzRW51bS5Sb2xl",
-            "U3RhdHVzQgPgQQM6VepBUgodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Jv",
-            "bGUSJG5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L3JvbGVzL3tyb2xlfSoFcm9s",
-            "ZXMyBHJvbGVCxQEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIRUm9s",
-            "ZU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2ds",
-            "ZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHq",
-            "AhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byL5AgoEUm9s",
+            "ZRIRCgRuYW1lGAEgASgJQgPgQQgSGQoHcm9sZV9pZBgCIAEoA0ID4EEDSACI",
+            "AQESHgoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQJIAYgBARIdCgtkZXNjcmlw",
+            "dGlvbhgEIAEoCUID4EEBSAKIAQESGgoIYnVpbHRfaW4YBSABKAhCA+BBA0gD",
+            "iAEBEkwKBnN0YXR1cxgGIAEoDjIyLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LlJvbGVTdGF0dXNFbnVtLlJvbGVTdGF0dXNCA+BBA0gEiAEBOlXqQVIKHWFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Sb2xlEiRuZXR3b3Jrcy97bmV0d29y",
+            "a19jb2RlfS9yb2xlcy97cm9sZX0qBXJvbGVzMgRyb2xlQgoKCF9yb2xlX2lk",
+            "Qg8KDV9kaXNwbGF5X25hbWVCDgoMX2Rlc2NyaXB0aW9uQgsKCV9idWlsdF9p",
+            "bkIJCgdfc3RhdHVzQsUBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFC",
+            "EVJvbGVNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
+            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
+            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.RoleEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Role), global::Google.Ads.AdManager.V1.Role.Parser, new[]{ "Name", "RoleId", "DisplayName", "Description", "BuiltIn", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Role), global::Google.Ads.AdManager.V1.Role.Parser, new[]{ "Name", "RoleId", "DisplayName", "Description", "BuiltIn", "Status" }, new[]{ "RoleId", "DisplayName", "Description", "BuiltIn", "Status" }, null, null, null)
           }));
     }
     #endregion
@@ -60,6 +62,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Role> _parser = new pb::MessageParser<Role>(() => new Role());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Role> Parser { get { return _parser; } }
@@ -87,6 +90,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Role(Role other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       roleId_ = other.roleId_;
       displayName_ = other.displayName_;
@@ -120,6 +124,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "role_id" field.</summary>
     public const int RoleIdFieldNumber = 2;
+    private readonly static long RoleIdDefaultValue = 0L;
+
     private long roleId_;
     /// <summary>
     /// Output only. `Role` ID.
@@ -127,44 +133,87 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RoleId {
-      get { return roleId_; }
+      get { if ((_hasBits0 & 1) != 0) { return roleId_; } else { return RoleIdDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         roleId_ = value;
       }
+    }
+    /// <summary>Gets whether the "role_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRoleId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "role_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRoleId() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 3;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Required. The display name of the `Role`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "description" field.</summary>
     public const int DescriptionFieldNumber = 4;
-    private string description_ = "";
+    private readonly static string DescriptionDefaultValue = "";
+
+    private string description_;
     /// <summary>
     /// Optional. The description of the `Role`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
-      get { return description_; }
+      get { return description_ ?? DescriptionDefaultValue; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescription {
+      get { return description_ != null; }
+    }
+    /// <summary>Clears the value of the "description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescription() {
+      description_ = null;
+    }
 
     /// <summary>Field number for the "built_in" field.</summary>
     public const int BuiltInFieldNumber = 5;
+    private readonly static bool BuiltInDefaultValue = false;
+
     private bool builtIn_;
     /// <summary>
     /// Output only. Whether the `Role` is a built-in or custom user role.
@@ -172,25 +221,53 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BuiltIn {
-      get { return builtIn_; }
+      get { if ((_hasBits0 & 2) != 0) { return builtIn_; } else { return BuiltInDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         builtIn_ = value;
       }
+    }
+    /// <summary>Gets whether the "built_in" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBuiltIn {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "built_in" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBuiltIn() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 6;
-    private global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus status_ = global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus status_;
     /// <summary>
     /// Output only. The status of the `Role`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 4) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -222,11 +299,11 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (RoleId != 0L) hash ^= RoleId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (BuiltIn != false) hash ^= BuiltIn.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (HasRoleId) hash ^= RoleId.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDescription) hash ^= Description.GetHashCode();
+      if (HasBuiltIn) hash ^= BuiltIn.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -249,23 +326,23 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (RoleId != 0L) {
+      if (HasRoleId) {
         output.WriteRawTag(16);
         output.WriteInt64(RoleId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
-      if (BuiltIn != false) {
+      if (HasBuiltIn) {
         output.WriteRawTag(40);
         output.WriteBool(BuiltIn);
       }
-      if (Status != global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
@@ -283,23 +360,23 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (RoleId != 0L) {
+      if (HasRoleId) {
         output.WriteRawTag(16);
         output.WriteInt64(RoleId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
-      if (BuiltIn != false) {
+      if (HasBuiltIn) {
         output.WriteRawTag(40);
         output.WriteBool(BuiltIn);
       }
-      if (Status != global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
@@ -316,19 +393,19 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (RoleId != 0L) {
+      if (HasRoleId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoleId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (BuiltIn != false) {
+      if (HasBuiltIn) {
         size += 1 + 1;
       }
-      if (Status != global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified) {
+      if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -346,19 +423,19 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.RoleId != 0L) {
+      if (other.HasRoleId) {
         RoleId = other.RoleId;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.Description.Length != 0) {
+      if (other.HasDescription) {
         Description = other.Description;
       }
-      if (other.BuiltIn != false) {
+      if (other.HasBuiltIn) {
         BuiltIn = other.BuiltIn;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.RoleStatusEnum.Types.RoleStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
