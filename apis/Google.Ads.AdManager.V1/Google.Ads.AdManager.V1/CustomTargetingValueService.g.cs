@@ -32,31 +32,34 @@ namespace Google.Ads.AdManager.V1 {
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJlCh5H",
             "ZXRDdXN0b21UYXJnZXRpbmdWYWx1ZVJlcXVlc3QSQwoEbmFtZRgBIAEoCUI1",
             "4EEC+kEvCi1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ3VzdG9tVGFyZ2V0",
-            "aW5nVmFsdWUi1wEKIExpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0",
-            "EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCithZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vQ3VzdG9tVGFyZ2V0aW5nS2V5EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
-            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlC",
-            "A+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBEhEKBHNraXAYBiABKAVCA+BB",
-            "ASKgAQohTGlzdEN1c3RvbVRhcmdldGluZ1ZhbHVlc1Jlc3BvbnNlEk4KF2N1",
-            "c3RvbV90YXJnZXRpbmdfdmFsdWVzGAEgAygLMi0uZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nVmFsdWUSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUy/QMKG0N1c3RvbVRhcmdl",
-            "dGluZ1ZhbHVlU2VydmljZRLVAQoXR2V0Q3VzdG9tVGFyZ2V0aW5nVmFsdWUS",
-            "Ny5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5HZXRDdXN0b21UYXJnZXRpbmdW",
-            "YWx1ZVJlcXVlc3QaLS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21U",
-            "YXJnZXRpbmdWYWx1ZSJS2kEEbmFtZYLT5JMCRRJDL3YxL3tuYW1lPW5ldHdv",
-            "cmtzLyovY3VzdG9tVGFyZ2V0aW5nS2V5cy8qL2N1c3RvbVRhcmdldGluZ1Zh",
-            "bHVlcy8qfRLoAQoZTGlzdEN1c3RvbVRhcmdldGluZ1ZhbHVlcxI5Lmdvb2ds",
-            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkxpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNS",
-            "ZXF1ZXN0GjouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGlzdEN1c3RvbVRh",
-            "cmdldGluZ1ZhbHVlc1Jlc3BvbnNlIlTaQQZwYXJlbnSC0+STAkUSQy92MS97",
-            "cGFyZW50PW5ldHdvcmtzLyovY3VzdG9tVGFyZ2V0aW5nS2V5cy8qfS9jdXN0",
-            "b21UYXJnZXRpbmdWYWx1ZXMaG8pBGGFkbWFuYWdlci5nb29nbGVhcGlzLmNv",
-            "bULUAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQiBDdXN0b21UYXJn",
-            "ZXRpbmdWYWx1ZVNlcnZpY2VQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
-            "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
-            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "aW5nVmFsdWUizAEKIExpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0",
+            "EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vTmV0d29yaxIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
+            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3Jk",
+            "ZXJfYnkYBSABKAlCA+BBARIRCgRza2lwGAYgASgFQgPgQQEioAEKIUxpc3RD",
+            "dXN0b21UYXJnZXRpbmdWYWx1ZXNSZXNwb25zZRJOChdjdXN0b21fdGFyZ2V0",
+            "aW5nX3ZhbHVlcxgBIAMoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1",
+            "c3RvbVRhcmdldGluZ1ZhbHVlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIS",
+            "Cgp0b3RhbF9zaXplGAMgASgFMo0FChtDdXN0b21UYXJnZXRpbmdWYWx1ZVNl",
+            "cnZpY2UShwIKF0dldEN1c3RvbVRhcmdldGluZ1ZhbHVlEjcuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuR2V0Q3VzdG9tVGFyZ2V0aW5nVmFsdWVSZXF1ZXN0",
+            "Gi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nVmFs",
+            "dWUigwHaQQRuYW1lgtPkkwJ2Ei0vdjEve25hbWU9bmV0d29ya3MvKi9jdXN0",
+            "b21UYXJnZXRpbmdWYWx1ZXMvKn1aRRJDL3YxL3tuYW1lPW5ldHdvcmtzLyov",
+            "Y3VzdG9tVGFyZ2V0aW5nS2V5cy8qL2N1c3RvbVRhcmdldGluZ1ZhbHVlcy8q",
+            "fRKaAgoZTGlzdEN1c3RvbVRhcmdldGluZ1ZhbHVlcxI5Lmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkxpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0",
+            "GjouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGlzdEN1c3RvbVRhcmdldGlu",
+            "Z1ZhbHVlc1Jlc3BvbnNlIoUB2kEGcGFyZW50gtPkkwJ2Ei0vdjEve3BhcmVu",
+            "dD1uZXR3b3Jrcy8qfS9jdXN0b21UYXJnZXRpbmdWYWx1ZXNaRRJDL3YxL3tw",
+            "YXJlbnQ9bmV0d29ya3MvKi9jdXN0b21UYXJnZXRpbmdLZXlzLyp9L2N1c3Rv",
+            "bVRhcmdldGluZ1ZhbHVlcxpHykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "0kEpaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXJC",
+            "1AEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIgQ3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWVTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
+            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
+            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomTargetingValueMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -123,7 +126,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Required. The resource name of the CustomTargetingValue.
     /// Format:
-    /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+    /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Required. The parent, which owns this collection of CustomTargetingValues.
     /// Format:
-    /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+    /// `networks/{network_code}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

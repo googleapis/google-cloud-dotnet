@@ -150,8 +150,16 @@ namespace Google.Ads.AdManager.V1
         public static string DefaultEndpoint { get; } = "admanager.googleapis.com:443";
 
         /// <summary>The default CustomTargetingValueService scopes.</summary>
-        /// <remarks>The default CustomTargetingValueService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default CustomTargetingValueService scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/admanager",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CustomTargetingValueService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
@@ -249,7 +257,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+        /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -265,7 +273,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+        /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -281,7 +289,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+        /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -294,7 +302,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+        /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -310,7 +318,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+        /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -326,7 +334,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+        /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -357,7 +365,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -392,7 +400,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -427,7 +435,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -439,11 +447,11 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CustomTargetingValue"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> ListCustomTargetingValues(CustomTargetingKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        public virtual gax::PagedEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> ListCustomTargetingValues(NetworkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListCustomTargetingValuesRequest request = new ListCustomTargetingValuesRequest
             {
-                ParentAsCustomTargetingKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {
@@ -462,7 +470,7 @@ namespace Google.Ads.AdManager.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
         /// Format:
-        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -474,11 +482,11 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CustomTargetingValue"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> ListCustomTargetingValuesAsync(CustomTargetingKeyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        public virtual gax::PagedAsyncEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> ListCustomTargetingValuesAsync(NetworkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListCustomTargetingValuesRequest request = new ListCustomTargetingValuesRequest
             {
-                ParentAsCustomTargetingKeyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {

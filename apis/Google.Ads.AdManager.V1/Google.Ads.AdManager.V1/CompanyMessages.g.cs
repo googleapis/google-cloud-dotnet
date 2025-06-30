@@ -26,38 +26,37 @@ namespace Google.Ads.AdManager.V1 {
           string.Concat(
             "Ci5nb29nbGUvYWRzL2FkbWFuYWdlci92MS9jb21wYW55X21lc3NhZ2VzLnBy",
             "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRorZ29vZ2xlL2Fkcy9hZG1h",
-            "bmFnZXIvdjEvYXBwbGllZF9sYWJlbC5wcm90bxo4Z29vZ2xlL2Fkcy9hZG1h",
-            "bmFnZXIvdjEvY29tcGFueV9jcmVkaXRfc3RhdHVzX2VudW0ucHJvdG8aL2dv",
-            "b2dsZS9hZHMvYWRtYW5hZ2VyL3YxL2NvbXBhbnlfdHlwZV9lbnVtLnByb3Rv",
-            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
-            "L3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIpwGCgdDb21wYW55EhEKBG5hbWUYASABKAlCA+BBCBIXCgpjb21wYW55",
-            "X2lkGAIgASgDQgPgQQMSGQoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQISRwoE",
-            "dHlwZRgEIAEoDjI0Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNvbXBhbnlU",
-            "eXBlRW51bS5Db21wYW55VHlwZUID4EECEhQKB2FkZHJlc3MYBSABKAlCA+BB",
-            "ARISCgVlbWFpbBgGIAEoCUID4EEBEhAKA2ZheBgHIAEoCUID4EEBEhIKBXBo",
-            "b25lGAggASgJQgPgQQESGAoLZXh0ZXJuYWxfaWQYCSABKAlCA+BBARIUCgdj",
-            "b21tZW50GAogASgJQgPgQQESYAoNY3JlZGl0X3N0YXR1cxgLIAEoDjJELmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNvbXBhbnlDcmVkaXRTdGF0dXNFbnVt",
-            "LkNvbXBhbnlDcmVkaXRTdGF0dXNCA+BBARJCCg5hcHBsaWVkX2xhYmVscxgM",
-            "IAMoCzIlLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFwcGxpZWRMYWJlbEID",
-            "4EEBEkYKD3ByaW1hcnlfY29udGFjdBgNIAEoCUIo4EEB+kEiCiBhZG1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vQ29udGFjdEgAiAEBEjwKDWFwcGxpZWRfdGVh",
-            "bXMYDiADKAlCJeBBAfpBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Rl",
-            "YW0SNAoLdXBkYXRlX3RpbWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSIwoWdGhpcmRfcGFydHlfY29tcGFueV9pZBgQIAEoA0ID",
-            "4EEBOmbqQWMKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55Eitu",
-            "ZXR3b3Jrcy97bmV0d29ya19jb2RlfS9jb21wYW5pZXMve2NvbXBhbnl9Kglj",
-            "b21wYW5pZXMyB2NvbXBhbnlCEgoQX3ByaW1hcnlfY29udGFjdELIAQobY29t",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhRDb21wYW55TWVzc2FnZXNQcm90",
-            "b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fk",
-            "cy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFn",
-            "ZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRz",
-            "OjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "bmFnZXIvdjEvYXBwbGllZF9sYWJlbC5wcm90bxorZ29vZ2xlL2Fkcy9hZG1h",
+            "bmFnZXIvdjEvY29tcGFueV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKcBgoHQ29tcGFueRIR",
+            "CgRuYW1lGAEgASgJQgPgQQgSFwoKY29tcGFueV9pZBgCIAEoA0ID4EEDEhkK",
+            "DGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEkcKBHR5cGUYBCABKA4yNC5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5Db21wYW55VHlwZUVudW0uQ29tcGFueVR5",
+            "cGVCA+BBAhIUCgdhZGRyZXNzGAUgASgJQgPgQQESEgoFZW1haWwYBiABKAlC",
+            "A+BBARIQCgNmYXgYByABKAlCA+BBARISCgVwaG9uZRgIIAEoCUID4EEBEhgK",
+            "C2V4dGVybmFsX2lkGAkgASgJQgPgQQESFAoHY29tbWVudBgKIAEoCUID4EEB",
+            "EmAKDWNyZWRpdF9zdGF0dXMYCyABKA4yRC5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5Db21wYW55Q3JlZGl0U3RhdHVzRW51bS5Db21wYW55Q3JlZGl0U3Rh",
+            "dHVzQgPgQQESQgoOYXBwbGllZF9sYWJlbHMYDCADKAsyJS5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5BcHBsaWVkTGFiZWxCA+BBARJGCg9wcmltYXJ5X2Nv",
+            "bnRhY3QYDSABKAlCKOBBAfpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L0NvbnRhY3RIAIgBARI8Cg1hcHBsaWVkX3RlYW1zGA4gAygJQiXgQQH6QR8K",
+            "HWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9UZWFtEiMKFnRoaXJkX3BhcnR5",
+            "X2NvbXBhbnlfaWQYECABKANCA+BBARI0Cgt1cGRhdGVfdGltZRgPIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzpm6kFjCiBhZG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQ29tcGFueRIrbmV0d29ya3Mve25ldHdvcmtf",
+            "Y29kZX0vY29tcGFuaWVzL3tjb21wYW55fSoJY29tcGFuaWVzMgdjb21wYW55",
+            "QhIKEF9wcmltYXJ5X2NvbnRhY3RCyAEKG2NvbS5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MUIUQ29tcGFueU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2Fk",
+            "bWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFk",
+            "c1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CompanyCreditStatusEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.CompanyTypeEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CompanyEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Company), global::Google.Ads.AdManager.V1.Company.Parser, new[]{ "Name", "CompanyId", "DisplayName", "Type", "Address", "Email", "Fax", "Phone", "ExternalId", "Comment", "CreditStatus", "AppliedLabels", "PrimaryContact", "AppliedTeams", "UpdateTime", "ThirdPartyCompanyId" }, new[]{ "PrimaryContact" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Company), global::Google.Ads.AdManager.V1.Company.Parser, new[]{ "Name", "CompanyId", "DisplayName", "Type", "Address", "Email", "Fax", "Phone", "ExternalId", "Comment", "CreditStatus", "AppliedLabels", "PrimaryContact", "AppliedTeams", "ThirdPartyCompanyId", "UpdateTime" }, new[]{ "PrimaryContact" }, null, null, null)
           }));
     }
     #endregion
@@ -116,8 +115,8 @@ namespace Google.Ads.AdManager.V1 {
       appliedLabels_ = other.appliedLabels_.Clone();
       primaryContact_ = other.primaryContact_;
       appliedTeams_ = other.appliedTeams_.Clone();
-      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       thirdPartyCompanyId_ = other.thirdPartyCompanyId_;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -369,21 +368,6 @@ namespace Google.Ads.AdManager.V1 {
       get { return appliedTeams_; }
     }
 
-    /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 15;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
-    /// <summary>
-    /// Output only. The time the `Company` was last modified.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
-      get { return updateTime_; }
-      set {
-        updateTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "third_party_company_id" field.</summary>
     public const int ThirdPartyCompanyIdFieldNumber = 16;
     private long thirdPartyCompanyId_;
@@ -397,6 +381,21 @@ namespace Google.Ads.AdManager.V1 {
       get { return thirdPartyCompanyId_; }
       set {
         thirdPartyCompanyId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 15;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time the `Company` was last modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
       }
     }
 
@@ -429,8 +428,8 @@ namespace Google.Ads.AdManager.V1 {
       if(!appliedLabels_.Equals(other.appliedLabels_)) return false;
       if (PrimaryContact != other.PrimaryContact) return false;
       if(!appliedTeams_.Equals(other.appliedTeams_)) return false;
-      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (ThirdPartyCompanyId != other.ThirdPartyCompanyId) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -452,8 +451,8 @@ namespace Google.Ads.AdManager.V1 {
       hash ^= appliedLabels_.GetHashCode();
       if (HasPrimaryContact) hash ^= PrimaryContact.GetHashCode();
       hash ^= appliedTeams_.GetHashCode();
-      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (ThirdPartyCompanyId != 0L) hash ^= ThirdPartyCompanyId.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -646,11 +645,11 @@ namespace Google.Ads.AdManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PrimaryContact);
       }
       size += appliedTeams_.CalculateSize(_repeated_appliedTeams_codec);
-      if (updateTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
-      }
       if (ThirdPartyCompanyId != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(ThirdPartyCompanyId);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -702,14 +701,14 @@ namespace Google.Ads.AdManager.V1 {
         PrimaryContact = other.PrimaryContact;
       }
       appliedTeams_.Add(other.appliedTeams_);
+      if (other.ThirdPartyCompanyId != 0L) {
+        ThirdPartyCompanyId = other.ThirdPartyCompanyId;
+      }
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
-      }
-      if (other.ThirdPartyCompanyId != 0L) {
-        ThirdPartyCompanyId = other.ThirdPartyCompanyId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

@@ -28,26 +28,29 @@ namespace Google.Ads.AdManager.V1 {
             "cHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGi1nb29nbGUvYWRzL2Fk",
             "bWFuYWdlci92MS9wbGFjZW1lbnRfZW51bXMucHJvdG8aH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iyAMKCVBsYWNl",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8isAQKCVBsYWNl",
             "bWVudBIRCgRuYW1lGAEgASgJQgPgQQgSGQoMcGxhY2VtZW50X2lkGAIgASgD",
-            "QgPgQQMSGQoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQISGAoLZGVzY3JpcHRp",
-            "b24YBCABKAlCA+BBARIbCg5wbGFjZW1lbnRfY29kZRgFIAEoCUID4EEDElEK",
-            "BnN0YXR1cxgGIAEoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlBsYWNl",
-            "bWVudFN0YXR1c0VudW0uUGxhY2VtZW50U3RhdHVzQgPgQQMSQgoRdGFyZ2V0",
-            "ZWRfYWRfdW5pdHMYByADKAlCJ+BBAfpBIQofYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL0FkVW5pdBI0Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAzpu6kFrCiJhZG1hbmFnZXIuZ29vZ2xl",
-            "YXBpcy5jb20vUGxhY2VtZW50Ei5uZXR3b3Jrcy97bmV0d29ya19jb2RlfS9w",
-            "bGFjZW1lbnRzL3twbGFjZW1lbnR9KgpwbGFjZW1lbnRzMglwbGFjZW1lbnRC",
-            "ygEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIWUGxhY2VtZW50TWVz",
-            "c2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFk",
-            "cy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdv",
-            "b2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "QgPgQQMSHgoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQJIAIgBARIdCgtkZXNj",
+            "cmlwdGlvbhgEIAEoCUID4EEBSAGIAQESIAoOcGxhY2VtZW50X2NvZGUYBSAB",
+            "KAlCA+BBA0gCiAEBElYKBnN0YXR1cxgGIAEoDjI8Lmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLlBsYWNlbWVudFN0YXR1c0VudW0uUGxhY2VtZW50U3RhdHVz",
+            "QgPgQQNIA4gBARJCChF0YXJnZXRlZF9hZF91bml0cxgHIAMoCUIn4EEB+kEh",
+            "Ch9hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRVbml0EjkKC3VwZGF0ZV90",
+            "aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDSASI",
+            "AQE6bupBawoiYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1BsYWNlbWVudBIu",
+            "bmV0d29ya3Mve25ldHdvcmtfY29kZX0vcGxhY2VtZW50cy97cGxhY2VtZW50",
+            "fSoKcGxhY2VtZW50czIJcGxhY2VtZW50Qg8KDV9kaXNwbGF5X25hbWVCDgoM",
+            "X2Rlc2NyaXB0aW9uQhEKD19wbGFjZW1lbnRfY29kZUIJCgdfc3RhdHVzQg4K",
+            "DF91cGRhdGVfdGltZULKAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "QhZQbGFjZW1lbnRNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFn",
+            "ZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRN",
+            "YW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.PlacementEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Placement), global::Google.Ads.AdManager.V1.Placement.Parser, new[]{ "Name", "PlacementId", "DisplayName", "Description", "PlacementCode", "Status", "TargetedAdUnits", "UpdateTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Placement), global::Google.Ads.AdManager.V1.Placement.Parser, new[]{ "Name", "PlacementId", "DisplayName", "Description", "PlacementCode", "Status", "TargetedAdUnits", "UpdateTime" }, new[]{ "DisplayName", "Description", "PlacementCode", "Status", "UpdateTime" }, null, null, null)
           }));
     }
     #endregion
@@ -65,6 +68,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Placement> _parser = new pb::MessageParser<Placement>(() => new Placement());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Placement> Parser { get { return _parser; } }
@@ -92,6 +96,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Placement(Placement other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       placementId_ = other.placementId_;
       displayName_ = other.displayName_;
@@ -142,66 +147,122 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 3;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
-    /// Required. The display name of the placement. Its maximum length is 255
-    /// characters.
+    /// Required. The display name of the placement. This attribute has a maximum
+    /// length of 255 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "description" field.</summary>
     public const int DescriptionFieldNumber = 4;
-    private string description_ = "";
+    private readonly static string DescriptionDefaultValue = "";
+
+    private string description_;
     /// <summary>
-    /// Optional. A description of the Placement. This value is optional and its
-    /// maximum length is 65,535 characters.
+    /// Optional. A description of the Placement. This attribute has a maximum
+    /// length of 65,535 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
-      get { return description_; }
+      get { return description_ ?? DescriptionDefaultValue; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescription {
+      get { return description_ != null; }
+    }
+    /// <summary>Clears the value of the "description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescription() {
+      description_ = null;
+    }
 
     /// <summary>Field number for the "placement_code" field.</summary>
     public const int PlacementCodeFieldNumber = 5;
-    private string placementCode_ = "";
+    private readonly static string PlacementCodeDefaultValue = "";
+
+    private string placementCode_;
     /// <summary>
     /// Output only. A string used to uniquely identify the Placement for purposes
-    /// of serving the ad. This attribute is read-only and is assigned by Google
-    /// when a placement is created.
+    /// of serving the ad. This attribute is assigned by Google.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PlacementCode {
-      get { return placementCode_; }
+      get { return placementCode_ ?? PlacementCodeDefaultValue; }
       set {
         placementCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "placement_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlacementCode {
+      get { return placementCode_ != null; }
+    }
+    /// <summary>Clears the value of the "placement_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlacementCode() {
+      placementCode_ = null;
+    }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 6;
-    private global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus status_ = global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus status_;
     /// <summary>
-    /// Output only. The status of the Placement. This attribute is read-only.
+    /// Output only. The status of the Placement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 1) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "targeted_ad_units" field.</summary>
@@ -211,7 +272,7 @@ namespace Google.Ads.AdManager.V1 {
     private readonly pbc::RepeatedField<string> targetedAdUnits_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. The resource names of AdUnits that constitute the Placement.
-    /// Format: "networks/{network_code}/adUnits/{ad_unit_id}"
+    /// Format: "networks/{network_code}/adUnits/{ad_unit}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -266,10 +327,10 @@ namespace Google.Ads.AdManager.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (PlacementId != 0L) hash ^= PlacementId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (PlacementCode.Length != 0) hash ^= PlacementCode.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDescription) hash ^= Description.GetHashCode();
+      if (HasPlacementCode) hash ^= PlacementCode.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
       hash ^= targetedAdUnits_.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
@@ -298,19 +359,19 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(PlacementId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
-      if (PlacementCode.Length != 0) {
+      if (HasPlacementCode) {
         output.WriteRawTag(42);
         output.WriteString(PlacementCode);
       }
-      if (Status != global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
@@ -337,19 +398,19 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(PlacementId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(34);
         output.WriteString(Description);
       }
-      if (PlacementCode.Length != 0) {
+      if (HasPlacementCode) {
         output.WriteRawTag(42);
         output.WriteString(PlacementCode);
       }
-      if (Status != global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
@@ -374,16 +435,16 @@ namespace Google.Ads.AdManager.V1 {
       if (PlacementId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlacementId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Description.Length != 0) {
+      if (HasDescription) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (PlacementCode.Length != 0) {
+      if (HasPlacementCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlacementCode);
       }
-      if (Status != global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified) {
+      if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       size += targetedAdUnits_.CalculateSize(_repeated_targetedAdUnits_codec);
@@ -408,16 +469,16 @@ namespace Google.Ads.AdManager.V1 {
       if (other.PlacementId != 0L) {
         PlacementId = other.PlacementId;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.Description.Length != 0) {
+      if (other.HasDescription) {
         Description = other.Description;
       }
-      if (other.PlacementCode.Length != 0) {
+      if (other.HasPlacementCode) {
         PlacementCode = other.PlacementCode;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.PlacementStatusEnum.Types.PlacementStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
       targetedAdUnits_.Add(other.targetedAdUnits_);

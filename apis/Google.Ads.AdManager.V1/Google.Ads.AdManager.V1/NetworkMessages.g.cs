@@ -221,7 +221,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Output only. Top most [Ad Unit](google.ads.admanager.v1.AdUnit) to which
     /// descendant Ad Units can be added.
-    /// Format: networks/{network_code}/adUnit/{ad_unit_id}
+    /// Format: networks/{network_code}/adUnits/{ad_unit}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

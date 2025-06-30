@@ -34,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetCustomTargetingValueRequest request = new GetCustomTargetingValueRequest
             {
-                CustomTargetingValueName = CustomTargetingValueName.FromNetworkCodeCustomTargetingKeyCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]", "[CUSTOM_TARGETING_VALUE]"),
+                CustomTargetingValueName = CustomTargetingValueName.FromNetworkCodeCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_VALUE]"),
             };
             // Make the request
             CustomTargetingValue response = customTargetingValueServiceClient.GetCustomTargetingValue(request);
@@ -51,7 +51,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetCustomTargetingValueRequest request = new GetCustomTargetingValueRequest
             {
-                CustomTargetingValueName = CustomTargetingValueName.FromNetworkCodeCustomTargetingKeyCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]", "[CUSTOM_TARGETING_VALUE]"),
+                CustomTargetingValueName = CustomTargetingValueName.FromNetworkCodeCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_VALUE]"),
             };
             // Make the request
             CustomTargetingValue response = await customTargetingValueServiceClient.GetCustomTargetingValueAsync(request);
@@ -65,7 +65,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = CustomTargetingValueServiceClient.Create();
             // Initialize request argument(s)
-            string name = "networks/[NETWORK_CODE]/customTargetingKeys/[CUSTOM_TARGETING_KEY]/customTargetingValues/[CUSTOM_TARGETING_VALUE]";
+            string name = "networks/[NETWORK_CODE]/customTargetingValues/[CUSTOM_TARGETING_VALUE]";
             // Make the request
             CustomTargetingValue response = customTargetingValueServiceClient.GetCustomTargetingValue(name);
             // End snippet
@@ -79,7 +79,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = await CustomTargetingValueServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "networks/[NETWORK_CODE]/customTargetingKeys/[CUSTOM_TARGETING_KEY]/customTargetingValues/[CUSTOM_TARGETING_VALUE]";
+            string name = "networks/[NETWORK_CODE]/customTargetingValues/[CUSTOM_TARGETING_VALUE]";
             // Make the request
             CustomTargetingValue response = await customTargetingValueServiceClient.GetCustomTargetingValueAsync(name);
             // End snippet
@@ -92,7 +92,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = CustomTargetingValueServiceClient.Create();
             // Initialize request argument(s)
-            CustomTargetingValueName name = CustomTargetingValueName.FromNetworkCodeCustomTargetingKeyCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]", "[CUSTOM_TARGETING_VALUE]");
+            CustomTargetingValueName name = CustomTargetingValueName.FromNetworkCodeCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_VALUE]");
             // Make the request
             CustomTargetingValue response = customTargetingValueServiceClient.GetCustomTargetingValue(name);
             // End snippet
@@ -106,7 +106,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = await CustomTargetingValueServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CustomTargetingValueName name = CustomTargetingValueName.FromNetworkCodeCustomTargetingKeyCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]", "[CUSTOM_TARGETING_VALUE]");
+            CustomTargetingValueName name = CustomTargetingValueName.FromNetworkCodeCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_VALUE]");
             // Make the request
             CustomTargetingValue response = await customTargetingValueServiceClient.GetCustomTargetingValueAsync(name);
             // End snippet
@@ -121,7 +121,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListCustomTargetingValuesRequest request = new ListCustomTargetingValuesRequest
             {
-                ParentAsCustomTargetingKeyName = CustomTargetingKeyName.FromNetworkCodeCustomTargetingKey("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]"),
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
                 Filter = "",
                 OrderBy = "",
                 Skip = 0,
@@ -172,7 +172,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListCustomTargetingValuesRequest request = new ListCustomTargetingValuesRequest
             {
-                ParentAsCustomTargetingKeyName = CustomTargetingKeyName.FromNetworkCodeCustomTargetingKey("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]"),
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
                 Filter = "",
                 OrderBy = "",
                 Skip = 0,
@@ -221,7 +221,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = CustomTargetingValueServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "networks/[NETWORK_CODE]/customTargetingKeys/[CUSTOM_TARGETING_KEY]";
+            string parent = "networks/[NETWORK_CODE]";
             // Make the request
             PagedEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> response = customTargetingValueServiceClient.ListCustomTargetingValues(parent);
 
@@ -266,7 +266,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = await CustomTargetingValueServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "networks/[NETWORK_CODE]/customTargetingKeys/[CUSTOM_TARGETING_KEY]";
+            string parent = "networks/[NETWORK_CODE]";
             // Make the request
             PagedAsyncEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> response = customTargetingValueServiceClient.ListCustomTargetingValuesAsync(parent);
 
@@ -307,11 +307,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListCustomTargetingValues</summary>
         public void ListCustomTargetingValuesResourceNames()
         {
-            // Snippet: ListCustomTargetingValues(CustomTargetingKeyName, string, int?, CallSettings)
+            // Snippet: ListCustomTargetingValues(NetworkName, string, int?, CallSettings)
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = CustomTargetingValueServiceClient.Create();
             // Initialize request argument(s)
-            CustomTargetingKeyName parent = CustomTargetingKeyName.FromNetworkCodeCustomTargetingKey("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]");
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
             // Make the request
             PagedEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> response = customTargetingValueServiceClient.ListCustomTargetingValues(parent);
 
@@ -352,11 +352,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListCustomTargetingValuesAsync</summary>
         public async Task ListCustomTargetingValuesResourceNamesAsync()
         {
-            // Snippet: ListCustomTargetingValuesAsync(CustomTargetingKeyName, string, int?, CallSettings)
+            // Snippet: ListCustomTargetingValuesAsync(NetworkName, string, int?, CallSettings)
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = await CustomTargetingValueServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CustomTargetingKeyName parent = CustomTargetingKeyName.FromNetworkCodeCustomTargetingKey("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]");
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
             // Make the request
             PagedAsyncEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> response = customTargetingValueServiceClient.ListCustomTargetingValuesAsync(parent);
 
