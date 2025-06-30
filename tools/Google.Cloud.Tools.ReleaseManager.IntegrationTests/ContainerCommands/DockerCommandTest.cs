@@ -61,6 +61,12 @@ public class DockerCommandTest
             var path = Path.Combine(outputDirectory, expectedAbsent);
             Assert.False(Path.Exists(path), $"Path {path} should not exist");
         }
+        foreach (var containsTextAssertion in fileExpectations.ContainsText)
+        {
+            var path = Path.Combine(outputDirectory, containsTextAssertion.File);
+            var actualText = File.ReadAllText(path);
+            Assert.Contains(containsTextAssertion.Text, actualText);
+        }
         var expectedDirectory = Path.Combine(outputDirectory, "expected");
         if (Directory.Exists(expectedDirectory))
         {
@@ -144,6 +150,13 @@ public class DockerCommandTest
     {
         public List<string> Present { get; set; } = [];
         public List<string> Absent { get; set; } = [];
+        public List<TextAssertion> ContainsText { get; set; } = [];
+    }
+
+    public class TextAssertion
+    {
+        public string File { get; set; }
+        public string Text { get; set; }
     }
 
     private class FileCopy

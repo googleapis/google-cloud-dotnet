@@ -2,7 +2,7 @@ command: prepare-library-release
 args:
 - '--repo-root=/test/repo'
 - '--library-id=Google.Test.V1'
-- '--version=1.42.0'
+- '--version=1.43.0'
 - '--release-notes=/test/inputs/release-notes.txt'
 commonFiles:
   - source: test-apis.json
@@ -18,9 +18,22 @@ commonFiles:
   - source: renovate-template.json
     target: repo/generator-input/renovate-template.json
   - source: history.md
-    target: expected/repo/apis/Google.Test.V1/docs/history.md
+    target: repo/apis/Google.Test.V1/docs/history.md
 fileExpectations:
-  present:
-  - repo/apis/Google.Test.V1/Google.Test.V1.GeneratedSnippets/Google.Test.V1.GeneratedSnippets.csproj
-  - repo/apis/Google.Test.V1/Google.Test.V1.Snippets/Google.Test.V1.Snippets.csproj
-
+  containsText:
+  # The project file contains the new version number
+  - file: repo/apis/Google.Test.V1/Google.Test.V1/Google.Test.V1.csproj
+    text: 1.43.0
+  # The API catalog contains the new version number
+  - file: repo/generator-input/apis.json
+    text: 1.43.0
+  # We still have the history from 1.42.0
+  - file: repo/apis/Google.Test.V1/docs/history.md
+    text: 1.42.0
+  - file: repo/apis/Google.Test.V1/docs/history.md
+    text: 'Fixed bugs.'
+  # We also have the new release notes for 1.43.0
+  - file: repo/apis/Google.Test.V1/docs/history.md
+    text: 1.43.0
+  - file: repo/apis/Google.Test.V1/docs/history.md
+    text: 'New features.'
