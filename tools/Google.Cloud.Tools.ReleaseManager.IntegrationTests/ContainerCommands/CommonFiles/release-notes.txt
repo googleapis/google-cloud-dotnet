@@ -1,3 +1,3 @@
-### Bug fixes
+### New features
 
-Fixed bugs.
+New features.
