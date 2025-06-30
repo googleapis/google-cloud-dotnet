@@ -297,6 +297,7 @@ namespace GoogleCSharpSnippets
                 },
                 AppProfileId = "",
                 AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                Idempotency = new gcbv::Idempotency(),
             };
             // Make the request
             gcbv::MutateRowResponse response = bigtableServiceApiClient.MutateRow(request);
@@ -321,6 +322,7 @@ namespace GoogleCSharpSnippets
                 },
                 AppProfileId = "",
                 AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                Idempotency = new gcbv::Idempotency(),
             };
             // Make the request
             gcbv::MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(request);
