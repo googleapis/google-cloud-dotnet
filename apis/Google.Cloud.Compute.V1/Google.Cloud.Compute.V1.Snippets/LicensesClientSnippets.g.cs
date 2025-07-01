@@ -745,5 +745,141 @@ namespace GoogleCSharpSnippets
             TestPermissionsResponse response = await licensesClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
             // End snippet
         }
+
+        /// <summary>Snippet for Update</summary>
+        public void UpdateRequestObject()
+        {
+            // Snippet: Update(UpdateLicenseRequest, CallSettings)
+            // Create client
+            LicensesClient licensesClient = LicensesClient.Create();
+            // Initialize request argument(s)
+            UpdateLicenseRequest request = new UpdateLicenseRequest
+            {
+                RequestId = "",
+                License = "",
+                Project = "",
+                LicenseResource = new License(),
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = licensesClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = licensesClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateRequestObjectAsync()
+        {
+            // Snippet: UpdateAsync(UpdateLicenseRequest, CallSettings)
+            // Additional: UpdateAsync(UpdateLicenseRequest, CancellationToken)
+            // Create client
+            LicensesClient licensesClient = await LicensesClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateLicenseRequest request = new UpdateLicenseRequest
+            {
+                RequestId = "",
+                License = "",
+                Project = "",
+                LicenseResource = new License(),
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await licensesClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await licensesClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Update</summary>
+        public void Update()
+        {
+            // Snippet: Update(string, string, License, CallSettings)
+            // Create client
+            LicensesClient licensesClient = LicensesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string license = "";
+            License licenseResource = new License();
+            // Make the request
+            lro::Operation<Operation, Operation> response = licensesClient.Update(project, license, licenseResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = licensesClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateAsync()
+        {
+            // Snippet: UpdateAsync(string, string, License, CallSettings)
+            // Additional: UpdateAsync(string, string, License, CancellationToken)
+            // Create client
+            LicensesClient licensesClient = await LicensesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string license = "";
+            License licenseResource = new License();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await licensesClient.UpdateAsync(project, license, licenseResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await licensesClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
