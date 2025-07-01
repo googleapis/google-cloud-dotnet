@@ -2870,6 +2870,36 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.GeminiDataAnalytics.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data Analytics API with Gemini",
+      "productUrl": "https://cloud.google.com/gemini/docs/conversational-analytics-api/overview",
+      "description": "Recommended Google client library to access the Conversational Analytics API (v1beta), which enables developers to build an artificial intelligence (AI)-powered chat interface, or data agent, that answers questions about structured data in BigQuery, Looker, and Looker Studio using natural language.",
+      "tags": [
+        "gemini",
+        "ai",
+        "analytics",
+        "conversation",
+        "chat",
+        "agent",
+        "bigquery",
+        "looker"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.4.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/geminidataanalytics/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "geminidataanalytics",
+      "serviceConfigFile": "geminidataanalytics_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.GkeBackup.V1",
       "version": "2.8.0",
       "type": "grpc",
