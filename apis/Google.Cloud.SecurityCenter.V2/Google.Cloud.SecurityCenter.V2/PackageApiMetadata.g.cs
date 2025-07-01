@@ -56,11 +56,14 @@ namespace Google.Cloud.SecurityCenter.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AccessReflection.Descriptor;
+            yield return AffectedResourcesReflection.Descriptor;
+            yield return AiModelReflection.Descriptor;
             yield return ApplicationReflection.Descriptor;
             yield return AttackExposureReflection.Descriptor;
             yield return AttackPathReflection.Descriptor;
             yield return BackupDisasterRecoveryReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
+            yield return ChokepointReflection.Descriptor;
             yield return CloudArmorReflection.Descriptor;
             yield return CloudDlpDataProfileReflection.Descriptor;
             yield return CloudDlpInspectionReflection.Descriptor;
@@ -81,6 +84,8 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return GroupMembershipReflection.Descriptor;
             yield return IamBindingReflection.Descriptor;
             yield return IndicatorReflection.Descriptor;
+            yield return IpRulesReflection.Descriptor;
+            yield return JobReflection.Descriptor;
             yield return KernelRootkitReflection.Descriptor;
             yield return KubernetesReflection.Descriptor;
             yield return LabelReflection.Descriptor;
@@ -88,6 +93,7 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return LogEntryReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
             yield return MuteConfigReflection.Descriptor;
+            yield return NetworkReflection.Descriptor;
             yield return NotebookReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
@@ -102,6 +108,7 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return SourceReflection.Descriptor;
             yield return ToxicCombinationReflection.Descriptor;
             yield return ValuedResourceReflection.Descriptor;
+            yield return VertexAiReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

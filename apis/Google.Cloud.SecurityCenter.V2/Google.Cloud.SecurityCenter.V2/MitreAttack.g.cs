@@ -25,7 +25,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvbWl0cmVfYXR0YWNr",
-            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIi8RMKC01p",
+            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIiyiUKC01p",
             "dHJlQXR0YWNrEkoKDnByaW1hcnlfdGFjdGljGAEgASgOMjIuZ29vZ2xlLmNs",
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYyLk1pdHJlQXR0YWNrLlRhY3RpYxJRChJw",
             "cmltYXJ5X3RlY2huaXF1ZXMYAiADKA4yNS5nb29nbGUuY2xvdWQuc2VjdXJp",
@@ -40,54 +40,105 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "R0VfRVNDQUxBVElPThAIEhMKD0RFRkVOU0VfRVZBU0lPThAHEhUKEUNSRURF",
             "TlRJQUxfQUNDRVNTEAkSDQoJRElTQ09WRVJZEAoSFAoQTEFURVJBTF9NT1ZF",
             "TUVOVBALEg4KCkNPTExFQ1RJT04QDBIXChNDT01NQU5EX0FORF9DT05UUk9M",
-            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4i1A4KCVRlY2huaXF1",
-            "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABIQCgxNQVNRVUVSQURJTkcQ",
-            "MRIlCiFNQVRDSF9MRUdJVElNQVRFX05BTUVfT1JfTE9DQVRJT04QMhIoCiRC",
-            "T09UX09SX0xPR09OX0lOSVRJQUxJWkFUSU9OX1NDUklQVFMQJRIRCg1TVEFS",
-            "VFVQX0lURU1TECYSHQoZTkVUV09SS19TRVJWSUNFX0RJU0NPVkVSWRAgEhUK",
-            "EVBST0NFU1NfRElTQ09WRVJZEDgSJQohQ09NTUFORF9BTkRfU0NSSVBUSU5H",
-            "X0lOVEVSUFJFVEVSEAYSDgoKVU5JWF9TSEVMTBAHEgoKBlBZVEhPThA7EikK",
-            "JUVYUExPSVRBVElPTl9GT1JfUFJJVklMRUdFX0VTQ0FMQVRJT04QPxIfChtQ",
-            "RVJNSVNTSU9OX0dST1VQU19ESVNDT1ZFUlkQEhIQCgxDTE9VRF9HUk9VUFMQ",
-            "ExIjCh9JTkRJQ0FUT1JfUkVNT1ZBTF9GSUxFX0RFTEVUSU9OEEASHgoaQVBQ",
-            "TElDQVRJT05fTEFZRVJfUFJPVE9DT0wQLRIHCgNETlMQLhIdChlTT0ZUV0FS",
-            "RV9ERVBMT1lNRU5UX1RPT0xTEC8SEgoOVkFMSURfQUNDT1VOVFMQDhIUChBE",
-            "RUZBVUxUX0FDQ09VTlRTECMSEgoOTE9DQUxfQUNDT1VOVFMQDxISCg5DTE9V",
-            "RF9BQ0NPVU5UUxAQEgkKBVBST1hZEAkSEgoORVhURVJOQUxfUFJPWFkQChIT",
-            "Cg9NVUxUSV9IT1BfUFJPWFkQCxIYChRBQ0NPVU5UX01BTklQVUxBVElPThAW",
-            "EiAKHEFERElUSU9OQUxfQ0xPVURfQ1JFREVOVElBTFMQKBIXChNTU0hfQVVU",
-            "SE9SSVpFRF9LRVlTEBcSJgoiQURESVRJT05BTF9DT05UQUlORVJfQ0xVU1RF",
-            "Ul9ST0xFUxA6EhkKFUlOR1JFU1NfVE9PTF9UUkFOU0ZFUhADEg4KCk5BVElW",
-            "RV9BUEkQBBIPCgtCUlVURV9GT1JDRRAsEhIKDlNIQVJFRF9NT0RVTEVTEAUS",
-            "HQoZQUNDRVNTX1RPS0VOX01BTklQVUxBVElPThAhEiAKHFRPS0VOX0lNUEVS",
-            "U09OQVRJT05fT1JfVEhFRlQQJxIlCiFFWFBMT0lUX1BVQkxJQ19GQUNJTkdf",
-            "QVBQTElDQVRJT04QGxIeChpET01BSU5fUE9MSUNZX01PRElGSUNBVElPThAe",
-            "EhQKEERBVEFfREVTVFJVQ1RJT04QHRIQCgxTRVJWSUNFX1NUT1AQNBIbChdJ",
-            "TkhJQklUX1NZU1RFTV9SRUNPVkVSWRAkEhYKElJFU09VUkNFX0hJSkFDS0lO",
-            "RxAIEh0KGU5FVFdPUktfREVOSUFMX09GX1NFUlZJQ0UQERIbChdDTE9VRF9T",
-            "RVJWSUNFX0RJU0NPVkVSWRAwEiIKHlNURUFMX0FQUExJQ0FUSU9OX0FDQ0VT",
-            "U19UT0tFThAqEhoKFkFDQ09VTlRfQUNDRVNTX1JFTU9WQUwQMxIcChhTVEVB",
-            "TF9XRUJfU0VTU0lPTl9DT09LSUUQGRIjCh9DUkVBVEVfT1JfTU9ESUZZX1NZ",
-            "U1RFTV9QUk9DRVNTEBgSHQoZRVZFTlRfVFJJR0dFUkVEX0VYRUNVVElPThBB",
-            "EiUKIUFCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hBTklTTRAiEhkKFVVO",
-            "U0VDVVJFRF9DUkVERU5USUFMUxANEiEKHU1PRElGWV9BVVRIRU5USUNBVElP",
-            "Tl9QUk9DRVNTEBwSEwoPSU1QQUlSX0RFRkVOU0VTEB8SGwoXRElTQUJMRV9P",
-            "Ul9NT0RJRllfVE9PTFMQNxIhCh1FWEZJTFRSQVRJT05fT1ZFUl9XRUJfU0VS",
-            "VklDRRAUEiEKHUVYRklMVFJBVElPTl9UT19DTE9VRF9TVE9SQUdFEBUSFgoS",
-            "RFlOQU1JQ19SRVNPTFVUSU9OEAwSGQoVTEFURVJBTF9UT09MX1RSQU5TRkVS",
-            "ECkSJwojTU9ESUZZX0NMT1VEX0NPTVBVVEVfSU5GUkFTVFJVQ1RVUkUQGhIT",
-            "Cg9DUkVBVEVfU05BUFNIT1QQNhIiCh5DTE9VRF9JTkZSQVNUUlVDVFVSRV9E",
-            "SVNDT1ZFUlkQNRIXChNPQlRBSU5fQ0FQQUJJTElUSUVTECsSEwoPQUNUSVZF",
-            "X1NDQU5OSU5HEAESFgoSU0NBTk5JTkdfSVBfQkxPQ0tTEAISJAogQ09OVEFJ",
-            "TkVSX0FETUlOSVNUUkFUSU9OX0NPTU1BTkQQPBIUChBERVBMT1lfQ09OVEFJ",
-            "TkVSEEISEgoORVNDQVBFX1RPX0hPU1QQPRIkCiBDT05UQUlORVJfQU5EX1JF",
-            "U09VUkNFX0RJU0NPVkVSWRA5Ei4KKlNURUFMX09SX0ZPUkdFX0FVVEhFTlRJ",
-            "Q0FUSU9OX0NFUlRJRklDQVRFUxA+QuoBCiJjb20uZ29vZ2xlLmNsb3VkLnNl",
-            "Y3VyaXR5Y2VudGVyLnYyQhBNaXRyZUF0dGFja1Byb3RvUAFaSmNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50",
-            "ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5",
-            "Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIh",
-            "R29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
+            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4irSAKCVRlY2huaXF1",
+            "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABIUChBEQVRBX09CRlVTQ0FU",
+            "SU9OEEYSIgoeREFUQV9PQkZVU0NBVElPTl9TVEVHQU5PR1JBUEhZEEcSGQoV",
+            "T1NfQ1JFREVOVElBTF9EVU1QSU5HEHISKQolT1NfQ1JFREVOVElBTF9EVU1Q",
+            "SU5HX1BST0NfRklMRVNZU1RFTRBzEjUKMU9TX0NSRURFTlRJQUxfRFVNUElO",
+            "R19FVENfUEFTU1dPUkRfQU5EX0VUQ19TSEFET1cQehIaChZEQVRBX0ZST01f",
+            "TE9DQUxfU1lTVEVNEHUSGgoWQVVUT01BVEVEX0VYRklMVFJBVElPThBEEhwK",
+            "GE9CRlVTQ0FURURfRklMRVNfT1JfSU5GTxBIEhEKDVNURUdBTk9HUkFQSFkQ",
+            "SRIaChZDT01QSUxFX0FGVEVSX0RFTElWRVJZEEoSFwoTQ09NTUFORF9PQkZV",
+            "U0NBVElPThBLEhYKElNDSEVEVUxFRF9UUkFOU0ZFUhB4Eh8KG1NZU1RFTV9P",
+            "V05FUl9VU0VSX0RJU0NPVkVSWRB2EhAKDE1BU1FVRVJBRElORxAxEiUKIU1B",
+            "VENIX0xFR0lUSU1BVEVfTkFNRV9PUl9MT0NBVElPThAyEigKJEJPT1RfT1Jf",
+            "TE9HT05fSU5JVElBTElaQVRJT05fU0NSSVBUUxAlEhEKDVNUQVJUVVBfSVRF",
+            "TVMQJhIdChlORVRXT1JLX1NFUlZJQ0VfRElTQ09WRVJZECASFgoSU0NIRURV",
+            "TEVEX1RBU0tfSk9CEFkSGwoXU0NIRURVTEVEX1RBU0tfSk9CX0NST04QdxIf",
+            "ChtDT05UQUlORVJfT1JDSEVTVFJBVElPTl9KT0IQWhIVChFQUk9DRVNTX0lO",
+            "SkVDVElPThBdEhEKDUlOUFVUX0NBUFRVUkUQZxIcChhJTlBVVF9DQVBUVVJF",
+            "X0tFWUxPR0dJTkcQaBIVChFQUk9DRVNTX0RJU0NPVkVSWRA4EiUKIUNPTU1B",
+            "TkRfQU5EX1NDUklQVElOR19JTlRFUlBSRVRFUhAGEg4KClVOSVhfU0hFTEwQ",
+            "BxIKCgZQWVRIT04QOxIpCiVFWFBMT0lUQVRJT05fRk9SX1BSSVZJTEVHRV9F",
+            "U0NBTEFUSU9OED8SHwobUEVSTUlTU0lPTl9HUk9VUFNfRElTQ09WRVJZEBIS",
+            "EAoMQ0xPVURfR1JPVVBTEBMSFQoRSU5ESUNBVE9SX1JFTU9WQUwQexI0CjBJ",
+            "TkRJQ0FUT1JfUkVNT1ZBTF9DTEVBUl9MSU5VWF9PUl9NQUNfU1lTVEVNX0xP",
+            "R1MQfBIrCidJTkRJQ0FUT1JfUkVNT1ZBTF9DTEVBUl9DT01NQU5EX0hJU1RP",
+            "UlkQfRIjCh9JTkRJQ0FUT1JfUkVNT1ZBTF9GSUxFX0RFTEVUSU9OEEASIAob",
+            "SU5ESUNBVE9SX1JFTU9WQUxfVElNRVNUT01QEIABEigKJElORElDQVRPUl9S",
+            "RU1PVkFMX0NMRUFSX01BSUxCT1hfREFUQRB+Eh4KGkFQUExJQ0FUSU9OX0xB",
+            "WUVSX1BST1RPQ09MEC0SBwoDRE5TEC4SHQoZU09GVFdBUkVfREVQTE9ZTUVO",
+            "VF9UT09MUxAvEhIKDlZBTElEX0FDQ09VTlRTEA4SFAoQREVGQVVMVF9BQ0NP",
+            "VU5UUxAjEhIKDkxPQ0FMX0FDQ09VTlRTEA8SEgoOQ0xPVURfQUNDT1VOVFMQ",
+            "EBIgChxGSUxFX0FORF9ESVJFQ1RPUllfRElTQ09WRVJZEHkSIwofQUNDT1VO",
+            "VF9ESVNDT1ZFUllfTE9DQUxfQUNDT1VOVBB0EgkKBVBST1hZEAkSEgoORVhU",
+            "RVJOQUxfUFJPWFkQChITCg9NVUxUSV9IT1BfUFJPWFkQCxIYChRBQ0NPVU5U",
+            "X01BTklQVUxBVElPThAWEiAKHEFERElUSU9OQUxfQ0xPVURfQ1JFREVOVElB",
+            "TFMQKBIaChZBRERJVElPTkFMX0NMT1VEX1JPTEVTEEMSFwoTU1NIX0FVVEhP",
+            "UklaRURfS0VZUxAXEiYKIkFERElUSU9OQUxfQ09OVEFJTkVSX0NMVVNURVJf",
+            "Uk9MRVMQOhIYChRNVUxUSV9TVEFHRV9DSEFOTkVMUxBMEhkKFUlOR1JFU1Nf",
+            "VE9PTF9UUkFOU0ZFUhADEg4KCk5BVElWRV9BUEkQBBIPCgtCUlVURV9GT1JD",
+            "RRAsEhgKFEFVVE9NQVRFRF9DT0xMRUNUSU9OEF4SEgoOU0hBUkVEX01PRFVM",
+            "RVMQBRIRCg1EQVRBX0VOQ09ESU5HEE0SFQoRU1RBTkRBUkRfRU5DT0RJTkcQ",
+            "ThIdChlBQ0NFU1NfVE9LRU5fTUFOSVBVTEFUSU9OECESIAocVE9LRU5fSU1Q",
+            "RVJTT05BVElPTl9PUl9USEVGVBAnEhIKDkNSRUFURV9BQ0NPVU5UEE8SEQoN",
+            "TE9DQUxfQUNDT1VOVBBQEiQKIERFT0JGVVNDQVRFX0RFQ09ERV9GSUxFU19P",
+            "Ul9JTkZPEF8SJQohRVhQTE9JVF9QVUJMSUNfRkFDSU5HX0FQUExJQ0FUSU9O",
+            "EBsSHAoXU1VQUExZX0NIQUlOX0NPTVBST01JU0UQgQESOwo2Q09NUFJPTUlT",
+            "RV9TT0ZUV0FSRV9ERVBFTkRFTkNJRVNfQU5EX0RFVkVMT1BNRU5UX1RPT0xT",
+            "EIIBEiYKIUVYUExPSVRBVElPTl9GT1JfQ0xJRU5UX0VYRUNVVElPThCGARIS",
+            "Cg5VU0VSX0VYRUNVVElPThBFEj4KOUxJTlVYX0FORF9NQUNfRklMRV9BTkRf",
+            "RElSRUNUT1JZX1BFUk1JU1NJT05TX01PRElGSUNBVElPThCHARIeChpET01B",
+            "SU5fUE9MSUNZX01PRElGSUNBVElPThAeEhQKEERBVEFfREVTVFJVQ1RJT04Q",
+            "HRIeChlEQVRBX0VOQ1JZUFRFRF9GT1JfSU1QQUNUEIQBEhAKDFNFUlZJQ0Vf",
+            "U1RPUBA0EhsKF0lOSElCSVRfU1lTVEVNX1JFQ09WRVJZECQSFwoTRklSTVdB",
+            "UkVfQ09SUlVQVElPThBREhYKElJFU09VUkNFX0hJSkFDS0lORxAIEh0KGU5F",
+            "VFdPUktfREVOSUFMX09GX1NFUlZJQ0UQERIbChdDTE9VRF9TRVJWSUNFX0RJ",
+            "U0NPVkVSWRAwEiIKHlNURUFMX0FQUExJQ0FUSU9OX0FDQ0VTU19UT0tFThAq",
+            "EhoKFkFDQ09VTlRfQUNDRVNTX1JFTU9WQUwQMxIiCh5UUkFOU0ZFUl9EQVRB",
+            "X1RPX0NMT1VEX0FDQ09VTlQQWxIcChhTVEVBTF9XRUJfU0VTU0lPTl9DT09L",
+            "SUUQGRIjCh9DUkVBVEVfT1JfTU9ESUZZX1NZU1RFTV9QUk9DRVNTEBgSHQoZ",
+            "RVZFTlRfVFJJR0dFUkVEX0VYRUNVVElPThBBEiUKIUJPT1RfT1JfTE9HT05f",
+            "QVVUT1NUQVJUX0VYRUNVVElPThBSEiEKHUtFUk5FTF9NT0RVTEVTX0FORF9F",
+            "WFRFTlNJT05TEFMSGQoVU0hPUlRDVVRfTU9ESUZJQ0FUSU9OEH8SJQohQUJV",
+            "U0VfRUxFVkFUSU9OX0NPTlRST0xfTUVDSEFOSVNNECISOAozQUJVU0VfRUxF",
+            "VkFUSU9OX0NPTlRST0xfTUVDSEFOSVNNX1NFVFVJRF9BTkRfU0VUR0lEEIgB",
+            "EjsKN0FCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hBTklTTV9TVURPX0FO",
+            "RF9TVURPX0NBQ0hJTkcQbRIZChVVTlNFQ1VSRURfQ1JFREVOVElBTFMQDRIY",
+            "ChRDUkVERU5USUFMU19JTl9GSUxFUxBpEhAKDEJBU0hfSElTVE9SWRBgEhAK",
+            "DFBSSVZBVEVfS0VZUxBhEhkKFVNVQlZFUlRfVFJVU1RfQ09OVFJPTBBqEhwK",
+            "GElOU1RBTExfUk9PVF9DRVJUSUZJQ0FURRBrEiMKH0NPTVBST01JU0VfSE9T",
+            "VF9TT0ZUV0FSRV9CSU5BUlkQVBIkCiBDUkVERU5USUFMU19GUk9NX1BBU1NX",
+            "T1JEX1NUT1JFUxBiEiEKHU1PRElGWV9BVVRIRU5USUNBVElPTl9QUk9DRVNT",
+            "EBwSJAogUExVR0dBQkxFX0FVVEhFTlRJQ0FUSU9OX01PRFVMRVMQbBIgChtN",
+            "VUxUSV9GQUNUT1JfQVVUSEVOVElDQVRJT04QiQESEwoPSU1QQUlSX0RFRkVO",
+            "U0VTEB8SGwoXRElTQUJMRV9PUl9NT0RJRllfVE9PTFMQNxIWChJJTkRJQ0FU",
+            "T1JfQkxPQ0tJTkcQbhIoCiRESVNBQkxFX09SX01PRElGWV9MSU5VWF9BVURJ",
+            "VF9TWVNURU0QbxISCg5ISURFX0FSVElGQUNUUxBVEiAKHEhJRERFTl9GSUxF",
+            "U19BTkRfRElSRUNUT1JJRVMQVhIQCgxISURERU5fVVNFUlMQVxIhCh1FWEZJ",
+            "TFRSQVRJT05fT1ZFUl9XRUJfU0VSVklDRRAUEiEKHUVYRklMVFJBVElPTl9U",
+            "T19DTE9VRF9TVE9SQUdFEBUSFgoSRFlOQU1JQ19SRVNPTFVUSU9OEAwSGQoV",
+            "TEFURVJBTF9UT09MX1RSQU5TRkVSECkSGQoVSElKQUNLX0VYRUNVVElPTl9G",
+            "TE9XEHASMgouSElKQUNLX0VYRUNVVElPTl9GTE9XX0RZTkFNSUNfTElOS0VS",
+            "X0hJSkFDS0lORxBxEicKI01PRElGWV9DTE9VRF9DT01QVVRFX0lORlJBU1RS",
+            "VUNUVVJFEBoSEwoPQ1JFQVRFX1NOQVBTSE9UEDYSIgoeQ0xPVURfSU5GUkFT",
+            "VFJVQ1RVUkVfRElTQ09WRVJZEDUSGAoUREVWRUxPUF9DQVBBQklMSVRJRVMQ",
+            "YxIgChxERVZFTE9QX0NBUEFCSUxJVElFU19NQUxXQVJFEGQSFwoTT0JUQUlO",
+            "X0NBUEFCSUxJVElFUxArEh8KG09CVEFJTl9DQVBBQklMSVRJRVNfTUFMV0FS",
+            "RRBlEigKI09CVEFJTl9DQVBBQklMSVRJRVNfVlVMTkVSQUJJTElUSUVTEIUB",
+            "EhMKD0FDVElWRV9TQ0FOTklORxABEhYKElNDQU5OSU5HX0lQX0JMT0NLUxAC",
+            "EhYKElNUQUdFX0NBUEFCSUxJVElFUxBYEhIKDlVQTE9BRF9NQUxXQVJFEGYS",
+            "JAogQ09OVEFJTkVSX0FETUlOSVNUUkFUSU9OX0NPTU1BTkQQPBIUChBERVBM",
+            "T1lfQ09OVEFJTkVSEEISEgoORVNDQVBFX1RPX0hPU1QQPRIkCiBDT05UQUlO",
+            "RVJfQU5EX1JFU09VUkNFX0RJU0NPVkVSWRA5EhsKF1JFRkxFQ1RJVkVfQ09E",
+            "RV9MT0FESU5HEFwSLgoqU1RFQUxfT1JfRk9SR0VfQVVUSEVOVElDQVRJT05f",
+            "Q0VSVElGSUNBVEVTED4SFAoPRklOQU5DSUFMX1RIRUZUEIMBQuoBCiJjb20u",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQhBNaXRyZUF0dGFja1By",
+            "b3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBp",
+            "djIvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xl",
+            "LkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNlY3Vy",
+            "aXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6",
+            "OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -505,14 +556,66 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
 
       /// <summary>
-      /// MITRE ATT&amp;CK techniques that can be referenced by SCC findings.
-      /// See: https://attack.mitre.org/techniques/enterprise/
+      /// MITRE ATT&amp;CK techniques that can be referenced by Security Command Center
+      /// findings. See: https://attack.mitre.org/techniques/enterprise/
       /// </summary>
       public enum Technique {
         /// <summary>
         /// Unspecified value.
         /// </summary>
         [pbr::OriginalName("TECHNIQUE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// T1001
+        /// </summary>
+        [pbr::OriginalName("DATA_OBFUSCATION")] DataObfuscation = 70,
+        /// <summary>
+        /// T1001.002
+        /// </summary>
+        [pbr::OriginalName("DATA_OBFUSCATION_STEGANOGRAPHY")] DataObfuscationSteganography = 71,
+        /// <summary>
+        /// T1003
+        /// </summary>
+        [pbr::OriginalName("OS_CREDENTIAL_DUMPING")] OsCredentialDumping = 114,
+        /// <summary>
+        /// T1003.007
+        /// </summary>
+        [pbr::OriginalName("OS_CREDENTIAL_DUMPING_PROC_FILESYSTEM")] OsCredentialDumpingProcFilesystem = 115,
+        /// <summary>
+        /// T1003.008
+        /// </summary>
+        [pbr::OriginalName("OS_CREDENTIAL_DUMPING_ETC_PASSWORD_AND_ETC_SHADOW")] OsCredentialDumpingEtcPasswordAndEtcShadow = 122,
+        /// <summary>
+        /// T1005
+        /// </summary>
+        [pbr::OriginalName("DATA_FROM_LOCAL_SYSTEM")] DataFromLocalSystem = 117,
+        /// <summary>
+        /// T1020
+        /// </summary>
+        [pbr::OriginalName("AUTOMATED_EXFILTRATION")] AutomatedExfiltration = 68,
+        /// <summary>
+        /// T1027
+        /// </summary>
+        [pbr::OriginalName("OBFUSCATED_FILES_OR_INFO")] ObfuscatedFilesOrInfo = 72,
+        /// <summary>
+        /// T1027.003
+        /// </summary>
+        [pbr::OriginalName("STEGANOGRAPHY")] Steganography = 73,
+        /// <summary>
+        /// T1027.004
+        /// </summary>
+        [pbr::OriginalName("COMPILE_AFTER_DELIVERY")] CompileAfterDelivery = 74,
+        /// <summary>
+        /// T1027.010
+        /// </summary>
+        [pbr::OriginalName("COMMAND_OBFUSCATION")] CommandObfuscation = 75,
+        /// <summary>
+        /// T1029
+        /// </summary>
+        [pbr::OriginalName("SCHEDULED_TRANSFER")] ScheduledTransfer = 120,
+        /// <summary>
+        /// T1033
+        /// </summary>
+        [pbr::OriginalName("SYSTEM_OWNER_USER_DISCOVERY")] SystemOwnerUserDiscovery = 118,
         /// <summary>
         /// T1036
         /// </summary>
@@ -533,6 +636,30 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// T1046
         /// </summary>
         [pbr::OriginalName("NETWORK_SERVICE_DISCOVERY")] NetworkServiceDiscovery = 32,
+        /// <summary>
+        /// T1053
+        /// </summary>
+        [pbr::OriginalName("SCHEDULED_TASK_JOB")] ScheduledTaskJob = 89,
+        /// <summary>
+        /// T1053.003
+        /// </summary>
+        [pbr::OriginalName("SCHEDULED_TASK_JOB_CRON")] ScheduledTaskJobCron = 119,
+        /// <summary>
+        /// T1053.007
+        /// </summary>
+        [pbr::OriginalName("CONTAINER_ORCHESTRATION_JOB")] ContainerOrchestrationJob = 90,
+        /// <summary>
+        /// T1055
+        /// </summary>
+        [pbr::OriginalName("PROCESS_INJECTION")] ProcessInjection = 93,
+        /// <summary>
+        /// T1056
+        /// </summary>
+        [pbr::OriginalName("INPUT_CAPTURE")] InputCapture = 103,
+        /// <summary>
+        /// T1056.001
+        /// </summary>
+        [pbr::OriginalName("INPUT_CAPTURE_KEYLOGGING")] InputCaptureKeylogging = 104,
         /// <summary>
         /// T1057
         /// </summary>
@@ -562,9 +689,29 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("CLOUD_GROUPS")] CloudGroups = 19,
         /// <summary>
+        /// T1070
+        /// </summary>
+        [pbr::OriginalName("INDICATOR_REMOVAL")] IndicatorRemoval = 123,
+        /// <summary>
+        /// T1070.002
+        /// </summary>
+        [pbr::OriginalName("INDICATOR_REMOVAL_CLEAR_LINUX_OR_MAC_SYSTEM_LOGS")] IndicatorRemovalClearLinuxOrMacSystemLogs = 124,
+        /// <summary>
+        /// T1070.003
+        /// </summary>
+        [pbr::OriginalName("INDICATOR_REMOVAL_CLEAR_COMMAND_HISTORY")] IndicatorRemovalClearCommandHistory = 125,
+        /// <summary>
         /// T1070.004
         /// </summary>
         [pbr::OriginalName("INDICATOR_REMOVAL_FILE_DELETION")] IndicatorRemovalFileDeletion = 64,
+        /// <summary>
+        /// T1070.006
+        /// </summary>
+        [pbr::OriginalName("INDICATOR_REMOVAL_TIMESTOMP")] IndicatorRemovalTimestomp = 128,
+        /// <summary>
+        /// T1070.008
+        /// </summary>
+        [pbr::OriginalName("INDICATOR_REMOVAL_CLEAR_MAILBOX_DATA")] IndicatorRemovalClearMailboxData = 126,
         /// <summary>
         /// T1071
         /// </summary>
@@ -594,6 +741,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("CLOUD_ACCOUNTS")] CloudAccounts = 16,
         /// <summary>
+        /// T1083
+        /// </summary>
+        [pbr::OriginalName("FILE_AND_DIRECTORY_DISCOVERY")] FileAndDirectoryDiscovery = 121,
+        /// <summary>
+        /// T1087.001
+        /// </summary>
+        [pbr::OriginalName("ACCOUNT_DISCOVERY_LOCAL_ACCOUNT")] AccountDiscoveryLocalAccount = 116,
+        /// <summary>
         /// T1090
         /// </summary>
         [pbr::OriginalName("PROXY")] Proxy = 9,
@@ -614,6 +769,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("ADDITIONAL_CLOUD_CREDENTIALS")] AdditionalCloudCredentials = 40,
         /// <summary>
+        /// T1098.003
+        /// </summary>
+        [pbr::OriginalName("ADDITIONAL_CLOUD_ROLES")] AdditionalCloudRoles = 67,
+        /// <summary>
         /// T1098.004
         /// </summary>
         [pbr::OriginalName("SSH_AUTHORIZED_KEYS")] SshAuthorizedKeys = 23,
@@ -621,6 +780,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// T1098.006
         /// </summary>
         [pbr::OriginalName("ADDITIONAL_CONTAINER_CLUSTER_ROLES")] AdditionalContainerClusterRoles = 58,
+        /// <summary>
+        /// T1104
+        /// </summary>
+        [pbr::OriginalName("MULTI_STAGE_CHANNELS")] MultiStageChannels = 76,
         /// <summary>
         /// T1105
         /// </summary>
@@ -634,9 +797,21 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("BRUTE_FORCE")] BruteForce = 44,
         /// <summary>
+        /// T1119
+        /// </summary>
+        [pbr::OriginalName("AUTOMATED_COLLECTION")] AutomatedCollection = 94,
+        /// <summary>
         /// T1129
         /// </summary>
         [pbr::OriginalName("SHARED_MODULES")] SharedModules = 5,
+        /// <summary>
+        /// T1132
+        /// </summary>
+        [pbr::OriginalName("DATA_ENCODING")] DataEncoding = 77,
+        /// <summary>
+        /// T1132.001
+        /// </summary>
+        [pbr::OriginalName("STANDARD_ENCODING")] StandardEncoding = 78,
         /// <summary>
         /// T1134
         /// </summary>
@@ -646,9 +821,41 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("TOKEN_IMPERSONATION_OR_THEFT")] TokenImpersonationOrTheft = 39,
         /// <summary>
+        /// T1136
+        /// </summary>
+        [pbr::OriginalName("CREATE_ACCOUNT")] CreateAccount = 79,
+        /// <summary>
+        /// T1136.001
+        /// </summary>
+        [pbr::OriginalName("LOCAL_ACCOUNT")] LocalAccount = 80,
+        /// <summary>
+        /// T1140
+        /// </summary>
+        [pbr::OriginalName("DEOBFUSCATE_DECODE_FILES_OR_INFO")] DeobfuscateDecodeFilesOrInfo = 95,
+        /// <summary>
         /// T1190
         /// </summary>
         [pbr::OriginalName("EXPLOIT_PUBLIC_FACING_APPLICATION")] ExploitPublicFacingApplication = 27,
+        /// <summary>
+        /// T1195
+        /// </summary>
+        [pbr::OriginalName("SUPPLY_CHAIN_COMPROMISE")] SupplyChainCompromise = 129,
+        /// <summary>
+        /// T1195.001
+        /// </summary>
+        [pbr::OriginalName("COMPROMISE_SOFTWARE_DEPENDENCIES_AND_DEVELOPMENT_TOOLS")] CompromiseSoftwareDependenciesAndDevelopmentTools = 130,
+        /// <summary>
+        /// T1203
+        /// </summary>
+        [pbr::OriginalName("EXPLOITATION_FOR_CLIENT_EXECUTION")] ExploitationForClientExecution = 134,
+        /// <summary>
+        /// T1204
+        /// </summary>
+        [pbr::OriginalName("USER_EXECUTION")] UserExecution = 69,
+        /// <summary>
+        /// T1222.002
+        /// </summary>
+        [pbr::OriginalName("LINUX_AND_MAC_FILE_AND_DIRECTORY_PERMISSIONS_MODIFICATION")] LinuxAndMacFileAndDirectoryPermissionsModification = 135,
         /// <summary>
         /// T1484
         /// </summary>
@@ -658,6 +865,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("DATA_DESTRUCTION")] DataDestruction = 29,
         /// <summary>
+        /// T1486
+        /// </summary>
+        [pbr::OriginalName("DATA_ENCRYPTED_FOR_IMPACT")] DataEncryptedForImpact = 132,
+        /// <summary>
         /// T1489
         /// </summary>
         [pbr::OriginalName("SERVICE_STOP")] ServiceStop = 52,
@@ -665,6 +876,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// T1490
         /// </summary>
         [pbr::OriginalName("INHIBIT_SYSTEM_RECOVERY")] InhibitSystemRecovery = 36,
+        /// <summary>
+        /// T1495
+        /// </summary>
+        [pbr::OriginalName("FIRMWARE_CORRUPTION")] FirmwareCorruption = 81,
         /// <summary>
         /// T1496
         /// </summary>
@@ -686,6 +901,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("ACCOUNT_ACCESS_REMOVAL")] AccountAccessRemoval = 51,
         /// <summary>
+        /// T1537
+        /// </summary>
+        [pbr::OriginalName("TRANSFER_DATA_TO_CLOUD_ACCOUNT")] TransferDataToCloudAccount = 91,
+        /// <summary>
         /// T1539
         /// </summary>
         [pbr::OriginalName("STEAL_WEB_SESSION_COOKIE")] StealWebSessionCookie = 25,
@@ -698,17 +917,73 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("EVENT_TRIGGERED_EXECUTION")] EventTriggeredExecution = 65,
         /// <summary>
+        /// T1547
+        /// </summary>
+        [pbr::OriginalName("BOOT_OR_LOGON_AUTOSTART_EXECUTION")] BootOrLogonAutostartExecution = 82,
+        /// <summary>
+        /// T1547.006
+        /// </summary>
+        [pbr::OriginalName("KERNEL_MODULES_AND_EXTENSIONS")] KernelModulesAndExtensions = 83,
+        /// <summary>
+        /// T1547.009
+        /// </summary>
+        [pbr::OriginalName("SHORTCUT_MODIFICATION")] ShortcutModification = 127,
+        /// <summary>
         /// T1548
         /// </summary>
         [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM")] AbuseElevationControlMechanism = 34,
+        /// <summary>
+        /// T1548.001
+        /// </summary>
+        [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM_SETUID_AND_SETGID")] AbuseElevationControlMechanismSetuidAndSetgid = 136,
+        /// <summary>
+        /// T1548.003
+        /// </summary>
+        [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM_SUDO_AND_SUDO_CACHING")] AbuseElevationControlMechanismSudoAndSudoCaching = 109,
         /// <summary>
         /// T1552
         /// </summary>
         [pbr::OriginalName("UNSECURED_CREDENTIALS")] UnsecuredCredentials = 13,
         /// <summary>
+        /// T1552.001
+        /// </summary>
+        [pbr::OriginalName("CREDENTIALS_IN_FILES")] CredentialsInFiles = 105,
+        /// <summary>
+        /// T1552.003
+        /// </summary>
+        [pbr::OriginalName("BASH_HISTORY")] BashHistory = 96,
+        /// <summary>
+        /// T1552.004
+        /// </summary>
+        [pbr::OriginalName("PRIVATE_KEYS")] PrivateKeys = 97,
+        /// <summary>
+        /// T1553
+        /// </summary>
+        [pbr::OriginalName("SUBVERT_TRUST_CONTROL")] SubvertTrustControl = 106,
+        /// <summary>
+        /// T1553.004
+        /// </summary>
+        [pbr::OriginalName("INSTALL_ROOT_CERTIFICATE")] InstallRootCertificate = 107,
+        /// <summary>
+        /// T1554
+        /// </summary>
+        [pbr::OriginalName("COMPROMISE_HOST_SOFTWARE_BINARY")] CompromiseHostSoftwareBinary = 84,
+        /// <summary>
+        /// T1555
+        /// </summary>
+        [pbr::OriginalName("CREDENTIALS_FROM_PASSWORD_STORES")] CredentialsFromPasswordStores = 98,
+        /// <summary>
         /// T1556
         /// </summary>
         [pbr::OriginalName("MODIFY_AUTHENTICATION_PROCESS")] ModifyAuthenticationProcess = 28,
+        /// <summary>
+        /// T1556.003
+        /// </summary>
+        [pbr::OriginalName("PLUGGABLE_AUTHENTICATION_MODULES")] PluggableAuthenticationModules = 108,
+        /// <summary>
+        /// T1556.006
+        /// </summary>
+        [pbr::OriginalName("MULTI_FACTOR_AUTHENTICATION")] MultiFactorAuthentication = 137,
         /// <summary>
         /// T1562
         /// </summary>
@@ -717,6 +992,26 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// T1562.001
         /// </summary>
         [pbr::OriginalName("DISABLE_OR_MODIFY_TOOLS")] DisableOrModifyTools = 55,
+        /// <summary>
+        /// T1562.006
+        /// </summary>
+        [pbr::OriginalName("INDICATOR_BLOCKING")] IndicatorBlocking = 110,
+        /// <summary>
+        /// T1562.012
+        /// </summary>
+        [pbr::OriginalName("DISABLE_OR_MODIFY_LINUX_AUDIT_SYSTEM")] DisableOrModifyLinuxAuditSystem = 111,
+        /// <summary>
+        /// T1564
+        /// </summary>
+        [pbr::OriginalName("HIDE_ARTIFACTS")] HideArtifacts = 85,
+        /// <summary>
+        /// T1564.001
+        /// </summary>
+        [pbr::OriginalName("HIDDEN_FILES_AND_DIRECTORIES")] HiddenFilesAndDirectories = 86,
+        /// <summary>
+        /// T1564.002
+        /// </summary>
+        [pbr::OriginalName("HIDDEN_USERS")] HiddenUsers = 87,
         /// <summary>
         /// T1567
         /// </summary>
@@ -734,6 +1029,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("LATERAL_TOOL_TRANSFER")] LateralToolTransfer = 41,
         /// <summary>
+        /// T1574
+        /// </summary>
+        [pbr::OriginalName("HIJACK_EXECUTION_FLOW")] HijackExecutionFlow = 112,
+        /// <summary>
+        /// T1574.006
+        /// </summary>
+        [pbr::OriginalName("HIJACK_EXECUTION_FLOW_DYNAMIC_LINKER_HIJACKING")] HijackExecutionFlowDynamicLinkerHijacking = 113,
+        /// <summary>
         /// T1578
         /// </summary>
         [pbr::OriginalName("MODIFY_CLOUD_COMPUTE_INFRASTRUCTURE")] ModifyCloudComputeInfrastructure = 26,
@@ -746,9 +1049,25 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("CLOUD_INFRASTRUCTURE_DISCOVERY")] CloudInfrastructureDiscovery = 53,
         /// <summary>
+        /// T1587
+        /// </summary>
+        [pbr::OriginalName("DEVELOP_CAPABILITIES")] DevelopCapabilities = 99,
+        /// <summary>
+        /// T1587.001
+        /// </summary>
+        [pbr::OriginalName("DEVELOP_CAPABILITIES_MALWARE")] DevelopCapabilitiesMalware = 100,
+        /// <summary>
         /// T1588
         /// </summary>
         [pbr::OriginalName("OBTAIN_CAPABILITIES")] ObtainCapabilities = 43,
+        /// <summary>
+        /// T1588.001
+        /// </summary>
+        [pbr::OriginalName("OBTAIN_CAPABILITIES_MALWARE")] ObtainCapabilitiesMalware = 101,
+        /// <summary>
+        /// T1588.006
+        /// </summary>
+        [pbr::OriginalName("OBTAIN_CAPABILITIES_VULNERABILITIES")] ObtainCapabilitiesVulnerabilities = 133,
         /// <summary>
         /// T1595
         /// </summary>
@@ -757,6 +1076,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// T1595.001
         /// </summary>
         [pbr::OriginalName("SCANNING_IP_BLOCKS")] ScanningIpBlocks = 2,
+        /// <summary>
+        /// T1608
+        /// </summary>
+        [pbr::OriginalName("STAGE_CAPABILITIES")] StageCapabilities = 88,
+        /// <summary>
+        /// T1608.001
+        /// </summary>
+        [pbr::OriginalName("UPLOAD_MALWARE")] UploadMalware = 102,
         /// <summary>
         /// T1609
         /// </summary>
@@ -774,9 +1101,17 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("CONTAINER_AND_RESOURCE_DISCOVERY")] ContainerAndResourceDiscovery = 57,
         /// <summary>
+        /// T1620
+        /// </summary>
+        [pbr::OriginalName("REFLECTIVE_CODE_LOADING")] ReflectiveCodeLoading = 92,
+        /// <summary>
         /// T1649
         /// </summary>
         [pbr::OriginalName("STEAL_OR_FORGE_AUTHENTICATION_CERTIFICATES")] StealOrForgeAuthenticationCertificates = 62,
+        /// <summary>
+        /// T1657
+        /// </summary>
+        [pbr::OriginalName("FINANCIAL_THEFT")] FinancialTheft = 131,
       }
 
     }
