@@ -185,6 +185,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class BulkSetLabelsDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class CreateSnapshotDiskRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -1152,6 +1161,21 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class DeleteInterconnectAttachmentGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class InsertInterconnectAttachmentGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class PatchInterconnectAttachmentGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeleteInterconnectAttachmentRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -1188,6 +1212,26 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class CreateMembersInterconnectGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class DeleteInterconnectGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class InsertInterconnectGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class PatchInterconnectGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeleteInterconnectRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -1214,6 +1258,11 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class InsertLicenseRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class UpdateLicenseRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
