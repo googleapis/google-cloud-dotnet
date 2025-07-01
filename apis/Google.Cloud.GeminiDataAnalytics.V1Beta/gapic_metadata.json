@@ -1,0 +1,150 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.geminidataanalytics.v1beta",
+  "libraryPackage": "Google.Cloud.GeminiDataAnalytics.V1Beta",
+  "services": {
+    "ContextRetrievalService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ContextRetrievalServiceClient",
+          "rpcs": {
+            "RetrieveBigQueryRecentRelevantTables": {
+              "methods": [
+                "RetrieveBigQueryRecentRelevantTables",
+                "RetrieveBigQueryRecentRelevantTablesAsync"
+              ]
+            },
+            "RetrieveBigQueryTableContext": {
+              "methods": [
+                "RetrieveBigQueryTableContext",
+                "RetrieveBigQueryTableContextAsync"
+              ]
+            },
+            "RetrieveBigQueryTableContexts": {
+              "methods": [
+                "RetrieveBigQueryTableContexts",
+                "RetrieveBigQueryTableContextsAsync"
+              ]
+            },
+            "RetrieveBigQueryTableContextsFromRecentTables": {
+              "methods": [
+                "RetrieveBigQueryTableContextsFromRecentTables",
+                "RetrieveBigQueryTableContextsFromRecentTablesAsync"
+              ]
+            },
+            "RetrieveBigQueryTableSuggestedDescriptions": {
+              "methods": [
+                "RetrieveBigQueryTableSuggestedDescriptions",
+                "RetrieveBigQueryTableSuggestedDescriptionsAsync"
+              ]
+            },
+            "RetrieveBigQueryTableSuggestedExamples": {
+              "methods": [
+                "RetrieveBigQueryTableSuggestedExamples",
+                "RetrieveBigQueryTableSuggestedExamplesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataAgentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataAgentServiceClient",
+          "rpcs": {
+            "CreateDataAgent": {
+              "methods": [
+                "CreateDataAgent",
+                "CreateDataAgentAsync"
+              ]
+            },
+            "DeleteDataAgent": {
+              "methods": [
+                "DeleteDataAgent",
+                "DeleteDataAgentAsync"
+              ]
+            },
+            "GetDataAgent": {
+              "methods": [
+                "GetDataAgent",
+                "GetDataAgentAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "ListAccessibleDataAgents": {
+              "methods": [
+                "ListAccessibleDataAgents",
+                "ListAccessibleDataAgentsAsync"
+              ]
+            },
+            "ListDataAgents": {
+              "methods": [
+                "ListDataAgents",
+                "ListDataAgentsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "UpdateDataAgent": {
+              "methods": [
+                "UpdateDataAgent",
+                "UpdateDataAgentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataChatService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataChatServiceClient",
+          "rpcs": {
+            "Chat": {
+              "methods": [
+                "Chat",
+                "ChatAsync"
+              ]
+            },
+            "CreateConversation": {
+              "methods": [
+                "CreateConversation",
+                "CreateConversationAsync"
+              ]
+            },
+            "GetConversation": {
+              "methods": [
+                "GetConversation",
+                "GetConversationAsync"
+              ]
+            },
+            "ListConversations": {
+              "methods": [
+                "ListConversations",
+                "ListConversationsAsync"
+              ]
+            },
+            "ListMessages": {
+              "methods": [
+                "ListMessages",
+                "ListMessagesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
