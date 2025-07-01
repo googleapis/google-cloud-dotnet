@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using static Google.Apis.Bigquery.v2.DatasetsResource;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
 using System;
@@ -98,13 +99,21 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var projectId = "project";
             var datasetId = "dataset";
+            var accessPolicyVersion = 1;
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl(projectId, service);
             var reference = client.GetDatasetReference(projectId, datasetId);
+            var insertRequest = service.Datasets.Insert(new Dataset { DatasetReference = reference }, projectId);
+            insertRequest.AccessPolicyVersion = accessPolicyVersion;
             service.ExpectRequest(
-                service.Datasets.Insert(new Dataset { DatasetReference = reference }, projectId),
+                insertRequest,
                 new Dataset { DatasetReference = reference });
-            var result = client.CreateDataset(reference);
+            var result = client.CreateDataset(
+                reference,
+                options: new CreateDatasetOptions
+                {
+                    RequestModifier = request => request.AccessPolicyVersion = accessPolicyVersion
+                });
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(datasetId, result.Reference.DatasetId);
         }
@@ -114,13 +123,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var projectId = "project";
             var datasetId = "dataset";
+            var accessPolicyVersion = 1;
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl(projectId, service);
             var reference = client.GetDatasetReference(projectId, datasetId);
+            var getRequest = service.Datasets.Get(projectId, datasetId);
+            getRequest.AccessPolicyVersion = accessPolicyVersion;
             service.ExpectRequest(
-                service.Datasets.Get(projectId, datasetId),
+                getRequest,
                 new Dataset { DatasetReference = reference });
-            var result = client.GetDataset(reference);
+            var result = client.GetDataset(
+                reference,
+                new GetDatasetOptions
+                {
+                    RequestModifier = request =>
+                    {
+                        request.AccessPolicyVersion = accessPolicyVersion;
+                    }
+                });
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(datasetId, result.Reference.DatasetId);
         }
@@ -141,6 +161,68 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 service.Datasets.Get(projectId, datasetId),
                 new Dataset { DatasetReference = reference });
             var result = client.GetDataset(reference);
+            service.Verify();
+            Assert.Equal(projectId, result.Reference.ProjectId);
+            Assert.Equal(datasetId, result.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void PatchDataset()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var accessPolicyVersion = 1;
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            var dataset = new Dataset { FriendlyName = "Foo", ETag = "\"etag\"" };
+            var patchRequest = service.Datasets.Patch(dataset, projectId, datasetId);
+            patchRequest.AccessPolicyVersion = accessPolicyVersion;
+
+            service.ExpectRequest(
+                patchRequest,
+                new Dataset { DatasetReference = reference });
+            var result = client.PatchDataset(
+                reference,
+                dataset,
+                new PatchDatasetOptions
+                {
+                    RequestModifier = request =>
+                    {
+                        request.AccessPolicyVersion = accessPolicyVersion;
+                    }
+                });
+            service.Verify();
+            Assert.Equal(projectId, result.Reference.ProjectId);
+            Assert.Equal(datasetId, result.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void UpdateDataset()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var accessPolicyVersion = 1;
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            var dataset = new Dataset { FriendlyName = "Foo", ETag = "\"etag\"" };
+            var updateRequest = service.Datasets.Update(dataset, projectId, datasetId);
+            updateRequest.AccessPolicyVersion = accessPolicyVersion;
+
+            service.ExpectRequest(
+                updateRequest,
+                new Dataset { DatasetReference = reference });
+            var result = client.UpdateDataset(
+                reference,
+                dataset,
+                new UpdateDatasetOptions
+                {
+                    RequestModifier = request =>
+                    {
+                        request.AccessPolicyVersion = accessPolicyVersion;
+                    }
+                });
             service.Verify();
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(datasetId, result.Reference.DatasetId);
