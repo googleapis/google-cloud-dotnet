@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using static Google.Apis.Bigquery.v2.DatasetsResource;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -27,8 +28,17 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string ETag { get; set; }
 
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="GetRequest"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported by the properties in this options type.
+        /// </summary>
+        public Action<GetRequest> RequestModifier { get; set; }
+
         internal void ModifyRequest(GetRequest request)
         {
+            RequestModifier?.Invoke(request);
         }
     }
 }
