@@ -445,11 +445,14 @@ namespace Google.Maps.Places.V1 {
     public const int PrimaryTypeFieldNumber = 50;
     private string primaryType_ = "";
     /// <summary>
-    /// The primary type of the given result. This type must one of the Places API
-    /// supported types. For example, "restaurant", "cafe", "airport", etc.  A
+    /// The primary type of the given result. This type must be one of the Places
+    /// API supported types. For example, "restaurant", "cafe", "airport", etc.  A
     /// place can only have a single primary type.  For the complete list of
     /// possible values, see Table A and Table B at
-    /// https://developers.google.com/maps/documentation/places/web-service/place-types
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    /// The primary type may be missing if the place's primary type is not a
+    /// supported type. When a primary type is present, it is always one of the
+    /// types in the `types` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -467,7 +470,9 @@ namespace Google.Maps.Places.V1 {
     /// The display name of the primary type, localized to the request language if
     /// applicable. For the complete list of possible values, see Table A and Table
     /// B at
-    /// https://developers.google.com/maps/documentation/places/web-service/place-types
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    /// The primary type may be missing if the place's primary type is not a
+    /// supported type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4478,9 +4483,19 @@ namespace Google.Maps.Places.V1 {
         private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period> periods_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period>();
         /// <summary>
         /// The periods that this place is open during the week. The periods are in
-        /// chronological order, starting with Sunday in the place-local timezone. An
-        /// empty (but not absent) value indicates a place that is never open, e.g.
+        /// chronological order, in the place-local timezone. An empty (but not
+        /// absent) value indicates a place that is never open, e.g.
         /// because it is closed temporarily for renovations.
+        ///
+        /// The starting day of `periods` is NOT fixed and should not be assumed to
+        /// be Sunday. The API determines the start day based on a variety of
+        /// factors. For example, for a 24/7 business, the first period may begin on
+        /// the day of the request. For other businesses, it might be the first day
+        /// of the week that they are open.
+        ///
+        /// NOTE: The ordering of the `periods` array is independent of the ordering
+        /// of the `weekday_descriptions` array. Do not assume they will begin on the
+        /// same day.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4495,8 +4510,15 @@ namespace Google.Maps.Places.V1 {
         private readonly pbc::RepeatedField<string> weekdayDescriptions_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Localized strings describing the opening hours of this place, one string
-        /// for each day of the week.  Will be empty if the hours are unknown or
-        /// could not be converted to localized text. Example: "Sun: 18:00–06:00"
+        /// for each day of the week.
+        ///
+        /// NOTE: The order of the days and the start of the week is determined by
+        /// the locale (language and region). The ordering of the `periods` array is
+        /// independent of the ordering of the `weekday_descriptions` array. Do not
+        /// assume they will begin on the same day.
+        ///
+        /// Will be empty if the hours are unknown or could not be converted to
+        /// localized text. Example: "Sun: 18:00–06:00"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
