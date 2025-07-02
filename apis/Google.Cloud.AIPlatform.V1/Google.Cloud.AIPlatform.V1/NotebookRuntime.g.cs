@@ -1172,8 +1172,9 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// A runtime is a virtual machine allocated to a particular user for a
-  /// particular Notebook file on temporary basis with lifetime limited to 24
-  /// hours.
+  /// particular Notebook file on temporary basis with lifetime. Default runtimes
+  /// have a lifetime of 18 hours, while custom runtimes last for 6 months from
+  /// their creation or last upgrade.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotebookRuntime : pb::IMessage<NotebookRuntime>
@@ -2565,7 +2566,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// </summary>
         [pbr::OriginalName("RUNNING")] Running = 1,
         /// <summary>
-        /// NotebookRuntime is in starting state.
+        /// NotebookRuntime is in starting state. This is when the runtime is being
+        /// started from a stopped state.
         /// </summary>
         [pbr::OriginalName("BEING_STARTED")] BeingStarted = 2,
         /// <summary>
