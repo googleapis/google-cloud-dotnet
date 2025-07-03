@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 TemplateName = TemplateName.FromProjectLocationTemplate("[PROJECT]", "[LOCATION]", "[TEMPLATE]"),
                 UserPromptData = new DataItem(),
+                MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
             };
             // Make the request
             SanitizeUserPromptResponse response = await modelArmorClient.SanitizeUserPromptAsync(request);
