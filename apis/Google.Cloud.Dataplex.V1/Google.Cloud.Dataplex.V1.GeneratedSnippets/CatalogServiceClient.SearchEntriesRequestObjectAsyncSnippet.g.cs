@@ -47,6 +47,7 @@ namespace GoogleCSharpSnippets
                 Query = "",
                 OrderBy = "",
                 Scope = "",
+                SemanticSearch = false,
             };
             // Make the request
             PagedAsyncEnumerable<gcdv::SearchEntriesResponse, gcdv::SearchEntriesResult> response = catalogServiceClient.SearchEntriesAsync(request);
