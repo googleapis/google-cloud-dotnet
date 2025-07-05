@@ -309,19 +309,8 @@ namespace Google.Cloud.Spanner.Data
         // Internal for testing.
         internal static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
         {
-            var credentials = await clientCreationOptions.GetCredentialsAsync().ConfigureAwait(false);
+            var callInvoker =  await clientCreationOptions.GetGcpCallInvokerAsync(s_methodConfigs, s_grpcChannelOptions).ConfigureAwait(false);
 
-            var apiConfig = new ApiConfig
-            {
-                ChannelPool = new ChannelPoolConfig
-                {
-                    MaxSize = (uint)clientCreationOptions.MaximumGrpcChannels,
-                    MaxConcurrentStreamsLowWatermark = clientCreationOptions.MaximumConcurrentStreamsLowWatermark
-                },
-                Method = { s_methodConfigs }
-            };
-
-            var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, clientCreationOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig, clientCreationOptions.GrpcAdapter);
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
