@@ -191,7 +191,7 @@ namespace Google.Cloud.BigQuery.V2
                 GaxPreconditions.CheckArgument(parameters.All(p => !string.IsNullOrEmpty(p.Name)), nameof(parameters),
                     $"When using a parameter mode of '{nameof(BigQueryParameterMode.Named)}', all parameters must have names");
             }
-            return CreateInsertJobRequest(new JobConfiguration { Query = jobConfigurationQuery, DryRun = options?.DryRun }, options);
+            return CreateInsertJobRequest(new JobConfiguration { Query = jobConfigurationQuery }, options);
         }
 
         private TabledataResource.ListRequest CreateListRequest(TableReference tableReference, ListRowsOptions options, TableSchema schema)

@@ -42,11 +42,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
                 UseAvroLogicalTypes = true,
                 Encoding = "encoding-test",
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                JobConfigurationModifier = config => config.Reservation = "Reservation"
             };
 
             JobConfigurationLoad load = new JobConfigurationLoad();
             options.ModifyRequest(load);
+            var jobConfiguration = new JobConfiguration();
+            options.ModifyJobConfiguration(jobConfiguration);
+            Assert.Equal("Reservation", jobConfiguration.Reservation);
             Assert.Equal(true, load.AllowJaggedRows);
             Assert.Equal(true, load.AllowQuotedNewlines);
             Assert.Equal(false, load.Autodetect);

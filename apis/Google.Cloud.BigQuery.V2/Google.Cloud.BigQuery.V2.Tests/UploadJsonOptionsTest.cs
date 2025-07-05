@@ -32,11 +32,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                JobConfigurationModifier = config => config.Reservation = "Reservation"
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
             options.ModifyConfiguration(config);
+            var jobConfiguration = new JobConfiguration();
+            options.ModifyJobConfiguration(jobConfiguration);
+            Assert.Equal("Reservation", jobConfiguration.Reservation);
             Assert.Equal(true, config.IgnoreUnknownValues);
             Assert.Equal("CREATE_IF_NEEDED", config.CreateDisposition);
             Assert.Equal(10, config.MaxBadRecords);
