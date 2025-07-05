@@ -28,7 +28,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 WriteDisposition = WriteDisposition.WriteIfEmpty,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 OperationType = CopyOperationType.Clone,
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                Reservation = "Reservation"
             };
             JobConfigurationTableCopy request = new JobConfigurationTableCopy();
             options.ModifyRequest(request);
