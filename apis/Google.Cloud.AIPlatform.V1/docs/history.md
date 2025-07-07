@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.37.0, released 2025-07-07
+
+### New features
+
+- Add message ColabImage, add field colab_image to NotebookSoftwareConfig
+- Allow user input for schedule_resource_name in NotebookExecutionJob
+- Add computer use support to tools
+- Add invoke_route_prefix to ModelContainerSpec in aiplatform v1 models.proto
+
+### Documentation improvements
+
+- A comment for message NotebookRuntime is changed
+- A comment for enum value BEING_STARTED in enum NotebookRuntime.RuntimeState is changed
+- A comment for message NotebookSoftwareConfig is changed
+
 ## Version 3.36.0, released 2025-06-25
 
 ### New features
