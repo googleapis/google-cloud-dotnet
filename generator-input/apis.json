@@ -2256,7 +2256,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
-      "version": "2.23.0",
+      "version": "2.24.0",
       "type": "grpc",
       "productName": "Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow/cx/docs",
