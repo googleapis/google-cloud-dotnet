@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.20.0, released 2025-07-07
+
+### New features
+
+- Add `cluster_tier` to support creating premium clusters
+
 ## Version 5.19.0, released 2025-06-13
 
 ### New features
