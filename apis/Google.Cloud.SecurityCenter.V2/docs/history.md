@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.2.0, released 2025-07-07
+
+### New features
+
+- Add AffectedResources proto
+- Add AiModel proto
+- Add ChokePoint proto
+- Add IpRules proto
+- Add Job proto
+- Add Network proto
+
 ## Version 1.1.0, released 2025-02-18
 
 ### New features
