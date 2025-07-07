@@ -1,0 +1,34 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "DataAgentServiceClient",
+    "clientNavigationProperty": "LocationsClient",
+    "skip": "b/428834051",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListDataAgents",
+    "client": "DataAgentServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListAccessibleDataAgents",
+    "client": "DataAgentServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListConversations",
+    "client": "DataChatServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
