@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta37, released 2025-07-07
+
+### New features
+
+- Add message ColabImage, add field colab_image to NotebookSoftwareConfig
+- Allow user input for schedule_resource_name in NotebookExecutionJob
+- Expose task_unique_name in pipeline task details for pipeline rerun
+- Add computer use support to tools
+
+### Documentation improvements
+
+- A comment for message NotebookRuntime is changed
+- A comment for enum value BEING_STARTED in enum NotebookRuntime.RuntimeState is changed
+- A comment for message NotebookSoftwareConfig is changed
+
 ## Version 1.0.0-beta36, released 2025-06-25
 
 ### New features
