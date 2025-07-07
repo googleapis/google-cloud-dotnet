@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.27.0, released 2025-07-07
+
+### New features
+
+- Add MessageTransformationFailureReason to IngestionFailureEvent
+
+### Documentation improvements
+
+- Document that the `acknowledge_confirmation` and `modify_ack_deadline_confirmation` fields in message `.google.pubsub.v1.StreamingPullResponse` are not guaranteed to be populated
+
 ## Version 3.26.0, released 2025-06-17
 
 ### Bug fixes
