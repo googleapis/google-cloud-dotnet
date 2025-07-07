@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2025-07-07
+
+### New features
+
+- Add CheckoutSettings service
+
 ## Version 1.0.0-beta08, released 2025-05-22
 
 ### New features
