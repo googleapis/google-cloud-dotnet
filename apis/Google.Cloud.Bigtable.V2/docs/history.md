@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.19.0, released 2025-07-07
+
+### New features
+
+- Add Idempotency to Cloud Bigtable MutateRowRequest API
+
 ## Version 3.18.0, released 2025-05-28
 
 ### Bug fixes
