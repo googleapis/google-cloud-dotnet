@@ -3702,12 +3702,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Accounts.V1Beta",
-            "currentVersion": "1.0.0-beta08",
+            "currentVersion": "1.0.0-beta09",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-22T07:15:33.645036383Z",
+            "releaseTimestamp": "2025-07-07T14:51:00.220910071Z",
             "lastGeneratedCommit": "66c3e331b98c9f673b648ef427c496b7615464c7",
-            "lastReleasedCommit": "c3203b36e53fc6e6cf39a7a6f1ca4181046dfc4b",
+            "lastReleasedCommit": "66c3e331b98c9f673b648ef427c496b7615464c7",
             "apiPaths": [
                 "google/shopping/merchant/accounts/v1beta"
             ],
