@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta01</Version>
+    <Version>1.0.0-beta02</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Model Armor API (v1), which helps you protect against risks like prompt injection, harmful content, and data leakage in generative AI applications by letting you define policies that filter user prompts and model responses.</Description>
