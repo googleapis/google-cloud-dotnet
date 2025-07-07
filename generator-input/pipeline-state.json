@@ -1020,11 +1020,12 @@
         },
         {
             "id": "Google.Cloud.Compute.V1",
-            "currentVersion": "3.9.0",
+            "currentVersion": "3.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-23T17:04:24Z",
+            "releaseTimestamp": "2025-07-07T13:58:23.840938413Z",
             "lastGeneratedCommit": "79d04b75d975d942b6477b144c5b3547dc9b7f30",
+            "lastReleasedCommit": "79d04b75d975d942b6477b144c5b3547dc9b7f30",
             "apiPaths": [
                 "google/cloud/compute/v1"
             ],
@@ -1191,11 +1192,12 @@
         },
         {
             "id": "Google.Cloud.Dataplex.V1",
-            "currentVersion": "3.8.0",
+            "currentVersion": "3.9.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-14T17:24:22Z",
+            "releaseTimestamp": "2025-07-07T14:15:54.695114391Z",
             "lastGeneratedCommit": "3d9726a6edfee1a1eb33df23cc692c5c7ae79735",
+            "lastReleasedCommit": "3d9726a6edfee1a1eb33df23cc692c5c7ae79735",
             "apiPaths": [
                 "google/cloud/dataplex/v1"
             ],

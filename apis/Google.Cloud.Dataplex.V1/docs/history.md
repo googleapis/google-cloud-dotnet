@@ -1,5 +1,34 @@
 # Version history
 
+## Version 3.9.0, released 2025-07-07
+
+### New features
+
+- A new field `semantic_search` is added to `message.google.cloud.dataplex.v1.SearchEntriesRequest`
+
+### Documentation improvements
+
+- A comment for message `MetadataJob` is changed
+- A comment for message `MetadataJob` is changed
+- A comment for message `MetadataJob` is changed
+- A comment for field `exported_entries` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `error_message` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for enum `SyncMode` is changed
+- A comment for field `source_storage_uri` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `organization_level` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `projects` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `entry_groups` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `entry_types` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `aspect_types` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `scope` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `output_path` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for enum value `EXPORT` in enum `Type` is changed
+- A comment for enum value `INTERNAL_ERROR` in enum `ErrorCode` is changed
+- A comment for field `encryption_config_id` in message `.google.cloud.dataplex.v1.CreateEncryptionConfigRequest` is changed
+- A comment for message `DataDiscoveryResult` is changed
+- A comment for field `scan_statistics` in message `.google.cloud.dataplex.v1.DataDiscoveryResult` is changed
+- Minor changes
+
 ## Version 3.8.0, released 2025-04-14
 
 ### New features
