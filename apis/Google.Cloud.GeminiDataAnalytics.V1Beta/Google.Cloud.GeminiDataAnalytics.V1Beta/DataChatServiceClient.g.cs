@@ -843,11 +843,11 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="StorageMessage"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMessagesResponse, StorageMessage> ListMessages(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        public virtual gax::PagedEnumerable<ListMessagesResponse, StorageMessage> ListMessages(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListMessagesRequest request = new ListMessagesRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {
@@ -878,11 +878,11 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="StorageMessage"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> ListMessagesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        public virtual gax::PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> ListMessagesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListMessagesRequest request = new ListMessagesRequest
             {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {

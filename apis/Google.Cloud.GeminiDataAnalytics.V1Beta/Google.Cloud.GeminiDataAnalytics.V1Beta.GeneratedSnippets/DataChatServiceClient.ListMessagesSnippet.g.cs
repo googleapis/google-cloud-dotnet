@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataChatServiceClient dataChatServiceClient = DataChatServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
             // Make the request
             PagedEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessages(parent);
 

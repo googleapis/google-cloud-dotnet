@@ -18,7 +18,6 @@ namespace GoogleCSharpSnippets
 {
     // [START geminidataanalytics_v1beta_generated_DataChatService_ListMessages_async_flattened_resourceNames]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GeminiDataAnalytics.V1Beta;
     using System;
     using System.Linq;
@@ -39,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataChatServiceClient dataChatServiceClient = await DataChatServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
             // Make the request
             PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessagesAsync(parent);
 
