@@ -3908,12 +3908,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 79,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 78,
+          "start": 36,
+          "end": 77,
           "type": "SHORT"
         }
       ]
@@ -3957,12 +3957,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
-          "start": 39,
-          "end": 80,
+          "start": 38,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -4089,7 +4089,7 @@
         "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.ListMessages",
         "parameters": [
           {
-            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationName",
             "name": "parent"
           },
           {
@@ -4123,12 +4123,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 76,
+          "end": 75,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 74,
+          "start": 36,
+          "end": 73,
           "type": "SHORT"
         }
       ]
@@ -4145,7 +4145,7 @@
         "async": true,
         "parameters": [
           {
-            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationName",
             "name": "parent"
           },
           {
@@ -4179,12 +4179,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 78,
+          "end": 77,
           "type": "FULL"
         },
         {
-          "start": 39,
-          "end": 76,
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]

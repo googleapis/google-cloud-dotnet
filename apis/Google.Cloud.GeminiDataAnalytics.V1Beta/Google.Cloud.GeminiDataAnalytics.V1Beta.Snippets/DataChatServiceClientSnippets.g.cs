@@ -530,7 +530,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListMessagesRequest request = new ListMessagesRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
             };
             // Make the request
@@ -579,7 +579,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListMessagesRequest request = new ListMessagesRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
             };
             // Make the request
@@ -626,7 +626,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataChatServiceClient dataChatServiceClient = DataChatServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
             // Make the request
             PagedEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessages(parent);
 
@@ -671,7 +671,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataChatServiceClient dataChatServiceClient = await DataChatServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversations/[CONVERSATION]";
             // Make the request
             PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessagesAsync(parent);
 
@@ -712,11 +712,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListMessages</summary>
         public void ListMessagesResourceNames()
         {
-            // Snippet: ListMessages(LocationName, string, int?, CallSettings)
+            // Snippet: ListMessages(ConversationName, string, int?, CallSettings)
             // Create client
             DataChatServiceClient dataChatServiceClient = DataChatServiceClient.Create();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
             // Make the request
             PagedEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessages(parent);
 
@@ -757,11 +757,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListMessagesAsync</summary>
         public async Task ListMessagesResourceNamesAsync()
         {
-            // Snippet: ListMessagesAsync(LocationName, string, int?, CallSettings)
+            // Snippet: ListMessagesAsync(ConversationName, string, int?, CallSettings)
             // Create client
             DataChatServiceClient dataChatServiceClient = await DataChatServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConversationName parent = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
             // Make the request
             PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessagesAsync(parent);
 

@@ -18,7 +18,6 @@ namespace GoogleCSharpSnippets
 {
     // [START geminidataanalytics_v1beta_generated_DataChatService_ListMessages_sync]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GeminiDataAnalytics.V1Beta;
     using System;
 
@@ -39,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListMessagesRequest request = new ListMessagesRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
             };
             // Make the request

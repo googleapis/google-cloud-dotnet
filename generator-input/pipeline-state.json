@@ -4212,7 +4212,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "9ced981854e3db174fa46459a763aee6744c8b75",
+            "lastGeneratedCommit": "baedbe7ff774a17beca3ce90237b4b57caa01ba4",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1beta"
             ],

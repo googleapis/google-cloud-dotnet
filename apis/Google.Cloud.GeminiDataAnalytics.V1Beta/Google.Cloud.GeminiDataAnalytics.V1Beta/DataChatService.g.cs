@@ -36,7 +36,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "bG91ZC9nZW1pbmlkYXRhYW5hbHl0aWNzL3YxYmV0YS9kYXRhc291cmNlLnBy",
             "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
             "dG9idWYvdGltZXN0YW1wLnByb3RvIqQBChNMaXN0TWVzc2FnZXNSZXF1ZXN0",
-            "EkcKBnBhcmVudBgBIAEoCUI34EEC+kExEi9nZW1pbmlkYXRhYW5hbHl0aWNz",
+            "EkcKBnBhcmVudBgBIAEoCUI34EEC+kExCi9nZW1pbmlkYXRhYW5hbHl0aWNz",
             "Lmdvb2dsZWFwaXMuY29tL0NvbnZlcnNhdGlvbhIWCglwYWdlX3NpemUYAyAB",
             "KAVCA+BBARIXCgpwYWdlX3Rva2VuGAQgASgJQgPgQQESEwoGZmlsdGVyGAUg",
             "ASgJQgPgQQEiegoUTGlzdE1lc3NhZ2VzUmVzcG9uc2USSQoIbWVzc2FnZXMY",

@@ -23,11 +23,11 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
     public partial class ListMessagesRequest
     {
         /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ConversationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public gagr::LocationName ParentAsLocationName
+        public ConversationName ParentAsConversationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : ConversationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
