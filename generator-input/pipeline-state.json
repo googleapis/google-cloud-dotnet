@@ -2185,7 +2185,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-06-25T07:38:31.793910072Z",
-            "lastGeneratedCommit": "fc1e32c211bbb46c7213ffa68fe3273da16ab358",
+            "lastGeneratedCommit": "6fde4a5ed2c1cb0ff04b41b770fa751a9f51b6f2",
             "lastReleasedCommit": "fc1e32c211bbb46c7213ffa68fe3273da16ab358",
             "apiPaths": [
                 "google/cloud/networkservices/v1"
