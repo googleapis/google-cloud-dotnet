@@ -28,7 +28,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
             "bxIcZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MRofZ29vZ2xlL2FwaS9m",
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
             "bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvItgGCgdDbHVzdGVyEkIKCmdjcF9jb25m",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIpoHCgdDbHVzdGVyEkIKCmdjcF9jb25m",
             "aWcYCSABKAsyJy5nb29nbGUuY2xvdWQubWFuYWdlZGthZmthLnYxLkdjcENv",
             "bmZpZ0ID4EECSAASEQoEbmFtZRgBIAEoCUID4EEIEjQKC2NyZWF0ZV90aW1l",
             "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
@@ -41,25 +41,34 @@ namespace Google.Cloud.ManagedKafka.V1 {
             "A+BBARI/CgVzdGF0ZRgKIAEoDjIrLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fm",
             "a2EudjEuQ2x1c3Rlci5TdGF0ZUID4EEDEh8KDXNhdGlzZmllc19wemkYCyAB",
             "KAhCA+BBA0gBiAEBEh8KDXNhdGlzZmllc19wenMYDCABKAhCA+BBA0gCiAEB",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEiRgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElO",
-            "RxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAM6d+pBdAojbWFuYWdlZGth",
-            "ZmthLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn0qCGNs",
-            "dXN0ZXJzMgdjbHVzdGVyQhEKD3BsYXRmb3JtX2NvbmZpZ0IQCg5fc2F0aXNm",
-            "aWVzX3B6aUIQCg5fc2F0aXNmaWVzX3B6cyJECg5DYXBhY2l0eUNvbmZpZxIX",
-            "Cgp2Y3B1X2NvdW50GAEgASgDQgPgQQISGQoMbWVtb3J5X2J5dGVzGAIgASgD",
-            "QgPgQQIiqAEKD1JlYmFsYW5jZUNvbmZpZxJFCgRtb2RlGAEgASgOMjIuZ29v",
-            "Z2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5SZWJhbGFuY2VDb25maWcuTW9k",
-            "ZUID4EEBIk4KBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEhAKDE5PX1JF",
-            "QkFMQU5DRRABEh4KGkFVVE9fUkVCQUxBTkNFX09OX1NDQUxFX1VQEAIiJAoN",
-            "TmV0d29ya0NvbmZpZxITCgZzdWJuZXQYAiABKAlCA+BBAiJZCgxBY2Nlc3ND",
-            "b25maWcSSQoPbmV0d29ya19jb25maWdzGAEgAygLMisuZ29vZ2xlLmNsb3Vk",
-            "Lm1hbmFnZWRrYWZrYS52MS5OZXR3b3JrQ29uZmlnQgPgQQIikgEKCUdjcENv",
-            "bmZpZxJGCg1hY2Nlc3NfY29uZmlnGAMgASgLMiouZ29vZ2xlLmNsb3VkLm1h",
-            "bmFnZWRrYWZrYS52MS5BY2Nlc3NDb25maWdCA+BBAhI9CgdrbXNfa2V5GAIg",
-            "ASgJQizgQQHgQQX6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
-            "b0tleSLXAgoFVG9waWMSEQoEbmFtZRgBIAEoCUID4EEIEhwKD3BhcnRpdGlv",
+            "EkAKCnRsc19jb25maWcYDSABKAsyJy5nb29nbGUuY2xvdWQubWFuYWdlZGth",
+            "ZmthLnYxLlRsc0NvbmZpZ0ID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiRgoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElWRRACEgwKCERFTEVU",
+            "SU5HEAM6d+pBdAojbWFuYWdlZGthZmthLmdvb2dsZWFwaXMuY29tL0NsdXN0",
+            "ZXISOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
+            "bHVzdGVycy97Y2x1c3Rlcn0qCGNsdXN0ZXJzMgdjbHVzdGVyQhEKD3BsYXRm",
+            "b3JtX2NvbmZpZ0IQCg5fc2F0aXNmaWVzX3B6aUIQCg5fc2F0aXNmaWVzX3B6",
+            "cyJECg5DYXBhY2l0eUNvbmZpZxIXCgp2Y3B1X2NvdW50GAEgASgDQgPgQQIS",
+            "GQoMbWVtb3J5X2J5dGVzGAIgASgDQgPgQQIiqAEKD1JlYmFsYW5jZUNvbmZp",
+            "ZxJFCgRtb2RlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52",
+            "MS5SZWJhbGFuY2VDb25maWcuTW9kZUID4EEBIk4KBE1vZGUSFAoQTU9ERV9V",
+            "TlNQRUNJRklFRBAAEhAKDE5PX1JFQkFMQU5DRRABEh4KGkFVVE9fUkVCQUxB",
+            "TkNFX09OX1NDQUxFX1VQEAIiJAoNTmV0d29ya0NvbmZpZxITCgZzdWJuZXQY",
+            "AiABKAlCA+BBAiJZCgxBY2Nlc3NDb25maWcSSQoPbmV0d29ya19jb25maWdz",
+            "GAEgAygLMisuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5OZXR3b3Jr",
+            "Q29uZmlnQgPgQQIikgEKCUdjcENvbmZpZxJGCg1hY2Nlc3NfY29uZmlnGAMg",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MS5BY2Nlc3NDb25m",
+            "aWdCA+BBAhI9CgdrbXNfa2V5GAIgASgJQizgQQHgQQX6QSMKIWNsb3Vka21z",
+            "Lmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleSJ7CglUbHNDb25maWcSRAoMdHJ1",
+            "c3RfY29uZmlnGAEgASgLMikuZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52",
+            "MS5UcnVzdENvbmZpZ0ID4EEBEigKG3NzbF9wcmluY2lwYWxfbWFwcGluZ19y",
+            "dWxlcxgCIAEoCUID4EEBItMBCgtUcnVzdENvbmZpZxJlCgtjYXNfY29uZmln",
+            "cxgBIAMoCzJLLmdvb2dsZS5jbG91ZC5tYW5hZ2Vka2Fma2EudjEuVHJ1c3RD",
+            "b25maWcuQ2VydGlmaWNhdGVBdXRob3JpdHlTZXJ2aWNlQ29uZmlnQgPgQQEa",
+            "XQohQ2VydGlmaWNhdGVBdXRob3JpdHlTZXJ2aWNlQ29uZmlnEjgKB2NhX3Bv",
+            "b2wYASABKAlCJ+BBAvpBIQofcHJpdmF0ZWNhLmdvb2dsZWFwaXMuY29tL0Nh",
+            "UG9vbCLXAgoFVG9waWMSEQoEbmFtZRgBIAEoCUID4EEIEhwKD3BhcnRpdGlv",
             "bl9jb3VudBgCIAEoBUID4EECEiIKEnJlcGxpY2F0aW9uX2ZhY3RvchgDIAEo",
             "BUIG4EEC4EEFEkYKB2NvbmZpZ3MYBCADKAsyMC5nb29nbGUuY2xvdWQubWFu",
             "YWdlZGthZmthLnYxLlRvcGljLkNvbmZpZ3NFbnRyeUID4EEBGi4KDENvbmZp",
@@ -158,12 +167,14 @@ namespace Google.Cloud.ManagedKafka.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.Cluster), global::Google.Cloud.ManagedKafka.V1.Cluster.Parser, new[]{ "GcpConfig", "Name", "CreateTime", "UpdateTime", "Labels", "CapacityConfig", "RebalanceConfig", "State", "SatisfiesPzi", "SatisfiesPzs" }, new[]{ "PlatformConfig", "SatisfiesPzi", "SatisfiesPzs" }, new[]{ typeof(global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.Cluster), global::Google.Cloud.ManagedKafka.V1.Cluster.Parser, new[]{ "GcpConfig", "Name", "CreateTime", "UpdateTime", "Labels", "CapacityConfig", "RebalanceConfig", "State", "SatisfiesPzi", "SatisfiesPzs", "TlsConfig" }, new[]{ "PlatformConfig", "SatisfiesPzi", "SatisfiesPzs" }, new[]{ typeof(global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.CapacityConfig), global::Google.Cloud.ManagedKafka.V1.CapacityConfig.Parser, new[]{ "VcpuCount", "MemoryBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.RebalanceConfig), global::Google.Cloud.ManagedKafka.V1.RebalanceConfig.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.ManagedKafka.V1.RebalanceConfig.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.NetworkConfig), global::Google.Cloud.ManagedKafka.V1.NetworkConfig.Parser, new[]{ "Subnet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.AccessConfig), global::Google.Cloud.ManagedKafka.V1.AccessConfig.Parser, new[]{ "NetworkConfigs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.GcpConfig), global::Google.Cloud.ManagedKafka.V1.GcpConfig.Parser, new[]{ "AccessConfig", "KmsKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.TlsConfig), global::Google.Cloud.ManagedKafka.V1.TlsConfig.Parser, new[]{ "TrustConfig", "SslPrincipalMappingRules" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.TrustConfig), global::Google.Cloud.ManagedKafka.V1.TrustConfig.Parser, new[]{ "CasConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig), global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig.Parser, new[]{ "CaPool" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.Topic), global::Google.Cloud.ManagedKafka.V1.Topic.Parser, new[]{ "Name", "PartitionCount", "ReplicationFactor", "Configs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.ConsumerTopicMetadata), global::Google.Cloud.ManagedKafka.V1.ConsumerTopicMetadata.Parser, new[]{ "Partitions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ManagedKafka.V1.ConsumerPartitionMetadata), global::Google.Cloud.ManagedKafka.V1.ConsumerPartitionMetadata.Parser, new[]{ "Offset", "Metadata" }, null, null, null, null),
@@ -232,6 +243,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
       state_ = other.state_;
       satisfiesPzi_ = other.satisfiesPzi_;
       satisfiesPzs_ = other.satisfiesPzs_;
+      tlsConfig_ = other.tlsConfig_ != null ? other.tlsConfig_.Clone() : null;
       switch (other.PlatformConfigCase) {
         case PlatformConfigOneofCase.GcpConfig:
           GcpConfig = other.GcpConfig.Clone();
@@ -428,6 +440,21 @@ namespace Google.Cloud.ManagedKafka.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "tls_config" field.</summary>
+    public const int TlsConfigFieldNumber = 13;
+    private global::Google.Cloud.ManagedKafka.V1.TlsConfig tlsConfig_;
+    /// <summary>
+    /// Optional. TLS configuration for the Kafka cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.TlsConfig TlsConfig {
+      get { return tlsConfig_; }
+      set {
+        tlsConfig_ = value;
+      }
+    }
+
     private object platformConfig_;
     /// <summary>Enum of possible cases for the "platform_config" oneof.</summary>
     public enum PlatformConfigOneofCase {
@@ -473,6 +500,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
       if (State != other.State) return false;
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (!object.Equals(TlsConfig, other.TlsConfig)) return false;
       if (PlatformConfigCase != other.PlatformConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -491,6 +519,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
       if (State != global::Google.Cloud.ManagedKafka.V1.Cluster.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (HasSatisfiesPzi) hash ^= SatisfiesPzi.GetHashCode();
       if (HasSatisfiesPzs) hash ^= SatisfiesPzs.GetHashCode();
+      if (tlsConfig_ != null) hash ^= TlsConfig.GetHashCode();
       hash ^= (int) platformConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -547,6 +576,10 @@ namespace Google.Cloud.ManagedKafka.V1 {
         output.WriteRawTag(96);
         output.WriteBool(SatisfiesPzs);
       }
+      if (tlsConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(TlsConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -594,6 +627,10 @@ namespace Google.Cloud.ManagedKafka.V1 {
         output.WriteRawTag(96);
         output.WriteBool(SatisfiesPzs);
       }
+      if (tlsConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(TlsConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -631,6 +668,9 @@ namespace Google.Cloud.ManagedKafka.V1 {
       }
       if (HasSatisfiesPzs) {
         size += 1 + 1;
+      }
+      if (tlsConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TlsConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -680,6 +720,12 @@ namespace Google.Cloud.ManagedKafka.V1 {
       }
       if (other.HasSatisfiesPzs) {
         SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.tlsConfig_ != null) {
+        if (tlsConfig_ == null) {
+          TlsConfig = new global::Google.Cloud.ManagedKafka.V1.TlsConfig();
+        }
+        TlsConfig.MergeFrom(other.TlsConfig);
       }
       switch (other.PlatformConfigCase) {
         case PlatformConfigOneofCase.GcpConfig:
@@ -762,6 +808,13 @@ namespace Google.Cloud.ManagedKafka.V1 {
             SatisfiesPzs = input.ReadBool();
             break;
           }
+          case 106: {
+            if (tlsConfig_ == null) {
+              TlsConfig = new global::Google.Cloud.ManagedKafka.V1.TlsConfig();
+            }
+            input.ReadMessage(TlsConfig);
+            break;
+          }
         }
       }
     #endif
@@ -832,6 +885,13 @@ namespace Google.Cloud.ManagedKafka.V1 {
           }
           case 96: {
             SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 106: {
+            if (tlsConfig_ == null) {
+              TlsConfig = new global::Google.Cloud.ManagedKafka.V1.TlsConfig();
+            }
+            input.ReadMessage(TlsConfig);
             break;
           }
         }
@@ -1973,6 +2033,654 @@ namespace Google.Cloud.ManagedKafka.V1 {
   }
 
   /// <summary>
+  /// The TLS configuration for the Kafka cluster.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TlsConfig : pb::IMessage<TlsConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TlsConfig> _parser = new pb::MessageParser<TlsConfig>(() => new TlsConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TlsConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TlsConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TlsConfig(TlsConfig other) : this() {
+      trustConfig_ = other.trustConfig_ != null ? other.trustConfig_.Clone() : null;
+      sslPrincipalMappingRules_ = other.sslPrincipalMappingRules_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TlsConfig Clone() {
+      return new TlsConfig(this);
+    }
+
+    /// <summary>Field number for the "trust_config" field.</summary>
+    public const int TrustConfigFieldNumber = 1;
+    private global::Google.Cloud.ManagedKafka.V1.TrustConfig trustConfig_;
+    /// <summary>
+    /// Optional. The configuration of the broker truststore. If specified, clients
+    /// can use mTLS for authentication.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ManagedKafka.V1.TrustConfig TrustConfig {
+      get { return trustConfig_; }
+      set {
+        trustConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ssl_principal_mapping_rules" field.</summary>
+    public const int SslPrincipalMappingRulesFieldNumber = 2;
+    private string sslPrincipalMappingRules_ = "";
+    /// <summary>
+    /// Optional. A list of rules for mapping from SSL principal names to
+    /// short names. These are applied in order by Kafka.
+    /// Refer to the Apache Kafka documentation for `ssl.principal.mapping.rules`
+    /// for the precise formatting details and syntax.
+    /// Example: "RULE:^CN=(.*?),OU=ServiceUsers.*$/$1@example.com/,DEFAULT"
+    ///
+    /// This is a static Kafka broker configuration. Setting or modifying this
+    /// field will trigger a rolling restart of the Kafka brokers to apply
+    /// the change. An empty string means no rules are applied (Kafka default).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SslPrincipalMappingRules {
+      get { return sslPrincipalMappingRules_; }
+      set {
+        sslPrincipalMappingRules_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TlsConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TlsConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TrustConfig, other.TrustConfig)) return false;
+      if (SslPrincipalMappingRules != other.SslPrincipalMappingRules) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (trustConfig_ != null) hash ^= TrustConfig.GetHashCode();
+      if (SslPrincipalMappingRules.Length != 0) hash ^= SslPrincipalMappingRules.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (trustConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TrustConfig);
+      }
+      if (SslPrincipalMappingRules.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SslPrincipalMappingRules);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (trustConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TrustConfig);
+      }
+      if (SslPrincipalMappingRules.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SslPrincipalMappingRules);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (trustConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrustConfig);
+      }
+      if (SslPrincipalMappingRules.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SslPrincipalMappingRules);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TlsConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.trustConfig_ != null) {
+        if (trustConfig_ == null) {
+          TrustConfig = new global::Google.Cloud.ManagedKafka.V1.TrustConfig();
+        }
+        TrustConfig.MergeFrom(other.TrustConfig);
+      }
+      if (other.SslPrincipalMappingRules.Length != 0) {
+        SslPrincipalMappingRules = other.SslPrincipalMappingRules;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (trustConfig_ == null) {
+              TrustConfig = new global::Google.Cloud.ManagedKafka.V1.TrustConfig();
+            }
+            input.ReadMessage(TrustConfig);
+            break;
+          }
+          case 18: {
+            SslPrincipalMappingRules = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (trustConfig_ == null) {
+              TrustConfig = new global::Google.Cloud.ManagedKafka.V1.TrustConfig();
+            }
+            input.ReadMessage(TrustConfig);
+            break;
+          }
+          case 18: {
+            SslPrincipalMappingRules = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Sources of CA certificates to install in the broker's truststore.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TrustConfig : pb::IMessage<TrustConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TrustConfig> _parser = new pb::MessageParser<TrustConfig>(() => new TrustConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TrustConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TrustConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TrustConfig(TrustConfig other) : this() {
+      casConfigs_ = other.casConfigs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TrustConfig Clone() {
+      return new TrustConfig(this);
+    }
+
+    /// <summary>Field number for the "cas_configs" field.</summary>
+    public const int CasConfigsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig> _repeated_casConfigs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig> casConfigs_ = new pbc::RepeatedField<global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig>();
+    /// <summary>
+    /// Optional. Configuration for the Google Certificate Authority Service.
+    /// Maximum 10.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ManagedKafka.V1.TrustConfig.Types.CertificateAuthorityServiceConfig> CasConfigs {
+      get { return casConfigs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TrustConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TrustConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!casConfigs_.Equals(other.casConfigs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= casConfigs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      casConfigs_.WriteTo(output, _repeated_casConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      casConfigs_.WriteTo(ref output, _repeated_casConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += casConfigs_.CalculateSize(_repeated_casConfigs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TrustConfig other) {
+      if (other == null) {
+        return;
+      }
+      casConfigs_.Add(other.casConfigs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            casConfigs_.AddEntriesFrom(input, _repeated_casConfigs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            casConfigs_.AddEntriesFrom(ref input, _repeated_casConfigs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TrustConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A configuration for the Google Certificate Authority Service.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CertificateAuthorityServiceConfig : pb::IMessage<CertificateAuthorityServiceConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CertificateAuthorityServiceConfig> _parser = new pb::MessageParser<CertificateAuthorityServiceConfig>(() => new CertificateAuthorityServiceConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CertificateAuthorityServiceConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ManagedKafka.V1.TrustConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CertificateAuthorityServiceConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CertificateAuthorityServiceConfig(CertificateAuthorityServiceConfig other) : this() {
+          caPool_ = other.caPool_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CertificateAuthorityServiceConfig Clone() {
+          return new CertificateAuthorityServiceConfig(this);
+        }
+
+        /// <summary>Field number for the "ca_pool" field.</summary>
+        public const int CaPoolFieldNumber = 1;
+        private string caPool_ = "";
+        /// <summary>
+        /// Required. The name of the CA pool to pull CA certificates from.
+        /// Structured like:
+        /// projects/{project}/locations/{location}/caPools/{ca_pool}.
+        /// The CA pool does not need to be in the same project or location as the
+        /// Kafka cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CaPool {
+          get { return caPool_; }
+          set {
+            caPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CertificateAuthorityServiceConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CertificateAuthorityServiceConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (CaPool != other.CaPool) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (CaPool.Length != 0) hash ^= CaPool.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (CaPool.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(CaPool);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (CaPool.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(CaPool);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (CaPool.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CaPool);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CertificateAuthorityServiceConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.CaPool.Length != 0) {
+            CaPool = other.CaPool;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                CaPool = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                CaPool = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A Kafka topic in a given cluster.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1990,7 +2698,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2303,7 +3011,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2489,7 +3197,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2727,7 +3435,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2956,7 +3664,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3414,7 +4122,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4015,7 +4723,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4286,7 +4994,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4475,7 +5183,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4712,7 +5420,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5114,7 +5822,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5371,7 +6079,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5792,7 +6500,7 @@ namespace Google.Cloud.ManagedKafka.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.ManagedKafka.V1.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
