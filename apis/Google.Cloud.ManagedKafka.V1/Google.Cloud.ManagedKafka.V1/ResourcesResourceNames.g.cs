@@ -2366,6 +2366,24 @@ namespace Google.Cloud.ManagedKafka.V1
         }
     }
 
+    public partial class TrustConfig
+    {
+        public partial class Types
+        {
+            public partial class CertificateAuthorityServiceConfig
+            {
+                /// <summary>
+                /// <see cref="CaPoolName"/>-typed view over the <see cref="CaPool"/> resource name property.
+                /// </summary>
+                public CaPoolName CaPoolAsCaPoolName
+                {
+                    get => string.IsNullOrEmpty(CaPool) ? null : CaPoolName.Parse(CaPool, allowUnparsed: true);
+                    set => CaPool = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class Topic
     {
         /// <summary>
