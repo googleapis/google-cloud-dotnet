@@ -3228,7 +3228,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:46:26Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "90b9e07dda3c5897cd6ad00d43a44ea229e269b8",
             "apiPaths": [
                 "google/devtools/cloudtrace/v2"
             ],
