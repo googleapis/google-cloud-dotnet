@@ -14,6 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
@@ -21,6 +23,7 @@ namespace GoogleCSharpSnippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedReservationSubBlocksClientSnippets
@@ -294,6 +297,144 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenanceRequestObject()
+        {
+            // Snippet: PerformMaintenance(PerformMaintenanceReservationSubBlockRequest, CallSettings)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = ReservationSubBlocksClient.Create();
+            // Initialize request argument(s)
+            PerformMaintenanceReservationSubBlockRequest request = new PerformMaintenanceReservationSubBlockRequest
+            {
+                Zone = "",
+                ReservationSubBlock = "",
+                RequestId = "",
+                Project = "",
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSubBlocksClient.PerformMaintenance(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSubBlocksClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceRequestObjectAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(PerformMaintenanceReservationSubBlockRequest, CallSettings)
+            // Additional: PerformMaintenanceAsync(PerformMaintenanceReservationSubBlockRequest, CancellationToken)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = await ReservationSubBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            PerformMaintenanceReservationSubBlockRequest request = new PerformMaintenanceReservationSubBlockRequest
+            {
+                Zone = "",
+                ReservationSubBlock = "",
+                RequestId = "",
+                Project = "",
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSubBlocksClient.PerformMaintenanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSubBlocksClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenance()
+        {
+            // Snippet: PerformMaintenance(string, string, string, string, CallSettings)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = ReservationSubBlocksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSubBlock = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSubBlocksClient.PerformMaintenance(project, zone, parentName, reservationSubBlock);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSubBlocksClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(string, string, string, string, CallSettings)
+            // Additional: PerformMaintenanceAsync(string, string, string, string, CancellationToken)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = await ReservationSubBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSubBlock = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSubBlocksClient.PerformMaintenanceAsync(project, zone, parentName, reservationSubBlock);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSubBlocksClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }
