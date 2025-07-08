@@ -4395,6 +4395,12 @@
                 "List",
                 "ListAsync"
               ]
+            },
+            "PerformMaintenance": {
+              "methods": [
+                "PerformMaintenance",
+                "PerformMaintenanceAsync"
+              ]
             }
           }
         }

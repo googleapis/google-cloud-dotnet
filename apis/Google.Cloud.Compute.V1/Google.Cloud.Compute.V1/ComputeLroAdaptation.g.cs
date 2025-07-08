@@ -2577,6 +2577,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PerformMaintenanceReservationSubBlockRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteReservationRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
