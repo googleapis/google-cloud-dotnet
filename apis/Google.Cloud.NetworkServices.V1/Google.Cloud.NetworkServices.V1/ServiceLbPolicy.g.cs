@@ -28,7 +28,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             "cG9saWN5LnByb3RvEh9nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYx",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
             "L3Jlc291cmNlLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLoBwoPU2Vy",
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK6CwoPU2Vy",
             "dmljZUxiUG9saWN5EhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1",
             "cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
@@ -41,47 +41,59 @@ namespace Google.Cloud.NetworkServices.V1 {
             "bmV0d29ya3NlcnZpY2VzLnYxLlNlcnZpY2VMYlBvbGljeS5BdXRvQ2FwYWNp",
             "dHlEcmFpbkID4EEBEl0KD2ZhaWxvdmVyX2NvbmZpZxgKIAEoCzI/Lmdvb2ds",
             "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUxiUG9saWN5LkZh",
-            "aWxvdmVyQ29uZmlnQgPgQQEaKAoRQXV0b0NhcGFjaXR5RHJhaW4SEwoGZW5h",
-            "YmxlGAEgASgIQgPgQQEaOAoORmFpbG92ZXJDb25maWcSJgoZZmFpbG92ZXJf",
-            "aGVhbHRoX3RocmVzaG9sZBgBIAEoBUID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEimwEKFkxvYWRCYWxhbmNp",
-            "bmdBbGdvcml0aG0SKAokTE9BRF9CQUxBTkNJTkdfQUxHT1JJVEhNX1VOU1BF",
-            "Q0lGSUVEEAASEgoOU1BSQVlfVE9fV09STEQQAxITCg9TUFJBWV9UT19SRUdJ",
-            "T04QBBIXChNXQVRFUkZBTExfQllfUkVHSU9OEAUSFQoRV0FURVJGQUxMX0JZ",
-            "X1pPTkUQBjqCAepBfwoubmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29t",
-            "L1NlcnZpY2VMYlBvbGljeRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3NlcnZpY2VMYlBvbGljaWVzL3tzZXJ2aWNlX2xiX3Bv",
-            "bGljeX0ijQEKHExpc3RTZXJ2aWNlTGJQb2xpY2llc1JlcXVlc3QSRgoGcGFy",
-            "ZW50GAEgASgJQjbgQQL6QTASLm5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlz",
-            "LmNvbS9TZXJ2aWNlTGJQb2xpY3kSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YAyABKAkinAEKHUxpc3RTZXJ2aWNlTGJQb2xpY2llc1Jlc3Bv",
-            "bnNlEk0KE3NlcnZpY2VfbGJfcG9saWNpZXMYASADKAsyMC5nb29nbGUuY2xv",
-            "dWQubmV0d29ya3NlcnZpY2VzLnYxLlNlcnZpY2VMYlBvbGljeRIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiYQoZR2V0",
-            "U2VydmljZUxiUG9saWN5UmVxdWVzdBJECgRuYW1lGAEgASgJQjbgQQL6QTAK",
-            "Lm5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlTGJQb2xp",
-            "Y3ki2wEKHENyZWF0ZVNlcnZpY2VMYlBvbGljeVJlcXVlc3QSRgoGcGFyZW50",
-            "GAEgASgJQjbgQQL6QTASLm5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNv",
-            "bS9TZXJ2aWNlTGJQb2xpY3kSIQoUc2VydmljZV9sYl9wb2xpY3lfaWQYAiAB",
-            "KAlCA+BBAhJQChFzZXJ2aWNlX2xiX3BvbGljeRgDIAEoCzIwLmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUxiUG9saWN5QgPgQQIi",
-            "pgEKHFVwZGF0ZVNlcnZpY2VMYlBvbGljeVJlcXVlc3QSNAoLdXBkYXRlX21h",
-            "c2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESUAoR",
-            "c2VydmljZV9sYl9wb2xpY3kYAiABKAsyMC5nb29nbGUuY2xvdWQubmV0d29y",
-            "a3NlcnZpY2VzLnYxLlNlcnZpY2VMYlBvbGljeUID4EECImQKHERlbGV0ZVNl",
-            "cnZpY2VMYlBvbGljeVJlcXVlc3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi5u",
-            "ZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vU2VydmljZUxiUG9saWN5",
-            "QvUBCiNjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MUIUU2Vy",
-            "dmljZUxiUG9saWN5UHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3",
-            "b3Jrc2VydmljZXMvYXBpdjEvbmV0d29ya3NlcnZpY2VzcGI7bmV0d29ya3Nl",
-            "cnZpY2VzcGKqAh9Hb29nbGUuQ2xvdWQuTmV0d29ya1NlcnZpY2VzLlYxygIf",
-            "R29vZ2xlXENsb3VkXE5ldHdvcmtTZXJ2aWNlc1xWMeoCIkdvb2dsZTo6Q2xv",
-            "dWQ6Ok5ldHdvcmtTZXJ2aWNlczo6VjFiBnByb3RvMw=="));
+            "aWxvdmVyQ29uZmlnQgPgQQESXwoQaXNvbGF0aW9uX2NvbmZpZxgLIAEoCzJA",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUxiUG9s",
+            "aWN5Lklzb2xhdGlvbkNvbmZpZ0ID4EEBGigKEUF1dG9DYXBhY2l0eURyYWlu",
+            "EhMKBmVuYWJsZRgBIAEoCEID4EEBGjgKDkZhaWxvdmVyQ29uZmlnEiYKGWZh",
+            "aWxvdmVyX2hlYWx0aF90aHJlc2hvbGQYASABKAVCA+BBARrZAQoPSXNvbGF0",
+            "aW9uQ29uZmlnEmkKFWlzb2xhdGlvbl9ncmFudWxhcml0eRgBIAEoDjJFLmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUxiUG9saWN5",
+            "Lklzb2xhdGlvbkdyYW51bGFyaXR5QgPgQQESWwoOaXNvbGF0aW9uX21vZGUY",
+            "AiABKA4yPi5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLlNlcnZp",
+            "Y2VMYlBvbGljeS5Jc29sYXRpb25Nb2RlQgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKbAQoWTG9hZEJhbGFu",
+            "Y2luZ0FsZ29yaXRobRIoCiRMT0FEX0JBTEFOQ0lOR19BTEdPUklUSE1fVU5T",
+            "UEVDSUZJRUQQABISCg5TUFJBWV9UT19XT1JMRBADEhMKD1NQUkFZX1RPX1JF",
+            "R0lPThAEEhcKE1dBVEVSRkFMTF9CWV9SRUdJT04QBRIVChFXQVRFUkZBTExf",
+            "QllfWk9ORRAGIkkKFElzb2xhdGlvbkdyYW51bGFyaXR5EiUKIUlTT0xBVElP",
+            "Tl9HUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEgoKBlJFR0lPThABIkgKDUlz",
+            "b2xhdGlvbk1vZGUSHgoaSVNPTEFUSU9OX01PREVfVU5TUEVDSUZJRUQQABIL",
+            "CgdORUFSRVNUEAESCgoGU1RSSUNUEAI6ggHqQX8KLm5ldHdvcmtzZXJ2aWNl",
+            "cy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlTGJQb2xpY3kSTXByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXJ2aWNlTGJQb2xpY2ll",
+            "cy97c2VydmljZV9sYl9wb2xpY3l9Io0BChxMaXN0U2VydmljZUxiUG9saWNp",
+            "ZXNSZXF1ZXN0EkYKBnBhcmVudBgBIAEoCUI24EEC+kEwEi5uZXR3b3Jrc2Vy",
+            "dmljZXMuZ29vZ2xlYXBpcy5jb20vU2VydmljZUxiUG9saWN5EhEKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIpwBCh1MaXN0U2Vydmlj",
+            "ZUxiUG9saWNpZXNSZXNwb25zZRJNChNzZXJ2aWNlX2xiX3BvbGljaWVzGAEg",
+            "AygLMjAuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5TZXJ2aWNl",
+            "TGJQb2xpY3kSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hh",
+            "YmxlGAMgAygJImEKGUdldFNlcnZpY2VMYlBvbGljeVJlcXVlc3QSRAoEbmFt",
+            "ZRgBIAEoCUI24EEC+kEwCi5uZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5j",
+            "b20vU2VydmljZUxiUG9saWN5ItsBChxDcmVhdGVTZXJ2aWNlTGJQb2xpY3lS",
+            "ZXF1ZXN0EkYKBnBhcmVudBgBIAEoCUI24EEC+kEwEi5uZXR3b3Jrc2Vydmlj",
+            "ZXMuZ29vZ2xlYXBpcy5jb20vU2VydmljZUxiUG9saWN5EiEKFHNlcnZpY2Vf",
+            "bGJfcG9saWN5X2lkGAIgASgJQgPgQQISUAoRc2VydmljZV9sYl9wb2xpY3kY",
+            "AyABKAsyMC5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLlNlcnZp",
+            "Y2VMYlBvbGljeUID4EECIqYBChxVcGRhdGVTZXJ2aWNlTGJQb2xpY3lSZXF1",
+            "ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFza0ID4EEBElAKEXNlcnZpY2VfbGJfcG9saWN5GAIgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5TZXJ2aWNlTGJQb2xpY3lC",
+            "A+BBAiJkChxEZWxldGVTZXJ2aWNlTGJQb2xpY3lSZXF1ZXN0EkQKBG5hbWUY",
+            "ASABKAlCNuBBAvpBMAoubmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29t",
+            "L1NlcnZpY2VMYlBvbGljeUL1AQojY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
+            "c2VydmljZXMudjFCFFNlcnZpY2VMYlBvbGljeVByb3RvUAFaTWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25ldHdvcmtzZXJ2",
+            "aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNsb3VkLk5ldHdv",
+            "cmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3JrU2VydmljZXNc",
+            "VjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy), global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "LoadBalancingAlgorithm", "AutoCapacityDrain", "FailoverConfig" }, null, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.LoadBalancingAlgorithm) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.AutoCapacityDrain), global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.AutoCapacityDrain.Parser, new[]{ "Enable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy), global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "LoadBalancingAlgorithm", "AutoCapacityDrain", "FailoverConfig", "IsolationConfig" }, null, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.LoadBalancingAlgorithm), typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity), typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.AutoCapacityDrain), global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.AutoCapacityDrain.Parser, new[]{ "Enable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.FailoverConfig), global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.FailoverConfig.Parser, new[]{ "FailoverHealthThreshold" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig), global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig.Parser, new[]{ "IsolationGranularity", "IsolationMode" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest), global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse), global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse.Parser, new[]{ "ServiceLbPolicies", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -142,6 +154,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       loadBalancingAlgorithm_ = other.loadBalancingAlgorithm_;
       autoCapacityDrain_ = other.autoCapacityDrain_ != null ? other.autoCapacityDrain_.Clone() : null;
       failoverConfig_ = other.failoverConfig_ != null ? other.failoverConfig_.Clone() : null;
+      isolationConfig_ = other.isolationConfig_ != null ? other.isolationConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -274,6 +287,22 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "isolation_config" field.</summary>
+    public const int IsolationConfigFieldNumber = 11;
+    private global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig isolationConfig_;
+    /// <summary>
+    /// Optional. Configuration to provide isolation support for the associated
+    /// Backend Service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig IsolationConfig {
+      get { return isolationConfig_; }
+      set {
+        isolationConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -297,6 +326,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (LoadBalancingAlgorithm != other.LoadBalancingAlgorithm) return false;
       if (!object.Equals(AutoCapacityDrain, other.AutoCapacityDrain)) return false;
       if (!object.Equals(FailoverConfig, other.FailoverConfig)) return false;
+      if (!object.Equals(IsolationConfig, other.IsolationConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -312,6 +342,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (LoadBalancingAlgorithm != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.LoadBalancingAlgorithm.Unspecified) hash ^= LoadBalancingAlgorithm.GetHashCode();
       if (autoCapacityDrain_ != null) hash ^= AutoCapacityDrain.GetHashCode();
       if (failoverConfig_ != null) hash ^= FailoverConfig.GetHashCode();
+      if (isolationConfig_ != null) hash ^= IsolationConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -359,6 +390,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(FailoverConfig);
       }
+      if (isolationConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(IsolationConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -398,6 +433,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(FailoverConfig);
       }
+      if (isolationConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(IsolationConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -429,6 +468,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (failoverConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FailoverConfig);
+      }
+      if (isolationConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IsolationConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -475,6 +517,12 @@ namespace Google.Cloud.NetworkServices.V1 {
           FailoverConfig = new global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.FailoverConfig();
         }
         FailoverConfig.MergeFrom(other.FailoverConfig);
+      }
+      if (other.isolationConfig_ != null) {
+        if (isolationConfig_ == null) {
+          IsolationConfig = new global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig();
+        }
+        IsolationConfig.MergeFrom(other.IsolationConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -533,6 +581,13 @@ namespace Google.Cloud.NetworkServices.V1 {
               FailoverConfig = new global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.FailoverConfig();
             }
             input.ReadMessage(FailoverConfig);
+            break;
+          }
+          case 90: {
+            if (isolationConfig_ == null) {
+              IsolationConfig = new global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig();
+            }
+            input.ReadMessage(IsolationConfig);
             break;
           }
         }
@@ -594,6 +649,13 @@ namespace Google.Cloud.NetworkServices.V1 {
             input.ReadMessage(FailoverConfig);
             break;
           }
+          case 90: {
+            if (isolationConfig_ == null) {
+              IsolationConfig = new global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationConfig();
+            }
+            input.ReadMessage(IsolationConfig);
+            break;
+          }
         }
       }
     }
@@ -635,6 +697,41 @@ namespace Google.Cloud.NetworkServices.V1 {
         /// spilling over to other zones.
         /// </summary>
         [pbr::OriginalName("WATERFALL_BY_ZONE")] WaterfallByZone = 6,
+      }
+
+      /// <summary>
+      /// The granularity of this isolation restriction.
+      /// </summary>
+      public enum IsolationGranularity {
+        /// <summary>
+        /// No isolation is configured for the backend service. Traffic can overflow
+        /// based on the load balancing algorithm.
+        /// </summary>
+        [pbr::OriginalName("ISOLATION_GRANULARITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Traffic for this service will be isolated at the cloud region level.
+        /// </summary>
+        [pbr::OriginalName("REGION")] Region = 1,
+      }
+
+      /// <summary>
+      /// The mode of this isolation restriction, defining whether clients in a given
+      /// region are allowed to reach out to another region.
+      /// </summary>
+      public enum IsolationMode {
+        /// <summary>
+        /// No isolation mode is configured for the backend service.
+        /// </summary>
+        [pbr::OriginalName("ISOLATION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Traffic will be sent to the nearest region.
+        /// </summary>
+        [pbr::OriginalName("NEAREST")] Nearest = 1,
+        /// <summary>
+        /// Traffic will fail if no serving backends are available in the same region
+        /// as the load balancer.
+        /// </summary>
+        [pbr::OriginalName("STRICT")] Strict = 2,
       }
 
       /// <summary>
@@ -1031,6 +1128,243 @@ namespace Google.Cloud.NetworkServices.V1 {
                 break;
               case 8: {
                 FailoverHealthThreshold = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Configuration to provide isolation support for the associated Backend
+      /// Service.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class IsolationConfig : pb::IMessage<IsolationConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IsolationConfig> _parser = new pb::MessageParser<IsolationConfig>(() => new IsolationConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IsolationConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IsolationConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IsolationConfig(IsolationConfig other) : this() {
+          isolationGranularity_ = other.isolationGranularity_;
+          isolationMode_ = other.isolationMode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IsolationConfig Clone() {
+          return new IsolationConfig(this);
+        }
+
+        /// <summary>Field number for the "isolation_granularity" field.</summary>
+        public const int IsolationGranularityFieldNumber = 1;
+        private global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity isolationGranularity_ = global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity.Unspecified;
+        /// <summary>
+        /// Optional. The isolation granularity of the load balancer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity IsolationGranularity {
+          get { return isolationGranularity_; }
+          set {
+            isolationGranularity_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "isolation_mode" field.</summary>
+        public const int IsolationModeFieldNumber = 2;
+        private global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode isolationMode_ = global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode.Unspecified;
+        /// <summary>
+        /// Optional. The isolation mode of the load balancer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode IsolationMode {
+          get { return isolationMode_; }
+          set {
+            isolationMode_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IsolationConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IsolationConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (IsolationGranularity != other.IsolationGranularity) return false;
+          if (IsolationMode != other.IsolationMode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (IsolationGranularity != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity.Unspecified) hash ^= IsolationGranularity.GetHashCode();
+          if (IsolationMode != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode.Unspecified) hash ^= IsolationMode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (IsolationGranularity != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) IsolationGranularity);
+          }
+          if (IsolationMode != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) IsolationMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (IsolationGranularity != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) IsolationGranularity);
+          }
+          if (IsolationMode != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) IsolationMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (IsolationGranularity != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IsolationGranularity);
+          }
+          if (IsolationMode != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IsolationMode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IsolationConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.IsolationGranularity != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity.Unspecified) {
+            IsolationGranularity = other.IsolationGranularity;
+          }
+          if (other.IsolationMode != global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode.Unspecified) {
+            IsolationMode = other.IsolationMode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                IsolationGranularity = (global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                IsolationMode = (global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                IsolationGranularity = (global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationGranularity) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                IsolationMode = (global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Types.IsolationMode) input.ReadEnum();
                 break;
               }
             }
