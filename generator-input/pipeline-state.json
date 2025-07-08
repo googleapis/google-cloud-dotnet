@@ -4236,7 +4236,6 @@
         "google/cloud/licensemanager/v1",
         "google/cloud/redis/cluster/v1beta1",
         "google/cloud/configdelivery/v1alpha",
-        "google/cloud/geminidataanalytics/v1alpha",
-        "google/cloud/maintenance/api/v1beta"
+        "google/cloud/geminidataanalytics/v1alpha"
     ]
 }
