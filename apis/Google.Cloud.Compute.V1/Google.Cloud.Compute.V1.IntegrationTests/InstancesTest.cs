@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -28,9 +29,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         public InstancesTest(ComputeFixture fixture, ITestOutputHelper output) =>
             (_fixture, _output) = (fixture, output);
 
-        [Fact]
+        [SkippableFact]
         public void CreateInstance()
         {
+            TestEnvironment.SkipOnRestrictedEnvironment();
             string projectId = _fixture.ProjectId;
             string zone = _fixture.Zone;
             string machineType =
