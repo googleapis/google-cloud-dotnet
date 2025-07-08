@@ -1717,7 +1717,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:00:44Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "1bab08a92518b1a2c50b9092f36c0278480f04b6",
             "apiPaths": [
                 "google/iam/admin/v1"
             ],
