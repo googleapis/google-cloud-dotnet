@@ -2523,7 +2523,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-07-07T14:21:42.126889550Z",
-            "lastGeneratedCommit": "ade5fe46aa5b7296887cd5aedbe8d35a243f6579",
+            "lastGeneratedCommit": "898bcf49cc7b8dbc7e87bec08e67140f9fe379d6",
             "lastReleasedCommit": "ade5fe46aa5b7296887cd5aedbe8d35a243f6579",
             "apiPaths": [
                 "google/pubsub/v1"
