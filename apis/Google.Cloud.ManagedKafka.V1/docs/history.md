@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2025-07-09
+
+### New features
+
+- Update libraries and clients for Managed Kafka
+
 ## Version 1.0.0-beta06, released 2025-05-27
 
 ### New features
