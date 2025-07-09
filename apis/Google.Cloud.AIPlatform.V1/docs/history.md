@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.38.0, released 2025-07-09
+
+### New features
+
+- Expose task_unique_name in pipeline task details for pipeline rerun
+
 ## Version 3.37.0, released 2025-07-07
 
 ### New features
