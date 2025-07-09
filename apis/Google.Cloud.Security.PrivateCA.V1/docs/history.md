@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.10.0, released 2025-07-09
+
+### New features
+
+- Add RDN sequence
+- Add User Defined Access URLs
+- Add backdate duration
+- Adds tbs_certificate_digest to CertificateDescription
+
 ## Version 3.9.0, released 2024-06-04
 
 ### New features
