@@ -4237,6 +4237,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.ConfigDelivery.V1/Google.Cloud.ConfigDelivery.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Maintenance.Api.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/maintenance/api/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Maintenance.Api.V1Beta/Google.Cloud.Maintenance.Api.V1Beta"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
