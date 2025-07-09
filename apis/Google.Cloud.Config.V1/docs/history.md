@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.8.0, released 2025-07-09
+
+### New features
+
+- Added resource change and drift details for the preview
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.config.v1.Deployment` is changed
+- A comment for field `labels` in message `.google.cloud.config.v1.Deployment` is changed
+- A comment for field `input_values` in message `.google.cloud.config.v1.TerraformBlueprint` is changed
+- A comment for field `input_value` in message `.google.cloud.config.v1.TerraformVariable` is changed
+- A comment for field `error` in message `.google.cloud.config.v1.TerraformError` is changed
+- A comment for field `annotations` in message `.google.cloud.config.v1.Preview` is changed
+- A comment for field `page_size` in message `.google.cloud.config.v1.ListTerraformVersionsRequest` is changed
+- A comment for field `page_token` in message `.google.cloud.config.v1.ListTerraformVersionsRequest` is changed
+
 ## Version 1.7.0, released 2025-01-13
 
 ### New features

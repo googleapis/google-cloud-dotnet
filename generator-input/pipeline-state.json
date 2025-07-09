@@ -1063,11 +1063,12 @@
         },
         {
             "id": "Google.Cloud.Config.V1",
-            "currentVersion": "1.7.0",
+            "currentVersion": "1.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-13T18:20:22Z",
+            "releaseTimestamp": "2025-07-09T07:42:54.208609689Z",
             "lastGeneratedCommit": "e0ccc57ed01b0057222f865de5765b7e453cfd81",
+            "lastReleasedCommit": "e0ccc57ed01b0057222f865de5765b7e453cfd81",
             "apiPaths": [
                 "google/cloud/config/v1"
             ],
