@@ -82,6 +82,18 @@
                 "GetResourceAsync"
               ]
             },
+            "GetResourceChange": {
+              "methods": [
+                "GetResourceChange",
+                "GetResourceChangeAsync"
+              ]
+            },
+            "GetResourceDrift": {
+              "methods": [
+                "GetResourceDrift",
+                "GetResourceDriftAsync"
+              ]
+            },
             "GetRevision": {
               "methods": [
                 "GetRevision",
@@ -110,6 +122,18 @@
               "methods": [
                 "ListPreviews",
                 "ListPreviewsAsync"
+              ]
+            },
+            "ListResourceChanges": {
+              "methods": [
+                "ListResourceChanges",
+                "ListResourceChangesAsync"
+              ]
+            },
+            "ListResourceDrifts": {
+              "methods": [
+                "ListResourceDrifts",
+                "ListResourceDriftsAsync"
               ]
             },
             "ListResources": {

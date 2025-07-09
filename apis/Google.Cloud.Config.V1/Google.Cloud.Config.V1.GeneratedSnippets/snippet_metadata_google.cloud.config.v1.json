@@ -6190,6 +6190,1218 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceChanges_sync",
+      "title": "ListResourceChangesRequestObject",
+      "description": "Snippet for ListResourceChanges",
+      "file": "ConfigClient.ListResourceChangesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceChanges",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceChanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListResourceChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListResourceChangesResponse, Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceChanges",
+          "fullName": "google.cloud.config.v1.Config.ListResourceChanges",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceChanges_async",
+      "title": "ListResourceChangesRequestObjectAsync",
+      "description": "Snippet for ListResourceChangesAsync",
+      "file": "ConfigClient.ListResourceChangesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceChangesAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceChangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListResourceChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListResourceChangesResponse, Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceChanges",
+          "fullName": "google.cloud.config.v1.Config.ListResourceChanges",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceChanges_sync_flattened",
+      "title": "ListResourceChanges",
+      "description": "Snippet for ListResourceChanges",
+      "file": "ConfigClient.ListResourceChangesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceChanges",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceChanges",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListResourceChangesResponse, Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceChanges",
+          "fullName": "google.cloud.config.v1.Config.ListResourceChanges",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceChanges_async_flattened",
+      "title": "ListResourceChangesAsync",
+      "description": "Snippet for ListResourceChangesAsync",
+      "file": "ConfigClient.ListResourceChangesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceChangesAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceChangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListResourceChangesResponse, Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceChanges",
+          "fullName": "google.cloud.config.v1.Config.ListResourceChanges",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceChanges_sync_flattened_resourceNames",
+      "title": "ListResourceChangesResourceNames",
+      "description": "Snippet for ListResourceChanges",
+      "file": "ConfigClient.ListResourceChangesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceChanges",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceChanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListResourceChangesResponse, Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceChanges",
+          "fullName": "google.cloud.config.v1.Config.ListResourceChanges",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceChanges_async_flattened_resourceNames",
+      "title": "ListResourceChangesResourceNamesAsync",
+      "description": "Snippet for ListResourceChangesAsync",
+      "file": "ConfigClient.ListResourceChangesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceChangesAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceChangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListResourceChangesResponse, Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceChanges",
+          "fullName": "google.cloud.config.v1.Config.ListResourceChanges",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceChange_sync",
+      "title": "GetResourceChangeRequestObject",
+      "description": "Snippet for GetResourceChange",
+      "file": "ConfigClient.GetResourceChangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceChange",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceChange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetResourceChangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ResourceChange",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceChange",
+          "fullName": "google.cloud.config.v1.Config.GetResourceChange",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceChange_async",
+      "title": "GetResourceChangeRequestObjectAsync",
+      "description": "Snippet for GetResourceChangeAsync",
+      "file": "ConfigClient.GetResourceChangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceChangeAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceChangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetResourceChangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceChange",
+          "fullName": "google.cloud.config.v1.Config.GetResourceChange",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceChange_sync_flattened",
+      "title": "GetResourceChange",
+      "description": "Snippet for GetResourceChange",
+      "file": "ConfigClient.GetResourceChangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceChange",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceChange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ResourceChange",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceChange",
+          "fullName": "google.cloud.config.v1.Config.GetResourceChange",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceChange_async_flattened",
+      "title": "GetResourceChangeAsync",
+      "description": "Snippet for GetResourceChangeAsync",
+      "file": "ConfigClient.GetResourceChangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceChangeAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceChangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceChange",
+          "fullName": "google.cloud.config.v1.Config.GetResourceChange",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceChange_sync_flattened_resourceNames",
+      "title": "GetResourceChangeResourceNames",
+      "description": "Snippet for GetResourceChange",
+      "file": "ConfigClient.GetResourceChangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceChange",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceChange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ResourceChangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ResourceChange",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceChange",
+          "fullName": "google.cloud.config.v1.Config.GetResourceChange",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceChange_async_flattened_resourceNames",
+      "title": "GetResourceChangeResourceNamesAsync",
+      "description": "Snippet for GetResourceChangeAsync",
+      "file": "ConfigClient.GetResourceChangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceChangeAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceChangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ResourceChangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ResourceChange>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceChange",
+          "fullName": "google.cloud.config.v1.Config.GetResourceChange",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceDrifts_sync",
+      "title": "ListResourceDriftsRequestObject",
+      "description": "Snippet for ListResourceDrifts",
+      "file": "ConfigClient.ListResourceDriftsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceDrifts",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceDrifts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListResourceDriftsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListResourceDriftsResponse, Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceDrifts",
+          "fullName": "google.cloud.config.v1.Config.ListResourceDrifts",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceDrifts_async",
+      "title": "ListResourceDriftsRequestObjectAsync",
+      "description": "Snippet for ListResourceDriftsAsync",
+      "file": "ConfigClient.ListResourceDriftsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceDriftsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceDriftsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListResourceDriftsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListResourceDriftsResponse, Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceDrifts",
+          "fullName": "google.cloud.config.v1.Config.ListResourceDrifts",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceDrifts_sync_flattened",
+      "title": "ListResourceDrifts",
+      "description": "Snippet for ListResourceDrifts",
+      "file": "ConfigClient.ListResourceDriftsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceDrifts",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceDrifts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListResourceDriftsResponse, Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceDrifts",
+          "fullName": "google.cloud.config.v1.Config.ListResourceDrifts",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceDrifts_async_flattened",
+      "title": "ListResourceDriftsAsync",
+      "description": "Snippet for ListResourceDriftsAsync",
+      "file": "ConfigClient.ListResourceDriftsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceDriftsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceDriftsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListResourceDriftsResponse, Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceDrifts",
+          "fullName": "google.cloud.config.v1.Config.ListResourceDrifts",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceDrifts_sync_flattened_resourceNames",
+      "title": "ListResourceDriftsResourceNames",
+      "description": "Snippet for ListResourceDrifts",
+      "file": "ConfigClient.ListResourceDriftsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceDrifts",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceDrifts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListResourceDriftsResponse, Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceDrifts",
+          "fullName": "google.cloud.config.v1.Config.ListResourceDrifts",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListResourceDrifts_async_flattened_resourceNames",
+      "title": "ListResourceDriftsResourceNamesAsync",
+      "description": "Snippet for ListResourceDriftsAsync",
+      "file": "ConfigClient.ListResourceDriftsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceDriftsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListResourceDriftsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListResourceDriftsResponse, Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListResourceDrifts",
+          "fullName": "google.cloud.config.v1.Config.ListResourceDrifts",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceDrift_sync",
+      "title": "GetResourceDriftRequestObject",
+      "description": "Snippet for GetResourceDrift",
+      "file": "ConfigClient.GetResourceDriftRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceDrift",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceDrift",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetResourceDriftRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ResourceDrift",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceDrift",
+          "fullName": "google.cloud.config.v1.Config.GetResourceDrift",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceDrift_async",
+      "title": "GetResourceDriftRequestObjectAsync",
+      "description": "Snippet for GetResourceDriftAsync",
+      "file": "ConfigClient.GetResourceDriftRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceDriftAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceDriftAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetResourceDriftRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceDrift",
+          "fullName": "google.cloud.config.v1.Config.GetResourceDrift",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceDrift_sync_flattened",
+      "title": "GetResourceDrift",
+      "description": "Snippet for GetResourceDrift",
+      "file": "ConfigClient.GetResourceDriftSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceDrift",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceDrift",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ResourceDrift",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceDrift",
+          "fullName": "google.cloud.config.v1.Config.GetResourceDrift",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceDrift_async_flattened",
+      "title": "GetResourceDriftAsync",
+      "description": "Snippet for GetResourceDriftAsync",
+      "file": "ConfigClient.GetResourceDriftAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceDriftAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceDriftAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceDrift",
+          "fullName": "google.cloud.config.v1.Config.GetResourceDrift",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceDrift_sync_flattened_resourceNames",
+      "title": "GetResourceDriftResourceNames",
+      "description": "Snippet for GetResourceDrift",
+      "file": "ConfigClient.GetResourceDriftResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceDrift",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceDrift",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ResourceDriftName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ResourceDrift",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceDrift",
+          "fullName": "google.cloud.config.v1.Config.GetResourceDrift",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetResourceDrift_async_flattened_resourceNames",
+      "title": "GetResourceDriftResourceNamesAsync",
+      "description": "Snippet for GetResourceDriftAsync",
+      "file": "ConfigClient.GetResourceDriftResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceDriftAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetResourceDriftAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ResourceDriftName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ResourceDrift>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetResourceDrift",
+          "fullName": "google.cloud.config.v1.Config.GetResourceDrift",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

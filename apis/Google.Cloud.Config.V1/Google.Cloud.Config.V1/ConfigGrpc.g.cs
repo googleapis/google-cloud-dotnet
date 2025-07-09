@@ -140,6 +140,22 @@ namespace Google.Cloud.Config.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetTerraformVersionRequest> __Marshaller_google_cloud_config_v1_GetTerraformVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetTerraformVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.TerraformVersion> __Marshaller_google_cloud_config_v1_TerraformVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.TerraformVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListResourceChangesRequest> __Marshaller_google_cloud_config_v1_ListResourceChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListResourceChangesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListResourceChangesResponse> __Marshaller_google_cloud_config_v1_ListResourceChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListResourceChangesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetResourceChangeRequest> __Marshaller_google_cloud_config_v1_GetResourceChangeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetResourceChangeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ResourceChange> __Marshaller_google_cloud_config_v1_ResourceChange = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ResourceChange.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListResourceDriftsRequest> __Marshaller_google_cloud_config_v1_ListResourceDriftsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListResourceDriftsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListResourceDriftsResponse> __Marshaller_google_cloud_config_v1_ListResourceDriftsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListResourceDriftsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetResourceDriftRequest> __Marshaller_google_cloud_config_v1_GetResourceDriftRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetResourceDriftRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ResourceDrift> __Marshaller_google_cloud_config_v1_ResourceDrift = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ResourceDrift.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse>(
@@ -324,6 +340,38 @@ namespace Google.Cloud.Config.V1 {
         "GetTerraformVersion",
         __Marshaller_google_cloud_config_v1_GetTerraformVersionRequest,
         __Marshaller_google_cloud_config_v1_TerraformVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ListResourceChangesRequest, global::Google.Cloud.Config.V1.ListResourceChangesResponse> __Method_ListResourceChanges = new grpc::Method<global::Google.Cloud.Config.V1.ListResourceChangesRequest, global::Google.Cloud.Config.V1.ListResourceChangesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListResourceChanges",
+        __Marshaller_google_cloud_config_v1_ListResourceChangesRequest,
+        __Marshaller_google_cloud_config_v1_ListResourceChangesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetResourceChangeRequest, global::Google.Cloud.Config.V1.ResourceChange> __Method_GetResourceChange = new grpc::Method<global::Google.Cloud.Config.V1.GetResourceChangeRequest, global::Google.Cloud.Config.V1.ResourceChange>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetResourceChange",
+        __Marshaller_google_cloud_config_v1_GetResourceChangeRequest,
+        __Marshaller_google_cloud_config_v1_ResourceChange);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ListResourceDriftsRequest, global::Google.Cloud.Config.V1.ListResourceDriftsResponse> __Method_ListResourceDrifts = new grpc::Method<global::Google.Cloud.Config.V1.ListResourceDriftsRequest, global::Google.Cloud.Config.V1.ListResourceDriftsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListResourceDrifts",
+        __Marshaller_google_cloud_config_v1_ListResourceDriftsRequest,
+        __Marshaller_google_cloud_config_v1_ListResourceDriftsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetResourceDriftRequest, global::Google.Cloud.Config.V1.ResourceDrift> __Method_GetResourceDrift = new grpc::Method<global::Google.Cloud.Config.V1.GetResourceDriftRequest, global::Google.Cloud.Config.V1.ResourceDrift>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetResourceDrift",
+        __Marshaller_google_cloud_config_v1_GetResourceDriftRequest,
+        __Marshaller_google_cloud_config_v1_ResourceDrift);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -613,6 +661,54 @@ namespace Google.Cloud.Config.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.TerraformVersion> GetTerraformVersion(global::Google.Cloud.Config.V1.GetTerraformVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ResourceChanges for a given preview.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ListResourceChangesResponse> ListResourceChanges(global::Google.Cloud.Config.V1.ListResourceChangesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a ResourceChange for a given preview.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ResourceChange> GetResourceChange(global::Google.Cloud.Config.V1.GetResourceChangeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List ResourceDrifts for a given preview.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ListResourceDriftsResponse> ListResourceDrifts(global::Google.Cloud.Config.V1.ListResourceDriftsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a ResourceDrift for a given preview.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ResourceDrift> GetResourceDrift(global::Google.Cloud.Config.V1.GetResourceDriftRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1774,6 +1870,198 @@ namespace Google.Cloud.Config.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTerraformVersion, null, options, request);
       }
+      /// <summary>
+      /// Lists ResourceChanges for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListResourceChangesResponse ListResourceChanges(global::Google.Cloud.Config.V1.ListResourceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ResourceChanges for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListResourceChangesResponse ListResourceChanges(global::Google.Cloud.Config.V1.ListResourceChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListResourceChanges, null, options, request);
+      }
+      /// <summary>
+      /// Lists ResourceChanges for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListResourceChangesResponse> ListResourceChangesAsync(global::Google.Cloud.Config.V1.ListResourceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ResourceChanges for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListResourceChangesResponse> ListResourceChangesAsync(global::Google.Cloud.Config.V1.ListResourceChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListResourceChanges, null, options, request);
+      }
+      /// <summary>
+      /// Get a ResourceChange for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ResourceChange GetResourceChange(global::Google.Cloud.Config.V1.GetResourceChangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceChange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a ResourceChange for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ResourceChange GetResourceChange(global::Google.Cloud.Config.V1.GetResourceChangeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetResourceChange, null, options, request);
+      }
+      /// <summary>
+      /// Get a ResourceChange for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ResourceChange> GetResourceChangeAsync(global::Google.Cloud.Config.V1.GetResourceChangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceChangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a ResourceChange for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ResourceChange> GetResourceChangeAsync(global::Google.Cloud.Config.V1.GetResourceChangeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetResourceChange, null, options, request);
+      }
+      /// <summary>
+      /// List ResourceDrifts for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListResourceDriftsResponse ListResourceDrifts(global::Google.Cloud.Config.V1.ListResourceDriftsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceDrifts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List ResourceDrifts for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListResourceDriftsResponse ListResourceDrifts(global::Google.Cloud.Config.V1.ListResourceDriftsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListResourceDrifts, null, options, request);
+      }
+      /// <summary>
+      /// List ResourceDrifts for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListResourceDriftsResponse> ListResourceDriftsAsync(global::Google.Cloud.Config.V1.ListResourceDriftsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceDriftsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List ResourceDrifts for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListResourceDriftsResponse> ListResourceDriftsAsync(global::Google.Cloud.Config.V1.ListResourceDriftsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListResourceDrifts, null, options, request);
+      }
+      /// <summary>
+      /// Get a ResourceDrift for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ResourceDrift GetResourceDrift(global::Google.Cloud.Config.V1.GetResourceDriftRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceDrift(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a ResourceDrift for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ResourceDrift GetResourceDrift(global::Google.Cloud.Config.V1.GetResourceDriftRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetResourceDrift, null, options, request);
+      }
+      /// <summary>
+      /// Get a ResourceDrift for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ResourceDrift> GetResourceDriftAsync(global::Google.Cloud.Config.V1.GetResourceDriftRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceDriftAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a ResourceDrift for a given preview.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ResourceDrift> GetResourceDriftAsync(global::Google.Cloud.Config.V1.GetResourceDriftRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetResourceDrift, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConfigClient NewInstance(ClientBaseConfiguration configuration)
@@ -1810,7 +2098,11 @@ namespace Google.Cloud.Config.V1 {
           .AddMethod(__Method_DeletePreview, serviceImpl.DeletePreview)
           .AddMethod(__Method_ExportPreviewResult, serviceImpl.ExportPreviewResult)
           .AddMethod(__Method_ListTerraformVersions, serviceImpl.ListTerraformVersions)
-          .AddMethod(__Method_GetTerraformVersion, serviceImpl.GetTerraformVersion).Build();
+          .AddMethod(__Method_GetTerraformVersion, serviceImpl.GetTerraformVersion)
+          .AddMethod(__Method_ListResourceChanges, serviceImpl.ListResourceChanges)
+          .AddMethod(__Method_GetResourceChange, serviceImpl.GetResourceChange)
+          .AddMethod(__Method_ListResourceDrifts, serviceImpl.ListResourceDrifts)
+          .AddMethod(__Method_GetResourceDrift, serviceImpl.GetResourceDrift).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1843,6 +2135,10 @@ namespace Google.Cloud.Config.V1 {
       serviceBinder.AddMethod(__Method_ExportPreviewResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ExportPreviewResultRequest, global::Google.Cloud.Config.V1.ExportPreviewResultResponse>(serviceImpl.ExportPreviewResult));
       serviceBinder.AddMethod(__Method_ListTerraformVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListTerraformVersionsRequest, global::Google.Cloud.Config.V1.ListTerraformVersionsResponse>(serviceImpl.ListTerraformVersions));
       serviceBinder.AddMethod(__Method_GetTerraformVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetTerraformVersionRequest, global::Google.Cloud.Config.V1.TerraformVersion>(serviceImpl.GetTerraformVersion));
+      serviceBinder.AddMethod(__Method_ListResourceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListResourceChangesRequest, global::Google.Cloud.Config.V1.ListResourceChangesResponse>(serviceImpl.ListResourceChanges));
+      serviceBinder.AddMethod(__Method_GetResourceChange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetResourceChangeRequest, global::Google.Cloud.Config.V1.ResourceChange>(serviceImpl.GetResourceChange));
+      serviceBinder.AddMethod(__Method_ListResourceDrifts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListResourceDriftsRequest, global::Google.Cloud.Config.V1.ListResourceDriftsResponse>(serviceImpl.ListResourceDrifts));
+      serviceBinder.AddMethod(__Method_GetResourceDrift, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetResourceDriftRequest, global::Google.Cloud.Config.V1.ResourceDrift>(serviceImpl.GetResourceDrift));
     }
 
   }
