@@ -87,7 +87,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bG91ZC5haXBsYXRmb3JtLnYxLkNvbnRleHRCA+BBAxJGChRwaXBlbGluZV9y",
             "dW5fY29udGV4dBgCIAEoCzIjLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "LkNvbnRleHRCA+BBAxJJCgx0YXNrX2RldGFpbHMYAyADKAsyLi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5QaXBlbGluZVRhc2tEZXRhaWxCA+BBAyKd",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5QaXBlbGluZVRhc2tEZXRhaWxCA+BBAyK8",
             "CwoSUGlwZWxpbmVUYXNrRGV0YWlsEhQKB3Rhc2tfaWQYASABKANCA+BBAxIb",
             "Cg5wYXJlbnRfdGFza19pZBgMIAEoA0ID4EEDEhYKCXRhc2tfbmFtZRgCIAEo",
             "CUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
@@ -105,41 +105,42 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CiADKAsyOi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QaXBlbGluZVRh",
             "c2tEZXRhaWwuSW5wdXRzRW50cnlCA+BBAxJRCgdvdXRwdXRzGAsgAygLMjsu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUGlwZWxpbmVUYXNrRGV0YWls",
-            "Lk91dHB1dHNFbnRyeUID4EEDGrwBChJQaXBlbGluZVRhc2tTdGF0dXMSNAoL",
-            "dXBkYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSSAoFc3RhdGUYAiABKA4yNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5QaXBlbGluZVRhc2tEZXRhaWwuU3RhdGVCA+BBAxImCgVlcnJvchgD",
-            "IAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMaTAoMQXJ0aWZhY3RMaXN0",
-            "EjwKCWFydGlmYWN0cxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkFydGlmYWN0QgPgQQMaagoLSW5wdXRzRW50cnkSCwoDa2V5GAEgASgJ",
-            "EkoKBXZhbHVlGAIgASgLMjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "UGlwZWxpbmVUYXNrRGV0YWlsLkFydGlmYWN0TGlzdDoCOAEaawoMT3V0cHV0",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRJKCgV2YWx1ZRgCIAEoCzI7Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlBpcGVsaW5lVGFza0RldGFpbC5BcnRpZmFj",
-            "dExpc3Q6AjgBIqYBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
-            "B1BFTkRJTkcQARILCgdSVU5OSU5HEAISDQoJU1VDQ0VFREVEEAMSEgoOQ0FO",
-            "Q0VMX1BFTkRJTkcQBBIOCgpDQU5DRUxMSU5HEAUSDQoJQ0FOQ0VMTEVEEAYS",
-            "CgoGRkFJTEVEEAcSCwoHU0tJUFBFRBAIEhEKDU5PVF9UUklHR0VSRUQQCSLL",
-            "BAoaUGlwZWxpbmVUYXNrRXhlY3V0b3JEZXRhaWwSZwoQY29udGFpbmVyX2Rl",
-            "dGFpbBgBIAEoCzJGLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBpcGVs",
-            "aW5lVGFza0V4ZWN1dG9yRGV0YWlsLkNvbnRhaW5lckRldGFpbEID4EEDSAAS",
-            "aAoRY3VzdG9tX2pvYl9kZXRhaWwYAiABKAsyRi5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5QaXBlbGluZVRhc2tFeGVjdXRvckRldGFpbC5DdXN0b21K",
-            "b2JEZXRhaWxCA+BBA0gAGucBCg9Db250YWluZXJEZXRhaWwSPQoIbWFpbl9q",
-            "b2IYASABKAlCK+BBA/pBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9D",
-            "dXN0b21Kb2ISSgoVcHJlX2NhY2hpbmdfY2hlY2tfam9iGAIgASgJQivgQQP6",
-            "QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEh0KEGZh",
-            "aWxlZF9tYWluX2pvYnMYAyADKAlCA+BBAxIqCh1mYWlsZWRfcHJlX2NhY2hp",
-            "bmdfY2hlY2tfam9icxgEIAMoCUID4EEDGmUKD0N1c3RvbUpvYkRldGFpbBI4",
-            "CgNqb2IYASABKAlCK+BBA/pBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9DdXN0b21Kb2ISGAoLZmFpbGVkX2pvYnMYAyADKAlCA+BBA0IJCgdkZXRh",
-            "aWxzQpcCCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCFBpcGVs",
-            "aW5lUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9h",
-            "aXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxh",
-            "dGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2ds",
-            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx6kFOCh5jb21wdXRlLmdvb2dsZWFw",
-            "aXMuY29tL05ldHdvcmsSLHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0",
-            "d29ya3Mve25ldHdvcmt9YgZwcm90bzM="));
+            "Lk91dHB1dHNFbnRyeUID4EEDEh0KEHRhc2tfdW5pcXVlX25hbWUYDiABKAlC",
+            "A+BBAxq8AQoSUGlwZWxpbmVUYXNrU3RhdHVzEjQKC3VwZGF0ZV90aW1lGAEg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKBXN0YXRl",
+            "GAIgASgOMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUGlwZWxpbmVU",
+            "YXNrRGV0YWlsLlN0YXRlQgPgQQMSJgoFZXJyb3IYAyABKAsyEi5nb29nbGUu",
+            "cnBjLlN0YXR1c0ID4EEDGkwKDEFydGlmYWN0TGlzdBI8CglhcnRpZmFjdHMY",
+            "ASADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BcnRpZmFjdEID",
+            "4EEDGmoKC0lucHV0c0VudHJ5EgsKA2tleRgBIAEoCRJKCgV2YWx1ZRgCIAEo",
+            "CzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBpcGVsaW5lVGFza0Rl",
+            "dGFpbC5BcnRpZmFjdExpc3Q6AjgBGmsKDE91dHB1dHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSSgoFdmFsdWUYAiABKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5QaXBlbGluZVRhc2tEZXRhaWwuQXJ0aWZhY3RMaXN0OgI4ASKmAQoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoH",
+            "UlVOTklORxACEg0KCVNVQ0NFRURFRBADEhIKDkNBTkNFTF9QRU5ESU5HEAQS",
+            "DgoKQ0FOQ0VMTElORxAFEg0KCUNBTkNFTExFRBAGEgoKBkZBSUxFRBAHEgsK",
+            "B1NLSVBQRUQQCBIRCg1OT1RfVFJJR0dFUkVEEAkiywQKGlBpcGVsaW5lVGFz",
+            "a0V4ZWN1dG9yRGV0YWlsEmcKEGNvbnRhaW5lcl9kZXRhaWwYASABKAsyRi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QaXBlbGluZVRhc2tFeGVjdXRv",
+            "ckRldGFpbC5Db250YWluZXJEZXRhaWxCA+BBA0gAEmgKEWN1c3RvbV9qb2Jf",
+            "ZGV0YWlsGAIgASgLMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUGlw",
+            "ZWxpbmVUYXNrRXhlY3V0b3JEZXRhaWwuQ3VzdG9tSm9iRGV0YWlsQgPgQQNI",
+            "ABrnAQoPQ29udGFpbmVyRGV0YWlsEj0KCG1haW5fam9iGAEgASgJQivgQQP6",
+            "QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEkoKFXBy",
+            "ZV9jYWNoaW5nX2NoZWNrX2pvYhgCIAEoCUIr4EED+kElCiNhaXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29tL0N1c3RvbUpvYhIdChBmYWlsZWRfbWFpbl9qb2Jz",
+            "GAMgAygJQgPgQQMSKgodZmFpbGVkX3ByZV9jYWNoaW5nX2NoZWNrX2pvYnMY",
+            "BCADKAlCA+BBAxplCg9DdXN0b21Kb2JEZXRhaWwSOAoDam9iGAEgASgJQivg",
+            "QQP6QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEhgK",
+            "C2ZhaWxlZF9qb2JzGAMgAygJQgPgQQNCCQoHZGV0YWlsc0KXAgoeY29tLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQghQaXBlbGluZVABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMepBTgoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3Jr",
+            "Eixwcm9qZWN0cy97cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tuZXR3b3Jr",
+            "fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ArtifactReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ContextReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExecutionReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineFailurePolicyReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ValueReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +149,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTemplateMetadata), global::Google.Cloud.AIPlatform.V1.PipelineTemplateMetadata.Parser, new[]{ "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineJobDetail), global::Google.Cloud.AIPlatform.V1.PipelineJobDetail.Parser, new[]{ "PipelineContext", "PipelineRunContext", "TaskDetails" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Parser, new[]{ "TaskId", "ParentTaskId", "TaskName", "CreateTime", "StartTime", "EndTime", "ExecutorDetail", "State", "Execution", "Error", "PipelineTaskStatus", "Inputs", "Outputs" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus), global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus.Parser, new[]{ "UpdateTime", "State", "Error" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Parser, new[]{ "TaskId", "ParentTaskId", "TaskName", "CreateTime", "StartTime", "EndTime", "ExecutorDetail", "State", "Execution", "Error", "PipelineTaskStatus", "Inputs", "Outputs", "TaskUniqueName" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus), global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.PipelineTaskStatus.Parser, new[]{ "UpdateTime", "State", "Error" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.ArtifactList), global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.ArtifactList.Parser, new[]{ "Artifacts" }, null, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Parser, new[]{ "ContainerDetail", "CustomJobDetail" }, new[]{ "Details" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.ContainerDetail), global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.ContainerDetail.Parser, new[]{ "MainJob", "PreCachingCheckJob", "FailedMainJobs", "FailedPreCachingCheckJobs" }, null, null, null, null),
@@ -2427,6 +2428,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       pipelineTaskStatus_ = other.pipelineTaskStatus_.Clone();
       inputs_ = other.inputs_.Clone();
       outputs_ = other.outputs_.Clone();
+      taskUniqueName_ = other.taskUniqueName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2632,6 +2634,28 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return outputs_; }
     }
 
+    /// <summary>Field number for the "task_unique_name" field.</summary>
+    public const int TaskUniqueNameFieldNumber = 14;
+    private string taskUniqueName_ = "";
+    /// <summary>
+    /// Output only. The unique name of a task.
+    /// This field is used by rerun pipeline job.
+    /// Console UI and Vertex AI SDK will support triggering pipeline job reruns.
+    /// The name is constructed by concatenating all the parent tasks name with
+    /// the task name. For example, if a task named "child_task" has a parent task
+    /// named "parent_task_1" and parent task 1 has a parent task named
+    /// "parent_task_2", the task unique name will be
+    /// "parent_task_2.parent_task_1.child_task".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TaskUniqueName {
+      get { return taskUniqueName_; }
+      set {
+        taskUniqueName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2660,6 +2684,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if(!pipelineTaskStatus_.Equals(other.pipelineTaskStatus_)) return false;
       if (!Inputs.Equals(other.Inputs)) return false;
       if (!Outputs.Equals(other.Outputs)) return false;
+      if (TaskUniqueName != other.TaskUniqueName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2680,6 +2705,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= pipelineTaskStatus_.GetHashCode();
       hash ^= Inputs.GetHashCode();
       hash ^= Outputs.GetHashCode();
+      if (TaskUniqueName.Length != 0) hash ^= TaskUniqueName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2741,6 +2767,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteInt64(ParentTaskId);
       }
       pipelineTaskStatus_.WriteTo(output, _repeated_pipelineTaskStatus_codec);
+      if (TaskUniqueName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(TaskUniqueName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2794,6 +2824,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteInt64(ParentTaskId);
       }
       pipelineTaskStatus_.WriteTo(ref output, _repeated_pipelineTaskStatus_codec);
+      if (TaskUniqueName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(TaskUniqueName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2837,6 +2871,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += pipelineTaskStatus_.CalculateSize(_repeated_pipelineTaskStatus_codec);
       size += inputs_.CalculateSize(_map_inputs_codec);
       size += outputs_.CalculateSize(_map_outputs_codec);
+      if (TaskUniqueName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TaskUniqueName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2900,6 +2937,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       pipelineTaskStatus_.Add(other.pipelineTaskStatus_);
       inputs_.MergeFrom(other.inputs_);
       outputs_.MergeFrom(other.outputs_);
+      if (other.TaskUniqueName.Length != 0) {
+        TaskUniqueName = other.TaskUniqueName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2985,6 +3025,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             pipelineTaskStatus_.AddEntriesFrom(input, _repeated_pipelineTaskStatus_codec);
             break;
           }
+          case 114: {
+            TaskUniqueName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3068,6 +3112,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 106: {
             pipelineTaskStatus_.AddEntriesFrom(ref input, _repeated_pipelineTaskStatus_codec);
+            break;
+          }
+          case 114: {
+            TaskUniqueName = input.ReadString();
             break;
           }
         }
