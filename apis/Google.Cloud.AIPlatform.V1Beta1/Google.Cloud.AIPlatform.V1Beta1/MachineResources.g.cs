@@ -29,45 +29,49 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGjZnb29nbGUvY2xv",
             "dWQvYWlwbGF0Zm9ybS92MWJldGExL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8a",
             "Omdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0YTEvcmVzZXJ2YXRpb25f",
-            "YWZmaW5pdHkucHJvdG8itQIKC01hY2hpbmVTcGVjEhkKDG1hY2hpbmVfdHlw",
-            "ZRgBIAEoCUID4EEFEk8KEGFjY2VsZXJhdG9yX3R5cGUYAiABKA4yMC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkFjY2VsZXJhdG9yVHlwZUID",
-            "4EEFEhkKEWFjY2VsZXJhdG9yX2NvdW50GAMgASgFEhkKDHRwdV90b3BvbG9n",
-            "eRgEIAEoCUID4EEFEigKGG11bHRpaG9zdF9ncHVfbm9kZV9jb3VudBgGIAEo",
-            "BUIG4EEF4EEBEloKFHJlc2VydmF0aW9uX2FmZmluaXR5GAUgASgLMjQuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZXNlcnZhdGlvbkFmZmlu",
-            "aXR5QgbgQQXgQQEiugIKEkRlZGljYXRlZFJlc291cmNlcxJKCgxtYWNoaW5l",
-            "X3NwZWMYASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "Lk1hY2hpbmVTcGVjQgbgQQLgQQUSIQoRbWluX3JlcGxpY2FfY291bnQYAiAB",
-            "KAVCBuBBAuBBBRIeChFtYXhfcmVwbGljYV9jb3VudBgDIAEoBUID4EEFEiMK",
-            "FnJlcXVpcmVkX3JlcGxpY2FfY291bnQYCSABKAVCA+BBARJdChhhdXRvc2Nh",
-            "bGluZ19tZXRyaWNfc3BlY3MYBCADKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLkF1dG9zY2FsaW5nTWV0cmljU3BlY0ID4EEFEhEKBHNw",
-            "b3QYBSABKAhCA+BBASJUChJBdXRvbWF0aWNSZXNvdXJjZXMSHgoRbWluX3Jl",
-            "cGxpY2FfY291bnQYASABKAVCA+BBBRIeChFtYXhfcmVwbGljYV9jb3VudBgC",
-            "IAEoBUID4EEFIqoBChdCYXRjaERlZGljYXRlZFJlc291cmNlcxJKCgxtYWNo",
-            "aW5lX3NwZWMYASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLk1hY2hpbmVTcGVjQgbgQQLgQQUSIwoWc3RhcnRpbmdfcmVwbGljYV9j",
-            "b3VudBgCIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAMgASgFQgPg",
-            "QQUiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVwbGljYV9ob3VycxgBIAEo",
-            "AUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlza190eXBlGAEgASgJEhkK",
-            "EWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBlcnNpc3RlbnREaXNrU3Bl",
-            "YxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19zaXplX2diGAIgASgDIkwK",
-            "CE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiABKAlC",
-            "A+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2FsaW5n",
-            "TWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRhcmdl",
-            "dBgCIAEoBSIuChBTaGllbGRlZFZtQ29uZmlnEhoKEmVuYWJsZV9zZWN1cmVf",
-            "Ym9vdBgBIAEoCELsAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "YmV0YTFCFU1hY2hpbmVSZXNvdXJjZXNQcm90b1ABWkNjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlw",
-            "bGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoC",
-            "H0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "YWZmaW5pdHkucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
+            "byK1AgoLTWFjaGluZVNwZWMSGQoMbWFjaGluZV90eXBlGAEgASgJQgPgQQUS",
+            "TwoQYWNjZWxlcmF0b3JfdHlwZRgCIAEoDjIwLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuQWNjZWxlcmF0b3JUeXBlQgPgQQUSGQoRYWNjZWxl",
+            "cmF0b3JfY291bnQYAyABKAUSGQoMdHB1X3RvcG9sb2d5GAQgASgJQgPgQQUS",
+            "KAoYbXVsdGlob3N0X2dwdV9ub2RlX2NvdW50GAYgASgFQgbgQQXgQQESWgoU",
+            "cmVzZXJ2YXRpb25fYWZmaW5pdHkYBSABKAsyNC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExLlJlc2VydmF0aW9uQWZmaW5pdHlCBuBBBeBBASKC",
+            "AwoSRGVkaWNhdGVkUmVzb3VyY2VzEkoKDG1hY2hpbmVfc3BlYxgBIAEoCzIs",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuTWFjaGluZVNwZWNC",
+            "BuBBAuBBBRIhChFtaW5fcmVwbGljYV9jb3VudBgCIAEoBUIG4EEC4EEFEh4K",
+            "EW1heF9yZXBsaWNhX2NvdW50GAMgASgFQgPgQQUSIwoWcmVxdWlyZWRfcmVw",
+            "bGljYV9jb3VudBgJIAEoBUID4EEBEl0KGGF1dG9zY2FsaW5nX21ldHJpY19z",
+            "cGVjcxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "QXV0b3NjYWxpbmdNZXRyaWNTcGVjQgPgQQUSEQoEc3BvdBgFIAEoCEID4EEB",
+            "EkYKCmZsZXhfc3RhcnQYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MWJldGExLkZsZXhTdGFydEIG4EEF4EEBIlQKEkF1dG9tYXRpY1Jlc291",
+            "cmNlcxIeChFtaW5fcmVwbGljYV9jb3VudBgBIAEoBUID4EEFEh4KEW1heF9y",
+            "ZXBsaWNhX2NvdW50GAIgASgFQgPgQQUiqgEKF0JhdGNoRGVkaWNhdGVkUmVz",
+            "b3VyY2VzEkoKDG1hY2hpbmVfc3BlYxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxYmV0YTEuTWFjaGluZVNwZWNCBuBBAuBBBRIjChZzdGFy",
+            "dGluZ19yZXBsaWNhX2NvdW50GAIgASgFQgPgQQUSHgoRbWF4X3JlcGxpY2Ff",
+            "Y291bnQYAyABKAVCA+BBBSIvChFSZXNvdXJjZXNDb25zdW1lZBIaCg1yZXBs",
+            "aWNhX2hvdXJzGAEgASgBQgPgQQMiPQoIRGlza1NwZWMSFgoOYm9vdF9kaXNr",
+            "X3R5cGUYASABKAkSGQoRYm9vdF9kaXNrX3NpemVfZ2IYAiABKAUiPQoSUGVy",
+            "c2lzdGVudERpc2tTcGVjEhEKCWRpc2tfdHlwZRgBIAEoCRIUCgxkaXNrX3Np",
+            "emVfZ2IYAiABKAMiTAoITmZzTW91bnQSEwoGc2VydmVyGAEgASgJQgPgQQIS",
+            "EQoEcGF0aBgCIAEoCUID4EECEhgKC21vdW50X3BvaW50GAMgASgJQgPgQQIi",
+            "QQoVQXV0b3NjYWxpbmdNZXRyaWNTcGVjEhgKC21ldHJpY19uYW1lGAEgASgJ",
+            "QgPgQQISDgoGdGFyZ2V0GAIgASgFIi4KEFNoaWVsZGVkVm1Db25maWcSGgoS",
+            "ZW5hYmxlX3NlY3VyZV9ib290GAEgASgIIkQKCUZsZXhTdGFydBI3ChRtYXhf",
+            "cnVudGltZV9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbkLsAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFC",
+            "FU1hY2hpbmVSZXNvdXJjZXNQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
+            "bXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2ds",
+            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpB",
+            "SVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec), global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology", "MultihostGpuNodeCount", "ReservationAffinity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "AutoscalingMetricSpecs", "Spot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "AutoscalingMetricSpecs", "Spot", "FlexStart" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources), global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
@@ -75,7 +79,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.NfsMount), global::Google.Cloud.AIPlatform.V1Beta1.NfsMount.Parser, new[]{ "Server", "Path", "MountPoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig), global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig.Parser, new[]{ "EnableSecureBoot" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig), global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig.Parser, new[]{ "EnableSecureBoot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FlexStart), global::Google.Cloud.AIPlatform.V1Beta1.FlexStart.Parser, new[]{ "MaxRuntimeDuration" }, null, null, null, null)
           }));
     }
     #endregion
@@ -505,8 +510,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
-  /// A description of resources that are dedicated to a DeployedModel, and
-  /// that need a higher degree of manual configuration.
+  /// A description of resources that are dedicated to a DeployedModel or
+  /// DeployedIndex, and that need a higher degree of manual configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DedicatedResources : pb::IMessage<DedicatedResources>
@@ -549,6 +554,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       requiredReplicaCount_ = other.requiredReplicaCount_;
       autoscalingMetricSpecs_ = other.autoscalingMetricSpecs_.Clone();
       spot_ = other.spot_;
+      flexStart_ = other.flexStart_ != null ? other.flexStart_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -562,8 +568,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int MachineSpecFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec machineSpec_;
     /// <summary>
-    /// Required. Immutable. The specification of a single machine used by the
-    /// prediction.
+    /// Required. Immutable. The specification of a single machine being used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -578,13 +583,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int MinReplicaCountFieldNumber = 2;
     private int minReplicaCount_;
     /// <summary>
-    /// Required. Immutable. The minimum number of machine replicas this
-    /// DeployedModel will be always deployed on. This value must be greater than
-    /// or equal to 1.
+    /// Required. Immutable. The minimum number of machine replicas that will be
+    /// always deployed on. This value must be greater than or equal to 1.
     ///
-    /// If traffic against the DeployedModel increases, it may dynamically be
-    /// deployed onto more replicas, and as traffic decreases, some of these extra
-    /// replicas may be freed.
+    /// If traffic increases, it may dynamically be deployed onto more replicas,
+    /// and as traffic decreases, some of these extra replicas may be freed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -599,13 +602,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int MaxReplicaCountFieldNumber = 3;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of replicas this DeployedModel may be
-    /// deployed on when the traffic against it increases. If the requested value
-    /// is too large, the deployment will error, but if deployment succeeds then
-    /// the ability to scale the model to that many replicas is guaranteed (barring
-    /// service outages). If traffic against the DeployedModel increases beyond
-    /// what its replicas at maximum may handle, a portion of the traffic will be
-    /// dropped. If this value is not provided, will use
+    /// Immutable. The maximum number of replicas that may be deployed on when the
+    /// traffic against it increases. If the requested value is too large, the
+    /// deployment will error, but if deployment succeeds then the ability to scale
+    /// to that many replicas is guaranteed (barring service outages). If traffic
+    /// increases beyond what its replicas at maximum may handle, a portion of the
+    /// traffic will be dropped. If this value is not provided, will use
     /// [min_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.min_replica_count]
     /// as the default value.
     ///
@@ -628,8 +630,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private int requiredReplicaCount_;
     /// <summary>
     /// Optional. Number of required available replicas for the deployment to
-    /// succeed. This field is only needed when partial model deployment/mutation
-    /// is desired. If set, the model deploy/mutate operation will succeed once
+    /// succeed. This field is only needed when partial deployment/mutation is
+    /// desired. If set, the deploy/mutate operation will succeed once
     /// available_replica_count reaches required_replica_count, and the rest of
     /// the replicas will be retried. If not set, the default
     /// required_replica_count will be min_replica_count.
@@ -695,6 +697,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "flex_start" field.</summary>
+    public const int FlexStartFieldNumber = 10;
+    private global::Google.Cloud.AIPlatform.V1Beta1.FlexStart flexStart_;
+    /// <summary>
+    /// Optional. Immutable. If set, use DWS resource to schedule the deployment
+    /// workload. reference:
+    /// (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.FlexStart FlexStart {
+      get { return flexStart_; }
+      set {
+        flexStart_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -716,6 +735,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (RequiredReplicaCount != other.RequiredReplicaCount) return false;
       if(!autoscalingMetricSpecs_.Equals(other.autoscalingMetricSpecs_)) return false;
       if (Spot != other.Spot) return false;
+      if (!object.Equals(FlexStart, other.FlexStart)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -729,6 +749,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (RequiredReplicaCount != 0) hash ^= RequiredReplicaCount.GetHashCode();
       hash ^= autoscalingMetricSpecs_.GetHashCode();
       if (Spot != false) hash ^= Spot.GetHashCode();
+      if (flexStart_ != null) hash ^= FlexStart.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -768,6 +789,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(72);
         output.WriteInt32(RequiredReplicaCount);
       }
+      if (flexStart_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(FlexStart);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -799,6 +824,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(72);
         output.WriteInt32(RequiredReplicaCount);
       }
+      if (flexStart_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(FlexStart);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -824,6 +853,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       size += autoscalingMetricSpecs_.CalculateSize(_repeated_autoscalingMetricSpecs_codec);
       if (Spot != false) {
         size += 1 + 1;
+      }
+      if (flexStart_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FlexStart);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -855,6 +887,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       autoscalingMetricSpecs_.Add(other.autoscalingMetricSpecs_);
       if (other.Spot != false) {
         Spot = other.Spot;
+      }
+      if (other.flexStart_ != null) {
+        if (flexStart_ == null) {
+          FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
+        }
+        FlexStart.MergeFrom(other.FlexStart);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -898,6 +936,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             RequiredReplicaCount = input.ReadInt32();
             break;
           }
+          case 82: {
+            if (flexStart_ == null) {
+              FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
+            }
+            input.ReadMessage(FlexStart);
+            break;
+          }
         }
       }
     #endif
@@ -938,6 +983,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 72: {
             RequiredReplicaCount = input.ReadInt32();
+            break;
+          }
+          case 82: {
+            if (flexStart_ == null) {
+              FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
+            }
+            input.ReadMessage(FlexStart);
             break;
           }
         }
@@ -1002,9 +1054,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int MinReplicaCountFieldNumber = 1;
     private int minReplicaCount_;
     /// <summary>
-    /// Immutable. The minimum number of replicas this DeployedModel will be always
-    /// deployed on. If traffic against it increases, it may dynamically be
-    /// deployed onto more replicas up to
+    /// Immutable. The minimum number of replicas that will be always deployed on.
+    /// If traffic against it increases, it may dynamically be deployed onto more
+    /// replicas up to
     /// [max_replica_count][google.cloud.aiplatform.v1beta1.AutomaticResources.max_replica_count],
     /// and as traffic decreases, some of these extra replicas may be freed. If the
     /// requested value is too large, the deployment will error.
@@ -1022,15 +1074,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int MaxReplicaCountFieldNumber = 2;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of replicas this DeployedModel may be
-    /// deployed on when the traffic against it increases. If the requested value
-    /// is too large, the deployment will error, but if deployment succeeds then
-    /// the ability to scale the model to that many replicas is guaranteed (barring
-    /// service outages). If traffic against the DeployedModel increases beyond
-    /// what its replicas at maximum may handle, a portion of the traffic will be
-    /// dropped. If this value is not provided, a no upper bound for scaling under
-    /// heavy traffic will be assume, though Vertex AI may be unable to scale
-    /// beyond certain replica number.
+    /// Immutable. The maximum number of replicas that may be deployed on when the
+    /// traffic against it increases. If the requested value is too large, the
+    /// deployment will error, but if deployment succeeds then the ability to scale
+    /// to that many replicas is guaranteed (barring service outages). If traffic
+    /// increases beyond what its replicas at maximum may handle, a portion of the
+    /// traffic will be dropped. If this value is not provided, a no upper bound
+    /// for scaling under heavy traffic will be assume, though Vertex AI may be
+    /// unable to scale beyond certain replica number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1738,9 +1789,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int BootDiskTypeFieldNumber = 1;
     private string bootDiskType_ = "";
     /// <summary>
-    /// Type of the boot disk (default is "pd-ssd").
-    /// Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or
-    /// "pd-standard" (Persistent Disk Hard Disk Drive).
+    /// Type of the boot disk. For non-A3U machines, the default value is
+    /// "pd-ssd", for A3U machines, the default value is "hyperdisk-balanced".
+    /// Valid values: "pd-ssd" (Persistent Disk Solid State Drive),
+    /// "pd-standard" (Persistent Disk Hard Disk Drive) or "hyperdisk-balanced".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2884,6 +2936,214 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             break;
           case 8: {
             EnableSecureBoot = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// FlexStart is used to schedule the deployment workload on DWS resource. It
+  /// contains the max duration of the deployment.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FlexStart : pb::IMessage<FlexStart>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FlexStart> _parser = new pb::MessageParser<FlexStart>(() => new FlexStart());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FlexStart> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FlexStart() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FlexStart(FlexStart other) : this() {
+      maxRuntimeDuration_ = other.maxRuntimeDuration_ != null ? other.maxRuntimeDuration_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FlexStart Clone() {
+      return new FlexStart(this);
+    }
+
+    /// <summary>Field number for the "max_runtime_duration" field.</summary>
+    public const int MaxRuntimeDurationFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Duration maxRuntimeDuration_;
+    /// <summary>
+    /// The max duration of the deployment is max_runtime_duration. The
+    /// deployment will be terminated after the duration. The
+    /// max_runtime_duration can be set up to 7 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration MaxRuntimeDuration {
+      get { return maxRuntimeDuration_; }
+      set {
+        maxRuntimeDuration_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FlexStart);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FlexStart other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MaxRuntimeDuration, other.MaxRuntimeDuration)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (maxRuntimeDuration_ != null) hash ^= MaxRuntimeDuration.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (maxRuntimeDuration_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MaxRuntimeDuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (maxRuntimeDuration_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MaxRuntimeDuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (maxRuntimeDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxRuntimeDuration);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FlexStart other) {
+      if (other == null) {
+        return;
+      }
+      if (other.maxRuntimeDuration_ != null) {
+        if (maxRuntimeDuration_ == null) {
+          MaxRuntimeDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        MaxRuntimeDuration.MergeFrom(other.MaxRuntimeDuration);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (maxRuntimeDuration_ == null) {
+              MaxRuntimeDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxRuntimeDuration);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (maxRuntimeDuration_ == null) {
+              MaxRuntimeDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxRuntimeDuration);
             break;
           }
         }
