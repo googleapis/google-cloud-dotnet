@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.maintenance.api.v1beta",
+  "libraryPackage": "Google.Cloud.Maintenance.Api.V1Beta",
+  "services": {
+    "Maintenance": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MaintenanceClient",
+          "rpcs": {
+            "GetResourceMaintenance": {
+              "methods": [
+                "GetResourceMaintenance",
+                "GetResourceMaintenanceAsync"
+              ]
+            },
+            "ListResourceMaintenances": {
+              "methods": [
+                "ListResourceMaintenances",
+                "ListResourceMaintenancesAsync"
+              ]
+            },
+            "SummarizeMaintenances": {
+              "methods": [
+                "SummarizeMaintenances",
+                "SummarizeMaintenancesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
