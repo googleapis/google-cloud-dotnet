@@ -201,6 +201,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(configuration, nameof(configuration));
 
+            options?.ModifyJobConfiguration(configuration);
             string projectId = options?.ProjectId ?? ProjectId;
             string jobId = options?.JobId;
             string jobIdPrefix = options?.JobIdPrefix;

@@ -15,6 +15,7 @@
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -145,6 +146,12 @@ namespace Google.Cloud.BigQuery.V2
         /// The delegate is only called once per operation, even if the request is automatically retried.
         /// </remarks>
         public Action<JobConfigurationQuery> ConfigurationModifier { get; set; }
+
+        internal override void ModifyJobConfiguration(JobConfiguration jobConfiguration)
+        {
+            jobConfiguration.DryRun = DryRun;
+            JobConfigurationModifier?.Invoke(jobConfiguration);
+        }
 
         internal void ModifyRequest(JobConfigurationQuery query)
         {

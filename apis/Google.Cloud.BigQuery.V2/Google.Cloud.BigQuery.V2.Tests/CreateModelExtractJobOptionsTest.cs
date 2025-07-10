@@ -24,10 +24,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new CreateModelExtractJobOptions
             {
-                DestinationFormat = ModelFormat.XGBoostBooster
+                DestinationFormat = ModelFormat.XGBoostBooster,
+                JobConfigurationModifier = config => config.Reservation = "Reservation"
             };
             JobConfigurationExtract extract = new JobConfigurationExtract();
             options.ModifyRequest(extract);
+            var jobConfiguration = new JobConfiguration();
+            options.ModifyJobConfiguration(jobConfiguration);
+            Assert.Equal("Reservation", jobConfiguration.Reservation);
             Assert.Equal("ML_XGBOOST_BOOSTER", extract.DestinationFormat);
         }
     }

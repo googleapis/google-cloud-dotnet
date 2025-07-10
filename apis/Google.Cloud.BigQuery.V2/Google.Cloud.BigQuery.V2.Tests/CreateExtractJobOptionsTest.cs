@@ -32,11 +32,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 FieldDelimiter = "gronkle",
                 // Again, doesn't make sense for JSON, but we don't validate.
                 UseAvroLogicalTypes = true,
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                JobConfigurationModifier = config => config.Reservation = "Reservation"
             };
 
             JobConfigurationExtract extract = new JobConfigurationExtract();
             options.ModifyRequest(extract);
+            var jobConfiguration = new JobConfiguration();
+            options.ModifyJobConfiguration(jobConfiguration);
+            Assert.Equal("Reservation", jobConfiguration.Reservation);
             Assert.Equal("GZIP", extract.Compression);
             Assert.Equal(false, extract.PrintHeader);
             Assert.Equal("NEWLINE_DELIMITED_JSON", extract.DestinationFormat);

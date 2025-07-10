@@ -39,11 +39,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Encoding = "encoding-test",
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
-                ConfigurationModifier = options => options.ETag = "test"
+                ConfigurationModifier = options => options.ETag = "test",
+                JobConfigurationModifier = config => config.Reservation = "Reservation"
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
             options.ModifyConfiguration(config);
+            var jobConfiguration = new JobConfiguration();
+            options.ModifyJobConfiguration(jobConfiguration);
+            Assert.Equal("Reservation", jobConfiguration.Reservation);
             Assert.Equal(true, config.AllowJaggedRows);
             Assert.Equal(true, config.AllowQuotedNewlines);
             Assert.Equal(true, config.IgnoreUnknownValues);
