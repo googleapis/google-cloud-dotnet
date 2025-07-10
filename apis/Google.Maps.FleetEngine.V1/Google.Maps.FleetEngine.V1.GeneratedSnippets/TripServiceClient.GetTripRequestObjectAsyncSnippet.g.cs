@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
                 Header = new RequestHeader(),
                 TripName = TripName.FromProviderTrip("[PROVIDER]", "[TRIP]"),
                 CurrentRouteSegmentVersion = new Timestamp(),
-                RemainingWaypointsVersion = new Timestamp(),
                 RouteFormatType = PolylineFormatType.UnknownFormatType,
                 CurrentRouteSegmentTrafficVersion = new Timestamp(),
                 RemainingWaypointsRouteVersion = new Timestamp(),

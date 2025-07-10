@@ -51,7 +51,7 @@ namespace Google.Maps.FleetEngine.V1 {
             "dWYuRHVyYXRpb24ijwEKEFZlaGljbGVBdHRyaWJ1dGUSCwoDa2V5GAEgASgJ",
             "Eg0KBXZhbHVlGAIgASgJEhYKDHN0cmluZ192YWx1ZRgDIAEoCUgAEhQKCmJv",
             "b2xfdmFsdWUYBCABKAhIABIWCgxudW1iZXJfdmFsdWUYBSABKAFIAEIZChd2",
-            "ZWhpY2xlX2F0dHJpYnV0ZV92YWx1ZSKkDAoPVmVoaWNsZUxvY2F0aW9uEiUK",
+            "ZWhpY2xlX2F0dHJpYnV0ZV92YWx1ZSKADgoPVmVoaWNsZUxvY2F0aW9uEiUK",
             "CGxvY2F0aW9uGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEj0KE2hvcml6",
             "b250YWxfYWNjdXJhY3kYCCABKAsyHC5nb29nbGUucHJvdG9idWYuRG91Ymxl",
             "VmFsdWVCAhgBEjUKD2xhdGxuZ19hY2N1cmFjeRgWIAEoCzIcLmdvb2dsZS5w",
@@ -80,33 +80,40 @@ namespace Google.Maps.FleetEngine.V1 {
             "YnVmLlRpbWVzdGFtcBJAChNyYXdfbG9jYXRpb25fc2Vuc29yGBwgASgOMiMu",
             "bWFwcy5mbGVldGVuZ2luZS52MS5Mb2NhdGlvblNlbnNvchI7ChVyYXdfbG9j",
             "YXRpb25fYWNjdXJhY3kYGSABKAsyHC5nb29nbGUucHJvdG9idWYuRG91Ymxl",
-            "VmFsdWUSMgoVc3VwcGxlbWVudGFsX2xvY2F0aW9uGBIgASgLMhMuZ29vZ2xl",
-            "LnR5cGUuTGF0TG5nEj4KGnN1cHBsZW1lbnRhbF9sb2NhdGlvbl90aW1lGBMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJJChxzdXBwbGVtZW50",
-            "YWxfbG9jYXRpb25fc2Vuc29yGBQgASgOMiMubWFwcy5mbGVldGVuZ2luZS52",
-            "MS5Mb2NhdGlvblNlbnNvchJECh5zdXBwbGVtZW50YWxfbG9jYXRpb25fYWNj",
-            "dXJhY3kYFSABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUSGAoM",
-            "cm9hZF9zbmFwcGVkGBogASgIQgIYASo8CghUcmlwVHlwZRIVChFVTktOT1dO",
-            "X1RSSVBfVFlQRRAAEgoKBlNIQVJFRBABEg0KCUVYQ0xVU0lWRRACKosBCgxX",
-            "YXlwb2ludFR5cGUSGQoVVU5LTk9XTl9XQVlQT0lOVF9UWVBFEAASGAoUUElD",
-            "S1VQX1dBWVBPSU5UX1RZUEUQARIaChZEUk9QX09GRl9XQVlQT0lOVF9UWVBF",
-            "EAISKgomSU5URVJNRURJQVRFX0RFU1RJTkFUSU9OX1dBWVBPSU5UX1RZUEUQ",
-            "AypfChJQb2x5bGluZUZvcm1hdFR5cGUSFwoTVU5LTk9XTl9GT1JNQVRfVFlQ",
-            "RRAAEhUKEUxBVF9MTkdfTElTVF9UWVBFEAESGQoVRU5DT0RFRF9QT0xZTElO",
-            "RV9UWVBFEAIqiQEKEE5hdmlnYXRpb25TdGF0dXMSHQoZVU5LTk9XTl9OQVZJ",
-            "R0FUSU9OX1NUQVRVUxAAEg8KC05PX0dVSURBTkNFEAESGgoWRU5ST1VURV9U",
-            "T19ERVNUSU5BVElPThACEg0KCU9GRl9ST1VURRADEhoKFkFSUklWRURfQVRf",
-            "REVTVElOQVRJT04QBCrXAQoOTG9jYXRpb25TZW5zb3ISEgoOVU5LTk9XTl9T",
-            "RU5TT1IQABIHCgNHUFMQARILCgdORVRXT1JLEAISCwoHUEFTU0lWRRADEiIK",
-            "HlJPQURfU05BUFBFRF9MT0NBVElPTl9QUk9WSURFUhAEEh4KGkNVU1RPTUVS",
-            "X1NVUFBMSUVEX0xPQ0FUSU9OEAUSGQoVRkxFRVRfRU5HSU5FX0xPQ0FUSU9O",
-            "EAYSGwoXRlVTRURfTE9DQVRJT05fUFJPVklERVIQZBISCg1DT1JFX0xPQ0FU",
-            "SU9OEMgBQtcBCh5jb20uZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUudjFCC0Zs",
-            "ZWV0RW5naW5lUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9mbGVldGVu",
-            "Z2luZS9hcGl2MS9mbGVldGVuZ2luZXBiO2ZsZWV0ZW5naW5lcGKiAgNDRkWq",
-            "AhpHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5WMcoCGkdvb2dsZVxNYXBzXEZs",
-            "ZWV0RW5naW5lXFYx6gIdR29vZ2xlOjpNYXBzOjpGbGVldEVuZ2luZTo6VjFi",
-            "BnByb3RvMw=="));
+            "VmFsdWUSKQoMZmxwX2xvY2F0aW9uGB0gASgLMhMuZ29vZ2xlLnR5cGUuTGF0",
+            "TG5nEjMKD2ZscF91cGRhdGVfdGltZRgeIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASQAoaZmxwX2xhdGxuZ19hY2N1cmFjeV9tZXRlcnMYHyAB",
+            "KAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUSOAoTZmxwX2hlYWRp",
+            "bmdfZGVncmVlcxggIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVl",
+            "EjIKFXN1cHBsZW1lbnRhbF9sb2NhdGlvbhgSIAEoCzITLmdvb2dsZS50eXBl",
+            "LkxhdExuZxI+ChpzdXBwbGVtZW50YWxfbG9jYXRpb25fdGltZRgTIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASSQocc3VwcGxlbWVudGFsX2xv",
+            "Y2F0aW9uX3NlbnNvchgUIAEoDjIjLm1hcHMuZmxlZXRlbmdpbmUudjEuTG9j",
+            "YXRpb25TZW5zb3ISRAoec3VwcGxlbWVudGFsX2xvY2F0aW9uX2FjY3VyYWN5",
+            "GBUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlEhgKDHJvYWRf",
+            "c25hcHBlZBgaIAEoCEICGAEiegoNVHJpcEF0dHJpYnV0ZRILCgNrZXkYASAB",
+            "KAkSFgoMc3RyaW5nX3ZhbHVlGAIgASgJSAASFAoKYm9vbF92YWx1ZRgDIAEo",
+            "CEgAEhYKDG51bWJlcl92YWx1ZRgEIAEoAUgAQhYKFHRyaXBfYXR0cmlidXRl",
+            "X3ZhbHVlKjwKCFRyaXBUeXBlEhUKEVVOS05PV05fVFJJUF9UWVBFEAASCgoG",
+            "U0hBUkVEEAESDQoJRVhDTFVTSVZFEAIqiwEKDFdheXBvaW50VHlwZRIZChVV",
+            "TktOT1dOX1dBWVBPSU5UX1RZUEUQABIYChRQSUNLVVBfV0FZUE9JTlRfVFlQ",
+            "RRABEhoKFkRST1BfT0ZGX1dBWVBPSU5UX1RZUEUQAhIqCiZJTlRFUk1FRElB",
+            "VEVfREVTVElOQVRJT05fV0FZUE9JTlRfVFlQRRADKl8KElBvbHlsaW5lRm9y",
+            "bWF0VHlwZRIXChNVTktOT1dOX0ZPUk1BVF9UWVBFEAASFQoRTEFUX0xOR19M",
+            "SVNUX1RZUEUQARIZChVFTkNPREVEX1BPTFlMSU5FX1RZUEUQAiqJAQoQTmF2",
+            "aWdhdGlvblN0YXR1cxIdChlVTktOT1dOX05BVklHQVRJT05fU1RBVFVTEAAS",
+            "DwoLTk9fR1VJREFOQ0UQARIaChZFTlJPVVRFX1RPX0RFU1RJTkFUSU9OEAIS",
+            "DQoJT0ZGX1JPVVRFEAMSGgoWQVJSSVZFRF9BVF9ERVNUSU5BVElPThAEKtcB",
+            "Cg5Mb2NhdGlvblNlbnNvchISCg5VTktOT1dOX1NFTlNPUhAAEgcKA0dQUxAB",
+            "EgsKB05FVFdPUksQAhILCgdQQVNTSVZFEAMSIgoeUk9BRF9TTkFQUEVEX0xP",
+            "Q0FUSU9OX1BST1ZJREVSEAQSHgoaQ1VTVE9NRVJfU1VQUExJRURfTE9DQVRJ",
+            "T04QBRIZChVGTEVFVF9FTkdJTkVfTE9DQVRJT04QBhIbChdGVVNFRF9MT0NB",
+            "VElPTl9QUk9WSURFUhBkEhIKDUNPUkVfTE9DQVRJT04QyAFC1wEKHmNvbS5n",
+            "b29nbGUubWFwcy5mbGVldGVuZ2luZS52MUILRmxlZXRFbmdpbmVQAVpGY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5lL2FwaXYxL2ZsZWV0",
+            "ZW5naW5lcGI7ZmxlZXRlbmdpbmVwYqICA0NGRaoCGkdvb2dsZS5NYXBzLkZs",
+            "ZWV0RW5naW5lLlYxygIaR29vZ2xlXE1hcHNcRmxlZXRFbmdpbmVcVjHqAh1H",
+            "b29nbGU6Ok1hcHM6OkZsZWV0RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.FleetEngine.V1.TrafficReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.V1.TripType), typeof(global::Google.Maps.FleetEngine.V1.WaypointType), typeof(global::Google.Maps.FleetEngine.V1.PolylineFormatType), typeof(global::Google.Maps.FleetEngine.V1.NavigationStatus), typeof(global::Google.Maps.FleetEngine.V1.LocationSensor), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,7 +121,8 @@ namespace Google.Maps.FleetEngine.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.TerminalLocation), global::Google.Maps.FleetEngine.V1.TerminalLocation.Parser, new[]{ "Point", "TerminalPointId", "AccessPointId", "TripId", "TerminalLocationType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.TripWaypoint), global::Google.Maps.FleetEngine.V1.TripWaypoint.Parser, new[]{ "Location", "TripId", "WaypointType", "PathToWaypoint", "EncodedPathToWaypoint", "TrafficToWaypoint", "DistanceMeters", "Eta", "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.VehicleAttribute), global::Google.Maps.FleetEngine.V1.VehicleAttribute.Parser, new[]{ "Key", "Value", "StringValue", "BoolValue", "NumberValue" }, new[]{ "VehicleAttributeValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.VehicleLocation), global::Google.Maps.FleetEngine.V1.VehicleLocation.Parser, new[]{ "Location", "HorizontalAccuracy", "LatlngAccuracy", "Heading", "BearingAccuracy", "HeadingAccuracy", "Altitude", "VerticalAccuracy", "AltitudeAccuracy", "SpeedKmph", "Speed", "SpeedAccuracy", "UpdateTime", "ServerTime", "LocationSensor", "IsRoadSnapped", "IsGpsSensorEnabled", "TimeSinceUpdate", "NumStaleUpdates", "RawLocation", "RawLocationTime", "RawLocationSensor", "RawLocationAccuracy", "SupplementalLocation", "SupplementalLocationTime", "SupplementalLocationSensor", "SupplementalLocationAccuracy", "RoadSnapped" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.VehicleLocation), global::Google.Maps.FleetEngine.V1.VehicleLocation.Parser, new[]{ "Location", "HorizontalAccuracy", "LatlngAccuracy", "Heading", "BearingAccuracy", "HeadingAccuracy", "Altitude", "VerticalAccuracy", "AltitudeAccuracy", "SpeedKmph", "Speed", "SpeedAccuracy", "UpdateTime", "ServerTime", "LocationSensor", "IsRoadSnapped", "IsGpsSensorEnabled", "TimeSinceUpdate", "NumStaleUpdates", "RawLocation", "RawLocationTime", "RawLocationSensor", "RawLocationAccuracy", "FlpLocation", "FlpUpdateTime", "FlpLatlngAccuracyMeters", "FlpHeadingDegrees", "SupplementalLocation", "SupplementalLocationTime", "SupplementalLocationSensor", "SupplementalLocationAccuracy", "RoadSnapped" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.TripAttribute), global::Google.Maps.FleetEngine.V1.TripAttribute.Parser, new[]{ "Key", "StringValue", "BoolValue", "NumberValue" }, new[]{ "TripAttributeValue" }, null, null, null)
           }));
     }
     #endregion
@@ -2044,6 +2052,10 @@ namespace Google.Maps.FleetEngine.V1 {
       rawLocationTime_ = other.rawLocationTime_ != null ? other.rawLocationTime_.Clone() : null;
       rawLocationSensor_ = other.rawLocationSensor_;
       RawLocationAccuracy = other.RawLocationAccuracy;
+      flpLocation_ = other.flpLocation_ != null ? other.flpLocation_.Clone() : null;
+      flpUpdateTime_ = other.flpUpdateTime_ != null ? other.flpUpdateTime_.Clone() : null;
+      FlpLatlngAccuracyMeters = other.FlpLatlngAccuracyMeters;
+      FlpHeadingDegrees = other.FlpHeadingDegrees;
       supplementalLocation_ = other.supplementalLocation_ != null ? other.supplementalLocation_.Clone() : null;
       supplementalLocationTime_ = other.supplementalLocationTime_ != null ? other.supplementalLocationTime_.Clone() : null;
       supplementalLocationSensor_ = other.supplementalLocationSensor_;
@@ -2451,6 +2463,71 @@ namespace Google.Maps.FleetEngine.V1 {
     }
 
 
+    /// <summary>Field number for the "flp_location" field.</summary>
+    public const int FlpLocationFieldNumber = 29;
+    private global::Google.Type.LatLng flpLocation_;
+    /// <summary>
+    /// The location from Android's Fused Location Provider.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LatLng FlpLocation {
+      get { return flpLocation_; }
+      set {
+        flpLocation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "flp_update_time" field.</summary>
+    public const int FlpUpdateTimeFieldNumber = 30;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp flpUpdateTime_;
+    /// <summary>
+    /// Update timestamp of `flp_location`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FlpUpdateTime {
+      get { return flpUpdateTime_; }
+      set {
+        flpUpdateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "flp_latlng_accuracy_meters" field.</summary>
+    public const int FlpLatlngAccuracyMetersFieldNumber = 31;
+    private static readonly pb::FieldCodec<double?> _single_flpLatlngAccuracyMeters_codec = pb::FieldCodec.ForStructWrapper<double>(250);
+    private double? flpLatlngAccuracyMeters_;
+    /// <summary>
+    /// Accuracy of `flp_location` in meters as a radius.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double? FlpLatlngAccuracyMeters {
+      get { return flpLatlngAccuracyMeters_; }
+      set {
+        flpLatlngAccuracyMeters_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "flp_heading_degrees" field.</summary>
+    public const int FlpHeadingDegreesFieldNumber = 32;
+    private static readonly pb::FieldCodec<int?> _single_flpHeadingDegrees_codec = pb::FieldCodec.ForStructWrapper<int>(258);
+    private int? flpHeadingDegrees_;
+    /// <summary>
+    /// Direction the vehicle is moving in degrees, as determined by the Fused
+    /// Location Provider. 0 represents North. The valid range is [0,360).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int? FlpHeadingDegrees {
+      get { return flpHeadingDegrees_; }
+      set {
+        flpHeadingDegrees_ = value;
+      }
+    }
+
+
     /// <summary>Field number for the "supplemental_location" field.</summary>
     public const int SupplementalLocationFieldNumber = 18;
     private global::Google.Type.LatLng supplementalLocation_;
@@ -2568,6 +2645,10 @@ namespace Google.Maps.FleetEngine.V1 {
       if (!object.Equals(RawLocationTime, other.RawLocationTime)) return false;
       if (RawLocationSensor != other.RawLocationSensor) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(RawLocationAccuracy, other.RawLocationAccuracy)) return false;
+      if (!object.Equals(FlpLocation, other.FlpLocation)) return false;
+      if (!object.Equals(FlpUpdateTime, other.FlpUpdateTime)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(FlpLatlngAccuracyMeters, other.FlpLatlngAccuracyMeters)) return false;
+      if (FlpHeadingDegrees != other.FlpHeadingDegrees) return false;
       if (!object.Equals(SupplementalLocation, other.SupplementalLocation)) return false;
       if (!object.Equals(SupplementalLocationTime, other.SupplementalLocationTime)) return false;
       if (SupplementalLocationSensor != other.SupplementalLocationSensor) return false;
@@ -2603,6 +2684,10 @@ namespace Google.Maps.FleetEngine.V1 {
       if (rawLocationTime_ != null) hash ^= RawLocationTime.GetHashCode();
       if (RawLocationSensor != global::Google.Maps.FleetEngine.V1.LocationSensor.UnknownSensor) hash ^= RawLocationSensor.GetHashCode();
       if (rawLocationAccuracy_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(RawLocationAccuracy);
+      if (flpLocation_ != null) hash ^= FlpLocation.GetHashCode();
+      if (flpUpdateTime_ != null) hash ^= FlpUpdateTime.GetHashCode();
+      if (flpLatlngAccuracyMeters_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(FlpLatlngAccuracyMeters);
+      if (flpHeadingDegrees_ != null) hash ^= FlpHeadingDegrees.GetHashCode();
       if (supplementalLocation_ != null) hash ^= SupplementalLocation.GetHashCode();
       if (supplementalLocationTime_ != null) hash ^= SupplementalLocationTime.GetHashCode();
       if (SupplementalLocationSensor != global::Google.Maps.FleetEngine.V1.LocationSensor.UnknownSensor) hash ^= SupplementalLocationSensor.GetHashCode();
@@ -2721,6 +2806,20 @@ namespace Google.Maps.FleetEngine.V1 {
         output.WriteRawTag(224, 1);
         output.WriteEnum((int) RawLocationSensor);
       }
+      if (flpLocation_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(FlpLocation);
+      }
+      if (flpUpdateTime_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(FlpUpdateTime);
+      }
+      if (flpLatlngAccuracyMeters_ != null) {
+        _single_flpLatlngAccuracyMeters_codec.WriteTagAndValue(output, FlpLatlngAccuracyMeters);
+      }
+      if (flpHeadingDegrees_ != null) {
+        _single_flpHeadingDegrees_codec.WriteTagAndValue(output, FlpHeadingDegrees);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2826,6 +2925,20 @@ namespace Google.Maps.FleetEngine.V1 {
         output.WriteRawTag(224, 1);
         output.WriteEnum((int) RawLocationSensor);
       }
+      if (flpLocation_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(FlpLocation);
+      }
+      if (flpUpdateTime_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(FlpUpdateTime);
+      }
+      if (flpLatlngAccuracyMeters_ != null) {
+        _single_flpLatlngAccuracyMeters_codec.WriteTagAndValue(ref output, FlpLatlngAccuracyMeters);
+      }
+      if (flpHeadingDegrees_ != null) {
+        _single_flpHeadingDegrees_codec.WriteTagAndValue(ref output, FlpHeadingDegrees);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2904,6 +3017,18 @@ namespace Google.Maps.FleetEngine.V1 {
       }
       if (rawLocationAccuracy_ != null) {
         size += _single_rawLocationAccuracy_codec.CalculateSizeWithTag(RawLocationAccuracy);
+      }
+      if (flpLocation_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FlpLocation);
+      }
+      if (flpUpdateTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FlpUpdateTime);
+      }
+      if (flpLatlngAccuracyMeters_ != null) {
+        size += _single_flpLatlngAccuracyMeters_codec.CalculateSizeWithTag(FlpLatlngAccuracyMeters);
+      }
+      if (flpHeadingDegrees_ != null) {
+        size += _single_flpHeadingDegrees_codec.CalculateSizeWithTag(FlpHeadingDegrees);
       }
       if (supplementalLocation_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SupplementalLocation);
@@ -3046,6 +3171,28 @@ namespace Google.Maps.FleetEngine.V1 {
       if (other.rawLocationAccuracy_ != null) {
         if (rawLocationAccuracy_ == null || other.RawLocationAccuracy != 0D) {
           RawLocationAccuracy = other.RawLocationAccuracy;
+        }
+      }
+      if (other.flpLocation_ != null) {
+        if (flpLocation_ == null) {
+          FlpLocation = new global::Google.Type.LatLng();
+        }
+        FlpLocation.MergeFrom(other.FlpLocation);
+      }
+      if (other.flpUpdateTime_ != null) {
+        if (flpUpdateTime_ == null) {
+          FlpUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FlpUpdateTime.MergeFrom(other.FlpUpdateTime);
+      }
+      if (other.flpLatlngAccuracyMeters_ != null) {
+        if (flpLatlngAccuracyMeters_ == null || other.FlpLatlngAccuracyMeters != 0D) {
+          FlpLatlngAccuracyMeters = other.FlpLatlngAccuracyMeters;
+        }
+      }
+      if (other.flpHeadingDegrees_ != null) {
+        if (flpHeadingDegrees_ == null || other.FlpHeadingDegrees != 0) {
+          FlpHeadingDegrees = other.FlpHeadingDegrees;
         }
       }
       if (other.supplementalLocation_ != null) {
@@ -3270,6 +3417,34 @@ namespace Google.Maps.FleetEngine.V1 {
             RawLocationSensor = (global::Google.Maps.FleetEngine.V1.LocationSensor) input.ReadEnum();
             break;
           }
+          case 234: {
+            if (flpLocation_ == null) {
+              FlpLocation = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(FlpLocation);
+            break;
+          }
+          case 242: {
+            if (flpUpdateTime_ == null) {
+              FlpUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FlpUpdateTime);
+            break;
+          }
+          case 250: {
+            double? value = _single_flpLatlngAccuracyMeters_codec.Read(input);
+            if (flpLatlngAccuracyMeters_ == null || value != 0D) {
+              FlpLatlngAccuracyMeters = value;
+            }
+            break;
+          }
+          case 258: {
+            int? value = _single_flpHeadingDegrees_codec.Read(input);
+            if (flpHeadingDegrees_ == null || value != 0) {
+              FlpHeadingDegrees = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -3467,6 +3642,429 @@ namespace Google.Maps.FleetEngine.V1 {
           }
           case 224: {
             RawLocationSensor = (global::Google.Maps.FleetEngine.V1.LocationSensor) input.ReadEnum();
+            break;
+          }
+          case 234: {
+            if (flpLocation_ == null) {
+              FlpLocation = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(FlpLocation);
+            break;
+          }
+          case 242: {
+            if (flpUpdateTime_ == null) {
+              FlpUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FlpUpdateTime);
+            break;
+          }
+          case 250: {
+            double? value = _single_flpLatlngAccuracyMeters_codec.Read(ref input);
+            if (flpLatlngAccuracyMeters_ == null || value != 0D) {
+              FlpLatlngAccuracyMeters = value;
+            }
+            break;
+          }
+          case 258: {
+            int? value = _single_flpHeadingDegrees_codec.Read(ref input);
+            if (flpHeadingDegrees_ == null || value != 0) {
+              FlpHeadingDegrees = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Describes a trip attribute as a key-value pair. The "key:value" string length
+  /// cannot exceed 256 characters.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TripAttribute : pb::IMessage<TripAttribute>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TripAttribute> _parser = new pb::MessageParser<TripAttribute>(() => new TripAttribute());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TripAttribute> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.FleetEngine.V1.FleetengineReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TripAttribute() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TripAttribute(TripAttribute other) : this() {
+      key_ = other.key_;
+      switch (other.TripAttributeValueCase) {
+        case TripAttributeValueOneofCase.StringValue:
+          StringValue = other.StringValue;
+          break;
+        case TripAttributeValueOneofCase.BoolValue:
+          BoolValue = other.BoolValue;
+          break;
+        case TripAttributeValueOneofCase.NumberValue:
+          NumberValue = other.NumberValue;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TripAttribute Clone() {
+      return new TripAttribute(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private string key_ = "";
+    /// <summary>
+    /// The attribute's key. Keys may not contain the colon character (:).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "string_value" field.</summary>
+    public const int StringValueFieldNumber = 2;
+    /// <summary>
+    /// String typed attribute value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StringValue {
+      get { return HasStringValue ? (string) tripAttributeValue_ : ""; }
+      set {
+        tripAttributeValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        tripAttributeValueCase_ = TripAttributeValueOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return tripAttributeValueCase_ == TripAttributeValueOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearTripAttributeValue();
+      }
+    }
+
+    /// <summary>Field number for the "bool_value" field.</summary>
+    public const int BoolValueFieldNumber = 3;
+    /// <summary>
+    /// Boolean typed attribute value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BoolValue {
+      get { return HasBoolValue ? (bool) tripAttributeValue_ : false; }
+      set {
+        tripAttributeValue_ = value;
+        tripAttributeValueCase_ = TripAttributeValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return tripAttributeValueCase_ == TripAttributeValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearTripAttributeValue();
+      }
+    }
+
+    /// <summary>Field number for the "number_value" field.</summary>
+    public const int NumberValueFieldNumber = 4;
+    /// <summary>
+    /// Double typed attribute value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double NumberValue {
+      get { return HasNumberValue ? (double) tripAttributeValue_ : 0D; }
+      set {
+        tripAttributeValue_ = value;
+        tripAttributeValueCase_ = TripAttributeValueOneofCase.NumberValue;
+      }
+    }
+    /// <summary>Gets whether the "number_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNumberValue {
+      get { return tripAttributeValueCase_ == TripAttributeValueOneofCase.NumberValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "number_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNumberValue() {
+      if (HasNumberValue) {
+        ClearTripAttributeValue();
+      }
+    }
+
+    private object tripAttributeValue_;
+    /// <summary>Enum of possible cases for the "trip_attribute_value" oneof.</summary>
+    public enum TripAttributeValueOneofCase {
+      None = 0,
+      StringValue = 2,
+      BoolValue = 3,
+      NumberValue = 4,
+    }
+    private TripAttributeValueOneofCase tripAttributeValueCase_ = TripAttributeValueOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TripAttributeValueOneofCase TripAttributeValueCase {
+      get { return tripAttributeValueCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTripAttributeValue() {
+      tripAttributeValueCase_ = TripAttributeValueOneofCase.None;
+      tripAttributeValue_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TripAttribute);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TripAttribute other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      if (StringValue != other.StringValue) return false;
+      if (BoolValue != other.BoolValue) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(NumberValue, other.NumberValue)) return false;
+      if (TripAttributeValueCase != other.TripAttributeValueCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasNumberValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NumberValue);
+      hash ^= (int) tripAttributeValueCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (HasStringValue) {
+        output.WriteRawTag(18);
+        output.WriteString(StringValue);
+      }
+      if (HasBoolValue) {
+        output.WriteRawTag(24);
+        output.WriteBool(BoolValue);
+      }
+      if (HasNumberValue) {
+        output.WriteRawTag(33);
+        output.WriteDouble(NumberValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (HasStringValue) {
+        output.WriteRawTag(18);
+        output.WriteString(StringValue);
+      }
+      if (HasBoolValue) {
+        output.WriteRawTag(24);
+        output.WriteBool(BoolValue);
+      }
+      if (HasNumberValue) {
+        output.WriteRawTag(33);
+        output.WriteDouble(NumberValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      if (HasStringValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
+      }
+      if (HasBoolValue) {
+        size += 1 + 1;
+      }
+      if (HasNumberValue) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TripAttribute other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      switch (other.TripAttributeValueCase) {
+        case TripAttributeValueOneofCase.StringValue:
+          StringValue = other.StringValue;
+          break;
+        case TripAttributeValueOneofCase.BoolValue:
+          BoolValue = other.BoolValue;
+          break;
+        case TripAttributeValueOneofCase.NumberValue:
+          NumberValue = other.NumberValue;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 18: {
+            StringValue = input.ReadString();
+            break;
+          }
+          case 24: {
+            BoolValue = input.ReadBool();
+            break;
+          }
+          case 33: {
+            NumberValue = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 18: {
+            StringValue = input.ReadString();
+            break;
+          }
+          case 24: {
+            BoolValue = input.ReadBool();
+            break;
+          }
+          case 33: {
+            NumberValue = input.ReadDouble();
             break;
           }
         }
