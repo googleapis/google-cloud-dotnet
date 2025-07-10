@@ -4252,6 +4252,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Maintenance.Api.V1Beta/Google.Cloud.Maintenance.Api.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.Reports.V1Alpha",
+            "nextVersion": "1.0.0-alpha01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/reports/v1alpha"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.Reports.V1Alpha/Google.Shopping.Merchant.Reports.V1Alpha"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
