@@ -31,7 +31,7 @@ namespace Google.Maps.FleetEngine.V1 {
             "L2ZsZWV0ZW5naW5lL3YxL3RyYWZmaWMucHJvdG8aHmdvb2dsZS9wcm90b2J1",
             "Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
             "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhhnb29nbGUv",
-            "dHlwZS9sYXRsbmcucHJvdG8itxAKBFRyaXASEQoEbmFtZRgBIAEoCUID4EED",
+            "dHlwZS9sYXRsbmcucHJvdG8i7xAKBFRyaXASEQoEbmFtZRgBIAEoCUID4EED",
             "EhIKCnZlaGljbGVfaWQYAiABKAkSNAoLdHJpcF9zdGF0dXMYAyABKA4yHy5t",
             "YXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBTdGF0dXMSMAoJdHJpcF90eXBlGAQg",
             "ASgOMh0ubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZRI7CgxwaWNrdXBf",
@@ -76,31 +76,32 @@ namespace Google.Maps.FleetEngine.V1 {
             "GAogASgFQgPgQQUSQAoNbGFzdF9sb2NhdGlvbhgLIAEoCzIkLm1hcHMuZmxl",
             "ZXRlbmdpbmUudjEuVmVoaWNsZUxvY2F0aW9uQgPgQQMSJAoXbGFzdF9sb2Nh",
             "dGlvbl9zbmFwcGFibGUYGiABKAhCA+BBAxIrCgR2aWV3GB8gASgOMh0ubWFw",
-            "cy5mbGVldGVuZ2luZS52MS5UcmlwVmlldzpH6kFECh9mbGVldGVuZ2luZS5n",
-            "b29nbGVhcGlzLmNvbS9UcmlwEiFwcm92aWRlcnMve3Byb3ZpZGVyfS90cmlw",
-            "cy97dHJpcH0inAEKDFN0b3BMb2NhdGlvbhInCgVwb2ludBgBIAEoCzITLmdv",
-            "b2dsZS50eXBlLkxhdExuZ0ID4EECEi0KCXRpbWVzdGFtcBgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoJc3RvcF90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIFGAHgQQQq4gEKClRyaXBTdGF0",
-            "dXMSFwoTVU5LTk9XTl9UUklQX1NUQVRVUxAAEgcKA05FVxABEhUKEUVOUk9V",
-            "VEVfVE9fUElDS1VQEAISFQoRQVJSSVZFRF9BVF9QSUNLVVAQAxInCiNBUlJJ",
-            "VkVEX0FUX0lOVEVSTUVESUFURV9ERVNUSU5BVElPThAHEicKI0VOUk9VVEVf",
-            "VE9fSU5URVJNRURJQVRFX0RFU1RJTkFUSU9OEAgSFgoSRU5ST1VURV9UT19E",
-            "Uk9QT0ZGEAQSDAoIQ09NUExFVEUQBRIMCghDQU5DRUxFRBAGKn8KGUJpbGxp",
-            "bmdQbGF0Zm9ybUlkZW50aWZpZXISKwonQklMTElOR19QTEFURk9STV9JREVO",
-            "VElGSUVSX1VOU1BFQ0lGSUVEEAASCgoGU0VSVkVSEAESBwoDV0VCEAISCwoH",
-            "QU5EUk9JRBADEgcKA0lPUxAEEgoKBk9USEVSUxAFKkcKCFRyaXBWaWV3EhkK",
-            "FVRSSVBfVklFV19VTlNQRUNJRklFRBAAEgcKA1NESxABEhcKE0pPVVJORVlf",
-            "U0hBUklOR19WMVMQAkLRAQoeY29tLmdvb2dsZS5tYXBzLmZsZWV0ZW5naW5l",
-            "LnYxQgVUcmlwc1ABWkZjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvZmxlZXRl",
-            "bmdpbmUvYXBpdjEvZmxlZXRlbmdpbmVwYjtmbGVldGVuZ2luZXBiogIDQ0ZF",
-            "qgIaR29vZ2xlLk1hcHMuRmxlZXRFbmdpbmUuVjHKAhpHb29nbGVcTWFwc1xG",
-            "bGVldEVuZ2luZVxWMeoCHUdvb2dsZTo6TWFwczo6RmxlZXRFbmdpbmU6OlYx",
-            "YgZwcm90bzM="));
+            "cy5mbGVldGVuZ2luZS52MS5UcmlwVmlldxI2CgphdHRyaWJ1dGVzGCMgAygL",
+            "MiIubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwQXR0cmlidXRlOkfqQUQKH2Zs",
+            "ZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1RyaXASIXByb3ZpZGVycy97cHJv",
+            "dmlkZXJ9L3RyaXBzL3t0cmlwfSKcAQoMU3RvcExvY2F0aW9uEicKBXBvaW50",
+            "GAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQISLQoJdGltZXN0YW1w",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0CglzdG9wX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgUYAeBBBCri",
+            "AQoKVHJpcFN0YXR1cxIXChNVTktOT1dOX1RSSVBfU1RBVFVTEAASBwoDTkVX",
+            "EAESFQoRRU5ST1VURV9UT19QSUNLVVAQAhIVChFBUlJJVkVEX0FUX1BJQ0tV",
+            "UBADEicKI0FSUklWRURfQVRfSU5URVJNRURJQVRFX0RFU1RJTkFUSU9OEAcS",
+            "JwojRU5ST1VURV9UT19JTlRFUk1FRElBVEVfREVTVElOQVRJT04QCBIWChJF",
+            "TlJPVVRFX1RPX0RST1BPRkYQBBIMCghDT01QTEVURRAFEgwKCENBTkNFTEVE",
+            "EAYqfwoZQmlsbGluZ1BsYXRmb3JtSWRlbnRpZmllchIrCidCSUxMSU5HX1BM",
+            "QVRGT1JNX0lERU5USUZJRVJfVU5TUEVDSUZJRUQQABIKCgZTRVJWRVIQARIH",
+            "CgNXRUIQAhILCgdBTkRST0lEEAMSBwoDSU9TEAQSCgoGT1RIRVJTEAUqRwoI",
+            "VHJpcFZpZXcSGQoVVFJJUF9WSUVXX1VOU1BFQ0lGSUVEEAASBwoDU0RLEAES",
+            "FwoTSk9VUk5FWV9TSEFSSU5HX1YxUxACQtEBCh5jb20uZ29vZ2xlLm1hcHMu",
+            "ZmxlZXRlbmdpbmUudjFCBVRyaXBzUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "bWFwcy9mbGVldGVuZ2luZS9hcGl2MS9mbGVldGVuZ2luZXBiO2ZsZWV0ZW5n",
+            "aW5lcGKiAgNDRkWqAhpHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5WMcoCGkdv",
+            "b2dsZVxNYXBzXEZsZWV0RW5naW5lXFYx6gIdR29vZ2xlOjpNYXBzOjpGbGVl",
+            "dEVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.FleetEngine.V1.FleetengineReflection.Descriptor, global::Google.Maps.FleetEngine.V1.TrafficReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.V1.TripStatus), typeof(global::Google.Maps.FleetEngine.V1.BillingPlatformIdentifier), typeof(global::Google.Maps.FleetEngine.V1.TripView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.Trip), global::Google.Maps.FleetEngine.V1.Trip.Parser, new[]{ "Name", "VehicleId", "TripStatus", "TripType", "PickupPoint", "ActualPickupPoint", "ActualPickupArrivalPoint", "PickupTime", "IntermediateDestinations", "IntermediateDestinationsVersion", "IntermediateDestinationIndex", "ActualIntermediateDestinationArrivalPoints", "ActualIntermediateDestinations", "DropoffPoint", "ActualDropoffPoint", "DropoffTime", "RemainingWaypoints", "VehicleWaypoints", "Route", "CurrentRouteSegment", "CurrentRouteSegmentVersion", "CurrentRouteSegmentTraffic", "CurrentRouteSegmentTrafficVersion", "CurrentRouteSegmentEndPoint", "RemainingDistanceMeters", "EtaToFirstWaypoint", "RemainingTimeToFirstWaypoint", "RemainingWaypointsVersion", "RemainingWaypointsRouteVersion", "NumberOfPassengers", "LastLocation", "LastLocationSnappable", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.Trip), global::Google.Maps.FleetEngine.V1.Trip.Parser, new[]{ "Name", "VehicleId", "TripStatus", "TripType", "PickupPoint", "ActualPickupPoint", "ActualPickupArrivalPoint", "PickupTime", "IntermediateDestinations", "IntermediateDestinationsVersion", "IntermediateDestinationIndex", "ActualIntermediateDestinationArrivalPoints", "ActualIntermediateDestinations", "DropoffPoint", "ActualDropoffPoint", "DropoffTime", "RemainingWaypoints", "VehicleWaypoints", "Route", "CurrentRouteSegment", "CurrentRouteSegmentVersion", "CurrentRouteSegmentTraffic", "CurrentRouteSegmentTrafficVersion", "CurrentRouteSegmentEndPoint", "RemainingDistanceMeters", "EtaToFirstWaypoint", "RemainingTimeToFirstWaypoint", "RemainingWaypointsVersion", "RemainingWaypointsRouteVersion", "NumberOfPassengers", "LastLocation", "LastLocationSnappable", "View", "Attributes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.StopLocation), global::Google.Maps.FleetEngine.V1.StopLocation.Parser, new[]{ "Point", "Timestamp", "StopTime" }, null, null, null, null)
           }));
     }
@@ -282,6 +283,7 @@ namespace Google.Maps.FleetEngine.V1 {
       lastLocation_ = other.lastLocation_ != null ? other.lastLocation_.Clone() : null;
       lastLocationSnappable_ = other.lastLocationSnappable_;
       view_ = other.view_;
+      attributes_ = other.attributes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -848,6 +850,20 @@ namespace Google.Maps.FleetEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "attributes" field.</summary>
+    public const int AttributesFieldNumber = 35;
+    private static readonly pb::FieldCodec<global::Google.Maps.FleetEngine.V1.TripAttribute> _repeated_attributes_codec
+        = pb::FieldCodec.ForMessage(282, global::Google.Maps.FleetEngine.V1.TripAttribute.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.FleetEngine.V1.TripAttribute> attributes_ = new pbc::RepeatedField<global::Google.Maps.FleetEngine.V1.TripAttribute>();
+    /// <summary>
+    /// A list of custom Trip attributes. Each attribute must have a unique key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.FleetEngine.V1.TripAttribute> Attributes {
+      get { return attributes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -896,6 +912,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (!object.Equals(LastLocation, other.LastLocation)) return false;
       if (LastLocationSnappable != other.LastLocationSnappable) return false;
       if (View != other.View) return false;
+      if(!attributes_.Equals(other.attributes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -936,6 +953,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (lastLocation_ != null) hash ^= LastLocation.GetHashCode();
       if (LastLocationSnappable != false) hash ^= LastLocationSnappable.GetHashCode();
       if (View != global::Google.Maps.FleetEngine.V1.TripView.Unspecified) hash ^= View.GetHashCode();
+      hash ^= attributes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1067,6 +1085,7 @@ namespace Google.Maps.FleetEngine.V1 {
       }
       actualIntermediateDestinationArrivalPoints_.WriteTo(output, _repeated_actualIntermediateDestinationArrivalPoints_codec);
       actualIntermediateDestinations_.WriteTo(output, _repeated_actualIntermediateDestinations_codec);
+      attributes_.WriteTo(output, _repeated_attributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1190,6 +1209,7 @@ namespace Google.Maps.FleetEngine.V1 {
       }
       actualIntermediateDestinationArrivalPoints_.WriteTo(ref output, _repeated_actualIntermediateDestinationArrivalPoints_codec);
       actualIntermediateDestinations_.WriteTo(ref output, _repeated_actualIntermediateDestinations_codec);
+      attributes_.WriteTo(ref output, _repeated_attributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1287,6 +1307,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (View != global::Google.Maps.FleetEngine.V1.TripView.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
+      size += attributes_.CalculateSize(_repeated_attributes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1439,6 +1460,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (other.View != global::Google.Maps.FleetEngine.V1.TripView.Unspecified) {
         View = other.View;
       }
+      attributes_.Add(other.attributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1640,6 +1662,10 @@ namespace Google.Maps.FleetEngine.V1 {
             actualIntermediateDestinations_.AddEntriesFrom(input, _repeated_actualIntermediateDestinations_codec);
             break;
           }
+          case 282: {
+            attributes_.AddEntriesFrom(input, _repeated_attributes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1839,6 +1865,10 @@ namespace Google.Maps.FleetEngine.V1 {
           }
           case 274: {
             actualIntermediateDestinations_.AddEntriesFrom(ref input, _repeated_actualIntermediateDestinations_codec);
+            break;
+          }
+          case 282: {
+            attributes_.AddEntriesFrom(ref input, _repeated_attributes_codec);
             break;
           }
         }

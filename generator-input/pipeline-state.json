@@ -3623,7 +3623,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-03T18:12:25Z",
-            "lastGeneratedCommit": "fcd9d6582e9dd821553c4bd93a6d418e87f8a9fe",
+            "lastGeneratedCommit": "302273adb3293bb504ecd83be8e1467511d5c779",
             "apiPaths": [
                 "google/maps/fleetengine/v1"
             ],
