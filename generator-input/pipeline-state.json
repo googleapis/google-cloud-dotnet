@@ -4244,7 +4244,7 @@
             "id": "Google.Cloud.Maintenance.Api.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "9510a3a5c2932c84616d4f03856bc0aa4826cc31",
             "apiPaths": [
                 "google/cloud/maintenance/api/v1beta"

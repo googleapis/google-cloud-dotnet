@@ -1,0 +1,16 @@
+[
+  {
+    "method": "SummarizeMaintenances",
+    "client": "MaintenanceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListResourceMaintenances",
+    "client": "MaintenanceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
