@@ -86,6 +86,7 @@
     "apis/Google.Cloud.ConfidentialComputing.V1/Google.Cloud.ConfidentialComputing.V1/**",
     "apis/Google.Cloud.ConfidentialComputing.V1Alpha1/Google.Cloud.ConfidentialComputing.V1Alpha1/**",
     "apis/Google.Cloud.Config.V1/Google.Cloud.Config.V1/**",
+    "apis/Google.Cloud.ConfigDelivery.V1/Google.Cloud.ConfigDelivery.V1/**",
     "apis/Google.Cloud.ConfigDelivery.V1Beta/Google.Cloud.ConfigDelivery.V1Beta/**",
     "apis/Google.Cloud.Connectors.V1/Google.Cloud.Connectors.V1/**",
     "apis/Google.Cloud.ContactCenterInsights.V1/Google.Cloud.ContactCenterInsights.V1/**",
