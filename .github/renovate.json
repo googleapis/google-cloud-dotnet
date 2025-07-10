@@ -162,6 +162,7 @@
     "apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type/**",
     "apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.V2/**",
     "apis/Google.Cloud.Lustre.V1/Google.Cloud.Lustre.V1/**",
+    "apis/Google.Cloud.Maintenance.Api.V1Beta/Google.Cloud.Maintenance.Api.V1Beta/**",
     "apis/Google.Cloud.ManagedIdentities.V1/Google.Cloud.ManagedIdentities.V1/**",
     "apis/Google.Cloud.ManagedKafka.V1/Google.Cloud.ManagedKafka.V1/**",
     "apis/Google.Cloud.MediaTranslation.V1Beta1/Google.Cloud.MediaTranslation.V1Beta1/**",
