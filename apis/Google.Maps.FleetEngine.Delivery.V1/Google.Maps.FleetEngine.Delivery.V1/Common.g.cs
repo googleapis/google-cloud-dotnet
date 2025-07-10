@@ -32,7 +32,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "dHRyaWJ1dGUSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJEhYKDHN0cmlu",
             "Z192YWx1ZRgDIAEoCUgAEhQKCmJvb2xfdmFsdWUYBCABKAhIABIWCgxudW1i",
             "ZXJfdmFsdWUYBSABKAFIAEIiCiBkZWxpdmVyeV92ZWhpY2xlX2F0dHJpYnV0",
-            "ZV92YWx1ZSL0DAoXRGVsaXZlcnlWZWhpY2xlTG9jYXRpb24SJQoIbG9jYXRp",
+            "ZV92YWx1ZSLQDgoXRGVsaXZlcnlWZWhpY2xlTG9jYXRpb24SJQoIbG9jYXRp",
             "b24YASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcSPQoTaG9yaXpvbnRhbF9h",
             "Y2N1cmFjeRgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZUIC",
             "GAESNQoPbGF0bG5nX2FjY3VyYWN5GBYgASgLMhwuZ29vZ2xlLnByb3RvYnVm",
@@ -62,38 +62,43 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "bl9zZW5zb3IYHCABKA4yOy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYx",
             "LkRlbGl2ZXJ5VmVoaWNsZUxvY2F0aW9uU2Vuc29yEjsKFXJhd19sb2NhdGlv",
             "bl9hY2N1cmFjeRgZIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1",
-            "ZRIyChVzdXBwbGVtZW50YWxfbG9jYXRpb24YEiABKAsyEy5nb29nbGUudHlw",
-            "ZS5MYXRMbmcSPgoac3VwcGxlbWVudGFsX2xvY2F0aW9uX3RpbWUYEyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEmEKHHN1cHBsZW1lbnRhbF9s",
-            "b2NhdGlvbl9zZW5zb3IYFCABKA4yOy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2",
-            "ZXJ5LnYxLkRlbGl2ZXJ5VmVoaWNsZUxvY2F0aW9uU2Vuc29yEkQKHnN1cHBs",
-            "ZW1lbnRhbF9sb2NhdGlvbl9hY2N1cmFjeRgVIAEoCzIcLmdvb2dsZS5wcm90",
-            "b2J1Zi5Eb3VibGVWYWx1ZRIYCgxyb2FkX3NuYXBwZWQYGiABKAhCAhgBInQK",
-            "ClRpbWVXaW5kb3cSMwoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAhIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAiJ6Cg1UYXNrQXR0cmlidXRlEgsK",
-            "A2tleRgBIAEoCRIWCgxzdHJpbmdfdmFsdWUYAiABKAlIABIUCgpib29sX3Zh",
-            "bHVlGAMgASgISAASFgoMbnVtYmVyX3ZhbHVlGAQgASgBSABCFgoUdGFza19h",
-            "dHRyaWJ1dGVfdmFsdWUq5gEKHURlbGl2ZXJ5VmVoaWNsZUxvY2F0aW9uU2Vu",
-            "c29yEhIKDlVOS05PV05fU0VOU09SEAASBwoDR1BTEAESCwoHTkVUV09SSxAC",
-            "EgsKB1BBU1NJVkUQAxIiCh5ST0FEX1NOQVBQRURfTE9DQVRJT05fUFJPVklE",
-            "RVIQBBIeChpDVVNUT01FUl9TVVBQTElFRF9MT0NBVElPThAFEhkKFUZMRUVU",
-            "X0VOR0lORV9MT0NBVElPThAGEhsKF0ZVU0VEX0xPQ0FUSU9OX1BST1ZJREVS",
-            "EGQSEgoNQ09SRV9MT0NBVElPThDIASqYAQofRGVsaXZlcnlWZWhpY2xlTmF2",
-            "aWdhdGlvblN0YXR1cxIdChlVTktOT1dOX05BVklHQVRJT05fU1RBVFVTEAAS",
-            "DwoLTk9fR1VJREFOQ0UQARIaChZFTlJPVVRFX1RPX0RFU1RJTkFUSU9OEAIS",
-            "DQoJT0ZGX1JPVVRFEAMSGgoWQVJSSVZFRF9BVF9ERVNUSU5BVElPThAEQvsB",
-            "Cidjb20uZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCBkNv",
-            "bW1vblABWkljbG91ZC5nb29nbGUuY29tL2dvL21hcHMvZmxlZXRlbmdpbmUv",
-            "ZGVsaXZlcnkvYXBpdjEvZGVsaXZlcnlwYjtkZWxpdmVyeXBiogIEQ0ZFRKoC",
-            "I0dvb2dsZS5NYXBzLkZsZWV0RW5naW5lLkRlbGl2ZXJ5LlYxygIjR29vZ2xl",
-            "XE1hcHNcRmxlZXRFbmdpbmVcRGVsaXZlcnlcVjHqAidHb29nbGU6Ok1hcHM6",
-            "OkZsZWV0RW5naW5lOjpEZWxpdmVyeTo6VjFiBnByb3RvMw=="));
+            "ZRIpCgxmbHBfbG9jYXRpb24YHSABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcS",
+            "MwoPZmxwX3VwZGF0ZV90aW1lGB4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBJAChpmbHBfbGF0bG5nX2FjY3VyYWN5X21ldGVycxgfIAEoCzIc",
+            "Lmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRI4ChNmbHBfaGVhZGluZ19k",
+            "ZWdyZWVzGCAgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSMgoV",
+            "c3VwcGxlbWVudGFsX2xvY2F0aW9uGBIgASgLMhMuZ29vZ2xlLnR5cGUuTGF0",
+            "TG5nEj4KGnN1cHBsZW1lbnRhbF9sb2NhdGlvbl90aW1lGBMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJhChxzdXBwbGVtZW50YWxfbG9jYXRp",
+            "b25fc2Vuc29yGBQgASgOMjsubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52",
+            "MS5EZWxpdmVyeVZlaGljbGVMb2NhdGlvblNlbnNvchJECh5zdXBwbGVtZW50",
+            "YWxfbG9jYXRpb25fYWNjdXJhY3kYFSABKAsyHC5nb29nbGUucHJvdG9idWYu",
+            "RG91YmxlVmFsdWUSGAoMcm9hZF9zbmFwcGVkGBogASgIQgIYASJ0CgpUaW1l",
+            "V2luZG93EjMKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQISMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQIiegoNVGFza0F0dHJpYnV0ZRILCgNrZXkY",
+            "ASABKAkSFgoMc3RyaW5nX3ZhbHVlGAIgASgJSAASFAoKYm9vbF92YWx1ZRgD",
+            "IAEoCEgAEhYKDG51bWJlcl92YWx1ZRgEIAEoAUgAQhYKFHRhc2tfYXR0cmli",
+            "dXRlX3ZhbHVlKuYBCh1EZWxpdmVyeVZlaGljbGVMb2NhdGlvblNlbnNvchIS",
+            "Cg5VTktOT1dOX1NFTlNPUhAAEgcKA0dQUxABEgsKB05FVFdPUksQAhILCgdQ",
+            "QVNTSVZFEAMSIgoeUk9BRF9TTkFQUEVEX0xPQ0FUSU9OX1BST1ZJREVSEAQS",
+            "HgoaQ1VTVE9NRVJfU1VQUExJRURfTE9DQVRJT04QBRIZChVGTEVFVF9FTkdJ",
+            "TkVfTE9DQVRJT04QBhIbChdGVVNFRF9MT0NBVElPTl9QUk9WSURFUhBkEhIK",
+            "DUNPUkVfTE9DQVRJT04QyAEqmAEKH0RlbGl2ZXJ5VmVoaWNsZU5hdmlnYXRp",
+            "b25TdGF0dXMSHQoZVU5LTk9XTl9OQVZJR0FUSU9OX1NUQVRVUxAAEg8KC05P",
+            "X0dVSURBTkNFEAESGgoWRU5ST1VURV9UT19ERVNUSU5BVElPThACEg0KCU9G",
+            "Rl9ST1VURRADEhoKFkFSUklWRURfQVRfREVTVElOQVRJT04QBEL7AQonY29t",
+            "Lmdvb2dsZS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQgZDb21tb25Q",
+            "AVpJY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5lL2RlbGl2",
+            "ZXJ5L2FwaXYxL2RlbGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENGRUSqAiNHb29n",
+            "bGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMcoCI0dvb2dsZVxNYXBz",
+            "XEZsZWV0RW5naW5lXERlbGl2ZXJ5XFYx6gInR29vZ2xlOjpNYXBzOjpGbGVl",
+            "dEVuZ2luZTo6RGVsaXZlcnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocationSensor), typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleNavigationStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleAttribute), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleAttribute.Parser, new[]{ "Key", "Value", "StringValue", "BoolValue", "NumberValue" }, new[]{ "DeliveryVehicleAttributeValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation.Parser, new[]{ "Location", "HorizontalAccuracy", "LatlngAccuracy", "Heading", "BearingAccuracy", "HeadingAccuracy", "Altitude", "VerticalAccuracy", "AltitudeAccuracy", "SpeedKmph", "Speed", "SpeedAccuracy", "UpdateTime", "ServerTime", "LocationSensor", "IsRoadSnapped", "IsGpsSensorEnabled", "TimeSinceUpdate", "NumStaleUpdates", "RawLocation", "RawLocationTime", "RawLocationSensor", "RawLocationAccuracy", "SupplementalLocation", "SupplementalLocationTime", "SupplementalLocationSensor", "SupplementalLocationAccuracy", "RoadSnapped" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation.Parser, new[]{ "Location", "HorizontalAccuracy", "LatlngAccuracy", "Heading", "BearingAccuracy", "HeadingAccuracy", "Altitude", "VerticalAccuracy", "AltitudeAccuracy", "SpeedKmph", "Speed", "SpeedAccuracy", "UpdateTime", "ServerTime", "LocationSensor", "IsRoadSnapped", "IsGpsSensorEnabled", "TimeSinceUpdate", "NumStaleUpdates", "RawLocation", "RawLocationTime", "RawLocationSensor", "RawLocationAccuracy", "FlpLocation", "FlpUpdateTime", "FlpLatlngAccuracyMeters", "FlpHeadingDegrees", "SupplementalLocation", "SupplementalLocationTime", "SupplementalLocationSensor", "SupplementalLocationAccuracy", "RoadSnapped" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.TimeWindow), global::Google.Maps.FleetEngine.Delivery.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.TaskAttribute), global::Google.Maps.FleetEngine.Delivery.V1.TaskAttribute.Parser, new[]{ "Key", "StringValue", "BoolValue", "NumberValue" }, new[]{ "TaskAttributeValue" }, null, null, null)
           }));
@@ -683,6 +688,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       rawLocationTime_ = other.rawLocationTime_ != null ? other.rawLocationTime_.Clone() : null;
       rawLocationSensor_ = other.rawLocationSensor_;
       RawLocationAccuracy = other.RawLocationAccuracy;
+      flpLocation_ = other.flpLocation_ != null ? other.flpLocation_.Clone() : null;
+      flpUpdateTime_ = other.flpUpdateTime_ != null ? other.flpUpdateTime_.Clone() : null;
+      FlpLatlngAccuracyMeters = other.FlpLatlngAccuracyMeters;
+      FlpHeadingDegrees = other.FlpHeadingDegrees;
       supplementalLocation_ = other.supplementalLocation_ != null ? other.supplementalLocation_.Clone() : null;
       supplementalLocationTime_ = other.supplementalLocationTime_ != null ? other.supplementalLocationTime_.Clone() : null;
       supplementalLocationSensor_ = other.supplementalLocationSensor_;
@@ -1090,6 +1099,71 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     }
 
 
+    /// <summary>Field number for the "flp_location" field.</summary>
+    public const int FlpLocationFieldNumber = 29;
+    private global::Google.Type.LatLng flpLocation_;
+    /// <summary>
+    /// The location from Android's Fused Location Provider.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LatLng FlpLocation {
+      get { return flpLocation_; }
+      set {
+        flpLocation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "flp_update_time" field.</summary>
+    public const int FlpUpdateTimeFieldNumber = 30;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp flpUpdateTime_;
+    /// <summary>
+    /// Update timestamp of the `flp_location`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FlpUpdateTime {
+      get { return flpUpdateTime_; }
+      set {
+        flpUpdateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "flp_latlng_accuracy_meters" field.</summary>
+    public const int FlpLatlngAccuracyMetersFieldNumber = 31;
+    private static readonly pb::FieldCodec<double?> _single_flpLatlngAccuracyMeters_codec = pb::FieldCodec.ForStructWrapper<double>(250);
+    private double? flpLatlngAccuracyMeters_;
+    /// <summary>
+    /// Accuracy of `flp_location` in meters as a radius.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double? FlpLatlngAccuracyMeters {
+      get { return flpLatlngAccuracyMeters_; }
+      set {
+        flpLatlngAccuracyMeters_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "flp_heading_degrees" field.</summary>
+    public const int FlpHeadingDegreesFieldNumber = 32;
+    private static readonly pb::FieldCodec<int?> _single_flpHeadingDegrees_codec = pb::FieldCodec.ForStructWrapper<int>(258);
+    private int? flpHeadingDegrees_;
+    /// <summary>
+    /// Direction the vehicle is moving in degrees, as determined by the Fused
+    /// Location Provider. 0 represents North. The valid range is [0,360).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int? FlpHeadingDegrees {
+      get { return flpHeadingDegrees_; }
+      set {
+        flpHeadingDegrees_ = value;
+      }
+    }
+
+
     /// <summary>Field number for the "supplemental_location" field.</summary>
     public const int SupplementalLocationFieldNumber = 18;
     private global::Google.Type.LatLng supplementalLocation_;
@@ -1207,6 +1281,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       if (!object.Equals(RawLocationTime, other.RawLocationTime)) return false;
       if (RawLocationSensor != other.RawLocationSensor) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(RawLocationAccuracy, other.RawLocationAccuracy)) return false;
+      if (!object.Equals(FlpLocation, other.FlpLocation)) return false;
+      if (!object.Equals(FlpUpdateTime, other.FlpUpdateTime)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(FlpLatlngAccuracyMeters, other.FlpLatlngAccuracyMeters)) return false;
+      if (FlpHeadingDegrees != other.FlpHeadingDegrees) return false;
       if (!object.Equals(SupplementalLocation, other.SupplementalLocation)) return false;
       if (!object.Equals(SupplementalLocationTime, other.SupplementalLocationTime)) return false;
       if (SupplementalLocationSensor != other.SupplementalLocationSensor) return false;
@@ -1242,6 +1320,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       if (rawLocationTime_ != null) hash ^= RawLocationTime.GetHashCode();
       if (RawLocationSensor != global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocationSensor.UnknownSensor) hash ^= RawLocationSensor.GetHashCode();
       if (rawLocationAccuracy_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(RawLocationAccuracy);
+      if (flpLocation_ != null) hash ^= FlpLocation.GetHashCode();
+      if (flpUpdateTime_ != null) hash ^= FlpUpdateTime.GetHashCode();
+      if (flpLatlngAccuracyMeters_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(FlpLatlngAccuracyMeters);
+      if (flpHeadingDegrees_ != null) hash ^= FlpHeadingDegrees.GetHashCode();
       if (supplementalLocation_ != null) hash ^= SupplementalLocation.GetHashCode();
       if (supplementalLocationTime_ != null) hash ^= SupplementalLocationTime.GetHashCode();
       if (SupplementalLocationSensor != global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocationSensor.UnknownSensor) hash ^= SupplementalLocationSensor.GetHashCode();
@@ -1360,6 +1442,20 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         output.WriteRawTag(224, 1);
         output.WriteEnum((int) RawLocationSensor);
       }
+      if (flpLocation_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(FlpLocation);
+      }
+      if (flpUpdateTime_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(FlpUpdateTime);
+      }
+      if (flpLatlngAccuracyMeters_ != null) {
+        _single_flpLatlngAccuracyMeters_codec.WriteTagAndValue(output, FlpLatlngAccuracyMeters);
+      }
+      if (flpHeadingDegrees_ != null) {
+        _single_flpHeadingDegrees_codec.WriteTagAndValue(output, FlpHeadingDegrees);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1465,6 +1561,20 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         output.WriteRawTag(224, 1);
         output.WriteEnum((int) RawLocationSensor);
       }
+      if (flpLocation_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(FlpLocation);
+      }
+      if (flpUpdateTime_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(FlpUpdateTime);
+      }
+      if (flpLatlngAccuracyMeters_ != null) {
+        _single_flpLatlngAccuracyMeters_codec.WriteTagAndValue(ref output, FlpLatlngAccuracyMeters);
+      }
+      if (flpHeadingDegrees_ != null) {
+        _single_flpHeadingDegrees_codec.WriteTagAndValue(ref output, FlpHeadingDegrees);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1543,6 +1653,18 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       }
       if (rawLocationAccuracy_ != null) {
         size += _single_rawLocationAccuracy_codec.CalculateSizeWithTag(RawLocationAccuracy);
+      }
+      if (flpLocation_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FlpLocation);
+      }
+      if (flpUpdateTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FlpUpdateTime);
+      }
+      if (flpLatlngAccuracyMeters_ != null) {
+        size += _single_flpLatlngAccuracyMeters_codec.CalculateSizeWithTag(FlpLatlngAccuracyMeters);
+      }
+      if (flpHeadingDegrees_ != null) {
+        size += _single_flpHeadingDegrees_codec.CalculateSizeWithTag(FlpHeadingDegrees);
       }
       if (supplementalLocation_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SupplementalLocation);
@@ -1685,6 +1807,28 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       if (other.rawLocationAccuracy_ != null) {
         if (rawLocationAccuracy_ == null || other.RawLocationAccuracy != 0D) {
           RawLocationAccuracy = other.RawLocationAccuracy;
+        }
+      }
+      if (other.flpLocation_ != null) {
+        if (flpLocation_ == null) {
+          FlpLocation = new global::Google.Type.LatLng();
+        }
+        FlpLocation.MergeFrom(other.FlpLocation);
+      }
+      if (other.flpUpdateTime_ != null) {
+        if (flpUpdateTime_ == null) {
+          FlpUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FlpUpdateTime.MergeFrom(other.FlpUpdateTime);
+      }
+      if (other.flpLatlngAccuracyMeters_ != null) {
+        if (flpLatlngAccuracyMeters_ == null || other.FlpLatlngAccuracyMeters != 0D) {
+          FlpLatlngAccuracyMeters = other.FlpLatlngAccuracyMeters;
+        }
+      }
+      if (other.flpHeadingDegrees_ != null) {
+        if (flpHeadingDegrees_ == null || other.FlpHeadingDegrees != 0) {
+          FlpHeadingDegrees = other.FlpHeadingDegrees;
         }
       }
       if (other.supplementalLocation_ != null) {
@@ -1909,6 +2053,34 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             RawLocationSensor = (global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocationSensor) input.ReadEnum();
             break;
           }
+          case 234: {
+            if (flpLocation_ == null) {
+              FlpLocation = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(FlpLocation);
+            break;
+          }
+          case 242: {
+            if (flpUpdateTime_ == null) {
+              FlpUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FlpUpdateTime);
+            break;
+          }
+          case 250: {
+            double? value = _single_flpLatlngAccuracyMeters_codec.Read(input);
+            if (flpLatlngAccuracyMeters_ == null || value != 0D) {
+              FlpLatlngAccuracyMeters = value;
+            }
+            break;
+          }
+          case 258: {
+            int? value = _single_flpHeadingDegrees_codec.Read(input);
+            if (flpHeadingDegrees_ == null || value != 0) {
+              FlpHeadingDegrees = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -2106,6 +2278,34 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
           }
           case 224: {
             RawLocationSensor = (global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocationSensor) input.ReadEnum();
+            break;
+          }
+          case 234: {
+            if (flpLocation_ == null) {
+              FlpLocation = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(FlpLocation);
+            break;
+          }
+          case 242: {
+            if (flpUpdateTime_ == null) {
+              FlpUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FlpUpdateTime);
+            break;
+          }
+          case 250: {
+            double? value = _single_flpLatlngAccuracyMeters_codec.Read(ref input);
+            if (flpLatlngAccuracyMeters_ == null || value != 0D) {
+              FlpLatlngAccuracyMeters = value;
+            }
+            break;
+          }
+          case 258: {
+            int? value = _single_flpHeadingDegrees_codec.Read(ref input);
+            if (flpHeadingDegrees_ == null || value != 0) {
+              FlpHeadingDegrees = value;
+            }
             break;
           }
         }
