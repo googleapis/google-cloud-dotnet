@@ -3793,7 +3793,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-14T17:24:29Z",
-            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastGeneratedCommit": "29839aab3c3eef13c1e5434f7b2860f083cee92d",
             "apiPaths": [
                 "google/shopping/merchant/products/v1beta"
             ],
