@@ -51,7 +51,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "AyABKAsyQS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJl",
             "dGEuTWVyY2hhbnRSZXZpZXdBdHRyaWJ1dGVzQgPgQQESRQoRY3VzdG9tX2F0",
             "dHJpYnV0ZXMYBCADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21B",
-            "dHRyaWJ1dGVCA+BBAhIYCgtkYXRhX3NvdXJjZRgFIAEoCUID4EEDEmIKFm1l",
+            "dHRyaWJ1dGVCA+BBARIYCgtkYXRhX3NvdXJjZRgFIAEoCUID4EEDEmIKFm1l",
             "cmNoYW50X3Jldmlld19zdGF0dXMYBiABKAsyPS5nb29nbGUuc2hvcHBpbmcu",
             "bWVyY2hhbnQucmV2aWV3cy52MWJldGEuTWVyY2hhbnRSZXZpZXdTdGF0dXNC",
             "A+BBAzp66kF3CiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9NZXJjaGFu",
@@ -1403,7 +1403,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
         = pb::FieldCodec.ForMessage(34, global::Google.Shopping.Type.CustomAttribute.Parser);
     private readonly pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute> customAttributes_ = new pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute>();
     /// <summary>
-    /// Required. A list of custom (merchant-provided) attributes. It can also be
+    /// Optional. A list of custom (merchant-provided) attributes. It can also be
     /// used for submitting any attribute of the data specification in its generic
     /// form (for example,
     /// `{ "name": "size type", "value": "regular" }`).
