@@ -1,0 +1,25 @@
+command: prepare-library-release
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Cloud.Tools.TestTool'
+- '--version=1.3.0'
+- '--release-notes=/test/inputs/release-notes.txt'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Cloud.Tools.TestTool
+    target: repo/tools/Google.Cloud.Tools.TestTool
+repoFiles:
+  - source: global.json
+    target: repo/global.json
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: tools
+    target: repo/tools
+fileExpectations:
+  containsText:
+  # The project file contains the new version number
+  - file: repo/tools/Google.Cloud.Tools.TestTool/Google.Cloud.Tools.TestTool.csproj
+    text: 1.3.0

@@ -75,6 +75,10 @@ public sealed class ContainerCommand : ICommand
             {
                 return UtilityDocCommands.Execute(args[0], options);
             }
+            if (options.LibraryId?.StartsWith("Google.Cloud.Tools.", StringComparison.Ordinal) == true)
+            {
+                return ToolCommands.Execute(args[0], options);
+            }
 
             return subcommand.Execute(options);
         }

@@ -1,0 +1,22 @@
+command: build-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Cloud.Tools.TestTool'
+- '--test=true'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Cloud.Tools.TestTool
+    target: repo/tools/Google.Cloud.Tools.TestTool
+repoFiles:
+  - source: global.json
+    target: repo/global.json
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: tools
+    target: repo/tools
+fileExpectations:
+  present:
+  - repo/tools/Google.Cloud.Tools.TestTool/bin
