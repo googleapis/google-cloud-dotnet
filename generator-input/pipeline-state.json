@@ -3849,7 +3849,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-12-10T16:27:17Z",
-            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastGeneratedCommit": "d60f969a2b193fa22cc3e993e2c4e14d38535574",
             "apiPaths": [
                 "google/shopping/merchant/reviews/v1beta"
             ],
