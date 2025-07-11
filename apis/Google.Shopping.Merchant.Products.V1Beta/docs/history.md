@@ -1,5 +1,65 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-07-11
+
+### New features
+
+- A new field `gtins` is added to message `.google.shopping.merchant.products.v1beta.Attributes`
+- A new field `maximum_retail_price` is added to message `.google.shopping.merchant.products.v1beta.Attributes`
+
+### Documentation improvements
+
+- A comment for method `InsertProductInput` in service `ProductInputsService` is changed
+- A comment for message `ProductInput` is changed
+- A comment for field `name` in message `.google.shopping.merchant.products.v1beta.ProductInput` is changed
+- A comment for field `product` in message `.google.shopping.merchant.products.v1beta.ProductInput` is changed
+- A comment for field `feed_label` in message `.google.shopping.merchant.products.v1beta.ProductInput` is changed
+- A comment for field `version_number` in message `.google.shopping.merchant.products.v1beta.ProductInput` is changed
+- A comment for field `custom_attributes` in message `.google.shopping.merchant.products.v1beta.ProductInput` is changed
+- A comment for field `parent` in message `.google.shopping.merchant.products.v1beta.InsertProductInputRequest` is changed
+- A comment for field `data_source` in message `.google.shopping.merchant.products.v1beta.InsertProductInputRequest` is changed
+- A comment for field `data_source` in message `.google.shopping.merchant.products.v1beta.UpdateProductInputRequest` is changed
+- A comment for field `name` in message `.google.shopping.merchant.products.v1beta.DeleteProductInputRequest` is changed
+- A comment for field `data_source` in message `.google.shopping.merchant.products.v1beta.DeleteProductInputRequest` is changed
+- A comment for field `feed_label` in message `.google.shopping.merchant.products.v1beta.Product` is changed
+- A comment for field `page_size` in message `.google.shopping.merchant.products.v1beta.ListProductsRequest` is changed
+- A comment for field `is_bundle` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `disclosure_date` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `availability` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `brand` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `color` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `condition` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `gender` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `gtin` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `material` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `pattern` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `product_types` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `sale_price_effective_date` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `size` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `size_system` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `size_types` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `tax_category` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `multipack` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `ads_grouping` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `product_highlights` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `display_ads_similar_ids` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `display_ads_value` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `pickup_method` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `pickup_sla` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `link_template` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `mobile_link_template` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `custom_label_0` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `custom_label_1` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `custom_label_2` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `custom_label_3` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `custom_label_4` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `included_destinations` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `excluded_destinations` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `shopping_ads_excluded_countries` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `auto_pricing_min_price` in message `.google.shopping.merchant.products.v1beta.Attributes` is changed
+- A comment for field `program_label` in message `.google.shopping.merchant.products.v1beta.LoyaltyProgram` is changed
+- A comment for field `resolution` in message `.google.shopping.merchant.products.v1beta.ProductStatus` is changed
+
 ## Version 1.0.0-beta04, released 2025-04-14
 
 ### New features
