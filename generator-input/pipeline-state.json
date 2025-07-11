@@ -3605,11 +3605,12 @@
         },
         {
             "id": "Google.Maps.FleetEngine.Delivery.V1",
-            "currentVersion": "2.2.0",
+            "currentVersion": "2.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-03T18:10:29Z",
+            "releaseTimestamp": "2025-07-11T13:59:32.970159284Z",
             "lastGeneratedCommit": "302273adb3293bb504ecd83be8e1467511d5c779",
+            "lastReleasedCommit": "302273adb3293bb504ecd83be8e1467511d5c779",
             "apiPaths": [
                 "google/maps/fleetengine/delivery/v1"
             ],
