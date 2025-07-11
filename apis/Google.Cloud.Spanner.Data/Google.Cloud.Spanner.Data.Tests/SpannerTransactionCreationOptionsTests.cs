@@ -17,6 +17,8 @@ using System;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 
+using TransactionReadLockMode = Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode;
+
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerTransactionCreationOptionsTests
 {
@@ -148,6 +150,24 @@ public class SpannerTransactionCreationOptionsTests
         Assert.True(options.IsDetached);
         options = options.WithIsDetached(false);
         Assert.False(options.IsDetached);
+    }
+
+    [Fact]
+    public void WithReadLockMode()
+    {
+        var options = SpannerTransactionCreationOptions.ReadWrite.WithReadLockMode(TransactionReadLockMode.Optimistic);
+        Assert.Equal(TransactionReadLockMode.Optimistic, options.ReadLockMode);
+        options = options.WithReadLockMode(TransactionReadLockMode.Pessimistic);
+        Assert.Equal(TransactionReadLockMode.Pessimistic, options.ReadLockMode);
+    }
+
+    [Fact]
+    public void WithReadLockMode_ReadOnly()
+    {
+        var options = SpannerTransactionCreationOptions.ReadOnly.WithReadLockMode(TransactionReadLockMode.Unspecified);
+        Assert.NotNull(options);
+
+        Assert.Throws<ArgumentException>(() => options.WithReadLockMode(TransactionReadLockMode.Optimistic));
     }
 
     [Fact]
