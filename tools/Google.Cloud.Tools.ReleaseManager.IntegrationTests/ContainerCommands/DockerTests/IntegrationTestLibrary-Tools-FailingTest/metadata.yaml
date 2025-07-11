@@ -1,0 +1,23 @@
+command: integration-test-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Cloud.Tools.TestTool'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Cloud.Tools.TestTool
+    target: repo/tools/Google.Cloud.Tools.TestTool
+  - source: Google.Cloud.Tools.TestTool.Tests
+    target: repo/tools/Google.Cloud.Tools.TestTool.Tests
+  - source: Google.Cloud.Tools.TestTool.Tests
+    target: repo/tools/Google.Cloud.Tools.TestTool.IntegrationTests
+repoFiles:
+  - source: global.json
+    target: repo/global.json
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: tools
+    target: repo/tools
+expectedExitCode: 1
