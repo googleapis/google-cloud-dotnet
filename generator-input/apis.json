@@ -3502,7 +3502,7 @@
     },
     {
       "id": "Google.Cloud.Maintenance.Api.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Maintenance",
       "productUrl": "https://cloud.google.com/unified-maintenance/docs/overview",
