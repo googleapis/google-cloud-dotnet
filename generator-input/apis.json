@@ -6499,7 +6499,7 @@
     },
     {
       "id": "Google.Maps.FleetEngine.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Local Rides and Deliveries",
       "productUrl": "https://developers.google.com/maps/documentation/transportation-logistics/mobility",
