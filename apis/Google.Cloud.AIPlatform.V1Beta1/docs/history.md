@@ -1,5 +1,25 @@
 # Version history
 
+## Version 1.0.0-beta38, released 2025-07-11
+
+### New features
+
+- Add flexstart option to v1beta1
+- Some comments changes in machine_resources.proto to v1beta1
+- Add Aggregation Output in EvaluateDataset Get Operation Response
+
+### Documentation improvements
+
+- A comment for message `DedicatedResources` is changed
+- A comment for field `machine_spec` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `min_replica_count` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `max_replica_count` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `required_replica_count` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `min_replica_count` in message `.google.cloud.aiplatform.v1beta1.AutomaticResources` is changed
+- A comment for field `max_replica_count` in message `.google.cloud.aiplatform.v1beta1.AutomaticResources` is changed
+- A comment for field `boot_disk_type` in message `.google.cloud.aiplatform.v1beta1.DiskSpec` is changed
+- Add constraints for AggregationMetric enum and default value for flip_enabled field in AutoraterConfig
+
 ## Version 1.0.0-beta37, released 2025-07-07
 
 ### New features
