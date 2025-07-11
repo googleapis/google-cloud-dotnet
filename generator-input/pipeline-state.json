@@ -4012,7 +4012,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-15T20:35:51.946131507Z",
-            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastGeneratedCommit": "08226f7ca552505dcea983c28d90d13076170b8d",
             "lastReleasedCommit": "ee4dca4347ad712ee6893e8a83cea17bcd75758d",
             "apiPaths": [
                 "google/cloud/chronicle/v1"
