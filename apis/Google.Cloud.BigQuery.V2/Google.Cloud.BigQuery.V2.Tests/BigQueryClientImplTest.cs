@@ -30,6 +30,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
     {
         // Default location for tests that need one.
         private const string DefaultLocation = "default-location";
+        private const string Reservation = "Reservation";
 
         [Fact]
         public void PrettyPrintEnabledOnClientIsPropagatedToRequest()
@@ -1037,6 +1038,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { JobId = "custom_job_id" });
             Assert.Equal("project", job.JobReference.ProjectId);
             Assert.Equal("custom_job_id", job.JobReference.JobId);
+        }
+
+        [Fact]
+        public void CreateJob_JobConfigurationModifier()
+        {
+            var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { JobConfigurationModifier = jobConfiguration => jobConfiguration.Reservation = Reservation });
+            Assert.Equal("Reservation", job.Configuration.Reservation);
         }
 
         [Fact]
