@@ -22,4 +22,4 @@ fileExpectations:
   containsText:
   # The project file contains the new version number
   - file: repo/tools/Google.Cloud.Tools.TestTool/Google.Cloud.Tools.TestTool.csproj
-    text: 1.3.0
+    text: '<Version>1.3.0</Version>'

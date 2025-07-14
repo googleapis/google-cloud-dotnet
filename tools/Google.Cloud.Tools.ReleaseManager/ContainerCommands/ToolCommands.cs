@@ -98,7 +98,7 @@ internal static class ToolCommands
         var repoRoot = options.RequireOption(options.RepoRoot);
         var projectFile = Path.Combine(repoRoot, $"tools/{options.LibraryId}/{options.LibraryId}.csproj");
         var text = File.ReadAllText(projectFile);
-        var modified = Regex.Replace(text, "<Version>[^<]+</Version>", options.Version);
+        var modified = Regex.Replace(text, "<Version>[^<]+</Version>", $"<Version>{options.Version}</Version>");
         File.WriteAllText(projectFile, modified);
         return 0;
     }
