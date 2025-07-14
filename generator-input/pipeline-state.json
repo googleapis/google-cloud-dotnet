@@ -4270,6 +4270,26 @@
             "sourcePaths": [
                 "apis/Google.Cloud.LicenseManager.V1/Google.Cloud.LicenseManager.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Tools.DocUploader",
+            "currentVersion": "0.2.3",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2025-04-29T08:22:38Z",
+            "sourcePaths": [
+                "tools/Google.Cloud.Tools.DocUploader"
+            ]
+        },
+        {
+            "id": "Google.Cloud.Tools.SbomGenerator",
+            "currentVersion": "0.4.0",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2024-05-02T06:52:56Z",
+            "sourcePaths": [
+                "tools/Google.Cloud.Tools.SbomGenerator"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
