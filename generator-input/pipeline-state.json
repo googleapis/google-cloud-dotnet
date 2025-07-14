@@ -2426,7 +2426,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-09T05:04:18Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "7a886af8167e43fda34566f7ecaea097b86bf587",
             "apiPaths": [
                 "google/cloud/phishingprotection/v1beta1"
             ],
