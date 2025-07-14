@@ -3044,7 +3044,7 @@
             "id": "Google.Cloud.Storage.V2",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "b795b2b094a05dfb81409b8d19a7a2cd75359439",
+            "lastGeneratedCommit": "f2a87ff9836e96a7d37501128134ff34eb486d2d",
             "apiPaths": [
                 "google/storage/v2"
             ],

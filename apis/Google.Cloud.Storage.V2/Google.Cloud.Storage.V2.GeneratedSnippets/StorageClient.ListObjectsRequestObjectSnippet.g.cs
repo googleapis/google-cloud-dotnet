@@ -52,6 +52,7 @@ namespace GoogleCSharpSnippets
                 SoftDeleted = false,
                 IncludeFoldersAsPrefixes = false,
                 MatchGlob = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<gcsv::ListObjectsResponse, gcsv::Object> response = storageClient.ListObjects(request);
