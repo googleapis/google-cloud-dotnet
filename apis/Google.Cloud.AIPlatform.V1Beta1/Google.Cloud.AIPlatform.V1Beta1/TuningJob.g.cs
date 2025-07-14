@@ -32,7 +32,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "bmNyeXB0aW9uX3NwZWMucHJvdG8aL2dvb2dsZS9jbG91ZC9haXBsYXRmb3Jt",
             "L3YxYmV0YTEvam9iX3N0YXRlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3Ry",
             "dWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdn",
-            "b29nbGUvcnBjL3N0YXR1cy5wcm90byLYCgoJVHVuaW5nSm9iEhQKCmJhc2Vf",
+            "b29nbGUvcnBjL3N0YXR1cy5wcm90byKRCwoJVHVuaW5nSm9iEhQKCmJhc2Vf",
             "bW9kZWwYBCABKAlIABJXChZzdXBlcnZpc2VkX3R1bmluZ19zcGVjGAUgASgL",
             "MjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TdXBlcnZpc2Vk",
             "VHVuaW5nU3BlY0gBEk4KEWRpc3RpbGxhdGlvbl9zcGVjGBEgASgLMjEuZ29v",
@@ -41,138 +41,145 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUGFydG5lck1vZGVsVHVuaW5n",
             "U3BlY0gBEhQKBG5hbWUYASABKAlCBuBBCOBBAxIlChh0dW5lZF9tb2RlbF9k",
             "aXNwbGF5X25hbWUYAiABKAlCA+BBARIYCgtkZXNjcmlwdGlvbhgDIAEoCUID",
-            "4EEBEj0KBXN0YXRlGAYgASgOMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMS5Kb2JTdGF0ZUID4EEDEjQKC2NyZWF0ZV90aW1lGAcgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUY",
-            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5k",
-            "X3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NAoLdXBkYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSJgoFZXJyb3IYCyABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID",
-            "4EEDEksKBmxhYmVscxgMIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuVHVuaW5nSm9iLkxhYmVsc0VudHJ5QgPgQQESPQoKZXhwZXJp",
-            "bWVudBgNIAEoCUIp4EED+kEjCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
-            "L0NvbnRleHQSRQoLdHVuZWRfbW9kZWwYDiABKAsyKy5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLlR1bmVkTW9kZWxCA+BBAxJQChF0dW5pbmdf",
-            "ZGF0YV9zdGF0cxgPIAEoCzIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "YmV0YTEuVHVuaW5nRGF0YVN0YXRzQgPgQQMSQwoMcGlwZWxpbmVfam9iGBIg",
-            "ASgJQi3gQQP6QScKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUGlwZWxp",
-            "bmVKb2ISSAoPZW5jcnlwdGlvbl9zcGVjGBAgASgLMi8uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5FbmNyeXB0aW9uU3BlYxIXCg9zZXJ2aWNl",
-            "X2FjY291bnQYFiABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ATqAAepBfQojYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
-            "LmNvbS9UdW5pbmdKb2ISP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS90dW5pbmdKb2JzL3t0dW5pbmdfam9ifSoKdHVuaW5nSm9i",
-            "czIJdHVuaW5nSm9iQg4KDHNvdXJjZV9tb2RlbEINCgt0dW5pbmdfc3BlYyLT",
-            "AQoKVHVuZWRNb2RlbBI2CgVtb2RlbBgBIAEoCUIn4EED+kEhCh9haXBsYXRm",
-            "b3JtLmdvb2dsZWFwaXMuY29tL01vZGVsEjwKCGVuZHBvaW50GAIgASgJQirg",
-            "QQP6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSTwoL",
-            "Y2hlY2twb2ludHMYAyADKAsyNS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLlR1bmVkTW9kZWxDaGVja3BvaW50QgPgQQMi9wIKI1N1cGVydmlz",
-            "ZWRUdW5pbmdEYXRhc2V0RGlzdHJpYnV0aW9uEhAKA3N1bRgBIAEoA0ID4EED",
-            "EhkKDGJpbGxhYmxlX3N1bRgJIAEoA0ID4EEDEhAKA21pbhgCIAEoAUID4EED",
-            "EhAKA21heBgDIAEoAUID4EEDEhEKBG1lYW4YBCABKAFCA+BBAxITCgZtZWRp",
-            "YW4YBSABKAFCA+BBAxIPCgJwNRgGIAEoAUID4EEDEhAKA3A5NRgHIAEoAUID",
-            "4EEDEmgKB2J1Y2tldHMYCCADKAsyUi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLlN1cGVydmlzZWRUdW5pbmdEYXRhc2V0RGlzdHJpYnV0aW9u",
-            "LkRhdGFzZXRCdWNrZXRCA+BBAxpKCg1EYXRhc2V0QnVja2V0EhIKBWNvdW50",
-            "GAEgASgBQgPgQQMSEQoEbGVmdBgCIAEoAUID4EEDEhIKBXJpZ2h0GAMgASgB",
-            "QgPgQQMikAYKGVN1cGVydmlzZWRUdW5pbmdEYXRhU3RhdHMSKQocdHVuaW5n",
-            "X2RhdGFzZXRfZXhhbXBsZV9jb3VudBgBIAEoA0ID4EEDEikKHHRvdGFsX3R1",
-            "bmluZ19jaGFyYWN0ZXJfY291bnQYAiABKANCA+BBAxItCh50b3RhbF9iaWxs",
-            "YWJsZV9jaGFyYWN0ZXJfY291bnQYAyABKANCBRgB4EEDEicKGnRvdGFsX2Jp",
-            "bGxhYmxlX3Rva2VuX2NvdW50GAkgASgDQgPgQQMSHgoRdHVuaW5nX3N0ZXBf",
-            "Y291bnQYBCABKANCA+BBAxJwCh11c2VyX2lucHV0X3Rva2VuX2Rpc3RyaWJ1",
-            "dGlvbhgFIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "U3VwZXJ2aXNlZFR1bmluZ0RhdGFzZXREaXN0cmlidXRpb25CA+BBAxJxCh51",
-            "c2VyX291dHB1dF90b2tlbl9kaXN0cmlidXRpb24YBiABKAsyRC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlN1cGVydmlzZWRUdW5pbmdEYXRh",
-            "c2V0RGlzdHJpYnV0aW9uQgPgQQMSeAoldXNlcl9tZXNzYWdlX3Blcl9leGFt",
-            "cGxlX2Rpc3RyaWJ1dGlvbhgHIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "4EEBEh4KEWN1c3RvbV9iYXNlX21vZGVsGBogASgJQgPgQQESPQoFc3RhdGUY",
+            "BiABKA4yKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkpvYlN0",
+            "YXRlQgPgQQMSNAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSMwoKc3RhcnRfdGltZRgIIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgJIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGlt",
+            "ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxImCgVl",
+            "cnJvchgLIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSSwoGbGFiZWxz",
+            "GAwgAygLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5UdW5p",
+            "bmdKb2IuTGFiZWxzRW50cnlCA+BBARI9CgpleHBlcmltZW50GA0gASgJQing",
+            "QQP6QSMKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ29udGV4dBJFCgt0",
+            "dW5lZF9tb2RlbBgOIAEoCzIrLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuVHVuZWRNb2RlbEID4EEDElAKEXR1bmluZ19kYXRhX3N0YXRzGA8g",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5UdW5pbmdE",
+            "YXRhU3RhdHNCA+BBAxJDCgxwaXBlbGluZV9qb2IYEiABKAlCLeBBA/pBJwol",
+            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QaXBlbGluZUpvYhJICg9lbmNy",
+            "eXB0aW9uX3NwZWMYECABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLkVuY3J5cHRpb25TcGVjEhcKD3NlcnZpY2VfYWNjb3VudBgWIAEo",
+            "CRIXCgpvdXRwdXRfdXJpGBkgASgJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqAAepBfQojYWlwbGF0Zm9y",
+            "bS5nb29nbGVhcGlzLmNvbS9UdW5pbmdKb2ISP3Byb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90dW5pbmdKb2JzL3t0dW5pbmdfam9i",
+            "fSoKdHVuaW5nSm9iczIJdHVuaW5nSm9iQg4KDHNvdXJjZV9tb2RlbEINCgt0",
+            "dW5pbmdfc3BlYyLTAQoKVHVuZWRNb2RlbBI2CgVtb2RlbBgBIAEoCUIn4EED",
+            "+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVsEjwKCGVuZHBv",
+            "aW50GAIgASgJQirgQQP6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "RW5kcG9pbnQSTwoLY2hlY2twb2ludHMYAyADKAsyNS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlR1bmVkTW9kZWxDaGVja3BvaW50QgPgQQMi",
+            "9wIKI1N1cGVydmlzZWRUdW5pbmdEYXRhc2V0RGlzdHJpYnV0aW9uEhAKA3N1",
+            "bRgBIAEoA0ID4EEDEhkKDGJpbGxhYmxlX3N1bRgJIAEoA0ID4EEDEhAKA21p",
+            "bhgCIAEoAUID4EEDEhAKA21heBgDIAEoAUID4EEDEhEKBG1lYW4YBCABKAFC",
+            "A+BBAxITCgZtZWRpYW4YBSABKAFCA+BBAxIPCgJwNRgGIAEoAUID4EEDEhAK",
+            "A3A5NRgHIAEoAUID4EEDEmgKB2J1Y2tldHMYCCADKAsyUi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlN1cGVydmlzZWRUdW5pbmdEYXRhc2V0",
+            "RGlzdHJpYnV0aW9uLkRhdGFzZXRCdWNrZXRCA+BBAxpKCg1EYXRhc2V0QnVj",
+            "a2V0EhIKBWNvdW50GAEgASgBQgPgQQMSEQoEbGVmdBgCIAEoAUID4EEDEhIK",
+            "BXJpZ2h0GAMgASgBQgPgQQMikAYKGVN1cGVydmlzZWRUdW5pbmdEYXRhU3Rh",
+            "dHMSKQocdHVuaW5nX2RhdGFzZXRfZXhhbXBsZV9jb3VudBgBIAEoA0ID4EED",
+            "EikKHHRvdGFsX3R1bmluZ19jaGFyYWN0ZXJfY291bnQYAiABKANCA+BBAxIt",
+            "Ch50b3RhbF9iaWxsYWJsZV9jaGFyYWN0ZXJfY291bnQYAyABKANCBRgB4EED",
+            "EicKGnRvdGFsX2JpbGxhYmxlX3Rva2VuX2NvdW50GAkgASgDQgPgQQMSHgoR",
+            "dHVuaW5nX3N0ZXBfY291bnQYBCABKANCA+BBAxJwCh11c2VyX2lucHV0X3Rv",
+            "a2VuX2Rpc3RyaWJ1dGlvbhgFIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRm",
             "b3JtLnYxYmV0YTEuU3VwZXJ2aXNlZFR1bmluZ0RhdGFzZXREaXN0cmlidXRp",
-            "b25CA+BBAxJMChV1c2VyX2RhdGFzZXRfZXhhbXBsZXMYCCADKAsyKC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkNvbnRlbnRCA+BBAxIqCh10",
-            "b3RhbF90cnVuY2F0ZWRfZXhhbXBsZV9jb3VudBgKIAEoA0ID4EEDEiYKGXRy",
-            "dW5jYXRlZF9leGFtcGxlX2luZGljZXMYCyADKANCA+BBAxIkChdkcm9wcGVk",
-            "X2V4YW1wbGVfcmVhc29ucxgMIAMoCUID4EEDIsYCChNEYXRhc2V0RGlzdHJp",
-            "YnV0aW9uEhAKA3N1bRgBIAEoAUID4EEDEhAKA21pbhgCIAEoAUID4EEDEhAK",
-            "A21heBgDIAEoAUID4EEDEhEKBG1lYW4YBCABKAFCA+BBAxITCgZtZWRpYW4Y",
-            "BSABKAFCA+BBAxIPCgJwNRgGIAEoAUID4EEDEhAKA3A5NRgHIAEoAUID4EED",
-            "El0KB2J1Y2tldHMYCCADKAsyRy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkRhdGFzZXREaXN0cmlidXRpb24uRGlzdHJpYnV0aW9uQnVja2V0",
-            "QgPgQQMaTwoSRGlzdHJpYnV0aW9uQnVja2V0EhIKBWNvdW50GAEgASgDQgPg",
-            "QQMSEQoEbGVmdBgCIAEoAUID4EEDEhIKBXJpZ2h0GAMgASgBQgPgQQMi1gQK",
-            "DERhdGFzZXRTdGF0cxIpChx0dW5pbmdfZGF0YXNldF9leGFtcGxlX2NvdW50",
-            "GAEgASgDQgPgQQMSKQocdG90YWxfdHVuaW5nX2NoYXJhY3Rlcl9jb3VudBgC",
-            "IAEoA0ID4EEDEisKHnRvdGFsX2JpbGxhYmxlX2NoYXJhY3Rlcl9jb3VudBgD",
-            "IAEoA0ID4EEDEh4KEXR1bmluZ19zdGVwX2NvdW50GAQgASgDQgPgQQMSYAod",
-            "dXNlcl9pbnB1dF90b2tlbl9kaXN0cmlidXRpb24YBSABKAsyNC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRhdGFzZXREaXN0cmlidXRpb25C",
-            "A+BBAxJmCh51c2VyX291dHB1dF90b2tlbl9kaXN0cmlidXRpb24YBiABKAsy",
-            "NC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRhdGFzZXREaXN0",
-            "cmlidXRpb25CA+BBA0gAiAEBEmgKJXVzZXJfbWVzc2FnZV9wZXJfZXhhbXBs",
-            "ZV9kaXN0cmlidXRpb24YByABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLkRhdGFzZXREaXN0cmlidXRpb25CA+BBAxJMChV1c2VyX2Rh",
-            "dGFzZXRfZXhhbXBsZXMYCCADKAsyKC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLkNvbnRlbnRCA+BBA0IhCh9fdXNlcl9vdXRwdXRfdG9rZW5f",
-            "ZGlzdHJpYnV0aW9uImsKFURpc3RpbGxhdGlvbkRhdGFTdGF0cxJSChZ0cmFp",
-            "bmluZ19kYXRhc2V0X3N0YXRzGAEgASgLMi0uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5EYXRhc2V0U3RhdHNCA+BBAyLqAQoPVHVuaW5nRGF0",
-            "YVN0YXRzEmIKHHN1cGVydmlzZWRfdHVuaW5nX2RhdGFfc3RhdHMYASABKAsy",
-            "Oi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlN1cGVydmlzZWRU",
-            "dW5pbmdEYXRhU3RhdHNIABJeChdkaXN0aWxsYXRpb25fZGF0YV9zdGF0cxgD",
-            "IAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGlzdGls",
-            "bGF0aW9uRGF0YVN0YXRzQgPgQQNIAEITChF0dW5pbmdfZGF0YV9zdGF0cyL/",
-            "AgoZU3VwZXJ2aXNlZEh5cGVyUGFyYW1ldGVycxIYCgtlcG9jaF9jb3VudBgB",
-            "IAEoA0ID4EEBEiUKGGxlYXJuaW5nX3JhdGVfbXVsdGlwbGllchgCIAEoAUID",
-            "4EEBEmEKDGFkYXB0ZXJfc2l6ZRgDIAEoDjJGLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuU3VwZXJ2aXNlZEh5cGVyUGFyYW1ldGVycy5BZGFw",
-            "dGVyU2l6ZUID4EEBIr0BCgtBZGFwdGVyU2l6ZRIcChhBREFQVEVSX1NJWkVf",
-            "VU5TUEVDSUZJRUQQABIUChBBREFQVEVSX1NJWkVfT05FEAESFAoQQURBUFRF",
-            "Ul9TSVpFX1RXTxAGEhUKEUFEQVBURVJfU0laRV9GT1VSEAISFgoSQURBUFRF",
-            "Ul9TSVpFX0VJR0hUEAMSGAoUQURBUFRFUl9TSVpFX1NJWFRFRU4QBBIbChdB",
-            "REFQVEVSX1NJWkVfVEhJUlRZX1RXTxAFIuMBChRTdXBlcnZpc2VkVHVuaW5n",
-            "U3BlYxIhChR0cmFpbmluZ19kYXRhc2V0X3VyaRgBIAEoCUID4EECEiMKFnZh",
-            "bGlkYXRpb25fZGF0YXNldF91cmkYAiABKAlCA+BBARJZChBoeXBlcl9wYXJh",
-            "bWV0ZXJzGAMgASgLMjouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5TdXBlcnZpc2VkSHlwZXJQYXJhbWV0ZXJzQgPgQQESKAobZXhwb3J0X2xh",
-            "c3RfY2hlY2twb2ludF9vbmx5GAYgASgIQgPgQQEijwMKEERpc3RpbGxhdGlv",
-            "blNwZWMSHAoSYmFzZV90ZWFjaGVyX21vZGVsGAUgASgJSAASSgoadHVuZWRf",
-            "dGVhY2hlcl9tb2RlbF9zb3VyY2UYBiABKAlCJPpBIQofYWlwbGF0Zm9ybS5n",
-            "b29nbGVhcGlzLmNvbS9Nb2RlbEgAEiEKFHRyYWluaW5nX2RhdGFzZXRfdXJp",
-            "GAEgASgJQgPgQQISKAoWdmFsaWRhdGlvbl9kYXRhc2V0X3VyaRgCIAEoCUID",
-            "4EEBSAGIAQESWwoQaHlwZXJfcGFyYW1ldGVycxgDIAEoCzI8Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGlzdGlsbGF0aW9uSHlwZXJQYXJh",
-            "bWV0ZXJzQgPgQQESFQoNc3R1ZGVudF9tb2RlbBgEIAEoCRIkChdwaXBlbGlu",
-            "ZV9yb290X2RpcmVjdG9yeRgHIAEoCUID4EECQg8KDXRlYWNoZXJfbW9kZWxC",
-            "GQoXX3ZhbGlkYXRpb25fZGF0YXNldF91cmki+AEKG0Rpc3RpbGxhdGlvbkh5",
-            "cGVyUGFyYW1ldGVycxIdCgtlcG9jaF9jb3VudBgBIAEoA0ID4EEBSACIAQES",
-            "KgoYbGVhcm5pbmdfcmF0ZV9tdWx0aXBsaWVyGAIgASgBQgPgQQFIAYgBARJh",
+            "b25CA+BBAxJxCh51c2VyX291dHB1dF90b2tlbl9kaXN0cmlidXRpb24YBiAB",
+            "KAsyRC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlN1cGVydmlz",
+            "ZWRUdW5pbmdEYXRhc2V0RGlzdHJpYnV0aW9uQgPgQQMSeAoldXNlcl9tZXNz",
+            "YWdlX3Blcl9leGFtcGxlX2Rpc3RyaWJ1dGlvbhgHIAEoCzJELmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU3VwZXJ2aXNlZFR1bmluZ0RhdGFz",
+            "ZXREaXN0cmlidXRpb25CA+BBAxJMChV1c2VyX2RhdGFzZXRfZXhhbXBsZXMY",
+            "CCADKAsyKC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkNvbnRl",
+            "bnRCA+BBAxIqCh10b3RhbF90cnVuY2F0ZWRfZXhhbXBsZV9jb3VudBgKIAEo",
+            "A0ID4EEDEiYKGXRydW5jYXRlZF9leGFtcGxlX2luZGljZXMYCyADKANCA+BB",
+            "AxIkChdkcm9wcGVkX2V4YW1wbGVfcmVhc29ucxgMIAMoCUID4EEDIsYCChNE",
+            "YXRhc2V0RGlzdHJpYnV0aW9uEhAKA3N1bRgBIAEoAUID4EEDEhAKA21pbhgC",
+            "IAEoAUID4EEDEhAKA21heBgDIAEoAUID4EEDEhEKBG1lYW4YBCABKAFCA+BB",
+            "AxITCgZtZWRpYW4YBSABKAFCA+BBAxIPCgJwNRgGIAEoAUID4EEDEhAKA3A5",
+            "NRgHIAEoAUID4EEDEl0KB2J1Y2tldHMYCCADKAsyRy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkRhdGFzZXREaXN0cmlidXRpb24uRGlzdHJp",
+            "YnV0aW9uQnVja2V0QgPgQQMaTwoSRGlzdHJpYnV0aW9uQnVja2V0EhIKBWNv",
+            "dW50GAEgASgDQgPgQQMSEQoEbGVmdBgCIAEoAUID4EEDEhIKBXJpZ2h0GAMg",
+            "ASgBQgPgQQMi1gQKDERhdGFzZXRTdGF0cxIpChx0dW5pbmdfZGF0YXNldF9l",
+            "eGFtcGxlX2NvdW50GAEgASgDQgPgQQMSKQocdG90YWxfdHVuaW5nX2NoYXJh",
+            "Y3Rlcl9jb3VudBgCIAEoA0ID4EEDEisKHnRvdGFsX2JpbGxhYmxlX2NoYXJh",
+            "Y3Rlcl9jb3VudBgDIAEoA0ID4EEDEh4KEXR1bmluZ19zdGVwX2NvdW50GAQg",
+            "ASgDQgPgQQMSYAoddXNlcl9pbnB1dF90b2tlbl9kaXN0cmlidXRpb24YBSAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRhdGFzZXRE",
+            "aXN0cmlidXRpb25CA+BBAxJmCh51c2VyX291dHB1dF90b2tlbl9kaXN0cmli",
+            "dXRpb24YBiABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LkRhdGFzZXREaXN0cmlidXRpb25CA+BBA0gAiAEBEmgKJXVzZXJfbWVzc2Fn",
+            "ZV9wZXJfZXhhbXBsZV9kaXN0cmlidXRpb24YByABKAsyNC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkRhdGFzZXREaXN0cmlidXRpb25CA+BB",
+            "AxJMChV1c2VyX2RhdGFzZXRfZXhhbXBsZXMYCCADKAsyKC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkNvbnRlbnRCA+BBA0IhCh9fdXNlcl9v",
+            "dXRwdXRfdG9rZW5fZGlzdHJpYnV0aW9uImsKFURpc3RpbGxhdGlvbkRhdGFT",
+            "dGF0cxJSChZ0cmFpbmluZ19kYXRhc2V0X3N0YXRzGAEgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EYXRhc2V0U3RhdHNCA+BBAyLq",
+            "AQoPVHVuaW5nRGF0YVN0YXRzEmIKHHN1cGVydmlzZWRfdHVuaW5nX2RhdGFf",
+            "c3RhdHMYASABKAsyOi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LlN1cGVydmlzZWRUdW5pbmdEYXRhU3RhdHNIABJeChdkaXN0aWxsYXRpb25f",
+            "ZGF0YV9zdGF0cxgDIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuRGlzdGlsbGF0aW9uRGF0YVN0YXRzQgPgQQNIAEITChF0dW5pbmdf",
+            "ZGF0YV9zdGF0cyK0AwoZU3VwZXJ2aXNlZEh5cGVyUGFyYW1ldGVycxIYCgtl",
+            "cG9jaF9jb3VudBgBIAEoA0ID4EEBEiUKGGxlYXJuaW5nX3JhdGVfbXVsdGlw",
+            "bGllchgCIAEoAUID4EEBEhoKDWxlYXJuaW5nX3JhdGUYBiABKAFCA+BBARJh",
             "CgxhZGFwdGVyX3NpemUYAyABKA4yRi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MWJldGExLlN1cGVydmlzZWRIeXBlclBhcmFtZXRlcnMuQWRhcHRlclNp",
-            "emVCA+BBAUIOCgxfZXBvY2hfY291bnRCGwoZX2xlYXJuaW5nX3JhdGVfbXVs",
-            "dGlwbGllciKYAgoWUGFydG5lck1vZGVsVHVuaW5nU3BlYxIhChR0cmFpbmlu",
-            "Z19kYXRhc2V0X3VyaRgBIAEoCUID4EECEiMKFnZhbGlkYXRpb25fZGF0YXNl",
-            "dF91cmkYAiABKAlCA+BBARJmChBoeXBlcl9wYXJhbWV0ZXJzGAMgAygLMkwu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5QYXJ0bmVyTW9kZWxU",
-            "dW5pbmdTcGVjLkh5cGVyUGFyYW1ldGVyc0VudHJ5Gk4KFEh5cGVyUGFyYW1l",
-            "dGVyc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5WYWx1ZToCOAEi4wEKDVR1bmVkTW9kZWxSZWYSOwoLdHVu",
-            "ZWRfbW9kZWwYASABKAlCJPpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9Nb2RlbEgAEj4KCnR1bmluZ19qb2IYAiABKAlCKPpBJQojYWlwbGF0Zm9y",
-            "bS5nb29nbGVhcGlzLmNvbS9UdW5pbmdKb2JIABJCCgxwaXBlbGluZV9qb2IY",
-            "AyABKAlCKvpBJwolYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QaXBlbGlu",
-            "ZUpvYkgAQhEKD3R1bmVkX21vZGVsX3JlZiJcChRUdW5lZE1vZGVsQ2hlY2tw",
-            "b2ludBIVCg1jaGVja3BvaW50X2lkGAEgASgJEg0KBWVwb2NoGAIgASgDEgwK",
-            "BHN0ZXAYAyABKAMSEAoIZW5kcG9pbnQYBCABKAlC5QEKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQg5UdW5pbmdKb2JQcm90b1ABWkNj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBs",
-            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
-            "cm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHq",
-            "AiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "emVCA+BBARIXCgpiYXRjaF9zaXplGAUgASgDQgPgQQEivQEKC0FkYXB0ZXJT",
+            "aXplEhwKGEFEQVBURVJfU0laRV9VTlNQRUNJRklFRBAAEhQKEEFEQVBURVJf",
+            "U0laRV9PTkUQARIUChBBREFQVEVSX1NJWkVfVFdPEAYSFQoRQURBUFRFUl9T",
+            "SVpFX0ZPVVIQAhIWChJBREFQVEVSX1NJWkVfRUlHSFQQAxIYChRBREFQVEVS",
+            "X1NJWkVfU0lYVEVFThAEEhsKF0FEQVBURVJfU0laRV9USElSVFlfVFdPEAUi",
+            "mQMKFFN1cGVydmlzZWRUdW5pbmdTcGVjEiEKFHRyYWluaW5nX2RhdGFzZXRf",
+            "dXJpGAEgASgJQgPgQQISIwoWdmFsaWRhdGlvbl9kYXRhc2V0X3VyaRgCIAEo",
+            "CUID4EEBElkKEGh5cGVyX3BhcmFtZXRlcnMYAyABKAsyOi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlN1cGVydmlzZWRIeXBlclBhcmFtZXRl",
+            "cnNCA+BBARIoChtleHBvcnRfbGFzdF9jaGVja3BvaW50X29ubHkYBiABKAhC",
+            "A+BBARJVCgt0dW5pbmdfbW9kZRgHIAEoDjJALmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuU3VwZXJ2aXNlZFR1bmluZ1NwZWMuVHVuaW5nTW9k",
+            "ZSJdCgpUdW5pbmdNb2RlEhsKF1RVTklOR19NT0RFX1VOU1BFQ0lGSUVEEAAS",
+            "FAoQVFVOSU5HX01PREVfRlVMTBABEhwKGFRVTklOR19NT0RFX1BFRlRfQURB",
+            "UFRFUhACIo8DChBEaXN0aWxsYXRpb25TcGVjEhwKEmJhc2VfdGVhY2hlcl9t",
+            "b2RlbBgFIAEoCUgAEkoKGnR1bmVkX3RlYWNoZXJfbW9kZWxfc291cmNlGAYg",
+            "ASgJQiT6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxIABIh",
+            "ChR0cmFpbmluZ19kYXRhc2V0X3VyaRgBIAEoCUID4EECEigKFnZhbGlkYXRp",
+            "b25fZGF0YXNldF91cmkYAiABKAlCA+BBAUgBiAEBElsKEGh5cGVyX3BhcmFt",
+            "ZXRlcnMYAyABKAsyPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LkRpc3RpbGxhdGlvbkh5cGVyUGFyYW1ldGVyc0ID4EEBEhUKDXN0dWRlbnRf",
+            "bW9kZWwYBCABKAkSJAoXcGlwZWxpbmVfcm9vdF9kaXJlY3RvcnkYByABKAlC",
+            "A+BBAkIPCg10ZWFjaGVyX21vZGVsQhkKF192YWxpZGF0aW9uX2RhdGFzZXRf",
+            "dXJpIvgBChtEaXN0aWxsYXRpb25IeXBlclBhcmFtZXRlcnMSHQoLZXBvY2hf",
+            "Y291bnQYASABKANCA+BBAUgAiAEBEioKGGxlYXJuaW5nX3JhdGVfbXVsdGlw",
+            "bGllchgCIAEoAUID4EEBSAGIAQESYQoMYWRhcHRlcl9zaXplGAMgASgOMkYu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TdXBlcnZpc2VkSHlw",
+            "ZXJQYXJhbWV0ZXJzLkFkYXB0ZXJTaXplQgPgQQFCDgoMX2Vwb2NoX2NvdW50",
+            "QhsKGV9sZWFybmluZ19yYXRlX211bHRpcGxpZXIimAIKFlBhcnRuZXJNb2Rl",
+            "bFR1bmluZ1NwZWMSIQoUdHJhaW5pbmdfZGF0YXNldF91cmkYASABKAlCA+BB",
+            "AhIjChZ2YWxpZGF0aW9uX2RhdGFzZXRfdXJpGAIgASgJQgPgQQESZgoQaHlw",
+            "ZXJfcGFyYW1ldGVycxgDIAMoCzJMLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuUGFydG5lck1vZGVsVHVuaW5nU3BlYy5IeXBlclBhcmFtZXRl",
+            "cnNFbnRyeRpOChRIeXBlclBhcmFtZXRlcnNFbnRyeRILCgNrZXkYASABKAkS",
+            "JQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgBIuMB",
+            "Cg1UdW5lZE1vZGVsUmVmEjsKC3R1bmVkX21vZGVsGAEgASgJQiT6QSEKH2Fp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxIABI+Cgp0dW5pbmdfam9i",
+            "GAIgASgJQij6QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vVHVuaW5n",
+            "Sm9iSAASQgoMcGlwZWxpbmVfam9iGAMgASgJQir6QScKJWFpcGxhdGZvcm0u",
+            "Z29vZ2xlYXBpcy5jb20vUGlwZWxpbmVKb2JIAEIRCg90dW5lZF9tb2RlbF9y",
+            "ZWYiXAoUVHVuZWRNb2RlbENoZWNrcG9pbnQSFQoNY2hlY2twb2ludF9pZBgB",
+            "IAEoCRINCgVlcG9jaBgCIAEoAxIMCgRzdGVwGAMgASgDEhAKCGVuZHBvaW50",
+            "GAQgASgJQuUBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MUIOVHVuaW5nSm9iUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
+            "H0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xv",
+            "dWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
+            "Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.JobStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.TuningJob), global::Google.Cloud.AIPlatform.V1Beta1.TuningJob.Parser, new[]{ "BaseModel", "SupervisedTuningSpec", "DistillationSpec", "PartnerModelTuningSpec", "Name", "TunedModelDisplayName", "Description", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "Experiment", "TunedModel", "TuningDataStats", "PipelineJob", "EncryptionSpec", "ServiceAccount" }, new[]{ "SourceModel", "TuningSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.TuningJob), global::Google.Cloud.AIPlatform.V1Beta1.TuningJob.Parser, new[]{ "BaseModel", "SupervisedTuningSpec", "DistillationSpec", "PartnerModelTuningSpec", "Name", "TunedModelDisplayName", "Description", "CustomBaseModel", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "Experiment", "TunedModel", "TuningDataStats", "PipelineJob", "EncryptionSpec", "ServiceAccount", "OutputUri" }, new[]{ "SourceModel", "TuningSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.TunedModel), global::Google.Cloud.AIPlatform.V1Beta1.TunedModel.Parser, new[]{ "Model", "Endpoint", "Checkpoints" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningDatasetDistribution), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningDatasetDistribution.Parser, new[]{ "Sum", "BillableSum", "Min", "Max", "Mean", "Median", "P5", "P95", "Buckets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningDatasetDistribution.Types.DatasetBucket), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningDatasetDistribution.Types.DatasetBucket.Parser, new[]{ "Count", "Left", "Right" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningDataStats), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningDataStats.Parser, new[]{ "TuningDatasetExampleCount", "TotalTuningCharacterCount", "TotalBillableCharacterCount", "TotalBillableTokenCount", "TuningStepCount", "UserInputTokenDistribution", "UserOutputTokenDistribution", "UserMessagePerExampleDistribution", "UserDatasetExamples", "TotalTruncatedExampleCount", "TruncatedExampleIndices", "DroppedExampleReasons" }, null, null, null, null),
@@ -180,8 +187,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DatasetStats), global::Google.Cloud.AIPlatform.V1Beta1.DatasetStats.Parser, new[]{ "TuningDatasetExampleCount", "TotalTuningCharacterCount", "TotalBillableCharacterCount", "TuningStepCount", "UserInputTokenDistribution", "UserOutputTokenDistribution", "UserMessagePerExampleDistribution", "UserDatasetExamples" }, new[]{ "UserOutputTokenDistribution" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DistillationDataStats), global::Google.Cloud.AIPlatform.V1Beta1.DistillationDataStats.Parser, new[]{ "TrainingDatasetStats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.TuningDataStats), global::Google.Cloud.AIPlatform.V1Beta1.TuningDataStats.Parser, new[]{ "SupervisedTuningDataStats", "DistillationDataStats" }, new[]{ "TuningDataStats" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Parser, new[]{ "EpochCount", "LearningRateMultiplier", "AdapterSize" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters", "ExportLastCheckpointOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Parser, new[]{ "EpochCount", "LearningRateMultiplier", "LearningRate", "AdapterSize", "BatchSize" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec), global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters", "ExportLastCheckpointOnly", "TuningMode" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DistillationSpec), global::Google.Cloud.AIPlatform.V1Beta1.DistillationSpec.Parser, new[]{ "BaseTeacherModel", "TunedTeacherModelSource", "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters", "StudentModel", "PipelineRootDirectory" }, new[]{ "TeacherModel", "ValidationDatasetUri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DistillationHyperParameters), global::Google.Cloud.AIPlatform.V1Beta1.DistillationHyperParameters.Parser, new[]{ "EpochCount", "LearningRateMultiplier", "AdapterSize" }, new[]{ "EpochCount", "LearningRateMultiplier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PartnerModelTuningSpec), global::Google.Cloud.AIPlatform.V1Beta1.PartnerModelTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -234,6 +241,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       name_ = other.name_;
       tunedModelDisplayName_ = other.tunedModelDisplayName_;
       description_ = other.description_;
+      customBaseModel_ = other.customBaseModel_;
       state_ = other.state_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
@@ -247,6 +255,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       pipelineJob_ = other.pipelineJob_;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       serviceAccount_ = other.serviceAccount_;
+      outputUri_ = other.outputUri_;
       switch (other.SourceModelCase) {
         case SourceModelOneofCase.BaseModel:
           BaseModel = other.BaseModel;
@@ -395,6 +404,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return description_; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_base_model" field.</summary>
+    public const int CustomBaseModelFieldNumber = 26;
+    private string customBaseModel_ = "";
+    /// <summary>
+    /// Optional. The user-provided path to custom model weights. Set this field
+    /// to tune a custom model. The path must be a Cloud Storage directory that
+    /// contains the model weights in .safetensors format along with associated
+    /// model metadata files. If this field is set, the base_model field must still
+    /// be set to indicate which base model the custom model is derived from. This
+    /// feature is only available for open source models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomBaseModel {
+      get { return customBaseModel_; }
+      set {
+        customBaseModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -622,6 +651,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "output_uri" field.</summary>
+    public const int OutputUriFieldNumber = 25;
+    private string outputUri_ = "";
+    /// <summary>
+    /// Optional. Cloud Storage path to the directory where tuning job outputs are
+    /// written to. This field is only available and required for open source
+    /// models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OutputUri {
+      get { return outputUri_; }
+      set {
+        outputUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object sourceModel_;
     /// <summary>Enum of possible cases for the "source_model" oneof.</summary>
     public enum SourceModelOneofCase {
@@ -686,6 +732,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Name != other.Name) return false;
       if (TunedModelDisplayName != other.TunedModelDisplayName) return false;
       if (Description != other.Description) return false;
+      if (CustomBaseModel != other.CustomBaseModel) return false;
       if (State != other.State) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
@@ -699,6 +746,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (PipelineJob != other.PipelineJob) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
+      if (OutputUri != other.OutputUri) return false;
       if (SourceModelCase != other.SourceModelCase) return false;
       if (TuningSpecCase != other.TuningSpecCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -715,6 +763,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (TunedModelDisplayName.Length != 0) hash ^= TunedModelDisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (CustomBaseModel.Length != 0) hash ^= CustomBaseModel.GetHashCode();
       if (State != global::Google.Cloud.AIPlatform.V1Beta1.JobState.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -728,6 +777,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (PipelineJob.Length != 0) hash ^= PipelineJob.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+      if (OutputUri.Length != 0) hash ^= OutputUri.GetHashCode();
       hash ^= (int) sourceModelCase_;
       hash ^= (int) tuningSpecCase_;
       if (_unknownFields != null) {
@@ -825,6 +875,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(178, 1);
         output.WriteString(ServiceAccount);
       }
+      if (OutputUri.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(OutputUri);
+      }
+      if (CustomBaseModel.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(CustomBaseModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -912,6 +970,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(178, 1);
         output.WriteString(ServiceAccount);
       }
+      if (OutputUri.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(OutputUri);
+      }
+      if (CustomBaseModel.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(CustomBaseModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -942,6 +1008,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (CustomBaseModel.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomBaseModel);
       }
       if (State != global::Google.Cloud.AIPlatform.V1Beta1.JobState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
@@ -980,6 +1049,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ServiceAccount.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
+      if (OutputUri.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OutputUri);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1000,6 +1072,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.CustomBaseModel.Length != 0) {
+        CustomBaseModel = other.CustomBaseModel;
       }
       if (other.State != global::Google.Cloud.AIPlatform.V1Beta1.JobState.Unspecified) {
         State = other.State;
@@ -1061,6 +1136,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
+      }
+      if (other.OutputUri.Length != 0) {
+        OutputUri = other.OutputUri;
       }
       switch (other.SourceModelCase) {
         case SourceModelOneofCase.BaseModel:
@@ -1223,6 +1301,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             ServiceAccount = input.ReadString();
             break;
           }
+          case 202: {
+            OutputUri = input.ReadString();
+            break;
+          }
+          case 210: {
+            CustomBaseModel = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1357,6 +1443,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             ServiceAccount = input.ReadString();
             break;
           }
+          case 202: {
+            OutputUri = input.ReadString();
+            break;
+          }
+          case 210: {
+            CustomBaseModel = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1420,7 +1514,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private string model_ = "";
     /// <summary>
     /// Output only. The resource name of the TunedModel. Format:
-    /// `projects/{project}/locations/{location}/models/{model}`.
+    ///
+    /// `projects/{project}/locations/{location}/models/{model}@{version_id}`
+    ///
+    /// When tuning from a base model, the version_id will be 1.
+    ///
+    /// For continuous tuning, the version id will be incremented by 1 from the
+    /// last version id in the parent model. E.g.,
+    /// `projects/{project}/locations/{location}/models/{model}@{last_version_id +
+    /// 1}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4844,7 +4946,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public SupervisedHyperParameters(SupervisedHyperParameters other) : this() {
       epochCount_ = other.epochCount_;
       learningRateMultiplier_ = other.learningRateMultiplier_;
+      learningRate_ = other.learningRate_;
       adapterSize_ = other.adapterSize_;
+      batchSize_ = other.batchSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4875,6 +4979,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private double learningRateMultiplier_;
     /// <summary>
     /// Optional. Multiplier for adjusting the default learning rate.
+    /// Mutually exclusive with `learning_rate`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4882,6 +4987,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return learningRateMultiplier_; }
       set {
         learningRateMultiplier_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "learning_rate" field.</summary>
+    public const int LearningRateFieldNumber = 6;
+    private double learningRate_;
+    /// <summary>
+    /// Optional. Learning rate for tuning.
+    /// Mutually exclusive with `learning_rate_multiplier`.
+    /// This feature is only available for open source models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double LearningRate {
+      get { return learningRate_; }
+      set {
+        learningRate_ = value;
       }
     }
 
@@ -4897,6 +5019,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return adapterSize_; }
       set {
         adapterSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "batch_size" field.</summary>
+    public const int BatchSizeFieldNumber = 5;
+    private long batchSize_;
+    /// <summary>
+    /// Optional. Batch size for tuning.
+    /// This feature is only available for open source models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BatchSize {
+      get { return batchSize_; }
+      set {
+        batchSize_ = value;
       }
     }
 
@@ -4917,7 +5055,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (EpochCount != other.EpochCount) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(LearningRateMultiplier, other.LearningRateMultiplier)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(LearningRate, other.LearningRate)) return false;
       if (AdapterSize != other.AdapterSize) return false;
+      if (BatchSize != other.BatchSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4927,7 +5067,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (EpochCount != 0L) hash ^= EpochCount.GetHashCode();
       if (LearningRateMultiplier != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LearningRateMultiplier);
+      if (LearningRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LearningRate);
       if (AdapterSize != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize.Unspecified) hash ^= AdapterSize.GetHashCode();
+      if (BatchSize != 0L) hash ^= BatchSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4958,6 +5100,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) AdapterSize);
       }
+      if (BatchSize != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(BatchSize);
+      }
+      if (LearningRate != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(LearningRate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4980,6 +5130,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) AdapterSize);
       }
+      if (BatchSize != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(BatchSize);
+      }
+      if (LearningRate != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(LearningRate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4996,8 +5154,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (LearningRateMultiplier != 0D) {
         size += 1 + 8;
       }
+      if (LearningRate != 0D) {
+        size += 1 + 8;
+      }
       if (AdapterSize != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AdapterSize);
+      }
+      if (BatchSize != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BatchSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5017,8 +5181,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.LearningRateMultiplier != 0D) {
         LearningRateMultiplier = other.LearningRateMultiplier;
       }
+      if (other.LearningRate != 0D) {
+        LearningRate = other.LearningRate;
+      }
       if (other.AdapterSize != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize.Unspecified) {
         AdapterSize = other.AdapterSize;
+      }
+      if (other.BatchSize != 0L) {
+        BatchSize = other.BatchSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5047,6 +5217,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             AdapterSize = (global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize) input.ReadEnum();
             break;
           }
+          case 40: {
+            BatchSize = input.ReadInt64();
+            break;
+          }
+          case 49: {
+            LearningRate = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -5072,6 +5250,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 24: {
             AdapterSize = (global::Google.Cloud.AIPlatform.V1Beta1.SupervisedHyperParameters.Types.AdapterSize) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            BatchSize = input.ReadInt64();
+            break;
+          }
+          case 49: {
+            LearningRate = input.ReadDouble();
             break;
           }
         }
@@ -5165,6 +5351,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       validationDatasetUri_ = other.validationDatasetUri_;
       hyperParameters_ = other.hyperParameters_ != null ? other.hyperParameters_.Clone() : null;
       exportLastCheckpointOnly_ = other.exportLastCheckpointOnly_;
+      tuningMode_ = other.tuningMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5178,8 +5365,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int TrainingDatasetUriFieldNumber = 1;
     private string trainingDatasetUri_ = "";
     /// <summary>
-    /// Required. Cloud Storage path to file containing training dataset for
-    /// tuning. The dataset must be formatted as a JSONL file.
+    /// Required. Training dataset used for tuning. The dataset can be specified as
+    /// either a Cloud Storage path to a JSONL file or as the resource name of a
+    /// Vertex Multimodal Dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5194,8 +5382,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int ValidationDatasetUriFieldNumber = 2;
     private string validationDatasetUri_ = "";
     /// <summary>
-    /// Optional. Cloud Storage path to file containing validation dataset for
-    /// tuning. The dataset must be formatted as a JSONL file.
+    /// Optional. Validation dataset used for tuning. The dataset can be specified
+    /// as either a Cloud Storage path to a JSONL file or as the resource name of a
+    /// Vertex Multimodal Dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5238,6 +5427,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "tuning_mode" field.</summary>
+    public const int TuningModeFieldNumber = 7;
+    private global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode tuningMode_ = global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode.Unspecified;
+    /// <summary>
+    /// Tuning mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode TuningMode {
+      get { return tuningMode_; }
+      set {
+        tuningMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5257,6 +5461,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ValidationDatasetUri != other.ValidationDatasetUri) return false;
       if (!object.Equals(HyperParameters, other.HyperParameters)) return false;
       if (ExportLastCheckpointOnly != other.ExportLastCheckpointOnly) return false;
+      if (TuningMode != other.TuningMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5268,6 +5473,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ValidationDatasetUri.Length != 0) hash ^= ValidationDatasetUri.GetHashCode();
       if (hyperParameters_ != null) hash ^= HyperParameters.GetHashCode();
       if (ExportLastCheckpointOnly != false) hash ^= ExportLastCheckpointOnly.GetHashCode();
+      if (TuningMode != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode.Unspecified) hash ^= TuningMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5302,6 +5508,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(48);
         output.WriteBool(ExportLastCheckpointOnly);
       }
+      if (TuningMode != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) TuningMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5328,6 +5538,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(48);
         output.WriteBool(ExportLastCheckpointOnly);
       }
+      if (TuningMode != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) TuningMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5349,6 +5563,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (ExportLastCheckpointOnly != false) {
         size += 1 + 1;
+      }
+      if (TuningMode != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TuningMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5376,6 +5593,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.ExportLastCheckpointOnly != false) {
         ExportLastCheckpointOnly = other.ExportLastCheckpointOnly;
+      }
+      if (other.TuningMode != global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode.Unspecified) {
+        TuningMode = other.TuningMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5409,6 +5629,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 48: {
             ExportLastCheckpointOnly = input.ReadBool();
+            break;
+          }
+          case 56: {
+            TuningMode = (global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode) input.ReadEnum();
             break;
           }
         }
@@ -5445,10 +5669,40 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             ExportLastCheckpointOnly = input.ReadBool();
             break;
           }
+          case 56: {
+            TuningMode = (global::Google.Cloud.AIPlatform.V1Beta1.SupervisedTuningSpec.Types.TuningMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SupervisedTuningSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Supported tuning modes.
+      /// </summary>
+      public enum TuningMode {
+        /// <summary>
+        /// Tuning mode is unspecified.
+        /// </summary>
+        [pbr::OriginalName("TUNING_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Full fine-tuning mode.
+        /// </summary>
+        [pbr::OriginalName("TUNING_MODE_FULL")] Full = 1,
+        /// <summary>
+        /// PEFT adapter tuning mode.
+        /// </summary>
+        [pbr::OriginalName("TUNING_MODE_PEFT_ADAPTER")] PeftAdapter = 2,
+      }
+
+    }
+    #endregion
 
   }
 
