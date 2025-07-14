@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class StructuredVersion : IEquatable<StructuredVersion>, IComparable<StructuredVersion>
     {
-        private static readonly Regex s_pattern = new Regex(@"^(?<major>[1-9]\d*)\.(?<minor>\d+)\.(?<patch>\d+)(\.(?<build>\d+))?(-(?<prerelease>.*))?$");
+        private static readonly Regex s_pattern = new Regex(@"^(?<major>[0-9]\d*)\.(?<minor>\d+)\.(?<patch>\d+)(\.(?<build>\d+))?(-(?<prerelease>.*))?$");
 
         public int Major { get; }
         public int Minor { get; }
         public int Patch { get; }
         public int? Build { get; }
         public string Prerelease { get; }
-        public bool IsStable => Prerelease is null;
+        public bool IsStable => Major > 0 && Prerelease is null;
 
         /// <summary>
         /// A non-release version (in google-cloud-dotnet) is something like 1.0.0-beta00 or 2.0.0-beta00.
