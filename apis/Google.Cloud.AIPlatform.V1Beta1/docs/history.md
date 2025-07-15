@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta39, released 2025-07-15
+
+### New features
+
+- Vertex AI Model Garden custom model deploy Public Preview
+- Add API for Managed OSS Fine Tuning
+
+### Documentation improvements
+
+- A comment for field `model` in message `.google.cloud.aiplatform.v1beta1.TunedModel` is changed
+- A comment for field `learning_rate_multiplier` in message `.google.cloud.aiplatform.v1beta1.SupervisedHyperParameters` is changed
+- A comment for field `training_dataset_uri` in message `.google.cloud.aiplatform.v1beta1.SupervisedTuningSpec` is changed
+- A comment for field `validation_dataset_uri` in message `.google.cloud.aiplatform.v1beta1.SupervisedTuningSpec` is changed
+
 ## Version 1.0.0-beta38, released 2025-07-11
 
 ### New features
