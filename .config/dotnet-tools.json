@@ -9,13 +9,13 @@
       ]
     },
     "Google.Cloud.Tools.DocUploader": {
-      "version": "0.2.3",
+      "version": "0.3.0",
       "commands": [
         "docuploader"
       ]
     },
     "Google.Cloud.Tools.SbomGenerator": {
-      "version": "0.4.0",
+      "version": "0.5.0",
       "commands": [
         "generate-sbom"
       ]
