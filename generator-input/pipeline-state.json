@@ -4258,6 +4258,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Maintenance.Api.V1Beta/Google.Cloud.Maintenance.Api.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.LicenseManager.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/licensemanager/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.LicenseManager.V1/Google.Cloud.LicenseManager.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
