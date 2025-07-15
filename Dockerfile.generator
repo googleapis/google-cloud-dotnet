@@ -15,21 +15,16 @@
 FROM marketplace.gcr.io/google/debian12:latest AS dotnet-base
 
 RUN apt-get update
-RUN apt-get install -y curl git
+RUN apt-get install -y curl git unzip
 
 RUN curl https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -o packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb
 RUN rm packages-microsoft-prod.deb
-# TODO(https://github.com/googleapis/google-cloud-dotnet/issues/14957): Remove dotnet-sdk-6.0
-RUN apt-get update && apt-get install -y dotnet-sdk-8.0 dotnet-sdk-6.0
+RUN apt-get update && apt-get install -y dotnet-sdk-8.0
 
 FROM dotnet-base AS build
 
 WORKDIR /src
-
-# Additional tooling required to regenerate libraries and project files.
-RUN apt-get update
-RUN apt-get install -y unzip
 
 # Copy files which are needed for building
 COPY apis/GoogleApis.snk apis/GoogleApis.snk
