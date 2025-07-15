@@ -4273,10 +4273,10 @@
         },
         {
             "id": "Google.Cloud.Tools.DocUploader",
-            "currentVersion": "0.2.3",
+            "currentVersion": "0.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-29T08:22:38Z",
+            "releaseTimestamp": "2025-07-15T13:41:23.585873197Z",
             "sourcePaths": [
                 "tools/Google.Cloud.Tools.DocUploader"
             ]
