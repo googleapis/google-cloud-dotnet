@@ -63,6 +63,11 @@ public sealed class RunReleaseTestsCommand : CommandBase
                 Console.WriteLine($"Skipping integration tests for {libraryId}; it's a docs package.");
                 continue;
             }
+            if (libraryId.StartsWith(ContainerCommand.ToolsLibraryPrefix, StringComparison.Ordinal))
+            {
+                Console.WriteLine($"Skipping additional integration tests for {libraryId}; it's a tools package.");
+                continue;
+            }
             Console.WriteLine($"Testing {libraryId} at {commit.Sha}");
 
             Commands.Checkout(repo, commit.Sha);
