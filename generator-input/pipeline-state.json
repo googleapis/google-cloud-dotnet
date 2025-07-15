@@ -4283,10 +4283,10 @@
         },
         {
             "id": "Google.Cloud.Tools.SbomGenerator",
-            "currentVersion": "0.4.0",
+            "currentVersion": "0.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-02T06:52:56Z",
+            "releaseTimestamp": "2025-07-15T14:13:39.638258214Z",
             "sourcePaths": [
                 "tools/Google.Cloud.Tools.SbomGenerator"
             ]
