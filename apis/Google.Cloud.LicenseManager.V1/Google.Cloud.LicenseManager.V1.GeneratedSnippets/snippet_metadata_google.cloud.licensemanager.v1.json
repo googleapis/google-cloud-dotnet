@@ -1,0 +1,3882 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.LicenseManager.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.licensemanager.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListConfigurations_sync",
+      "title": "ListConfigurationsRequestObject",
+      "description": "Snippet for ListConfigurations",
+      "file": "LicenseManagerClient.ListConfigurationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConfigurations",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListConfigurations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ListConfigurationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListConfigurationsResponse, Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListConfigurations",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListConfigurations",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListConfigurations_async",
+      "title": "ListConfigurationsRequestObjectAsync",
+      "description": "Snippet for ListConfigurationsAsync",
+      "file": "LicenseManagerClient.ListConfigurationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConfigurationsAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListConfigurationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ListConfigurationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListConfigurationsResponse, Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListConfigurations",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListConfigurations",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListConfigurations_sync_flattened",
+      "title": "ListConfigurations",
+      "description": "Snippet for ListConfigurations",
+      "file": "LicenseManagerClient.ListConfigurationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConfigurations",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListConfigurations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListConfigurationsResponse, Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListConfigurations",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListConfigurations",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListConfigurations_async_flattened",
+      "title": "ListConfigurationsAsync",
+      "description": "Snippet for ListConfigurationsAsync",
+      "file": "LicenseManagerClient.ListConfigurationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConfigurationsAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListConfigurationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListConfigurationsResponse, Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListConfigurations",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListConfigurations",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListConfigurations_sync_flattened_resourceNames",
+      "title": "ListConfigurationsResourceNames",
+      "description": "Snippet for ListConfigurations",
+      "file": "LicenseManagerClient.ListConfigurationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConfigurations",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListConfigurations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListConfigurationsResponse, Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListConfigurations",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListConfigurations",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListConfigurations_async_flattened_resourceNames",
+      "title": "ListConfigurationsResourceNamesAsync",
+      "description": "Snippet for ListConfigurationsAsync",
+      "file": "LicenseManagerClient.ListConfigurationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConfigurationsAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListConfigurationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListConfigurationsResponse, Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListConfigurations",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListConfigurations",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetConfiguration_sync",
+      "title": "GetConfigurationRequestObject",
+      "description": "Snippet for GetConfiguration",
+      "file": "LicenseManagerClient.GetConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.GetConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Configuration",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetConfiguration_async",
+      "title": "GetConfigurationRequestObjectAsync",
+      "description": "Snippet for GetConfigurationAsync",
+      "file": "LicenseManagerClient.GetConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.GetConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetConfiguration_sync_flattened",
+      "title": "GetConfiguration",
+      "description": "Snippet for GetConfiguration",
+      "file": "LicenseManagerClient.GetConfigurationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetConfiguration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Configuration",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetConfiguration_async_flattened",
+      "title": "GetConfigurationAsync",
+      "description": "Snippet for GetConfigurationAsync",
+      "file": "LicenseManagerClient.GetConfigurationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetConfiguration_sync_flattened_resourceNames",
+      "title": "GetConfigurationResourceNames",
+      "description": "Snippet for GetConfiguration",
+      "file": "LicenseManagerClient.GetConfigurationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Configuration",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetConfiguration_async_flattened_resourceNames",
+      "title": "GetConfigurationResourceNamesAsync",
+      "description": "Snippet for GetConfigurationAsync",
+      "file": "LicenseManagerClient.GetConfigurationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Configuration>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_CreateConfiguration_sync",
+      "title": "CreateConfigurationRequestObject",
+      "description": "Snippet for CreateConfiguration",
+      "file": "LicenseManagerClient.CreateConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.CreateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.CreateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.CreateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_CreateConfiguration_async",
+      "title": "CreateConfigurationRequestObjectAsync",
+      "description": "Snippet for CreateConfigurationAsync",
+      "file": "LicenseManagerClient.CreateConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.CreateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.CreateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.CreateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_CreateConfiguration_sync_flattened",
+      "title": "CreateConfiguration",
+      "description": "Snippet for CreateConfiguration",
+      "file": "LicenseManagerClient.CreateConfigurationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.CreateConfiguration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.LicenseManager.V1.Configuration",
+            "name": "configuration"
+          },
+          {
+            "type": "System.String",
+            "name": "configurationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.CreateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_CreateConfiguration_async_flattened",
+      "title": "CreateConfigurationAsync",
+      "description": "Snippet for CreateConfigurationAsync",
+      "file": "LicenseManagerClient.CreateConfigurationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.CreateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.LicenseManager.V1.Configuration",
+            "name": "configuration"
+          },
+          {
+            "type": "System.String",
+            "name": "configurationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.CreateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_CreateConfiguration_sync_flattened_resourceNames",
+      "title": "CreateConfigurationResourceNames",
+      "description": "Snippet for CreateConfiguration",
+      "file": "LicenseManagerClient.CreateConfigurationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.CreateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.LicenseManager.V1.Configuration",
+            "name": "configuration"
+          },
+          {
+            "type": "System.String",
+            "name": "configurationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.CreateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_CreateConfiguration_async_flattened_resourceNames",
+      "title": "CreateConfigurationResourceNamesAsync",
+      "description": "Snippet for CreateConfigurationAsync",
+      "file": "LicenseManagerClient.CreateConfigurationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.CreateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.LicenseManager.V1.Configuration",
+            "name": "configuration"
+          },
+          {
+            "type": "System.String",
+            "name": "configurationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.CreateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_UpdateConfiguration_sync",
+      "title": "UpdateConfigurationRequestObject",
+      "description": "Snippet for UpdateConfiguration",
+      "file": "LicenseManagerClient.UpdateConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.UpdateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.UpdateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.UpdateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_UpdateConfiguration_async",
+      "title": "UpdateConfigurationRequestObjectAsync",
+      "description": "Snippet for UpdateConfigurationAsync",
+      "file": "LicenseManagerClient.UpdateConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.UpdateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.UpdateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.UpdateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_UpdateConfiguration_sync_flattened",
+      "title": "UpdateConfiguration",
+      "description": "Snippet for UpdateConfiguration",
+      "file": "LicenseManagerClient.UpdateConfigurationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.UpdateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.Configuration",
+            "name": "configuration"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.UpdateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_UpdateConfiguration_async_flattened",
+      "title": "UpdateConfigurationAsync",
+      "description": "Snippet for UpdateConfigurationAsync",
+      "file": "LicenseManagerClient.UpdateConfigurationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.UpdateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.Configuration",
+            "name": "configuration"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.UpdateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeleteConfiguration_sync",
+      "title": "DeleteConfigurationRequestObject",
+      "description": "Snippet for DeleteConfiguration",
+      "file": "LicenseManagerClient.DeleteConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeleteConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.DeleteConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeleteConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeleteConfiguration_async",
+      "title": "DeleteConfigurationRequestObjectAsync",
+      "description": "Snippet for DeleteConfigurationAsync",
+      "file": "LicenseManagerClient.DeleteConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeleteConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.DeleteConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeleteConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeleteConfiguration_sync_flattened",
+      "title": "DeleteConfiguration",
+      "description": "Snippet for DeleteConfiguration",
+      "file": "LicenseManagerClient.DeleteConfigurationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeleteConfiguration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeleteConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeleteConfiguration_async_flattened",
+      "title": "DeleteConfigurationAsync",
+      "description": "Snippet for DeleteConfigurationAsync",
+      "file": "LicenseManagerClient.DeleteConfigurationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeleteConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeleteConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeleteConfiguration_sync_flattened_resourceNames",
+      "title": "DeleteConfigurationResourceNames",
+      "description": "Snippet for DeleteConfiguration",
+      "file": "LicenseManagerClient.DeleteConfigurationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeleteConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeleteConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeleteConfiguration_async_flattened_resourceNames",
+      "title": "DeleteConfigurationResourceNamesAsync",
+      "description": "Snippet for DeleteConfigurationAsync",
+      "file": "LicenseManagerClient.DeleteConfigurationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeleteConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeleteConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListInstances_sync",
+      "title": "ListInstancesRequestObject",
+      "description": "Snippet for ListInstances",
+      "file": "LicenseManagerClient.ListInstancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListInstancesResponse, Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListInstances",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListInstances_async",
+      "title": "ListInstancesRequestObjectAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "LicenseManagerClient.ListInstancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListInstancesResponse, Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListInstances",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListInstances_sync_flattened",
+      "title": "ListInstances",
+      "description": "Snippet for ListInstances",
+      "file": "LicenseManagerClient.ListInstancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListInstancesResponse, Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListInstances",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListInstances_async_flattened",
+      "title": "ListInstancesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "LicenseManagerClient.ListInstancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListInstancesResponse, Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListInstances",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListInstances_sync_flattened_resourceNames",
+      "title": "ListInstancesResourceNames",
+      "description": "Snippet for ListInstances",
+      "file": "LicenseManagerClient.ListInstancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListInstancesResponse, Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListInstances",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListInstances_async_flattened_resourceNames",
+      "title": "ListInstancesResourceNamesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "LicenseManagerClient.ListInstancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListInstancesResponse, Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListInstances",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetInstance_sync",
+      "title": "GetInstanceRequestObject",
+      "description": "Snippet for GetInstance",
+      "file": "LicenseManagerClient.GetInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Instance",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetInstance",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetInstance_async",
+      "title": "GetInstanceRequestObjectAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "LicenseManagerClient.GetInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetInstance",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetInstance_sync_flattened",
+      "title": "GetInstance",
+      "description": "Snippet for GetInstance",
+      "file": "LicenseManagerClient.GetInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Instance",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetInstance",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetInstance_async_flattened",
+      "title": "GetInstanceAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "LicenseManagerClient.GetInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetInstance",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetInstance_sync_flattened_resourceNames",
+      "title": "GetInstanceResourceNames",
+      "description": "Snippet for GetInstance",
+      "file": "LicenseManagerClient.GetInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Instance",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetInstance",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetInstance_async_flattened_resourceNames",
+      "title": "GetInstanceResourceNamesAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "LicenseManagerClient.GetInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Instance>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetInstance",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeactivateConfiguration_sync",
+      "title": "DeactivateConfigurationRequestObject",
+      "description": "Snippet for DeactivateConfiguration",
+      "file": "LicenseManagerClient.DeactivateConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeactivateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeactivateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.DeactivateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeactivateConfiguration_async",
+      "title": "DeactivateConfigurationRequestObjectAsync",
+      "description": "Snippet for DeactivateConfigurationAsync",
+      "file": "LicenseManagerClient.DeactivateConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeactivateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeactivateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.DeactivateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeactivateConfiguration_sync_flattened",
+      "title": "DeactivateConfiguration",
+      "description": "Snippet for DeactivateConfiguration",
+      "file": "LicenseManagerClient.DeactivateConfigurationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeactivateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeactivateConfiguration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeactivateConfiguration_async_flattened",
+      "title": "DeactivateConfigurationAsync",
+      "description": "Snippet for DeactivateConfigurationAsync",
+      "file": "LicenseManagerClient.DeactivateConfigurationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeactivateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeactivateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeactivateConfiguration_sync_flattened_resourceNames",
+      "title": "DeactivateConfigurationResourceNames",
+      "description": "Snippet for DeactivateConfiguration",
+      "file": "LicenseManagerClient.DeactivateConfigurationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeactivateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeactivateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_DeactivateConfiguration_async_flattened_resourceNames",
+      "title": "DeactivateConfigurationResourceNamesAsync",
+      "description": "Snippet for DeactivateConfigurationAsync",
+      "file": "LicenseManagerClient.DeactivateConfigurationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeactivateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.DeactivateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "DeactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.DeactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ReactivateConfiguration_sync",
+      "title": "ReactivateConfigurationRequestObject",
+      "description": "Snippet for ReactivateConfiguration",
+      "file": "LicenseManagerClient.ReactivateConfigurationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ReactivateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ReactivateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ReactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ReactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ReactivateConfiguration_async",
+      "title": "ReactivateConfigurationRequestObjectAsync",
+      "description": "Snippet for ReactivateConfigurationAsync",
+      "file": "LicenseManagerClient.ReactivateConfigurationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ReactivateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ReactivateConfigurationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ReactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ReactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ReactivateConfiguration_sync_flattened",
+      "title": "ReactivateConfiguration",
+      "description": "Snippet for ReactivateConfiguration",
+      "file": "LicenseManagerClient.ReactivateConfigurationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ReactivateConfiguration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ReactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ReactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ReactivateConfiguration_async_flattened",
+      "title": "ReactivateConfigurationAsync",
+      "description": "Snippet for ReactivateConfigurationAsync",
+      "file": "LicenseManagerClient.ReactivateConfigurationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ReactivateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ReactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ReactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ReactivateConfiguration_sync_flattened_resourceNames",
+      "title": "ReactivateConfigurationResourceNames",
+      "description": "Snippet for ReactivateConfiguration",
+      "file": "LicenseManagerClient.ReactivateConfigurationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateConfiguration",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ReactivateConfiguration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ReactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ReactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ReactivateConfiguration_async_flattened_resourceNames",
+      "title": "ReactivateConfigurationResourceNamesAsync",
+      "description": "Snippet for ReactivateConfigurationAsync",
+      "file": "LicenseManagerClient.ReactivateConfigurationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReactivateConfigurationAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ReactivateConfigurationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LicenseManager.V1.Configuration, Google.Cloud.LicenseManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ReactivateConfiguration",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ReactivateConfiguration",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_QueryConfigurationLicenseUsage_sync",
+      "title": "QueryConfigurationLicenseUsageRequestObject",
+      "description": "Snippet for QueryConfigurationLicenseUsage",
+      "file": "LicenseManagerClient.QueryConfigurationLicenseUsageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryConfigurationLicenseUsage",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.QueryConfigurationLicenseUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageResponse",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "QueryConfigurationLicenseUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.QueryConfigurationLicenseUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_QueryConfigurationLicenseUsage_async",
+      "title": "QueryConfigurationLicenseUsageRequestObjectAsync",
+      "description": "Snippet for QueryConfigurationLicenseUsageAsync",
+      "file": "LicenseManagerClient.QueryConfigurationLicenseUsageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryConfigurationLicenseUsageAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.QueryConfigurationLicenseUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageResponse>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "QueryConfigurationLicenseUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.QueryConfigurationLicenseUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_QueryConfigurationLicenseUsage_sync_flattened",
+      "title": "QueryConfigurationLicenseUsage",
+      "description": "Snippet for QueryConfigurationLicenseUsage",
+      "file": "LicenseManagerClient.QueryConfigurationLicenseUsageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryConfigurationLicenseUsage",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.QueryConfigurationLicenseUsage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageResponse",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "QueryConfigurationLicenseUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.QueryConfigurationLicenseUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_QueryConfigurationLicenseUsage_async_flattened",
+      "title": "QueryConfigurationLicenseUsageAsync",
+      "description": "Snippet for QueryConfigurationLicenseUsageAsync",
+      "file": "LicenseManagerClient.QueryConfigurationLicenseUsageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryConfigurationLicenseUsageAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.QueryConfigurationLicenseUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageResponse>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "QueryConfigurationLicenseUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.QueryConfigurationLicenseUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_QueryConfigurationLicenseUsage_sync_flattened_resourceNames",
+      "title": "QueryConfigurationLicenseUsageResourceNames",
+      "description": "Snippet for QueryConfigurationLicenseUsage",
+      "file": "LicenseManagerClient.QueryConfigurationLicenseUsageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryConfigurationLicenseUsage",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.QueryConfigurationLicenseUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageResponse",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "QueryConfigurationLicenseUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.QueryConfigurationLicenseUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_QueryConfigurationLicenseUsage_async_flattened_resourceNames",
+      "title": "QueryConfigurationLicenseUsageResourceNamesAsync",
+      "description": "Snippet for QueryConfigurationLicenseUsageAsync",
+      "file": "LicenseManagerClient.QueryConfigurationLicenseUsageResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryConfigurationLicenseUsageAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.QueryConfigurationLicenseUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.QueryConfigurationLicenseUsageResponse>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "QueryConfigurationLicenseUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.QueryConfigurationLicenseUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_AggregateUsage_sync",
+      "title": "AggregateUsageRequestObject",
+      "description": "Snippet for AggregateUsage",
+      "file": "LicenseManagerClient.AggregateUsageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateUsage",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.AggregateUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.AggregateUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.AggregateUsageResponse, Google.Cloud.LicenseManager.V1.Usage>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "AggregateUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.AggregateUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_AggregateUsage_async",
+      "title": "AggregateUsageRequestObjectAsync",
+      "description": "Snippet for AggregateUsageAsync",
+      "file": "LicenseManagerClient.AggregateUsageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateUsageAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.AggregateUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.AggregateUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.AggregateUsageResponse, Google.Cloud.LicenseManager.V1.Usage>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "AggregateUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.AggregateUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_AggregateUsage_sync_flattened",
+      "title": "AggregateUsage",
+      "description": "Snippet for AggregateUsage",
+      "file": "LicenseManagerClient.AggregateUsageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateUsage",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.AggregateUsage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.AggregateUsageResponse, Google.Cloud.LicenseManager.V1.Usage>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "AggregateUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.AggregateUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_AggregateUsage_async_flattened",
+      "title": "AggregateUsageAsync",
+      "description": "Snippet for AggregateUsageAsync",
+      "file": "LicenseManagerClient.AggregateUsageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateUsageAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.AggregateUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.AggregateUsageResponse, Google.Cloud.LicenseManager.V1.Usage>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "AggregateUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.AggregateUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_AggregateUsage_sync_flattened_resourceNames",
+      "title": "AggregateUsageResourceNames",
+      "description": "Snippet for AggregateUsage",
+      "file": "LicenseManagerClient.AggregateUsageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateUsage",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.AggregateUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.AggregateUsageResponse, Google.Cloud.LicenseManager.V1.Usage>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "AggregateUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.AggregateUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_AggregateUsage_async_flattened_resourceNames",
+      "title": "AggregateUsageResourceNamesAsync",
+      "description": "Snippet for AggregateUsageAsync",
+      "file": "LicenseManagerClient.AggregateUsageResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateUsageAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.AggregateUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ConfigurationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.AggregateUsageResponse, Google.Cloud.LicenseManager.V1.Usage>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "AggregateUsage",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.AggregateUsage",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListProducts_sync",
+      "title": "ListProductsRequestObject",
+      "description": "Snippet for ListProducts",
+      "file": "LicenseManagerClient.ListProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProducts",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListProductsResponse, Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListProducts",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListProducts",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListProducts_async",
+      "title": "ListProductsRequestObjectAsync",
+      "description": "Snippet for ListProductsAsync",
+      "file": "LicenseManagerClient.ListProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductsAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListProductsResponse, Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListProducts",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListProducts",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListProducts_sync_flattened",
+      "title": "ListProducts",
+      "description": "Snippet for ListProducts",
+      "file": "LicenseManagerClient.ListProductsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProducts",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListProducts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListProductsResponse, Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListProducts",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListProducts",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListProducts_async_flattened",
+      "title": "ListProductsAsync",
+      "description": "Snippet for ListProductsAsync",
+      "file": "LicenseManagerClient.ListProductsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductsAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListProductsResponse, Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListProducts",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListProducts",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListProducts_sync_flattened_resourceNames",
+      "title": "ListProductsResourceNames",
+      "description": "Snippet for ListProducts",
+      "file": "LicenseManagerClient.ListProductsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProducts",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LicenseManager.V1.ListProductsResponse, Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListProducts",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListProducts",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_ListProducts_async_flattened_resourceNames",
+      "title": "ListProductsResourceNamesAsync",
+      "description": "Snippet for ListProductsAsync",
+      "file": "LicenseManagerClient.ListProductsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductsAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.ListProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LicenseManager.V1.ListProductsResponse, Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "ListProducts",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.ListProducts",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetProduct_sync",
+      "title": "GetProductRequestObject",
+      "description": "Snippet for GetProduct",
+      "file": "LicenseManagerClient.GetProductRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProduct",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.GetProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Product",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetProduct",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetProduct",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetProduct_async",
+      "title": "GetProductRequestObjectAsync",
+      "description": "Snippet for GetProductAsync",
+      "file": "LicenseManagerClient.GetProductRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.GetProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetProduct",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetProduct",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetProduct_sync_flattened",
+      "title": "GetProduct",
+      "description": "Snippet for GetProduct",
+      "file": "LicenseManagerClient.GetProductSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProduct",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Product",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetProduct",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetProduct",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetProduct_async_flattened",
+      "title": "GetProductAsync",
+      "description": "Snippet for GetProductAsync",
+      "file": "LicenseManagerClient.GetProductAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetProduct",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetProduct",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetProduct_sync_flattened_resourceNames",
+      "title": "GetProductResourceNames",
+      "description": "Snippet for GetProduct",
+      "file": "LicenseManagerClient.GetProductResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProduct",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LicenseManager.V1.Product",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetProduct",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetProduct",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "licensemanager_v1_generated_LicenseManager_GetProduct_async_flattened_resourceNames",
+      "title": "GetProductResourceNamesAsync",
+      "description": "Snippet for GetProductAsync",
+      "file": "LicenseManagerClient.GetProductResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductAsync",
+        "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient.GetProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LicenseManager.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LicenseManager.V1.Product>",
+        "client": {
+          "shortName": "LicenseManagerClient",
+          "fullName": "Google.Cloud.LicenseManager.V1.LicenseManagerClient"
+        },
+        "method": {
+          "shortName": "GetProduct",
+          "fullName": "google.cloud.licensemanager.v1.LicenseManager.GetProduct",
+          "service": {
+            "shortName": "LicenseManager",
+            "fullName": "google.cloud.licensemanager.v1.LicenseManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

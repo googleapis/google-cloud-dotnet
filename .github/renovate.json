@@ -154,6 +154,7 @@
     "apis/Google.Cloud.Kms.V1/Google.Cloud.Kms.V1/**",
     "apis/Google.Cloud.Language.V1/Google.Cloud.Language.V1/**",
     "apis/Google.Cloud.Language.V2/Google.Cloud.Language.V2/**",
+    "apis/Google.Cloud.LicenseManager.V1/Google.Cloud.LicenseManager.V1/**",
     "apis/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta/**",
     "apis/Google.Cloud.Location/Google.Cloud.Location/**",
     "apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net/**",
