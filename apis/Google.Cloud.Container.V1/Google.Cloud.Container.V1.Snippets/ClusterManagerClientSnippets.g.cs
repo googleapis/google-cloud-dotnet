@@ -445,6 +445,7 @@ namespace GoogleCSharpSnippets
                 StoragePools = { "", },
                 MaxRunDuration = new Duration(),
                 FlexStart = false,
+                BootDisk = new BootDisk(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -494,6 +495,7 @@ namespace GoogleCSharpSnippets
                 StoragePools = { "", },
                 MaxRunDuration = new Duration(),
                 FlexStart = false,
+                BootDisk = new BootDisk(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
