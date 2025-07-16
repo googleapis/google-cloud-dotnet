@@ -4264,6 +4264,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "4fdff74be5e1d12849d1650f6fb58bd3179fb13f",
             "apiPaths": [
                 "google/cloud/licensemanager/v1"
             ],
