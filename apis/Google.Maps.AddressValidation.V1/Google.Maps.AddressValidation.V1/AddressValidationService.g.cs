@@ -55,7 +55,7 @@ namespace Google.Maps.AddressValidation.V1 {
             "R2VvY29kZRJDCghtZXRhZGF0YRgEIAEoCzIxLmdvb2dsZS5tYXBzLmFkZHJl",
             "c3N2YWxpZGF0aW9uLnYxLkFkZHJlc3NNZXRhZGF0YRI9Cgl1c3BzX2RhdGEY",
             "BSABKAsyKi5nb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5Vc3Bz",
-            "RGF0YSKJBAoHVmVyZGljdBJQChFpbnB1dF9ncmFudWxhcml0eRgBIAEoDjI1",
+            "RGF0YSKxBAoHVmVyZGljdBJQChFpbnB1dF9ncmFudWxhcml0eRgBIAEoDjI1",
             "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZlcmRpY3QuR3Jh",
             "bnVsYXJpdHkSVQoWdmFsaWRhdGlvbl9ncmFudWxhcml0eRgCIAEoDjI1Lmdv",
             "b2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZlcmRpY3QuR3JhbnVs",
@@ -63,26 +63,27 @@ namespace Google.Maps.AddressValidation.V1 {
             "YXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZlcmRpY3QuR3JhbnVsYXJpdHkS",
             "GAoQYWRkcmVzc19jb21wbGV0ZRgEIAEoCBIiChpoYXNfdW5jb25maXJtZWRf",
             "Y29tcG9uZW50cxgFIAEoCBIfChdoYXNfaW5mZXJyZWRfY29tcG9uZW50cxgG",
-            "IAEoCBIfChdoYXNfcmVwbGFjZWRfY29tcG9uZW50cxgHIAEoCCKAAQoLR3Jh",
-            "bnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIPCgtTVUJf",
-            "UFJFTUlTRRABEgsKB1BSRU1JU0UQAhIVChFQUkVNSVNFX1BST1hJTUlUWRAD",
-            "EgkKBUJMT0NLEAQSCQoFUk9VVEUQBRIJCgVPVEhFUhAGMrIDChFBZGRyZXNz",
-            "VmFsaWRhdGlvbhKmAQoPVmFsaWRhdGVBZGRyZXNzEjguZ29vZ2xlLm1hcHMu",
-            "YWRkcmVzc3ZhbGlkYXRpb24udjEuVmFsaWRhdGVBZGRyZXNzUmVxdWVzdBo5",
-            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZhbGlkYXRlQWRk",
-            "cmVzc1Jlc3BvbnNlIh6C0+STAhgiEy92MTp2YWxpZGF0ZUFkZHJlc3M6ASoS",
-            "zgEKGVByb3ZpZGVWYWxpZGF0aW9uRmVlZGJhY2sSQi5nb29nbGUubWFwcy5h",
-            "ZGRyZXNzdmFsaWRhdGlvbi52MS5Qcm92aWRlVmFsaWRhdGlvbkZlZWRiYWNr",
-            "UmVxdWVzdBpDLmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlBy",
-            "b3ZpZGVWYWxpZGF0aW9uRmVlZGJhY2tSZXNwb25zZSIogtPkkwIiIh0vdjE6",
-            "cHJvdmlkZVZhbGlkYXRpb25GZWVkYmFjazoBKhojykEgYWRkcmVzc3ZhbGlk",
-            "YXRpb24uZ29vZ2xlYXBpcy5jb21CmgIKJGNvbS5nb29nbGUubWFwcy5hZGRy",
-            "ZXNzdmFsaWRhdGlvbi52MUIdQWRkcmVzc1ZhbGlkYXRpb25TZXJ2aWNlUHJv",
-            "dG9QAVpYY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2FkZHJlc3N2YWxpZGF0",
-            "aW9uL2FwaXYxL2FkZHJlc3N2YWxpZGF0aW9ucGI7YWRkcmVzc3ZhbGlkYXRp",
-            "b25wYvgBAaICB0dNUEFWVjGqAiBHb29nbGUuTWFwcy5BZGRyZXNzVmFsaWRh",
-            "dGlvbi5WMcoCIEdvb2dsZVxNYXBzXEFkZHJlc3NWYWxpZGF0aW9uXFYx6gIj",
-            "R29vZ2xlOjpNYXBzOjpBZGRyZXNzVmFsaWRhdGlvbjo6VjFiBnByb3RvMw=="));
+            "IAEoCBIfChdoYXNfcmVwbGFjZWRfY29tcG9uZW50cxgHIAEoCBImCh5oYXNf",
+            "c3BlbGxfY29ycmVjdGVkX2NvbXBvbmVudHMYCSABKAgigAEKC0dyYW51bGFy",
+            "aXR5EhsKF0dSQU5VTEFSSVRZX1VOU1BFQ0lGSUVEEAASDwoLU1VCX1BSRU1J",
+            "U0UQARILCgdQUkVNSVNFEAISFQoRUFJFTUlTRV9QUk9YSU1JVFkQAxIJCgVC",
+            "TE9DSxAEEgkKBVJPVVRFEAUSCQoFT1RIRVIQBjKyAwoRQWRkcmVzc1ZhbGlk",
+            "YXRpb24SpgEKD1ZhbGlkYXRlQWRkcmVzcxI4Lmdvb2dsZS5tYXBzLmFkZHJl",
+            "c3N2YWxpZGF0aW9uLnYxLlZhbGlkYXRlQWRkcmVzc1JlcXVlc3QaOS5nb29n",
+            "bGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5WYWxpZGF0ZUFkZHJlc3NS",
+            "ZXNwb25zZSIegtPkkwIYIhMvdjE6dmFsaWRhdGVBZGRyZXNzOgEqEs4BChlQ",
+            "cm92aWRlVmFsaWRhdGlvbkZlZWRiYWNrEkIuZ29vZ2xlLm1hcHMuYWRkcmVz",
+            "c3ZhbGlkYXRpb24udjEuUHJvdmlkZVZhbGlkYXRpb25GZWVkYmFja1JlcXVl",
+            "c3QaQy5nb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5Qcm92aWRl",
+            "VmFsaWRhdGlvbkZlZWRiYWNrUmVzcG9uc2UiKILT5JMCIiIdL3YxOnByb3Zp",
+            "ZGVWYWxpZGF0aW9uRmVlZGJhY2s6ASoaI8pBIGFkZHJlc3N2YWxpZGF0aW9u",
+            "Lmdvb2dsZWFwaXMuY29tQpcCCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3Zh",
+            "bGlkYXRpb24udjFCHUFkZHJlc3NWYWxpZGF0aW9uU2VydmljZVByb3RvUAFa",
+            "WGNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9hZGRyZXNzdmFsaWRhdGlvbi9h",
+            "cGl2MS9hZGRyZXNzdmFsaWRhdGlvbnBiO2FkZHJlc3N2YWxpZGF0aW9ucGKi",
+            "AgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRkcmVzc1ZhbGlkYXRpb24uVjHK",
+            "AiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRhdGlvblxWMeoCI0dvb2dsZTo6",
+            "TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.AddressValidation.V1.AddressReflection.Descriptor, global::Google.Maps.AddressValidation.V1.GeocodeReflection.Descriptor, global::Google.Maps.AddressValidation.V1.MetadataReflection.Descriptor, global::Google.Maps.AddressValidation.V1.UspsDataReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -91,7 +92,7 @@ namespace Google.Maps.AddressValidation.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest), global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest.Parser, new[]{ "Conclusion", "ResponseId" }, null, new[]{ typeof(global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest.Types.ValidationConclusion) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse), global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ValidationResult), global::Google.Maps.AddressValidation.V1.ValidationResult.Parser, new[]{ "Verdict", "Address", "Geocode", "Metadata", "UspsData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.Verdict), global::Google.Maps.AddressValidation.V1.Verdict.Parser, new[]{ "InputGranularity", "ValidationGranularity", "GeocodeGranularity", "AddressComplete", "HasUnconfirmedComponents", "HasInferredComponents", "HasReplacedComponents" }, null, new[]{ typeof(global::Google.Maps.AddressValidation.V1.Verdict.Types.Granularity) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.Verdict), global::Google.Maps.AddressValidation.V1.Verdict.Parser, new[]{ "InputGranularity", "ValidationGranularity", "GeocodeGranularity", "AddressComplete", "HasUnconfirmedComponents", "HasInferredComponents", "HasReplacedComponents", "HasSpellCorrectedComponents" }, null, new[]{ typeof(global::Google.Maps.AddressValidation.V1.Verdict.Types.Granularity) }, null, null)
           }));
     }
     #endregion
@@ -237,19 +238,19 @@ namespace Google.Maps.AddressValidation.V1 {
     /// ASCII characters in length. Otherwise an INVALID_ARGUMENT error is
     /// returned.
     ///
-    /// The session begins when the user starts typing a query, and concludes when
-    /// they select a place and a call to Place Details or Address Validation is
-    /// made. Each session can have multiple autocomplete queries, followed by one
-    /// Place Details or Address Validation request. The credentials used for each
-    /// request within a session must belong to the same Google Cloud Console
+    /// The session begins when the user makes an Autocomplete query, and concludes
+    /// when they select a place and a call to Place Details or Address Validation
+    /// is made. Each session can have multiple Autocomplete queries, followed by
+    /// one Place Details or Address Validation request. The credentials used for
+    /// each request within a session must belong to the same Google Cloud Console
     /// project. Once a session has concluded, the token is no longer valid; your
-    /// app must generate a fresh token for each session. If the `session_token`
+    /// app must generate a fresh token for each session. If the `sessionToken`
     /// parameter is omitted, or if you reuse a session token, the session is
     /// charged as if no session token was provided (each request is billed
     /// separately).
     ///
     /// Note: Address Validation can only be used in sessions with the
-    /// Autocomplete (New) API, not the old Autocomplete API. See
+    /// Autocomplete (New) API, not the Autocomplete API. See
     /// https://developers.google.com/maps/documentation/places/web-service/session-pricing
     /// for more details.
     /// </summary>
@@ -1611,6 +1612,7 @@ namespace Google.Maps.AddressValidation.V1 {
       hasUnconfirmedComponents_ = other.hasUnconfirmedComponents_;
       hasInferredComponents_ = other.hasInferredComponents_;
       hasReplacedComponents_ = other.hasReplacedComponents_;
+      hasSpellCorrectedComponents_ = other.hasSpellCorrectedComponents_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1629,9 +1631,10 @@ namespace Google.Maps.AddressValidation.V1 {
     /// signals, refer to `validation_granularity` below.
     ///
     /// For example, if the input address includes a specific apartment number,
-    /// then the `input_granularity` here will be `SUB_PREMISE`. If we cannot match
-    /// the apartment number in the databases or the apartment number is invalid,
-    /// the `validation_granularity` will likely be `PREMISE` or below.
+    /// then the `input_granularity` here will be `SUB_PREMISE`. If the address
+    /// validation service cannot match the apartment number in the databases or
+    /// the apartment number is invalid, the `validation_granularity` will likely
+    /// be `PREMISE` or more coarse.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1646,9 +1649,10 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int ValidationGranularityFieldNumber = 2;
     private global::Google.Maps.AddressValidation.V1.Verdict.Types.Granularity validationGranularity_ = global::Google.Maps.AddressValidation.V1.Verdict.Types.Granularity.Unspecified;
     /// <summary>
-    /// The granularity level that the API can fully **validate** the address to.
-    /// For example, an `validation_granularity` of `PREMISE` indicates all address
-    /// components at the level of `PREMISE` or more coarse can be validated.
+    /// The level of granularity for the post-processed address that the API can
+    /// fully validate. For example, a `validation_granularity` of `PREMISE`
+    /// indicates all address components at the level of `PREMISE` or more coarse
+    /// can be validated.
     ///
     /// Per address component validation result can be found in
     /// [google.maps.addressvalidation.v1.Address.address_components].
@@ -1690,8 +1694,9 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int AddressCompleteFieldNumber = 4;
     private bool addressComplete_;
     /// <summary>
-    /// The address is considered complete if there are no unresolved tokens, no
-    /// unexpected or missing address components. See
+    /// The post-processed address is considered complete if there are no
+    /// unresolved tokens, no unexpected or missing address components. If unset,
+    /// indicates that the value is `false`. See
     /// [`missing_component_types`][google.maps.addressvalidation.v1.Address.missing_component_types],
     /// [`unresolved_tokens`][google.maps.addressvalidation.v1.Address.unresolved_tokens]
     /// or
@@ -1759,6 +1764,23 @@ namespace Google.Maps.AddressValidation.V1 {
       }
     }
 
+    /// <summary>Field number for the "has_spell_corrected_components" field.</summary>
+    public const int HasSpellCorrectedComponentsFieldNumber = 9;
+    private bool hasSpellCorrectedComponents_;
+    /// <summary>
+    /// At least one address component was spell-corrected, see
+    /// [google.maps.addressvalidation.v1.Address.address_components] for
+    /// details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSpellCorrectedComponents {
+      get { return hasSpellCorrectedComponents_; }
+      set {
+        hasSpellCorrectedComponents_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1781,6 +1803,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (HasUnconfirmedComponents != other.HasUnconfirmedComponents) return false;
       if (HasInferredComponents != other.HasInferredComponents) return false;
       if (HasReplacedComponents != other.HasReplacedComponents) return false;
+      if (HasSpellCorrectedComponents != other.HasSpellCorrectedComponents) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1795,6 +1818,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (HasUnconfirmedComponents != false) hash ^= HasUnconfirmedComponents.GetHashCode();
       if (HasInferredComponents != false) hash ^= HasInferredComponents.GetHashCode();
       if (HasReplacedComponents != false) hash ^= HasReplacedComponents.GetHashCode();
+      if (HasSpellCorrectedComponents != false) hash ^= HasSpellCorrectedComponents.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1841,6 +1865,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(56);
         output.WriteBool(HasReplacedComponents);
       }
+      if (HasSpellCorrectedComponents != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(HasSpellCorrectedComponents);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1879,6 +1907,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(56);
         output.WriteBool(HasReplacedComponents);
       }
+      if (HasSpellCorrectedComponents != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(HasSpellCorrectedComponents);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1908,6 +1940,9 @@ namespace Google.Maps.AddressValidation.V1 {
         size += 1 + 1;
       }
       if (HasReplacedComponents != false) {
+        size += 1 + 1;
+      }
+      if (HasSpellCorrectedComponents != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1942,6 +1977,9 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (other.HasReplacedComponents != false) {
         HasReplacedComponents = other.HasReplacedComponents;
+      }
+      if (other.HasSpellCorrectedComponents != false) {
+        HasSpellCorrectedComponents = other.HasSpellCorrectedComponents;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1986,6 +2024,10 @@ namespace Google.Maps.AddressValidation.V1 {
             HasReplacedComponents = input.ReadBool();
             break;
           }
+          case 72: {
+            HasSpellCorrectedComponents = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2027,6 +2069,10 @@ namespace Google.Maps.AddressValidation.V1 {
           }
           case 56: {
             HasReplacedComponents = input.ReadBool();
+            break;
+          }
+          case 72: {
+            HasSpellCorrectedComponents = input.ReadBool();
             break;
           }
         }

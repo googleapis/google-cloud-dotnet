@@ -53,13 +53,13 @@ namespace Google.Maps.AddressValidation.V1 {
             "bGlua19mb290bm90ZRgWIAEoCRIWCg5wbWJfZGVzaWduYXRvchgXIAEoCRIS",
             "CgpwbWJfbnVtYmVyGBggASgJEhsKE2FkZHJlc3NfcmVjb3JkX3R5cGUYGSAB",
             "KAkSFwoPZGVmYXVsdF9hZGRyZXNzGBogASgIEhUKDWVycm9yX21lc3NhZ2UY",
-            "GyABKAkSFgoOY2Fzc19wcm9jZXNzZWQYHCABKAhCigIKJGNvbS5nb29nbGUu",
+            "GyABKAkSFgoOY2Fzc19wcm9jZXNzZWQYHCABKAhChwIKJGNvbS5nb29nbGUu",
             "bWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MUINVXNwc0RhdGFQcm90b1ABWlhj",
             "bG91ZC5nb29nbGUuY29tL2dvL21hcHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBp",
-            "djEvYWRkcmVzc3ZhbGlkYXRpb25wYjthZGRyZXNzdmFsaWRhdGlvbnBi+AEB",
-            "ogIHR01QQVZWMaoCIEdvb2dsZS5NYXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYx",
-            "ygIgR29vZ2xlXE1hcHNcQWRkcmVzc1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6",
-            "Ok1hcHM6OkFkZHJlc3NWYWxpZGF0aW9uOjpWMWIGcHJvdG8z"));
+            "djEvYWRkcmVzc3ZhbGlkYXRpb25wYjthZGRyZXNzdmFsaWRhdGlvbnBiogIH",
+            "R01QQVZWMaoCIEdvb2dsZS5NYXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIg",
+            "R29vZ2xlXE1hcHNcQWRkcmVzc1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1h",
+            "cHM6OkFkZHJlc3NWYWxpZGF0aW9uOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1020,7 +1020,7 @@ namespace Google.Maps.AddressValidation.V1 {
     /// * `N`: Primary and any secondary number information failed to
     /// DPV confirm.
     /// * `S`: Address was DPV confirmed for the primary number only, and the
-    /// secondary number information was present by not confirmed,  or a single
+    /// secondary number information was present but not confirmed,  or a single
     /// trailing alpha on a primary number was dropped to make a DPV match and
     /// secondary information required.
     /// * `D`: Address was DPV confirmed for the primary number only, and the

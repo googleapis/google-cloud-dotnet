@@ -44,13 +44,13 @@ namespace Google.Maps.AddressValidation.V1 {
             "TlNQRUNJRklFRBAAEg0KCUNPTkZJUk1FRBABEh0KGVVOQ09ORklSTUVEX0JV",
             "VF9QTEFVU0lCTEUQAhIeChpVTkNPTkZJUk1FRF9BTkRfU1VTUElDSU9VUxAD",
             "IjQKDUNvbXBvbmVudE5hbWUSDAoEdGV4dBgBIAEoCRIVCg1sYW5ndWFnZV9j",
-            "b2RlGAIgASgJQokCCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
+            "b2RlGAIgASgJQoYCCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
             "b24udjFCDEFkZHJlc3NQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21h",
             "cHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBpdjEvYWRkcmVzc3ZhbGlkYXRpb25w",
-            "YjthZGRyZXNzdmFsaWRhdGlvbnBi+AEBogIHR01QQVZWMaoCIEdvb2dsZS5N",
-            "YXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVz",
-            "c1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0",
-            "aW9uOjpWMWIGcHJvdG8z"));
+            "YjthZGRyZXNzdmFsaWRhdGlvbnBiogIHR01QQVZWMaoCIEdvb2dsZS5NYXBz",
+            "LkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVzc1Zh",
+            "bGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0aW9u",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -124,6 +124,12 @@ namespace Google.Maps.AddressValidation.V1 {
     /// <summary>
     /// The post-processed address, formatted as a single-line address following
     /// the address formatting rules of the region where the address is located.
+    ///
+    /// Note: the format of this address may not match the format of the address
+    /// in the `postal_address` field. For example, the `postal_address` always
+    /// represents the country as a 2 letter `region_code`, such as "US" or "NZ".
+    /// By contrast, this field uses a longer form of the country name, such as
+    /// "USA" or "New Zealand".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,11 +182,17 @@ namespace Google.Maps.AddressValidation.V1 {
     /// <summary>
     /// The types of components that were expected to be present in a correctly
     /// formatted mailing address but were not found in the input AND could
-    /// not be inferred. Components of this type are not present in
-    /// `formatted_address`, `postal_address`, or `address_components`. An
-    /// example might be `['street_number', 'route']` for an input like
-    /// "Boulder, Colorado, 80301, USA". The list of possible types can be found
+    /// not be inferred. An example might be `['street_number', 'route']` for an
+    /// input like "Boulder, Colorado, 80301, USA". The list of possible types can
+    /// be found
     /// [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
+    ///
+    /// **Note: you might see a missing component type when you think you've
+    /// already supplied the missing component.** For example, this can happen when
+    /// the input address contains the building name, but not the premise number.
+    /// In the address "渋谷区渋谷３丁目　Shibuya Stream", the building name
+    /// "Shibuya Stream" has the component type `premise`, but the premise number
+    /// is missing, so `missing_component_types` will contain `premise`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -219,10 +231,10 @@ namespace Google.Maps.AddressValidation.V1 {
     private readonly pbc::RepeatedField<string> unresolvedTokens_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Any tokens in the input that could not be resolved. This might be an
-    /// input that was not recognized as a valid part of an address (for example
-    /// in an input like "123235253253 Main St, San Francisco, CA, 94105", the
-    /// unresolved tokens may look like `["123235253253"]` since that does not
-    /// look like a valid street number.
+    /// input that was not recognized as a valid part of an address. For example,
+    /// for an input such as "Parcel 0000123123 &amp; 0000456456 Str # Guthrie Center
+    /// IA 50115 US", the unresolved tokens might look like `["Parcel",
+    /// "0000123123", "&amp;", "0000456456"]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
