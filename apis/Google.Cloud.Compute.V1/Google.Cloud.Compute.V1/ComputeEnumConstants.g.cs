@@ -3615,6 +3615,45 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.GetReservationBlockRequest"/> message.
+        /// </summary>
+        public static class GetReservationBlockRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.GetReservationBlockRequest.Types.View"/> enum.
+            /// </summary>
+            public static class View
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetReservationBlockRequest.Types.View.UndefinedView"/>.
+                /// </summary>
+                public const string UndefinedView = "UNDEFINED_VIEW";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetReservationBlockRequest.Types.View.Basic"/>.
+                /// </summary>
+                public const string Basic = "BASIC";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetReservationBlockRequest.Types.View.BlockViewUnspecified"/>
+                /// .
+                /// </summary>
+                public const string BlockViewUnspecified = "BLOCK_VIEW_UNSPECIFIED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetReservationBlockRequest.Types.View.Full"/>.
+                /// </summary>
+                public const string Full = "FULL";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.GroupMaintenanceInfo"/>
         /// message.
         /// </summary>
