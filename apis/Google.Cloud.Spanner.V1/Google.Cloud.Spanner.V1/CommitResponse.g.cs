@@ -26,22 +26,23 @@ namespace Google.Cloud.Spanner.V1 {
           string.Concat(
             "Cidnb29nbGUvc3Bhbm5lci92MS9jb21taXRfcmVzcG9uc2UucHJvdG8SEWdv",
             "b2dsZS5zcGFubmVyLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvGiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90byKdAgoO",
+            "b3RvGiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90byLVAgoO",
             "Q29tbWl0UmVzcG9uc2USNAoQY29tbWl0X3RpbWVzdGFtcBgBIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQwoMY29tbWl0X3N0YXRzGAIgASgL",
             "Mi0uZ29vZ2xlLnNwYW5uZXIudjEuQ29tbWl0UmVzcG9uc2UuQ29tbWl0U3Rh",
             "dHMSTgoPcHJlY29tbWl0X3Rva2VuGAQgASgLMjMuZ29vZ2xlLnNwYW5uZXIu",
-            "djEuTXVsdGlwbGV4ZWRTZXNzaW9uUHJlY29tbWl0VG9rZW5IABolCgtDb21t",
-            "aXRTdGF0cxIWCg5tdXRhdGlvbl9jb3VudBgBIAEoA0IZChdNdWx0aXBsZXhl",
-            "ZFNlc3Npb25SZXRyeUK2AQoVY29tLmdvb2dsZS5zcGFubmVyLnYxQhNDb21t",
-            "aXRSZXNwb25zZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5l",
-            "ci9hcGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xlLkNsb3VkLlNw",
-            "YW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6",
-            "Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
+            "djEuTXVsdGlwbGV4ZWRTZXNzaW9uUHJlY29tbWl0VG9rZW5IABI2ChJzbmFw",
+            "c2hvdF90aW1lc3RhbXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wGiUKC0NvbW1pdFN0YXRzEhYKDm11dGF0aW9uX2NvdW50GAEgASgDQhkK",
+            "F011bHRpcGxleGVkU2Vzc2lvblJldHJ5QrYBChVjb20uZ29vZ2xlLnNwYW5u",
+            "ZXIudjFCE0NvbW1pdFJlc3BvbnNlUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29n",
+            "bGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx",
+            "6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse), global::Google.Cloud.Spanner.V1.CommitResponse.Parser, new[]{ "CommitTimestamp", "CommitStats", "PrecommitToken" }, new[]{ "MultiplexedSessionRetry" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats), global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats.Parser, new[]{ "MutationCount" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse), global::Google.Cloud.Spanner.V1.CommitResponse.Parser, new[]{ "CommitTimestamp", "CommitStats", "PrecommitToken", "SnapshotTimestamp" }, new[]{ "MultiplexedSessionRetry" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats), global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats.Parser, new[]{ "MutationCount" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -88,6 +89,7 @@ namespace Google.Cloud.Spanner.V1 {
     public CommitResponse(CommitResponse other) : this() {
       commitTimestamp_ = other.commitTimestamp_ != null ? other.commitTimestamp_.Clone() : null;
       commitStats_ = other.commitStats_ != null ? other.commitStats_.Clone() : null;
+      snapshotTimestamp_ = other.snapshotTimestamp_ != null ? other.snapshotTimestamp_.Clone() : null;
       switch (other.MultiplexedSessionRetryCase) {
         case MultiplexedSessionRetryOneofCase.PrecommitToken:
           PrecommitToken = other.PrecommitToken.Clone();
@@ -122,7 +124,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int CommitStatsFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats commitStats_;
     /// <summary>
-    /// The statistics about this Commit. Not returned by default.
+    /// The statistics about this `Commit`. Not returned by default.
     /// For more information, see
     /// [CommitRequest.return_commit_stats][google.spanner.v1.CommitRequest.return_commit_stats].
     /// </summary>
@@ -139,7 +141,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PrecommitTokenFieldNumber = 4;
     /// <summary>
     /// If specified, transaction has not committed yet.
-    /// Clients must retry the commit with the new precommit token.
+    /// You must retry the commit with the new precommit token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -148,6 +150,24 @@ namespace Google.Cloud.Spanner.V1 {
       set {
         multiplexedSessionRetry_ = value;
         multiplexedSessionRetryCase_ = value == null ? MultiplexedSessionRetryOneofCase.None : MultiplexedSessionRetryOneofCase.PrecommitToken;
+      }
+    }
+
+    /// <summary>Field number for the "snapshot_timestamp" field.</summary>
+    public const int SnapshotTimestampFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp snapshotTimestamp_;
+    /// <summary>
+    /// If `TransactionOptions.isolation_level` is set to
+    /// `IsolationLevel.REPEATABLE_READ`, then the snapshot timestamp is the
+    /// timestamp at which all reads in the transaction ran. This timestamp is
+    /// never returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SnapshotTimestamp {
+      get { return snapshotTimestamp_; }
+      set {
+        snapshotTimestamp_ = value;
       }
     }
 
@@ -189,6 +209,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(CommitTimestamp, other.CommitTimestamp)) return false;
       if (!object.Equals(CommitStats, other.CommitStats)) return false;
       if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
+      if (!object.Equals(SnapshotTimestamp, other.SnapshotTimestamp)) return false;
       if (MultiplexedSessionRetryCase != other.MultiplexedSessionRetryCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -200,6 +221,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (commitTimestamp_ != null) hash ^= CommitTimestamp.GetHashCode();
       if (commitStats_ != null) hash ^= CommitStats.GetHashCode();
       if (multiplexedSessionRetryCase_ == MultiplexedSessionRetryOneofCase.PrecommitToken) hash ^= PrecommitToken.GetHashCode();
+      if (snapshotTimestamp_ != null) hash ^= SnapshotTimestamp.GetHashCode();
       hash ^= (int) multiplexedSessionRetryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -231,6 +253,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(PrecommitToken);
       }
+      if (snapshotTimestamp_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SnapshotTimestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -253,6 +279,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(PrecommitToken);
       }
+      if (snapshotTimestamp_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SnapshotTimestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -271,6 +301,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (multiplexedSessionRetryCase_ == MultiplexedSessionRetryOneofCase.PrecommitToken) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrecommitToken);
+      }
+      if (snapshotTimestamp_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SnapshotTimestamp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -295,6 +328,12 @@ namespace Google.Cloud.Spanner.V1 {
           CommitStats = new global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats();
         }
         CommitStats.MergeFrom(other.CommitStats);
+      }
+      if (other.snapshotTimestamp_ != null) {
+        if (snapshotTimestamp_ == null) {
+          SnapshotTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SnapshotTimestamp.MergeFrom(other.SnapshotTimestamp);
       }
       switch (other.MultiplexedSessionRetryCase) {
         case MultiplexedSessionRetryOneofCase.PrecommitToken:
@@ -343,6 +382,13 @@ namespace Google.Cloud.Spanner.V1 {
             PrecommitToken = subBuilder;
             break;
           }
+          case 42: {
+            if (snapshotTimestamp_ == null) {
+              SnapshotTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SnapshotTimestamp);
+            break;
+          }
         }
       }
     #endif
@@ -379,6 +425,13 @@ namespace Google.Cloud.Spanner.V1 {
             }
             input.ReadMessage(subBuilder);
             PrecommitToken = subBuilder;
+            break;
+          }
+          case 42: {
+            if (snapshotTimestamp_ == null) {
+              SnapshotTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SnapshotTimestamp);
             break;
           }
         }
