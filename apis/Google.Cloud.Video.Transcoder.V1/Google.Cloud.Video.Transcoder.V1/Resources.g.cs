@@ -29,7 +29,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
             "cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dv",
             "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3Rh",
-            "dHVzLnByb3RvIpkJCgNKb2ISDAoEbmFtZRgBIAEoCRIWCglpbnB1dF91cmkY",
+            "dHVzLnByb3RvIrkJCgNKb2ISDAoEbmFtZRgBIAEoCRIWCglpbnB1dF91cmkY",
             "AiABKAlCA+BBBBIXCgpvdXRwdXRfdXJpGAMgASgJQgPgQQQSGgoLdGVtcGxh",
             "dGVfaWQYBCABKAlCA+BBBEgAEj0KBmNvbmZpZxgFIAEoCzIrLmdvb2dsZS5j",
             "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkpvYkNvbmZpZ0gAEkkKBXN0YXRl",
@@ -45,218 +45,250 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "bnNjb2Rlci52MS5Kb2IuUHJvY2Vzc2luZ01vZGUSGwoTYmF0Y2hfbW9kZV9w",
             "cmlvcml0eRgVIAEoBRJVCgxvcHRpbWl6YXRpb24YFiABKA4yOi5nb29nbGUu",
             "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2IuT3B0aW1pemF0aW9uU3Ry",
-            "YXRlZ3lCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBImgKD1Byb2Nlc3NpbmdTdGF0ZRIgChxQUk9DRVNTSU5H",
-            "X1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgsKB1JVTk5JTkcQ",
-            "AhINCglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBCJtCg5Qcm9jZXNzaW5nTW9k",
-            "ZRIfChtQUk9DRVNTSU5HX01PREVfVU5TUEVDSUZJRUQQABIfChtQUk9DRVNT",
-            "SU5HX01PREVfSU5URVJBQ1RJVkUQARIZChVQUk9DRVNTSU5HX01PREVfQkFU",
-            "Q0gQAiJbChRPcHRpbWl6YXRpb25TdHJhdGVneRIlCiFPUFRJTUlaQVRJT05f",
-            "U1RSQVRFR1lfVU5TUEVDSUZJRUQQABIOCgpBVVRPREVURUNUEAESDAoIRElT",
-            "QUJMRUQQAjpW6kFTCh10cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29tL0pvYhIy",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMv",
-            "e2pvYn1CDAoKam9iX2NvbmZpZyLDAgoLSm9iVGVtcGxhdGUSDAoEbmFtZRgB",
-            "IAEoCRI7CgZjb25maWcYAiABKAsyKy5nb29nbGUuY2xvdWQudmlkZW8udHJh",
-            "bnNjb2Rlci52MS5Kb2JDb25maWcSSQoGbGFiZWxzGAMgAygLMjkuZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuSm9iVGVtcGxhdGUuTGFiZWxz",
-            "RW50cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ATpv6kFsCiV0cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29tL0pvYlRl",
-            "bXBsYXRlEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vam9iVGVtcGxhdGVzL3tqb2JfdGVtcGxhdGV9IuMFCglKb2JDb25maWcS",
-            "NwoGaW5wdXRzGAEgAygLMicuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
-            "ZXIudjEuSW5wdXQSPQoJZWRpdF9saXN0GAIgAygLMiouZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLnRyYW5zY29kZXIudjEuRWRpdEF0b20STgoSZWxlbWVudGFyeV9z",
-            "dHJlYW1zGAMgAygLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
-            "djEuRWxlbWVudGFyeVN0cmVhbRJACgttdXhfc3RyZWFtcxgEIAMoCzIrLmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk11eFN0cmVhbRI9Cglt",
-            "YW5pZmVzdHMYBSADKAsyKi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
-            "ci52MS5NYW5pZmVzdBI4CgZvdXRwdXQYBiABKAsyKC5nb29nbGUuY2xvdWQu",
-            "dmlkZW8udHJhbnNjb2Rlci52MS5PdXRwdXQSPAoJYWRfYnJlYWtzGAcgAygL",
-            "MikuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuQWRCcmVhaxJP",
-            "ChJwdWJzdWJfZGVzdGluYXRpb24YCCABKAsyMy5nb29nbGUuY2xvdWQudmlk",
-            "ZW8udHJhbnNjb2Rlci52MS5QdWJzdWJEZXN0aW5hdGlvbhJECg1zcHJpdGVf",
-            "c2hlZXRzGAkgAygLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
-            "djEuU3ByaXRlU2hlZXQSOwoIb3ZlcmxheXMYCiADKAsyKS5nb29nbGUuY2xv",
-            "dWQudmlkZW8udHJhbnNjb2Rlci52MS5PdmVybGF5EkEKC2VuY3J5cHRpb25z",
-            "GAsgAygLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuRW5j",
-            "cnlwdGlvbiJ2CgVJbnB1dBILCgNrZXkYASABKAkSCwoDdXJpGAIgASgJElMK",
-            "FHByZXByb2Nlc3NpbmdfY29uZmlnGAMgASgLMjUuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZyIVCgZPdXRw",
-            "dXQSCwoDdXJpGAEgASgJIpEBCghFZGl0QXRvbRILCgNrZXkYASABKAkSDgoG",
-            "aW5wdXRzGAIgAygJEjIKD2VuZF90aW1lX29mZnNldBgDIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFzdGFydF90aW1lX29mZnNldBgEIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiI/CgdBZEJyZWFrEjQKEXN0",
-            "YXJ0X3RpbWVfb2Zmc2V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uIocCChBFbGVtZW50YXJ5U3RyZWFtEgsKA2tleRgEIAEoCRJFCgx2aWRl",
-            "b19zdHJlYW0YASABKAsyLS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
-            "ci52MS5WaWRlb1N0cmVhbUgAEkUKDGF1ZGlvX3N0cmVhbRgCIAEoCzItLmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkF1ZGlvU3RyZWFtSAAS",
-            "QwoLdGV4dF9zdHJlYW0YAyABKAsyLC5nb29nbGUuY2xvdWQudmlkZW8udHJh",
-            "bnNjb2Rlci52MS5UZXh0U3RyZWFtSABCEwoRZWxlbWVudGFyeV9zdHJlYW0i",
-            "vgEKCU11eFN0cmVhbRILCgNrZXkYASABKAkSEQoJZmlsZV9uYW1lGAIgASgJ",
-            "EhEKCWNvbnRhaW5lchgDIAEoCRIaChJlbGVtZW50YXJ5X3N0cmVhbXMYBCAD",
-            "KAkSSwoQc2VnbWVudF9zZXR0aW5ncxgFIAEoCzIxLmdvb2dsZS5jbG91ZC52",
-            "aWRlby50cmFuc2NvZGVyLnYxLlNlZ21lbnRTZXR0aW5ncxIVCg1lbmNyeXB0",
-            "aW9uX2lkGAcgASgJIpEECghNYW5pZmVzdBIRCglmaWxlX25hbWUYASABKAkS",
-            "SgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
-            "LnYxLk1hbmlmZXN0Lk1hbmlmZXN0VHlwZUID4EECEhgKC211eF9zdHJlYW1z",
-            "GAMgAygJQgPgQQISRQoEZGFzaBgEIAEoCzI1Lmdvb2dsZS5jbG91ZC52aWRl",
-            "by50cmFuc2NvZGVyLnYxLk1hbmlmZXN0LkRhc2hDb25maWdIABrvAQoKRGFz",
-            "aENvbmZpZxJuChhzZWdtZW50X3JlZmVyZW5jZV9zY2hlbWUYASABKA4yTC5n",
-            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5NYW5pZmVzdC5EYXNo",
-            "Q29uZmlnLlNlZ21lbnRSZWZlcmVuY2VTY2hlbWUicQoWU2VnbWVudFJlZmVy",
-            "ZW5jZVNjaGVtZRIoCiRTRUdNRU5UX1JFRkVSRU5DRV9TQ0hFTUVfVU5TUEVD",
-            "SUZJRUQQABIQCgxTRUdNRU5UX0xJU1QQARIbChdTRUdNRU5UX1RFTVBMQVRF",
-            "X05VTUJFUhACIkAKDE1hbmlmZXN0VHlwZRIdChlNQU5JRkVTVF9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASBwoDSExTEAESCAoEREFTSBACQhEKD21hbmlmZXN0X2Nv",
-            "bmZpZyIiChFQdWJzdWJEZXN0aW5hdGlvbhINCgV0b3BpYxgBIAEoCSL9AgoL",
-            "U3ByaXRlU2hlZXQSDgoGZm9ybWF0GAEgASgJEhgKC2ZpbGVfcHJlZml4GAIg",
-            "ASgJQgPgQQISIAoTc3ByaXRlX3dpZHRoX3BpeGVscxgDIAEoBUID4EECEiEK",
-            "FHNwcml0ZV9oZWlnaHRfcGl4ZWxzGAQgASgFQgPgQQISFAoMY29sdW1uX2Nv",
-            "dW50GAUgASgFEhEKCXJvd19jb3VudBgGIAEoBRI0ChFzdGFydF90aW1lX29m",
-            "ZnNldBgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9lbmRf",
-            "dGltZV9vZmZzZXQYCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "FQoLdG90YWxfY291bnQYCSABKAVIABItCghpbnRlcnZhbBgKIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEg8KB3F1YWxpdHkYCyABKAVCFQoT",
-            "ZXh0cmFjdGlvbl9zdHJhdGVneSKLCQoHT3ZlcmxheRI+CgVpbWFnZRgBIAEo",
-            "CzIvLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk92ZXJsYXku",
-            "SW1hZ2USRwoKYW5pbWF0aW9ucxgCIAMoCzIzLmdvb2dsZS5jbG91ZC52aWRl",
-            "by50cmFuc2NvZGVyLnYxLk92ZXJsYXkuQW5pbWF0aW9uGiwKFE5vcm1hbGl6",
-            "ZWRDb29yZGluYXRlEgkKAXgYASABKAESCQoBeRgCIAEoARp8CgVJbWFnZRIQ",
-            "CgN1cmkYASABKAlCA+BBAhJSCgpyZXNvbHV0aW9uGAIgASgLMj4uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuT3ZlcmxheS5Ob3JtYWxpemVk",
-            "Q29vcmRpbmF0ZRINCgVhbHBoYRgDIAEoARqTAQoPQW5pbWF0aW9uU3RhdGlj",
-            "EkoKAnh5GAEgASgLMj4uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
-            "djEuT3ZlcmxheS5Ob3JtYWxpemVkQ29vcmRpbmF0ZRI0ChFzdGFydF90aW1l",
-            "X29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhqRAgoN",
-            "QW5pbWF0aW9uRmFkZRJKCglmYWRlX3R5cGUYASABKA4yMi5nb29nbGUuY2xv",
-            "dWQudmlkZW8udHJhbnNjb2Rlci52MS5PdmVybGF5LkZhZGVUeXBlQgPgQQIS",
-            "SgoCeHkYAiABKAsyPi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52",
-            "MS5PdmVybGF5Lk5vcm1hbGl6ZWRDb29yZGluYXRlEjQKEXN0YXJ0X3RpbWVf",
-            "b2Zmc2V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD2Vu",
-            "ZF90aW1lX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bhpECgxBbmltYXRpb25FbmQSNAoRc3RhcnRfdGltZV9vZmZzZXQYASABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24amAIKCUFuaW1hdGlvbhJVChBh",
-            "bmltYXRpb25fc3RhdGljGAEgASgLMjkuZ29vZ2xlLmNsb3VkLnZpZGVvLnRy",
-            "YW5zY29kZXIudjEuT3ZlcmxheS5BbmltYXRpb25TdGF0aWNIABJRCg5hbmlt",
-            "YXRpb25fZmFkZRgCIAEoCzI3Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
-            "ZGVyLnYxLk92ZXJsYXkuQW5pbWF0aW9uRmFkZUgAEk8KDWFuaW1hdGlvbl9l",
-            "bmQYAyABKAsyNi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5P",
-            "dmVybGF5LkFuaW1hdGlvbkVuZEgAQhAKDmFuaW1hdGlvbl90eXBlIkAKCEZh",
-            "ZGVUeXBlEhkKFUZBREVfVFlQRV9VTlNQRUNJRklFRBAAEgsKB0ZBREVfSU4Q",
-            "ARIMCghGQURFX09VVBACIvMKChNQcmVwcm9jZXNzaW5nQ29uZmlnEkoKBWNv",
-            "bG9yGAEgASgLMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEu",
-            "UHJlcHJvY2Vzc2luZ0NvbmZpZy5Db2xvchJOCgdkZW5vaXNlGAIgASgLMj0u",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2lu",
-            "Z0NvbmZpZy5EZW5vaXNlEk4KB2RlYmxvY2sYAyABKAsyPS5nb29nbGUuY2xv",
-            "dWQudmlkZW8udHJhbnNjb2Rlci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLkRl",
-            "YmxvY2sSSgoFYXVkaW8YBCABKAsyOy5nb29nbGUuY2xvdWQudmlkZW8udHJh",
-            "bnNjb2Rlci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLkF1ZGlvEkgKBGNyb3AY",
-            "BSABKAsyOi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5QcmVw",
-            "cm9jZXNzaW5nQ29uZmlnLkNyb3ASRgoDcGFkGAYgASgLMjkuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5Q",
-            "YWQSVgoLZGVpbnRlcmxhY2UYByABKAsyQS5nb29nbGUuY2xvdWQudmlkZW8u",
-            "dHJhbnNjb2Rlci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLkRlaW50ZXJsYWNl",
-            "GkEKBUNvbG9yEhIKCnNhdHVyYXRpb24YASABKAESEAoIY29udHJhc3QYAiAB",
-            "KAESEgoKYnJpZ2h0bmVzcxgDIAEoARopCgdEZW5vaXNlEhAKCHN0cmVuZ3Ro",
-            "GAEgASgBEgwKBHR1bmUYAiABKAkaLAoHRGVibG9jaxIQCghzdHJlbmd0aBgB",
-            "IAEoARIPCgdlbmFibGVkGAIgASgIGjwKBUF1ZGlvEgwKBGx1ZnMYASABKAES",
-            "EgoKaGlnaF9ib29zdBgCIAEoCBIRCglsb3dfYm9vc3QYAyABKAgaXAoEQ3Jv",
-            "cBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUS",
-            "EwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFGlsK",
-            "A1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiAB",
-            "KAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgF",
-            "GqQDCgtEZWludGVybGFjZRJeCgV5YWRpZhgBIAEoCzJNLmdvb2dsZS5jbG91",
-            "ZC52aWRlby50cmFuc2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25maWcuRGVp",
-            "bnRlcmxhY2UuWWFkaWZDb25maWdIABJeCgVid2RpZhgCIAEoCzJNLmdvb2ds",
+            "YXRlZ3lCA+BBARIeChFmaWxsX2NvbnRlbnRfZ2FwcxgZIAEoCEID4EEBGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "aAoPUHJvY2Vzc2luZ1N0YXRlEiAKHFBST0NFU1NJTkdfU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABILCgdQRU5ESU5HEAESCwoHUlVOTklORxACEg0KCVNVQ0NFRURF",
+            "RBADEgoKBkZBSUxFRBAEIm0KDlByb2Nlc3NpbmdNb2RlEh8KG1BST0NFU1NJ",
+            "TkdfTU9ERV9VTlNQRUNJRklFRBAAEh8KG1BST0NFU1NJTkdfTU9ERV9JTlRF",
+            "UkFDVElWRRABEhkKFVBST0NFU1NJTkdfTU9ERV9CQVRDSBACIlsKFE9wdGlt",
+            "aXphdGlvblN0cmF0ZWd5EiUKIU9QVElNSVpBVElPTl9TVFJBVEVHWV9VTlNQ",
+            "RUNJRklFRBAAEg4KCkFVVE9ERVRFQ1QQARIMCghESVNBQkxFRBACOlbqQVMK",
+            "HXRyYW5zY29kZXIuZ29vZ2xlYXBpcy5jb20vSm9iEjJwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9ifUIMCgpqb2Jf",
+            "Y29uZmlnIsMCCgtKb2JUZW1wbGF0ZRIMCgRuYW1lGAEgASgJEjsKBmNvbmZp",
+            "ZxgCIAEoCzIrLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkpv",
+            "YkNvbmZpZxJJCgZsYWJlbHMYAyADKAsyOS5nb29nbGUuY2xvdWQudmlkZW8u",
+            "dHJhbnNjb2Rlci52MS5Kb2JUZW1wbGF0ZS5MYWJlbHNFbnRyeRotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOm/qQWwK",
+            "JXRyYW5zY29kZXIuZ29vZ2xlYXBpcy5jb20vSm9iVGVtcGxhdGUSQ3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JUZW1wbGF0",
+            "ZXMve2pvYl90ZW1wbGF0ZX0i4wUKCUpvYkNvbmZpZxI3CgZpbnB1dHMYASAD",
+            "KAsyJy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5JbnB1dBI9",
+            "CgllZGl0X2xpc3QYAiADKAsyKi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
+            "b2Rlci52MS5FZGl0QXRvbRJOChJlbGVtZW50YXJ5X3N0cmVhbXMYAyADKAsy",
+            "Mi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5FbGVtZW50YXJ5",
+            "U3RyZWFtEkAKC211eF9zdHJlYW1zGAQgAygLMisuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnRyYW5zY29kZXIudjEuTXV4U3RyZWFtEj0KCW1hbmlmZXN0cxgFIAMo",
+            "CzIqLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk1hbmlmZXN0",
+            "EjgKBm91dHB1dBgGIAEoCzIoLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
+            "ZGVyLnYxLk91dHB1dBI8CglhZF9icmVha3MYByADKAsyKS5nb29nbGUuY2xv",
+            "dWQudmlkZW8udHJhbnNjb2Rlci52MS5BZEJyZWFrEk8KEnB1YnN1Yl9kZXN0",
+            "aW5hdGlvbhgIIAEoCzIzLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
+            "LnYxLlB1YnN1YkRlc3RpbmF0aW9uEkQKDXNwcml0ZV9zaGVldHMYCSADKAsy",
+            "LS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5TcHJpdGVTaGVl",
+            "dBI7CghvdmVybGF5cxgKIAMoCzIpLmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
+            "c2NvZGVyLnYxLk92ZXJsYXkSQQoLZW5jcnlwdGlvbnMYCyADKAsyLC5nb29n",
+            "bGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5FbmNyeXB0aW9uInYKBUlu",
+            "cHV0EgsKA2tleRgBIAEoCRILCgN1cmkYAiABKAkSUwoUcHJlcHJvY2Vzc2lu",
+            "Z19jb25maWcYAyABKAsyNS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
+            "ci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnIhUKBk91dHB1dBILCgN1cmkYASAB",
+            "KAkikQEKCEVkaXRBdG9tEgsKA2tleRgBIAEoCRIOCgZpbnB1dHMYAiADKAkS",
+            "MgoPZW5kX3RpbWVfb2Zmc2V0GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uEjQKEXN0YXJ0X3RpbWVfb2Zmc2V0GAQgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uIj8KB0FkQnJlYWsSNAoRc3RhcnRfdGltZV9vZmZz",
+            "ZXQYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24ihwIKEEVsZW1l",
+            "bnRhcnlTdHJlYW0SCwoDa2V5GAQgASgJEkUKDHZpZGVvX3N0cmVhbRgBIAEo",
+            "CzItLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlZpZGVvU3Ry",
+            "ZWFtSAASRQoMYXVkaW9fc3RyZWFtGAIgASgLMi0uZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnRyYW5zY29kZXIudjEuQXVkaW9TdHJlYW1IABJDCgt0ZXh0X3N0cmVh",
+            "bRgDIAEoCzIsLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlRl",
+            "eHRTdHJlYW1IAEITChFlbGVtZW50YXJ5X3N0cmVhbSLFAgoJTXV4U3RyZWFt",
+            "EgsKA2tleRgBIAEoCRIRCglmaWxlX25hbWUYAiABKAkSEQoJY29udGFpbmVy",
+            "GAMgASgJEhoKEmVsZW1lbnRhcnlfc3RyZWFtcxgEIAMoCRJLChBzZWdtZW50",
+            "X3NldHRpbmdzGAUgASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
+            "ZXIudjEuU2VnbWVudFNldHRpbmdzEhUKDWVuY3J5cHRpb25faWQYByABKAkS",
+            "SwoEZm1wNBgIIAEoCzI2Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
+            "LnYxLk11eFN0cmVhbS5GbXA0Q29uZmlnQgPgQQFIABokCgpGbXA0Q29uZmln",
+            "EhYKCWNvZGVjX3RhZxgBIAEoCUID4EEBQhIKEGNvbnRhaW5lcl9jb25maWci",
+            "kQQKCE1hbmlmZXN0EhEKCWZpbGVfbmFtZRgBIAEoCRJKCgR0eXBlGAIgASgO",
+            "MjcuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuTWFuaWZlc3Qu",
+            "TWFuaWZlc3RUeXBlQgPgQQISGAoLbXV4X3N0cmVhbXMYAyADKAlCA+BBAhJF",
+            "CgRkYXNoGAQgASgLMjUuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
+            "djEuTWFuaWZlc3QuRGFzaENvbmZpZ0gAGu8BCgpEYXNoQ29uZmlnEm4KGHNl",
+            "Z21lbnRfcmVmZXJlbmNlX3NjaGVtZRgBIAEoDjJMLmdvb2dsZS5jbG91ZC52",
+            "aWRlby50cmFuc2NvZGVyLnYxLk1hbmlmZXN0LkRhc2hDb25maWcuU2VnbWVu",
+            "dFJlZmVyZW5jZVNjaGVtZSJxChZTZWdtZW50UmVmZXJlbmNlU2NoZW1lEigK",
+            "JFNFR01FTlRfUkVGRVJFTkNFX1NDSEVNRV9VTlNQRUNJRklFRBAAEhAKDFNF",
+            "R01FTlRfTElTVBABEhsKF1NFR01FTlRfVEVNUExBVEVfTlVNQkVSEAIiQAoM",
+            "TWFuaWZlc3RUeXBlEh0KGU1BTklGRVNUX1RZUEVfVU5TUEVDSUZJRUQQABIH",
+            "CgNITFMQARIICgREQVNIEAJCEQoPbWFuaWZlc3RfY29uZmlnIiIKEVB1YnN1",
+            "YkRlc3RpbmF0aW9uEg0KBXRvcGljGAEgASgJIv0CCgtTcHJpdGVTaGVldBIO",
+            "CgZmb3JtYXQYASABKAkSGAoLZmlsZV9wcmVmaXgYAiABKAlCA+BBAhIgChNz",
+            "cHJpdGVfd2lkdGhfcGl4ZWxzGAMgASgFQgPgQQISIQoUc3ByaXRlX2hlaWdo",
+            "dF9waXhlbHMYBCABKAVCA+BBAhIUCgxjb2x1bW5fY291bnQYBSABKAUSEQoJ",
+            "cm93X2NvdW50GAYgASgFEjQKEXN0YXJ0X3RpbWVfb2Zmc2V0GAcgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD2VuZF90aW1lX29mZnNldBgI",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIVCgt0b3RhbF9jb3Vu",
+            "dBgJIAEoBUgAEi0KCGludGVydmFsGAogASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uSAASDwoHcXVhbGl0eRgLIAEoBUIVChNleHRyYWN0aW9uX3N0",
+            "cmF0ZWd5IosJCgdPdmVybGF5Ej4KBWltYWdlGAEgASgLMi8uZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLnRyYW5zY29kZXIudjEuT3ZlcmxheS5JbWFnZRJHCgphbmlt",
+            "YXRpb25zGAIgAygLMjMuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
+            "djEuT3ZlcmxheS5BbmltYXRpb24aLAoUTm9ybWFsaXplZENvb3JkaW5hdGUS",
+            "CQoBeBgBIAEoARIJCgF5GAIgASgBGnwKBUltYWdlEhAKA3VyaRgBIAEoCUID",
+            "4EECElIKCnJlc29sdXRpb24YAiABKAsyPi5nb29nbGUuY2xvdWQudmlkZW8u",
+            "dHJhbnNjb2Rlci52MS5PdmVybGF5Lk5vcm1hbGl6ZWRDb29yZGluYXRlEg0K",
+            "BWFscGhhGAMgASgBGpMBCg9BbmltYXRpb25TdGF0aWMSSgoCeHkYASABKAsy",
+            "Pi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5PdmVybGF5Lk5v",
+            "cm1hbGl6ZWRDb29yZGluYXRlEjQKEXN0YXJ0X3RpbWVfb2Zmc2V0GAIgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGpECCg1BbmltYXRpb25GYWRl",
+            "EkoKCWZhZGVfdHlwZRgBIAEoDjIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
+            "c2NvZGVyLnYxLk92ZXJsYXkuRmFkZVR5cGVCA+BBAhJKCgJ4eRgCIAEoCzI+",
+            "Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk92ZXJsYXkuTm9y",
+            "bWFsaXplZENvb3JkaW5hdGUSNAoRc3RhcnRfdGltZV9vZmZzZXQYAyABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoPZW5kX3RpbWVfb2Zmc2V0",
+            "GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGkQKDEFuaW1hdGlv",
+            "bkVuZBI0ChFzdGFydF90aW1lX29mZnNldBgBIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbhqYAgoJQW5pbWF0aW9uElUKEGFuaW1hdGlvbl9zdGF0",
+            "aWMYASABKAsyOS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5P",
+            "dmVybGF5LkFuaW1hdGlvblN0YXRpY0gAElEKDmFuaW1hdGlvbl9mYWRlGAIg",
+            "ASgLMjcuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuT3Zlcmxh",
+            "eS5BbmltYXRpb25GYWRlSAASTwoNYW5pbWF0aW9uX2VuZBgDIAEoCzI2Lmdv",
+            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk92ZXJsYXkuQW5pbWF0",
+            "aW9uRW5kSABCEAoOYW5pbWF0aW9uX3R5cGUiQAoIRmFkZVR5cGUSGQoVRkFE",
+            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHRkFERV9JThABEgwKCEZBREVfT1VU",
+            "EAIi8woKE1ByZXByb2Nlc3NpbmdDb25maWcSSgoFY29sb3IYASABKAsyOy5n",
+            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5QcmVwcm9jZXNzaW5n",
+            "Q29uZmlnLkNvbG9yEk4KB2Rlbm9pc2UYAiABKAsyPS5nb29nbGUuY2xvdWQu",
+            "dmlkZW8udHJhbnNjb2Rlci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLkRlbm9p",
+            "c2USTgoHZGVibG9jaxgDIAEoCzI9Lmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
+            "c2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25maWcuRGVibG9jaxJKCgVhdWRp",
+            "bxgEIAEoCzI7Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlBy",
+            "ZXByb2Nlc3NpbmdDb25maWcuQXVkaW8SSAoEY3JvcBgFIAEoCzI6Lmdvb2ds",
             "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25m",
-            "aWcuRGVpbnRlcmxhY2UuQndkaWZDb25maWdIABpwCgtZYWRpZkNvbmZpZxIM",
-            "CgRtb2RlGAEgASgJEiMKG2Rpc2FibGVfc3BhdGlhbF9pbnRlcmxhY2luZxgC",
-            "IAEoCBIOCgZwYXJpdHkYAyABKAkSHgoWZGVpbnRlcmxhY2VfYWxsX2ZyYW1l",
-            "cxgEIAEoCBpLCgtCd2RpZkNvbmZpZxIMCgRtb2RlGAEgASgJEg4KBnBhcml0",
-            "eRgCIAEoCRIeChZkZWludGVybGFjZV9hbGxfZnJhbWVzGAMgASgIQhYKFGRl",
-            "aW50ZXJsYWNpbmdfZmlsdGVyIpUMCgtWaWRlb1N0cmVhbRJPCgRoMjY0GAEg",
-            "ASgLMj8uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9T",
-            "dHJlYW0uSDI2NENvZGVjU2V0dGluZ3NIABJPCgRoMjY1GAIgASgLMj8uZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9TdHJlYW0uSDI2",
-            "NUNvZGVjU2V0dGluZ3NIABJNCgN2cDkYAyABKAsyPi5nb29nbGUuY2xvdWQu",
-            "dmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5WcDlDb2RlY1NldHRp",
-            "bmdzSAAa+QMKEUgyNjRDb2RlY1NldHRpbmdzEhQKDHdpZHRoX3BpeGVscxgB",
-            "IAEoBRIVCg1oZWlnaHRfcGl4ZWxzGAIgASgFEhcKCmZyYW1lX3JhdGUYAyAB",
-            "KAFCA+BBAhIYCgtiaXRyYXRlX2JwcxgEIAEoBUID4EECEhQKDHBpeGVsX2Zv",
+            "aWcuQ3JvcBJGCgNwYWQYBiABKAsyOS5nb29nbGUuY2xvdWQudmlkZW8udHJh",
+            "bnNjb2Rlci52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLlBhZBJWCgtkZWludGVy",
+            "bGFjZRgHIAEoCzJBLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYx",
+            "LlByZXByb2Nlc3NpbmdDb25maWcuRGVpbnRlcmxhY2UaQQoFQ29sb3ISEgoK",
+            "c2F0dXJhdGlvbhgBIAEoARIQCghjb250cmFzdBgCIAEoARISCgpicmlnaHRu",
+            "ZXNzGAMgASgBGikKB0Rlbm9pc2USEAoIc3RyZW5ndGgYASABKAESDAoEdHVu",
+            "ZRgCIAEoCRosCgdEZWJsb2NrEhAKCHN0cmVuZ3RoGAEgASgBEg8KB2VuYWJs",
+            "ZWQYAiABKAgaPAoFQXVkaW8SDAoEbHVmcxgBIAEoARISCgpoaWdoX2Jvb3N0",
+            "GAIgASgIEhEKCWxvd19ib29zdBgDIAEoCBpcCgRDcm9wEhIKCnRvcF9waXhl",
+            "bHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEoBRITCgtsZWZ0X3BpeGVs",
+            "cxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUaWwoDUGFkEhIKCnRvcF9w",
+            "aXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEoBRITCgtsZWZ0X3Bp",
+            "eGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUapAMKC0RlaW50ZXJs",
+            "YWNlEl4KBXlhZGlmGAEgASgLMk0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
+            "Y29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5EZWludGVybGFjZS5ZYWRp",
+            "ZkNvbmZpZ0gAEl4KBWJ3ZGlmGAIgASgLMk0uZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5EZWludGVybGFj",
+            "ZS5Cd2RpZkNvbmZpZ0gAGnAKC1lhZGlmQ29uZmlnEgwKBG1vZGUYASABKAkS",
+            "IwobZGlzYWJsZV9zcGF0aWFsX2ludGVybGFjaW5nGAIgASgIEg4KBnBhcml0",
+            "eRgDIAEoCRIeChZkZWludGVybGFjZV9hbGxfZnJhbWVzGAQgASgIGksKC0J3",
+            "ZGlmQ29uZmlnEgwKBG1vZGUYASABKAkSDgoGcGFyaXR5GAIgASgJEh4KFmRl",
+            "aW50ZXJsYWNlX2FsbF9mcmFtZXMYAyABKAhCFgoUZGVpbnRlcmxhY2luZ19m",
+            "aWx0ZXIilhYKC1ZpZGVvU3RyZWFtEk8KBGgyNjQYASABKAsyPy5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5IMjY0Q29k",
+            "ZWNTZXR0aW5nc0gAEk8KBGgyNjUYAiABKAsyPy5nb29nbGUuY2xvdWQudmlk",
+            "ZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5IMjY1Q29kZWNTZXR0aW5n",
+            "c0gAEk0KA3ZwORgDIAEoCzI+Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
+            "ZGVyLnYxLlZpZGVvU3RyZWFtLlZwOUNvZGVjU2V0dGluZ3NIABoUChJIMjY0",
+            "Q29sb3JGb3JtYXRTRFIaFAoSSDI2NENvbG9yRm9ybWF0SExHGq0GChFIMjY0",
+            "Q29kZWNTZXR0aW5ncxIUCgx3aWR0aF9waXhlbHMYASABKAUSFQoNaGVpZ2h0",
+            "X3BpeGVscxgCIAEoBRIXCgpmcmFtZV9yYXRlGAMgASgBQgPgQQISdgoeZnJh",
+            "bWVfcmF0ZV9jb252ZXJzaW9uX3N0cmF0ZWd5GBcgASgOMkkuZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9TdHJlYW0uRnJhbWVSYXRl",
+            "Q29udmVyc2lvblN0cmF0ZWd5QgPgQQESGAoLYml0cmF0ZV9icHMYBCABKAVC",
+            "A+BBAhIUCgxwaXhlbF9mb3JtYXQYBSABKAkSGQoRcmF0ZV9jb250cm9sX21v",
+            "ZGUYBiABKAkSEQoJY3JmX2xldmVsGAcgASgFEhYKDmFsbG93X29wZW5fZ29w",
+            "GAggASgIEhkKD2dvcF9mcmFtZV9jb3VudBgJIAEoBUgAEjEKDGdvcF9kdXJh",
+            "dGlvbhgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhcKD2Vu",
+            "YWJsZV90d29fcGFzcxgLIAEoCBIVCg12YnZfc2l6ZV9iaXRzGAwgASgFEhkK",
+            "EXZidl9mdWxsbmVzc19iaXRzGA0gASgFEhUKDWVudHJvcHlfY29kZXIYDiAB",
+            "KAkSEQoJYl9weXJhbWlkGA8gASgIEhUKDWJfZnJhbWVfY291bnQYECABKAUS",
+            "EwoLYXFfc3RyZW5ndGgYESABKAESDwoHcHJvZmlsZRgSIAEoCRIMCgR0dW5l",
+            "GBMgASgJEg4KBnByZXNldBgUIAEoCRJUCgNzZHIYFSABKAsyQC5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5IMjY0Q29s",
+            "b3JGb3JtYXRTRFJCA+BBAUgBElQKA2hsZxgWIAEoCzJALmdvb2dsZS5jbG91",
+            "ZC52aWRlby50cmFuc2NvZGVyLnYxLlZpZGVvU3RyZWFtLkgyNjRDb2xvckZv",
+            "cm1hdEhMR0ID4EEBSAFCCgoIZ29wX21vZGVCDgoMY29sb3JfZm9ybWF0GhQK",
+            "EkgyNjVDb2xvckZvcm1hdFNEUhoUChJIMjY1Q29sb3JGb3JtYXRITEcaFgoU",
+            "SDI2NUNvbG9yRm9ybWF0SERSMTAa8AYKEUgyNjVDb2RlY1NldHRpbmdzEhQK",
+            "DHdpZHRoX3BpeGVscxgBIAEoBRIVCg1oZWlnaHRfcGl4ZWxzGAIgASgFEhcK",
+            "CmZyYW1lX3JhdGUYAyABKAFCA+BBAhJ2Ch5mcmFtZV9yYXRlX2NvbnZlcnNp",
+            "b25fc3RyYXRlZ3kYFyABKA4ySS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
+            "b2Rlci52MS5WaWRlb1N0cmVhbS5GcmFtZVJhdGVDb252ZXJzaW9uU3RyYXRl",
+            "Z3lCA+BBARIYCgtiaXRyYXRlX2JwcxgEIAEoBUID4EECEhQKDHBpeGVsX2Zv",
             "cm1hdBgFIAEoCRIZChFyYXRlX2NvbnRyb2xfbW9kZRgGIAEoCRIRCgljcmZf",
             "bGV2ZWwYByABKAUSFgoOYWxsb3dfb3Blbl9nb3AYCCABKAgSGQoPZ29wX2Zy",
             "YW1lX2NvdW50GAkgASgFSAASMQoMZ29wX2R1cmF0aW9uGAogASgLMhkuZ29v",
             "Z2xlLnByb3RvYnVmLkR1cmF0aW9uSAASFwoPZW5hYmxlX3R3b19wYXNzGAsg",
             "ASgIEhUKDXZidl9zaXplX2JpdHMYDCABKAUSGQoRdmJ2X2Z1bGxuZXNzX2Jp",
-            "dHMYDSABKAUSFQoNZW50cm9weV9jb2RlchgOIAEoCRIRCgliX3B5cmFtaWQY",
-            "DyABKAgSFQoNYl9mcmFtZV9jb3VudBgQIAEoBRITCgthcV9zdHJlbmd0aBgR",
-            "IAEoARIPCgdwcm9maWxlGBIgASgJEgwKBHR1bmUYEyABKAkSDgoGcHJlc2V0",
-            "GBQgASgJQgoKCGdvcF9tb2RlGuIDChFIMjY1Q29kZWNTZXR0aW5ncxIUCgx3",
-            "aWR0aF9waXhlbHMYASABKAUSFQoNaGVpZ2h0X3BpeGVscxgCIAEoBRIXCgpm",
-            "cmFtZV9yYXRlGAMgASgBQgPgQQISGAoLYml0cmF0ZV9icHMYBCABKAVCA+BB",
-            "AhIUCgxwaXhlbF9mb3JtYXQYBSABKAkSGQoRcmF0ZV9jb250cm9sX21vZGUY",
-            "BiABKAkSEQoJY3JmX2xldmVsGAcgASgFEhYKDmFsbG93X29wZW5fZ29wGAgg",
-            "ASgIEhkKD2dvcF9mcmFtZV9jb3VudBgJIAEoBUgAEjEKDGdvcF9kdXJhdGlv",
-            "bhgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhcKD2VuYWJs",
-            "ZV90d29fcGFzcxgLIAEoCBIVCg12YnZfc2l6ZV9iaXRzGAwgASgFEhkKEXZi",
-            "dl9mdWxsbmVzc19iaXRzGA0gASgFEhEKCWJfcHlyYW1pZBgOIAEoCBIVCg1i",
-            "X2ZyYW1lX2NvdW50GA8gASgFEhMKC2FxX3N0cmVuZ3RoGBAgASgBEg8KB3By",
-            "b2ZpbGUYESABKAkSDAoEdHVuZRgSIAEoCRIOCgZwcmVzZXQYEyABKAlCCgoI",
-            "Z29wX21vZGUaoQIKEFZwOUNvZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxz",
-            "GAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgD",
-            "IAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQgASgFQgPgQQISFAoMcGl4ZWxf",
-            "Zm9ybWF0GAUgASgJEhkKEXJhdGVfY29udHJvbF9tb2RlGAYgASgJEhEKCWNy",
-            "Zl9sZXZlbBgHIAEoBRIZCg9nb3BfZnJhbWVfY291bnQYCCABKAVIABIxCgxn",
-            "b3BfZHVyYXRpb24YCSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25I",
-            "ABIPCgdwcm9maWxlGAogASgJQgoKCGdvcF9tb2RlQhAKDmNvZGVjX3NldHRp",
-            "bmdzIp4DCgtBdWRpb1N0cmVhbRINCgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRl",
-            "X2JwcxgCIAEoBUID4EECEhUKDWNoYW5uZWxfY291bnQYAyABKAUSFgoOY2hh",
-            "bm5lbF9sYXlvdXQYBCADKAkSSwoHbWFwcGluZxgFIAMoCzI6Lmdvb2dsZS5j",
-            "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkF1ZGlvU3RyZWFtLkF1ZGlvTWFw",
-            "cGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgGIAEoBRIVCg1sYW5ndWFnZV9j",
-            "b2RlGAcgASgJEhQKDGRpc3BsYXlfbmFtZRgIIAEoCRqhAQoMQXVkaW9NYXBw",
-            "aW5nEhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJ",
-            "QgPgQQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAhIaCg1pbnB1dF9jaGFu",
-            "bmVsGAQgASgFQgPgQQISGwoOb3V0cHV0X2NoYW5uZWwYBSABKAVCA+BBAhIP",
-            "CgdnYWluX2RiGAYgASgBIusBCgpUZXh0U3RyZWFtEg0KBWNvZGVjGAEgASgJ",
-            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSSQoHbWFwcGluZxgDIAMoCzI4Lmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlRleHRTdHJlYW0uVGV4",
-            "dE1hcHBpbmcSFAoMZGlzcGxheV9uYW1lGAQgASgJGlYKC1RleHRNYXBwaW5n",
-            "EhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJQgPg",
-            "QQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAiJoCg9TZWdtZW50U2V0dGlu",
-            "Z3MSMwoQc2VnbWVudF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhIgChNpbmRpdmlkdWFsX3NlZ21lbnRzGAMgASgIQgPgQQIi",
-            "7wcKCkVuY3J5cHRpb24SDwoCaWQYBiABKAlCA+BBAhJQCgdhZXNfMTI4GAMg",
-            "ASgLMj0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuRW5jcnlw",
-            "dGlvbi5BZXMxMjhFbmNyeXB0aW9uSAASVgoKc2FtcGxlX2FlcxgEIAEoCzJA",
-            "Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkVuY3J5cHRpb24u",
-            "U2FtcGxlQWVzRW5jcnlwdGlvbkgAElYKCW1wZWdfY2VuYxgFIAEoCzJBLmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkVuY3J5cHRpb24uTXBl",
-            "Z0NvbW1vbkVuY3J5cHRpb25IABJlChlzZWNyZXRfbWFuYWdlcl9rZXlfc291",
-            "cmNlGAcgASgLMkAuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEu",
-            "RW5jcnlwdGlvbi5TZWNyZXRNYW5hZ2VyU291cmNlSAESUQoLZHJtX3N5c3Rl",
-            "bXMYCCABKAsyNy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5F",
-            "bmNyeXB0aW9uLkRybVN5c3RlbXNCA+BBAhoSChBBZXMxMjhFbmNyeXB0aW9u",
-            "GhUKE1NhbXBsZUFlc0VuY3J5cHRpb24aKwoUTXBlZ0NvbW1vbkVuY3J5cHRp",
-            "b24SEwoGc2NoZW1lGAIgASgJQgPgQQIaMgoTU2VjcmV0TWFuYWdlclNvdXJj",
-            "ZRIbCg5zZWNyZXRfdmVyc2lvbhgBIAEoCUID4EECGgoKCFdpZGV2aW5lGgoK",
-            "CEZhaXJwbGF5GgsKCVBsYXlyZWFkeRoKCghDbGVhcmtleRqyAgoKRHJtU3lz",
-            "dGVtcxJHCgh3aWRldmluZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC52aWRlby50",
-            "cmFuc2NvZGVyLnYxLkVuY3J5cHRpb24uV2lkZXZpbmUSRwoIZmFpcnBsYXkY",
-            "AiABKAsyNS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5FbmNy",
-            "eXB0aW9uLkZhaXJwbGF5EkkKCXBsYXlyZWFkeRgDIAEoCzI2Lmdvb2dsZS5j",
-            "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkVuY3J5cHRpb24uUGxheXJlYWR5",
-            "EkcKCGNsZWFya2V5GAQgASgLMjUuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
-            "Y29kZXIudjEuRW5jcnlwdGlvbi5DbGVhcmtleUIRCg9lbmNyeXB0aW9uX21v",
-            "ZGVCDwoNc2VjcmV0X3NvdXJjZUJ+CiRjb20uZ29vZ2xlLmNsb3VkLnZpZGVv",
-            "LnRyYW5zY29kZXIudjFCDlJlc291cmNlc1Byb3RvUAFaRGNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vdmlkZW8vdHJhbnNjb2Rlci9hcGl2MS90cmFuc2NvZGVycGI7",
-            "dHJhbnNjb2RlcnBiYgZwcm90bzM="));
+            "dHMYDSABKAUSEQoJYl9weXJhbWlkGA4gASgIEhUKDWJfZnJhbWVfY291bnQY",
+            "DyABKAUSEwoLYXFfc3RyZW5ndGgYECABKAESDwoHcHJvZmlsZRgRIAEoCRIM",
+            "CgR0dW5lGBIgASgJEg4KBnByZXNldBgTIAEoCRJUCgNzZHIYFCABKAsyQC5n",
+            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5I",
+            "MjY1Q29sb3JGb3JtYXRTRFJCA+BBAUgBElQKA2hsZxgVIAEoCzJALmdvb2ds",
+            "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlZpZGVvU3RyZWFtLkgyNjVD",
+            "b2xvckZvcm1hdEhMR0ID4EEBSAESWAoFaGRyMTAYFiABKAsyQi5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5IMjY1Q29s",
+            "b3JGb3JtYXRIRFIxMEID4EEBSAFCCgoIZ29wX21vZGVCDgoMY29sb3JfZm9y",
+            "bWF0GhMKEVZwOUNvbG9yRm9ybWF0U0RSGhMKEVZwOUNvbG9yRm9ybWF0SExH",
+            "GtMEChBWcDlDb2RlY1NldHRpbmdzEhQKDHdpZHRoX3BpeGVscxgBIAEoBRIV",
+            "Cg1oZWlnaHRfcGl4ZWxzGAIgASgFEhcKCmZyYW1lX3JhdGUYAyABKAFCA+BB",
+            "AhJ2Ch5mcmFtZV9yYXRlX2NvbnZlcnNpb25fc3RyYXRlZ3kYDSABKA4ySS5n",
+            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5G",
+            "cmFtZVJhdGVDb252ZXJzaW9uU3RyYXRlZ3lCA+BBARIYCgtiaXRyYXRlX2Jw",
+            "cxgEIAEoBUID4EECEhQKDHBpeGVsX2Zvcm1hdBgFIAEoCRIZChFyYXRlX2Nv",
+            "bnRyb2xfbW9kZRgGIAEoCRIRCgljcmZfbGV2ZWwYByABKAUSGQoPZ29wX2Zy",
+            "YW1lX2NvdW50GAggASgFSAASMQoMZ29wX2R1cmF0aW9uGAkgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uSAASDwoHcHJvZmlsZRgKIAEoCRJTCgNz",
+            "ZHIYCyABKAsyPy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5W",
+            "aWRlb1N0cmVhbS5WcDlDb2xvckZvcm1hdFNEUkID4EEBSAESUwoDaGxnGAwg",
+            "ASgLMj8uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9T",
+            "dHJlYW0uVnA5Q29sb3JGb3JtYXRITEdCA+BBAUgBQgoKCGdvcF9tb2RlQg4K",
+            "DGNvbG9yX2Zvcm1hdCJxChtGcmFtZVJhdGVDb252ZXJzaW9uU3RyYXRlZ3kS",
+            "LgoqRlJBTUVfUkFURV9DT05WRVJTSU9OX1NUUkFURUdZX1VOU1BFQ0lGSUVE",
+            "EAASDgoKRE9XTlNBTVBMRRABEhIKDkRST1BfRFVQTElDQVRFEAJCEAoOY29k",
+            "ZWNfc2V0dGluZ3MingMKC0F1ZGlvU3RyZWFtEg0KBWNvZGVjGAEgASgJEhgK",
+            "C2JpdHJhdGVfYnBzGAIgASgFQgPgQQISFQoNY2hhbm5lbF9jb3VudBgDIAEo",
+            "BRIWCg5jaGFubmVsX2xheW91dBgEIAMoCRJLCgdtYXBwaW5nGAUgAygLMjou",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuQXVkaW9TdHJlYW0u",
+            "QXVkaW9NYXBwaW5nEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAYgASgFEhUKDWxh",
+            "bmd1YWdlX2NvZGUYByABKAkSFAoMZGlzcGxheV9uYW1lGAggASgJGqEBCgxB",
+            "dWRpb01hcHBpbmcSFQoIYXRvbV9rZXkYASABKAlCA+BBAhIWCglpbnB1dF9r",
+            "ZXkYAiABKAlCA+BBAhIYCgtpbnB1dF90cmFjaxgDIAEoBUID4EECEhoKDWlu",
+            "cHV0X2NoYW5uZWwYBCABKAVCA+BBAhIbCg5vdXRwdXRfY2hhbm5lbBgFIAEo",
+            "BUID4EECEg8KB2dhaW5fZGIYBiABKAEi6wEKClRleHRTdHJlYW0SDQoFY29k",
+            "ZWMYASABKAkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRJJCgdtYXBwaW5nGAMg",
+            "AygLMjguZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVGV4dFN0",
+            "cmVhbS5UZXh0TWFwcGluZxIUCgxkaXNwbGF5X25hbWUYBCABKAkaVgoLVGV4",
+            "dE1hcHBpbmcSFQoIYXRvbV9rZXkYASABKAlCA+BBAhIWCglpbnB1dF9rZXkY",
+            "AiABKAlCA+BBAhIYCgtpbnB1dF90cmFjaxgDIAEoBUID4EECImgKD1NlZ21l",
+            "bnRTZXR0aW5ncxIzChBzZWdtZW50X2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uEiAKE2luZGl2aWR1YWxfc2VnbWVudHMYAyAB",
+            "KAhCA+BBAiLvBwoKRW5jcnlwdGlvbhIPCgJpZBgGIAEoCUID4EECElAKB2Fl",
+            "c18xMjgYAyABKAsyPS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52",
+            "MS5FbmNyeXB0aW9uLkFlczEyOEVuY3J5cHRpb25IABJWCgpzYW1wbGVfYWVz",
+            "GAQgASgLMkAuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuRW5j",
+            "cnlwdGlvbi5TYW1wbGVBZXNFbmNyeXB0aW9uSAASVgoJbXBlZ19jZW5jGAUg",
+            "ASgLMkEuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuRW5jcnlw",
+            "dGlvbi5NcGVnQ29tbW9uRW5jcnlwdGlvbkgAEmUKGXNlY3JldF9tYW5hZ2Vy",
+            "X2tleV9zb3VyY2UYByABKAsyQC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
+            "b2Rlci52MS5FbmNyeXB0aW9uLlNlY3JldE1hbmFnZXJTb3VyY2VIARJRCgtk",
+            "cm1fc3lzdGVtcxgIIAEoCzI3Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
+            "ZGVyLnYxLkVuY3J5cHRpb24uRHJtU3lzdGVtc0ID4EECGhIKEEFlczEyOEVu",
+            "Y3J5cHRpb24aFQoTU2FtcGxlQWVzRW5jcnlwdGlvbhorChRNcGVnQ29tbW9u",
+            "RW5jcnlwdGlvbhITCgZzY2hlbWUYAiABKAlCA+BBAhoyChNTZWNyZXRNYW5h",
+            "Z2VyU291cmNlEhsKDnNlY3JldF92ZXJzaW9uGAEgASgJQgPgQQIaCgoIV2lk",
+            "ZXZpbmUaCgoIRmFpcnBsYXkaCwoJUGxheXJlYWR5GgoKCENsZWFya2V5GrIC",
+            "CgpEcm1TeXN0ZW1zEkcKCHdpZGV2aW5lGAEgASgLMjUuZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLnRyYW5zY29kZXIudjEuRW5jcnlwdGlvbi5XaWRldmluZRJHCghm",
+            "YWlycGxheRgCIAEoCzI1Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
+            "LnYxLkVuY3J5cHRpb24uRmFpcnBsYXkSSQoJcGxheXJlYWR5GAMgASgLMjYu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuRW5jcnlwdGlvbi5Q",
+            "bGF5cmVhZHkSRwoIY2xlYXJrZXkYBCABKAsyNS5nb29nbGUuY2xvdWQudmlk",
+            "ZW8udHJhbnNjb2Rlci52MS5FbmNyeXB0aW9uLkNsZWFya2V5QhEKD2VuY3J5",
+            "cHRpb25fbW9kZUIPCg1zZWNyZXRfc291cmNlQn4KJGNvbS5nb29nbGUuY2xv",
+            "dWQudmlkZW8udHJhbnNjb2Rlci52MUIOUmVzb3VyY2VzUHJvdG9QAVpEY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby92aWRlby90cmFuc2NvZGVyL2FwaXYxL3RyYW5z",
+            "Y29kZXJwYjt0cmFuc2NvZGVycGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Job), global::Google.Cloud.Video.Transcoder.V1.Job.Parser, new[]{ "Name", "InputUri", "OutputUri", "TemplateId", "Config", "State", "CreateTime", "StartTime", "EndTime", "TtlAfterCompletionDays", "Labels", "Error", "Mode", "BatchModePriority", "Optimization" }, new[]{ "JobConfig" }, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingState), typeof(global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingMode), typeof(global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Job), global::Google.Cloud.Video.Transcoder.V1.Job.Parser, new[]{ "Name", "InputUri", "OutputUri", "TemplateId", "Config", "State", "CreateTime", "StartTime", "EndTime", "TtlAfterCompletionDays", "Labels", "Error", "Mode", "BatchModePriority", "Optimization", "FillContentGaps" }, new[]{ "JobConfig" }, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingState), typeof(global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingMode), typeof(global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.JobTemplate), global::Google.Cloud.Video.Transcoder.V1.JobTemplate.Parser, new[]{ "Name", "Config", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.JobConfig), global::Google.Cloud.Video.Transcoder.V1.JobConfig.Parser, new[]{ "Inputs", "EditList", "ElementaryStreams", "MuxStreams", "Manifests", "Output", "AdBreaks", "PubsubDestination", "SpriteSheets", "Overlays", "Encryptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Input), global::Google.Cloud.Video.Transcoder.V1.Input.Parser, new[]{ "Key", "Uri", "PreprocessingConfig" }, null, null, null, null),
@@ -264,7 +296,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.EditAtom), global::Google.Cloud.Video.Transcoder.V1.EditAtom.Parser, new[]{ "Key", "Inputs", "EndTimeOffset", "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AdBreak), global::Google.Cloud.Video.Transcoder.V1.AdBreak.Parser, new[]{ "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.ElementaryStream), global::Google.Cloud.Video.Transcoder.V1.ElementaryStream.Parser, new[]{ "Key", "VideoStream", "AudioStream", "TextStream" }, new[]{ "ElementaryStream" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.MuxStream), global::Google.Cloud.Video.Transcoder.V1.MuxStream.Parser, new[]{ "Key", "FileName", "Container", "ElementaryStreams", "SegmentSettings", "EncryptionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.MuxStream), global::Google.Cloud.Video.Transcoder.V1.MuxStream.Parser, new[]{ "Key", "FileName", "Container", "ElementaryStreams", "SegmentSettings", "EncryptionId", "Fmp4" }, new[]{ "ContainerConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config), global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config.Parser, new[]{ "CodecTag" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Manifest), global::Google.Cloud.Video.Transcoder.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams", "Dash" }, new[]{ "ManifestConfig" }, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.ManifestType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.DashConfig), global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.DashConfig.Parser, new[]{ "SegmentReferenceScheme" }, null, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.DashConfig.Types.SegmentReferenceScheme) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PubsubDestination), global::Google.Cloud.Video.Transcoder.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.SpriteSheet), global::Google.Cloud.Video.Transcoder.V1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "StartTimeOffset", "EndTimeOffset", "TotalCount", "Interval", "Quality" }, new[]{ "ExtractionStrategy" }, null, null, null),
@@ -282,9 +314,16 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Parser, new[]{ "Yadif", "Bwdif" }, new[]{ "DeinterlacingFilter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.YadifConfig.Parser, new[]{ "Mode", "DisableSpatialInterlacing", "Parity", "DeinterlaceAllFrames" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig), global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deinterlace.Types.BwdifConfig.Parser, new[]{ "Mode", "Parity", "DeinterlaceAllFrames" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Parser, new[]{ "H264", "H265", "Vp9" }, new[]{ "CodecSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset" }, new[]{ "GopMode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset" }, new[]{ "GopMode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "GopFrameCount", "GopDuration", "Profile" }, new[]{ "GopMode" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Parser, new[]{ "H264", "H265", "Vp9" }, new[]{ "CodecSettings" }, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "FrameRateConversionStrategy", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset", "Sdr", "Hlg" }, new[]{ "GopMode", "ColorFormat" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "FrameRateConversionStrategy", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset", "Sdr", "Hlg", "Hdr10" }, new[]{ "GopMode", "ColorFormat" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "FrameRateConversionStrategy", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "GopFrameCount", "GopDuration", "Profile", "Sdr", "Hlg" }, new[]{ "GopMode", "ColorFormat" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Parser, new[]{ "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz", "LanguageCode", "DisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack", "InputChannel", "OutputChannel", "GainDb" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream), global::Google.Cloud.Video.Transcoder.V1.TextStream.Parser, new[]{ "Codec", "LanguageCode", "Mapping", "DisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping), global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.SegmentSettings), global::Google.Cloud.Video.Transcoder.V1.SegmentSettings.Parser, new[]{ "SegmentDuration", "IndividualSegments" }, null, null, null, null),
@@ -354,6 +393,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       mode_ = other.mode_;
       batchModePriority_ = other.batchModePriority_;
       optimization_ = other.optimization_;
+      fillContentGaps_ = other.fillContentGaps_;
       switch (other.JobConfigCase) {
         case JobConfigOneofCase.TemplateId:
           TemplateId = other.TemplateId;
@@ -571,7 +611,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private global::Google.Rpc.Status error_;
     /// <summary>
     /// Output only. An error object that describes the reason for the failure.
-    /// This property is always present when `state` is `FAILED`.
+    /// This property is always present when
+    /// [ProcessingState][google.cloud.video.transcoder.v1.Job.ProcessingState] is
+    /// `FAILED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -632,6 +674,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "fill_content_gaps" field.</summary>
+    public const int FillContentGapsFieldNumber = 25;
+    private bool fillContentGaps_;
+    /// <summary>
+    /// Optional. Insert silence and duplicate frames when timestamp gaps are
+    /// detected in a given stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FillContentGaps {
+      get { return fillContentGaps_; }
+      set {
+        fillContentGaps_ = value;
+      }
+    }
+
     private object jobConfig_;
     /// <summary>Enum of possible cases for the "job_config" oneof.</summary>
     public enum JobConfigOneofCase {
@@ -683,6 +741,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (Mode != other.Mode) return false;
       if (BatchModePriority != other.BatchModePriority) return false;
       if (Optimization != other.Optimization) return false;
+      if (FillContentGaps != other.FillContentGaps) return false;
       if (JobConfigCase != other.JobConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -706,6 +765,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (Mode != global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingMode.Unspecified) hash ^= Mode.GetHashCode();
       if (BatchModePriority != 0) hash ^= BatchModePriority.GetHashCode();
       if (Optimization != global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy.Unspecified) hash ^= Optimization.GetHashCode();
+      if (FillContentGaps != false) hash ^= FillContentGaps.GetHashCode();
       hash ^= (int) jobConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -782,6 +842,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) Optimization);
       }
+      if (FillContentGaps != false) {
+        output.WriteRawTag(200, 1);
+        output.WriteBool(FillContentGaps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -849,6 +913,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) Optimization);
       }
+      if (FillContentGaps != false) {
+        output.WriteRawTag(200, 1);
+        output.WriteBool(FillContentGaps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -901,6 +969,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
       if (Optimization != global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Optimization);
+      }
+      if (FillContentGaps != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -962,6 +1033,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
       if (other.Optimization != global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy.Unspecified) {
         Optimization = other.Optimization;
+      }
+      if (other.FillContentGaps != false) {
+        FillContentGaps = other.FillContentGaps;
       }
       switch (other.JobConfigCase) {
         case JobConfigOneofCase.TemplateId:
@@ -1067,6 +1141,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             Optimization = (global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy) input.ReadEnum();
             break;
           }
+          case 200: {
+            FillContentGaps = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1159,6 +1237,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             Optimization = (global::Google.Cloud.Video.Transcoder.V1.Job.Types.OptimizationStrategy) input.ReadEnum();
             break;
           }
+          case 200: {
+            FillContentGaps = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1190,8 +1272,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// </summary>
         [pbr::OriginalName("SUCCEEDED")] Succeeded = 3,
         /// <summary>
-        /// The job has failed. For additional information, see `failure_reason` and
-        /// `failure_details`
+        /// The job has failed. For additional information, see
+        /// [Troubleshooting](https://cloud.google.com/transcoder/docs/troubleshooting).
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 4,
       }
@@ -1595,7 +1677,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Video.Transcoder.V1.EditAtom.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.EditAtom> editList_ = new pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.EditAtom>();
     /// <summary>
-    /// List of `Edit atom`s. Defines the ultimate timeline of the resulting
+    /// List of edit atoms. Defines the ultimate timeline of the resulting
     /// file or manifest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2110,7 +2192,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// <summary>
     /// URI of the media. Input files must be at least 5 seconds in duration and
     /// stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
-    /// If empty, the value is populated from `Job.input_uri`. See
+    /// If empty, the value is populated from
+    /// [Job.input_uri][google.cloud.video.transcoder.v1.Job.input_uri]. See
     /// [Supported input and output
     /// formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
     /// </summary>
@@ -2380,8 +2463,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// URI for the output file(s). For example, `gs://my-bucket/outputs/`.
-    /// If empty, the value is populated from `Job.output_uri`. See
+    /// URI for the output file(s). For example, `gs://my-bucket/outputs/`. Must be
+    /// a directory and not a top-level bucket. If empty, the value is populated
+    /// from [Job.output_uri][google.cloud.video.transcoder.v1.Job.output_uri]. See
     /// [Supported input and output
     /// formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
     /// </summary>
@@ -2600,8 +2684,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> inputs_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of `Input.key`s identifying files that should be used in this atom.
-    /// The listed `inputs` must have the same timeline.
+    /// List of [Input.key][google.cloud.video.transcoder.v1.Input.key] values
+    /// identifying files that should be used in this atom. The listed `inputs`
+    /// must have the same timeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3498,6 +3583,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       elementaryStreams_ = other.elementaryStreams_.Clone();
       segmentSettings_ = other.segmentSettings_ != null ? other.segmentSettings_.Clone() : null;
       encryptionId_ = other.encryptionId_;
+      switch (other.ContainerConfigCase) {
+        case ContainerConfigOneofCase.Fmp4:
+          Fmp4 = other.Fmp4.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3511,8 +3602,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int KeyFieldNumber = 1;
     private string key_ = "";
     /// <summary>
-    /// A unique key for this multiplexed stream. HLS media manifests will be
-    /// named `MuxStream.key` with the `.m3u8` extension suffix.
+    /// A unique key for this multiplexed stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3527,8 +3617,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int FileNameFieldNumber = 2;
     private string fileName_ = "";
     /// <summary>
-    /// The name of the generated file. The default is `MuxStream.key` with the
-    /// extension suffix corresponding to the `MuxStream.container`.
+    /// The name of the generated file. The default is
+    /// [MuxStream.key][google.cloud.video.transcoder.v1.MuxStream.key] with the
+    /// extension suffix corresponding to the
+    /// [MuxStream.container][google.cloud.video.transcoder.v1.MuxStream.container].
     ///
     /// Individual segments also have an incremental 10-digit zero-padded suffix
     /// starting from 0 before the extension, such as `mux_stream0000000123.ts`.
@@ -3548,11 +3640,16 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// <summary>
     /// The container format. The default is `mp4`
     ///
-    /// Supported container formats:
+    /// Supported streaming formats:
     ///
     /// - `ts`
     /// - `fmp4`- the corresponding file extension is `.m4s`
+    ///
+    /// Supported standalone file formats:
+    ///
     /// - `mp4`
+    /// - `mp3`
+    /// - `ogg`
     /// - `vtt`
     ///
     /// See also:
@@ -3574,7 +3671,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> elementaryStreams_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of `ElementaryStream.key`s multiplexed in this stream.
+    /// List of
+    /// [ElementaryStream.key][google.cloud.video.transcoder.v1.ElementaryStream.key]
+    /// values multiplexed in this stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3613,6 +3712,41 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "fmp4" field.</summary>
+    public const int Fmp4FieldNumber = 8;
+    /// <summary>
+    /// Optional. `fmp4` container configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config Fmp4 {
+      get { return containerConfigCase_ == ContainerConfigOneofCase.Fmp4 ? (global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config) containerConfig_ : null; }
+      set {
+        containerConfig_ = value;
+        containerConfigCase_ = value == null ? ContainerConfigOneofCase.None : ContainerConfigOneofCase.Fmp4;
+      }
+    }
+
+    private object containerConfig_;
+    /// <summary>Enum of possible cases for the "container_config" oneof.</summary>
+    public enum ContainerConfigOneofCase {
+      None = 0,
+      Fmp4 = 8,
+    }
+    private ContainerConfigOneofCase containerConfigCase_ = ContainerConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerConfigOneofCase ContainerConfigCase {
+      get { return containerConfigCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContainerConfig() {
+      containerConfigCase_ = ContainerConfigOneofCase.None;
+      containerConfig_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3634,6 +3768,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if(!elementaryStreams_.Equals(other.elementaryStreams_)) return false;
       if (!object.Equals(SegmentSettings, other.SegmentSettings)) return false;
       if (EncryptionId != other.EncryptionId) return false;
+      if (!object.Equals(Fmp4, other.Fmp4)) return false;
+      if (ContainerConfigCase != other.ContainerConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3647,6 +3783,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       hash ^= elementaryStreams_.GetHashCode();
       if (segmentSettings_ != null) hash ^= SegmentSettings.GetHashCode();
       if (EncryptionId.Length != 0) hash ^= EncryptionId.GetHashCode();
+      if (containerConfigCase_ == ContainerConfigOneofCase.Fmp4) hash ^= Fmp4.GetHashCode();
+      hash ^= (int) containerConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3686,6 +3824,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(58);
         output.WriteString(EncryptionId);
       }
+      if (containerConfigCase_ == ContainerConfigOneofCase.Fmp4) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Fmp4);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3717,6 +3859,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(58);
         output.WriteString(EncryptionId);
       }
+      if (containerConfigCase_ == ContainerConfigOneofCase.Fmp4) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Fmp4);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3742,6 +3888,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
       if (EncryptionId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EncryptionId);
+      }
+      if (containerConfigCase_ == ContainerConfigOneofCase.Fmp4) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Fmp4);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3774,6 +3923,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (other.EncryptionId.Length != 0) {
         EncryptionId = other.EncryptionId;
       }
+      switch (other.ContainerConfigCase) {
+        case ContainerConfigOneofCase.Fmp4:
+          if (Fmp4 == null) {
+            Fmp4 = new global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config();
+          }
+          Fmp4.MergeFrom(other.Fmp4);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3814,6 +3972,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           case 58: {
             EncryptionId = input.ReadString();
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config subBuilder = new global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config();
+            if (containerConfigCase_ == ContainerConfigOneofCase.Fmp4) {
+              subBuilder.MergeFrom(Fmp4);
+            }
+            input.ReadMessage(subBuilder);
+            Fmp4 = subBuilder;
             break;
           }
         }
@@ -3858,10 +4025,229 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             EncryptionId = input.ReadString();
             break;
           }
+          case 66: {
+            global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config subBuilder = new global::Google.Cloud.Video.Transcoder.V1.MuxStream.Types.Fmp4Config();
+            if (containerConfigCase_ == ContainerConfigOneofCase.Fmp4) {
+              subBuilder.MergeFrom(Fmp4);
+            }
+            input.ReadMessage(subBuilder);
+            Fmp4 = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MuxStream message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// `fmp4` container configuration.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Fmp4Config : pb::IMessage<Fmp4Config>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Fmp4Config> _parser = new pb::MessageParser<Fmp4Config>(() => new Fmp4Config());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Fmp4Config> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.MuxStream.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Fmp4Config() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Fmp4Config(Fmp4Config other) : this() {
+          codecTag_ = other.codecTag_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Fmp4Config Clone() {
+          return new Fmp4Config(this);
+        }
+
+        /// <summary>Field number for the "codec_tag" field.</summary>
+        public const int CodecTagFieldNumber = 1;
+        private string codecTag_ = "";
+        /// <summary>
+        /// Optional. Specify the codec tag string that will be used in the media
+        /// bitstream. When not specified, the codec appropriate value is used.
+        ///
+        /// Supported H265 codec tags:
+        ///
+        /// - `hvc1` (default)
+        /// - `hev1`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CodecTag {
+          get { return codecTag_; }
+          set {
+            codecTag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Fmp4Config);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Fmp4Config other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (CodecTag != other.CodecTag) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (CodecTag.Length != 0) hash ^= CodecTag.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (CodecTag.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(CodecTag);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (CodecTag.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(CodecTag);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (CodecTag.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CodecTag);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Fmp4Config other) {
+          if (other == null) {
+            return;
+          }
+          if (other.CodecTag.Length != 0) {
+            CodecTag = other.CodecTag;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                CodecTag = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                CodecTag = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -3926,7 +4312,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private string fileName_ = "";
     /// <summary>
     /// The name of the generated file. The default is `manifest` with the
-    /// extension suffix corresponding to the `Manifest.type`.
+    /// extension suffix corresponding to the
+    /// [Manifest.type][google.cloud.video.transcoder.v1.Manifest.type].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3958,12 +4345,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> muxStreams_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. List of user given `MuxStream.key`s that should appear in this
-    /// manifest.
+    /// Required. List of user supplied
+    /// [MuxStream.key][google.cloud.video.transcoder.v1.MuxStream.key] values that
+    /// should appear in this manifest.
     ///
-    /// When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key`
-    /// and `.m3u8` extension is generated for each element of the
-    /// `Manifest.mux_streams`.
+    /// When [Manifest.type][google.cloud.video.transcoder.v1.Manifest.type] is
+    /// `HLS`, a media manifest with name
+    /// [MuxStream.key][google.cloud.video.transcoder.v1.MuxStream.key] and `.m3u8`
+    /// extension is generated for each element in this list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4449,11 +4838,32 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             /// </summary>
             [pbr::OriginalName("SEGMENT_REFERENCE_SCHEME_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// Lists the URLs of media files for each segment.
+            /// Explicitly lists the URLs of media files for each segment. For example,
+            /// if
+            /// [SegmentSettings.individual_segments][google.cloud.video.transcoder.v1.SegmentSettings.individual_segments]
+            /// is `true`, then the manifest contains fields similar to the following:
+            /// ```xml
+            /// &lt;Initialization sourceURL="my-hd-stream-init.m4s"/>
+            ///   &lt;SegmentList presentationTimeOffset="0" duration="1000"
+            ///   timescale="10000">
+            ///     &lt;SegmentURL media="hd-stream0000000000.m4s"/>
+            ///     &lt;SegmentURL media="hd-stream0000000001.m4s"/>
+            ///     ...
+            /// ```
             /// </summary>
             [pbr::OriginalName("SEGMENT_LIST")] SegmentList = 1,
             /// <summary>
-            /// Lists each segment from a template with $Number$ variable.
+            /// [SegmentSettings.individual_segments][google.cloud.video.transcoder.v1.SegmentSettings.individual_segments]
+            /// must be set to `true` to use this segment reference scheme. Uses the
+            /// DASH specification
+            /// `&lt;SegmentTemplate>` tag to determine the URLs of media files for each
+            /// segment. For example:
+            /// ```xml
+            /// &lt;SegmentTemplate presentationTimeOffset="0" timescale="10000"
+            ///       initialization="my-hd-stream-init.m4s"
+            ///       media="hd-stream$Number%010d$.m4s" startNumber="0">
+            ///   ...
+            /// ```
             /// </summary>
             [pbr::OriginalName("SEGMENT_TEMPLATE_NUMBER")] SegmentTemplateNumber = 2,
           }
@@ -5450,7 +5860,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Animation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Animation> animations_ = new pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Animation>();
     /// <summary>
-    /// List of Animations. The list should be chronological, without any time
+    /// List of animations. The list should be chronological, without any time
     /// overlap.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6769,7 +7179,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
 
       /// <summary>
-      /// End previous overlay animation from the video. Without AnimationEnd, the
+      /// End previous overlay animation from the video. Without `AnimationEnd`, the
       /// overlay object will keep the state of previous animation until the end of
       /// the video.
       /// </summary>
@@ -10805,6 +11215,343 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// The conversion strategy for desired frame rate.
+      /// </summary>
+      public enum FrameRateConversionStrategy {
+        /// <summary>
+        /// Unspecified frame rate conversion strategy.
+        /// </summary>
+        [pbr::OriginalName("FRAME_RATE_CONVERSION_STRATEGY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Selectively retain frames to reduce the output frame rate.
+        /// Every _n_ th frame is kept, where `n = ceil(input frame rate / target
+        /// frame rate)`. When _n_ = 1 (that is, the target frame rate is greater
+        /// than the input frame rate), the output frame rate matches the input frame
+        /// rate. When _n_ > 1, frames are dropped and the output frame rate is
+        /// equal to `(input frame rate / n)`. For more information, see
+        /// [Calculate frame
+        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate).
+        /// </summary>
+        [pbr::OriginalName("DOWNSAMPLE")] Downsample = 1,
+        /// <summary>
+        /// Drop or duplicate frames to match the specified frame rate.
+        /// </summary>
+        [pbr::OriginalName("DROP_DUPLICATE")] DropDuplicate = 2,
+      }
+
+      /// <summary>
+      /// Convert the input video to a Standard Dynamic Range (SDR) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class H264ColorFormatSDR : pb::IMessage<H264ColorFormatSDR>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<H264ColorFormatSDR> _parser = new pb::MessageParser<H264ColorFormatSDR>(() => new H264ColorFormatSDR());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<H264ColorFormatSDR> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H264ColorFormatSDR() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H264ColorFormatSDR(H264ColorFormatSDR other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H264ColorFormatSDR Clone() {
+          return new H264ColorFormatSDR(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as H264ColorFormatSDR);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(H264ColorFormatSDR other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(H264ColorFormatSDR other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Convert the input video to a Hybrid Log Gamma (HLG) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class H264ColorFormatHLG : pb::IMessage<H264ColorFormatHLG>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<H264ColorFormatHLG> _parser = new pb::MessageParser<H264ColorFormatHLG>(() => new H264ColorFormatHLG());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<H264ColorFormatHLG> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H264ColorFormatHLG() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H264ColorFormatHLG(H264ColorFormatHLG other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H264ColorFormatHLG Clone() {
+          return new H264ColorFormatHLG(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as H264ColorFormatHLG);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(H264ColorFormatHLG other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(H264ColorFormatHLG other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// H264 codec settings.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -10822,7 +11569,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10845,6 +11592,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           widthPixels_ = other.widthPixels_;
           heightPixels_ = other.heightPixels_;
           frameRate_ = other.frameRate_;
+          frameRateConversionStrategy_ = other.frameRateConversionStrategy_;
           bitrateBps_ = other.bitrateBps_;
           pixelFormat_ = other.pixelFormat_;
           rateControlMode_ = other.rateControlMode_;
@@ -10866,6 +11614,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
               break;
             case GopModeOneofCase.GopDuration:
               GopDuration = other.GopDuration.Clone();
+              break;
+          }
+
+          switch (other.ColorFormatCase) {
+            case ColorFormatOneofCase.Sdr:
+              Sdr = other.Sdr.Clone();
+              break;
+            case ColorFormatOneofCase.Hlg:
+              Hlg = other.Hlg.Clone();
               break;
           }
 
@@ -10927,12 +11684,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private double frameRate_;
         /// <summary>
         /// Required. The target video frame rate in frames per second (FPS). Must be
-        /// less than or equal to 120. Will default to the input frame rate if larger
-        /// than the input frame rate. The API will generate an output FPS that is
-        /// divisible by the input FPS, and smaller or equal to the target FPS. See
-        /// [Calculating frame
-        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
-        /// more information.
+        /// less than or equal to 120.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10940,6 +11692,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           get { return frameRate_; }
           set {
             frameRate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "frame_rate_conversion_strategy" field.</summary>
+        public const int FrameRateConversionStrategyFieldNumber = 23;
+        private global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy frameRateConversionStrategy_ = global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified;
+        /// <summary>
+        /// Optional. Frame rate conversion strategy for desired frame rate. The
+        /// default is `DOWNSAMPLE`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy FrameRateConversionStrategy {
+          get { return frameRateConversionStrategy_; }
+          set {
+            frameRateConversionStrategy_ = value;
           }
         }
 
@@ -10990,7 +11758,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int RateControlModeFieldNumber = 6;
         private string rateControlMode_ = "";
         /// <summary>
-        /// Specify the `rate_control_mode`. The default is `vbr`.
+        /// Specify the mode. The default is `vbr`.
         ///
         /// Supported rate control modes:
         ///
@@ -11092,7 +11860,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private bool enableTwoPass_;
         /// <summary>
         /// Use two-pass encoding strategy to achieve better video quality.
-        /// `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
+        /// [H264CodecSettings.rate_control_mode][google.cloud.video.transcoder.v1.VideoStream.H264CodecSettings.rate_control_mode]
+        /// must be `vbr`. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11108,7 +11877,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private int vbvSizeBits_;
         /// <summary>
         /// Size of the Video Buffering Verifier (VBV) buffer in bits. Must be
-        /// greater than zero. The default is equal to `VideoStream.bitrate_bps`.
+        /// greater than zero. The default is equal to
+        /// [H264CodecSettings.bitrate_bps][google.cloud.video.transcoder.v1.VideoStream.H264CodecSettings.bitrate_bps].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11125,7 +11895,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// <summary>
         /// Initial fullness of the Video Buffering Verifier (VBV) buffer in bits.
         /// Must be greater than zero. The default is equal to 90% of
-        /// `VideoStream.vbv_size_bits`.
+        /// [H264CodecSettings.vbv_size_bits][google.cloud.video.transcoder.v1.VideoStream.H264CodecSettings.vbv_size_bits].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11177,8 +11947,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private int bFrameCount_;
         /// <summary>
         /// The number of consecutive B-frames. Must be greater than or equal to
-        /// zero. Must be less than `VideoStream.gop_frame_count` if set. The default
-        /// is 0.
+        /// zero. Must be less than
+        /// [H264CodecSettings.gop_frame_count][google.cloud.video.transcoder.v1.VideoStream.H264CodecSettings.gop_frame_count]
+        /// if set. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11271,6 +12042,36 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
         }
 
+        /// <summary>Field number for the "sdr" field.</summary>
+        public const int SdrFieldNumber = 21;
+        /// <summary>
+        /// Optional. SDR color format setting for H264.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR Sdr {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Sdr ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Sdr;
+          }
+        }
+
+        /// <summary>Field number for the "hlg" field.</summary>
+        public const int HlgFieldNumber = 22;
+        /// <summary>
+        /// Optional. HLG color format setting for H264.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG Hlg {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Hlg ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Hlg;
+          }
+        }
+
         private object gopMode_;
         /// <summary>Enum of possible cases for the "gop_mode" oneof.</summary>
         public enum GopModeOneofCase {
@@ -11292,6 +12093,27 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           gopMode_ = null;
         }
 
+        private object colorFormat_;
+        /// <summary>Enum of possible cases for the "color_format" oneof.</summary>
+        public enum ColorFormatOneofCase {
+          None = 0,
+          Sdr = 21,
+          Hlg = 22,
+        }
+        private ColorFormatOneofCase colorFormatCase_ = ColorFormatOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ColorFormatOneofCase ColorFormatCase {
+          get { return colorFormatCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearColorFormat() {
+          colorFormatCase_ = ColorFormatOneofCase.None;
+          colorFormat_ = null;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -11310,6 +12132,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (WidthPixels != other.WidthPixels) return false;
           if (HeightPixels != other.HeightPixels) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FrameRate, other.FrameRate)) return false;
+          if (FrameRateConversionStrategy != other.FrameRateConversionStrategy) return false;
           if (BitrateBps != other.BitrateBps) return false;
           if (PixelFormat != other.PixelFormat) return false;
           if (RateControlMode != other.RateControlMode) return false;
@@ -11327,7 +12150,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Profile != other.Profile) return false;
           if (Tune != other.Tune) return false;
           if (Preset != other.Preset) return false;
+          if (!object.Equals(Sdr, other.Sdr)) return false;
+          if (!object.Equals(Hlg, other.Hlg)) return false;
           if (GopModeCase != other.GopModeCase) return false;
+          if (ColorFormatCase != other.ColorFormatCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -11338,6 +12164,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
           if (HeightPixels != 0) hash ^= HeightPixels.GetHashCode();
           if (FrameRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FrameRate);
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) hash ^= FrameRateConversionStrategy.GetHashCode();
           if (BitrateBps != 0) hash ^= BitrateBps.GetHashCode();
           if (PixelFormat.Length != 0) hash ^= PixelFormat.GetHashCode();
           if (RateControlMode.Length != 0) hash ^= RateControlMode.GetHashCode();
@@ -11355,7 +12182,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Profile.Length != 0) hash ^= Profile.GetHashCode();
           if (Tune.Length != 0) hash ^= Tune.GetHashCode();
           if (Preset.Length != 0) hash ^= Preset.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) hash ^= Sdr.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) hash ^= Hlg.GetHashCode();
           hash ^= (int) gopModeCase_;
+          hash ^= (int) colorFormatCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -11454,6 +12284,18 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(162, 1);
             output.WriteString(Preset);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(Hlg);
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            output.WriteRawTag(184, 1);
+            output.WriteEnum((int) FrameRateConversionStrategy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -11544,6 +12386,18 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(162, 1);
             output.WriteString(Preset);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(Hlg);
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            output.WriteRawTag(184, 1);
+            output.WriteEnum((int) FrameRateConversionStrategy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -11562,6 +12416,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           if (FrameRate != 0D) {
             size += 1 + 8;
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) FrameRateConversionStrategy);
           }
           if (BitrateBps != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(BitrateBps);
@@ -11614,6 +12471,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Preset.Length != 0) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(Preset);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Hlg);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -11634,6 +12497,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           if (other.FrameRate != 0D) {
             FrameRate = other.FrameRate;
+          }
+          if (other.FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            FrameRateConversionStrategy = other.FrameRateConversionStrategy;
           }
           if (other.BitrateBps != 0) {
             BitrateBps = other.BitrateBps;
@@ -11689,6 +12555,21 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 GopDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
               }
               GopDuration.MergeFrom(other.GopDuration);
+              break;
+          }
+
+          switch (other.ColorFormatCase) {
+            case ColorFormatOneofCase.Sdr:
+              if (Sdr == null) {
+                Sdr = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR();
+              }
+              Sdr.MergeFrom(other.Sdr);
+              break;
+            case ColorFormatOneofCase.Hlg:
+              if (Hlg == null) {
+                Hlg = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG();
+              }
+              Hlg.MergeFrom(other.Hlg);
               break;
           }
 
@@ -11792,6 +12673,28 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 Preset = input.ReadString();
                 break;
               }
+              case 170: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR();
+                if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+                  subBuilder.MergeFrom(Sdr);
+                }
+                input.ReadMessage(subBuilder);
+                Sdr = subBuilder;
+                break;
+              }
+              case 178: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+                  subBuilder.MergeFrom(Hlg);
+                }
+                input.ReadMessage(subBuilder);
+                Hlg = subBuilder;
+                break;
+              }
+              case 184: {
+                FrameRateConversionStrategy = (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -11892,6 +12795,496 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 Preset = input.ReadString();
                 break;
               }
+              case 170: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatSDR();
+                if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+                  subBuilder.MergeFrom(Sdr);
+                }
+                input.ReadMessage(subBuilder);
+                Sdr = subBuilder;
+                break;
+              }
+              case 178: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264ColorFormatHLG();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+                  subBuilder.MergeFrom(Hlg);
+                }
+                input.ReadMessage(subBuilder);
+                Hlg = subBuilder;
+                break;
+              }
+              case 184: {
+                FrameRateConversionStrategy = (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Convert the input video to a Standard Dynamic Range (SDR) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class H265ColorFormatSDR : pb::IMessage<H265ColorFormatSDR>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<H265ColorFormatSDR> _parser = new pb::MessageParser<H265ColorFormatSDR>(() => new H265ColorFormatSDR());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<H265ColorFormatSDR> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatSDR() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatSDR(H265ColorFormatSDR other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatSDR Clone() {
+          return new H265ColorFormatSDR(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as H265ColorFormatSDR);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(H265ColorFormatSDR other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(H265ColorFormatSDR other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Convert the input video to a Hybrid Log Gamma (HLG) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class H265ColorFormatHLG : pb::IMessage<H265ColorFormatHLG>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<H265ColorFormatHLG> _parser = new pb::MessageParser<H265ColorFormatHLG>(() => new H265ColorFormatHLG());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<H265ColorFormatHLG> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatHLG() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatHLG(H265ColorFormatHLG other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatHLG Clone() {
+          return new H265ColorFormatHLG(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as H265ColorFormatHLG);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(H265ColorFormatHLG other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(H265ColorFormatHLG other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Convert the input video to a High Dynamic Range 10 (HDR10) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class H265ColorFormatHDR10 : pb::IMessage<H265ColorFormatHDR10>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<H265ColorFormatHDR10> _parser = new pb::MessageParser<H265ColorFormatHDR10>(() => new H265ColorFormatHDR10());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<H265ColorFormatHDR10> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatHDR10() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatHDR10(H265ColorFormatHDR10 other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265ColorFormatHDR10 Clone() {
+          return new H265ColorFormatHDR10(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as H265ColorFormatHDR10);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(H265ColorFormatHDR10 other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(H265ColorFormatHDR10 other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
             }
           }
         }
@@ -11917,7 +13310,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11940,6 +13333,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           widthPixels_ = other.widthPixels_;
           heightPixels_ = other.heightPixels_;
           frameRate_ = other.frameRate_;
+          frameRateConversionStrategy_ = other.frameRateConversionStrategy_;
           bitrateBps_ = other.bitrateBps_;
           pixelFormat_ = other.pixelFormat_;
           rateControlMode_ = other.rateControlMode_;
@@ -11960,6 +13354,18 @@ namespace Google.Cloud.Video.Transcoder.V1 {
               break;
             case GopModeOneofCase.GopDuration:
               GopDuration = other.GopDuration.Clone();
+              break;
+          }
+
+          switch (other.ColorFormatCase) {
+            case ColorFormatOneofCase.Sdr:
+              Sdr = other.Sdr.Clone();
+              break;
+            case ColorFormatOneofCase.Hlg:
+              Hlg = other.Hlg.Clone();
+              break;
+            case ColorFormatOneofCase.Hdr10:
+              Hdr10 = other.Hdr10.Clone();
               break;
           }
 
@@ -12021,12 +13427,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private double frameRate_;
         /// <summary>
         /// Required. The target video frame rate in frames per second (FPS). Must be
-        /// less than or equal to 120. Will default to the input frame rate if larger
-        /// than the input frame rate. The API will generate an output FPS that is
-        /// divisible by the input FPS, and smaller or equal to the target FPS. See
-        /// [Calculating frame
-        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
-        /// more information.
+        /// less than or equal to 120.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12034,6 +13435,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           get { return frameRate_; }
           set {
             frameRate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "frame_rate_conversion_strategy" field.</summary>
+        public const int FrameRateConversionStrategyFieldNumber = 23;
+        private global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy frameRateConversionStrategy_ = global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified;
+        /// <summary>
+        /// Optional. Frame rate conversion strategy for desired frame rate. The
+        /// default is `DOWNSAMPLE`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy FrameRateConversionStrategy {
+          get { return frameRateConversionStrategy_; }
+          set {
+            frameRateConversionStrategy_ = value;
           }
         }
 
@@ -12084,7 +13501,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int RateControlModeFieldNumber = 6;
         private string rateControlMode_ = "";
         /// <summary>
-        /// Specify the `rate_control_mode`. The default is `vbr`.
+        /// Specify the mode. The default is `vbr`.
         ///
         /// Supported rate control modes:
         ///
@@ -12186,7 +13603,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private bool enableTwoPass_;
         /// <summary>
         /// Use two-pass encoding strategy to achieve better video quality.
-        /// `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
+        /// [H265CodecSettings.rate_control_mode][google.cloud.video.transcoder.v1.VideoStream.H265CodecSettings.rate_control_mode]
+        /// must be `vbr`. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12219,7 +13637,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// <summary>
         /// Initial fullness of the Video Buffering Verifier (VBV) buffer in bits.
         /// Must be greater than zero. The default is equal to 90% of
-        /// `VideoStream.vbv_size_bits`.
+        /// [H265CodecSettings.vbv_size_bits][google.cloud.video.transcoder.v1.VideoStream.H265CodecSettings.vbv_size_bits].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12251,8 +13669,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private int bFrameCount_;
         /// <summary>
         /// The number of consecutive B-frames. Must be greater than or equal to
-        /// zero. Must be less than `VideoStream.gop_frame_count` if set. The default
-        /// is 0.
+        /// zero. Must be less than
+        /// [H265CodecSettings.gop_frame_count][google.cloud.video.transcoder.v1.VideoStream.H265CodecSettings.gop_frame_count]
+        /// if set. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12360,6 +13779,51 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
         }
 
+        /// <summary>Field number for the "sdr" field.</summary>
+        public const int SdrFieldNumber = 20;
+        /// <summary>
+        /// Optional. SDR color format setting for H265.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR Sdr {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Sdr ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Sdr;
+          }
+        }
+
+        /// <summary>Field number for the "hlg" field.</summary>
+        public const int HlgFieldNumber = 21;
+        /// <summary>
+        /// Optional. HLG color format setting for H265.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG Hlg {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Hlg ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Hlg;
+          }
+        }
+
+        /// <summary>Field number for the "hdr10" field.</summary>
+        public const int Hdr10FieldNumber = 22;
+        /// <summary>
+        /// Optional. HDR10 color format setting for H265.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10 Hdr10 {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Hdr10 ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Hdr10;
+          }
+        }
+
         private object gopMode_;
         /// <summary>Enum of possible cases for the "gop_mode" oneof.</summary>
         public enum GopModeOneofCase {
@@ -12381,6 +13845,28 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           gopMode_ = null;
         }
 
+        private object colorFormat_;
+        /// <summary>Enum of possible cases for the "color_format" oneof.</summary>
+        public enum ColorFormatOneofCase {
+          None = 0,
+          Sdr = 20,
+          Hlg = 21,
+          Hdr10 = 22,
+        }
+        private ColorFormatOneofCase colorFormatCase_ = ColorFormatOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ColorFormatOneofCase ColorFormatCase {
+          get { return colorFormatCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearColorFormat() {
+          colorFormatCase_ = ColorFormatOneofCase.None;
+          colorFormat_ = null;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -12399,6 +13885,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (WidthPixels != other.WidthPixels) return false;
           if (HeightPixels != other.HeightPixels) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FrameRate, other.FrameRate)) return false;
+          if (FrameRateConversionStrategy != other.FrameRateConversionStrategy) return false;
           if (BitrateBps != other.BitrateBps) return false;
           if (PixelFormat != other.PixelFormat) return false;
           if (RateControlMode != other.RateControlMode) return false;
@@ -12415,7 +13902,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Profile != other.Profile) return false;
           if (Tune != other.Tune) return false;
           if (Preset != other.Preset) return false;
+          if (!object.Equals(Sdr, other.Sdr)) return false;
+          if (!object.Equals(Hlg, other.Hlg)) return false;
+          if (!object.Equals(Hdr10, other.Hdr10)) return false;
           if (GopModeCase != other.GopModeCase) return false;
+          if (ColorFormatCase != other.ColorFormatCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -12426,6 +13917,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
           if (HeightPixels != 0) hash ^= HeightPixels.GetHashCode();
           if (FrameRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FrameRate);
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) hash ^= FrameRateConversionStrategy.GetHashCode();
           if (BitrateBps != 0) hash ^= BitrateBps.GetHashCode();
           if (PixelFormat.Length != 0) hash ^= PixelFormat.GetHashCode();
           if (RateControlMode.Length != 0) hash ^= RateControlMode.GetHashCode();
@@ -12442,7 +13934,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Profile.Length != 0) hash ^= Profile.GetHashCode();
           if (Tune.Length != 0) hash ^= Tune.GetHashCode();
           if (Preset.Length != 0) hash ^= Preset.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) hash ^= Sdr.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) hash ^= Hlg.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Hdr10) hash ^= Hdr10.GetHashCode();
           hash ^= (int) gopModeCase_;
+          hash ^= (int) colorFormatCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -12537,6 +14033,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(154, 1);
             output.WriteString(Preset);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            output.WriteRawTag(162, 1);
+            output.WriteMessage(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(Hlg);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hdr10) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(Hdr10);
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            output.WriteRawTag(184, 1);
+            output.WriteEnum((int) FrameRateConversionStrategy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -12623,6 +14135,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(154, 1);
             output.WriteString(Preset);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            output.WriteRawTag(162, 1);
+            output.WriteMessage(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(Hlg);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hdr10) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(Hdr10);
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            output.WriteRawTag(184, 1);
+            output.WriteEnum((int) FrameRateConversionStrategy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -12641,6 +14169,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           if (FrameRate != 0D) {
             size += 1 + 8;
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) FrameRateConversionStrategy);
           }
           if (BitrateBps != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(BitrateBps);
@@ -12690,6 +14221,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Preset.Length != 0) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(Preset);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Hlg);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hdr10) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Hdr10);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -12710,6 +14250,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           if (other.FrameRate != 0D) {
             FrameRate = other.FrameRate;
+          }
+          if (other.FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            FrameRateConversionStrategy = other.FrameRateConversionStrategy;
           }
           if (other.BitrateBps != 0) {
             BitrateBps = other.BitrateBps;
@@ -12762,6 +14305,27 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 GopDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
               }
               GopDuration.MergeFrom(other.GopDuration);
+              break;
+          }
+
+          switch (other.ColorFormatCase) {
+            case ColorFormatOneofCase.Sdr:
+              if (Sdr == null) {
+                Sdr = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR();
+              }
+              Sdr.MergeFrom(other.Sdr);
+              break;
+            case ColorFormatOneofCase.Hlg:
+              if (Hlg == null) {
+                Hlg = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG();
+              }
+              Hlg.MergeFrom(other.Hlg);
+              break;
+            case ColorFormatOneofCase.Hdr10:
+              if (Hdr10 == null) {
+                Hdr10 = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10();
+              }
+              Hdr10.MergeFrom(other.Hdr10);
               break;
           }
 
@@ -12861,6 +14425,37 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 Preset = input.ReadString();
                 break;
               }
+              case 162: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR();
+                if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+                  subBuilder.MergeFrom(Sdr);
+                }
+                input.ReadMessage(subBuilder);
+                Sdr = subBuilder;
+                break;
+              }
+              case 170: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+                  subBuilder.MergeFrom(Hlg);
+                }
+                input.ReadMessage(subBuilder);
+                Hlg = subBuilder;
+                break;
+              }
+              case 178: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10 subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hdr10) {
+                  subBuilder.MergeFrom(Hdr10);
+                }
+                input.ReadMessage(subBuilder);
+                Hdr10 = subBuilder;
+                break;
+              }
+              case 184: {
+                FrameRateConversionStrategy = (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -12957,6 +14552,349 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 Preset = input.ReadString();
                 break;
               }
+              case 162: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatSDR();
+                if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+                  subBuilder.MergeFrom(Sdr);
+                }
+                input.ReadMessage(subBuilder);
+                Sdr = subBuilder;
+                break;
+              }
+              case 170: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHLG();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+                  subBuilder.MergeFrom(Hlg);
+                }
+                input.ReadMessage(subBuilder);
+                Hlg = subBuilder;
+                break;
+              }
+              case 178: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10 subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265ColorFormatHDR10();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hdr10) {
+                  subBuilder.MergeFrom(Hdr10);
+                }
+                input.ReadMessage(subBuilder);
+                Hdr10 = subBuilder;
+                break;
+              }
+              case 184: {
+                FrameRateConversionStrategy = (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Convert the input video to a Standard Dynamic Range (SDR) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Vp9ColorFormatSDR : pb::IMessage<Vp9ColorFormatSDR>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Vp9ColorFormatSDR> _parser = new pb::MessageParser<Vp9ColorFormatSDR>(() => new Vp9ColorFormatSDR());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Vp9ColorFormatSDR> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Vp9ColorFormatSDR() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Vp9ColorFormatSDR(Vp9ColorFormatSDR other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Vp9ColorFormatSDR Clone() {
+          return new Vp9ColorFormatSDR(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Vp9ColorFormatSDR);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Vp9ColorFormatSDR other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Vp9ColorFormatSDR other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Convert the input video to a Hybrid Log Gamma (HLG) video.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Vp9ColorFormatHLG : pb::IMessage<Vp9ColorFormatHLG>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Vp9ColorFormatHLG> _parser = new pb::MessageParser<Vp9ColorFormatHLG>(() => new Vp9ColorFormatHLG());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Vp9ColorFormatHLG> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Vp9ColorFormatHLG() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Vp9ColorFormatHLG(Vp9ColorFormatHLG other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Vp9ColorFormatHLG Clone() {
+          return new Vp9ColorFormatHLG(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Vp9ColorFormatHLG);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Vp9ColorFormatHLG other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Vp9ColorFormatHLG other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
             }
           }
         }
@@ -12982,7 +14920,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13005,6 +14943,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           widthPixels_ = other.widthPixels_;
           heightPixels_ = other.heightPixels_;
           frameRate_ = other.frameRate_;
+          frameRateConversionStrategy_ = other.frameRateConversionStrategy_;
           bitrateBps_ = other.bitrateBps_;
           pixelFormat_ = other.pixelFormat_;
           rateControlMode_ = other.rateControlMode_;
@@ -13016,6 +14955,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
               break;
             case GopModeOneofCase.GopDuration:
               GopDuration = other.GopDuration.Clone();
+              break;
+          }
+
+          switch (other.ColorFormatCase) {
+            case ColorFormatOneofCase.Sdr:
+              Sdr = other.Sdr.Clone();
+              break;
+            case ColorFormatOneofCase.Hlg:
+              Hlg = other.Hlg.Clone();
               break;
           }
 
@@ -13077,12 +15025,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private double frameRate_;
         /// <summary>
         /// Required. The target video frame rate in frames per second (FPS). Must be
-        /// less than or equal to 120. Will default to the input frame rate if larger
-        /// than the input frame rate. The API will generate an output FPS that is
-        /// divisible by the input FPS, and smaller or equal to the target FPS. See
-        /// [Calculating frame
-        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
-        /// more information.
+        /// less than or equal to 120.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13090,6 +15033,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           get { return frameRate_; }
           set {
             frameRate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "frame_rate_conversion_strategy" field.</summary>
+        public const int FrameRateConversionStrategyFieldNumber = 13;
+        private global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy frameRateConversionStrategy_ = global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified;
+        /// <summary>
+        /// Optional. Frame rate conversion strategy for desired frame rate. The
+        /// default is `DOWNSAMPLE`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy FrameRateConversionStrategy {
+          get { return frameRateConversionStrategy_; }
+          set {
+            frameRateConversionStrategy_ = value;
           }
         }
 
@@ -13140,7 +15099,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int RateControlModeFieldNumber = 6;
         private string rateControlMode_ = "";
         /// <summary>
-        /// Specify the `rate_control_mode`. The default is `vbr`.
+        /// Specify the mode. The default is `vbr`.
         ///
         /// Supported rate control modes:
         ///
@@ -13249,6 +15208,36 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
         }
 
+        /// <summary>Field number for the "sdr" field.</summary>
+        public const int SdrFieldNumber = 11;
+        /// <summary>
+        /// Optional. SDR color format setting for VP9.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR Sdr {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Sdr ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Sdr;
+          }
+        }
+
+        /// <summary>Field number for the "hlg" field.</summary>
+        public const int HlgFieldNumber = 12;
+        /// <summary>
+        /// Optional. HLG color format setting for VP9.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG Hlg {
+          get { return colorFormatCase_ == ColorFormatOneofCase.Hlg ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG) colorFormat_ : null; }
+          set {
+            colorFormat_ = value;
+            colorFormatCase_ = value == null ? ColorFormatOneofCase.None : ColorFormatOneofCase.Hlg;
+          }
+        }
+
         private object gopMode_;
         /// <summary>Enum of possible cases for the "gop_mode" oneof.</summary>
         public enum GopModeOneofCase {
@@ -13270,6 +15259,27 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           gopMode_ = null;
         }
 
+        private object colorFormat_;
+        /// <summary>Enum of possible cases for the "color_format" oneof.</summary>
+        public enum ColorFormatOneofCase {
+          None = 0,
+          Sdr = 11,
+          Hlg = 12,
+        }
+        private ColorFormatOneofCase colorFormatCase_ = ColorFormatOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ColorFormatOneofCase ColorFormatCase {
+          get { return colorFormatCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearColorFormat() {
+          colorFormatCase_ = ColorFormatOneofCase.None;
+          colorFormat_ = null;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -13288,6 +15298,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (WidthPixels != other.WidthPixels) return false;
           if (HeightPixels != other.HeightPixels) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FrameRate, other.FrameRate)) return false;
+          if (FrameRateConversionStrategy != other.FrameRateConversionStrategy) return false;
           if (BitrateBps != other.BitrateBps) return false;
           if (PixelFormat != other.PixelFormat) return false;
           if (RateControlMode != other.RateControlMode) return false;
@@ -13295,7 +15306,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (GopFrameCount != other.GopFrameCount) return false;
           if (!object.Equals(GopDuration, other.GopDuration)) return false;
           if (Profile != other.Profile) return false;
+          if (!object.Equals(Sdr, other.Sdr)) return false;
+          if (!object.Equals(Hlg, other.Hlg)) return false;
           if (GopModeCase != other.GopModeCase) return false;
+          if (ColorFormatCase != other.ColorFormatCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -13306,6 +15320,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
           if (HeightPixels != 0) hash ^= HeightPixels.GetHashCode();
           if (FrameRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FrameRate);
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) hash ^= FrameRateConversionStrategy.GetHashCode();
           if (BitrateBps != 0) hash ^= BitrateBps.GetHashCode();
           if (PixelFormat.Length != 0) hash ^= PixelFormat.GetHashCode();
           if (RateControlMode.Length != 0) hash ^= RateControlMode.GetHashCode();
@@ -13313,7 +15328,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (HasGopFrameCount) hash ^= GopFrameCount.GetHashCode();
           if (gopModeCase_ == GopModeOneofCase.GopDuration) hash ^= GopDuration.GetHashCode();
           if (Profile.Length != 0) hash ^= Profile.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) hash ^= Sdr.GetHashCode();
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) hash ^= Hlg.GetHashCode();
           hash ^= (int) gopModeCase_;
+          hash ^= (int) colorFormatCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -13372,6 +15390,18 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(82);
             output.WriteString(Profile);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            output.WriteRawTag(90);
+            output.WriteMessage(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            output.WriteRawTag(98);
+            output.WriteMessage(Hlg);
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            output.WriteRawTag(104);
+            output.WriteEnum((int) FrameRateConversionStrategy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -13422,6 +15452,18 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(82);
             output.WriteString(Profile);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            output.WriteRawTag(90);
+            output.WriteMessage(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            output.WriteRawTag(98);
+            output.WriteMessage(Hlg);
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            output.WriteRawTag(104);
+            output.WriteEnum((int) FrameRateConversionStrategy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -13440,6 +15482,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           if (FrameRate != 0D) {
             size += 1 + 8;
+          }
+          if (FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FrameRateConversionStrategy);
           }
           if (BitrateBps != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(BitrateBps);
@@ -13462,6 +15507,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (Profile.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Profile);
           }
+          if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sdr);
+          }
+          if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Hlg);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -13482,6 +15533,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           if (other.FrameRate != 0D) {
             FrameRate = other.FrameRate;
+          }
+          if (other.FrameRateConversionStrategy != global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy.Unspecified) {
+            FrameRateConversionStrategy = other.FrameRateConversionStrategy;
           }
           if (other.BitrateBps != 0) {
             BitrateBps = other.BitrateBps;
@@ -13507,6 +15561,21 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 GopDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
               }
               GopDuration.MergeFrom(other.GopDuration);
+              break;
+          }
+
+          switch (other.ColorFormatCase) {
+            case ColorFormatOneofCase.Sdr:
+              if (Sdr == null) {
+                Sdr = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR();
+              }
+              Sdr.MergeFrom(other.Sdr);
+              break;
+            case ColorFormatOneofCase.Hlg:
+              if (Hlg == null) {
+                Hlg = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG();
+              }
+              Hlg.MergeFrom(other.Hlg);
               break;
           }
 
@@ -13570,6 +15639,28 @@ namespace Google.Cloud.Video.Transcoder.V1 {
                 Profile = input.ReadString();
                 break;
               }
+              case 90: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR();
+                if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+                  subBuilder.MergeFrom(Sdr);
+                }
+                input.ReadMessage(subBuilder);
+                Sdr = subBuilder;
+                break;
+              }
+              case 98: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+                  subBuilder.MergeFrom(Hlg);
+                }
+                input.ReadMessage(subBuilder);
+                Hlg = subBuilder;
+                break;
+              }
+              case 104: {
+                FrameRateConversionStrategy = (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -13628,6 +15719,28 @@ namespace Google.Cloud.Video.Transcoder.V1 {
               }
               case 82: {
                 Profile = input.ReadString();
+                break;
+              }
+              case 90: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatSDR();
+                if (colorFormatCase_ == ColorFormatOneofCase.Sdr) {
+                  subBuilder.MergeFrom(Sdr);
+                }
+                input.ReadMessage(subBuilder);
+                Sdr = subBuilder;
+                break;
+              }
+              case 98: {
+                global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG subBuilder = new global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9ColorFormatHLG();
+                if (colorFormatCase_ == ColorFormatOneofCase.Hlg) {
+                  subBuilder.MergeFrom(Hlg);
+                }
+                input.ReadMessage(subBuilder);
+                Hlg = subBuilder;
+                break;
+              }
+              case 104: {
+                FrameRateConversionStrategy = (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.FrameRateConversionStrategy) input.ReadEnum();
                 break;
               }
             }
@@ -13711,6 +15824,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// - `mp3`
     /// - `ac3`
     /// - `eac3`
+    /// - `vorbis`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13783,7 +15897,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping> mapping_ = new pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping>();
     /// <summary>
-    /// The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+    /// The mapping for the
+    /// [JobConfig.edit_list][google.cloud.video.transcoder.v1.JobConfig.edit_list]
+    /// atoms with audio
+    /// [EditAtom.inputs][google.cloud.video.transcoder.v1.EditAtom.inputs].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14125,7 +16242,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+      /// The mapping for the
+      /// [JobConfig.edit_list][google.cloud.video.transcoder.v1.JobConfig.edit_list]
+      /// atoms with audio
+      /// [EditAtom.inputs][google.cloud.video.transcoder.v1.EditAtom.inputs].
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AudioMapping : pb::IMessage<AudioMapping>
@@ -14181,8 +16301,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int AtomKeyFieldNumber = 1;
         private string atomKey_ = "";
         /// <summary>
-        /// Required. The `EditAtom.key` that references the atom with audio inputs
-        /// in the `Job.edit_list`.
+        /// Required. The
+        /// [EditAtom.key][google.cloud.video.transcoder.v1.EditAtom.key] that
+        /// references the atom with audio inputs in the
+        /// [JobConfig.edit_list][google.cloud.video.transcoder.v1.JobConfig.edit_list].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14197,7 +16319,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int InputKeyFieldNumber = 2;
         private string inputKey_ = "";
         /// <summary>
-        /// Required. The `Input.key` that identifies the input file.
+        /// Required. The [Input.key][google.cloud.video.transcoder.v1.Input.key]
+        /// that identifies the input file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14625,7 +16748,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping> mapping_ = new pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping>();
     /// <summary>
-    /// The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+    /// The mapping for the
+    /// [JobConfig.edit_list][google.cloud.video.transcoder.v1.JobConfig.edit_list]
+    /// atoms with text
+    /// [EditAtom.inputs][google.cloud.video.transcoder.v1.EditAtom.inputs].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14848,7 +16974,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+      /// The mapping for the
+      /// [JobConfig.edit_list][google.cloud.video.transcoder.v1.JobConfig.edit_list]
+      /// atoms with text
+      /// [EditAtom.inputs][google.cloud.video.transcoder.v1.EditAtom.inputs].
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TextMapping : pb::IMessage<TextMapping>
@@ -14901,8 +17030,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int AtomKeyFieldNumber = 1;
         private string atomKey_ = "";
         /// <summary>
-        /// Required. The `EditAtom.key` that references atom with text inputs in the
-        /// `Job.edit_list`.
+        /// Required. The
+        /// [EditAtom.key][google.cloud.video.transcoder.v1.EditAtom.key] that
+        /// references atom with text inputs in the
+        /// [JobConfig.edit_list][google.cloud.video.transcoder.v1.JobConfig.edit_list].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14917,7 +17048,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int InputKeyFieldNumber = 2;
         private string inputKey_ = "";
         /// <summary>
-        /// Required. The `Input.key` that identifies the input file.
+        /// Required. The [Input.key][google.cloud.video.transcoder.v1.Input.key]
+        /// that identifies the input file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
