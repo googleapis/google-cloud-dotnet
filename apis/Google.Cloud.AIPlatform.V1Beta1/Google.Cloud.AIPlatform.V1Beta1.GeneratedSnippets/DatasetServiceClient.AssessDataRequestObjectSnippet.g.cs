@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 TuningValidationAssessmentConfig = new AssessDataRequest.Types.TuningValidationAssessmentConfig(),
-                GeminiTemplateConfig = new GeminiTemplateConfig(),
                 GeminiRequestReadConfig = new GeminiRequestReadConfig(),
             };
             // Make the request
