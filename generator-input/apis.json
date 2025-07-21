@@ -4394,6 +4394,7 @@
       ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.2.0",
+        "Google.Cloud.OrgPolicy.V2": "2.8.0",
         "Google.LongRunning": "3.2.0"
       },
       "generator": "micro",
