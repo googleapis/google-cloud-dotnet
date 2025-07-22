@@ -3581,11 +3581,12 @@
         },
         {
             "id": "Google.Maps.AddressValidation.V1",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T15:40:26Z",
+            "releaseTimestamp": "2025-07-22T08:09:31.230550591Z",
             "lastGeneratedCommit": "68d5196a529174df97c28c70622ffc1c3721815f",
+            "lastReleasedCommit": "68d5196a529174df97c28c70622ffc1c3721815f",
             "apiPaths": [
                 "google/maps/addressvalidation/v1"
             ],

@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.5.0, released 2025-07-22
+
+### New features
+
+- Add has_spell_corrected_components field to the Address Validation verdict in the API response
+
+### Documentation improvements
+
+- Update proto field descriptions
+
 ## Version 1.4.0, released 2024-05-14
 
 ### New features
