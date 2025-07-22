@@ -5,6 +5,39 @@
   "protoPackage": "google.cloud.policysimulator.v1",
   "libraryPackage": "Google.Cloud.PolicySimulator.V1",
   "services": {
+    "OrgPolicyViolationsPreviewService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OrgPolicyViolationsPreviewServiceClient",
+          "rpcs": {
+            "CreateOrgPolicyViolationsPreview": {
+              "methods": [
+                "CreateOrgPolicyViolationsPreview",
+                "CreateOrgPolicyViolationsPreviewAsync"
+              ]
+            },
+            "GetOrgPolicyViolationsPreview": {
+              "methods": [
+                "GetOrgPolicyViolationsPreview",
+                "GetOrgPolicyViolationsPreviewAsync"
+              ]
+            },
+            "ListOrgPolicyViolations": {
+              "methods": [
+                "ListOrgPolicyViolations",
+                "ListOrgPolicyViolationsAsync"
+              ]
+            },
+            "ListOrgPolicyViolationsPreviews": {
+              "methods": [
+                "ListOrgPolicyViolationsPreviews",
+                "ListOrgPolicyViolationsPreviewsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Simulator": {
       "clients": {
         "grpc": {

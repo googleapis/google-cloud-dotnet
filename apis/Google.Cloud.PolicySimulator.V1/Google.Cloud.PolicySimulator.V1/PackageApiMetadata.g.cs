@@ -33,8 +33,8 @@ namespace Google.Cloud.PolicySimulator.V1
             {
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=operations/**}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/replays/*/operations/**}" }, { "get": "/v1/{name=folders/*/locations/*/replays/*/operations/**}" }, { "get": "/v1/{name=organizations/*/locations/*/replays/*/operations/**}" } ] }
-                    proto::ByteString.FromBase64("EhgvdjEve25hbWU9b3BlcmF0aW9ucy8qKn1aOxI5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwbGF5cy8qL29wZXJhdGlvbnMvKip9WjoSOC92MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovcmVwbGF5cy8qL29wZXJhdGlvbnMvKip9WkASPi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovcmVwbGF5cy8qL29wZXJhdGlvbnMvKip9")
+                    // { "get": "/v1/{name=operations/**}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/replays/*/operations/**}" }, { "get": "/v1/{name=folders/*/locations/*/replays/*/operations/**}" }, { "get": "/v1/{name=organizations/*/locations/*/replays/*/operations/**}" }, { "get": "/v1/{name=projects/*/locations/*/orgPolicyViolationsPreviews/*/operations/**}" }, { "get": "/v1/{name=folders/*/locations/*/orgPolicyViolationsPreviews/*/operations/**}" }, { "get": "/v1/{name=organizations/*/locations/*/orgPolicyViolationsPreviews/*/operations/**}" }, { "get": "/v1/{name=projects/*/locations/*/accessPolicySimulations/*/operations/**}" }, { "get": "/v1/{name=folders/*/locations/*/accessPolicySimulations/*/operations/**}" }, { "get": "/v1/{name=organizations/*/locations/*/accessPolicySimulations/*/operations/**}" } ] }
+                    proto::ByteString.FromBase64("EhgvdjEve25hbWU9b3BlcmF0aW9ucy8qKn1aOxI5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVwbGF5cy8qL29wZXJhdGlvbnMvKip9WjoSOC92MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovcmVwbGF5cy8qL29wZXJhdGlvbnMvKip9WkASPi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovcmVwbGF5cy8qL29wZXJhdGlvbnMvKip9Wk8STS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29yZ1BvbGljeVZpb2xhdGlvbnNQcmV2aWV3cy8qL29wZXJhdGlvbnMvKip9Wk4STC92MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovb3JnUG9saWN5VmlvbGF0aW9uc1ByZXZpZXdzLyovb3BlcmF0aW9ucy8qKn1aVBJSL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi9vcmdQb2xpY3lWaW9sYXRpb25zUHJldmlld3MvKi9vcGVyYXRpb25zLyoqfVpLEkkvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hY2Nlc3NQb2xpY3lTaW11bGF0aW9ucy8qL29wZXJhdGlvbnMvKip9WkoSSC92MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovYWNjZXNzUG9saWN5U2ltdWxhdGlvbnMvKi9vcGVyYXRpb25zLyoqfVpQEk4vdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL2FjY2Vzc1BvbGljeVNpbXVsYXRpb25zLyovb3BlcmF0aW9ucy8qKn0=")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",
@@ -46,6 +46,7 @@ namespace Google.Cloud.PolicySimulator.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return ExplanationsReflection.Descriptor;
+            yield return OrgpolicyReflection.Descriptor;
             yield return SimulatorReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
