@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.20.0, released 2025-07-22
+
+### New features
+
+- Add Idempotency to Cloud Bigtable MutateRowsRequest API
+
+### Documentation improvements
+
+- Sync generated comments from the API Protos
+- Minor comment update for field `idempotency` in message `.google.bigtable.v2.MutateRowRequest`
+
 ## Version 3.19.0, released 2025-07-07
 
 ### New features
