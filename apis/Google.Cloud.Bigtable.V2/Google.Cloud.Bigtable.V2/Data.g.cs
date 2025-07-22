@@ -1428,6 +1428,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int FloatValueFieldNumber = 11;
     /// <summary>
     /// Represents a typed value transported as a floating point number.
+    /// Does not support NaN or infinities.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
