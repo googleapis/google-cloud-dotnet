@@ -269,6 +269,45 @@
         }
       }
     },
+    "InternalRangeService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "InternalRangeServiceClient",
+          "rpcs": {
+            "CreateInternalRange": {
+              "methods": [
+                "CreateInternalRange",
+                "CreateInternalRangeAsync"
+              ]
+            },
+            "DeleteInternalRange": {
+              "methods": [
+                "DeleteInternalRange",
+                "DeleteInternalRangeAsync"
+              ]
+            },
+            "GetInternalRange": {
+              "methods": [
+                "GetInternalRange",
+                "GetInternalRangeAsync"
+              ]
+            },
+            "ListInternalRanges": {
+              "methods": [
+                "ListInternalRanges",
+                "ListInternalRangesAsync"
+              ]
+            },
+            "UpdateInternalRange": {
+              "methods": [
+                "UpdateInternalRange",
+                "UpdateInternalRangeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "PolicyBasedRoutingService": {
       "clients": {
         "grpc": {
