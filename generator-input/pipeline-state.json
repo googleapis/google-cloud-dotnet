@@ -3882,12 +3882,12 @@
         },
         {
             "id": "Google.Cloud.Spanner",
-            "currentVersion": "5.1.0",
+            "currentVersion": "5.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-17T21:25:21.762422506Z",
+            "releaseTimestamp": "2025-07-22T08:11:27.332051222Z",
             "lastGeneratedCommit": "62babf26d128656ac94fcc73c415b5f9f85cfc45",
-            "lastReleasedCommit": "2bea1fccad5117e9f026488570a4eb533df17b7c",
+            "lastReleasedCommit": "62babf26d128656ac94fcc73c415b5f9f85cfc45",
             "apiPaths": [
                 "google/spanner/admin/database/v1",
                 "google/spanner/admin/instance/v1",
@@ -4060,12 +4060,12 @@
         },
         {
             "id": "Google.Cloud.Lustre.V1",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-09T17:19:27.445910712Z",
+            "releaseTimestamp": "2025-07-22T08:14:33.146029042Z",
             "lastGeneratedCommit": "c4b0839af7bb3e72551cd07fa8f815b66cf1089b",
-            "lastReleasedCommit": "85d120d7cf5e006ac07789d2fd8fa2f831ca5388",
+            "lastReleasedCommit": "c4b0839af7bb3e72551cd07fa8f815b66cf1089b",
             "apiPaths": [
                 "google/cloud/lustre/v1"
             ],
