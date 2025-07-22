@@ -5982,7 +5982,7 @@
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1",
-      "version": "2.9.0",
+      "version": "2.10.0",
       "type": "grpc",
       "productName": "Transcoder",
       "productUrl": "https://cloud.google.com/transcoder/docs",
