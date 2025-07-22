@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.11.0, released 2025-07-22
+
+### New features
+
+- Add Network Connectivity Center APIs for Internal Range service
+
 ## Version 2.10.0, released 2025-03-24
 
 ### New features
