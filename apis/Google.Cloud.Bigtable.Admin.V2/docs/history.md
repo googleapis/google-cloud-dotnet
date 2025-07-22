@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.28.0, released 2025-07-22
+
+### New features
+
+- Add type support for Proto and Enum
+
 ## Version 3.27.0, released 2025-06-25
 
 ### New features

@@ -728,10 +728,10 @@
         },
         {
             "id": "Google.Cloud.BigQuery.V2",
-            "currentVersion": "3.11.0",
+            "currentVersion": "3.12.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-02-03T17:58:23Z",
+            "releaseTimestamp": "2025-07-22T07:22:44.744311671Z",
             "sourcePaths": [
                 "apis/Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2"
             ]
@@ -752,12 +752,12 @@
         },
         {
             "id": "Google.Cloud.Bigtable.Admin.V2",
-            "currentVersion": "3.27.0",
+            "currentVersion": "3.28.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-25T07:31:46.556823035Z",
+            "releaseTimestamp": "2025-07-22T07:48:51.055755280Z",
             "lastGeneratedCommit": "ff470725e0d32afab5d827767ff2df73fa1ad37c",
-            "lastReleasedCommit": "769bb248535d4ffb7c771d3c0fc958a4a40a7e0c",
+            "lastReleasedCommit": "ff470725e0d32afab5d827767ff2df73fa1ad37c",
             "apiPaths": [
                 "google/bigtable/admin/v2"
             ],
