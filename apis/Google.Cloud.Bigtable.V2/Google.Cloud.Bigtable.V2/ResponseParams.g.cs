@@ -44,9 +44,6 @@ namespace Google.Cloud.Bigtable.V2 {
   #region Messages
   /// <summary>
   /// Response metadata proto
-  /// This is an experimental feature that will be used to get zone_id and
-  /// cluster_id from response trailers to tag the metrics. This should not be
-  /// used by customers directly
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseParams : pb::IMessage<ResponseParams>

@@ -2077,7 +2077,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2113,7 +2114,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2149,7 +2151,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2177,7 +2180,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2213,7 +2217,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2249,7 +2254,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2277,7 +2283,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2318,7 +2325,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2359,7 +2367,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2391,7 +2400,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2432,7 +2442,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2473,7 +2484,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rules">
         /// Required. Rules specifying how the specified row's contents are to be
         /// transformed into writes. Entries are applied in order, meaning that earlier
-        /// rules will affect the results of later ones.
+        /// rules will affect the results of later ones. At least one entry must be
+        /// specified, and there can be at most 100000 rules.
         /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
@@ -2494,10 +2506,10 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2506,10 +2518,10 @@ namespace Google.Cloud.Bigtable.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -2526,10 +2538,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -2546,10 +2558,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -2572,10 +2584,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -2605,10 +2617,10 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2617,10 +2629,10 @@ namespace Google.Cloud.Bigtable.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -2637,10 +2649,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -2657,10 +2669,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -2683,10 +2695,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -3452,10 +3464,10 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3476,10 +3488,10 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
