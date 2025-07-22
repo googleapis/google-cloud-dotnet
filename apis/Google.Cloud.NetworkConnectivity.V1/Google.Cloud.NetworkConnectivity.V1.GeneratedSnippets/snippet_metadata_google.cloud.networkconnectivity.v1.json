@@ -11864,6 +11864,1418 @@
       ]
     },
     {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync",
+      "title": "ListInternalRangesRequestObject",
+      "description": "Snippet for ListInternalRanges",
+      "file": "InternalRangeServiceClient.ListInternalRangesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRanges",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListInternalRangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_async",
+      "title": "ListInternalRangesRequestObjectAsync",
+      "description": "Snippet for ListInternalRangesAsync",
+      "file": "InternalRangeServiceClient.ListInternalRangesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRangesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListInternalRangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync_flattened",
+      "title": "ListInternalRanges",
+      "description": "Snippet for ListInternalRanges",
+      "file": "InternalRangeServiceClient.ListInternalRangesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRanges",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRanges",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_async_flattened",
+      "title": "ListInternalRangesAsync",
+      "description": "Snippet for ListInternalRangesAsync",
+      "file": "InternalRangeServiceClient.ListInternalRangesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRangesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync_flattened_resourceNames",
+      "title": "ListInternalRangesResourceNames",
+      "description": "Snippet for ListInternalRanges",
+      "file": "InternalRangeServiceClient.ListInternalRangesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRanges",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRanges",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_async_flattened_resourceNames",
+      "title": "ListInternalRangesResourceNamesAsync",
+      "description": "Snippet for ListInternalRangesAsync",
+      "file": "InternalRangeServiceClient.ListInternalRangesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRangesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_sync",
+      "title": "GetInternalRangeRequestObject",
+      "description": "Snippet for GetInternalRange",
+      "file": "InternalRangeServiceClient.GetInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_async",
+      "title": "GetInternalRangeRequestObjectAsync",
+      "description": "Snippet for GetInternalRangeAsync",
+      "file": "InternalRangeServiceClient.GetInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_sync_flattened",
+      "title": "GetInternalRange",
+      "description": "Snippet for GetInternalRange",
+      "file": "InternalRangeServiceClient.GetInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_async_flattened",
+      "title": "GetInternalRangeAsync",
+      "description": "Snippet for GetInternalRangeAsync",
+      "file": "InternalRangeServiceClient.GetInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_sync_flattened_resourceNames",
+      "title": "GetInternalRangeResourceNames",
+      "description": "Snippet for GetInternalRange",
+      "file": "InternalRangeServiceClient.GetInternalRangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_async_flattened_resourceNames",
+      "title": "GetInternalRangeResourceNamesAsync",
+      "description": "Snippet for GetInternalRangeAsync",
+      "file": "InternalRangeServiceClient.GetInternalRangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_sync",
+      "title": "CreateInternalRangeRequestObject",
+      "description": "Snippet for CreateInternalRange",
+      "file": "InternalRangeServiceClient.CreateInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_async",
+      "title": "CreateInternalRangeRequestObjectAsync",
+      "description": "Snippet for CreateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.CreateInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_sync_flattened",
+      "title": "CreateInternalRange",
+      "description": "Snippet for CreateInternalRange",
+      "file": "InternalRangeServiceClient.CreateInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_async_flattened",
+      "title": "CreateInternalRangeAsync",
+      "description": "Snippet for CreateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.CreateInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_sync_flattened_resourceNames",
+      "title": "CreateInternalRangeResourceNames",
+      "description": "Snippet for CreateInternalRange",
+      "file": "InternalRangeServiceClient.CreateInternalRangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_async_flattened_resourceNames",
+      "title": "CreateInternalRangeResourceNamesAsync",
+      "description": "Snippet for CreateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.CreateInternalRangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_sync",
+      "title": "UpdateInternalRangeRequestObject",
+      "description": "Snippet for UpdateInternalRange",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_async",
+      "title": "UpdateInternalRangeRequestObjectAsync",
+      "description": "Snippet for UpdateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_sync_flattened",
+      "title": "UpdateInternalRange",
+      "description": "Snippet for UpdateInternalRange",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_async_flattened",
+      "title": "UpdateInternalRangeAsync",
+      "description": "Snippet for UpdateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_sync",
+      "title": "DeleteInternalRangeRequestObject",
+      "description": "Snippet for DeleteInternalRange",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_async",
+      "title": "DeleteInternalRangeRequestObjectAsync",
+      "description": "Snippet for DeleteInternalRangeAsync",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_sync_flattened",
+      "title": "DeleteInternalRange",
+      "description": "Snippet for DeleteInternalRange",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_async_flattened",
+      "title": "DeleteInternalRangeAsync",
+      "description": "Snippet for DeleteInternalRangeAsync",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_sync_flattened_resourceNames",
+      "title": "DeleteInternalRangeResourceNames",
+      "description": "Snippet for DeleteInternalRange",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_async_flattened_resourceNames",
+      "title": "DeleteInternalRangeResourceNamesAsync",
+      "description": "Snippet for DeleteInternalRangeAsync",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkconnectivity_v1_generated_PolicyBasedRoutingService_ListPolicyBasedRoutes_sync",
       "title": "ListPolicyBasedRoutesRequestObject",
       "description": "Snippet for ListPolicyBasedRoutes",
