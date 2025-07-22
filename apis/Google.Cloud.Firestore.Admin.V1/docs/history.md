@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.14.0, released 2025-07-22
+
+### New features
+
+- Expose tags field in Database and RestoreDatabaseRequest public protos
+
 ## Version 3.13.0, released 2025-04-14
 
 ### New features
