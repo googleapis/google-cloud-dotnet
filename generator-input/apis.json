@@ -3496,7 +3496,7 @@
     },
     {
       "id": "Google.Cloud.Lustre.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Google Cloud Managed Lustre",
       "productUrl": "https://cloud.google.com/managed-lustre/docs",
