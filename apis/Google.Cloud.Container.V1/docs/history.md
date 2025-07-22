@@ -1,5 +1,46 @@
 # Version history
 
+## Version 3.35.0, released 2025-07-22
+
+### New features
+
+- A new enum `TransparentHugepageEnabled` is added
+- A new enum `TransparentHugepageDefrag` is added
+- A new field `transparent_hugepage_enabled` is added to message `.google.container.v1.LinuxNodeConfig`
+- A new field `transparent_hugepage_defrag` is added to message `.google.container.v1.LinuxNodeConfig`
+- A new field `eviction_soft` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `eviction_soft_grace_period` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `eviction_minimum_reclaim` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `eviction_max_pod_grace_period_seconds` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `max_parallel_image_pulls` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `single_process_oom_kill` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new message `EvictionSignals` is added
+- A new message `EvictionGracePeriod` is added
+- A new message `EvictionMinimumReclaim` is added
+- A new field `boot_disk` is added to message `.google.container.v1.NodeConfig`
+- A new field `subnetwork` is added to message `.google.container.v1.NodeNetworkConfig`
+- A new field `min_node_cpus` is added to message `.google.container.v1.SoleTenantConfig`
+- A new field `lustre_csi_driver_config` is added to message `.google.container.v1.AddonsConfig`
+- A new message `LustreCsiDriverConfig` is added
+- A new field `additional_ip_ranges_configs` is added to message `.google.container.v1.IPAllocationPolicy`
+- A new field `auto_ipam_config` is added to message `.google.container.v1.IPAllocationPolicy`
+- A new field `gke_auto_upgrade_config` is added to message `.google.container.v1.Cluster`
+- A new enum `Mode` is added
+- A new field `mode` is added to message `.google.container.v1.AnonymousAuthenticationConfig`
+- A new field `desired_additional_ip_ranges_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new field `desired_auto_ipam_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new field `desired_user_managed_keys_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new field `gke_auto_upgrade_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new message `AdditionalIPRangesConfig` is added
+- A new message `DesiredAdditionalIPRangesConfig` is added
+- A new message `AutoIpamConfig` is added
+- A new field `boot_disk` is added to message `.google.container.v1.UpdateNodePoolRequest`
+- A new field `default_compute_class_config` is added to message `.google.container.v1.ClusterAutoscaling`
+- A new message `DefaultComputeClassConfig` is added
+- A new value `CLOUD_KMS_KEY_DESTROYED` is added to enum `Code`
+- A new message `BootDisk` is added
+- A new message `GkeAutoUpgradeConfig` is added
+
 ## Version 3.34.0, released 2025-05-28
 
 ### New features
