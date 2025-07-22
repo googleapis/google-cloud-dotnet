@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.10.0, released 2025-07-22
+
+### New features
+
+- Added support for specifying HEVC codec tag
+- Added support for converting the input video to a supported high dynamic range (HDR) formats
+- Added support for DROP_DUPLICATE frame rate conversion strategy to achieve the exact frame rate on the output video
+- Added support for fill_content_gaps field to allow processing inputs with significant number of missing frames
+
+### Documentation improvements
+
+- Improve comment formatting, add links, add references
+
 ## Version 2.9.0, released 2024-05-14
 
 ### New features
