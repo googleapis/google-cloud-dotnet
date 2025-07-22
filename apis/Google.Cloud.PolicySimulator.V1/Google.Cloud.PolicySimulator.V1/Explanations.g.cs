@@ -66,12 +66,12 @@ namespace Google.Cloud.PolicySimulator.V1 {
             "UkFOVEVEEAISFwoTVU5LTk9XTl9DT05ESVRJT05BTBADEhcKE1VOS05PV05f",
             "SU5GT19ERU5JRUQQBCpPChJIZXVyaXN0aWNSZWxldmFuY2USIwofSEVVUklT",
             "VElDX1JFTEVWQU5DRV9VTlNQRUNJRklFRBAAEgoKBk5PUk1BTBABEggKBEhJ",
-            "R0gQAkL1AQojY29tLmdvb2dsZS5jbG91ZC5wb2xpY3lzaW11bGF0b3IudjFC",
+            "R0gQAkLyAQojY29tLmdvb2dsZS5jbG91ZC5wb2xpY3lzaW11bGF0b3IudjFC",
             "EUV4cGxhbmF0aW9uc1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vcG9s",
             "aWN5c2ltdWxhdG9yL2FwaXYxL3BvbGljeXNpbXVsYXRvcnBiO3BvbGljeXNp",
-            "bXVsYXRvcnBi+AEBqgIfR29vZ2xlLkNsb3VkLlBvbGljeVNpbXVsYXRvci5W",
-            "McoCH0dvb2dsZVxDbG91ZFxQb2xpY3lTaW11bGF0b3JcVjHqAiJHb29nbGU6",
-            "OkNsb3VkOjpQb2xpY3lTaW11bGF0b3I6OlYxYgZwcm90bzM="));
+            "bXVsYXRvcnBiqgIfR29vZ2xlLkNsb3VkLlBvbGljeVNpbXVsYXRvci5WMcoC",
+            "H0dvb2dsZVxDbG91ZFxQb2xpY3lTaW11bGF0b3JcVjHqAiJHb29nbGU6OkNs",
+            "b3VkOjpQb2xpY3lTaW11bGF0b3I6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.PolicySimulator.V1.AccessState), typeof(global::Google.Cloud.PolicySimulator.V1.HeuristicRelevance), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -496,7 +496,7 @@ namespace Google.Cloud.PolicySimulator.V1 {
     /// permission for the resource. There might be another policy that overrides
     /// this policy. To determine whether the principal actually has the
     /// permission, use the `access` field in the
-    /// [TroubleshootIamPolicyResponse][IamChecker.TroubleshootIamPolicyResponse].
+    /// [TroubleshootIamPolicyResponse][google.cloud.policytroubleshooter.v3.TroubleshootIamPolicyResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -573,7 +573,7 @@ namespace Google.Cloud.PolicySimulator.V1 {
     private global::Google.Cloud.PolicySimulator.V1.HeuristicRelevance relevance_ = global::Google.Cloud.PolicySimulator.V1.HeuristicRelevance.Unspecified;
     /// <summary>
     /// The relevance of this policy to the overall determination in the
-    /// [TroubleshootIamPolicyResponse][IamChecker.TroubleshootIamPolicyResponse].
+    /// [TroubleshootIamPolicyResponse][google.cloud.policytroubleshooter.v3.TroubleshootIamPolicyResponse].
     ///
     /// If the user who created the
     /// [Replay][google.cloud.policysimulator.v1.Replay] does not have
@@ -882,7 +882,7 @@ namespace Google.Cloud.PolicySimulator.V1 {
     /// permission for the resource. There might be another binding that overrides
     /// this binding. To determine whether the principal actually has the
     /// permission, use the `access` field in the
-    /// [TroubleshootIamPolicyResponse][IamChecker.TroubleshootIamPolicyResponse].
+    /// [TroubleshootIamPolicyResponse][google.cloud.policytroubleshooter.v3.TroubleshootIamPolicyResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
