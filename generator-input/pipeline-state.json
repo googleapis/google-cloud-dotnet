@@ -2144,7 +2144,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:06:17Z",
-            "lastGeneratedCommit": "d2dcfcf40ff8176b330697f021f3e7db9ed3dcf7",
+            "lastGeneratedCommit": "deb6327efce102408fa665b99af3887b02b4b27c",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1alpha1"
             ],
