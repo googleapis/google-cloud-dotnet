@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2025-07-22
+
+### New features
+
+- Added OrgPolicyViolationsPreviewService v1 API to simulate Org Policy
+
+### Documentation improvements
+
+- Fix proto reference links in comments
+
 ## Version 1.2.0, released 2024-05-14
 
 ### New features
