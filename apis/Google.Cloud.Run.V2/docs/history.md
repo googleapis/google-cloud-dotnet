@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.15.0, released 2025-07-22
+
+### New features
+
+- Support GPU zonal redundancy setting for Cloud Run jobs
+- Add new field `term_signal` to `.google.cloud.run.v2.TaskAttemptResult`
+
 ## Version 2.14.0, released 2025-05-15
 
 ### New features
