@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta40, released 2025-07-22
+
+### Bug fixes
+
+- Remove gemini_template_config and request_column_name fields from DatasetService.AssessData and DatasetService.AssembleData
+
 ## Version 1.0.0-beta39, released 2025-07-15
 
 ### New features
