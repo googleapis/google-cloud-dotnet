@@ -567,6 +567,7 @@ namespace Google.Cloud.Spanner.Data
                 nameof(transactionCreationOptions.IsSingleUse),
                 $"Single-use transactions may only be used with the {nameof(SpannerCommand.ExecuteReader)} set  of methods.");
 
+            
             return BeginTransactionAsyncImpl(transactionCreationOptions, transactionOptions, cancellationToken);
         }
 
@@ -575,24 +576,42 @@ namespace Google.Cloud.Spanner.Data
             SpannerTransactionOptions transactionOptions,
             CancellationToken cancellationToken)
         {
+            SpannerTransactionCreationOptions enhancedTransactionCreationOptions = MaybeWithConnectionDefaults(transactionCreationOptions);
+
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
 
                     PooledSession session;
-                    if (transactionCreationOptions.TransactionId is null)
+                    if (enhancedTransactionCreationOptions.TransactionId is null)
                     {
-                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken).ConfigureAwait(false);
+                        session = await AcquireSessionAsync(enhancedTransactionCreationOptions, cancellationToken).ConfigureAwait(false);
                     }
                     else
                     {
-                        SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
-                        ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
+                        SessionName sessionName = SessionName.Parse(enhancedTransactionCreationOptions.TransactionId.Session);
+                        ByteString transactionIdBytes = ByteString.FromBase64(enhancedTransactionCreationOptions.TransactionId.Id);
                         session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
                     }
-                    return new SpannerTransaction(this, session, transactionCreationOptions, transactionOptions, isRetriable: false);
+                    return new SpannerTransaction(this, session, enhancedTransactionCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
+        }
+
+        private SpannerTransactionCreationOptions MaybeWithConnectionDefaults(SpannerTransactionCreationOptions transactionCreationOptions)
+        {
+            SpannerTransactionCreationOptions enhancedCreationOptions = transactionCreationOptions;
+
+            // Set the transaction IsolationLevel if specified in the ConnectionString and not already set on the SpannerTransactionCreationOptions
+            if(enhancedCreationOptions?.IsolationLevel == IsolationLevel.Unspecified
+                && !string.IsNullOrEmpty(Builder.IsolationLevel)
+                && enhancedCreationOptions?.TransactionMode == TransactionMode.ReadWrite
+                && enhancedCreationOptions?.IsPartitionedDml == false)
+            {
+                enhancedCreationOptions = transactionCreationOptions.WithIsolationLevel((IsolationLevel)Enum.Parse(typeof(IsolationLevel), Builder.IsolationLevel));
+            }
+
+            return enhancedCreationOptions;
         }
 
         /// <summary>
