@@ -2504,12 +2504,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -2553,12 +2553,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -5459,6 +5459,206 @@
       ]
     },
     {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlan_sync",
+      "title": "UpdateBackupPlanRequestObject",
+      "description": "Snippet for UpdateBackupPlan",
+      "file": "BackupDRClient.UpdateBackupPlanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlan, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlan_async",
+      "title": "UpdateBackupPlanRequestObjectAsync",
+      "description": "Snippet for UpdateBackupPlanAsync",
+      "file": "BackupDRClient.UpdateBackupPlanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlan, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlan_sync_flattened",
+      "title": "UpdateBackupPlan",
+      "description": "Snippet for UpdateBackupPlan",
+      "file": "BackupDRClient.UpdateBackupPlanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlan, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlan_async_flattened",
+      "title": "UpdateBackupPlanAsync",
+      "description": "Snippet for UpdateBackupPlanAsync",
+      "file": "BackupDRClient.UpdateBackupPlanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlan, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlan_sync",
       "title": "GetBackupPlanRequestObject",
       "description": "Snippet for GetBackupPlan",
@@ -6352,6 +6552,612 @@
       ]
     },
     {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlanRevision_sync",
+      "title": "GetBackupPlanRevisionRequestObject",
+      "description": "Snippet for GetBackupPlanRevision",
+      "file": "BackupDRClient.GetBackupPlanRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanRevision",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetBackupPlanRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.BackupPlanRevision",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanRevision",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetBackupPlanRevision",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlanRevision_async",
+      "title": "GetBackupPlanRevisionRequestObjectAsync",
+      "description": "Snippet for GetBackupPlanRevisionAsync",
+      "file": "BackupDRClient.GetBackupPlanRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanRevisionAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetBackupPlanRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanRevision",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetBackupPlanRevision",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlanRevision_sync_flattened",
+      "title": "GetBackupPlanRevision",
+      "description": "Snippet for GetBackupPlanRevision",
+      "file": "BackupDRClient.GetBackupPlanRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanRevision",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetBackupPlanRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.BackupPlanRevision",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanRevision",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetBackupPlanRevision",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlanRevision_async_flattened",
+      "title": "GetBackupPlanRevisionAsync",
+      "description": "Snippet for GetBackupPlanRevisionAsync",
+      "file": "BackupDRClient.GetBackupPlanRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanRevisionAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetBackupPlanRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanRevision",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetBackupPlanRevision",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlanRevision_sync_flattened_resourceNames",
+      "title": "GetBackupPlanRevisionResourceNames",
+      "description": "Snippet for GetBackupPlanRevision",
+      "file": "BackupDRClient.GetBackupPlanRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanRevision",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetBackupPlanRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlanRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.BackupPlanRevision",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanRevision",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetBackupPlanRevision",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetBackupPlanRevision_async_flattened_resourceNames",
+      "title": "GetBackupPlanRevisionResourceNamesAsync",
+      "description": "Snippet for GetBackupPlanRevisionAsync",
+      "file": "BackupDRClient.GetBackupPlanRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPlanRevisionAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetBackupPlanRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlanRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetBackupPlanRevision",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetBackupPlanRevision",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBackupPlanRevisions_sync",
+      "title": "ListBackupPlanRevisionsRequestObject",
+      "description": "Snippet for ListBackupPlanRevisions",
+      "file": "BackupDRClient.ListBackupPlanRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanRevisions",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBackupPlanRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse, Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanRevisions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBackupPlanRevisions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBackupPlanRevisions_async",
+      "title": "ListBackupPlanRevisionsRequestObjectAsync",
+      "description": "Snippet for ListBackupPlanRevisionsAsync",
+      "file": "BackupDRClient.ListBackupPlanRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanRevisionsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBackupPlanRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse, Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanRevisions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBackupPlanRevisions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBackupPlanRevisions_sync_flattened",
+      "title": "ListBackupPlanRevisions",
+      "description": "Snippet for ListBackupPlanRevisions",
+      "file": "BackupDRClient.ListBackupPlanRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanRevisions",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBackupPlanRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse, Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanRevisions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBackupPlanRevisions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBackupPlanRevisions_async_flattened",
+      "title": "ListBackupPlanRevisionsAsync",
+      "description": "Snippet for ListBackupPlanRevisionsAsync",
+      "file": "BackupDRClient.ListBackupPlanRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanRevisionsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBackupPlanRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse, Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanRevisions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBackupPlanRevisions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBackupPlanRevisions_sync_flattened_resourceNames",
+      "title": "ListBackupPlanRevisionsResourceNames",
+      "description": "Snippet for ListBackupPlanRevisions",
+      "file": "BackupDRClient.ListBackupPlanRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanRevisions",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBackupPlanRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse, Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanRevisions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBackupPlanRevisions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBackupPlanRevisions_async_flattened_resourceNames",
+      "title": "ListBackupPlanRevisionsResourceNamesAsync",
+      "description": "Snippet for ListBackupPlanRevisionsAsync",
+      "file": "BackupDRClient.ListBackupPlanRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPlanRevisionsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBackupPlanRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse, Google.Cloud.BackupDR.V1.BackupPlanRevision>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBackupPlanRevisions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBackupPlanRevisions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "backupdr_v1_generated_BackupDR_CreateBackupPlanAssociation_sync",
       "title": "CreateBackupPlanAssociationRequestObject",
       "description": "Snippet for CreateBackupPlanAssociation",
@@ -6666,6 +7472,206 @@
         {
           "start": 37,
           "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlanAssociation_sync",
+      "title": "UpdateBackupPlanAssociationRequestObject",
+      "description": "Snippet for UpdateBackupPlanAssociation",
+      "file": "BackupDRClient.UpdateBackupPlanAssociationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlanAssociation_async",
+      "title": "UpdateBackupPlanAssociationRequestObjectAsync",
+      "description": "Snippet for UpdateBackupPlanAssociationAsync",
+      "file": "BackupDRClient.UpdateBackupPlanAssociationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlanAssociation_sync_flattened",
+      "title": "UpdateBackupPlanAssociation",
+      "description": "Snippet for UpdateBackupPlanAssociation",
+      "file": "BackupDRClient.UpdateBackupPlanAssociationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlanAssociation",
+            "name": "backupPlanAssociation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateBackupPlanAssociation_async_flattened",
+      "title": "UpdateBackupPlanAssociationAsync",
+      "description": "Snippet for UpdateBackupPlanAssociationAsync",
+      "file": "BackupDRClient.UpdateBackupPlanAssociationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateBackupPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.BackupPlanAssociation",
+            "name": "backupPlanAssociation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.BackupPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateBackupPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -7277,6 +8283,341 @@
       ]
     },
     {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchBackupPlanAssociationsForResourceType_sync",
+      "title": "FetchBackupPlanAssociationsForResourceTypeRequestObject",
+      "description": "Snippet for FetchBackupPlanAssociationsForResourceType",
+      "file": "BackupDRClient.FetchBackupPlanAssociationsForResourceTypeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBackupPlanAssociationsForResourceType",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchBackupPlanAssociationsForResourceType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse, Google.Cloud.BackupDR.V1.BackupPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchBackupPlanAssociationsForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchBackupPlanAssociationsForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchBackupPlanAssociationsForResourceType_async",
+      "title": "FetchBackupPlanAssociationsForResourceTypeRequestObjectAsync",
+      "description": "Snippet for FetchBackupPlanAssociationsForResourceTypeAsync",
+      "file": "BackupDRClient.FetchBackupPlanAssociationsForResourceTypeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBackupPlanAssociationsForResourceTypeAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse, Google.Cloud.BackupDR.V1.BackupPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchBackupPlanAssociationsForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchBackupPlanAssociationsForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchBackupPlanAssociationsForResourceType_sync_flattened",
+      "title": "FetchBackupPlanAssociationsForResourceType",
+      "description": "Snippet for FetchBackupPlanAssociationsForResourceType",
+      "file": "BackupDRClient.FetchBackupPlanAssociationsForResourceTypeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBackupPlanAssociationsForResourceType",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchBackupPlanAssociationsForResourceType",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse, Google.Cloud.BackupDR.V1.BackupPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchBackupPlanAssociationsForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchBackupPlanAssociationsForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchBackupPlanAssociationsForResourceType_async_flattened",
+      "title": "FetchBackupPlanAssociationsForResourceTypeAsync",
+      "description": "Snippet for FetchBackupPlanAssociationsForResourceTypeAsync",
+      "file": "BackupDRClient.FetchBackupPlanAssociationsForResourceTypeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBackupPlanAssociationsForResourceTypeAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse, Google.Cloud.BackupDR.V1.BackupPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchBackupPlanAssociationsForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchBackupPlanAssociationsForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchBackupPlanAssociationsForResourceType_sync_flattened_resourceNames",
+      "title": "FetchBackupPlanAssociationsForResourceTypeResourceNames",
+      "description": "Snippet for FetchBackupPlanAssociationsForResourceType",
+      "file": "BackupDRClient.FetchBackupPlanAssociationsForResourceTypeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBackupPlanAssociationsForResourceType",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchBackupPlanAssociationsForResourceType",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse, Google.Cloud.BackupDR.V1.BackupPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchBackupPlanAssociationsForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchBackupPlanAssociationsForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchBackupPlanAssociationsForResourceType_async_flattened_resourceNames",
+      "title": "FetchBackupPlanAssociationsForResourceTypeResourceNamesAsync",
+      "description": "Snippet for FetchBackupPlanAssociationsForResourceTypeAsync",
+      "file": "BackupDRClient.FetchBackupPlanAssociationsForResourceTypeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBackupPlanAssociationsForResourceTypeAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse, Google.Cloud.BackupDR.V1.BackupPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchBackupPlanAssociationsForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchBackupPlanAssociationsForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "backupdr_v1_generated_BackupDR_DeleteBackupPlanAssociation_sync",
       "title": "DeleteBackupPlanAssociationRequestObject",
       "description": "Snippet for DeleteBackupPlanAssociation",
@@ -7867,6 +9208,628 @@
       ]
     },
     {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetDataSourceReference_sync",
+      "title": "GetDataSourceReferenceRequestObject",
+      "description": "Snippet for GetDataSourceReference",
+      "file": "BackupDRClient.GetDataSourceReferenceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataSourceReference",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetDataSourceReference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.DataSourceReference",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetDataSourceReference",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetDataSourceReference",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetDataSourceReference_async",
+      "title": "GetDataSourceReferenceRequestObjectAsync",
+      "description": "Snippet for GetDataSourceReferenceAsync",
+      "file": "BackupDRClient.GetDataSourceReferenceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataSourceReferenceAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetDataSourceReferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetDataSourceReference",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetDataSourceReference",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetDataSourceReference_sync_flattened",
+      "title": "GetDataSourceReference",
+      "description": "Snippet for GetDataSourceReference",
+      "file": "BackupDRClient.GetDataSourceReferenceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataSourceReference",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetDataSourceReference",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.DataSourceReference",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetDataSourceReference",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetDataSourceReference",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetDataSourceReference_async_flattened",
+      "title": "GetDataSourceReferenceAsync",
+      "description": "Snippet for GetDataSourceReferenceAsync",
+      "file": "BackupDRClient.GetDataSourceReferenceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataSourceReferenceAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetDataSourceReferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetDataSourceReference",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetDataSourceReference",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetDataSourceReference_sync_flattened_resourceNames",
+      "title": "GetDataSourceReferenceResourceNames",
+      "description": "Snippet for GetDataSourceReference",
+      "file": "BackupDRClient.GetDataSourceReferenceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataSourceReference",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetDataSourceReference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DataSourceReferenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.DataSourceReference",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetDataSourceReference",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetDataSourceReference",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetDataSourceReference_async_flattened_resourceNames",
+      "title": "GetDataSourceReferenceResourceNamesAsync",
+      "description": "Snippet for GetDataSourceReferenceAsync",
+      "file": "BackupDRClient.GetDataSourceReferenceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataSourceReferenceAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetDataSourceReferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DataSourceReferenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetDataSourceReference",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetDataSourceReference",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchDataSourceReferencesForResourceType_sync",
+      "title": "FetchDataSourceReferencesForResourceTypeRequestObject",
+      "description": "Snippet for FetchDataSourceReferencesForResourceType",
+      "file": "BackupDRClient.FetchDataSourceReferencesForResourceTypeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDataSourceReferencesForResourceType",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchDataSourceReferencesForResourceType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse, Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchDataSourceReferencesForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchDataSourceReferencesForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchDataSourceReferencesForResourceType_async",
+      "title": "FetchDataSourceReferencesForResourceTypeRequestObjectAsync",
+      "description": "Snippet for FetchDataSourceReferencesForResourceTypeAsync",
+      "file": "BackupDRClient.FetchDataSourceReferencesForResourceTypeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDataSourceReferencesForResourceTypeAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchDataSourceReferencesForResourceTypeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse, Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchDataSourceReferencesForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchDataSourceReferencesForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchDataSourceReferencesForResourceType_sync_flattened",
+      "title": "FetchDataSourceReferencesForResourceType",
+      "description": "Snippet for FetchDataSourceReferencesForResourceType",
+      "file": "BackupDRClient.FetchDataSourceReferencesForResourceTypeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDataSourceReferencesForResourceType",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchDataSourceReferencesForResourceType",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse, Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchDataSourceReferencesForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchDataSourceReferencesForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchDataSourceReferencesForResourceType_async_flattened",
+      "title": "FetchDataSourceReferencesForResourceTypeAsync",
+      "description": "Snippet for FetchDataSourceReferencesForResourceTypeAsync",
+      "file": "BackupDRClient.FetchDataSourceReferencesForResourceTypeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDataSourceReferencesForResourceTypeAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchDataSourceReferencesForResourceTypeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse, Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchDataSourceReferencesForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchDataSourceReferencesForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchDataSourceReferencesForResourceType_sync_flattened_resourceNames",
+      "title": "FetchDataSourceReferencesForResourceTypeResourceNames",
+      "description": "Snippet for FetchDataSourceReferencesForResourceType",
+      "file": "BackupDRClient.FetchDataSourceReferencesForResourceTypeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDataSourceReferencesForResourceType",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchDataSourceReferencesForResourceType",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse, Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchDataSourceReferencesForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchDataSourceReferencesForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_FetchDataSourceReferencesForResourceType_async_flattened_resourceNames",
+      "title": "FetchDataSourceReferencesForResourceTypeResourceNamesAsync",
+      "description": "Snippet for FetchDataSourceReferencesForResourceTypeAsync",
+      "file": "BackupDRClient.FetchDataSourceReferencesForResourceTypeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDataSourceReferencesForResourceTypeAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.FetchDataSourceReferencesForResourceTypeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse, Google.Cloud.BackupDR.V1.DataSourceReference>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "FetchDataSourceReferencesForResourceType",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.FetchDataSourceReferencesForResourceType",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "backupdr_v1_generated_BackupDR_InitializeService_sync",
       "title": "InitializeServiceRequestObject",
       "description": "Snippet for InitializeService",
@@ -7904,12 +9867,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -7953,12 +9916,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]

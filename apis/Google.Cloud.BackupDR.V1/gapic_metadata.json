@@ -64,6 +64,18 @@
                 "DeleteManagementServerAsync"
               ]
             },
+            "FetchBackupPlanAssociationsForResourceType": {
+              "methods": [
+                "FetchBackupPlanAssociationsForResourceType",
+                "FetchBackupPlanAssociationsForResourceTypeAsync"
+              ]
+            },
+            "FetchDataSourceReferencesForResourceType": {
+              "methods": [
+                "FetchDataSourceReferencesForResourceType",
+                "FetchDataSourceReferencesForResourceTypeAsync"
+              ]
+            },
             "FetchUsableBackupVaults": {
               "methods": [
                 "FetchUsableBackupVaults",
@@ -88,6 +100,12 @@
                 "GetBackupPlanAssociationAsync"
               ]
             },
+            "GetBackupPlanRevision": {
+              "methods": [
+                "GetBackupPlanRevision",
+                "GetBackupPlanRevisionAsync"
+              ]
+            },
             "GetBackupVault": {
               "methods": [
                 "GetBackupVault",
@@ -98,6 +116,12 @@
               "methods": [
                 "GetDataSource",
                 "GetDataSourceAsync"
+              ]
+            },
+            "GetDataSourceReference": {
+              "methods": [
+                "GetDataSourceReference",
+                "GetDataSourceReferenceAsync"
               ]
             },
             "GetManagementServer": {
@@ -116,6 +140,12 @@
               "methods": [
                 "ListBackupPlanAssociations",
                 "ListBackupPlanAssociationsAsync"
+              ]
+            },
+            "ListBackupPlanRevisions": {
+              "methods": [
+                "ListBackupPlanRevisions",
+                "ListBackupPlanRevisionsAsync"
               ]
             },
             "ListBackupPlans": {
@@ -164,6 +194,18 @@
               "methods": [
                 "UpdateBackup",
                 "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupPlan": {
+              "methods": [
+                "UpdateBackupPlan",
+                "UpdateBackupPlanAsync"
+              ]
+            },
+            "UpdateBackupPlanAssociation": {
+              "methods": [
+                "UpdateBackupPlanAssociation",
+                "UpdateBackupPlanAssociationAsync"
               ]
             },
             "UpdateBackupVault": {

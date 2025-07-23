@@ -122,6 +122,8 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.CreateBackupPlanRequest> __Marshaller_google_cloud_backupdr_v1_CreateBackupPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.CreateBackupPlanRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest> __Marshaller_google_cloud_backupdr_v1_UpdateBackupPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest> __Marshaller_google_cloud_backupdr_v1_GetBackupPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.BackupPlan> __Marshaller_google_cloud_backupdr_v1_BackupPlan = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.BackupPlan.Parser));
@@ -132,7 +134,17 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest> __Marshaller_google_cloud_backupdr_v1_DeleteBackupPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest> __Marshaller_google_cloud_backupdr_v1_GetBackupPlanRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> __Marshaller_google_cloud_backupdr_v1_BackupPlanRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest> __Marshaller_google_cloud_backupdr_v1_ListBackupPlanRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse> __Marshaller_google_cloud_backupdr_v1_ListBackupPlanRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1_CreateBackupPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1_UpdateBackupPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetBackupPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1_GetBackupPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetBackupPlanAssociationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -142,9 +154,21 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsResponse> __Marshaller_google_cloud_backupdr_v1_ListBackupPlanAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest> __Marshaller_google_cloud_backupdr_v1_FetchBackupPlanAssociationsForResourceTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse> __Marshaller_google_cloud_backupdr_v1_FetchBackupPlanAssociationsForResourceTypeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1_DeleteBackupPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.TriggerBackupRequest> __Marshaller_google_cloud_backupdr_v1_TriggerBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.TriggerBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest> __Marshaller_google_cloud_backupdr_v1_GetDataSourceReferenceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.DataSourceReference> __Marshaller_google_cloud_backupdr_v1_DataSourceReference = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.DataSourceReference.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest> __Marshaller_google_cloud_backupdr_v1_FetchDataSourceReferencesForResourceTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> __Marshaller_google_cloud_backupdr_v1_FetchDataSourceReferencesForResourceTypeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest> __Marshaller_google_cloud_backupdr_v1_InitializeServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.InitializeServiceRequest.Parser));
 
@@ -301,6 +325,14 @@ namespace Google.Cloud.BackupDR.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest, global::Google.LongRunning.Operation> __Method_UpdateBackupPlan = new grpc::Method<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupPlan",
+        __Marshaller_google_cloud_backupdr_v1_UpdateBackupPlanRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest, global::Google.Cloud.BackupDR.V1.BackupPlan> __Method_GetBackupPlan = new grpc::Method<global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest, global::Google.Cloud.BackupDR.V1.BackupPlan>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -325,11 +357,35 @@ namespace Google.Cloud.BackupDR.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest, global::Google.Cloud.BackupDR.V1.BackupPlanRevision> __Method_GetBackupPlanRevision = new grpc::Method<global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest, global::Google.Cloud.BackupDR.V1.BackupPlanRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupPlanRevision",
+        __Marshaller_google_cloud_backupdr_v1_GetBackupPlanRevisionRequest,
+        __Marshaller_google_cloud_backupdr_v1_BackupPlanRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest, global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse> __Method_ListBackupPlanRevisions = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest, global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupPlanRevisions",
+        __Marshaller_google_cloud_backupdr_v1_ListBackupPlanRevisionsRequest,
+        __Marshaller_google_cloud_backupdr_v1_ListBackupPlanRevisionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest, global::Google.LongRunning.Operation> __Method_CreateBackupPlanAssociation = new grpc::Method<global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateBackupPlanAssociation",
         __Marshaller_google_cloud_backupdr_v1_CreateBackupPlanAssociationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest, global::Google.LongRunning.Operation> __Method_UpdateBackupPlanAssociation = new grpc::Method<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupPlanAssociation",
+        __Marshaller_google_cloud_backupdr_v1_UpdateBackupPlanAssociationRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -349,6 +405,14 @@ namespace Google.Cloud.BackupDR.V1 {
         __Marshaller_google_cloud_backupdr_v1_ListBackupPlanAssociationsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse> __Method_FetchBackupPlanAssociationsForResourceType = new grpc::Method<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchBackupPlanAssociationsForResourceType",
+        __Marshaller_google_cloud_backupdr_v1_FetchBackupPlanAssociationsForResourceTypeRequest,
+        __Marshaller_google_cloud_backupdr_v1_FetchBackupPlanAssociationsForResourceTypeResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest, global::Google.LongRunning.Operation> __Method_DeleteBackupPlanAssociation = new grpc::Method<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -363,6 +427,22 @@ namespace Google.Cloud.BackupDR.V1 {
         "TriggerBackup",
         __Marshaller_google_cloud_backupdr_v1_TriggerBackupRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest, global::Google.Cloud.BackupDR.V1.DataSourceReference> __Method_GetDataSourceReference = new grpc::Method<global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest, global::Google.Cloud.BackupDR.V1.DataSourceReference>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDataSourceReference",
+        __Marshaller_google_cloud_backupdr_v1_GetDataSourceReferenceRequest,
+        __Marshaller_google_cloud_backupdr_v1_DataSourceReference);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> __Method_FetchDataSourceReferencesForResourceType = new grpc::Method<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchDataSourceReferencesForResourceType",
+        __Marshaller_google_cloud_backupdr_v1_FetchDataSourceReferencesForResourceTypeRequest,
+        __Marshaller_google_cloud_backupdr_v1_FetchDataSourceReferencesForResourceTypeResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation> __Method_InitializeService = new grpc::Method<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation>(
@@ -613,6 +693,18 @@ namespace Google.Cloud.BackupDR.V1 {
       }
 
       /// <summary>
+      /// Update a BackupPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackupPlan(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets details of a single BackupPlan.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -649,6 +741,30 @@ namespace Google.Cloud.BackupDR.V1 {
       }
 
       /// <summary>
+      /// Gets details of a single BackupPlanRevision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> GetBackupPlanRevision(global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists BackupPlanRevisions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse> ListBackupPlanRevisions(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Create a BackupPlanAssociation
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -656,6 +772,18 @@ namespace Google.Cloud.BackupDR.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackupPlanAssociation(global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a BackupPlanAssociation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackupPlanAssociation(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -685,6 +813,18 @@ namespace Google.Cloud.BackupDR.V1 {
       }
 
       /// <summary>
+      /// List BackupPlanAssociations for a given resource type.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse> FetchBackupPlanAssociationsForResourceType(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single BackupPlanAssociation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -704,6 +844,30 @@ namespace Google.Cloud.BackupDR.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TriggerBackup(global::Google.Cloud.BackupDR.V1.TriggerBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single DataSourceReference.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.DataSourceReference> GetDataSourceReference(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch DataSourceReferences for a given project, location and resource type.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> FetchDataSourceReferencesForResourceType(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1670,6 +1834,54 @@ namespace Google.Cloud.BackupDR.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBackupPlan, null, options, request);
       }
       /// <summary>
+      /// Update a BackupPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupPlan(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupPlan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a BackupPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupPlan(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupPlan, null, options, request);
+      }
+      /// <summary>
+      /// Update a BackupPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupPlanAsync(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupPlanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a BackupPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupPlanAsync(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupPlan, null, options, request);
+      }
+      /// <summary>
       /// Gets details of a single BackupPlan.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1814,6 +2026,102 @@ namespace Google.Cloud.BackupDR.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupPlan, null, options, request);
       }
       /// <summary>
+      /// Gets details of a single BackupPlanRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.BackupPlanRevision GetBackupPlanRevision(global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupPlanRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single BackupPlanRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.BackupPlanRevision GetBackupPlanRevision(global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupPlanRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single BackupPlanRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> GetBackupPlanRevisionAsync(global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupPlanRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single BackupPlanRevision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> GetBackupPlanRevisionAsync(global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupPlanRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists BackupPlanRevisions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse ListBackupPlanRevisions(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupPlanRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BackupPlanRevisions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse ListBackupPlanRevisions(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupPlanRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists BackupPlanRevisions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse> ListBackupPlanRevisionsAsync(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupPlanRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists BackupPlanRevisions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse> ListBackupPlanRevisionsAsync(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupPlanRevisions, null, options, request);
+      }
+      /// <summary>
       /// Create a BackupPlanAssociation
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1860,6 +2168,54 @@ namespace Google.Cloud.BackupDR.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupPlanAssociationAsync(global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBackupPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Update a BackupPlanAssociation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupPlanAssociation(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupPlanAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a BackupPlanAssociation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupPlanAssociation(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Update a BackupPlanAssociation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupPlanAssociationAsync(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupPlanAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a BackupPlanAssociation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupPlanAssociationAsync(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupPlanAssociation, null, options, request);
       }
       /// <summary>
       /// Gets details of a single BackupPlanAssociation.
@@ -1958,6 +2314,54 @@ namespace Google.Cloud.BackupDR.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListBackupPlanAssociations, null, options, request);
       }
       /// <summary>
+      /// List BackupPlanAssociations for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse FetchBackupPlanAssociationsForResourceType(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchBackupPlanAssociationsForResourceType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List BackupPlanAssociations for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse FetchBackupPlanAssociationsForResourceType(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchBackupPlanAssociationsForResourceType, null, options, request);
+      }
+      /// <summary>
+      /// List BackupPlanAssociations for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse> FetchBackupPlanAssociationsForResourceTypeAsync(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchBackupPlanAssociationsForResourceTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List BackupPlanAssociations for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse> FetchBackupPlanAssociationsForResourceTypeAsync(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchBackupPlanAssociationsForResourceType, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single BackupPlanAssociation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2054,6 +2458,102 @@ namespace Google.Cloud.BackupDR.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_TriggerBackup, null, options, request);
       }
       /// <summary>
+      /// Gets details of a single DataSourceReference.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.DataSourceReference GetDataSourceReference(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataSourceReference(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DataSourceReference.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.DataSourceReference GetDataSourceReference(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDataSourceReference, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DataSourceReference.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.DataSourceReference> GetDataSourceReferenceAsync(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataSourceReferenceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DataSourceReference.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.DataSourceReference> GetDataSourceReferenceAsync(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDataSourceReference, null, options, request);
+      }
+      /// <summary>
+      /// Fetch DataSourceReferences for a given project, location and resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse FetchDataSourceReferencesForResourceType(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchDataSourceReferencesForResourceType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch DataSourceReferences for a given project, location and resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse FetchDataSourceReferencesForResourceType(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchDataSourceReferencesForResourceType, null, options, request);
+      }
+      /// <summary>
+      /// Fetch DataSourceReferences for a given project, location and resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> FetchDataSourceReferencesForResourceTypeAsync(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchDataSourceReferencesForResourceTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch DataSourceReferences for a given project, location and resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> FetchDataSourceReferencesForResourceTypeAsync(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchDataSourceReferencesForResourceType, null, options, request);
+      }
+      /// <summary>
       /// Initializes the service related config for a project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2134,14 +2634,21 @@ namespace Google.Cloud.BackupDR.V1 {
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
           .AddMethod(__Method_RestoreBackup, serviceImpl.RestoreBackup)
           .AddMethod(__Method_CreateBackupPlan, serviceImpl.CreateBackupPlan)
+          .AddMethod(__Method_UpdateBackupPlan, serviceImpl.UpdateBackupPlan)
           .AddMethod(__Method_GetBackupPlan, serviceImpl.GetBackupPlan)
           .AddMethod(__Method_ListBackupPlans, serviceImpl.ListBackupPlans)
           .AddMethod(__Method_DeleteBackupPlan, serviceImpl.DeleteBackupPlan)
+          .AddMethod(__Method_GetBackupPlanRevision, serviceImpl.GetBackupPlanRevision)
+          .AddMethod(__Method_ListBackupPlanRevisions, serviceImpl.ListBackupPlanRevisions)
           .AddMethod(__Method_CreateBackupPlanAssociation, serviceImpl.CreateBackupPlanAssociation)
+          .AddMethod(__Method_UpdateBackupPlanAssociation, serviceImpl.UpdateBackupPlanAssociation)
           .AddMethod(__Method_GetBackupPlanAssociation, serviceImpl.GetBackupPlanAssociation)
           .AddMethod(__Method_ListBackupPlanAssociations, serviceImpl.ListBackupPlanAssociations)
+          .AddMethod(__Method_FetchBackupPlanAssociationsForResourceType, serviceImpl.FetchBackupPlanAssociationsForResourceType)
           .AddMethod(__Method_DeleteBackupPlanAssociation, serviceImpl.DeleteBackupPlanAssociation)
           .AddMethod(__Method_TriggerBackup, serviceImpl.TriggerBackup)
+          .AddMethod(__Method_GetDataSourceReference, serviceImpl.GetDataSourceReference)
+          .AddMethod(__Method_FetchDataSourceReferencesForResourceType, serviceImpl.FetchDataSourceReferencesForResourceType)
           .AddMethod(__Method_InitializeService, serviceImpl.InitializeService).Build();
     }
 
@@ -2171,14 +2678,21 @@ namespace Google.Cloud.BackupDR.V1 {
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
       serviceBinder.AddMethod(__Method_RestoreBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.RestoreBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreBackup));
       serviceBinder.AddMethod(__Method_CreateBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.CreateBackupPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupPlan));
+      serviceBinder.AddMethod(__Method_UpdateBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupPlan));
       serviceBinder.AddMethod(__Method_GetBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest, global::Google.Cloud.BackupDR.V1.BackupPlan>(serviceImpl.GetBackupPlan));
       serviceBinder.AddMethod(__Method_ListBackupPlans, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListBackupPlansRequest, global::Google.Cloud.BackupDR.V1.ListBackupPlansResponse>(serviceImpl.ListBackupPlans));
       serviceBinder.AddMethod(__Method_DeleteBackupPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPlan));
+      serviceBinder.AddMethod(__Method_GetBackupPlanRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest, global::Google.Cloud.BackupDR.V1.BackupPlanRevision>(serviceImpl.GetBackupPlanRevision));
+      serviceBinder.AddMethod(__Method_ListBackupPlanRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest, global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse>(serviceImpl.ListBackupPlanRevisions));
       serviceBinder.AddMethod(__Method_CreateBackupPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupPlanAssociation));
+      serviceBinder.AddMethod(__Method_UpdateBackupPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupPlanAssociation));
       serviceBinder.AddMethod(__Method_GetBackupPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetBackupPlanAssociationRequest, global::Google.Cloud.BackupDR.V1.BackupPlanAssociation>(serviceImpl.GetBackupPlanAssociation));
       serviceBinder.AddMethod(__Method_ListBackupPlanAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsRequest, global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsResponse>(serviceImpl.ListBackupPlanAssociations));
+      serviceBinder.AddMethod(__Method_FetchBackupPlanAssociationsForResourceType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse>(serviceImpl.FetchBackupPlanAssociationsForResourceType));
       serviceBinder.AddMethod(__Method_DeleteBackupPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPlanAssociation));
       serviceBinder.AddMethod(__Method_TriggerBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.TriggerBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.TriggerBackup));
+      serviceBinder.AddMethod(__Method_GetDataSourceReference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest, global::Google.Cloud.BackupDR.V1.DataSourceReference>(serviceImpl.GetDataSourceReference));
+      serviceBinder.AddMethod(__Method_FetchDataSourceReferencesForResourceType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse>(serviceImpl.FetchDataSourceReferencesForResourceType));
       serviceBinder.AddMethod(__Method_InitializeService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.InitializeService));
     }
 

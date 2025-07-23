@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START backupdr_v1_generated_BackupDR_InitializeService_async]
+    // [START backupdr_v1_generated_BackupDR_UpdateBackupPlanAssociation_sync_flattened]
     using Google.Cloud.BackupDR.V1;
     using Google.LongRunning;
-    using System.Threading.Tasks;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedBackupDRClientSnippets
     {
-        /// <summary>Snippet for InitializeServiceAsync</summary>
+        /// <summary>Snippet for UpdateBackupPlanAssociation</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,37 +31,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task InitializeServiceRequestObjectAsync()
+        public void UpdateBackupPlanAssociation()
         {
             // Create client
-            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            BackupDRClient backupDRClient = BackupDRClient.Create();
             // Initialize request argument(s)
-            InitializeServiceRequest request = new InitializeServiceRequest
-            {
-                Name = "",
-                ResourceType = "",
-                RequestId = "",
-                CloudSqlInstanceInitializationConfig = new CloudSqlInstanceInitializationConfig(),
-            };
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<InitializeServiceResponse, OperationMetadata> response = await backupDRClient.InitializeServiceAsync(request);
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.UpdateBackupPlanAssociation(backupPlanAssociation, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<InitializeServiceResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            InitializeServiceResponse result = completedResponse.Result;
+            BackupPlanAssociation result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<InitializeServiceResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitializeServiceAsync(operationName);
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupPlanAssociation(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                InitializeServiceResponse retrievedResult = retrievedResponse.Result;
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END backupdr_v1_generated_BackupDR_InitializeService_async]
+    // [END backupdr_v1_generated_BackupDR_UpdateBackupPlanAssociation_sync_flattened]
 }
