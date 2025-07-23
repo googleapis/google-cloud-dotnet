@@ -23,6 +23,7 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
+    using Google.Rpc;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -4015,6 +4016,105 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for InternalUpdateGraphOperation</summary>
+        public void InternalUpdateGraphOperationRequestObject()
+        {
+            // Snippet: InternalUpdateGraphOperation(InternalUpdateGraphOperationRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            InternalUpdateGraphOperationRequest request = new InternalUpdateGraphOperationRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                OperationId = "",
+                Progress = 0,
+                VmIdentityToken = "",
+                Status = new Status(),
+            };
+            // Make the request
+            InternalUpdateGraphOperationResponse response = databaseAdminClient.InternalUpdateGraphOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InternalUpdateGraphOperationAsync</summary>
+        public async Task InternalUpdateGraphOperationRequestObjectAsync()
+        {
+            // Snippet: InternalUpdateGraphOperationAsync(InternalUpdateGraphOperationRequest, CallSettings)
+            // Additional: InternalUpdateGraphOperationAsync(InternalUpdateGraphOperationRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InternalUpdateGraphOperationRequest request = new InternalUpdateGraphOperationRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                OperationId = "",
+                Progress = 0,
+                VmIdentityToken = "",
+                Status = new Status(),
+            };
+            // Make the request
+            InternalUpdateGraphOperationResponse response = await databaseAdminClient.InternalUpdateGraphOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InternalUpdateGraphOperation</summary>
+        public void InternalUpdateGraphOperation()
+        {
+            // Snippet: InternalUpdateGraphOperation(string, string, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            string operationId = "";
+            // Make the request
+            InternalUpdateGraphOperationResponse response = databaseAdminClient.InternalUpdateGraphOperation(database, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InternalUpdateGraphOperationAsync</summary>
+        public async Task InternalUpdateGraphOperationAsync()
+        {
+            // Snippet: InternalUpdateGraphOperationAsync(string, string, CallSettings)
+            // Additional: InternalUpdateGraphOperationAsync(string, string, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            string operationId = "";
+            // Make the request
+            InternalUpdateGraphOperationResponse response = await databaseAdminClient.InternalUpdateGraphOperationAsync(database, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InternalUpdateGraphOperation</summary>
+        public void InternalUpdateGraphOperationResourceNames()
+        {
+            // Snippet: InternalUpdateGraphOperation(DatabaseName, string, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            string operationId = "";
+            // Make the request
+            InternalUpdateGraphOperationResponse response = databaseAdminClient.InternalUpdateGraphOperation(database, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InternalUpdateGraphOperationAsync</summary>
+        public async Task InternalUpdateGraphOperationResourceNamesAsync()
+        {
+            // Snippet: InternalUpdateGraphOperationAsync(DatabaseName, string, CallSettings)
+            // Additional: InternalUpdateGraphOperationAsync(DatabaseName, string, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            string operationId = "";
+            // Make the request
+            InternalUpdateGraphOperationResponse response = await databaseAdminClient.InternalUpdateGraphOperationAsync(database, operationId);
             // End snippet
         }
     }

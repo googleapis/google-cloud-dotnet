@@ -88,6 +88,12 @@
                 "GetIamPolicyAsync"
               ]
             },
+            "InternalUpdateGraphOperation": {
+              "methods": [
+                "InternalUpdateGraphOperation",
+                "InternalUpdateGraphOperationAsync"
+              ]
+            },
             "ListBackupOperations": {
               "methods": [
                 "ListBackupOperations",

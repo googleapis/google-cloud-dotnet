@@ -7617,6 +7617,309 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_InternalUpdateGraphOperation_sync",
+      "title": "InternalUpdateGraphOperationRequestObject",
+      "description": "Snippet for InternalUpdateGraphOperation",
+      "file": "DatabaseAdminClient.InternalUpdateGraphOperationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InternalUpdateGraphOperation",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.InternalUpdateGraphOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationResponse",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "InternalUpdateGraphOperation",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.InternalUpdateGraphOperation",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_InternalUpdateGraphOperation_async",
+      "title": "InternalUpdateGraphOperationRequestObjectAsync",
+      "description": "Snippet for InternalUpdateGraphOperationAsync",
+      "file": "DatabaseAdminClient.InternalUpdateGraphOperationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InternalUpdateGraphOperationAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.InternalUpdateGraphOperationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationResponse>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "InternalUpdateGraphOperation",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.InternalUpdateGraphOperation",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_InternalUpdateGraphOperation_sync_flattened",
+      "title": "InternalUpdateGraphOperation",
+      "description": "Snippet for InternalUpdateGraphOperation",
+      "file": "DatabaseAdminClient.InternalUpdateGraphOperationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InternalUpdateGraphOperation",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.InternalUpdateGraphOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationResponse",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "InternalUpdateGraphOperation",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.InternalUpdateGraphOperation",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_InternalUpdateGraphOperation_async_flattened",
+      "title": "InternalUpdateGraphOperationAsync",
+      "description": "Snippet for InternalUpdateGraphOperationAsync",
+      "file": "DatabaseAdminClient.InternalUpdateGraphOperationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InternalUpdateGraphOperationAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.InternalUpdateGraphOperationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationResponse>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "InternalUpdateGraphOperation",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.InternalUpdateGraphOperation",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_InternalUpdateGraphOperation_sync_flattened_resourceNames",
+      "title": "InternalUpdateGraphOperationResourceNames",
+      "description": "Snippet for InternalUpdateGraphOperation",
+      "file": "DatabaseAdminClient.InternalUpdateGraphOperationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InternalUpdateGraphOperation",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.InternalUpdateGraphOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationResponse",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "InternalUpdateGraphOperation",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.InternalUpdateGraphOperation",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_InternalUpdateGraphOperation_async_flattened_resourceNames",
+      "title": "InternalUpdateGraphOperationResourceNamesAsync",
+      "description": "Snippet for InternalUpdateGraphOperationAsync",
+      "file": "DatabaseAdminClient.InternalUpdateGraphOperationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InternalUpdateGraphOperationAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.InternalUpdateGraphOperationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Database.V1.InternalUpdateGraphOperationResponse>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "InternalUpdateGraphOperation",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.InternalUpdateGraphOperation",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

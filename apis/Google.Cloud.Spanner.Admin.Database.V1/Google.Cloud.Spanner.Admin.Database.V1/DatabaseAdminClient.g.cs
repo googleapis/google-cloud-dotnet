@@ -81,6 +81,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             UpdateBackupScheduleSettings = existing.UpdateBackupScheduleSettings;
             DeleteBackupScheduleSettings = existing.DeleteBackupScheduleSettings;
             ListBackupSchedulesSettings = existing.ListBackupSchedulesSettings;
+            InternalUpdateGraphOperationSettings = existing.InternalUpdateGraphOperationSettings;
             OnCopy(existing);
         }
 
@@ -686,6 +687,19 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListBackupSchedulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.InternalUpdateGraphOperation</c> and
+        /// <c>DatabaseAdminClient.InternalUpdateGraphOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings InternalUpdateGraphOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseAdminSettings"/> object.</returns>
@@ -5739,6 +5753,142 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }
             return ListBackupSchedulesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InternalUpdateGraphOperationResponse InternalUpdateGraphOperation(InternalUpdateGraphOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(InternalUpdateGraphOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(InternalUpdateGraphOperationRequest request, st::CancellationToken cancellationToken) =>
+            InternalUpdateGraphOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="database">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="operationId">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InternalUpdateGraphOperationResponse InternalUpdateGraphOperation(string database, string operationId, gaxgrpc::CallSettings callSettings = null) =>
+            InternalUpdateGraphOperation(new InternalUpdateGraphOperationRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+            }, callSettings);
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="database">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="operationId">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(string database, string operationId, gaxgrpc::CallSettings callSettings = null) =>
+            InternalUpdateGraphOperationAsync(new InternalUpdateGraphOperationRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+            }, callSettings);
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="database">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="operationId">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(string database, string operationId, st::CancellationToken cancellationToken) =>
+            InternalUpdateGraphOperationAsync(database, operationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="database">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="operationId">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InternalUpdateGraphOperationResponse InternalUpdateGraphOperation(gcscv::DatabaseName database, string operationId, gaxgrpc::CallSettings callSettings = null) =>
+            InternalUpdateGraphOperation(new InternalUpdateGraphOperationRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+            }, callSettings);
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="database">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="operationId">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(gcscv::DatabaseName database, string operationId, gaxgrpc::CallSettings callSettings = null) =>
+            InternalUpdateGraphOperationAsync(new InternalUpdateGraphOperationRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                OperationId = gax::GaxPreconditions.CheckNotNullOrEmpty(operationId, nameof(operationId)),
+            }, callSettings);
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="database">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="operationId">
+        /// Internal field, do not use directly.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(gcscv::DatabaseName database, string operationId, st::CancellationToken cancellationToken) =>
+            InternalUpdateGraphOperationAsync(database, operationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DatabaseAdmin client wrapper implementation, for convenient use.</summary>
@@ -5804,6 +5954,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private readonly gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> _callDeleteBackupSchedule;
 
         private readonly gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> _callListBackupSchedules;
+
+        private readonly gaxgrpc::ApiCall<InternalUpdateGraphOperationRequest, InternalUpdateGraphOperationResponse> _callInternalUpdateGraphOperation;
 
         /// <summary>
         /// Constructs a client wrapper for the DatabaseAdmin service, with the specified gRPC client and settings.
@@ -5904,6 +6056,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callListBackupSchedules = clientHelper.BuildApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse>("ListBackupSchedules", grpcClient.ListBackupSchedulesAsync, grpcClient.ListBackupSchedules, effectiveSettings.ListBackupSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackupSchedules);
             Modify_ListBackupSchedulesApiCall(ref _callListBackupSchedules);
+            _callInternalUpdateGraphOperation = clientHelper.BuildApiCall<InternalUpdateGraphOperationRequest, InternalUpdateGraphOperationResponse>("InternalUpdateGraphOperation", grpcClient.InternalUpdateGraphOperationAsync, grpcClient.InternalUpdateGraphOperation, effectiveSettings.InternalUpdateGraphOperationSettings);
+            Modify_ApiCall(ref _callInternalUpdateGraphOperation);
+            Modify_InternalUpdateGraphOperationApiCall(ref _callInternalUpdateGraphOperation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5961,6 +6116,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_ListBackupSchedulesApiCall(ref gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> call);
 
+        partial void Modify_InternalUpdateGraphOperationApiCall(ref gaxgrpc::ApiCall<InternalUpdateGraphOperationRequest, InternalUpdateGraphOperationResponse> call);
+
         partial void OnConstruction(DatabaseAdmin.DatabaseAdminClient grpcClient, DatabaseAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseAdmin client</summary>
@@ -6017,6 +6174,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_DeleteBackupScheduleRequest(ref DeleteBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupSchedulesRequest(ref ListBackupSchedulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_InternalUpdateGraphOperationRequest(ref InternalUpdateGraphOperationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -6932,6 +7091,32 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupSchedulesRequest, ListBackupSchedulesResponse, BackupSchedule>(_callListBackupSchedules, request, callSettings);
+        }
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InternalUpdateGraphOperationResponse InternalUpdateGraphOperation(InternalUpdateGraphOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InternalUpdateGraphOperationRequest(ref request, ref callSettings);
+            return _callInternalUpdateGraphOperation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is an internal API called by Spanner Graph jobs. You should never need
+        /// to call this API directly.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InternalUpdateGraphOperationResponse> InternalUpdateGraphOperationAsync(InternalUpdateGraphOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InternalUpdateGraphOperationRequest(ref request, ref callSettings);
+            return _callInternalUpdateGraphOperation.Async(request, callSettings);
         }
     }
 
