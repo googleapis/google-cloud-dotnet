@@ -30,6 +30,42 @@ namespace Microsoft.Extensions.DependencyInjection
     public static partial class ServiceCollectionExtensions
     {
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::AssistantServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAssistantServiceClient(this IServiceCollection services, sys::Action<gcdv::AssistantServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::AssistantServiceClientBuilder builder = new gcdv::AssistantServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::AssistantServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAssistantServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::AssistantServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::AssistantServiceClientBuilder builder = new gcdv::AssistantServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::CmekConfigServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

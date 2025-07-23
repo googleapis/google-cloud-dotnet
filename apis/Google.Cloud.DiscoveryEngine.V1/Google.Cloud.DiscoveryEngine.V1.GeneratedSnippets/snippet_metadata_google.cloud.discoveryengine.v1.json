@@ -11,6 +11,54 @@
   },
   "snippets": [
     {
+      "regionTag": "discoveryengine_v1_generated_AssistantService_StreamAssist_sync",
+      "title": "StreamAssistRequestObject",
+      "description": "Snippet for StreamAssist",
+      "file": "AssistantServiceClient.StreamAssistRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamAssist",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.AssistantServiceClient.StreamAssist",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.AssistantServiceClient+StreamAssistStream",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "StreamAssist",
+          "fullName": "google.cloud.discoveryengine.v1.AssistantService.StreamAssist",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.discoveryengine.v1.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_CmekConfigService_UpdateCmekConfig_sync",
       "title": "UpdateCmekConfigRequestObject",
       "description": "Snippet for UpdateCmekConfig",
