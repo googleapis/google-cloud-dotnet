@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
@@ -20,7 +22,10 @@ using Grpc.Core;
 using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
+using MethodConfig = Google.Api.Gax.Grpc.Gcp.MethodConfig;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -30,14 +35,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal sealed class SpannerClientCreationOptions : IEquatable<SpannerClientCreationOptions>
     {
-        private static readonly Lazy<Task<ChannelCredentials>> s_defaultCredentialsTaskProvider = new Lazy<Task<ChannelCredentials>>(CreatedScopedDefaultCredentials);
-
-        private static async Task<ChannelCredentials> CreatedScopedDefaultCredentials()
-        {
-            var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            return ConvertGoogleCredential(appDefaultCredentials);
-        }
-
         /// <summary>
         /// The gRPC adapter to create clients with; never null.
         /// </summary>
@@ -46,24 +43,26 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The end-point to connect to; never null.
         /// </summary>
-        internal string Endpoint { get; }
+        internal string Endpoint => _gcpCallInvokerBuilder.EffectiveEndpoint;
 
         /// <summary>
         /// The number of gRPC channels to use (passed to Grpc.Gcp)
         /// </summary>
-        internal int MaximumGrpcChannels { get; }
+        internal int MaximumGrpcChannels => _gcpCallInvokerBuilder.MaximumGrpcChannels;
 
         /// <summary>
         /// A complicated setting used by Grpc.Gcp :)
         /// (This is used to determine when to use a new channel).
         /// </summary>
-        internal uint MaximumConcurrentStreamsLowWatermark { get; }
+        internal uint MaximumConcurrentStreamsLowWatermark => _gcpCallInvokerBuilder.MaxConcurrentStreamsLowWatermark;
 
-        internal bool UsesEmulator { get; }
+        internal bool UsesEmulator => _gcpCallInvokerBuilder.UseEmulator;
 
         internal bool LeaderRoutingEnabled { get; }
 
         internal DirectedReadOptions DirectedReadOptions { get; }
+
+        internal string UniverseDomain => _gcpCallInvokerBuilder.UniverseDomain;
 
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
@@ -75,29 +74,43 @@ namespace Google.Cloud.Spanner.Data
         // May be null; _credentialsOverride takes precedence if both this and _credentialsOverride
         // are non-null (which should only happen when connecting to the emulator)
         private readonly GoogleCredential _googleCredential;
+        private readonly GcpCallInvokerBuilder _gcpCallInvokerBuilder;
+
+        
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            var emulatorBuilder = new SpannerClientBuilder
+            _gcpCallInvokerBuilder = new GcpCallInvokerBuilder
             {
+                UniverseDomain = builder.UniverseDomain,
+                GoogleCredential = builder.GoogleCredential,
+                ChannelCredentials = builder.CredentialOverride,
+                // If Host and Port are default (i.e. not set by the customer),
+                // then set it to null and let EffectiveEndpoint in ClientBuilderBase figure out the endpoint
+                Endpoint = SpannerConnectionStringBuilder.DefaultHost.Equals(builder.Host)
+                && SpannerConnectionStringBuilder.DefaultPort.Equals(builder.Port) ? null : builder.EndPoint,
+                CredentialsPath = !string.IsNullOrEmpty(builder.CredentialFile) ? builder.CredentialFile : null,
+                UseJwtAccessWithScopes = true,
                 EmulatorDetection = builder.EmulatorDetection,
-                EnvironmentVariableProvider = builder.EnvironmentVariableProvider
-            }.MaybeCreateEmulatorClientBuilder();
-            UsesEmulator = emulatorBuilder is object;
-            // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
-            Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
+                EnvironmentVariableProvider = builder.EnvironmentVariableProvider,
+                MaximumGrpcChannels = builder.MaximumGrpcChannels,
+                MaxConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark
+            };
+            _gcpCallInvokerBuilder.MaybeSetEmulatorProperties();
+
+            GaxPreconditions.CheckArgument(Endpoint != null, "Endpoint", $"Endpoint is {Endpoint}");
             _credentialsFile = builder.CredentialFile;
 
-            // If the client connects to the emulator, use its credentials (regardless of builder.CredentialOverride)
-            _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? builder.CredentialOverride;
-            _googleCredential = builder.GoogleCredential;
-            MaximumGrpcChannels = builder.MaximumGrpcChannels;
-            MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
+            // If the client connects to the emulator, its credentials will be used (regardless of builder.CredentialOverride)
+            _credentialsOverride = _gcpCallInvokerBuilder.ChannelCredentials;
+            _googleCredential = _gcpCallInvokerBuilder.GoogleCredential;
             LeaderRoutingEnabled = builder.EnableLeaderRouting;
             DirectedReadOptions = builder.DirectedReadOptions;
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
+
+            _gcpCallInvokerBuilder.GrpcAdapter = GrpcAdapter;
         }
 
         public override bool Equals(object obj) => Equals(obj as SpannerClientCreationOptions);
@@ -172,48 +185,142 @@ namespace Google.Cloud.Spanner.Data
             {
                 return _credentialsOverride;
             }
-            if (_googleCredential is not null)
-            {
-                return ConvertGoogleCredential(_googleCredential);
-            }
-            if (string.IsNullOrEmpty(_credentialsFile))
-            {
-                return await s_defaultCredentialsTaskProvider.Value.ConfigureAwait(false);
-            }
-
-            string file = _credentialsFile;
-            string extension = Path.GetExtension(file);
-            if (!extension.Equals(".json", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new InvalidOperationException($"{nameof(SpannerConnectionStringBuilder.CredentialFile)} should only be set to a JSON file.");
-            }
-
-            if (!File.Exists(file) && !Path.IsPathRooted(file))
-            {
-                string applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-                // Try to find a file relative to the application's base directory.
-                file = Path.Combine(applicationFolder, file);
-                if (!File.Exists(file))
-                {
-                    // throw a meaningful error that tells the developer where we looked.
-                    throw new FileNotFoundException($"Could not find {_credentialsFile}. (Also looked for {file})");
-                }
-            }
-
-            var credential = await GoogleCredential.FromFileAsync(file, cancellationToken: default).ConfigureAwait(false);
-            return ConvertGoogleCredential(credential);
+            // ClientBuilderBase should take care of fetching right creds GoogleCredentials, file based creds or application default creds
+            var creds = await _gcpCallInvokerBuilder.GetChannelCredentialsAsync().ConfigureAwait(false);
+            return creds;
         }
 
-        private static ChannelCredentials ConvertGoogleCredential(GoogleCredential credential)
+        internal async Task<GcpCallInvoker> GetGcpCallInvokerAsync()
         {
-            credential = credential.CreateScoped(SpannerClient.DefaultScopes);
-            // Use self-signed JWTs for service accounts.
-            if (credential.UnderlyingCredential is ServiceAccountCredential serviceCredential)
+            return await _gcpCallInvokerBuilder.BuildAsync().ConfigureAwait(false);
+        }
+
+        private class GcpCallInvokerBuilder : ClientBuilderBase<GcpCallInvoker>
+        {
+            private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
+            private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
+            // TODO: Should these be configurable?
+            private static readonly GrpcChannelOptions s_grpcChannelOptions = GrpcChannelOptions.Empty
+                .WithKeepAliveTime(TimeSpan.FromMinutes(1))
+                .WithEnableServiceConfigResolution(false)
+                .WithMaxReceiveMessageSize(int.MaxValue);
+
+            /// <summary>
+            /// The Grpc.Gcp method configurations for pool options. These are here rather than at the top of the file
+            /// as they're only used in CreateClientAsync.
+            /// </summary>
+            private static readonly MethodConfig[] s_methodConfigs = new[]
             {
-                credential = GoogleCredential.FromServiceAccountCredential(serviceCredential.WithUseJwtAccessWithScopes(true));
+            // Note: Can't use nameof for affinity keys, as we need the original proto field name.
+
+            // Creating a session isn't bound to a channel, but binds the resulting session to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/CreateSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bind }
+            },
+
+            // Batch creating sessions isn't bound to a channel, but binds the resulting sessions to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/BatchCreateSessions" },
+                Affinity = new AffinityConfig { AffinityKey = "session.name", Command = Command.Bind }
+            },
+
+            // Most methods are bound by the session within the request
+            new MethodConfig
+            {
+                // We don't currently use this, but include it for completeness...
+                Name = { "/google.spanner.v1.Spanner/GetSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bound }
+            },
+            new MethodConfig
+            {
+                Name =
+                {
+                    "/google.spanner.v1.Spanner/ExecuteSql",
+                    "/google.spanner.v1.Spanner/ExecuteStreamingSql",
+                    "/google.spanner.v1.Spanner/Read",
+                    "/google.spanner.v1.Spanner/StreamingRead",
+                    "/google.spanner.v1.Spanner/BeginTransaction",
+                    "/google.spanner.v1.Spanner/Commit",
+                    "/google.spanner.v1.Spanner/Rollback",
+                    "/google.spanner.v1.Spanner/PartitionQuery",
+                    "/google.spanner.v1.Spanner/PartitionRead",
+                },
+                Affinity = new AffinityConfig { AffinityKey = "session", Command = Command.Bound }
+            },
+
+            // DeleteSession is bound by the session within the request, and removes the key afterwards
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/DeleteSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Unbind }
             }
-            return credential.ToChannelCredentials();
+        };
+            internal int MaximumGrpcChannels { get; set; }
+            internal uint MaxConcurrentStreamsLowWatermark { get; set; }
+            public GcpCallInvokerBuilder() : base(SpannerClient.ServiceMetadata)
+            {
+            }
+
+            public override GcpCallInvoker Build() => throw new NotImplementedException();
+
+            internal new string EffectiveEndpoint =>  base.EffectiveEndpoint;
+
+            internal new EmulatorDetection EmulatorDetection
+            {
+                get => base.EmulatorDetection;
+                set => base.EmulatorDetection = value;
+            }
+
+            internal Boolean UseEmulator { get; set; }
+
+            internal Func<string, string> EnvironmentVariableProvider { get; set; }
+
+            internal new async Task<ChannelCredentials> GetChannelCredentialsAsync(CancellationToken cancellationToken=default)
+                => await base.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
+
+            public override async Task<GcpCallInvoker> BuildAsync(CancellationToken cancellationToken = default)
+            {
+                var endpoint = EffectiveEndpoint;
+                var credentials = await GetChannelCredentialsAsync().ConfigureAwait(false);
+
+                var apiConfig = new ApiConfig
+                {
+                    ChannelPool = new ChannelPoolConfig
+                    {
+                        MaxSize = (uint)MaximumGrpcChannels,
+                        MaxConcurrentStreamsLowWatermark = MaxConcurrentStreamsLowWatermark
+                    },
+                    Method = { s_methodConfigs }
+                };
+
+                var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, endpoint, credentials, s_grpcChannelOptions, apiConfig, GrpcAdapter);
+                return callInvoker;
+            }
+            protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
+
+            /// <summary>
+            /// This method should be called wherever there is a possibility of us using the Emulator vs Prod backend.
+            /// The method takes care of setting the necessary properties to connect to the Emulator correctly.
+            /// </summary>
+            internal void MaybeSetEmulatorProperties()
+            {
+                var emulatorBuilder = new SpannerClientBuilder
+                {
+                    EmulatorDetection = EmulatorDetection,
+                    EnvironmentVariableProvider = EnvironmentVariableProvider
+                }.MaybeCreateEmulatorClientBuilder();
+
+                UseEmulator = emulatorBuilder is object;
+                if(UseEmulator)
+                {
+                    Endpoint = emulatorBuilder.Endpoint;
+                    ChannelCredentials = emulatorBuilder.ChannelCredentials ?? ChannelCredentials;
+                }
+            }
         }
     }
 }
