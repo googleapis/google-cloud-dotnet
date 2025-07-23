@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 ValidateOnly = false,
                 Force = false,
+                ForceUpdateAccessRestriction = false,
             };
             // Make the request
             Operation<BackupVault, OperationMetadata> response = backupDRClient.UpdateBackupVault(request);

@@ -79,18 +79,27 @@ namespace Google.Cloud.BackupDR.V1
             RestoreBackupOperationsSettings = existing.RestoreBackupOperationsSettings.Clone();
             CreateBackupPlanSettings = existing.CreateBackupPlanSettings;
             CreateBackupPlanOperationsSettings = existing.CreateBackupPlanOperationsSettings.Clone();
+            UpdateBackupPlanSettings = existing.UpdateBackupPlanSettings;
+            UpdateBackupPlanOperationsSettings = existing.UpdateBackupPlanOperationsSettings.Clone();
             GetBackupPlanSettings = existing.GetBackupPlanSettings;
             ListBackupPlansSettings = existing.ListBackupPlansSettings;
             DeleteBackupPlanSettings = existing.DeleteBackupPlanSettings;
             DeleteBackupPlanOperationsSettings = existing.DeleteBackupPlanOperationsSettings.Clone();
+            GetBackupPlanRevisionSettings = existing.GetBackupPlanRevisionSettings;
+            ListBackupPlanRevisionsSettings = existing.ListBackupPlanRevisionsSettings;
             CreateBackupPlanAssociationSettings = existing.CreateBackupPlanAssociationSettings;
             CreateBackupPlanAssociationOperationsSettings = existing.CreateBackupPlanAssociationOperationsSettings.Clone();
+            UpdateBackupPlanAssociationSettings = existing.UpdateBackupPlanAssociationSettings;
+            UpdateBackupPlanAssociationOperationsSettings = existing.UpdateBackupPlanAssociationOperationsSettings.Clone();
             GetBackupPlanAssociationSettings = existing.GetBackupPlanAssociationSettings;
             ListBackupPlanAssociationsSettings = existing.ListBackupPlanAssociationsSettings;
+            FetchBackupPlanAssociationsForResourceTypeSettings = existing.FetchBackupPlanAssociationsForResourceTypeSettings;
             DeleteBackupPlanAssociationSettings = existing.DeleteBackupPlanAssociationSettings;
             DeleteBackupPlanAssociationOperationsSettings = existing.DeleteBackupPlanAssociationOperationsSettings.Clone();
             TriggerBackupSettings = existing.TriggerBackupSettings;
             TriggerBackupOperationsSettings = existing.TriggerBackupOperationsSettings.Clone();
+            GetDataSourceReferenceSettings = existing.GetDataSourceReferenceSettings;
+            FetchDataSourceReferencesForResourceTypeSettings = existing.FetchDataSourceReferencesForResourceTypeSettings;
             InitializeServiceSettings = existing.InitializeServiceSettings;
             InitializeServiceOperationsSettings = existing.InitializeServiceOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
@@ -576,6 +585,36 @@ namespace Google.Cloud.BackupDR.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.UpdateBackupPlan</c> and <c>BackupDRClient.UpdateBackupPlanAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupPlanSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.UpdateBackupPlan</c> and
+        /// <c>BackupDRClient.UpdateBackupPlanAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupPlanOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BackupDRClient.GetBackupPlan</c> and <c>BackupDRClient.GetBackupPlanAsync</c>.
         /// </summary>
         /// <remarks>
@@ -630,6 +669,30 @@ namespace Google.Cloud.BackupDR.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetBackupPlanRevision</c> and <c>BackupDRClient.GetBackupPlanRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupPlanRevisionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListBackupPlanRevisions</c> and <c>BackupDRClient.ListBackupPlanRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupPlanRevisionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BackupDRClient.CreateBackupPlanAssociation</c> and <c>BackupDRClient.CreateBackupPlanAssociationAsync</c>
         /// .
         /// </summary>
@@ -661,6 +724,37 @@ namespace Google.Cloud.BackupDR.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.UpdateBackupPlanAssociation</c> and <c>BackupDRClient.UpdateBackupPlanAssociationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupPlanAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.UpdateBackupPlanAssociation</c> and
+        /// <c>BackupDRClient.UpdateBackupPlanAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupPlanAssociationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BackupDRClient.GetBackupPlanAssociation</c> and <c>BackupDRClient.GetBackupPlanAssociationAsync</c>.
         /// </summary>
         /// <remarks>
@@ -682,6 +776,19 @@ namespace Google.Cloud.BackupDR.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListBackupPlanAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.FetchBackupPlanAssociationsForResourceType</c> and
+        /// <c>BackupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchBackupPlanAssociationsForResourceTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -743,6 +850,31 @@ namespace Google.Cloud.BackupDR.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetDataSourceReference</c> and <c>BackupDRClient.GetDataSourceReferenceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDataSourceReferenceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.FetchDataSourceReferencesForResourceType</c> and
+        /// <c>BackupDRClient.FetchDataSourceReferencesForResourceTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchDataSourceReferencesForResourceTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3714,6 +3846,130 @@ namespace Google.Cloud.BackupDR.V1
             CreateBackupPlanAsync(parent, backupPlan, backupPlanId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPlan, OperationMetadata> UpdateBackupPlan(UpdateBackupPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlan, OperationMetadata>> UpdateBackupPlanAsync(UpdateBackupPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlan, OperationMetadata>> UpdateBackupPlanAsync(UpdateBackupPlanRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupPlanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackupPlan</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupPlanOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBackupPlan</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupPlan, OperationMetadata> PollOnceUpdateBackupPlan(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPlan, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupPlanOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupPlan</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlan, OperationMetadata>> PollOnceUpdateBackupPlanAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPlan, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupPlanOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="backupPlan">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// BackupPlan resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then the request will fail.
+        /// Currently, these fields are supported in update: description, schedules,
+        /// retention period, adding and removing Backup Rules.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPlan, OperationMetadata> UpdateBackupPlan(BackupPlan backupPlan, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupPlan(new UpdateBackupPlanRequest
+            {
+                BackupPlan = gax::GaxPreconditions.CheckNotNull(backupPlan, nameof(backupPlan)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="backupPlan">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// BackupPlan resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then the request will fail.
+        /// Currently, these fields are supported in update: description, schedules,
+        /// retention period, adding and removing Backup Rules.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlan, OperationMetadata>> UpdateBackupPlanAsync(BackupPlan backupPlan, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupPlanAsync(new UpdateBackupPlanRequest
+            {
+                BackupPlan = gax::GaxPreconditions.CheckNotNull(backupPlan, nameof(backupPlan)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="backupPlan">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// BackupPlan resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then the request will fail.
+        /// Currently, these fields are supported in update: description, schedules,
+        /// retention period, adding and removing Backup Rules.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlan, OperationMetadata>> UpdateBackupPlanAsync(BackupPlan backupPlan, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupPlanAsync(backupPlan, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single BackupPlan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4140,6 +4396,291 @@ namespace Google.Cloud.BackupDR.V1
             DeleteBackupPlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPlanRevision GetBackupPlanRevision(GetBackupPlanRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(GetBackupPlanRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(GetBackupPlanRevisionRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupPlanRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPlanRevision GetBackupPlanRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanRevision(new GetBackupPlanRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanRevisionAsync(new GetBackupPlanRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupPlanRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPlanRevision GetBackupPlanRevision(BackupPlanRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanRevision(new GetBackupPlanRevisionRequest
+            {
+                BackupPlanRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(BackupPlanRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPlanRevisionAsync(new GetBackupPlanRevisionRequest
+            {
+                BackupPlanRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(BackupPlanRevisionName name, st::CancellationToken cancellationToken) =>
+            GetBackupPlanRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisions(ListBackupPlanRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisionsAsync(ListBackupPlanRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `BackupPlanRevisions` information. Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In
+        /// Cloud BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanRevisionsRequest request = new ListBackupPlanRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `BackupPlanRevisions` information. Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In
+        /// Cloud BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanRevisionsRequest request = new ListBackupPlanRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `BackupPlanRevisions` information. Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In
+        /// Cloud BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisions(BackupPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanRevisionsRequest request = new ListBackupPlanRevisionsRequest
+            {
+                ParentAsBackupPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `BackupPlanRevisions` information. Format:
+        /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In
+        /// Cloud BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisionsAsync(BackupPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupPlanRevisionsRequest request = new ListBackupPlanRevisionsRequest
+            {
+                ParentAsBackupPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupPlanRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Create a BackupPlanAssociation
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4332,6 +4873,128 @@ namespace Google.Cloud.BackupDR.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> CreateBackupPlanAssociationAsync(gagr::LocationName parent, BackupPlanAssociation backupPlanAssociation, string backupPlanAssociationId, st::CancellationToken cancellationToken) =>
             CreateBackupPlanAssociationAsync(parent, backupPlanAssociation, backupPlanAssociationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPlanAssociation, OperationMetadata> UpdateBackupPlanAssociation(UpdateBackupPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> UpdateBackupPlanAssociationAsync(UpdateBackupPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> UpdateBackupPlanAssociationAsync(UpdateBackupPlanAssociationRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupPlanAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackupPlanAssociation</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupPlanAssociationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupPlanAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupPlanAssociation, OperationMetadata> PollOnceUpdateBackupPlanAssociation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPlanAssociation, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupPlanAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupPlanAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> PollOnceUpdateBackupPlanAssociationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPlanAssociation, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupPlanAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="backupPlanAssociation">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// BackupPlanAssociation resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then the request will fail.
+        /// Currently backup_plan_association.backup_plan is the only supported field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPlanAssociation, OperationMetadata> UpdateBackupPlanAssociation(BackupPlanAssociation backupPlanAssociation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupPlanAssociation(new UpdateBackupPlanAssociationRequest
+            {
+                BackupPlanAssociation = gax::GaxPreconditions.CheckNotNull(backupPlanAssociation, nameof(backupPlanAssociation)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="backupPlanAssociation">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// BackupPlanAssociation resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then the request will fail.
+        /// Currently backup_plan_association.backup_plan is the only supported field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> UpdateBackupPlanAssociationAsync(BackupPlanAssociation backupPlanAssociation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupPlanAssociationAsync(new UpdateBackupPlanAssociationRequest
+            {
+                BackupPlanAssociation = gax::GaxPreconditions.CheckNotNull(backupPlanAssociation, nameof(backupPlanAssociation)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="backupPlanAssociation">
+        /// Required. The resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// BackupPlanAssociation resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then the request will fail.
+        /// Currently backup_plan_association.backup_plan is the only supported field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> UpdateBackupPlanAssociationAsync(BackupPlanAssociation backupPlanAssociation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupPlanAssociationAsync(backupPlanAssociation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets details of a single BackupPlanAssociation.
@@ -4612,6 +5275,180 @@ namespace Google.Cloud.BackupDR.V1
                 request.PageSize = pageSize.Value;
             }
             return ListBackupPlanAssociationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceType(FetchBackupPlanAssociationsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceTypeAsync(FetchBackupPlanAssociationsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceType(string parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupPlanAssociationsForResourceTypeRequest request = new FetchBackupPlanAssociationsForResourceTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupPlanAssociationsForResourceType(request, callSettings);
+        }
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceTypeAsync(string parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupPlanAssociationsForResourceTypeRequest request = new FetchBackupPlanAssociationsForResourceTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupPlanAssociationsForResourceTypeAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceType(gagr::LocationName parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupPlanAssociationsForResourceTypeRequest request = new FetchBackupPlanAssociationsForResourceTypeRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupPlanAssociationsForResourceType(request, callSettings);
+        }
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceTypeAsync(gagr::LocationName parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupPlanAssociationsForResourceTypeRequest request = new FetchBackupPlanAssociationsForResourceTypeRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupPlanAssociationsForResourceTypeAsync(request, callSettings);
         }
 
         /// <summary>
@@ -4912,6 +5749,297 @@ namespace Google.Cloud.BackupDR.V1
             TriggerBackupAsync(name, ruleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataSourceReference GetDataSourceReference(GetDataSourceReferenceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataSourceReference> GetDataSourceReferenceAsync(GetDataSourceReferenceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataSourceReference> GetDataSourceReferenceAsync(GetDataSourceReferenceRequest request, st::CancellationToken cancellationToken) =>
+            GetDataSourceReferenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DataSourceReference to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataSourceReference GetDataSourceReference(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataSourceReference(new GetDataSourceReferenceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DataSourceReference to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataSourceReference> GetDataSourceReferenceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataSourceReferenceAsync(new GetDataSourceReferenceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DataSourceReference to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataSourceReference> GetDataSourceReferenceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDataSourceReferenceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DataSourceReference to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DataSourceReference GetDataSourceReference(DataSourceReferenceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataSourceReference(new GetDataSourceReferenceRequest
+            {
+                DataSourceReferenceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DataSourceReference to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataSourceReference> GetDataSourceReferenceAsync(DataSourceReferenceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDataSourceReferenceAsync(new GetDataSourceReferenceRequest
+            {
+                DataSourceReferenceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DataSourceReference to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DataSourceReference> GetDataSourceReferenceAsync(DataSourceReferenceName name, st::CancellationToken cancellationToken) =>
+            GetDataSourceReferenceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceType(FetchDataSourceReferencesForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceTypeAsync(FetchDataSourceReferencesForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceType(string parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDataSourceReferencesForResourceTypeRequest request = new FetchDataSourceReferencesForResourceTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDataSourceReferencesForResourceType(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceTypeAsync(string parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDataSourceReferencesForResourceTypeRequest request = new FetchDataSourceReferencesForResourceTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDataSourceReferencesForResourceTypeAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceType(gagr::LocationName parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDataSourceReferencesForResourceTypeRequest request = new FetchDataSourceReferencesForResourceTypeRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDataSourceReferencesForResourceType(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sql.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceTypeAsync(gagr::LocationName parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchDataSourceReferencesForResourceTypeRequest request = new FetchDataSourceReferencesForResourceTypeRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchDataSourceReferencesForResourceTypeAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Initializes the service related config for a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5010,21 +6138,35 @@ namespace Google.Cloud.BackupDR.V1
 
         private readonly gaxgrpc::ApiCall<CreateBackupPlanRequest, lro::Operation> _callCreateBackupPlan;
 
+        private readonly gaxgrpc::ApiCall<UpdateBackupPlanRequest, lro::Operation> _callUpdateBackupPlan;
+
         private readonly gaxgrpc::ApiCall<GetBackupPlanRequest, BackupPlan> _callGetBackupPlan;
 
         private readonly gaxgrpc::ApiCall<ListBackupPlansRequest, ListBackupPlansResponse> _callListBackupPlans;
 
         private readonly gaxgrpc::ApiCall<DeleteBackupPlanRequest, lro::Operation> _callDeleteBackupPlan;
 
+        private readonly gaxgrpc::ApiCall<GetBackupPlanRevisionRequest, BackupPlanRevision> _callGetBackupPlanRevision;
+
+        private readonly gaxgrpc::ApiCall<ListBackupPlanRevisionsRequest, ListBackupPlanRevisionsResponse> _callListBackupPlanRevisions;
+
         private readonly gaxgrpc::ApiCall<CreateBackupPlanAssociationRequest, lro::Operation> _callCreateBackupPlanAssociation;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupPlanAssociationRequest, lro::Operation> _callUpdateBackupPlanAssociation;
 
         private readonly gaxgrpc::ApiCall<GetBackupPlanAssociationRequest, BackupPlanAssociation> _callGetBackupPlanAssociation;
 
         private readonly gaxgrpc::ApiCall<ListBackupPlanAssociationsRequest, ListBackupPlanAssociationsResponse> _callListBackupPlanAssociations;
 
+        private readonly gaxgrpc::ApiCall<FetchBackupPlanAssociationsForResourceTypeRequest, FetchBackupPlanAssociationsForResourceTypeResponse> _callFetchBackupPlanAssociationsForResourceType;
+
         private readonly gaxgrpc::ApiCall<DeleteBackupPlanAssociationRequest, lro::Operation> _callDeleteBackupPlanAssociation;
 
         private readonly gaxgrpc::ApiCall<TriggerBackupRequest, lro::Operation> _callTriggerBackup;
+
+        private readonly gaxgrpc::ApiCall<GetDataSourceReferenceRequest, DataSourceReference> _callGetDataSourceReference;
+
+        private readonly gaxgrpc::ApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse> _callFetchDataSourceReferencesForResourceType;
 
         private readonly gaxgrpc::ApiCall<InitializeServiceRequest, lro::Operation> _callInitializeService;
 
@@ -5053,8 +6195,10 @@ namespace Google.Cloud.BackupDR.V1
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
             RestoreBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreBackupOperationsSettings, logger);
             CreateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanOperationsSettings, logger);
+            UpdateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanOperationsSettings, logger);
             DeleteBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanOperationsSettings, logger);
             CreateBackupPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanAssociationOperationsSettings, logger);
+            UpdateBackupPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanAssociationOperationsSettings, logger);
             DeleteBackupPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanAssociationOperationsSettings, logger);
             TriggerBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerBackupOperationsSettings, logger);
             InitializeServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InitializeServiceOperationsSettings, logger);
@@ -5117,6 +6261,9 @@ namespace Google.Cloud.BackupDR.V1
             _callCreateBackupPlan = clientHelper.BuildApiCall<CreateBackupPlanRequest, lro::Operation>("CreateBackupPlan", grpcClient.CreateBackupPlanAsync, grpcClient.CreateBackupPlan, effectiveSettings.CreateBackupPlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupPlan);
             Modify_CreateBackupPlanApiCall(ref _callCreateBackupPlan);
+            _callUpdateBackupPlan = clientHelper.BuildApiCall<UpdateBackupPlanRequest, lro::Operation>("UpdateBackupPlan", grpcClient.UpdateBackupPlanAsync, grpcClient.UpdateBackupPlan, effectiveSettings.UpdateBackupPlanSettings).WithGoogleRequestParam("backup_plan.name", request => request.BackupPlan?.Name);
+            Modify_ApiCall(ref _callUpdateBackupPlan);
+            Modify_UpdateBackupPlanApiCall(ref _callUpdateBackupPlan);
             _callGetBackupPlan = clientHelper.BuildApiCall<GetBackupPlanRequest, BackupPlan>("GetBackupPlan", grpcClient.GetBackupPlanAsync, grpcClient.GetBackupPlan, effectiveSettings.GetBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackupPlan);
             Modify_GetBackupPlanApiCall(ref _callGetBackupPlan);
@@ -5126,21 +6273,39 @@ namespace Google.Cloud.BackupDR.V1
             _callDeleteBackupPlan = clientHelper.BuildApiCall<DeleteBackupPlanRequest, lro::Operation>("DeleteBackupPlan", grpcClient.DeleteBackupPlanAsync, grpcClient.DeleteBackupPlan, effectiveSettings.DeleteBackupPlanSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackupPlan);
             Modify_DeleteBackupPlanApiCall(ref _callDeleteBackupPlan);
+            _callGetBackupPlanRevision = clientHelper.BuildApiCall<GetBackupPlanRevisionRequest, BackupPlanRevision>("GetBackupPlanRevision", grpcClient.GetBackupPlanRevisionAsync, grpcClient.GetBackupPlanRevision, effectiveSettings.GetBackupPlanRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupPlanRevision);
+            Modify_GetBackupPlanRevisionApiCall(ref _callGetBackupPlanRevision);
+            _callListBackupPlanRevisions = clientHelper.BuildApiCall<ListBackupPlanRevisionsRequest, ListBackupPlanRevisionsResponse>("ListBackupPlanRevisions", grpcClient.ListBackupPlanRevisionsAsync, grpcClient.ListBackupPlanRevisions, effectiveSettings.ListBackupPlanRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupPlanRevisions);
+            Modify_ListBackupPlanRevisionsApiCall(ref _callListBackupPlanRevisions);
             _callCreateBackupPlanAssociation = clientHelper.BuildApiCall<CreateBackupPlanAssociationRequest, lro::Operation>("CreateBackupPlanAssociation", grpcClient.CreateBackupPlanAssociationAsync, grpcClient.CreateBackupPlanAssociation, effectiveSettings.CreateBackupPlanAssociationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupPlanAssociation);
             Modify_CreateBackupPlanAssociationApiCall(ref _callCreateBackupPlanAssociation);
+            _callUpdateBackupPlanAssociation = clientHelper.BuildApiCall<UpdateBackupPlanAssociationRequest, lro::Operation>("UpdateBackupPlanAssociation", grpcClient.UpdateBackupPlanAssociationAsync, grpcClient.UpdateBackupPlanAssociation, effectiveSettings.UpdateBackupPlanAssociationSettings).WithGoogleRequestParam("backup_plan_association.name", request => request.BackupPlanAssociation?.Name);
+            Modify_ApiCall(ref _callUpdateBackupPlanAssociation);
+            Modify_UpdateBackupPlanAssociationApiCall(ref _callUpdateBackupPlanAssociation);
             _callGetBackupPlanAssociation = clientHelper.BuildApiCall<GetBackupPlanAssociationRequest, BackupPlanAssociation>("GetBackupPlanAssociation", grpcClient.GetBackupPlanAssociationAsync, grpcClient.GetBackupPlanAssociation, effectiveSettings.GetBackupPlanAssociationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackupPlanAssociation);
             Modify_GetBackupPlanAssociationApiCall(ref _callGetBackupPlanAssociation);
             _callListBackupPlanAssociations = clientHelper.BuildApiCall<ListBackupPlanAssociationsRequest, ListBackupPlanAssociationsResponse>("ListBackupPlanAssociations", grpcClient.ListBackupPlanAssociationsAsync, grpcClient.ListBackupPlanAssociations, effectiveSettings.ListBackupPlanAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackupPlanAssociations);
             Modify_ListBackupPlanAssociationsApiCall(ref _callListBackupPlanAssociations);
+            _callFetchBackupPlanAssociationsForResourceType = clientHelper.BuildApiCall<FetchBackupPlanAssociationsForResourceTypeRequest, FetchBackupPlanAssociationsForResourceTypeResponse>("FetchBackupPlanAssociationsForResourceType", grpcClient.FetchBackupPlanAssociationsForResourceTypeAsync, grpcClient.FetchBackupPlanAssociationsForResourceType, effectiveSettings.FetchBackupPlanAssociationsForResourceTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callFetchBackupPlanAssociationsForResourceType);
+            Modify_FetchBackupPlanAssociationsForResourceTypeApiCall(ref _callFetchBackupPlanAssociationsForResourceType);
             _callDeleteBackupPlanAssociation = clientHelper.BuildApiCall<DeleteBackupPlanAssociationRequest, lro::Operation>("DeleteBackupPlanAssociation", grpcClient.DeleteBackupPlanAssociationAsync, grpcClient.DeleteBackupPlanAssociation, effectiveSettings.DeleteBackupPlanAssociationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackupPlanAssociation);
             Modify_DeleteBackupPlanAssociationApiCall(ref _callDeleteBackupPlanAssociation);
             _callTriggerBackup = clientHelper.BuildApiCall<TriggerBackupRequest, lro::Operation>("TriggerBackup", grpcClient.TriggerBackupAsync, grpcClient.TriggerBackup, effectiveSettings.TriggerBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callTriggerBackup);
             Modify_TriggerBackupApiCall(ref _callTriggerBackup);
+            _callGetDataSourceReference = clientHelper.BuildApiCall<GetDataSourceReferenceRequest, DataSourceReference>("GetDataSourceReference", grpcClient.GetDataSourceReferenceAsync, grpcClient.GetDataSourceReference, effectiveSettings.GetDataSourceReferenceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDataSourceReference);
+            Modify_GetDataSourceReferenceApiCall(ref _callGetDataSourceReference);
+            _callFetchDataSourceReferencesForResourceType = clientHelper.BuildApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse>("FetchDataSourceReferencesForResourceType", grpcClient.FetchDataSourceReferencesForResourceTypeAsync, grpcClient.FetchDataSourceReferencesForResourceType, effectiveSettings.FetchDataSourceReferencesForResourceTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callFetchDataSourceReferencesForResourceType);
+            Modify_FetchDataSourceReferencesForResourceTypeApiCall(ref _callFetchDataSourceReferencesForResourceType);
             _callInitializeService = clientHelper.BuildApiCall<InitializeServiceRequest, lro::Operation>("InitializeService", grpcClient.InitializeServiceAsync, grpcClient.InitializeService, effectiveSettings.InitializeServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callInitializeService);
             Modify_InitializeServiceApiCall(ref _callInitializeService);
@@ -5187,21 +6352,35 @@ namespace Google.Cloud.BackupDR.V1
 
         partial void Modify_CreateBackupPlanApiCall(ref gaxgrpc::ApiCall<CreateBackupPlanRequest, lro::Operation> call);
 
+        partial void Modify_UpdateBackupPlanApiCall(ref gaxgrpc::ApiCall<UpdateBackupPlanRequest, lro::Operation> call);
+
         partial void Modify_GetBackupPlanApiCall(ref gaxgrpc::ApiCall<GetBackupPlanRequest, BackupPlan> call);
 
         partial void Modify_ListBackupPlansApiCall(ref gaxgrpc::ApiCall<ListBackupPlansRequest, ListBackupPlansResponse> call);
 
         partial void Modify_DeleteBackupPlanApiCall(ref gaxgrpc::ApiCall<DeleteBackupPlanRequest, lro::Operation> call);
 
+        partial void Modify_GetBackupPlanRevisionApiCall(ref gaxgrpc::ApiCall<GetBackupPlanRevisionRequest, BackupPlanRevision> call);
+
+        partial void Modify_ListBackupPlanRevisionsApiCall(ref gaxgrpc::ApiCall<ListBackupPlanRevisionsRequest, ListBackupPlanRevisionsResponse> call);
+
         partial void Modify_CreateBackupPlanAssociationApiCall(ref gaxgrpc::ApiCall<CreateBackupPlanAssociationRequest, lro::Operation> call);
+
+        partial void Modify_UpdateBackupPlanAssociationApiCall(ref gaxgrpc::ApiCall<UpdateBackupPlanAssociationRequest, lro::Operation> call);
 
         partial void Modify_GetBackupPlanAssociationApiCall(ref gaxgrpc::ApiCall<GetBackupPlanAssociationRequest, BackupPlanAssociation> call);
 
         partial void Modify_ListBackupPlanAssociationsApiCall(ref gaxgrpc::ApiCall<ListBackupPlanAssociationsRequest, ListBackupPlanAssociationsResponse> call);
 
+        partial void Modify_FetchBackupPlanAssociationsForResourceTypeApiCall(ref gaxgrpc::ApiCall<FetchBackupPlanAssociationsForResourceTypeRequest, FetchBackupPlanAssociationsForResourceTypeResponse> call);
+
         partial void Modify_DeleteBackupPlanAssociationApiCall(ref gaxgrpc::ApiCall<DeleteBackupPlanAssociationRequest, lro::Operation> call);
 
         partial void Modify_TriggerBackupApiCall(ref gaxgrpc::ApiCall<TriggerBackupRequest, lro::Operation> call);
+
+        partial void Modify_GetDataSourceReferenceApiCall(ref gaxgrpc::ApiCall<GetDataSourceReferenceRequest, DataSourceReference> call);
+
+        partial void Modify_FetchDataSourceReferencesForResourceTypeApiCall(ref gaxgrpc::ApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse> call);
 
         partial void Modify_InitializeServiceApiCall(ref gaxgrpc::ApiCall<InitializeServiceRequest, lro::Operation> call);
 
@@ -5254,21 +6433,35 @@ namespace Google.Cloud.BackupDR.V1
 
         partial void Modify_CreateBackupPlanRequest(ref CreateBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateBackupPlanRequest(ref UpdateBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetBackupPlanRequest(ref GetBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupPlansRequest(ref ListBackupPlansRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteBackupPlanRequest(ref DeleteBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetBackupPlanRevisionRequest(ref GetBackupPlanRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupPlanRevisionsRequest(ref ListBackupPlanRevisionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateBackupPlanAssociationRequest(ref CreateBackupPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupPlanAssociationRequest(ref UpdateBackupPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBackupPlanAssociationRequest(ref GetBackupPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupPlanAssociationsRequest(ref ListBackupPlanAssociationsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_FetchBackupPlanAssociationsForResourceTypeRequest(ref FetchBackupPlanAssociationsForResourceTypeRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteBackupPlanAssociationRequest(ref DeleteBackupPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TriggerBackupRequest(ref TriggerBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDataSourceReferenceRequest(ref GetDataSourceReferenceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchDataSourceReferencesForResourceTypeRequest(ref FetchDataSourceReferencesForResourceTypeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InitializeServiceRequest(ref InitializeServiceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5762,6 +6955,33 @@ namespace Google.Cloud.BackupDR.V1
             return new lro::Operation<BackupPlan, OperationMetadata>(await _callCreateBackupPlan.Async(request, callSettings).ConfigureAwait(false), CreateBackupPlanOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateBackupPlan</c>.</summary>
+        public override lro::OperationsClient UpdateBackupPlanOperationsClient { get; }
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupPlan, OperationMetadata> UpdateBackupPlan(UpdateBackupPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupPlanRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPlan, OperationMetadata>(_callUpdateBackupPlan.Sync(request, callSettings), UpdateBackupPlanOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a BackupPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupPlan, OperationMetadata>> UpdateBackupPlanAsync(UpdateBackupPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupPlanRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPlan, OperationMetadata>(await _callUpdateBackupPlan.Async(request, callSettings).ConfigureAwait(false), UpdateBackupPlanOperationsClient);
+        }
+
         /// <summary>
         /// Gets details of a single BackupPlan.
         /// </summary>
@@ -5837,6 +7057,54 @@ namespace Google.Cloud.BackupDR.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackupPlan.Async(request, callSettings).ConfigureAwait(false), DeleteBackupPlanOperationsClient);
         }
 
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupPlanRevision GetBackupPlanRevision(GetBackupPlanRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupPlanRevisionRequest(ref request, ref callSettings);
+            return _callGetBackupPlanRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single BackupPlanRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupPlanRevision> GetBackupPlanRevisionAsync(GetBackupPlanRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupPlanRevisionRequest(ref request, ref callSettings);
+            return _callGetBackupPlanRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisions(ListBackupPlanRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupPlanRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupPlanRevisionsRequest, ListBackupPlanRevisionsResponse, BackupPlanRevision>(_callListBackupPlanRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists BackupPlanRevisions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanRevision"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> ListBackupPlanRevisionsAsync(ListBackupPlanRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupPlanRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupPlanRevisionsRequest, ListBackupPlanRevisionsResponse, BackupPlanRevision>(_callListBackupPlanRevisions, request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>CreateBackupPlanAssociation</c>.</summary>
         public override lro::OperationsClient CreateBackupPlanAssociationOperationsClient { get; }
 
@@ -5862,6 +7130,33 @@ namespace Google.Cloud.BackupDR.V1
         {
             Modify_CreateBackupPlanAssociationRequest(ref request, ref callSettings);
             return new lro::Operation<BackupPlanAssociation, OperationMetadata>(await _callCreateBackupPlanAssociation.Async(request, callSettings).ConfigureAwait(false), CreateBackupPlanAssociationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBackupPlanAssociation</c>.</summary>
+        public override lro::OperationsClient UpdateBackupPlanAssociationOperationsClient { get; }
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupPlanAssociation, OperationMetadata> UpdateBackupPlanAssociation(UpdateBackupPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupPlanAssociationRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPlanAssociation, OperationMetadata>(_callUpdateBackupPlanAssociation.Sync(request, callSettings), UpdateBackupPlanAssociationOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a BackupPlanAssociation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> UpdateBackupPlanAssociationAsync(UpdateBackupPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupPlanAssociationRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPlanAssociation, OperationMetadata>(await _callUpdateBackupPlanAssociation.Async(request, callSettings).ConfigureAwait(false), UpdateBackupPlanAssociationOperationsClient);
         }
 
         /// <summary>
@@ -5910,6 +7205,30 @@ namespace Google.Cloud.BackupDR.V1
         {
             Modify_ListBackupPlanAssociationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupPlanAssociationsRequest, ListBackupPlanAssociationsResponse, BackupPlanAssociation>(_callListBackupPlanAssociations, request, callSettings);
+        }
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceType(FetchBackupPlanAssociationsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchBackupPlanAssociationsForResourceTypeRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchBackupPlanAssociationsForResourceTypeRequest, FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation>(_callFetchBackupPlanAssociationsForResourceType, request, callSettings);
+        }
+
+        /// <summary>
+        /// List BackupPlanAssociations for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPlanAssociation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> FetchBackupPlanAssociationsForResourceTypeAsync(FetchBackupPlanAssociationsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchBackupPlanAssociationsForResourceTypeRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeRequest, FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation>(_callFetchBackupPlanAssociationsForResourceType, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>DeleteBackupPlanAssociation</c>.</summary>
@@ -5966,6 +7285,54 @@ namespace Google.Cloud.BackupDR.V1
             return new lro::Operation<BackupPlanAssociation, OperationMetadata>(await _callTriggerBackup.Async(request, callSettings).ConfigureAwait(false), TriggerBackupOperationsClient);
         }
 
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DataSourceReference GetDataSourceReference(GetDataSourceReferenceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDataSourceReferenceRequest(ref request, ref callSettings);
+            return _callGetDataSourceReference.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DataSourceReference.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DataSourceReference> GetDataSourceReferenceAsync(GetDataSourceReferenceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDataSourceReferenceRequest(ref request, ref callSettings);
+            return _callGetDataSourceReference.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceType(FetchDataSourceReferencesForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchDataSourceReferencesForResourceTypeRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference>(_callFetchDataSourceReferencesForResourceType, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch DataSourceReferences for a given project, location and resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> FetchDataSourceReferencesForResourceTypeAsync(FetchDataSourceReferencesForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchDataSourceReferencesForResourceTypeRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference>(_callFetchDataSourceReferencesForResourceType, request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>InitializeService</c>.</summary>
         public override lro::OperationsClient InitializeServiceOperationsClient { get; }
 
@@ -6018,7 +7385,19 @@ namespace Google.Cloud.BackupDR.V1
     {
     }
 
+    public partial class ListBackupPlanRevisionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBackupPlanAssociationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class FetchBackupPlanAssociationsForResourceTypeRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class FetchDataSourceReferencesForResourceTypeRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6070,10 +7449,34 @@ namespace Google.Cloud.BackupDR.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListBackupPlanRevisionsResponse : gaxgrpc::IPageResponse<BackupPlanRevision>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupPlanRevision> GetEnumerator() => BackupPlanRevisions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListBackupPlanAssociationsResponse : gaxgrpc::IPageResponse<BackupPlanAssociation>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BackupPlanAssociation> GetEnumerator() => BackupPlanAssociations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchBackupPlanAssociationsForResourceTypeResponse : gaxgrpc::IPageResponse<BackupPlanAssociation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupPlanAssociation> GetEnumerator() => BackupPlanAssociations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchDataSourceReferencesForResourceTypeResponse : gaxgrpc::IPageResponse<DataSourceReference>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DataSourceReference> GetEnumerator() => DataSourceReferences.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
