@@ -55,6 +55,7 @@ namespace Google.Cloud.Spanner.Data
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
         private const string DatabaseRoleKeyword = "DatabaseRole";
+        private const string IsolationLevelKeyword = "IsolationLevel";
         private const string EnableLeaderRoutingKeyword = "EnableLeaderRouting";
 
         private InstanceName _instanceName;
@@ -67,6 +68,15 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(DatabaseRoleKeyword);
             set => this[DatabaseRoleKeyword] = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string IsolationLevel
+        {
+            get => GetValueOrDefault(IsolationLevelKeyword, "");
+            set => this[IsolationLevelKeyword] = value;
         }
 
         /// <summary>

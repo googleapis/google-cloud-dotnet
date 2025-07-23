@@ -567,7 +567,8 @@ namespace Google.Cloud.Spanner.Data
                 nameof(transactionCreationOptions.IsSingleUse),
                 $"Single-use transactions may only be used with the {nameof(SpannerCommand.ExecuteReader)} set  of methods.");
 
-            return BeginTransactionAsyncImpl(transactionCreationOptions, transactionOptions, cancellationToken);
+            SpannerTransactionCreationOptions enhancedTransactionCreationOptions = EnhanceTransactionCreationOptions(transactionCreationOptions);
+            return BeginTransactionAsyncImpl(enhancedTransactionCreationOptions, transactionOptions, cancellationToken);
         }
 
         internal Task<SpannerTransaction> BeginTransactionAsyncImpl(
@@ -593,6 +594,19 @@ namespace Google.Cloud.Spanner.Data
                     }
                     return new SpannerTransaction(this, session, transactionCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
+        }
+
+        private SpannerTransactionCreationOptions EnhanceTransactionCreationOptions(SpannerTransactionCreationOptions transactionCreationOptions)
+        {
+            SpannerTransactionCreationOptions enhancedCreationOptions = transactionCreationOptions;
+
+            // Set the transaction IsolationLevel if specified in the ConnectionString and not already set on the SpannerTransactionCreationOptions
+            if(transactionCreationOptions.IsolationLevel == IsolationLevel.Unspecified && !string.IsNullOrEmpty(Builder.IsolationLevel) && enhancedCreationOptions?.TransactionMode == TransactionMode.ReadWrite)
+            {
+                enhancedCreationOptions = transactionCreationOptions.WithIsolationLevel((IsolationLevel)Enum.Parse(typeof(IsolationLevel), Builder.IsolationLevel));
+            }
+
+            return enhancedCreationOptions;
         }
 
         /// <summary>
