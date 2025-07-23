@@ -99,4 +99,32 @@ public class SpannerTransactionTests
         Assert.Equal(disposeBehavior, transaction.TransactionOptions.DisposeBehavior);
         Assert.True(transaction.TransactionOptions.LogCommitStats);
     }
+
+    [Fact]
+    public void SpannerTransactionIsolationLevel_FromConnectionString()
+    {
+        SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder();
+        builder.IsolationLevel = System.Data.IsolationLevel.RepeatableRead;
+
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger).SetupBatchCreateSessionsAsync();
+        SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock, builder);
+
+        SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite, null);
+
+        Assert.Equal(System.Data.IsolationLevel.RepeatableRead, transaction.IsolationLevel);
+    }
+
+    [Fact]
+    public void SpannerTransactionIsolationLevel_FromCreationOptions()
+    {
+        SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder();
+        builder.IsolationLevel = System.Data.IsolationLevel.RepeatableRead;
+
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger).SetupBatchCreateSessionsAsync();
+        SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock, builder);
+
+        SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(System.Data.IsolationLevel.Serializable), null);
+
+        Assert.Equal(System.Data.IsolationLevel.Serializable, transaction.IsolationLevel);
+    }
 }
