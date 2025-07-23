@@ -78,7 +78,6 @@ namespace Google.Cloud.Spanner.Data
         private int _lastDmlSequenceNumber = 0;
 
         /// <inheritdoc />
-        /// The isolation level set in the transaction creation options
         public override IsolationLevel IsolationLevel => _creationOptions.IsolationLevel;
 
         /// <summary>
