@@ -581,17 +581,18 @@ namespace Google.Cloud.Spanner.Data
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
 
                     PooledSession session;
+                    SpannerTransactionCreationOptions effectiveCreationOptions = transactionCreationOptions;
                     if (transactionCreationOptions.TransactionId is null)
                     {
-                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken).ConfigureAwait(false);
+                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
                     }
                     else
                     {
-                        SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
-                        ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
+                        SessionName sessionName = SessionName.Parse(effectiveCreationOptions.TransactionId.Session);
+                        ByteString transactionIdBytes = ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id);
                         session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
                     }
-                    return new SpannerTransaction(this, session, transactionCreationOptions, transactionOptions, isRetriable: false);
+                    return new SpannerTransaction(this, session, effectiveCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
         }
 
@@ -990,10 +991,12 @@ namespace Google.Cloud.Spanner.Data
             await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
-        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken)
+        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
         {
             SessionPool pool;
             DatabaseName databaseName;
+            effectiveCreationOptions = MaybeWithConnectionDefaults(creationOptions);
+
             lock (_sync)
             {
                 AssertOpen("acquire session.");
@@ -1005,9 +1008,25 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException("Unable to acquire session on connection with no database name");
             }
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return creationOptions?.IsDetached == true ?
-                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken) :
-                pool.AcquireSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken);
+            return effectiveCreationOptions?.IsDetached == true ?
+                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken) :
+                pool.AcquireSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken);
+        }
+
+        private SpannerTransactionCreationOptions MaybeWithConnectionDefaults(SpannerTransactionCreationOptions transactionCreationOptions)
+        {
+            SpannerTransactionCreationOptions effectiveCreationOptions = transactionCreationOptions;
+
+            // Set the transaction IsolationLevel if specified in the ConnectionString and not already set on the SpannerTransactionCreationOptions
+            if (effectiveCreationOptions?.IsolationLevel == IsolationLevel.Unspecified
+                && Builder.IsolationLevel != IsolationLevel.Unspecified
+                && effectiveCreationOptions?.TransactionMode == TransactionMode.ReadWrite
+                && effectiveCreationOptions?.IsPartitionedDml == false)
+            {
+                effectiveCreationOptions = transactionCreationOptions.WithIsolationLevel(Builder.IsolationLevel);
+            }
+
+            return effectiveCreationOptions;
         }
 
         /// <summary>

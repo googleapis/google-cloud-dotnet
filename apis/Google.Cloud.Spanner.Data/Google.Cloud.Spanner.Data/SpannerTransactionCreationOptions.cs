@@ -96,8 +96,8 @@ public sealed class SpannerTransactionCreationOptions
     public bool IsPartitionedDml { get; }
 
     /// <summary>
-    /// Snapshot Isolation Level set to <see cref="System.Data.IsolationLevel"/>.
-    /// Only meant to be set for read-write transactions.
+    /// Isolation level for a read-write transaction.
+    /// This will always be <see cref="IsolationLevel.Unspecified"/> for read-only transactions.
     /// </summary>
     public IsolationLevel IsolationLevel {  get; }
 

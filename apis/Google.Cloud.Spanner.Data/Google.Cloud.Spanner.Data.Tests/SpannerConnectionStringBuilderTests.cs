@@ -357,5 +357,21 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal($"spanner.{universeDomain}", builder.Host);
             Assert.Equal($"spanner.{universeDomain}:443", builder.EndPoint);
         }
+
+        [Fact]
+        public void Default_IsolationLevel()
+        {
+            var builder = new SpannerConnectionStringBuilder();
+
+            Assert.Equal(System.Data.IsolationLevel.Unspecified, builder.IsolationLevel);
+        }
+
+        [Fact]
+        public void IsolationLevelIsConvertedToEnum()
+        {
+            var builder = new SpannerConnectionStringBuilder("IsolationLevel=RepeatableRead");
+
+            Assert.Equal(System.Data.IsolationLevel.RepeatableRead, builder.IsolationLevel);
+        }
     }
 }
