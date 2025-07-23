@@ -433,7 +433,9 @@ namespace Google.Apps.Chat.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Apps.Chat.V1.Annotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.Annotation> annotations_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.Annotation>();
     /// <summary>
-    /// Output only. Annotations associated with the `text` in this message.
+    /// Output only. Annotations can be associated with the plain-text body of the
+    /// message or with chips that link to Google Workspace resources like Google
+    /// Docs or Sheets with `start_index` and `length` of 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
