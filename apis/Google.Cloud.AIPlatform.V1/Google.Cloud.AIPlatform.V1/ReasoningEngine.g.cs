@@ -29,39 +29,40 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxooZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW52X3Zhci5wcm90",
             "bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byLFBAoTUmVhc29uaW5nRW5naW5lU3BlYxJW",
-            "CgxwYWNrYWdlX3NwZWMYAiABKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5SZWFzb25pbmdFbmdpbmVTcGVjLlBhY2thZ2VTcGVjQgPgQQESXAoP",
-            "ZGVwbG95bWVudF9zcGVjGAQgASgLMj4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuUmVhc29uaW5nRW5naW5lU3BlYy5EZXBsb3ltZW50U3BlY0ID4EEB",
-            "EjMKDWNsYXNzX21ldGhvZHMYAyADKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
-            "dWN0QgPgQQESHAoPYWdlbnRfZnJhbWV3b3JrGAUgASgJQgPgQQEamAEKC1Bh",
-            "Y2thZ2VTcGVjEiIKFXBpY2tsZV9vYmplY3RfZ2NzX3VyaRgBIAEoCUID4EEB",
-            "EiUKGGRlcGVuZGVuY3lfZmlsZXNfZ2NzX3VyaRgCIAEoCUID4EEBEiEKFHJl",
-            "cXVpcmVtZW50c19nY3NfdXJpGAMgASgJQgPgQQESGwoOcHl0aG9uX3ZlcnNp",
-            "b24YBCABKAlCA+BBARqJAQoORGVwbG95bWVudFNwZWMSNAoDZW52GAEgAygL",
-            "MiIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW52VmFyQgPgQQESQQoK",
-            "c2VjcmV0X2VudhgCIAMoCzIoLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlNlY3JldEVudlZhckID4EEBIr4DCg9SZWFzb25pbmdFbmdpbmUSEQoEbmFt",
-            "ZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhgKC2Rl",
-            "c2NyaXB0aW9uGAcgASgJQgPgQQESQgoEc3BlYxgDIAEoCzIvLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlJlYXNvbmluZ0VuZ2luZVNwZWNCA+BBARI0",
-            "CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAYgASgJQgPgQQE6nwHqQZsBCilh",
-            "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1JlYXNvbmluZ0VuZ2luZRJLcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlYXNvbmlu",
-            "Z0VuZ2luZXMve3JlYXNvbmluZ19lbmdpbmV9KhByZWFzb25pbmdFbmdpbmVz",
-            "Mg9yZWFzb25pbmdFbmdpbmVC0gEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MUIUUmVhc29uaW5nRW5naW5lUHJvdG9QAVo+Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRm",
-            "b3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxD",
-            "bG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9y",
-            "bTo6VjFiBnByb3RvMw=="));
+            "YnVmL3RpbWVzdGFtcC5wcm90byL8BAoTUmVhc29uaW5nRW5naW5lU3BlYxIh",
+            "Cg9zZXJ2aWNlX2FjY291bnQYASABKAlCA+BBAUgAiAEBElYKDHBhY2thZ2Vf",
+            "c3BlYxgCIAEoCzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJlYXNv",
+            "bmluZ0VuZ2luZVNwZWMuUGFja2FnZVNwZWNCA+BBARJcCg9kZXBsb3ltZW50",
+            "X3NwZWMYBCABKAsyPi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFz",
+            "b25pbmdFbmdpbmVTcGVjLkRlcGxveW1lbnRTcGVjQgPgQQESMwoNY2xhc3Nf",
+            "bWV0aG9kcxgDIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIc",
+            "Cg9hZ2VudF9mcmFtZXdvcmsYBSABKAlCA+BBARqYAQoLUGFja2FnZVNwZWMS",
+            "IgoVcGlja2xlX29iamVjdF9nY3NfdXJpGAEgASgJQgPgQQESJQoYZGVwZW5k",
+            "ZW5jeV9maWxlc19nY3NfdXJpGAIgASgJQgPgQQESIQoUcmVxdWlyZW1lbnRz",
+            "X2djc191cmkYAyABKAlCA+BBARIbCg5weXRob25fdmVyc2lvbhgEIAEoCUID",
+            "4EEBGokBCg5EZXBsb3ltZW50U3BlYxI0CgNlbnYYASADKAsyIi5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5FbnZWYXJCA+BBARJBCgpzZWNyZXRfZW52",
+            "GAIgAygLMiguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2VjcmV0RW52",
+            "VmFyQgPgQQFCEgoQX3NlcnZpY2VfYWNjb3VudCK+AwoPUmVhc29uaW5nRW5n",
+            "aW5lEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
+            "A+BBAhIYCgtkZXNjcmlwdGlvbhgHIAEoCUID4EEBEkIKBHNwZWMYAyABKAsy",
+            "Ly5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFzb25pbmdFbmdpbmVT",
+            "cGVjQgPgQQESNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgGIAEoCUID4EEB",
+            "Op8B6kGbAQopYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdF",
+            "bmdpbmUSS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9yZWFzb25pbmdFbmdpbmVzL3tyZWFzb25pbmdfZW5naW5lfSoQcmVhc29u",
+            "aW5nRW5naW5lczIPcmVhc29uaW5nRW5naW5lQtIBCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFCFFJlYXNvbmluZ0VuZ2luZVByb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
+            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
+            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Parser, new[]{ "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Parser, new[]{ "ServiceAccount", "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, new[]{ "ServiceAccount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
           }));
@@ -108,6 +109,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReasoningEngineSpec(ReasoningEngineSpec other) : this() {
+      serviceAccount_ = other.serviceAccount_;
       packageSpec_ = other.packageSpec_ != null ? other.packageSpec_.Clone() : null;
       deploymentSpec_ = other.deploymentSpec_ != null ? other.deploymentSpec_.Clone() : null;
       classMethods_ = other.classMethods_.Clone();
@@ -119,6 +121,39 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReasoningEngineSpec Clone() {
       return new ReasoningEngineSpec(this);
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 1;
+    private readonly static string ServiceAccountDefaultValue = "";
+
+    private string serviceAccount_;
+    /// <summary>
+    /// Optional. The service account that the Reasoning Engine artifact runs as.
+    /// It should have "roles/storage.objectViewer" for reading the user project's
+    /// Cloud Storage and "roles/aiplatform.user" for using Vertex extensions. If
+    /// not specified, the Vertex AI Reasoning Engine Service Agent in the project
+    /// will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return serviceAccount_ ?? ServiceAccountDefaultValue; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "service_account" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServiceAccount {
+      get { return serviceAccount_ != null; }
+    }
+    /// <summary>Clears the value of the "service_account" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServiceAccount() {
+      serviceAccount_ = null;
     }
 
     /// <summary>Field number for the "package_spec" field.</summary>
@@ -200,6 +235,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ServiceAccount != other.ServiceAccount) return false;
       if (!object.Equals(PackageSpec, other.PackageSpec)) return false;
       if (!object.Equals(DeploymentSpec, other.DeploymentSpec)) return false;
       if(!classMethods_.Equals(other.classMethods_)) return false;
@@ -211,6 +247,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (HasServiceAccount) hash ^= ServiceAccount.GetHashCode();
       if (packageSpec_ != null) hash ^= PackageSpec.GetHashCode();
       if (deploymentSpec_ != null) hash ^= DeploymentSpec.GetHashCode();
       hash ^= classMethods_.GetHashCode();
@@ -233,6 +270,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (HasServiceAccount) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccount);
+      }
       if (packageSpec_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(PackageSpec);
@@ -256,6 +297,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasServiceAccount) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccount);
+      }
       if (packageSpec_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(PackageSpec);
@@ -279,6 +324,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HasServiceAccount) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
       if (packageSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PackageSpec);
       }
@@ -300,6 +348,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public void MergeFrom(ReasoningEngineSpec other) {
       if (other == null) {
         return;
+      }
+      if (other.HasServiceAccount) {
+        ServiceAccount = other.ServiceAccount;
       }
       if (other.packageSpec_ != null) {
         if (packageSpec_ == null) {
@@ -332,6 +383,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
           case 18: {
             if (packageSpec_ == null) {
               PackageSpec = new global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec();
@@ -369,6 +424,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
           case 18: {
             if (packageSpec_ == null) {
               PackageSpec = new global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec();
