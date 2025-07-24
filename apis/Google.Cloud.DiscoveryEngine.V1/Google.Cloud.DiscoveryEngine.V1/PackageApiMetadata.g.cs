@@ -90,6 +90,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return ServingConfigReflection.Descriptor;
             yield return ServingConfigServiceReflection.Descriptor;
             yield return SessionReflection.Descriptor;
+            yield return SessionServiceReflection.Descriptor;
             yield return SiteSearchEngineReflection.Descriptor;
             yield return SiteSearchEngineServiceReflection.Descriptor;
             yield return UserEventReflection.Descriptor;

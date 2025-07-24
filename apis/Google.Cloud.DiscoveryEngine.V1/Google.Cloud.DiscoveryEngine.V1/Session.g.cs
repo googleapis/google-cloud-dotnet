@@ -28,7 +28,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "dG8SH2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aLGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvYW5zd2Vy",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpYHCgdT",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsAICgdT",
             "ZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYByAB",
             "KAlCA+BBARI9CgVzdGF0ZRgCIAEoDjIuLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
             "cnllbmdpbmUudjEuU2Vzc2lvbi5TdGF0ZRIWCg51c2VyX3BzZXVkb19pZBgD",
@@ -36,31 +36,35 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bmdpbmUudjEuU2Vzc2lvbi5UdXJuEjMKCnN0YXJ0X3RpbWUYBSABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBiAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFgoJaXNfcGlu",
-            "bmVkGAggASgIQgPgQQEawAEKBFR1cm4SNQoFcXVlcnkYASABKAsyJi5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlF1ZXJ5EjoKBmFuc3dlchgC",
-            "IAEoCUIq+kEnCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQW5z",
-            "d2VyEkUKD2RldGFpbGVkX2Fuc3dlchgHIAEoCzInLmdvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjEuQW5zd2VyQgPgQQMiLwoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxABOtMC6kHPAgomZGlz",
-            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SUnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tk",
-            "YXRhX3N0b3JlfS9zZXNzaW9ucy97c2Vzc2lvbn0Sa3Byb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVj",
-            "dGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2Vzc2lvbnMve3Nlc3Np",
-            "b259EmRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "Y29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2VuZ2luZXMve2VuZ2luZX0vc2Vz",
-            "c2lvbnMve3Nlc3Npb259IjQKBVF1ZXJ5Eg4KBHRleHQYAiABKAlIABIQCghx",
-            "dWVyeV9pZBgBIAEoCUIJCgdjb250ZW50Qv8BCiNjb20uZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MUIMU2Vzc2lvblByb3RvUAFaTWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVu",
-            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIf",
-            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91",
-            "ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3Zl",
-            "cnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "bmVkGAggASgIQgPgQQEa1wIKBFR1cm4SOgoFcXVlcnkYASABKAsyJi5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlF1ZXJ5QgPgQQESPQoGYW5z",
+            "d2VyGAIgASgJQi3gQQH6QScKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlz",
+            "LmNvbS9BbnN3ZXISRQoPZGV0YWlsZWRfYW5zd2VyGAcgASgLMicuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5BbnN3ZXJCA+BBAxJZCgxxdWVy",
+            "eV9jb25maWcYECADKAsyPi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLlNlc3Npb24uVHVybi5RdWVyeUNvbmZpZ0VudHJ5QgPgQQEaMgoQUXVl",
+            "cnlDb25maWdFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "Ii8KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDwoLSU5fUFJPR1JF",
+            "U1MQATrmAupB4gIKJmRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9T",
+            "ZXNzaW9uElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2Vzc2lvbnMve3Nlc3Npb259",
+            "Emtwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29s",
+            "bGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9",
+            "L3Nlc3Npb25zL3tzZXNzaW9ufRJkcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdp",
+            "bmVzL3tlbmdpbmV9L3Nlc3Npb25zL3tzZXNzaW9ufSoIc2Vzc2lvbnMyB3Nl",
+            "c3Npb24iOQoFUXVlcnkSDgoEdGV4dBgCIAEoCUgAEhUKCHF1ZXJ5X2lkGAEg",
+            "ASgJQgPgQQNCCQoHY29udGVudEL/AQojY29tLmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFCDFNlc3Npb25Qcm90b1ABWk1jbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVw",
+            "YjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2ds",
+            "ZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlz",
+            "Y292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5n",
+            "aW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.AnswerReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session), global::Google.Cloud.DiscoveryEngine.V1.Session.Parser, new[]{ "Name", "DisplayName", "State", "UserPseudoId", "Turns", "StartTime", "EndTime", "IsPinned" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn), global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn.Parser, new[]{ "Query", "Answer", "DetailedAnswer" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session), global::Google.Cloud.DiscoveryEngine.V1.Session.Parser, new[]{ "Name", "DisplayName", "State", "UserPseudoId", "Turns", "StartTime", "EndTime", "IsPinned" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn), global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn.Parser, new[]{ "Query", "Answer", "DetailedAnswer", "QueryConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Query), global::Google.Cloud.DiscoveryEngine.V1.Query.Parser, new[]{ "Text", "QueryId" }, new[]{ "Content" }, null, null, null)
           }));
     }
@@ -615,6 +619,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           query_ = other.query_ != null ? other.query_.Clone() : null;
           answer_ = other.answer_;
           detailedAnswer_ = other.detailedAnswer_ != null ? other.detailedAnswer_.Clone() : null;
+          queryConfig_ = other.queryConfig_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -628,7 +633,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public const int QueryFieldNumber = 1;
         private global::Google.Cloud.DiscoveryEngine.V1.Query query_;
         /// <summary>
-        /// The user query.
+        /// Optional. The user query. May not be set if this turn is merely
+        /// regenerating an answer to a different turn
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -643,7 +649,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public const int AnswerFieldNumber = 2;
         private string answer_ = "";
         /// <summary>
-        /// The resource name of the answer to the user query.
+        /// Optional. The resource name of the answer to the user query.
         ///
         /// Only set if the answer generation (/answer API call) happened in this
         /// turn.
@@ -677,6 +683,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
         }
 
+        /// <summary>Field number for the "query_config" field.</summary>
+        public const int QueryConfigFieldNumber = 16;
+        private static readonly pbc::MapField<string, string>.Codec _map_queryConfig_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 130);
+        private readonly pbc::MapField<string, string> queryConfig_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Optional. Represents metadata related to the query config, for example
+        /// LLM model and version used, model parameters (temperature, grounding
+        /// parameters, etc.). The prefix "google." is reserved for Google-developed
+        /// functionality.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> QueryConfig {
+          get { return queryConfig_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -695,6 +718,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (!object.Equals(Query, other.Query)) return false;
           if (Answer != other.Answer) return false;
           if (!object.Equals(DetailedAnswer, other.DetailedAnswer)) return false;
+          if (!QueryConfig.Equals(other.QueryConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -705,6 +729,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (query_ != null) hash ^= Query.GetHashCode();
           if (Answer.Length != 0) hash ^= Answer.GetHashCode();
           if (detailedAnswer_ != null) hash ^= DetailedAnswer.GetHashCode();
+          hash ^= QueryConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -735,6 +760,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(58);
             output.WriteMessage(DetailedAnswer);
           }
+          queryConfig_.WriteTo(output, _map_queryConfig_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -757,6 +783,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(58);
             output.WriteMessage(DetailedAnswer);
           }
+          queryConfig_.WriteTo(ref output, _map_queryConfig_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -776,6 +803,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (detailedAnswer_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetailedAnswer);
           }
+          size += queryConfig_.CalculateSize(_map_queryConfig_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -803,6 +831,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             }
             DetailedAnswer.MergeFrom(other.DetailedAnswer);
           }
+          queryConfig_.MergeFrom(other.queryConfig_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -836,6 +865,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 input.ReadMessage(DetailedAnswer);
                 break;
               }
+              case 130: {
+                queryConfig_.AddEntriesFrom(input, _map_queryConfig_codec);
+                break;
+              }
             }
           }
         #endif
@@ -867,6 +900,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   DetailedAnswer = new global::Google.Cloud.DiscoveryEngine.V1.Answer();
                 }
                 input.ReadMessage(DetailedAnswer);
+                break;
+              }
+              case 130: {
+                queryConfig_.AddEntriesFrom(ref input, _map_queryConfig_codec);
                 break;
               }
             }
@@ -968,7 +1005,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int QueryIdFieldNumber = 1;
     private string queryId_ = "";
     /// <summary>
-    /// Unique Id for the query.
+    /// Output only. Unique Id for the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
