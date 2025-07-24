@@ -27,23 +27,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
   /// Secure Source Manager API
   ///
   /// Access Secure Source Manager instances, resources, and repositories.
-  ///
-  /// This API is split across two servers: the Control Plane and the Data Plane.
-  ///
-  /// Data Plane endpoints are hosted directly by your Secure Source Manager
-  /// instance, so you must connect to your instance's API hostname to access
-  /// them. The API hostname looks like the following:
-  ///
-  ///    https://[instance-id]-[project-number]-api.[location].sourcemanager.dev
-  ///
-  /// For example,
-  ///
-  ///    https://my-instance-702770452863-api.us-central1.sourcemanager.dev
-  ///
-  /// Data Plane endpoints are denoted with **Host: Data Plane**.
-  ///
-  /// All other endpoints are found in the normal Cloud API location, namely,
-  /// `securcesourcemanager.googleapis.com`.
   /// </summary>
   public static partial class SecureSourceManager
   {
@@ -107,7 +90,23 @@ namespace Google.Cloud.SecureSourceManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreateRepositoryRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreateRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreateRepositoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdateRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeleteRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListHooksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListHooksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.GetHookRequest> __Marshaller_google_cloud_securesourcemanager_v1_GetHookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.GetHookRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.Hook> __Marshaller_google_cloud_securesourcemanager_v1_Hook = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.Hook.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreateHookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdateHookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeleteHookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -132,6 +131,88 @@ namespace Google.Cloud.SecureSourceManager.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdateBranchRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeleteBranchRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreatePullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest> __Marshaller_google_cloud_securesourcemanager_v1_GetPullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.PullRequest> __Marshaller_google_cloud_securesourcemanager_v1_PullRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.PullRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdatePullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest> __Marshaller_google_cloud_securesourcemanager_v1_MergePullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest> __Marshaller_google_cloud_securesourcemanager_v1_OpenPullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest> __Marshaller_google_cloud_securesourcemanager_v1_ClosePullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestFileDiffsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestFileDiffsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest> __Marshaller_google_cloud_securesourcemanager_v1_FetchTreeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse> __Marshaller_google_cloud_securesourcemanager_v1_FetchTreeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest> __Marshaller_google_cloud_securesourcemanager_v1_FetchBlobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse> __Marshaller_google_cloud_securesourcemanager_v1_FetchBlobResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreateIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest> __Marshaller_google_cloud_securesourcemanager_v1_GetIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.Issue> __Marshaller_google_cloud_securesourcemanager_v1_Issue = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.Issue.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListIssuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListIssuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdateIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeleteIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest> __Marshaller_google_cloud_securesourcemanager_v1_OpenIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest> __Marshaller_google_cloud_securesourcemanager_v1_CloseIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_GetPullRequestCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.PullRequestComment> __Marshaller_google_cloud_securesourcemanager_v1_PullRequestComment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.PullRequestComment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestCommentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestCommentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreatePullRequestCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdatePullRequestCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeletePullRequestCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest> __Marshaller_google_cloud_securesourcemanager_v1_BatchCreatePullRequestCommentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest> __Marshaller_google_cloud_securesourcemanager_v1_ResolvePullRequestCommentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest> __Marshaller_google_cloud_securesourcemanager_v1_UnresolvePullRequestCommentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_CreateIssueCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_GetIssueCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.IssueComment> __Marshaller_google_cloud_securesourcemanager_v1_IssueComment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.IssueComment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest> __Marshaller_google_cloud_securesourcemanager_v1_ListIssueCommentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse> __Marshaller_google_cloud_securesourcemanager_v1_ListIssueCommentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_UpdateIssueCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest> __Marshaller_google_cloud_securesourcemanager_v1_DeleteIssueCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListInstancesRequest, global::Google.Cloud.SecureSourceManager.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListInstancesRequest, global::Google.Cloud.SecureSourceManager.V1.ListInstancesResponse>(
@@ -190,11 +271,59 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest, global::Google.LongRunning.Operation> __Method_UpdateRepository = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRepository",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdateRepositoryRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest, global::Google.LongRunning.Operation> __Method_DeleteRepository = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteRepository",
         __Marshaller_google_cloud_securesourcemanager_v1_DeleteRepositoryRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest, global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse> __Method_ListHooks = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest, global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListHooks",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListHooksRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListHooksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetHookRequest, global::Google.Cloud.SecureSourceManager.V1.Hook> __Method_GetHook = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetHookRequest, global::Google.Cloud.SecureSourceManager.V1.Hook>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetHook",
+        __Marshaller_google_cloud_securesourcemanager_v1_GetHookRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_Hook);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest, global::Google.LongRunning.Operation> __Method_CreateHook = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateHook",
+        __Marshaller_google_cloud_securesourcemanager_v1_CreateHookRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest, global::Google.LongRunning.Operation> __Method_UpdateHook = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateHook",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdateHookRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest, global::Google.LongRunning.Operation> __Method_DeleteHook = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteHook",
+        __Marshaller_google_cloud_securesourcemanager_v1_DeleteHookRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -261,6 +390,246 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         __Marshaller_google_cloud_securesourcemanager_v1_DeleteBranchRuleRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest, global::Google.LongRunning.Operation> __Method_CreatePullRequest = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePullRequest",
+        __Marshaller_google_cloud_securesourcemanager_v1_CreatePullRequestRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest, global::Google.Cloud.SecureSourceManager.V1.PullRequest> __Method_GetPullRequest = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest, global::Google.Cloud.SecureSourceManager.V1.PullRequest>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPullRequest",
+        __Marshaller_google_cloud_securesourcemanager_v1_GetPullRequestRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_PullRequest);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse> __Method_ListPullRequests = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPullRequests",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestsRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest, global::Google.LongRunning.Operation> __Method_UpdatePullRequest = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePullRequest",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdatePullRequestRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest, global::Google.LongRunning.Operation> __Method_MergePullRequest = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MergePullRequest",
+        __Marshaller_google_cloud_securesourcemanager_v1_MergePullRequestRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest, global::Google.LongRunning.Operation> __Method_OpenPullRequest = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "OpenPullRequest",
+        __Marshaller_google_cloud_securesourcemanager_v1_OpenPullRequestRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest, global::Google.LongRunning.Operation> __Method_ClosePullRequest = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ClosePullRequest",
+        __Marshaller_google_cloud_securesourcemanager_v1_ClosePullRequestRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse> __Method_ListPullRequestFileDiffs = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPullRequestFileDiffs",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestFileDiffsRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestFileDiffsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest, global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse> __Method_FetchTree = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest, global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchTree",
+        __Marshaller_google_cloud_securesourcemanager_v1_FetchTreeRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_FetchTreeResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest, global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse> __Method_FetchBlob = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest, global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchBlob",
+        __Marshaller_google_cloud_securesourcemanager_v1_FetchBlobRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_FetchBlobResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest, global::Google.LongRunning.Operation> __Method_CreateIssue = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateIssue",
+        __Marshaller_google_cloud_securesourcemanager_v1_CreateIssueRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest, global::Google.Cloud.SecureSourceManager.V1.Issue> __Method_GetIssue = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest, global::Google.Cloud.SecureSourceManager.V1.Issue>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIssue",
+        __Marshaller_google_cloud_securesourcemanager_v1_GetIssueRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_Issue);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest, global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse> __Method_ListIssues = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest, global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListIssues",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListIssuesRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListIssuesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest, global::Google.LongRunning.Operation> __Method_UpdateIssue = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateIssue",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdateIssueRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest, global::Google.LongRunning.Operation> __Method_DeleteIssue = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteIssue",
+        __Marshaller_google_cloud_securesourcemanager_v1_DeleteIssueRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest, global::Google.LongRunning.Operation> __Method_OpenIssue = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "OpenIssue",
+        __Marshaller_google_cloud_securesourcemanager_v1_OpenIssueRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest, global::Google.LongRunning.Operation> __Method_CloseIssue = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CloseIssue",
+        __Marshaller_google_cloud_securesourcemanager_v1_CloseIssueRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest, global::Google.Cloud.SecureSourceManager.V1.PullRequestComment> __Method_GetPullRequestComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest, global::Google.Cloud.SecureSourceManager.V1.PullRequestComment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPullRequestComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_GetPullRequestCommentRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_PullRequestComment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse> __Method_ListPullRequestComments = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPullRequestComments",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestCommentsRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListPullRequestCommentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest, global::Google.LongRunning.Operation> __Method_CreatePullRequestComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePullRequestComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_CreatePullRequestCommentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest, global::Google.LongRunning.Operation> __Method_UpdatePullRequestComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePullRequestComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdatePullRequestCommentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest, global::Google.LongRunning.Operation> __Method_DeletePullRequestComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePullRequestComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_DeletePullRequestCommentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest, global::Google.LongRunning.Operation> __Method_BatchCreatePullRequestComments = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreatePullRequestComments",
+        __Marshaller_google_cloud_securesourcemanager_v1_BatchCreatePullRequestCommentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest, global::Google.LongRunning.Operation> __Method_ResolvePullRequestComments = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResolvePullRequestComments",
+        __Marshaller_google_cloud_securesourcemanager_v1_ResolvePullRequestCommentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest, global::Google.LongRunning.Operation> __Method_UnresolvePullRequestComments = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UnresolvePullRequestComments",
+        __Marshaller_google_cloud_securesourcemanager_v1_UnresolvePullRequestCommentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest, global::Google.LongRunning.Operation> __Method_CreateIssueComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateIssueComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_CreateIssueCommentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest, global::Google.Cloud.SecureSourceManager.V1.IssueComment> __Method_GetIssueComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest, global::Google.Cloud.SecureSourceManager.V1.IssueComment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIssueComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_GetIssueCommentRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_IssueComment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest, global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse> __Method_ListIssueComments = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest, global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListIssueComments",
+        __Marshaller_google_cloud_securesourcemanager_v1_ListIssueCommentsRequest,
+        __Marshaller_google_cloud_securesourcemanager_v1_ListIssueCommentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest, global::Google.LongRunning.Operation> __Method_UpdateIssueComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateIssueComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_UpdateIssueCommentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest, global::Google.LongRunning.Operation> __Method_DeleteIssueComment = new grpc::Method<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteIssueComment",
+        __Marshaller_google_cloud_securesourcemanager_v1_DeleteIssueCommentRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -322,7 +691,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Lists Repositories in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The instance field is required in the query parameter for requests using
+      /// the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -335,8 +705,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
 
       /// <summary>
       /// Gets metadata of a repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -350,7 +718,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Creates a new repository in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The Repository.Instance field is required in the request body for requests
+      /// using the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -362,15 +731,85 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
 
       /// <summary>
+      /// Updates the metadata of a repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRepository(global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a Repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRepository(global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists hooks in a given repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse> ListHooks(global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.Hook> GetHook(global::Google.Cloud.SecureSourceManager.V1.GetHookRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new hook in a given repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateHook(global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateHook(global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Hook.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteHook(global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -468,6 +907,366 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBranchRule(global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a pull request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePullRequest(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a pull request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.PullRequest> GetPullRequest(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists pull requests in a repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse> ListPullRequests(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a pull request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdatePullRequest(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Merges a pull request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> MergePullRequest(global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Opens a pull request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> OpenPullRequest(global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Closes a pull request without merging.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ClosePullRequest(global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists a pull request's file diffs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse> ListPullRequestFileDiffs(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches a tree from a repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse> FetchTree(global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches a blob from a repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse> FetchBlob(global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateIssue(global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.Issue> GetIssue(global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists issues in a repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse> ListIssues(global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateIssue(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteIssue(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Opens an issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> OpenIssue(global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Closes an issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CloseIssue(global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a pull request comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.PullRequestComment> GetPullRequestComment(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists pull request comments.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse> ListPullRequestComments(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdatePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a pull request comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch creates pull request comments.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchCreatePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resolves pull request comments.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ResolvePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Unresolves pull request comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UnresolvePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an issue comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateIssueComment(global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an issue comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.IssueComment> GetIssueComment(global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists comments in an issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse> ListIssueComments(global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an issue comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateIssueComment(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an issue comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteIssueComment(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -696,7 +1495,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Lists Repositories in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The instance field is required in the query parameter for requests using
+      /// the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -711,7 +1511,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Lists Repositories in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The instance field is required in the query parameter for requests using
+      /// the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -724,7 +1525,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Lists Repositories in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The instance field is required in the query parameter for requests using
+      /// the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -739,7 +1541,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Lists Repositories in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The instance field is required in the query parameter for requests using
+      /// the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -751,8 +1554,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Gets metadata of a repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -766,8 +1567,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Gets metadata of a repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -779,8 +1578,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Gets metadata of a repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -794,8 +1591,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Gets metadata of a repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -808,7 +1603,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Creates a new repository in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The Repository.Instance field is required in the request body for requests
+      /// using the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -823,7 +1619,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Creates a new repository in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The Repository.Instance field is required in the request body for requests
+      /// using the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -836,7 +1633,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Creates a new repository in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The Repository.Instance field is required in the request body for requests
+      /// using the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -851,7 +1649,8 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       /// <summary>
       /// Creates a new repository in a given project and location.
       ///
-      /// **Host: Data Plane**
+      /// The Repository.Instance field is required in the request body for requests
+      /// using the securesourcemanager.googleapis.com endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -862,9 +1661,55 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRepository, null, options, request);
       }
       /// <summary>
+      /// Updates the metadata of a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRepository(global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRepository(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the metadata of a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRepository(global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRepository, null, options, request);
+      }
+      /// <summary>
+      /// Updates the metadata of a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRepositoryAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRepositoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the metadata of a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRepositoryAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRepository, null, options, request);
+      }
+      /// <summary>
       /// Deletes a Repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -878,8 +1723,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Deletes a Repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -891,8 +1734,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Deletes a Repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -906,8 +1747,6 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
       /// <summary>
       /// Deletes a Repository.
-      ///
-      /// **Host: Data Plane**
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -916,6 +1755,246 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRepositoryAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRepository, null, options, request);
+      }
+      /// <summary>
+      /// Lists hooks in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse ListHooks(global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListHooks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists hooks in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse ListHooks(global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListHooks, null, options, request);
+      }
+      /// <summary>
+      /// Lists hooks in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse> ListHooksAsync(global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListHooksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists hooks in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse> ListHooksAsync(global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListHooks, null, options, request);
+      }
+      /// <summary>
+      /// Gets metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.Hook GetHook(global::Google.Cloud.SecureSourceManager.V1.GetHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetHook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.Hook GetHook(global::Google.Cloud.SecureSourceManager.V1.GetHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetHook, null, options, request);
+      }
+      /// <summary>
+      /// Gets metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.Hook> GetHookAsync(global::Google.Cloud.SecureSourceManager.V1.GetHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetHookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.Hook> GetHookAsync(global::Google.Cloud.SecureSourceManager.V1.GetHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetHook, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new hook in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateHook(global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateHook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new hook in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateHook(global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateHook, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new hook in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateHookAsync(global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateHookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new hook in a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateHookAsync(global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateHook, null, options, request);
+      }
+      /// <summary>
+      /// Updates the metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateHook(global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateHook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateHook(global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateHook, null, options, request);
+      }
+      /// <summary>
+      /// Updates the metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateHookAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateHookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the metadata of a hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateHookAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateHook, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteHook(global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteHook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteHook(global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteHook, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteHookAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteHookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Hook.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteHookAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteHook, null, options, request);
       }
       /// <summary>
       /// Get IAM policy for a repository.
@@ -1305,6 +2384,1446 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBranchRule, null, options, request);
       }
+      /// <summary>
+      /// Creates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePullRequest(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePullRequest(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Creates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Gets a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.PullRequest GetPullRequest(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.PullRequest GetPullRequest(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Gets a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.PullRequest> GetPullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.PullRequest> GetPullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Lists pull requests in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse ListPullRequests(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPullRequests(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists pull requests in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse ListPullRequests(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPullRequests, null, options, request);
+      }
+      /// <summary>
+      /// Lists pull requests in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse> ListPullRequestsAsync(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPullRequestsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists pull requests in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse> ListPullRequestsAsync(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPullRequests, null, options, request);
+      }
+      /// <summary>
+      /// Updates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePullRequest(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePullRequest(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Updates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Merges a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MergePullRequest(global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MergePullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Merges a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MergePullRequest(global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MergePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Merges a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MergePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MergePullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Merges a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MergePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MergePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Opens a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OpenPullRequest(global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenPullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Opens a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OpenPullRequest(global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_OpenPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Opens a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OpenPullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenPullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Opens a pull request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OpenPullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_OpenPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Closes a pull request without merging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ClosePullRequest(global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ClosePullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Closes a pull request without merging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ClosePullRequest(global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ClosePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Closes a pull request without merging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ClosePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ClosePullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Closes a pull request without merging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ClosePullRequestAsync(global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ClosePullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Lists a pull request's file diffs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse ListPullRequestFileDiffs(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPullRequestFileDiffs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists a pull request's file diffs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse ListPullRequestFileDiffs(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPullRequestFileDiffs, null, options, request);
+      }
+      /// <summary>
+      /// Lists a pull request's file diffs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse> ListPullRequestFileDiffsAsync(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPullRequestFileDiffsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists a pull request's file diffs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse> ListPullRequestFileDiffsAsync(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPullRequestFileDiffs, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a tree from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse FetchTree(global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchTree(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a tree from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse FetchTree(global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchTree, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a tree from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse> FetchTreeAsync(global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchTreeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a tree from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse> FetchTreeAsync(global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchTree, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a blob from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse FetchBlob(global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchBlob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a blob from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse FetchBlob(global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchBlob, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a blob from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse> FetchBlobAsync(global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchBlobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a blob from a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse> FetchBlobAsync(global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchBlob, null, options, request);
+      }
+      /// <summary>
+      /// Creates an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateIssue(global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateIssue(global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateIssue, null, options, request);
+      }
+      /// <summary>
+      /// Creates an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIssueAsync(global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIssueAsync(global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateIssue, null, options, request);
+      }
+      /// <summary>
+      /// Gets an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.Issue GetIssue(global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.Issue GetIssue(global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIssue, null, options, request);
+      }
+      /// <summary>
+      /// Gets an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.Issue> GetIssueAsync(global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.Issue> GetIssueAsync(global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIssue, null, options, request);
+      }
+      /// <summary>
+      /// Lists issues in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse ListIssues(global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIssues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists issues in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse ListIssues(global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListIssues, null, options, request);
+      }
+      /// <summary>
+      /// Lists issues in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse> ListIssuesAsync(global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIssuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists issues in a repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse> ListIssuesAsync(global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListIssues, null, options, request);
+      }
+      /// <summary>
+      /// Updates a issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateIssue(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateIssue(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateIssue, null, options, request);
+      }
+      /// <summary>
+      /// Updates a issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateIssueAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateIssueAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateIssue, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteIssue(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteIssue(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteIssue, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIssueAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIssueAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteIssue, null, options, request);
+      }
+      /// <summary>
+      /// Opens an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OpenIssue(global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Opens an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OpenIssue(global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_OpenIssue, null, options, request);
+      }
+      /// <summary>
+      /// Opens an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OpenIssueAsync(global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Opens an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OpenIssueAsync(global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_OpenIssue, null, options, request);
+      }
+      /// <summary>
+      /// Closes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CloseIssue(global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloseIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Closes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CloseIssue(global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CloseIssue, null, options, request);
+      }
+      /// <summary>
+      /// Closes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CloseIssueAsync(global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloseIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Closes an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CloseIssueAsync(global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CloseIssue, null, options, request);
+      }
+      /// <summary>
+      /// Gets a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.PullRequestComment GetPullRequestComment(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPullRequestComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.PullRequestComment GetPullRequestComment(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Gets a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.PullRequestComment> GetPullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPullRequestCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.PullRequestComment> GetPullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Lists pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse ListPullRequestComments(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse ListPullRequestComments(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Lists pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse> ListPullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse> ListPullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Creates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePullRequestComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Creates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePullRequestCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Updates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePullRequestComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Updates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePullRequestCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePullRequestComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePullRequestComment(global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePullRequestCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePullRequestCommentAsync(global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Batch creates pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreatePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreatePullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch creates pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreatePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreatePullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Batch creates pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreatePullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreatePullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch creates pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreatePullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreatePullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Resolves pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ResolvePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResolvePullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resolves pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ResolvePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResolvePullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Resolves pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResolvePullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResolvePullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resolves pull request comments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResolvePullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResolvePullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Unresolves pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UnresolvePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnresolvePullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unresolves pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UnresolvePullRequestComments(global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UnresolvePullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Unresolves pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UnresolvePullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnresolvePullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unresolves pull request comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UnresolvePullRequestCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UnresolvePullRequestComments, null, options, request);
+      }
+      /// <summary>
+      /// Creates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateIssueComment(global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateIssueComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateIssueComment(global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Creates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateIssueCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Gets an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.IssueComment GetIssueComment(global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIssueComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.IssueComment GetIssueComment(global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Gets an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.IssueComment> GetIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIssueCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.IssueComment> GetIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Lists comments in an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse ListIssueComments(global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIssueComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists comments in an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse ListIssueComments(global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListIssueComments, null, options, request);
+      }
+      /// <summary>
+      /// Lists comments in an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse> ListIssueCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIssueCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists comments in an issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse> ListIssueCommentsAsync(global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListIssueComments, null, options, request);
+      }
+      /// <summary>
+      /// Updates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateIssueComment(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateIssueComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateIssueComment(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Updates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateIssueCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteIssueComment(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteIssueComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteIssueComment(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteIssueComment, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteIssueCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an issue comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIssueCommentAsync(global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteIssueComment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecureSourceManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1326,7 +3845,13 @@ namespace Google.Cloud.SecureSourceManager.V1 {
           .AddMethod(__Method_ListRepositories, serviceImpl.ListRepositories)
           .AddMethod(__Method_GetRepository, serviceImpl.GetRepository)
           .AddMethod(__Method_CreateRepository, serviceImpl.CreateRepository)
+          .AddMethod(__Method_UpdateRepository, serviceImpl.UpdateRepository)
           .AddMethod(__Method_DeleteRepository, serviceImpl.DeleteRepository)
+          .AddMethod(__Method_ListHooks, serviceImpl.ListHooks)
+          .AddMethod(__Method_GetHook, serviceImpl.GetHook)
+          .AddMethod(__Method_CreateHook, serviceImpl.CreateHook)
+          .AddMethod(__Method_UpdateHook, serviceImpl.UpdateHook)
+          .AddMethod(__Method_DeleteHook, serviceImpl.DeleteHook)
           .AddMethod(__Method_GetIamPolicyRepo, serviceImpl.GetIamPolicyRepo)
           .AddMethod(__Method_SetIamPolicyRepo, serviceImpl.SetIamPolicyRepo)
           .AddMethod(__Method_TestIamPermissionsRepo, serviceImpl.TestIamPermissionsRepo)
@@ -1334,7 +3859,37 @@ namespace Google.Cloud.SecureSourceManager.V1 {
           .AddMethod(__Method_ListBranchRules, serviceImpl.ListBranchRules)
           .AddMethod(__Method_GetBranchRule, serviceImpl.GetBranchRule)
           .AddMethod(__Method_UpdateBranchRule, serviceImpl.UpdateBranchRule)
-          .AddMethod(__Method_DeleteBranchRule, serviceImpl.DeleteBranchRule).Build();
+          .AddMethod(__Method_DeleteBranchRule, serviceImpl.DeleteBranchRule)
+          .AddMethod(__Method_CreatePullRequest, serviceImpl.CreatePullRequest)
+          .AddMethod(__Method_GetPullRequest, serviceImpl.GetPullRequest)
+          .AddMethod(__Method_ListPullRequests, serviceImpl.ListPullRequests)
+          .AddMethod(__Method_UpdatePullRequest, serviceImpl.UpdatePullRequest)
+          .AddMethod(__Method_MergePullRequest, serviceImpl.MergePullRequest)
+          .AddMethod(__Method_OpenPullRequest, serviceImpl.OpenPullRequest)
+          .AddMethod(__Method_ClosePullRequest, serviceImpl.ClosePullRequest)
+          .AddMethod(__Method_ListPullRequestFileDiffs, serviceImpl.ListPullRequestFileDiffs)
+          .AddMethod(__Method_FetchTree, serviceImpl.FetchTree)
+          .AddMethod(__Method_FetchBlob, serviceImpl.FetchBlob)
+          .AddMethod(__Method_CreateIssue, serviceImpl.CreateIssue)
+          .AddMethod(__Method_GetIssue, serviceImpl.GetIssue)
+          .AddMethod(__Method_ListIssues, serviceImpl.ListIssues)
+          .AddMethod(__Method_UpdateIssue, serviceImpl.UpdateIssue)
+          .AddMethod(__Method_DeleteIssue, serviceImpl.DeleteIssue)
+          .AddMethod(__Method_OpenIssue, serviceImpl.OpenIssue)
+          .AddMethod(__Method_CloseIssue, serviceImpl.CloseIssue)
+          .AddMethod(__Method_GetPullRequestComment, serviceImpl.GetPullRequestComment)
+          .AddMethod(__Method_ListPullRequestComments, serviceImpl.ListPullRequestComments)
+          .AddMethod(__Method_CreatePullRequestComment, serviceImpl.CreatePullRequestComment)
+          .AddMethod(__Method_UpdatePullRequestComment, serviceImpl.UpdatePullRequestComment)
+          .AddMethod(__Method_DeletePullRequestComment, serviceImpl.DeletePullRequestComment)
+          .AddMethod(__Method_BatchCreatePullRequestComments, serviceImpl.BatchCreatePullRequestComments)
+          .AddMethod(__Method_ResolvePullRequestComments, serviceImpl.ResolvePullRequestComments)
+          .AddMethod(__Method_UnresolvePullRequestComments, serviceImpl.UnresolvePullRequestComments)
+          .AddMethod(__Method_CreateIssueComment, serviceImpl.CreateIssueComment)
+          .AddMethod(__Method_GetIssueComment, serviceImpl.GetIssueComment)
+          .AddMethod(__Method_ListIssueComments, serviceImpl.ListIssueComments)
+          .AddMethod(__Method_UpdateIssueComment, serviceImpl.UpdateIssueComment)
+          .AddMethod(__Method_DeleteIssueComment, serviceImpl.DeleteIssueComment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1351,7 +3906,13 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       serviceBinder.AddMethod(__Method_ListRepositories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListRepositoriesRequest, global::Google.Cloud.SecureSourceManager.V1.ListRepositoriesResponse>(serviceImpl.ListRepositories));
       serviceBinder.AddMethod(__Method_GetRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetRepositoryRequest, global::Google.Cloud.SecureSourceManager.V1.Repository>(serviceImpl.GetRepository));
       serviceBinder.AddMethod(__Method_CreateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreateRepositoryRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRepository));
+      serviceBinder.AddMethod(__Method_UpdateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdateRepositoryRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRepository));
       serviceBinder.AddMethod(__Method_DeleteRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeleteRepositoryRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRepository));
+      serviceBinder.AddMethod(__Method_ListHooks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListHooksRequest, global::Google.Cloud.SecureSourceManager.V1.ListHooksResponse>(serviceImpl.ListHooks));
+      serviceBinder.AddMethod(__Method_GetHook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetHookRequest, global::Google.Cloud.SecureSourceManager.V1.Hook>(serviceImpl.GetHook));
+      serviceBinder.AddMethod(__Method_CreateHook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreateHookRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateHook));
+      serviceBinder.AddMethod(__Method_UpdateHook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdateHookRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateHook));
+      serviceBinder.AddMethod(__Method_DeleteHook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeleteHookRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteHook));
       serviceBinder.AddMethod(__Method_GetIamPolicyRepo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicyRepo));
       serviceBinder.AddMethod(__Method_SetIamPolicyRepo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicyRepo));
       serviceBinder.AddMethod(__Method_TestIamPermissionsRepo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissionsRepo));
@@ -1360,6 +3921,36 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       serviceBinder.AddMethod(__Method_GetBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetBranchRuleRequest, global::Google.Cloud.SecureSourceManager.V1.BranchRule>(serviceImpl.GetBranchRule));
       serviceBinder.AddMethod(__Method_UpdateBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdateBranchRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBranchRule));
       serviceBinder.AddMethod(__Method_DeleteBranchRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeleteBranchRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBranchRule));
+      serviceBinder.AddMethod(__Method_CreatePullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePullRequest));
+      serviceBinder.AddMethod(__Method_GetPullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestRequest, global::Google.Cloud.SecureSourceManager.V1.PullRequest>(serviceImpl.GetPullRequest));
+      serviceBinder.AddMethod(__Method_ListPullRequests, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestsResponse>(serviceImpl.ListPullRequests));
+      serviceBinder.AddMethod(__Method_UpdatePullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdatePullRequest));
+      serviceBinder.AddMethod(__Method_MergePullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.MergePullRequestRequest, global::Google.LongRunning.Operation>(serviceImpl.MergePullRequest));
+      serviceBinder.AddMethod(__Method_OpenPullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.OpenPullRequestRequest, global::Google.LongRunning.Operation>(serviceImpl.OpenPullRequest));
+      serviceBinder.AddMethod(__Method_ClosePullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ClosePullRequestRequest, global::Google.LongRunning.Operation>(serviceImpl.ClosePullRequest));
+      serviceBinder.AddMethod(__Method_ListPullRequestFileDiffs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestFileDiffsResponse>(serviceImpl.ListPullRequestFileDiffs));
+      serviceBinder.AddMethod(__Method_FetchTree, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.FetchTreeRequest, global::Google.Cloud.SecureSourceManager.V1.FetchTreeResponse>(serviceImpl.FetchTree));
+      serviceBinder.AddMethod(__Method_FetchBlob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.FetchBlobRequest, global::Google.Cloud.SecureSourceManager.V1.FetchBlobResponse>(serviceImpl.FetchBlob));
+      serviceBinder.AddMethod(__Method_CreateIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreateIssueRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateIssue));
+      serviceBinder.AddMethod(__Method_GetIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetIssueRequest, global::Google.Cloud.SecureSourceManager.V1.Issue>(serviceImpl.GetIssue));
+      serviceBinder.AddMethod(__Method_ListIssues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListIssuesRequest, global::Google.Cloud.SecureSourceManager.V1.ListIssuesResponse>(serviceImpl.ListIssues));
+      serviceBinder.AddMethod(__Method_UpdateIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateIssue));
+      serviceBinder.AddMethod(__Method_DeleteIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIssue));
+      serviceBinder.AddMethod(__Method_OpenIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.OpenIssueRequest, global::Google.LongRunning.Operation>(serviceImpl.OpenIssue));
+      serviceBinder.AddMethod(__Method_CloseIssue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CloseIssueRequest, global::Google.LongRunning.Operation>(serviceImpl.CloseIssue));
+      serviceBinder.AddMethod(__Method_GetPullRequestComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetPullRequestCommentRequest, global::Google.Cloud.SecureSourceManager.V1.PullRequestComment>(serviceImpl.GetPullRequestComment));
+      serviceBinder.AddMethod(__Method_ListPullRequestComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsRequest, global::Google.Cloud.SecureSourceManager.V1.ListPullRequestCommentsResponse>(serviceImpl.ListPullRequestComments));
+      serviceBinder.AddMethod(__Method_CreatePullRequestComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreatePullRequestCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePullRequestComment));
+      serviceBinder.AddMethod(__Method_UpdatePullRequestComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdatePullRequestCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdatePullRequestComment));
+      serviceBinder.AddMethod(__Method_DeletePullRequestComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeletePullRequestCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePullRequestComment));
+      serviceBinder.AddMethod(__Method_BatchCreatePullRequestComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.BatchCreatePullRequestCommentsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchCreatePullRequestComments));
+      serviceBinder.AddMethod(__Method_ResolvePullRequestComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ResolvePullRequestCommentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ResolvePullRequestComments));
+      serviceBinder.AddMethod(__Method_UnresolvePullRequestComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UnresolvePullRequestCommentsRequest, global::Google.LongRunning.Operation>(serviceImpl.UnresolvePullRequestComments));
+      serviceBinder.AddMethod(__Method_CreateIssueComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.CreateIssueCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateIssueComment));
+      serviceBinder.AddMethod(__Method_GetIssueComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.GetIssueCommentRequest, global::Google.Cloud.SecureSourceManager.V1.IssueComment>(serviceImpl.GetIssueComment));
+      serviceBinder.AddMethod(__Method_ListIssueComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsRequest, global::Google.Cloud.SecureSourceManager.V1.ListIssueCommentsResponse>(serviceImpl.ListIssueComments));
+      serviceBinder.AddMethod(__Method_UpdateIssueComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.UpdateIssueCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateIssueComment));
+      serviceBinder.AddMethod(__Method_DeleteIssueComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecureSourceManager.V1.DeleteIssueCommentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIssueComment));
     }
 
   }
