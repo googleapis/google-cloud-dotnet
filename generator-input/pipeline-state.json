@@ -4154,7 +4154,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-07-07T14:52:23.883306616Z",
-            "lastGeneratedCommit": "acb0511f2c402f14f1e0c97864a9c27a850ff235",
+            "lastGeneratedCommit": "2af15410a4bbe2b7bf559754781f3a96643f292d",
             "lastReleasedCommit": "acb0511f2c402f14f1e0c97864a9c27a850ff235",
             "apiPaths": [
                 "google/cloud/modelarmor/v1beta"
