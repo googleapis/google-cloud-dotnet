@@ -10,16 +10,64 @@
         "grpc": {
           "libraryClient": "SecureSourceManagerClient",
           "rpcs": {
+            "BatchCreatePullRequestComments": {
+              "methods": [
+                "BatchCreatePullRequestComments",
+                "BatchCreatePullRequestCommentsAsync"
+              ]
+            },
+            "CloseIssue": {
+              "methods": [
+                "CloseIssue",
+                "CloseIssueAsync"
+              ]
+            },
+            "ClosePullRequest": {
+              "methods": [
+                "ClosePullRequest",
+                "ClosePullRequestAsync"
+              ]
+            },
             "CreateBranchRule": {
               "methods": [
                 "CreateBranchRule",
                 "CreateBranchRuleAsync"
               ]
             },
+            "CreateHook": {
+              "methods": [
+                "CreateHook",
+                "CreateHookAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
+              ]
+            },
+            "CreateIssue": {
+              "methods": [
+                "CreateIssue",
+                "CreateIssueAsync"
+              ]
+            },
+            "CreateIssueComment": {
+              "methods": [
+                "CreateIssueComment",
+                "CreateIssueCommentAsync"
+              ]
+            },
+            "CreatePullRequest": {
+              "methods": [
+                "CreatePullRequest",
+                "CreatePullRequestAsync"
+              ]
+            },
+            "CreatePullRequestComment": {
+              "methods": [
+                "CreatePullRequestComment",
+                "CreatePullRequestCommentAsync"
               ]
             },
             "CreateRepository": {
@@ -34,10 +82,34 @@
                 "DeleteBranchRuleAsync"
               ]
             },
+            "DeleteHook": {
+              "methods": [
+                "DeleteHook",
+                "DeleteHookAsync"
+              ]
+            },
             "DeleteInstance": {
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteIssue": {
+              "methods": [
+                "DeleteIssue",
+                "DeleteIssueAsync"
+              ]
+            },
+            "DeleteIssueComment": {
+              "methods": [
+                "DeleteIssueComment",
+                "DeleteIssueCommentAsync"
+              ]
+            },
+            "DeletePullRequestComment": {
+              "methods": [
+                "DeletePullRequestComment",
+                "DeletePullRequestCommentAsync"
               ]
             },
             "DeleteRepository": {
@@ -46,10 +118,28 @@
                 "DeleteRepositoryAsync"
               ]
             },
+            "FetchBlob": {
+              "methods": [
+                "FetchBlob",
+                "FetchBlobAsync"
+              ]
+            },
+            "FetchTree": {
+              "methods": [
+                "FetchTree",
+                "FetchTreeAsync"
+              ]
+            },
             "GetBranchRule": {
               "methods": [
                 "GetBranchRule",
                 "GetBranchRuleAsync"
+              ]
+            },
+            "GetHook": {
+              "methods": [
+                "GetHook",
+                "GetHookAsync"
               ]
             },
             "GetIamPolicyRepo": {
@@ -64,6 +154,30 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetIssue": {
+              "methods": [
+                "GetIssue",
+                "GetIssueAsync"
+              ]
+            },
+            "GetIssueComment": {
+              "methods": [
+                "GetIssueComment",
+                "GetIssueCommentAsync"
+              ]
+            },
+            "GetPullRequest": {
+              "methods": [
+                "GetPullRequest",
+                "GetPullRequestAsync"
+              ]
+            },
+            "GetPullRequestComment": {
+              "methods": [
+                "GetPullRequestComment",
+                "GetPullRequestCommentAsync"
+              ]
+            },
             "GetRepository": {
               "methods": [
                 "GetRepository",
@@ -76,16 +190,76 @@
                 "ListBranchRulesAsync"
               ]
             },
+            "ListHooks": {
+              "methods": [
+                "ListHooks",
+                "ListHooksAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
               ]
             },
+            "ListIssueComments": {
+              "methods": [
+                "ListIssueComments",
+                "ListIssueCommentsAsync"
+              ]
+            },
+            "ListIssues": {
+              "methods": [
+                "ListIssues",
+                "ListIssuesAsync"
+              ]
+            },
+            "ListPullRequestComments": {
+              "methods": [
+                "ListPullRequestComments",
+                "ListPullRequestCommentsAsync"
+              ]
+            },
+            "ListPullRequestFileDiffs": {
+              "methods": [
+                "ListPullRequestFileDiffs",
+                "ListPullRequestFileDiffsAsync"
+              ]
+            },
+            "ListPullRequests": {
+              "methods": [
+                "ListPullRequests",
+                "ListPullRequestsAsync"
+              ]
+            },
             "ListRepositories": {
               "methods": [
                 "ListRepositories",
                 "ListRepositoriesAsync"
+              ]
+            },
+            "MergePullRequest": {
+              "methods": [
+                "MergePullRequest",
+                "MergePullRequestAsync"
+              ]
+            },
+            "OpenIssue": {
+              "methods": [
+                "OpenIssue",
+                "OpenIssueAsync"
+              ]
+            },
+            "OpenPullRequest": {
+              "methods": [
+                "OpenPullRequest",
+                "OpenPullRequestAsync"
+              ]
+            },
+            "ResolvePullRequestComments": {
+              "methods": [
+                "ResolvePullRequestComments",
+                "ResolvePullRequestCommentsAsync"
               ]
             },
             "SetIamPolicyRepo": {
@@ -100,10 +274,52 @@
                 "TestIamPermissionsRepoAsync"
               ]
             },
+            "UnresolvePullRequestComments": {
+              "methods": [
+                "UnresolvePullRequestComments",
+                "UnresolvePullRequestCommentsAsync"
+              ]
+            },
             "UpdateBranchRule": {
               "methods": [
                 "UpdateBranchRule",
                 "UpdateBranchRuleAsync"
+              ]
+            },
+            "UpdateHook": {
+              "methods": [
+                "UpdateHook",
+                "UpdateHookAsync"
+              ]
+            },
+            "UpdateIssue": {
+              "methods": [
+                "UpdateIssue",
+                "UpdateIssueAsync"
+              ]
+            },
+            "UpdateIssueComment": {
+              "methods": [
+                "UpdateIssueComment",
+                "UpdateIssueCommentAsync"
+              ]
+            },
+            "UpdatePullRequest": {
+              "methods": [
+                "UpdatePullRequest",
+                "UpdatePullRequestAsync"
+              ]
+            },
+            "UpdatePullRequestComment": {
+              "methods": [
+                "UpdatePullRequestComment",
+                "UpdatePullRequestCommentAsync"
+              ]
+            },
+            "UpdateRepository": {
+              "methods": [
+                "UpdateRepository",
+                "UpdateRepositoryAsync"
               ]
             }
           }
