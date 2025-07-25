@@ -46,47 +46,47 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "iQEKG0xpc3RNZXJjaGFudFJldmlld3NSZXNwb25zZRJRChBtZXJjaGFudF9y",
             "ZXZpZXdzGAEgAygLMjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmll",
             "d3MudjFiZXRhLk1lcmNoYW50UmV2aWV3EhcKD25leHRfcGFnZV90b2tlbhgC",
-            "IAEoCSLhAwoOTWVyY2hhbnRSZXZpZXcSEQoEbmFtZRgBIAEoCUID4EEIEh8K",
-            "Em1lcmNoYW50X3Jldmlld19pZBgCIAEoCUID4EECEloKCmF0dHJpYnV0ZXMY",
-            "AyABKAsyQS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJl",
-            "dGEuTWVyY2hhbnRSZXZpZXdBdHRyaWJ1dGVzQgPgQQESRQoRY3VzdG9tX2F0",
-            "dHJpYnV0ZXMYBCADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21B",
-            "dHRyaWJ1dGVCA+BBARIYCgtkYXRhX3NvdXJjZRgFIAEoCUID4EEDEmIKFm1l",
-            "cmNoYW50X3Jldmlld19zdGF0dXMYBiABKAsyPS5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQucmV2aWV3cy52MWJldGEuTWVyY2hhbnRSZXZpZXdTdGF0dXNC",
-            "A+BBAzp66kF3CiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9NZXJjaGFu",
-            "dFJldmlldxIpYWNjb3VudHMve2FjY291bnR9L21lcmNoYW50UmV2aWV3cy97",
-            "bmFtZX0qD21lcmNoYW50UmV2aWV3czIObWVyY2hhbnRSZXZpZXcyyAcKFk1l",
-            "cmNoYW50UmV2aWV3c1NlcnZpY2US0wEKEUdldE1lcmNoYW50UmV2aWV3EkEu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhLkdldE1l",
-            "cmNoYW50UmV2aWV3UmVxdWVzdBo3Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5yZXZpZXdzLnYxYmV0YS5NZXJjaGFudFJldmlldyJC2kEEbmFtZYLT5JMC",
-            "NRIzL3Jldmlld3MvdjFiZXRhL3tuYW1lPWFjY291bnRzLyovbWVyY2hhbnRS",
-            "ZXZpZXdzLyp9EuYBChNMaXN0TWVyY2hhbnRSZXZpZXdzEkMuZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhLkxpc3RNZXJjaGFudFJl",
-            "dmlld3NSZXF1ZXN0GkQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmll",
-            "d3MudjFiZXRhLkxpc3RNZXJjaGFudFJldmlld3NSZXNwb25zZSJE2kEGcGFy",
-            "ZW50gtPkkwI1EjMvcmV2aWV3cy92MWJldGEve3BhcmVudD1hY2NvdW50cy8q",
-            "fS9tZXJjaGFudFJldmlld3MS6gEKFEluc2VydE1lcmNoYW50UmV2aWV3EkQu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhLkluc2Vy",
-            "dE1lcmNoYW50UmV2aWV3UmVxdWVzdBo3Lmdvb2dsZS5zaG9wcGluZy5tZXJj",
-            "aGFudC5yZXZpZXdzLnYxYmV0YS5NZXJjaGFudFJldmlldyJTgtPkkwJNIjov",
-            "cmV2aWV3cy92MWJldGEve3BhcmVudD1hY2NvdW50cy8qfS9tZXJjaGFudFJl",
-            "dmlld3M6aW5zZXJ0Og9tZXJjaGFudF9yZXZpZXcSuAEKFERlbGV0ZU1lcmNo",
-            "YW50UmV2aWV3EkQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmlld3Mu",
-            "djFiZXRhLkRlbGV0ZU1lcmNoYW50UmV2aWV3UmVxdWVzdBoWLmdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eSJC2kEEbmFtZYLT5JMCNSozL3Jldmlld3MvdjFiZXRh",
-            "L3tuYW1lPWFjY291bnRzLyovbWVyY2hhbnRSZXZpZXdzLyp9GkfKQRptZXJj",
-            "aGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY29udGVudELPAgorY29tLmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5yZXZpZXdzLnYxYmV0YUIUTWVyY2hhbnRSZXZpZXdzUHJvdG9Q",
-            "AVpLY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9yZXZp",
-            "ZXdzL2FwaXYxYmV0YS9yZXZpZXdzcGI7cmV2aWV3c3BiqgInR29vZ2xlLlNo",
-            "b3BwaW5nLk1lcmNoYW50LlJldmlld3MuVjFCZXRhygInR29vZ2xlXFNob3Bw",
-            "aW5nXE1lcmNoYW50XFJldmlld3NcVjFiZXRh6gIrR29vZ2xlOjpTaG9wcGlu",
-            "Zzo6TWVyY2hhbnQ6OlJldmlld3M6OlYxYmV0YepBOAoibWVyY2hhbnRhcGku",
-            "Z29vZ2xlYXBpcy5jb20vQWNjb3VudBISYWNjb3VudHMve2FjY291bnR9YgZw",
-            "cm90bzM="));
+            "IAEoCSLxAwoOTWVyY2hhbnRSZXZpZXcSEQoEbmFtZRgBIAEoCUID4EEIEh8K",
+            "Em1lcmNoYW50X3Jldmlld19pZBgCIAEoCUID4EECEmoKGm1lcmNoYW50X3Jl",
+            "dmlld19hdHRyaWJ1dGVzGAMgASgLMkEuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
+            "YW50LnJldmlld3MudjFiZXRhLk1lcmNoYW50UmV2aWV3QXR0cmlidXRlc0ID",
+            "4EEBEkUKEWN1c3RvbV9hdHRyaWJ1dGVzGAQgAygLMiUuZ29vZ2xlLnNob3Bw",
+            "aW5nLnR5cGUuQ3VzdG9tQXR0cmlidXRlQgPgQQESGAoLZGF0YV9zb3VyY2UY",
+            "BSABKAlCA+BBAxJiChZtZXJjaGFudF9yZXZpZXdfc3RhdHVzGAYgASgLMj0u",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhLk1lcmNo",
+            "YW50UmV2aWV3U3RhdHVzQgPgQQM6eupBdwopbWVyY2hhbnRhcGkuZ29vZ2xl",
+            "YXBpcy5jb20vTWVyY2hhbnRSZXZpZXcSKWFjY291bnRzL3thY2NvdW50fS9t",
+            "ZXJjaGFudFJldmlld3Mve25hbWV9Kg9tZXJjaGFudFJldmlld3MyDm1lcmNo",
+            "YW50UmV2aWV3MsgHChZNZXJjaGFudFJldmlld3NTZXJ2aWNlEtMBChFHZXRN",
+            "ZXJjaGFudFJldmlldxJBLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXZp",
+            "ZXdzLnYxYmV0YS5HZXRNZXJjaGFudFJldmlld1JlcXVlc3QaNy5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJldGEuTWVyY2hhbnRSZXZp",
+            "ZXciQtpBBG5hbWWC0+STAjUSMy9yZXZpZXdzL3YxYmV0YS97bmFtZT1hY2Nv",
+            "dW50cy8qL21lcmNoYW50UmV2aWV3cy8qfRLmAQoTTGlzdE1lcmNoYW50UmV2",
+            "aWV3cxJDLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0",
+            "YS5MaXN0TWVyY2hhbnRSZXZpZXdzUmVxdWVzdBpELmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0YS5MaXN0TWVyY2hhbnRSZXZpZXdz",
+            "UmVzcG9uc2UiRNpBBnBhcmVudILT5JMCNRIzL3Jldmlld3MvdjFiZXRhL3tw",
+            "YXJlbnQ9YWNjb3VudHMvKn0vbWVyY2hhbnRSZXZpZXdzEuoBChRJbnNlcnRN",
+            "ZXJjaGFudFJldmlldxJELmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXZp",
+            "ZXdzLnYxYmV0YS5JbnNlcnRNZXJjaGFudFJldmlld1JlcXVlc3QaNy5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJldGEuTWVyY2hhbnRS",
+            "ZXZpZXciU4LT5JMCTSI6L3Jldmlld3MvdjFiZXRhL3twYXJlbnQ9YWNjb3Vu",
+            "dHMvKn0vbWVyY2hhbnRSZXZpZXdzOmluc2VydDoPbWVyY2hhbnRfcmV2aWV3",
+            "ErgBChREZWxldGVNZXJjaGFudFJldmlldxJELmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5yZXZpZXdzLnYxYmV0YS5EZWxldGVNZXJjaGFudFJldmlld1Jl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQtpBBG5hbWWC0+STAjUq",
+            "My9yZXZpZXdzL3YxYmV0YS97bmFtZT1hY2NvdW50cy8qL21lcmNoYW50UmV2",
+            "aWV3cy8qfRpHykEabWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb23SQSdodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbnRlbnRCzwIKK2NvbS5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJldGFCFE1lcmNo",
+            "YW50UmV2aWV3c1Byb3RvUAFaS2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBp",
+            "bmcvbWVyY2hhbnQvcmV2aWV3cy9hcGl2MWJldGEvcmV2aWV3c3BiO3Jldmll",
+            "d3NwYqoCJ0dvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5SZXZpZXdzLlYxQmV0",
+            "YcoCJ0dvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxSZXZpZXdzXFYxYmV0YeoC",
+            "K0dvb2dsZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpSZXZpZXdzOjpWMWJldGHq",
+            "QTgKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291bnQSEmFjY291",
+            "bnRzL3thY2NvdW50fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantreviewsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,7 +95,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ListMerchantReviewsRequest), global::Google.Shopping.Merchant.Reviews.V1Beta.ListMerchantReviewsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.InsertMerchantReviewRequest), global::Google.Shopping.Merchant.Reviews.V1Beta.InsertMerchantReviewRequest.Parser, new[]{ "Parent", "MerchantReview", "DataSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ListMerchantReviewsResponse), global::Google.Shopping.Merchant.Reviews.V1Beta.ListMerchantReviewsResponse.Parser, new[]{ "MerchantReviews", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReview), global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReview.Parser, new[]{ "Name", "MerchantReviewId", "Attributes", "CustomAttributes", "DataSource", "MerchantReviewStatus" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReview), global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReview.Parser, new[]{ "Name", "MerchantReviewId", "MerchantReviewAttributes", "CustomAttributes", "DataSource", "MerchantReviewStatus" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1336,7 +1336,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
     public MerchantReview(MerchantReview other) : this() {
       name_ = other.name_;
       merchantReviewId_ = other.merchantReviewId_;
-      attributes_ = other.attributes_ != null ? other.attributes_.Clone() : null;
+      merchantReviewAttributes_ = other.merchantReviewAttributes_ != null ? other.merchantReviewAttributes_.Clone() : null;
       customAttributes_ = other.customAttributes_.Clone();
       dataSource_ = other.dataSource_;
       merchantReviewStatus_ = other.merchantReviewStatus_ != null ? other.merchantReviewStatus_.Clone() : null;
@@ -1382,18 +1382,18 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       }
     }
 
-    /// <summary>Field number for the "attributes" field.</summary>
-    public const int AttributesFieldNumber = 3;
-    private global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes attributes_;
+    /// <summary>Field number for the "merchant_review_attributes" field.</summary>
+    public const int MerchantReviewAttributesFieldNumber = 3;
+    private global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes merchantReviewAttributes_;
     /// <summary>
     /// Optional. A list of merchant review attributes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes Attributes {
-      get { return attributes_; }
+    public global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes MerchantReviewAttributes {
+      get { return merchantReviewAttributes_; }
       set {
-        attributes_ = value;
+        merchantReviewAttributes_ = value;
       }
     }
 
@@ -1469,7 +1469,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       }
       if (Name != other.Name) return false;
       if (MerchantReviewId != other.MerchantReviewId) return false;
-      if (!object.Equals(Attributes, other.Attributes)) return false;
+      if (!object.Equals(MerchantReviewAttributes, other.MerchantReviewAttributes)) return false;
       if(!customAttributes_.Equals(other.customAttributes_)) return false;
       if (DataSource != other.DataSource) return false;
       if (!object.Equals(MerchantReviewStatus, other.MerchantReviewStatus)) return false;
@@ -1482,7 +1482,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (MerchantReviewId.Length != 0) hash ^= MerchantReviewId.GetHashCode();
-      if (attributes_ != null) hash ^= Attributes.GetHashCode();
+      if (merchantReviewAttributes_ != null) hash ^= MerchantReviewAttributes.GetHashCode();
       hash ^= customAttributes_.GetHashCode();
       if (DataSource.Length != 0) hash ^= DataSource.GetHashCode();
       if (merchantReviewStatus_ != null) hash ^= MerchantReviewStatus.GetHashCode();
@@ -1512,9 +1512,9 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
         output.WriteRawTag(18);
         output.WriteString(MerchantReviewId);
       }
-      if (attributes_ != null) {
+      if (merchantReviewAttributes_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(Attributes);
+        output.WriteMessage(MerchantReviewAttributes);
       }
       customAttributes_.WriteTo(output, _repeated_customAttributes_codec);
       if (DataSource.Length != 0) {
@@ -1543,9 +1543,9 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
         output.WriteRawTag(18);
         output.WriteString(MerchantReviewId);
       }
-      if (attributes_ != null) {
+      if (merchantReviewAttributes_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(Attributes);
+        output.WriteMessage(MerchantReviewAttributes);
       }
       customAttributes_.WriteTo(ref output, _repeated_customAttributes_codec);
       if (DataSource.Length != 0) {
@@ -1572,8 +1572,8 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       if (MerchantReviewId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantReviewId);
       }
-      if (attributes_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attributes);
+      if (merchantReviewAttributes_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MerchantReviewAttributes);
       }
       size += customAttributes_.CalculateSize(_repeated_customAttributes_codec);
       if (DataSource.Length != 0) {
@@ -1600,11 +1600,11 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       if (other.MerchantReviewId.Length != 0) {
         MerchantReviewId = other.MerchantReviewId;
       }
-      if (other.attributes_ != null) {
-        if (attributes_ == null) {
-          Attributes = new global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes();
+      if (other.merchantReviewAttributes_ != null) {
+        if (merchantReviewAttributes_ == null) {
+          MerchantReviewAttributes = new global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes();
         }
-        Attributes.MergeFrom(other.Attributes);
+        MerchantReviewAttributes.MergeFrom(other.MerchantReviewAttributes);
       }
       customAttributes_.Add(other.customAttributes_);
       if (other.DataSource.Length != 0) {
@@ -1640,10 +1640,10 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             break;
           }
           case 26: {
-            if (attributes_ == null) {
-              Attributes = new global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes();
+            if (merchantReviewAttributes_ == null) {
+              MerchantReviewAttributes = new global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes();
             }
-            input.ReadMessage(Attributes);
+            input.ReadMessage(MerchantReviewAttributes);
             break;
           }
           case 34: {
@@ -1685,10 +1685,10 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             break;
           }
           case 26: {
-            if (attributes_ == null) {
-              Attributes = new global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes();
+            if (merchantReviewAttributes_ == null) {
+              MerchantReviewAttributes = new global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantReviewAttributes();
             }
-            input.ReadMessage(Attributes);
+            input.ReadMessage(MerchantReviewAttributes);
             break;
           }
           case 34: {
