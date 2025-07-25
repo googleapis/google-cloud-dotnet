@@ -514,29 +514,17 @@ namespace Google.Cloud.Spanner.Data
             BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, cancellationToken);
 
         /// <inheritdoc />
-        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
-        {
-            if (isolationLevel != IsolationLevel.Unspecified
-                && isolationLevel != IsolationLevel.Serializable)
-            {
-                throw new NotSupportedException(
-                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
-            }
-            return Task.Run(() => BeginTransactionAsync()).ResultWithUnwrappedExceptions();
-        }
+        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel) =>
+            Task.Run(() => BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(isolationLevel),
+                transactionOptions: null, default)).ResultWithUnwrappedExceptions();
 
 #if NETSTANDARD2_1_OR_GREATER
         /// <inheritdoc />
-        protected override async ValueTask<DbTransaction> BeginDbTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
-        {
-            if (isolationLevel != IsolationLevel.Unspecified && isolationLevel != IsolationLevel.Serializable)
-            {
-                throw new NotSupportedException(
-                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
-            }
-            return await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
-        }
+        protected override async ValueTask<DbTransaction> BeginDbTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken) =>
+            await BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(isolationLevel),
+                transactionOptions: null, cancellationToken).ConfigureAwait(false);
 #endif
+
         /// <summary>
         /// Creates a <see cref="SpannerTransaction"/> with the given options.
         /// </summary>
@@ -579,7 +567,8 @@ namespace Google.Cloud.Spanner.Data
                 nameof(transactionCreationOptions.IsSingleUse),
                 $"Single-use transactions may only be used with the {nameof(SpannerCommand.ExecuteReader)} set  of methods.");
 
-            return BeginTransactionAsyncImpl(transactionCreationOptions, transactionOptions, cancellationToken);
+            SpannerTransactionCreationOptions enhancedTransactionCreationOptions = EnhanceTransactionCreationOptions(transactionCreationOptions);
+            return BeginTransactionAsyncImpl(enhancedTransactionCreationOptions, transactionOptions, cancellationToken);
         }
 
         internal Task<SpannerTransaction> BeginTransactionAsyncImpl(
@@ -605,6 +594,19 @@ namespace Google.Cloud.Spanner.Data
                     }
                     return new SpannerTransaction(this, session, transactionCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
+        }
+
+        private SpannerTransactionCreationOptions EnhanceTransactionCreationOptions(SpannerTransactionCreationOptions transactionCreationOptions)
+        {
+            SpannerTransactionCreationOptions enhancedCreationOptions = transactionCreationOptions;
+
+            // Set the transaction IsolationLevel if specified in the ConnectionString and not already set on the SpannerTransactionCreationOptions
+            if(transactionCreationOptions.IsolationLevel == IsolationLevel.Unspecified && !string.IsNullOrEmpty(Builder.IsolationLevel) && enhancedCreationOptions?.TransactionMode == TransactionMode.ReadWrite)
+            {
+                enhancedCreationOptions = transactionCreationOptions.WithIsolationLevel((IsolationLevel)Enum.Parse(typeof(IsolationLevel), Builder.IsolationLevel));
+            }
+
+            return enhancedCreationOptions;
         }
 
         /// <summary>
