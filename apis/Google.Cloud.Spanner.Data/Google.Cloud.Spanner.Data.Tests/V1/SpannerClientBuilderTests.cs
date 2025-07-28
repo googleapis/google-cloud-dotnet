@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Cloud.Spanner.V1;
 using Xunit;
 
@@ -21,12 +22,19 @@ public class SpannerClientBuilderTests
     [Fact]
     public void EmulatorBuilder_RespectsCustomSettings()
     {
+        var affinityConfig = new ChannelPoolConfig
+        {
+            MaxSize = 10,
+            MaxConcurrentStreamsLowWatermark = 2,
+        };
+
         var builder = new SpannerClientBuilder
         {
             EmulatorDetection = Api.Gax.EmulatorDetection.EmulatorOnly,
             EnvironmentVariableProvider = name => name,
             LeaderRoutingEnabled = false,
-            DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions
+            DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions,
+            AffinityChannelPoolConfiguration = affinityConfig,
         };
 
         var emulatorBuilder = builder.MaybeCreateEmulatorClientBuilder();
@@ -34,5 +42,6 @@ public class SpannerClientBuilderTests
         Assert.NotNull(emulatorBuilder);
         Assert.False(emulatorBuilder.LeaderRoutingEnabled);
         Assert.Same(DirectedReadTests.IncludeDirectedReadOptions, emulatorBuilder.DirectedReadOptions);
+        Assert.Same(affinityConfig, emulatorBuilder.AffinityChannelPoolConfiguration);
     }
 }

@@ -14,14 +14,70 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
+using Grpc.Core;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
 
 namespace Google.Cloud.Spanner.V1
 {
     public partial class SpannerClientBuilder
     {
+        /// <summary>
+        /// The Grpc.Gcp method configurations for pool options.
+        /// </summary>
+        private static readonly MethodConfig[] s_methodConfigs = new[]
+        {
+            // Note: Can't use nameof for affinity keys, as we need the original proto field name.
+
+            // Creating a session isn't bound to a channel, but binds the resulting session to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/CreateSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bind }
+            },
+
+            // Batch creating sessions isn't bound to a channel, but binds the resulting sessions to that channel
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/BatchCreateSessions" },
+                Affinity = new AffinityConfig { AffinityKey = "session.name", Command = Command.Bind }
+            },
+
+            // Most methods are bound by the session within the request
+            new MethodConfig
+            {
+                // We don't currently use this, but include it for completeness...
+                Name = { "/google.spanner.v1.Spanner/GetSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bound }
+            },
+            new MethodConfig
+            {
+                Name =
+                {
+                    "/google.spanner.v1.Spanner/ExecuteSql",
+                    "/google.spanner.v1.Spanner/ExecuteStreamingSql",
+                    "/google.spanner.v1.Spanner/Read",
+                    "/google.spanner.v1.Spanner/StreamingRead",
+                    "/google.spanner.v1.Spanner/BeginTransaction",
+                    "/google.spanner.v1.Spanner/Commit",
+                    "/google.spanner.v1.Spanner/Rollback",
+                    "/google.spanner.v1.Spanner/PartitionQuery",
+                    "/google.spanner.v1.Spanner/PartitionRead",
+                },
+                Affinity = new AffinityConfig { AffinityKey = "session", Command = Command.Bound }
+            },
+
+            // DeleteSession is bound by the session within the request, and removes the key afterwards
+            new MethodConfig
+            {
+                Name = { "/google.spanner.v1.Spanner/DeleteSession" },
+                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Unbind }
+            }
+        };
+
         /// <summary>
         /// Specifies how the builder responds to the presence of emulator environment variables.
         /// </summary>
@@ -57,13 +113,73 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         public DirectedReadOptions DirectedReadOptions { get; set; }
 
+        /// <summary>
+        /// Specifies the configuration to use for the affinity channel pool.
+        /// When set, each session will be bound to a gRPC channel meaning that
+        /// all commands executed on that session will be executed on that gRPC channel.
+        /// May be null, in which case there will be no channel affinity.
+        /// Defaults to null.
+        /// </summary>
+        /// <remarks>
+        /// Each client built will hold its own copy of <see cref="AffinityChannelPoolConfiguration"/>,
+        /// which means changes made to this value affect clients built after the change but not clients
+        /// already built when the change happens.
+        /// </remarks>
+        public ChannelPoolConfig AffinityChannelPoolConfiguration {  get; set; }
+
+        /// <inheritdoc/>
+        /// <remarks>The default channel pool cannot be used when <see cref="AffinityChannelPoolConfiguration"/> is set.</remarks>
+        protected override bool CanUseChannelPool => base.CanUseChannelPool && AffinityChannelPoolConfiguration is null;
+
         private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
         private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
+
+        /// <inheritdoc/>>
+        /// <remarks>
+        /// Setting <see cref="AffinityChannelPoolConfiguration"/> to true is not compatible with specifying a <see cref="CallInvoker"/>.
+        /// </remarks>
+        protected override void Validate()
+        {
+            base.Validate();
+            GaxPreconditions.CheckState(CallInvoker is null || AffinityChannelPoolConfiguration is null, "Channel affinity cannot be configured with a custom CallInvoker.");
+        }
 
         partial void InterceptBuild(ref SpannerClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
 
         partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task) =>
             task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+
+        /// <inheritdoc/>
+        protected override CallInvoker CreateCallInvoker() =>
+            AffinityChannelPoolConfiguration is null
+                ? base.CreateCallInvoker()
+                : new GcpCallInvoker(
+                    ServiceMetadata,
+                    EffectiveEndpoint,
+                    GetChannelCredentials(),
+                    GetChannelOptions(),
+                    GetApiConfig(),
+                    EffectiveGrpcAdapter);
+
+        /// <inheritdoc/>
+        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken) =>
+            AffinityChannelPoolConfiguration is null
+                ? await base.CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false)
+                : new GcpCallInvoker(
+                    ServiceMetadata,
+                    EffectiveEndpoint,
+                    await GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false),
+                    GetChannelOptions(),
+                    GetApiConfig(),
+                    EffectiveGrpcAdapter);
+
+        private ApiConfig GetApiConfig() => new ApiConfig
+        {
+            // Note: We don't clone AffinityChannelPoolConfiguration because we just pass ApiConfig
+            // to the GcpCallInvoker constructor and that clones it.
+            ChannelPool = AffinityChannelPoolConfiguration,
+            Method = { s_methodConfigs }
+        };
 
         /// <summary>
         /// An environment variable provider function (variable -> value) that is used during
@@ -94,7 +210,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 Settings = Settings,
                 Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
-                ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+                ChannelCredentials = ChannelCredentials.Insecure
             };
             builder.CopySettingsForEmulator(this);
             return builder;
@@ -112,6 +228,7 @@ namespace Google.Cloud.Spanner.V1
             base.CopySettingsForEmulator(clientBuilder);
             LeaderRoutingEnabled = clientBuilder.LeaderRoutingEnabled;
             DirectedReadOptions = clientBuilder.DirectedReadOptions;
+            AffinityChannelPoolConfiguration = clientBuilder.AffinityChannelPoolConfiguration;
         }
 
         internal new T GetEffectiveSettings<T>(T settings) where T : ServiceSettingsBase, new()
