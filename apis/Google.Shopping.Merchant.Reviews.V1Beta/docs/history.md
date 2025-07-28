@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-07-28
+
+### Bug fixes
+
+- An existing field `attributes` is renamed to `merchant_review_attributes` in message `.google.shopping.merchant.reviews.v1beta.MerchantReview`
+- An existing field `attributes` is renamed to `product_review_attributes` in message `.google.shopping.merchant.reviews.v1beta.ProductReview`
+
 ## Version 1.0.0-beta02, released 2025-07-11
 
 ### New features
