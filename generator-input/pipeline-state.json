@@ -2046,7 +2046,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-06-05T07:10:23Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "b367a65237aae649a1a2347cbd295153dae5ace8",
             "apiPaths": [
                 "google/cloud/metastore/v1"
             ],
