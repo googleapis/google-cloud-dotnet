@@ -729,10 +729,10 @@
         },
         {
             "id": "Google.Cloud.BigQuery.V2",
-            "currentVersion": "3.12.0",
+            "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-22T07:22:44.744311671Z",
+            "releaseTimestamp": "2025-02-03T17:58:23Z",
             "sourcePaths": [
                 "apis/Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2"
             ]
@@ -3884,10 +3884,10 @@
         },
         {
             "id": "Google.Cloud.Spanner",
-            "currentVersion": "5.2.0",
+            "currentVersion": "5.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-22T08:11:27.332051222Z",
+            "releaseTimestamp": "2025-06-17T21:25:21.762422506Z",
             "lastGeneratedCommit": "2a2ea87fcad7327e0afcfeaa84ec4d4b014f11a3",
             "lastReleasedCommit": "62babf26d128656ac94fcc73c415b5f9f85cfc45",
             "apiPaths": [
