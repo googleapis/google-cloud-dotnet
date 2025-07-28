@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta41, released 2025-07-28
+
+### New features
+
+- Adds DWS and spot VM feature support to custom batch predictions 2.0
+- Add service_account to Reasoning Engine public protos
+
 ## Version 1.0.0-beta40, released 2025-07-22
 
 ### Bug fixes
