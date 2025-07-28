@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.21.0, released 2025-07-28
+
+### New features
+
+- Publish Proto and Enum types to CBT data API
+
 ## Version 3.20.0, released 2025-07-22
 
 ### New features
