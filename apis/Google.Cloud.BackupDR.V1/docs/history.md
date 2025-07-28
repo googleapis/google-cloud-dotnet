@@ -1,5 +1,30 @@
 # Version history
 
+## Version 2.2.0, released 2025-07-28
+
+### New features
+
+- Add support for Cloud SQL backup and restore
+- Add support for GCE Disk backup and restore
+- Add BackupPlanRevision resource and associated RPCs
+- Add DataSourceReference resource and associated RPCs
+- Add Update RPCs for BackupPlan and BackupPlanAssociation
+- Add FetchBackupPlanAssociationsForResourceType RPC
+- Add new states to resources (UPDATING, UPLOADING)
+- Add ON_DEMAND_OPERATIONAL backup type
+- Change BackupRule.standard_schedule to be OPTIONAL
+
+### Documentation improvements
+
+- A comment for field disks in message .google.cloud.backupdr.v1.ComputeInstanceRestoreProperties is changed
+- A comment for field network_interfaces in message .google.cloud.backupdr.v1.ComputeInstanceRestoreProperties is changed
+- A comment for field resource_policies in message .google.cloud.backupdr.v1.ComputeInstanceRestoreProperties is changed
+- A comment for field resource_type in message .google.cloud.backupdr.v1.BackupPlanAssociation is changed
+- A comment for field resource in message .google.cloud.backupdr.v1.BackupPlanAssociation is changed
+- A comment for field resource_type in message .google.cloud.backupdr.v1.BackupPlan is changed
+- A comment for field backup_retention_days in message .google.cloud.backupdr.v1.BackupRule is changed
+- A comment for field hourly_frequency in message .google.cloud.backupdr.v1.StandardSchedule is changed
+
 ## Version 2.1.0, released 2025-01-13
 
 ### Bug fixes

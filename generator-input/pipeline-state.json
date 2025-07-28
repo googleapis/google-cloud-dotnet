@@ -489,11 +489,12 @@
         },
         {
             "id": "Google.Cloud.BackupDR.V1",
-            "currentVersion": "2.1.0",
+            "currentVersion": "2.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-13T18:26:23Z",
+            "releaseTimestamp": "2025-07-28T07:28:16.446945909Z",
             "lastGeneratedCommit": "a2afc2935ee0c3bd4c5816d9fb8ca28432e2255c",
+            "lastReleasedCommit": "a2afc2935ee0c3bd4c5816d9fb8ca28432e2255c",
             "apiPaths": [
                 "google/cloud/backupdr/v1"
             ],
