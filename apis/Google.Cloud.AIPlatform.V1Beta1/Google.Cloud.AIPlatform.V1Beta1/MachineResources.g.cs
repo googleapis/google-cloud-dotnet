@@ -47,33 +47,35 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "EkYKCmZsZXhfc3RhcnQYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MWJldGExLkZsZXhTdGFydEIG4EEF4EEBIlQKEkF1dG9tYXRpY1Jlc291",
             "cmNlcxIeChFtaW5fcmVwbGljYV9jb3VudBgBIAEoBUID4EEFEh4KEW1heF9y",
-            "ZXBsaWNhX2NvdW50GAIgASgFQgPgQQUiqgEKF0JhdGNoRGVkaWNhdGVkUmVz",
+            "ZXBsaWNhX2NvdW50GAIgASgFQgPgQQUihQIKF0JhdGNoRGVkaWNhdGVkUmVz",
             "b3VyY2VzEkoKDG1hY2hpbmVfc3BlYxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxYmV0YTEuTWFjaGluZVNwZWNCBuBBAuBBBRIjChZzdGFy",
             "dGluZ19yZXBsaWNhX2NvdW50GAIgASgFQgPgQQUSHgoRbWF4X3JlcGxpY2Ff",
-            "Y291bnQYAyABKAVCA+BBBSIvChFSZXNvdXJjZXNDb25zdW1lZBIaCg1yZXBs",
-            "aWNhX2hvdXJzGAEgASgBQgPgQQMiPQoIRGlza1NwZWMSFgoOYm9vdF9kaXNr",
-            "X3R5cGUYASABKAkSGQoRYm9vdF9kaXNrX3NpemVfZ2IYAiABKAUiPQoSUGVy",
-            "c2lzdGVudERpc2tTcGVjEhEKCWRpc2tfdHlwZRgBIAEoCRIUCgxkaXNrX3Np",
-            "emVfZ2IYAiABKAMiTAoITmZzTW91bnQSEwoGc2VydmVyGAEgASgJQgPgQQIS",
-            "EQoEcGF0aBgCIAEoCUID4EECEhgKC21vdW50X3BvaW50GAMgASgJQgPgQQIi",
-            "QQoVQXV0b3NjYWxpbmdNZXRyaWNTcGVjEhgKC21ldHJpY19uYW1lGAEgASgJ",
-            "QgPgQQISDgoGdGFyZ2V0GAIgASgFIi4KEFNoaWVsZGVkVm1Db25maWcSGgoS",
-            "ZW5hYmxlX3NlY3VyZV9ib290GAEgASgIIkQKCUZsZXhTdGFydBI3ChRtYXhf",
-            "cnVudGltZV9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbkLsAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFC",
-            "FU1hY2hpbmVSZXNvdXJjZXNQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
-            "bXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2ds",
-            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpB",
-            "SVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
+            "Y291bnQYAyABKAVCA+BBBRJGCgpmbGV4X3N0YXJ0GAQgASgLMiouZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GbGV4U3RhcnRCBuBBBeBBARIR",
+            "CgRzcG90GAUgASgIQgPgQQEiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVw",
+            "bGljYV9ob3VycxgBIAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlz",
+            "a190eXBlGAEgASgJEhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBl",
+            "cnNpc3RlbnREaXNrU3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19z",
+            "aXplX2diGAIgASgDIkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EEC",
+            "EhEKBHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EEC",
+            "IkEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgBIAEo",
+            "CUID4EECEg4KBnRhcmdldBgCIAEoBSIuChBTaGllbGRlZFZtQ29uZmlnEhoK",
+            "EmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCCJECglGbGV4U3RhcnQSNwoUbWF4",
+            "X3J1bnRpbWVfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb25C7AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "QhVNYWNoaW5lUmVzb3VyY2VzUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZv",
+            "cm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6",
+            "QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec), global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology", "MultihostGpuNodeCount", "ReservationAffinity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "AutoscalingMetricSpecs", "Spot", "FlexStart" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources), global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount", "FlexStart", "Spot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
@@ -1291,6 +1293,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       machineSpec_ = other.machineSpec_ != null ? other.machineSpec_.Clone() : null;
       startingReplicaCount_ = other.startingReplicaCount_;
       maxReplicaCount_ = other.maxReplicaCount_;
+      flexStart_ = other.flexStart_ != null ? other.flexStart_.Clone() : null;
+      spot_ = other.spot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1348,6 +1352,39 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "flex_start" field.</summary>
+    public const int FlexStartFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1Beta1.FlexStart flexStart_;
+    /// <summary>
+    /// Optional. Immutable. If set, use DWS resource to schedule the deployment
+    /// workload. reference:
+    /// (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.FlexStart FlexStart {
+      get { return flexStart_; }
+      set {
+        flexStart_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "spot" field.</summary>
+    public const int SpotFieldNumber = 5;
+    private bool spot_;
+    /// <summary>
+    /// Optional. If true, schedule the deployment workload on [spot
+    /// VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Spot {
+      get { return spot_; }
+      set {
+        spot_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1366,6 +1403,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(MachineSpec, other.MachineSpec)) return false;
       if (StartingReplicaCount != other.StartingReplicaCount) return false;
       if (MaxReplicaCount != other.MaxReplicaCount) return false;
+      if (!object.Equals(FlexStart, other.FlexStart)) return false;
+      if (Spot != other.Spot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1376,6 +1415,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (machineSpec_ != null) hash ^= MachineSpec.GetHashCode();
       if (StartingReplicaCount != 0) hash ^= StartingReplicaCount.GetHashCode();
       if (MaxReplicaCount != 0) hash ^= MaxReplicaCount.GetHashCode();
+      if (flexStart_ != null) hash ^= FlexStart.GetHashCode();
+      if (Spot != false) hash ^= Spot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1406,6 +1447,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(24);
         output.WriteInt32(MaxReplicaCount);
       }
+      if (flexStart_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FlexStart);
+      }
+      if (Spot != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Spot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1428,6 +1477,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(24);
         output.WriteInt32(MaxReplicaCount);
       }
+      if (flexStart_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FlexStart);
+      }
+      if (Spot != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Spot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1446,6 +1503,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (MaxReplicaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxReplicaCount);
+      }
+      if (flexStart_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FlexStart);
+      }
+      if (Spot != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1470,6 +1533,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.MaxReplicaCount != 0) {
         MaxReplicaCount = other.MaxReplicaCount;
+      }
+      if (other.flexStart_ != null) {
+        if (flexStart_ == null) {
+          FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
+        }
+        FlexStart.MergeFrom(other.FlexStart);
+      }
+      if (other.Spot != false) {
+        Spot = other.Spot;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1501,6 +1573,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             MaxReplicaCount = input.ReadInt32();
             break;
           }
+          case 34: {
+            if (flexStart_ == null) {
+              FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
+            }
+            input.ReadMessage(FlexStart);
+            break;
+          }
+          case 40: {
+            Spot = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1529,6 +1612,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 24: {
             MaxReplicaCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (flexStart_ == null) {
+              FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
+            }
+            input.ReadMessage(FlexStart);
+            break;
+          }
+          case 40: {
+            Spot = input.ReadBool();
             break;
           }
         }
@@ -2556,6 +2650,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// * For Online Prediction:
     /// * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle`
     /// * `aiplatform.googleapis.com/prediction/online/cpu/utilization`
+    /// * `aiplatform.googleapis.com/prediction/online/request_count`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
