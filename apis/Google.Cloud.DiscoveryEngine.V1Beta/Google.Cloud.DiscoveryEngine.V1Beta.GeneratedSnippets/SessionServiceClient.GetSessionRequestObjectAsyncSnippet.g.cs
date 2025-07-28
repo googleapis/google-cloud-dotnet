@@ -16,11 +16,11 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_ConversationalSearchService_GetSession_async]
+    // [START discoveryengine_v1beta_generated_SessionService_GetSession_async]
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
+    public sealed partial class GeneratedSessionServiceClientSnippets
     {
         /// <summary>Snippet for GetSessionAsync</summary>
         /// <remarks>
@@ -33,7 +33,7 @@ namespace GoogleCSharpSnippets
         public async Task GetSessionRequestObjectAsync()
         {
             // Create client
-            ConversationalSearchServiceClient conversationalSearchServiceClient = await ConversationalSearchServiceClient.CreateAsync();
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetSessionRequest request = new GetSessionRequest
             {
@@ -41,8 +41,8 @@ namespace GoogleCSharpSnippets
                 IncludeAnswerDetails = false,
             };
             // Make the request
-            Session response = await conversationalSearchServiceClient.GetSessionAsync(request);
+            Session response = await sessionServiceClient.GetSessionAsync(request);
         }
     }
-    // [END discoveryengine_v1beta_generated_ConversationalSearchService_GetSession_async]
+    // [END discoveryengine_v1beta_generated_SessionService_GetSession_async]
 }

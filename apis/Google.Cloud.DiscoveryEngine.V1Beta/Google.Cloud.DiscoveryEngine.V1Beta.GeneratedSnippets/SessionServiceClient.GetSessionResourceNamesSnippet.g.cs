@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_ConversationalSearchService_GetSession_async]
+    // [START discoveryengine_v1beta_generated_SessionService_GetSession_sync_flattened_resourceNames]
     using Google.Cloud.DiscoveryEngine.V1Beta;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
+    public sealed partial class GeneratedSessionServiceClientSnippets
     {
-        /// <summary>Snippet for GetSessionAsync</summary>
+        /// <summary>Snippet for GetSession</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetSessionRequestObjectAsync()
+        public void GetSessionResourceNames()
         {
             // Create client
-            ConversationalSearchServiceClient conversationalSearchServiceClient = await ConversationalSearchServiceClient.CreateAsync();
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
             // Initialize request argument(s)
-            GetSessionRequest request = new GetSessionRequest
-            {
-                SessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
-                IncludeAnswerDetails = false,
-            };
+            SessionName name = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]");
             // Make the request
-            Session response = await conversationalSearchServiceClient.GetSessionAsync(request);
+            Session response = sessionServiceClient.GetSession(name);
         }
     }
-    // [END discoveryengine_v1beta_generated_ConversationalSearchService_GetSession_async]
+    // [END discoveryengine_v1beta_generated_SessionService_GetSession_sync_flattened_resourceNames]
 }

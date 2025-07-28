@@ -16,11 +16,11 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_ConversationalSearchService_GetSession_async]
+    // [START discoveryengine_v1beta_generated_SessionService_GetSession_async_flattened]
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
+    public sealed partial class GeneratedSessionServiceClientSnippets
     {
         /// <summary>Snippet for GetSessionAsync</summary>
         /// <remarks>
@@ -30,19 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetSessionRequestObjectAsync()
+        public async Task GetSessionAsync()
         {
             // Create client
-            ConversationalSearchServiceClient conversationalSearchServiceClient = await ConversationalSearchServiceClient.CreateAsync();
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetSessionRequest request = new GetSessionRequest
-            {
-                SessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
-                IncludeAnswerDetails = false,
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/sessions/[SESSION]";
             // Make the request
-            Session response = await conversationalSearchServiceClient.GetSessionAsync(request);
+            Session response = await sessionServiceClient.GetSessionAsync(name);
         }
     }
-    // [END discoveryengine_v1beta_generated_ConversationalSearchService_GetSession_async]
+    // [END discoveryengine_v1beta_generated_SessionService_GetSession_async_flattened]
 }
