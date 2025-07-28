@@ -102,7 +102,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(File.Exists(jsonFile));
             var builder = new SpannerConnectionStringBuilder($"CredentialFile={jsonFile}");
             var options = new SpannerClientCreationOptions(builder);
-            Assert.NotNull(await options.GetCredentialsAsync());
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -110,7 +110,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.json");
             var options = new SpannerClientCreationOptions(builder);
-            Assert.NotNull(await options.GetCredentialsAsync());
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -118,7 +118,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
             var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => options.GetCredentialsAsync());
+            await Assert.ThrowsAsync<FileNotFoundException>(() => options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -126,7 +126,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
             var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<FileNotFoundException>(() => options.GetCredentialsAsync());
+            await Assert.ThrowsAsync<FileNotFoundException>(() => options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -135,7 +135,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var credential = GoogleCredential.FromAccessToken("token", accessMethod: null);
             var builder = new SpannerConnectionStringBuilder("", credential);
             var options = new SpannerClientCreationOptions(builder);
-            Assert.NotNull(await options.GetCredentialsAsync());
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
     }
 }

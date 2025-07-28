@@ -42,15 +42,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private class ExecutableCommand
         {
-            private static readonly DatabaseAdminSettings s_databaseAdminSettings = CreateDatabaseAdminSettings();
-
-            private static DatabaseAdminSettings CreateDatabaseAdminSettings()
-            {
-                var settings = new DatabaseAdminSettings();
-                settings.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(SpannerCommand));
-                return settings;
-            }
-
             private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
             private const string SpannerOptimizerStatisticsPackageVariable = "SPANNER_OPTIMIZER_STATISTICS_PACKAGE";
 
@@ -247,19 +238,12 @@ namespace Google.Cloud.Spanner.Data
             {
                 string commandText = CommandTextBuilder.CommandText;
                 var builder = Connection.Builder;
-                var channelOptions = new SpannerClientCreationOptions(builder);
-                var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
+                var connectionOptions = new SpannerClientCreationOptions(builder);
 
                 // Create the builder separately from actually building, so we can note the channel that it created.
                 // (This is fairly unpleasant, but we'll try to improve this in the next version of GAX.)
-                var databaseAdminClientBuilder = new DatabaseAdminClientBuilder
-                {
-                    // Note: deliberately not copying EmulatorDetection, as that's handled in SpannerClientCreationOptions
-                    Settings = s_databaseAdminSettings,
-                    Endpoint = channelOptions.Endpoint,
-                    ChannelCredentials = credentials
-                };
-                var databaseAdminClient = databaseAdminClientBuilder.Build();
+                var databaseAdminClientBuilder = connectionOptions.CreateDatabaseAdminClientBuilder();
+                var databaseAdminClient = await databaseAdminClientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
                 var channel = databaseAdminClientBuilder.LastCreatedChannel;
                 try
                 {
