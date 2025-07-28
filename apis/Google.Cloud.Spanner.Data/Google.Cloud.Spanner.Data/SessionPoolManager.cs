@@ -13,21 +13,15 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Api.Gax.Grpc.Gcp;
-using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
-using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
 using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data
@@ -39,12 +33,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SessionPoolManager
     {
-        // TODO: Should these be configurable?
-        private static readonly GrpcChannelOptions s_grpcChannelOptions = GrpcChannelOptions.Empty
-            .WithKeepAliveTime(TimeSpan.FromMinutes(1))
-            .WithEnableServiceConfigResolution(false)
-            .WithMaxReceiveMessageSize(int.MaxValue);
-
         /// <summary>
         /// Static constructor to ensure that the static initializers aren't run before the first explicit
         /// reference to the class. This in turn ensures that a call to <see cref="Logger.SetDefaultLogger(Logger)" />
@@ -252,83 +240,8 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        /// <summary>
-        /// The Grpc.Gcp method configurations for pool options. These are here rather than at the top of the file
-        /// as they're only used in CreateClientAsync.
-        /// </summary>
-        private static readonly MethodConfig[] s_methodConfigs = new[]
-        {
-            // Note: Can't use nameof for affinity keys, as we need the original proto field name.
-
-            // Creating a session isn't bound to a channel, but binds the resulting session to that channel
-            new MethodConfig
-            {
-                Name = { "/google.spanner.v1.Spanner/CreateSession" },
-                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bind }
-            },
-
-            // Batch creating sessions isn't bound to a channel, but binds the resulting sessions to that channel
-            new MethodConfig
-            {
-                Name = { "/google.spanner.v1.Spanner/BatchCreateSessions" },
-                Affinity = new AffinityConfig { AffinityKey = "session.name", Command = Command.Bind }
-            },
-
-            // Most methods are bound by the session within the request
-            new MethodConfig
-            {
-                // We don't currently use this, but include it for completeness...
-                Name = { "/google.spanner.v1.Spanner/GetSession" },
-                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Bound }
-            },
-            new MethodConfig
-            {
-                Name =
-                {
-                    "/google.spanner.v1.Spanner/ExecuteSql",
-                    "/google.spanner.v1.Spanner/ExecuteStreamingSql",
-                    "/google.spanner.v1.Spanner/Read",
-                    "/google.spanner.v1.Spanner/StreamingRead",
-                    "/google.spanner.v1.Spanner/BeginTransaction",
-                    "/google.spanner.v1.Spanner/Commit",
-                    "/google.spanner.v1.Spanner/Rollback",
-                    "/google.spanner.v1.Spanner/PartitionQuery",
-                    "/google.spanner.v1.Spanner/PartitionRead",
-                },
-                Affinity = new AffinityConfig { AffinityKey = "session", Command = Command.Bound }
-            },
-
-            // DeleteSession is bound by the session within the request, and removes the key afterwards
-            new MethodConfig
-            {
-                Name = { "/google.spanner.v1.Spanner/DeleteSession" },
-                Affinity = new AffinityConfig { AffinityKey = "name", Command = Command.Unbind }
-            }
-        };
-
         // Internal for testing.
-        internal static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
-        {
-            var credentials = await clientCreationOptions.GetCredentialsAsync().ConfigureAwait(false);
-
-            var apiConfig = new ApiConfig
-            {
-                ChannelPool = new ChannelPoolConfig
-                {
-                    MaxSize = (uint)clientCreationOptions.MaximumGrpcChannels,
-                    MaxConcurrentStreamsLowWatermark = clientCreationOptions.MaximumConcurrentStreamsLowWatermark
-                },
-                Method = { s_methodConfigs }
-            };
-
-            var callInvoker = new GcpCallInvoker(SpannerClient.ServiceMetadata, clientCreationOptions.Endpoint, credentials, s_grpcChannelOptions, apiConfig, clientCreationOptions.GrpcAdapter);
-            return new SpannerClientBuilder
-            {
-                CallInvoker = callInvoker,
-                Settings = spannerSettings,
-                LeaderRoutingEnabled = clientCreationOptions.LeaderRoutingEnabled,
-                DirectedReadOptions = clientCreationOptions.DirectedReadOptions,
-            }.Build();
-        }
+        internal static Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger) =>
+            clientCreationOptions.CreateSpannerClientAsync(spannerSettings);
     }
 }

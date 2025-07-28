@@ -12,13 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
+using Google.Api.Gax.Grpc.Gcp;
+using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
-using Grpc.Auth;
-using Grpc.Core;
 using System;
-using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,106 +27,103 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal sealed class SpannerClientCreationOptions : IEquatable<SpannerClientCreationOptions>
     {
-        private static readonly Lazy<Task<ChannelCredentials>> s_defaultCredentialsTaskProvider = new Lazy<Task<ChannelCredentials>>(CreatedScopedDefaultCredentials);
-
-        private static async Task<ChannelCredentials> CreatedScopedDefaultCredentials()
-        {
-            var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            return ConvertGoogleCredential(appDefaultCredentials);
-        }
-
-        /// <summary>
-        /// The gRPC adapter to create clients with; never null.
-        /// </summary>
-        internal GrpcAdapter GrpcAdapter { get; }
-
-        /// <summary>
-        /// The end-point to connect to; never null.
-        /// </summary>
-        internal string Endpoint { get; }
-
-        /// <summary>
-        /// The number of gRPC channels to use (passed to Grpc.Gcp)
-        /// </summary>
-        internal int MaximumGrpcChannels { get; }
-
-        /// <summary>
-        /// A complicated setting used by Grpc.Gcp :)
-        /// (This is used to determine when to use a new channel).
-        /// </summary>
-        internal uint MaximumConcurrentStreamsLowWatermark { get; }
+        private readonly SpannerClientBuilder _clientBuilder;
 
         internal bool UsesEmulator { get; }
 
-        internal bool LeaderRoutingEnabled { get; }
-
-        internal DirectedReadOptions DirectedReadOptions { get; }
-
-        // Credential-related fields; not properties as GetCredentials is used to
-        // obtain properties where necessary.
-
-        // May be null
-        private readonly string _credentialsFile;
-        // May be null
-        private readonly ChannelCredentials _credentialsOverride;
-        // May be null; _credentialsOverride takes precedence if both this and _credentialsOverride
-        // are non-null (which should only happen when connecting to the emulator)
-        private readonly GoogleCredential _googleCredential;
-
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            var emulatorBuilder = new SpannerClientBuilder
+            var clientBuilder = new SpannerClientBuilder
             {
                 EmulatorDetection = builder.EmulatorDetection,
-                EnvironmentVariableProvider = builder.EnvironmentVariableProvider
-            }.MaybeCreateEmulatorClientBuilder();
-            UsesEmulator = emulatorBuilder is object;
-            // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
-            Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
-            _credentialsFile = builder.CredentialFile;
+                EnvironmentVariableProvider = builder.EnvironmentVariableProvider,
+                Endpoint = builder.Host == SpannerConnectionStringBuilder.DefaultHost && builder.Port == SpannerConnectionStringBuilder.DefaultPort ? null : builder.EndPoint,
+                CredentialsPath = builder.CredentialFile == "" ? null: builder.CredentialFile,
+                ChannelCredentials = builder.CredentialOverride,
+                GoogleCredential = builder.GoogleCredential,
+                AffinityChannelPoolConfiguration = new ChannelPoolConfig
+                {
+                    MaxSize = (uint) builder.MaximumGrpcChannels,
+                    MaxConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark,
+                },
+                LeaderRoutingEnabled = builder.EnableLeaderRouting,
+                DirectedReadOptions = builder.DirectedReadOptions,
+            };
 
-            // If the client connects to the emulator, use its credentials (regardless of builder.CredentialOverride)
-            _credentialsOverride = emulatorBuilder?.ChannelCredentials ?? builder.CredentialOverride;
-            _googleCredential = builder.GoogleCredential;
-            MaximumGrpcChannels = builder.MaximumGrpcChannels;
-            MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
-            LeaderRoutingEnabled = builder.EnableLeaderRouting;
-            DirectedReadOptions = builder.DirectedReadOptions;
+            var emulatorBuilder = clientBuilder.MaybeCreateEmulatorClientBuilder();
 
-            // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
-            GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
+            UsesEmulator = emulatorBuilder is not null;
+            _clientBuilder = emulatorBuilder ?? clientBuilder;
+        }
+
+        internal Task<SpannerClient> CreateSpannerClientAsync(SpannerSettings settings) =>
+            // TODO: Consider implementing clone in SpannerClientBuilder.
+            new SpannerClientBuilder
+            {
+                // Note we don't copy emulator detection properties because we already took care
+                // of emulator detection on the constructor.
+                Endpoint = _clientBuilder.Endpoint,
+                CredentialsPath = _clientBuilder.CredentialsPath,
+                ChannelCredentials = _clientBuilder.ChannelCredentials,
+                GoogleCredential = _clientBuilder.GoogleCredential,
+                AffinityChannelPoolConfiguration = _clientBuilder.AffinityChannelPoolConfiguration,
+                LeaderRoutingEnabled = _clientBuilder.LeaderRoutingEnabled,
+                DirectedReadOptions = _clientBuilder.DirectedReadOptions,
+                // If we ever have settings of our own, we need to merge those with these.
+                Settings = settings,
+            }.BuildAsync();
+
+        internal DatabaseAdminClientBuilder CreateDatabaseAdminClientBuilder()
+        {
+            return new DatabaseAdminClientBuilder
+            {
+                // Note we don't copy emulator detection properties because we already took care
+                // of emulator detection on the constructor.
+                Endpoint = _clientBuilder.Endpoint,
+                CredentialsPath = _clientBuilder.CredentialsPath,
+                ChannelCredentials = _clientBuilder.ChannelCredentials,
+                GoogleCredential = _clientBuilder.GoogleCredential,
+                // If we ever have settings of our own, we need to merge those with these.
+                Settings = CreateDatabaseAdminSettings(),
+            };
+
+            DatabaseAdminSettings CreateDatabaseAdminSettings()
+            {
+                var settings = new DatabaseAdminSettings();
+                settings.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(SpannerCommand));
+                return settings;
+            }
         }
 
         public override bool Equals(object obj) => Equals(obj as SpannerClientCreationOptions);
 
         public bool Equals(SpannerClientCreationOptions other) =>
-            other != null &&
-            Endpoint.Equals(other.Endpoint) &&
-            Equals(_credentialsFile, other._credentialsFile) &&
-            Equals(_credentialsOverride, other._credentialsOverride) &&
-            Equals(_googleCredential, other._googleCredential) &&
+            other is not null &&
             UsesEmulator == other.UsesEmulator &&
-            MaximumGrpcChannels == other.MaximumGrpcChannels &&
-            MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
-            LeaderRoutingEnabled == other.LeaderRoutingEnabled &&
-            Equals(DirectedReadOptions, other.DirectedReadOptions) &&
-            GrpcAdapter.Equals(other.GrpcAdapter);
+            // TODO: Consider overriding ClientBuilderBase and SpannerClientBuilder Equals, etc.
+            Equals(_clientBuilder.Endpoint, other._clientBuilder.Endpoint) &&
+            Equals(_clientBuilder.CredentialsPath, other._clientBuilder.CredentialsPath) &&
+            Equals(_clientBuilder.ChannelCredentials, other._clientBuilder.ChannelCredentials) &&
+            Equals(_clientBuilder.GoogleCredential, other._clientBuilder.GoogleCredential) &&
+            Equals(_clientBuilder.AffinityChannelPoolConfiguration, other._clientBuilder.AffinityChannelPoolConfiguration) &&
+            _clientBuilder.LeaderRoutingEnabled == other._clientBuilder.LeaderRoutingEnabled &&
+            Equals(_clientBuilder.DirectedReadOptions, other._clientBuilder.DirectedReadOptions) &&
+            Equals(_clientBuilder.GrpcAdapter, other._clientBuilder.GrpcAdapter);
 
         public override int GetHashCode()
         {
             unchecked
             {
                 int hash = 31;
-                hash = hash * 23 + Endpoint.GetHashCode();
-                hash = hash * 23 + (_credentialsFile?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_credentialsOverride?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_googleCredential?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_clientBuilder.Endpoint?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_clientBuilder.CredentialsPath?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_clientBuilder.ChannelCredentials?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_clientBuilder.GoogleCredential?.GetHashCode() ?? 0);
                 hash = hash * 23 + UsesEmulator.GetHashCode();
-                hash = hash * 23 + MaximumGrpcChannels;
-                hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
-                hash = hash * 23 + LeaderRoutingEnabled.GetHashCode();
-                hash = hash * 23 + (DirectedReadOptions?.GetHashCode() ?? 0);
-                hash = hash * 23 + GrpcAdapter.GetHashCode();
+                hash = hash * 23 + (_clientBuilder.AffinityChannelPoolConfiguration?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_clientBuilder.LeaderRoutingEnabled.GetHashCode());
+                hash = hash * 23 + (_clientBuilder.DirectedReadOptions?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_clientBuilder.GrpcAdapter?.GetHashCode() ?? 0);
                 return hash;
             }
         }
@@ -140,80 +134,25 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A diagnostic string representation of this value.</returns>
         public override string ToString()
         {
-            var builder = new StringBuilder($"EndPoint: {Endpoint}");
-            if (!string.IsNullOrEmpty(_credentialsFile))
+            var builder = new StringBuilder($"EndPoint: {_clientBuilder.Endpoint}");
+            if (!string.IsNullOrEmpty(_clientBuilder.CredentialsPath))
             {
-                builder.Append($"; CredentialsFile: {_credentialsFile}");
+                builder.Append($"; CredentialsFile: {_clientBuilder.CredentialsPath}");
             }
-            if (_credentialsOverride is not null)
+            if (_clientBuilder.ChannelCredentials is not null)
             {
                 builder.Append($"; CredentialsOverride: True");
             }
-            if (_googleCredential is not null)
+            if (_clientBuilder.GoogleCredential is not null)
             {
                 builder.Append($"; GoogleCredential: True");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
-            builder.Append($"; MaximumGrpcChannels: {MaximumGrpcChannels}");
-            builder.Append($"; MaximumConcurrentStreamsLowWatermark: {MaximumConcurrentStreamsLowWatermark}");
-            builder.Append($"; LeaderRoutingEnabled: {LeaderRoutingEnabled}");
-            builder.Append($"; DirectedReadOptions: {DirectedReadOptions?.ToString() ?? "None"}");
-            builder.Append($"; GrpcAdapter: {GrpcAdapter.GetType().Name}");
+            builder.Append($"; AffinityChannelPoolConfiguration: {_clientBuilder.AffinityChannelPoolConfiguration?.ToString() ?? "None"}");
+            builder.Append($"; LeaderRoutingEnabled: {_clientBuilder.LeaderRoutingEnabled}");
+            builder.Append($"; DirectedReadOptions: {_clientBuilder.DirectedReadOptions?.ToString() ?? "None"}");
+            builder.Append($"; GrpcAdapter: {_clientBuilder.GrpcAdapter?.GetType().Name ?? "None"}");
             return builder.ToString();
-        }
-
-        /// <summary>
-        /// Returns the credentials specified in the options, or the application default credentials if no credentials are in the options.
-        /// This performs no caching; avoid calling it repeatedly if possible.
-        /// </summary>
-        internal async Task<ChannelCredentials> GetCredentialsAsync()
-        {
-            if (_credentialsOverride is not null)
-            {
-                return _credentialsOverride;
-            }
-            if (_googleCredential is not null)
-            {
-                return ConvertGoogleCredential(_googleCredential);
-            }
-            if (string.IsNullOrEmpty(_credentialsFile))
-            {
-                return await s_defaultCredentialsTaskProvider.Value.ConfigureAwait(false);
-            }
-
-            string file = _credentialsFile;
-            string extension = Path.GetExtension(file);
-            if (!extension.Equals(".json", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new InvalidOperationException($"{nameof(SpannerConnectionStringBuilder.CredentialFile)} should only be set to a JSON file.");
-            }
-
-            if (!File.Exists(file) && !Path.IsPathRooted(file))
-            {
-                string applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-                // Try to find a file relative to the application's base directory.
-                file = Path.Combine(applicationFolder, file);
-                if (!File.Exists(file))
-                {
-                    // throw a meaningful error that tells the developer where we looked.
-                    throw new FileNotFoundException($"Could not find {_credentialsFile}. (Also looked for {file})");
-                }
-            }
-
-            var credential = await GoogleCredential.FromFileAsync(file, cancellationToken: default).ConfigureAwait(false);
-            return ConvertGoogleCredential(credential);
-        }
-
-        private static ChannelCredentials ConvertGoogleCredential(GoogleCredential credential)
-        {
-            credential = credential.CreateScoped(SpannerClient.DefaultScopes);
-            // Use self-signed JWTs for service accounts.
-            if (credential.UnderlyingCredential is ServiceAccountCredential serviceCredential)
-            {
-                credential = GoogleCredential.FromServiceAccountCredential(serviceCredential.WithUseJwtAccessWithScopes(true));
-            }
-            return credential.ToChannelCredentials();
         }
     }
 }
