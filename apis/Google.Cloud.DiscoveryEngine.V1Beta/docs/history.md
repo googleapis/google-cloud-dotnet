@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta19, released 2025-07-28
+
+### New features
+
+- Add SessionService
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.discoveryengine.v1beta.ListSessionsRequest` is changed
+- A comment for field `order_by` in message `.google.cloud.discoveryengine.v1beta.ListSessionsRequest` is changed
+- A comment for field `session` in message `.google.cloud.discoveryengine.v1beta.SearchRequest` is changed
+- A comment for field `query` in message `.google.cloud.discoveryengine.v1beta.Session` is changed
+- A comment for field `answer` in message `.google.cloud.discoveryengine.v1beta.Session` is changed
+- A comment for field `query_id` in message `.google.cloud.discoveryengine.v1beta.Query` is changed
+
 ## Version 1.0.0-beta18, released 2024-10-30
 
 ### New features

@@ -2369,7 +2369,7 @@
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
-      "version": "1.0.0-beta18",
+      "version": "1.0.0-beta19",
       "type": "grpc",
       "productName": "Discovery Engine",
       "productUrl": "https://cloud.google.com/discovery-engine/docs",
