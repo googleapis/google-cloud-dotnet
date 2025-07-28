@@ -100,6 +100,20 @@ namespace Google.Cloud.Spanner.V1
             return builder;
         }
 
+        /// <summary>
+        /// Copies emulator relevant settings from <paramref name="clientBuilder"/> to this instance.
+        /// </summary>
+        /// <remarks>
+        /// Note that this method effectively hides
+        /// <see cref="ClientBuilderBase{TClient}.CopySettingsForEmulator(ClientBuilderBase{TClient})"/>.
+        /// </remarks>
+        private void CopySettingsForEmulator(SpannerClientBuilder clientBuilder)
+        {
+            base.CopySettingsForEmulator(clientBuilder);
+            LeaderRoutingEnabled = clientBuilder.LeaderRoutingEnabled;
+            DirectedReadOptions = clientBuilder.DirectedReadOptions;
+        }
+
         internal new T GetEffectiveSettings<T>(T settings) where T : ServiceSettingsBase, new()
         {
             settings = base.GetEffectiveSettings<T>(settings);
