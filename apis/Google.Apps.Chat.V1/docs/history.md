@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2025-07-28
+
+### New features
+
+- Exposing 1p integration message content (drive, calendar, huddle, meet chips)
+
+### Documentation improvements
+
+- Update reference documentation for annotations. Introduce new richlink metadata types
+
 ## Version 1.0.0-beta14, released 2025-05-06
 
 ### New features
