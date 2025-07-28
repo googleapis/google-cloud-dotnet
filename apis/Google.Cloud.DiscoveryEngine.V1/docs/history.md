@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.9.0, released 2025-07-28
+
+### New features
+
+- Add SessionService
+- Add AssistantService
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.discoveryengine.v1.ListSessionsRequest` is changed
+- A comment for field `session` in message `.google.cloud.discoveryengine.v1.SearchRequest` is changed
+- A comment for field `query` in message `.google.cloud.discoveryengine.v1.Session` is changed
+- A comment for field `answer` in message `.google.cloud.discoveryengine.v1.Session` is changed
+- A comment for field `query_id` in message `.google.cloud.discoveryengine.v1.Query` is changed
+
 ## Version 1.8.0, released 2025-06-09
 
 ### New features
