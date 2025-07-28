@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.39.0, released 2025-07-28
+
+### New features
+
+- Add service_account to Reasoning Engine public protos
+
 ## Version 3.38.0, released 2025-07-09
 
 ### New features
