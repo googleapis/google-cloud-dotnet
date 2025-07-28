@@ -5128,12 +5128,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -5177,12 +5177,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -18734,6 +18734,1399 @@
           "service": {
             "shortName": "ServingConfigService",
             "fullName": "google.cloud.discoveryengine.v1beta.ServingConfigService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_CreateSession_sync",
+      "title": "CreateSessionRequestObject",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_CreateSession_async",
+      "title": "CreateSessionRequestObjectAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_CreateSession_sync_flattened",
+      "title": "CreateSession",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_CreateSession_async_flattened",
+      "title": "CreateSessionAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_CreateSession_sync_flattened_resourceNames",
+      "title": "CreateSessionResourceNames",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_CreateSession_async_flattened_resourceNames",
+      "title": "CreateSessionResourceNamesAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_DeleteSession_sync",
+      "title": "DeleteSessionRequestObject",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionServiceClient.DeleteSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_DeleteSession_async",
+      "title": "DeleteSessionRequestObjectAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionServiceClient.DeleteSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_DeleteSession_sync_flattened",
+      "title": "DeleteSession",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionServiceClient.DeleteSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_DeleteSession_async_flattened",
+      "title": "DeleteSessionAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionServiceClient.DeleteSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_DeleteSession_sync_flattened_resourceNames",
+      "title": "DeleteSessionResourceNames",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionServiceClient.DeleteSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_DeleteSession_async_flattened_resourceNames",
+      "title": "DeleteSessionResourceNamesAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionServiceClient.DeleteSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_UpdateSession_sync",
+      "title": "UpdateSessionRequestObject",
+      "description": "Snippet for UpdateSession",
+      "file": "SessionServiceClient.UpdateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.UpdateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_UpdateSession_async",
+      "title": "UpdateSessionRequestObjectAsync",
+      "description": "Snippet for UpdateSessionAsync",
+      "file": "SessionServiceClient.UpdateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.UpdateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_UpdateSession_sync_flattened",
+      "title": "UpdateSession",
+      "description": "Snippet for UpdateSession",
+      "file": "SessionServiceClient.UpdateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.UpdateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_UpdateSession_async_flattened",
+      "title": "UpdateSessionAsync",
+      "description": "Snippet for UpdateSessionAsync",
+      "file": "SessionServiceClient.UpdateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.UpdateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_GetSession_sync",
+      "title": "GetSessionRequestObject",
+      "description": "Snippet for GetSession",
+      "file": "SessionServiceClient.GetSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_GetSession_async",
+      "title": "GetSessionRequestObjectAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionServiceClient.GetSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_GetSession_sync_flattened",
+      "title": "GetSession",
+      "description": "Snippet for GetSession",
+      "file": "SessionServiceClient.GetSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_GetSession_async_flattened",
+      "title": "GetSessionAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionServiceClient.GetSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_GetSession_sync_flattened_resourceNames",
+      "title": "GetSessionResourceNames",
+      "description": "Snippet for GetSession",
+      "file": "SessionServiceClient.GetSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_GetSession_async_flattened_resourceNames",
+      "title": "GetSessionResourceNamesAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionServiceClient.GetSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_ListSessions_sync",
+      "title": "ListSessionsRequestObject",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_ListSessions_async",
+      "title": "ListSessionsRequestObjectAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_ListSessions_sync_flattened",
+      "title": "ListSessions",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_ListSessions_async_flattened",
+      "title": "ListSessionsAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_ListSessions_sync_flattened_resourceNames",
+      "title": "ListSessionsResourceNames",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SessionService_ListSessions_async_flattened_resourceNames",
+      "title": "ListSessionsResourceNamesAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSessionsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.discoveryengine.v1beta.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SessionService"
           }
         }
       },
