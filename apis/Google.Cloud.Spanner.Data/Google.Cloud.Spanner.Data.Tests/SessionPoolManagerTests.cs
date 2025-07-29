@@ -24,7 +24,7 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.Tests
 {
 #pragma warning disable IDE0065 // Misplaced using directive
-    using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>>;
+    using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>>;
 #pragma warning restore IDE0065 // Misplaced using directive
 
     public class SessionPoolManagerTests
@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task EqualOptions_SameSessionPool()
         {
             int factoryCalls = 0;
-            ClientFactory factory = (options, settings, logger) =>
+            ClientFactory factory = (options, settings) =>
             {
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
@@ -57,7 +57,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task DifferentOptions_DifferentSessionPools()
         {
             int factoryCalls = 0;
-            ClientFactory factory = (options, settings, logger) =>
+            ClientFactory factory = (options, settings) =>
             {
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
@@ -77,7 +77,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public async Task UsesSpannerSettings()
         {
-            ClientFactory factory = (options, settings, logger) =>
+            ClientFactory factory = (options, settings) =>
             {
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
             };
@@ -173,7 +173,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private class FailingSpannerClient : SpannerClient
         {
             // A simple non-counting factory.
-            internal static ClientFactory Factory { get; } = (options, settings, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
+            internal static ClientFactory Factory { get; } = (options, settings) => Task.FromResult<SpannerClient>(new FailingSpannerClient(settings));
 
             public FailingSpannerClient(SpannerSettings settings = null)
             {
