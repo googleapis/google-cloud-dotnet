@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.Data
         public static SessionPoolManager Default { get; } =
             new SessionPoolManager(new SessionPoolOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
 
-        private readonly Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> _clientFactory;
+        private readonly Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> _clientFactory;
 
         private readonly ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool> _targetedPools =
             new ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool>();
@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.Data
             SessionPoolOptions options,
             SpannerSettings spannerSettings,
             Logger logger,
-            Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> clientFactory)
+            Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> clientFactory)
         {
             SessionPoolOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
             SpannerSettings = AppendAssemblyVersionHeader(GaxPreconditions.CheckNotNull(spannerSettings, nameof(spannerSettings)));
@@ -180,7 +180,7 @@ namespace Google.Cloud.Spanner.Data
 
                 async Task<SessionPool> CreateSessionPoolAsync()
                 {
-                    var client = await parent._clientFactory.Invoke(clientCreationOptions, parent.SpannerSettings, parent.Logger).ConfigureAwait(false);
+                    var client = await parent._clientFactory.Invoke(clientCreationOptions, parent.SpannerSettings).ConfigureAwait(false);
                     var pool = new SessionPool(client, parent.SessionPoolOptions);
                     parent._poolReverseLookup.TryAdd(pool, this);
                     return pool;
@@ -241,7 +241,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         // Internal for testing.
-        internal static Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger) =>
+        internal static Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings) =>
             clientCreationOptions.CreateSpannerClientAsync(spannerSettings);
     }
 }
