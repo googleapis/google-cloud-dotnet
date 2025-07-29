@@ -2501,7 +2501,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-12-05T18:54:22Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "ca09b2f66e3cc0af93d63ddd2957c1c53ace5255",
             "apiPaths": [
                 "google/cloud/privilegedaccessmanager/v1"
             ],
