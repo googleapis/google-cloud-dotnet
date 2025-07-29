@@ -1495,7 +1495,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-09T05:04:17Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "2e1c38ddaa402303b9c1381f5f9ba5a9ced4a51c",
             "apiPaths": [
                 "google/devtools/clouderrorreporting/v1beta1"
             ],
