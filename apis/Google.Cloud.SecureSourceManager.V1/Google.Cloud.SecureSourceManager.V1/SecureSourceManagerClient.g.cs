@@ -7001,7 +7001,11 @@ namespace Google.Cloud.SecureSourceManager.V1
         }
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7010,7 +7014,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7019,7 +7027,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7055,7 +7067,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             lro::Operation<PullRequestComment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePullRequestCommentOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comment.
@@ -7075,7 +7091,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comment.
@@ -7095,7 +7115,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comment.
@@ -7111,7 +7135,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             CreatePullRequestCommentAsync(parent, pullRequestComment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comment.
@@ -7131,7 +7159,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comment.
@@ -7151,7 +7183,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comment.
@@ -7421,7 +7457,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             DeletePullRequestCommentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7430,7 +7470,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7439,7 +7483,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7475,7 +7523,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             lro::Operation<BatchCreatePullRequestCommentsResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreatePullRequestCommentsOperationsClient, callSettings);
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comments.
@@ -7501,7 +7553,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comments.
@@ -7527,7 +7583,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comments.
@@ -7546,7 +7606,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             BatchCreatePullRequestCommentsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comments.
@@ -7572,7 +7636,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comments.
@@ -7598,7 +7666,11 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to create the pull request comments.
@@ -7617,7 +7689,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             BatchCreatePullRequestCommentsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7626,7 +7701,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7635,7 +7713,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7671,7 +7752,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             lro::Operation<ResolvePullRequestCommentsResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResolvePullRequestCommentsOperationsClient, callSettings);
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7696,7 +7780,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7721,7 +7808,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7739,7 +7829,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             ResolvePullRequestCommentsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7764,7 +7857,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7789,7 +7885,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7807,7 +7906,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             ResolvePullRequestCommentsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7816,7 +7918,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7825,7 +7930,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7861,7 +7969,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             lro::Operation<UnresolvePullRequestCommentsResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UnresolvePullRequestCommentsOperationsClient, callSettings);
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7886,7 +7997,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7911,7 +8025,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7929,7 +8046,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             UnresolvePullRequestCommentsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7954,7 +8074,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -7979,7 +8102,10 @@ namespace Google.Cloud.SecureSourceManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="parent">
         /// Required. The pull request in which to resolve the pull request comments.
@@ -10293,7 +10419,11 @@ namespace Google.Cloud.SecureSourceManager.V1
         public override lro::OperationsClient CreatePullRequestCommentOperationsClient { get; }
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10305,7 +10435,11 @@ namespace Google.Cloud.SecureSourceManager.V1
         }
 
         /// <summary>
-        /// Creates a pull request comment.
+        /// Creates a pull request comment. This function is used to create a single
+        /// PullRequestComment of type Comment, or a single PullRequestComment of type
+        /// Code that's replying to another PullRequestComment of type Code. Use
+        /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+        /// code reviews.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10374,7 +10508,11 @@ namespace Google.Cloud.SecureSourceManager.V1
         public override lro::OperationsClient BatchCreatePullRequestCommentsOperationsClient { get; }
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10386,7 +10524,11 @@ namespace Google.Cloud.SecureSourceManager.V1
         }
 
         /// <summary>
-        /// Batch creates pull request comments.
+        /// Batch creates pull request comments. This function is used to create
+        /// multiple PullRequestComments for code review. There needs to be exactly one
+        /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+        /// type Code per request. The Postition of the code comments must be unique
+        /// within the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10401,7 +10543,10 @@ namespace Google.Cloud.SecureSourceManager.V1
         public override lro::OperationsClient ResolvePullRequestCommentsOperationsClient { get; }
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10413,7 +10558,10 @@ namespace Google.Cloud.SecureSourceManager.V1
         }
 
         /// <summary>
-        /// Resolves pull request comments.
+        /// Resolves pull request comments. A list of PullRequestComment names must be
+        /// provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be resolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10428,7 +10576,10 @@ namespace Google.Cloud.SecureSourceManager.V1
         public override lro::OperationsClient UnresolvePullRequestCommentsOperationsClient { get; }
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10440,7 +10591,10 @@ namespace Google.Cloud.SecureSourceManager.V1
         }
 
         /// <summary>
-        /// Unresolves pull request comment.
+        /// Unresolves pull request comments. A list of PullRequestComment names must
+        /// be provided. The PullRequestComment names must be in the same conversation
+        /// thread. If auto_fill is set, all comments in the conversation thread will
+        /// be unresolved.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

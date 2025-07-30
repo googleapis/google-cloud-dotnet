@@ -2756,7 +2756,7 @@
             "id": "Google.Cloud.SecureSourceManager.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "9461532e7d19c8d71709ec3b502e5d81340fb661",
+            "lastGeneratedCommit": "ae65549ccc7c2436c7da1ae4df6cfaf4421e2184",
             "apiPaths": [
                 "google/cloud/securesourcemanager/v1"
             ],

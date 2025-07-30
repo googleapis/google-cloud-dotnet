@@ -1140,7 +1140,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
 
       /// <summary>
-      /// Creates a pull request comment.
+      /// Creates a pull request comment. This function is used to create a single
+      /// PullRequestComment of type Comment, or a single PullRequestComment of type
+      /// Code that's replying to another PullRequestComment of type Code. Use
+      /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+      /// code reviews.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1176,7 +1180,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
 
       /// <summary>
-      /// Batch creates pull request comments.
+      /// Batch creates pull request comments. This function is used to create
+      /// multiple PullRequestComments for code review. There needs to be exactly one
+      /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+      /// type Code per request. The Postition of the code comments must be unique
+      /// within the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1188,7 +1196,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
 
       /// <summary>
-      /// Resolves pull request comments.
+      /// Resolves pull request comments. A list of PullRequestComment names must be
+      /// provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be resolved.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1200,7 +1211,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
       }
 
       /// <summary>
-      /// Unresolves pull request comment.
+      /// Unresolves pull request comments. A list of PullRequestComment names must
+      /// be provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be unresolved.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -3297,7 +3311,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListPullRequestComments, null, options, request);
       }
       /// <summary>
-      /// Creates a pull request comment.
+      /// Creates a pull request comment. This function is used to create a single
+      /// PullRequestComment of type Comment, or a single PullRequestComment of type
+      /// Code that's replying to another PullRequestComment of type Code. Use
+      /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+      /// code reviews.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3310,7 +3328,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CreatePullRequestComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a pull request comment.
+      /// Creates a pull request comment. This function is used to create a single
+      /// PullRequestComment of type Comment, or a single PullRequestComment of type
+      /// Code that's replying to another PullRequestComment of type Code. Use
+      /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+      /// code reviews.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3321,7 +3343,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePullRequestComment, null, options, request);
       }
       /// <summary>
-      /// Creates a pull request comment.
+      /// Creates a pull request comment. This function is used to create a single
+      /// PullRequestComment of type Comment, or a single PullRequestComment of type
+      /// Code that's replying to another PullRequestComment of type Code. Use
+      /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+      /// code reviews.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3334,7 +3360,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CreatePullRequestCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a pull request comment.
+      /// Creates a pull request comment. This function is used to create a single
+      /// PullRequestComment of type Comment, or a single PullRequestComment of type
+      /// Code that's replying to another PullRequestComment of type Code. Use
+      /// BatchCreatePullRequestComments to create multiple PullRequestComments for
+      /// code reviews.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3441,7 +3471,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePullRequestComment, null, options, request);
       }
       /// <summary>
-      /// Batch creates pull request comments.
+      /// Batch creates pull request comments. This function is used to create
+      /// multiple PullRequestComments for code review. There needs to be exactly one
+      /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+      /// type Code per request. The Postition of the code comments must be unique
+      /// within the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3454,7 +3488,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return BatchCreatePullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Batch creates pull request comments.
+      /// Batch creates pull request comments. This function is used to create
+      /// multiple PullRequestComments for code review. There needs to be exactly one
+      /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+      /// type Code per request. The Postition of the code comments must be unique
+      /// within the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3465,7 +3503,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreatePullRequestComments, null, options, request);
       }
       /// <summary>
-      /// Batch creates pull request comments.
+      /// Batch creates pull request comments. This function is used to create
+      /// multiple PullRequestComments for code review. There needs to be exactly one
+      /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+      /// type Code per request. The Postition of the code comments must be unique
+      /// within the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3478,7 +3520,11 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return BatchCreatePullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Batch creates pull request comments.
+      /// Batch creates pull request comments. This function is used to create
+      /// multiple PullRequestComments for code review. There needs to be exactly one
+      /// PullRequestComment of type Review, and at most 100 PullRequestComments of
+      /// type Code per request. The Postition of the code comments must be unique
+      /// within the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3489,7 +3535,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreatePullRequestComments, null, options, request);
       }
       /// <summary>
-      /// Resolves pull request comments.
+      /// Resolves pull request comments. A list of PullRequestComment names must be
+      /// provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be resolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3502,7 +3551,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return ResolvePullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Resolves pull request comments.
+      /// Resolves pull request comments. A list of PullRequestComment names must be
+      /// provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be resolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3513,7 +3565,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ResolvePullRequestComments, null, options, request);
       }
       /// <summary>
-      /// Resolves pull request comments.
+      /// Resolves pull request comments. A list of PullRequestComment names must be
+      /// provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be resolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3526,7 +3581,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return ResolvePullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Resolves pull request comments.
+      /// Resolves pull request comments. A list of PullRequestComment names must be
+      /// provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be resolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3537,7 +3595,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ResolvePullRequestComments, null, options, request);
       }
       /// <summary>
-      /// Unresolves pull request comment.
+      /// Unresolves pull request comments. A list of PullRequestComment names must
+      /// be provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be unresolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3550,7 +3611,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return UnresolvePullRequestComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Unresolves pull request comment.
+      /// Unresolves pull request comments. A list of PullRequestComment names must
+      /// be provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be unresolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3561,7 +3625,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UnresolvePullRequestComments, null, options, request);
       }
       /// <summary>
-      /// Unresolves pull request comment.
+      /// Unresolves pull request comments. A list of PullRequestComment names must
+      /// be provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be unresolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3574,7 +3641,10 @@ namespace Google.Cloud.SecureSourceManager.V1 {
         return UnresolvePullRequestCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Unresolves pull request comment.
+      /// Unresolves pull request comments. A list of PullRequestComment names must
+      /// be provided. The PullRequestComment names must be in the same conversation
+      /// thread. If auto_fill is set, all comments in the conversation thread will
+      /// be unresolved.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
