@@ -52,7 +52,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp16kFyCidhaXBsYXRmb3JtLmdv",
             "b2dsZWFwaXMuY29tL0luZGV4RW5kcG9pbnQSR3Byb2plY3RzL3twcm9qZWN0",
             "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbmRleEVuZHBvaW50cy97aW5kZXhf",
-            "ZW5kcG9pbnR9IoYGCg1EZXBsb3llZEluZGV4Eg8KAmlkGAEgASgJQgPgQQIS",
+            "ZW5kcG9pbnR9IrQGCg1EZXBsb3llZEluZGV4Eg8KAmlkGAEgASgJQgPgQQIS",
             "NgoFaW5kZXgYAiABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
             "LmNvbS9JbmRleBIUCgxkaXNwbGF5X25hbWUYAyABKAkSNAoLY3JlYXRlX3Rp",
             "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSVgoR",
@@ -63,32 +63,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5BdXRvbWF0aWNSZXNvdXJjZXNC",
             "A+BBARJVChNkZWRpY2F0ZWRfcmVzb3VyY2VzGBAgASgLMjMuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EZWRpY2F0ZWRSZXNvdXJjZXNCA+BB",
-            "ARIiChVlbmFibGVfYWNjZXNzX2xvZ2dpbmcYCCABKAhCA+BBARJhChpkZXBs",
-            "b3llZF9pbmRleF9hdXRoX2NvbmZpZxgJIAEoCzI4Lmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxYmV0YTEuRGVwbG95ZWRJbmRleEF1dGhDb25maWdCA+BB",
-            "ARIfChJyZXNlcnZlZF9pcF9yYW5nZXMYCiADKAlCA+BBARIdChBkZXBsb3lt",
-            "ZW50X2dyb3VwGAsgASgJQgPgQQESWQoWcHNjX2F1dG9tYXRpb25fY29uZmln",
-            "cxgTIAMoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUFND",
-            "QXV0b21hdGlvbkNvbmZpZ0ID4EEBIrMBChdEZXBsb3llZEluZGV4QXV0aENv",
-            "bmZpZxJcCg1hdXRoX3Byb3ZpZGVyGAEgASgLMkUuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5EZXBsb3llZEluZGV4QXV0aENvbmZpZy5BdXRo",
-            "UHJvdmlkZXIaOgoMQXV0aFByb3ZpZGVyEhEKCWF1ZGllbmNlcxgBIAMoCRIX",
-            "Cg9hbGxvd2VkX2lzc3VlcnMYAiADKAkitwEKFUluZGV4UHJpdmF0ZUVuZHBv",
-            "aW50cxIfChJtYXRjaF9ncnBjX2FkZHJlc3MYASABKAlCA+BBAxIfChJzZXJ2",
-            "aWNlX2F0dGFjaG1lbnQYAiABKAlCA+BBAxJcChdwc2NfYXV0b21hdGVkX2Vu",
-            "ZHBvaW50cxgDIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuUHNjQXV0b21hdGVkRW5kcG9pbnRzQgPgQQNC6QEKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhJJbmRleEVuZHBvaW50UHJvdG9Q",
-            "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEv",
-            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBs",
-            "YXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJl",
-            "dGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJv",
-            "dG8z"));
+            "ARIiChVlbmFibGVfYWNjZXNzX2xvZ2dpbmcYCCABKAhCA+BBARIsCh9lbmFi",
+            "bGVfZGF0YXBvaW50X3Vwc2VydF9sb2dnaW5nGBQgASgIQgPgQQESYQoaZGVw",
+            "bG95ZWRfaW5kZXhfYXV0aF9jb25maWcYCSABKAsyOC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLkRlcGxveWVkSW5kZXhBdXRoQ29uZmlnQgPg",
+            "QQESHwoScmVzZXJ2ZWRfaXBfcmFuZ2VzGAogAygJQgPgQQESHQoQZGVwbG95",
+            "bWVudF9ncm91cBgLIAEoCUID4EEBElkKFnBzY19hdXRvbWF0aW9uX2NvbmZp",
+            "Z3MYEyADKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBT",
+            "Q0F1dG9tYXRpb25Db25maWdCA+BBASKzAQoXRGVwbG95ZWRJbmRleEF1dGhD",
+            "b25maWcSXAoNYXV0aF9wcm92aWRlchgBIAEoCzJFLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxYmV0YTEuRGVwbG95ZWRJbmRleEF1dGhDb25maWcuQXV0",
+            "aFByb3ZpZGVyGjoKDEF1dGhQcm92aWRlchIRCglhdWRpZW5jZXMYASADKAkS",
+            "FwoPYWxsb3dlZF9pc3N1ZXJzGAIgAygJIrcBChVJbmRleFByaXZhdGVFbmRw",
+            "b2ludHMSHwoSbWF0Y2hfZ3JwY19hZGRyZXNzGAEgASgJQgPgQQMSHwoSc2Vy",
+            "dmljZV9hdHRhY2htZW50GAIgASgJQgPgQQMSXAoXcHNjX2F1dG9tYXRlZF9l",
+            "bmRwb2ludHMYAyADKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLlBzY0F1dG9tYXRlZEVuZHBvaW50c0ID4EEDQukBCiNjb20uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUISSW5kZXhFbmRwb2ludFByb3Rv",
+            "UAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGEx",
+            "L2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQ",
+            "bGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFi",
+            "ZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.IndexEndpoint), global::Google.Cloud.AIPlatform.V1Beta1.IndexEndpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedIndexes", "Etag", "Labels", "CreateTime", "UpdateTime", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "PublicEndpointEnabled", "PublicEndpointDomainName", "EncryptionSpec", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndex), global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndex.Parser, new[]{ "Id", "Index", "DisplayName", "CreateTime", "PrivateEndpoints", "IndexSyncTime", "AutomaticResources", "DedicatedResources", "EnableAccessLogging", "DeployedIndexAuthConfig", "ReservedIpRanges", "DeploymentGroup", "PscAutomationConfigs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndex), global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndex.Parser, new[]{ "Id", "Index", "DisplayName", "CreateTime", "PrivateEndpoints", "IndexSyncTime", "AutomaticResources", "DedicatedResources", "EnableAccessLogging", "EnableDatapointUpsertLogging", "DeployedIndexAuthConfig", "ReservedIpRanges", "DeploymentGroup", "PscAutomationConfigs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndexAuthConfig), global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndexAuthConfig.Parser, new[]{ "AuthProvider" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndexAuthConfig.Types.AuthProvider), global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndexAuthConfig.Types.AuthProvider.Parser, new[]{ "Audiences", "AllowedIssuers" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.IndexPrivateEndpoints), global::Google.Cloud.AIPlatform.V1Beta1.IndexPrivateEndpoints.Parser, new[]{ "MatchGrpcAddress", "ServiceAttachment", "PscAutomatedEndpoints" }, null, null, null, null)
           }));
@@ -998,6 +999,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       automaticResources_ = other.automaticResources_ != null ? other.automaticResources_.Clone() : null;
       dedicatedResources_ = other.dedicatedResources_ != null ? other.dedicatedResources_.Clone() : null;
       enableAccessLogging_ = other.enableAccessLogging_;
+      enableDatapointUpsertLogging_ = other.enableDatapointUpsertLogging_;
       deployedIndexAuthConfig_ = other.deployedIndexAuthConfig_ != null ? other.deployedIndexAuthConfig_.Clone() : null;
       reservedIpRanges_ = other.reservedIpRanges_.Clone();
       deploymentGroup_ = other.deploymentGroup_;
@@ -1199,6 +1201,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "enable_datapoint_upsert_logging" field.</summary>
+    public const int EnableDatapointUpsertLoggingFieldNumber = 20;
+    private bool enableDatapointUpsertLogging_;
+    /// <summary>
+    /// Optional. If true, logs to Cloud Logging errors relating to datapoint
+    /// upserts.
+    ///
+    /// Under normal operation conditions, these log entries should be very rare.
+    /// However, if incompatible datapoint updates are being uploaded to an index,
+    /// a high volume of log entries may be generated in a short period of time.
+    ///
+    /// Note that logs may incur a cost, especially if the deployed index receives
+    /// a high volume of datapoint upserts. Estimate your costs before enabling
+    /// this option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableDatapointUpsertLogging {
+      get { return enableDatapointUpsertLogging_; }
+      set {
+        enableDatapointUpsertLogging_ = value;
+      }
+    }
+
     /// <summary>Field number for the "deployed_index_auth_config" field.</summary>
     public const int DeployedIndexAuthConfigFieldNumber = 9;
     private global::Google.Cloud.AIPlatform.V1Beta1.DeployedIndexAuthConfig deployedIndexAuthConfig_;
@@ -1306,6 +1332,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(AutomaticResources, other.AutomaticResources)) return false;
       if (!object.Equals(DedicatedResources, other.DedicatedResources)) return false;
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
+      if (EnableDatapointUpsertLogging != other.EnableDatapointUpsertLogging) return false;
       if (!object.Equals(DeployedIndexAuthConfig, other.DeployedIndexAuthConfig)) return false;
       if(!reservedIpRanges_.Equals(other.reservedIpRanges_)) return false;
       if (DeploymentGroup != other.DeploymentGroup) return false;
@@ -1326,6 +1353,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (automaticResources_ != null) hash ^= AutomaticResources.GetHashCode();
       if (dedicatedResources_ != null) hash ^= DedicatedResources.GetHashCode();
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
+      if (EnableDatapointUpsertLogging != false) hash ^= EnableDatapointUpsertLogging.GetHashCode();
       if (deployedIndexAuthConfig_ != null) hash ^= DeployedIndexAuthConfig.GetHashCode();
       hash ^= reservedIpRanges_.GetHashCode();
       if (DeploymentGroup.Length != 0) hash ^= DeploymentGroup.GetHashCode();
@@ -1394,6 +1422,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(DedicatedResources);
       }
       pscAutomationConfigs_.WriteTo(output, _repeated_pscAutomationConfigs_codec);
+      if (EnableDatapointUpsertLogging != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(EnableDatapointUpsertLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1450,6 +1482,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(DedicatedResources);
       }
       pscAutomationConfigs_.WriteTo(ref output, _repeated_pscAutomationConfigs_codec);
+      if (EnableDatapointUpsertLogging != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(EnableDatapointUpsertLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1486,6 +1522,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (EnableAccessLogging != false) {
         size += 1 + 1;
+      }
+      if (EnableDatapointUpsertLogging != false) {
+        size += 2 + 1;
       }
       if (deployedIndexAuthConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeployedIndexAuthConfig);
@@ -1548,6 +1587,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.EnableAccessLogging != false) {
         EnableAccessLogging = other.EnableAccessLogging;
+      }
+      if (other.EnableDatapointUpsertLogging != false) {
+        EnableDatapointUpsertLogging = other.EnableDatapointUpsertLogging;
       }
       if (other.deployedIndexAuthConfig_ != null) {
         if (deployedIndexAuthConfig_ == null) {
@@ -1645,6 +1687,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             pscAutomationConfigs_.AddEntriesFrom(input, _repeated_pscAutomationConfigs_codec);
             break;
           }
+          case 160: {
+            EnableDatapointUpsertLogging = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1728,6 +1774,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 154: {
             pscAutomationConfigs_.AddEntriesFrom(ref input, _repeated_pscAutomationConfigs_codec);
+            break;
+          }
+          case 160: {
+            EnableDatapointUpsertLogging = input.ReadBool();
             break;
           }
         }
