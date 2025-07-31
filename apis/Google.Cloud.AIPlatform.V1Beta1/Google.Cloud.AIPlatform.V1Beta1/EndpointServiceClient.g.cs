@@ -1992,9 +1992,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2004,9 +2004,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2016,9 +2016,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2055,9 +2055,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint resource into which to mutate a
@@ -2074,6 +2074,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// * `max_replica_count` in either
         /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources] or
         /// [AutomaticResources][google.cloud.aiplatform.v1beta1.AutomaticResources]
+        /// * `required_replica_count` in
+        /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources]
         /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1beta1.DedicatedResources.autoscaling_metric_specs]
         /// * `disable_container_logging` (v1 only)
         /// * `enable_container_logging` (v1beta1 only)
@@ -2094,9 +2096,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint resource into which to mutate a
@@ -2113,6 +2115,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// * `max_replica_count` in either
         /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources] or
         /// [AutomaticResources][google.cloud.aiplatform.v1beta1.AutomaticResources]
+        /// * `required_replica_count` in
+        /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources]
         /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1beta1.DedicatedResources.autoscaling_metric_specs]
         /// * `disable_container_logging` (v1 only)
         /// * `enable_container_logging` (v1beta1 only)
@@ -2133,9 +2137,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint resource into which to mutate a
@@ -2152,6 +2156,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// * `max_replica_count` in either
         /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources] or
         /// [AutomaticResources][google.cloud.aiplatform.v1beta1.AutomaticResources]
+        /// * `required_replica_count` in
+        /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources]
         /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1beta1.DedicatedResources.autoscaling_metric_specs]
         /// * `disable_container_logging` (v1 only)
         /// * `enable_container_logging` (v1beta1 only)
@@ -2167,9 +2173,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint resource into which to mutate a
@@ -2186,6 +2192,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// * `max_replica_count` in either
         /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources] or
         /// [AutomaticResources][google.cloud.aiplatform.v1beta1.AutomaticResources]
+        /// * `required_replica_count` in
+        /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources]
         /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1beta1.DedicatedResources.autoscaling_metric_specs]
         /// * `disable_container_logging` (v1 only)
         /// * `enable_container_logging` (v1beta1 only)
@@ -2206,9 +2214,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint resource into which to mutate a
@@ -2225,6 +2233,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// * `max_replica_count` in either
         /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources] or
         /// [AutomaticResources][google.cloud.aiplatform.v1beta1.AutomaticResources]
+        /// * `required_replica_count` in
+        /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources]
         /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1beta1.DedicatedResources.autoscaling_metric_specs]
         /// * `disable_container_logging` (v1 only)
         /// * `enable_container_logging` (v1beta1 only)
@@ -2245,9 +2255,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint resource into which to mutate a
@@ -2264,6 +2274,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// * `max_replica_count` in either
         /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources] or
         /// [AutomaticResources][google.cloud.aiplatform.v1beta1.AutomaticResources]
+        /// * `required_replica_count` in
+        /// [DedicatedResources][google.cloud.aiplatform.v1beta1.DedicatedResources]
         /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1beta1.DedicatedResources.autoscaling_metric_specs]
         /// * `disable_container_logging` (v1 only)
         /// * `enable_container_logging` (v1beta1 only)
@@ -2917,9 +2929,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2932,9 +2944,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         /// <summary>
         /// Updates an existing deployed model. Updatable fields include
-        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-        /// `disable_container_logging` (v1 only), and `enable_container_logging`
-        /// (v1beta1 only).
+        /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+        /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+        /// `enable_container_logging` (v1beta1 only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

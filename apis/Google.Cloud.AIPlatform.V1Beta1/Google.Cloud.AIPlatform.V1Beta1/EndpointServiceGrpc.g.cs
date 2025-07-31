@@ -291,9 +291,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
       /// <summary>
       /// Updates an existing deployed model. Updatable fields include
-      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-      /// `disable_container_logging` (v1 only), and `enable_container_logging`
-      /// (v1beta1 only).
+      /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+      /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+      /// `enable_container_logging` (v1beta1 only).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -748,9 +748,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Updates an existing deployed model. Updatable fields include
-      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-      /// `disable_container_logging` (v1 only), and `enable_container_logging`
-      /// (v1beta1 only).
+      /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+      /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+      /// `enable_container_logging` (v1beta1 only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -764,9 +764,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Updates an existing deployed model. Updatable fields include
-      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-      /// `disable_container_logging` (v1 only), and `enable_container_logging`
-      /// (v1beta1 only).
+      /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+      /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+      /// `enable_container_logging` (v1beta1 only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -778,9 +778,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Updates an existing deployed model. Updatable fields include
-      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-      /// `disable_container_logging` (v1 only), and `enable_container_logging`
-      /// (v1beta1 only).
+      /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+      /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+      /// `enable_container_logging` (v1beta1 only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -794,9 +794,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       /// <summary>
       /// Updates an existing deployed model. Updatable fields include
-      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-      /// `disable_container_logging` (v1 only), and `enable_container_logging`
-      /// (v1beta1 only).
+      /// `min_replica_count`, `max_replica_count`, `required_replica_count`,
+      /// `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+      /// `enable_container_logging` (v1beta1 only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
