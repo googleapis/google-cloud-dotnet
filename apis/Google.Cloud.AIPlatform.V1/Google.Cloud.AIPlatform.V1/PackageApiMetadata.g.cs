@@ -107,6 +107,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return DeployedModelRefReflection.Descriptor;
             yield return DeploymentResourcePoolReflection.Descriptor;
             yield return DeploymentResourcePoolServiceReflection.Descriptor;
+            yield return DeploymentStageReflection.Descriptor;
             yield return EncryptionSpecReflection.Descriptor;
             yield return EndpointReflection.Descriptor;
             yield return EndpointServiceReflection.Descriptor;
