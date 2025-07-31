@@ -762,8 +762,6 @@ namespace Google.Apps.Chat.V1 {
     /// - When [authenticating as an
     /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
     /// the `chat.app.memberships` authorization scope is required.
-    /// Authenticating as an app is available in [Developer
-    /// Preview](https://developers.google.com/workspace/preview).
     ///
     /// - Set `user.type` to `HUMAN`, and set `user.name` with format
     /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -2370,9 +2368,13 @@ namespace Google.Apps.Chat.V1 {
     /// human users' or their own memberships. Chat apps can't delete other apps'
     /// memberships.
     ///
-    /// When deleting a human membership, requires the `chat.memberships` scope and
-    /// `spaces/{space}/members/{member}` format. You can use the email as an
-    /// alias for `{member}`. For example,
+    /// When deleting a human membership, requires the `chat.memberships` scope
+    /// with [user
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+    /// or the `chat.memberships.app` scope with [app
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+    /// and the `spaces/{space}/members/{member}` format.
+    /// You can use the email as an alias for `{member}`. For example,
     /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
     /// email of the Google Chat user.
     ///

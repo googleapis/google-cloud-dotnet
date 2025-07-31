@@ -248,7 +248,9 @@ namespace Google.Apps.Chat.V1 {
     public static partial class Types {
       /// <summary>
       /// Who deleted the message and how it was deleted. More values may be added in
-      /// the future.
+      /// the future. See [Edit or delete a message in Google
+      /// Chat](https://support.google.com/chat/answer/7653281) for details on when
+      /// messages can be deleted.
       /// </summary>
       public enum DeletionType {
         /// <summary>
@@ -260,11 +262,13 @@ namespace Google.Apps.Chat.V1 {
         /// </summary>
         [pbr::OriginalName("CREATOR")] Creator = 1,
         /// <summary>
-        /// The space owner deleted the message.
+        /// A space manager deleted the message.
         /// </summary>
         [pbr::OriginalName("SPACE_OWNER")] SpaceOwner = 2,
         /// <summary>
-        /// A Google Workspace admin deleted the message.
+        /// A Google Workspace administrator deleted the message. Administrators can
+        /// delete any message in the space, including messages sent by any space
+        /// member or Chat app.
         /// </summary>
         [pbr::OriginalName("ADMIN")] Admin = 3,
         /// <summary>
@@ -272,16 +276,18 @@ namespace Google.Apps.Chat.V1 {
         /// </summary>
         [pbr::OriginalName("APP_MESSAGE_EXPIRY")] AppMessageExpiry = 4,
         /// <summary>
-        /// A Chat app deleted the message on behalf of the user.
+        /// A Chat app deleted the message on behalf of the creator (using user
+        /// authentication).
         /// </summary>
         [pbr::OriginalName("CREATOR_VIA_APP")] CreatorViaApp = 5,
         /// <summary>
-        /// A Chat app deleted the message on behalf of the space owner.
+        /// A Chat app deleted the message on behalf of a space manager (using user
+        /// authentication).
         /// </summary>
         [pbr::OriginalName("SPACE_OWNER_VIA_APP")] SpaceOwnerViaApp = 6,
         /// <summary>
-        /// A member of the space deleted the message. Human users can delete
-        /// messages sent by apps.
+        /// A member of the space deleted the message. Users can delete messages sent
+        /// by apps.
         /// </summary>
         [pbr::OriginalName("SPACE_MEMBER")] SpaceMember = 7,
       }
