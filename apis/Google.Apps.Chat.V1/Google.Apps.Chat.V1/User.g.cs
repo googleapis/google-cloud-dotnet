@@ -25,18 +25,17 @@ namespace Google.Apps.Chat.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chlnb29nbGUvY2hhdC92MS91c2VyLnByb3RvEg5nb29nbGUuY2hhdC52MRof",
-            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byK4AQoEVXNlchIMCgRuYW1lGAEgASgJEhkKDGRpc3Bs",
-            "YXlfbmFtZRgCIAEoCUID4EEDEhEKCWRvbWFpbl9pZBgGIAEoCRInCgR0eXBl",
-            "GAUgASgOMhkuZ29vZ2xlLmNoYXQudjEuVXNlci5UeXBlEhkKDGlzX2Fub255",
-            "bW91cxgHIAEoCEID4EEDIjAKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAA",
-            "EgkKBUhVTUFOEAESBwoDQk9UEAJCogEKEmNvbS5nb29nbGUuY2hhdC52MUIJ",
-            "VXNlclByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9j",
-            "aGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0",
-            "LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hh",
-            "dDo6VjFiBnByb3RvMw=="));
+            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byK4AQoEVXNlchIMCgRu",
+            "YW1lGAEgASgJEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEDEhEKCWRvbWFp",
+            "bl9pZBgGIAEoCRInCgR0eXBlGAUgASgOMhkuZ29vZ2xlLmNoYXQudjEuVXNl",
+            "ci5UeXBlEhkKDGlzX2Fub255bW91cxgHIAEoCEID4EEDIjAKBFR5cGUSFAoQ",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgkKBUhVTUFOEAESBwoDQk9UEAJCogEKEmNv",
+            "bS5nb29nbGUuY2hhdC52MUIJVXNlclByb3RvUAFaLGNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+q",
+            "AhNHb29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoC",
+            "Fkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.User), global::Google.Apps.Chat.V1.User.Parser, new[]{ "Name", "DisplayName", "DomainId", "Type", "IsAnonymous" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.User.Types.Type) }, null, null)
           }));

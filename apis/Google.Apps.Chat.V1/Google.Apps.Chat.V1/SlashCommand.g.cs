@@ -41,7 +41,7 @@ namespace Google.Apps.Chat.V1 {
   }
   #region Messages
   /// <summary>
-  /// A [slash
+  /// Metadata about a [slash
   /// command](https://developers.google.com/workspace/chat/commands) in
   /// Google Chat.
   /// </summary>
@@ -94,7 +94,7 @@ namespace Google.Apps.Chat.V1 {
     public const int CommandIdFieldNumber = 1;
     private long commandId_;
     /// <summary>
-    /// The ID of the slash command invoked.
+    /// The ID of the slash command.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
