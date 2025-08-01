@@ -137,5 +137,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             var options = new SpannerClientCreationOptions(builder);
             Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
+
+        [Fact]
+        public async Task Equality_UniverseDomainAndEndpoint()
+        {
+            var builder = new SpannerConnectionStringBuilder("UniverseDomain=test-domain.test.goog");
+            var options = new SpannerClientCreationOptions(builder);
+
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
+        }
     }
 }

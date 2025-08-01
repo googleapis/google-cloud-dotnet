@@ -48,6 +48,7 @@ namespace Google.Cloud.Spanner.Data
                 },
                 LeaderRoutingEnabled = builder.EnableLeaderRouting,
                 DirectedReadOptions = builder.DirectedReadOptions,
+                UniverseDomain = builder.UniverseDomain == SpannerConnectionStringBuilder.DefaultDomain ? null : builder.UniverseDomain,
             };
 
             var emulatorBuilder = clientBuilder.MaybeCreateEmulatorClientBuilder();
@@ -71,6 +72,7 @@ namespace Google.Cloud.Spanner.Data
                 DirectedReadOptions = _clientBuilder.DirectedReadOptions,
                 // If we ever have settings of our own, we need to merge those with these.
                 Settings = settings,
+                UniverseDomain = _clientBuilder.UniverseDomain,
             }.BuildAsync();
 
         internal DatabaseAdminClientBuilder CreateDatabaseAdminClientBuilder()
@@ -85,6 +87,7 @@ namespace Google.Cloud.Spanner.Data
                 GoogleCredential = _clientBuilder.GoogleCredential,
                 // If we ever have settings of our own, we need to merge those with these.
                 Settings = CreateDatabaseAdminSettings(),
+                UniverseDomain = _clientBuilder.UniverseDomain,
             };
 
             DatabaseAdminSettings CreateDatabaseAdminSettings()
@@ -146,6 +149,10 @@ namespace Google.Cloud.Spanner.Data
             if (_clientBuilder.GoogleCredential is not null)
             {
                 builder.Append($"; GoogleCredential: True");
+            }
+            if (_clientBuilder.UniverseDomain is not null)
+            {
+                builder.Append($"; UniverseDomain: {_clientBuilder.UniverseDomain}");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
             builder.Append($"; AffinityChannelPoolConfiguration: {_clientBuilder.AffinityChannelPoolConfiguration?.ToString() ?? "None"}");
