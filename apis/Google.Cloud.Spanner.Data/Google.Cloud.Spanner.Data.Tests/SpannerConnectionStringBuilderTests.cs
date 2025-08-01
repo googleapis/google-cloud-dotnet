@@ -336,5 +336,17 @@ namespace Google.Cloud.Spanner.Data.Tests
             var clone = builder.Clone();
             Assert.Same(credential, clone.GoogleCredential);
         }
+
+        [Fact]
+        public void UniverseDomainTest()
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            Assert.Equal(SpannerConnectionStringBuilder.DefaultDomain, builder.UniverseDomain);
+
+            string universeDomain = "test-domain.test.goog";
+            builder = new SpannerConnectionStringBuilder($"UniverseDomain={universeDomain}");
+
+            Assert.Equal(universeDomain, builder.UniverseDomain);
+        }
     }
 }
