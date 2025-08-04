@@ -3885,12 +3885,12 @@
         },
         {
             "id": "Google.Cloud.Spanner",
-            "currentVersion": "5.1.0",
+            "currentVersion": "5.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-17T21:25:21.762422506Z",
+            "releaseTimestamp": "2025-08-04T18:53:27.951840634Z",
             "lastGeneratedCommit": "2a2ea87fcad7327e0afcfeaa84ec4d4b014f11a3",
-            "lastReleasedCommit": "62babf26d128656ac94fcc73c415b5f9f85cfc45",
+            "lastReleasedCommit": "2a2ea87fcad7327e0afcfeaa84ec4d4b014f11a3",
             "apiPaths": [
                 "google/spanner/admin/database/v1",
                 "google/spanner/admin/instance/v1",
@@ -4108,12 +4108,12 @@
         },
         {
             "id": "Google.Cloud.ModelArmor.V1",
-            "currentVersion": "1.0.0-beta03",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-28T07:37:25.266493301Z",
+            "releaseTimestamp": "2025-08-04T18:55:22.144100443Z",
             "lastGeneratedCommit": "71d04acb8cdb389b443a67253645558cacb44bf9",
-            "lastReleasedCommit": "01f50f9acc7324001fea3489fa9b465c70bffd55",
+            "lastReleasedCommit": "71d04acb8cdb389b443a67253645558cacb44bf9",
             "apiPaths": [
                 "google/cloud/modelarmor/v1"
             ],
