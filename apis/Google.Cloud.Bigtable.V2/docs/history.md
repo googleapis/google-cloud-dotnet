@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.22.0, released 2025-08-04
+
+### Bug fixes
+
+- Update routing_parameters.path_template
+
 ## Version 3.21.0, released 2025-07-28
 
 ### New features
