@@ -180,6 +180,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest> __Marshaller_google_firestore_admin_v1_UpdateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest> __Marshaller_google_firestore_admin_v1_DeleteBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest> __Marshaller_google_firestore_admin_v1_CloneDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
@@ -428,6 +430,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         "DeleteBackupSchedule",
         __Marshaller_google_firestore_admin_v1_DeleteBackupScheduleRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest, global::Google.LongRunning.Operation> __Method_CloneDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CloneDatabase",
+        __Marshaller_google_firestore_admin_v1_CloneDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -875,6 +885,34 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new database by cloning an existing one.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing database. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// database.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the clone, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the clone was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CloneDatabase(global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2668,6 +2706,118 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
       }
+      /// <summary>
+      /// Creates a new database by cloning an existing one.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing database. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// database.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the clone, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the clone was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CloneDatabase(global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloneDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new database by cloning an existing one.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing database. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// database.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the clone, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the clone was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CloneDatabase(global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CloneDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new database by cloning an existing one.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing database. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// database.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the clone, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the clone was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CloneDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloneDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new database by cloning an existing one.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing database. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// database.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the clone, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the clone was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CloneDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CloneDatabase, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FirestoreAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -2712,7 +2862,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_GetBackupSchedule, serviceImpl.GetBackupSchedule)
           .AddMethod(__Method_ListBackupSchedules, serviceImpl.ListBackupSchedules)
           .AddMethod(__Method_UpdateBackupSchedule, serviceImpl.UpdateBackupSchedule)
-          .AddMethod(__Method_DeleteBackupSchedule, serviceImpl.DeleteBackupSchedule).Build();
+          .AddMethod(__Method_DeleteBackupSchedule, serviceImpl.DeleteBackupSchedule)
+          .AddMethod(__Method_CloneDatabase, serviceImpl.CloneDatabase).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2753,6 +2904,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_ListBackupSchedules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse>(serviceImpl.ListBackupSchedules));
       serviceBinder.AddMethod(__Method_UpdateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(serviceImpl.UpdateBackupSchedule));
       serviceBinder.AddMethod(__Method_DeleteBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackupSchedule));
+      serviceBinder.AddMethod(__Method_CloneDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CloneDatabase));
     }
 
   }

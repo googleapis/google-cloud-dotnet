@@ -846,4 +846,16 @@ namespace Google.Cloud.Firestore.Admin.V1
             set => Backup = value?.ToString() ?? "";
         }
     }
+
+    public partial class CloneDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }
