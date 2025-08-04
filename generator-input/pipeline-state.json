@@ -1561,12 +1561,12 @@
         },
         {
             "id": "Google.Cloud.Firestore.Admin.V1",
-            "currentVersion": "3.14.0",
+            "currentVersion": "3.15.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-22T07:59:34.881442691Z",
+            "releaseTimestamp": "2025-08-04T18:49:26.557025062Z",
             "lastGeneratedCommit": "3d37c58ad2a4e72ff051aa329eb30d9f658e1b66",
-            "lastReleasedCommit": "ba7105d1d1e0ed0c505eefcc3450a05e2675a0f3",
+            "lastReleasedCommit": "3d37c58ad2a4e72ff051aa329eb30d9f658e1b66",
             "apiPaths": [
                 "google/firestore/admin/v1"
             ],
