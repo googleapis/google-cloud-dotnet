@@ -4302,10 +4302,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Conversions.V1",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2025-08-04T18:12:08.470441304Z",
             "lastGeneratedCommit": "ef165499a81db6575c7a787817431c864b993bd4",
+            "lastReleasedCommit": "ef165499a81db6575c7a787817431c864b993bd4",
             "apiPaths": [
                 "google/shopping/merchant/conversions/v1"
             ],
