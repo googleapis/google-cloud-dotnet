@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-08-04
+
+### New features
+
+- MultiLanguage Detection in Model Armor Floor Setting
+
 ## Version 1.0.0-beta03, released 2025-07-28
 
 ### New features
