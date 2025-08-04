@@ -6679,8 +6679,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Conversions API (v1) which allows developers to programmatically manage conversion sources.",
+      "tags": [
+        "shopping",
+        "conversions"
+      ],
       "dependencies": {},
       "generator": "micro",
       "protoPath": "google/shopping/merchant/conversions/v1",
@@ -6716,8 +6719,12 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Data Sources API (v1) which allows developers to programmatically manage data sources.",
+      "tags": [
+        "shopping",
+        "sources",
+        "datasources"
+      ],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0-beta06"
       },
@@ -6758,8 +6765,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Inventories API (v1) which allows developers to programmatically showcase products with local (in-store) or regional availability for free on Google.",
+      "tags": [
+        "shopping",
+        "inventory"
+      ],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0-beta06"
       },
@@ -6845,8 +6855,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Notifications API (v1) which allows developers to programmatically manage their Merchant Center notifications.",
+      "tags": [
+        "shopping",
+        "notifications"
+      ],
       "dependencies": {},
       "generator": "micro",
       "protoPath": "google/shopping/merchant/notifications/v1",

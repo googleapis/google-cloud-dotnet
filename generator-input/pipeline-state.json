@@ -4301,9 +4301,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Conversions.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/conversions/v1"
             ],
@@ -4313,9 +4313,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.DataSources.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/datasources/v1"
             ],
@@ -4325,9 +4325,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Inventories.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/inventories/v1"
             ],
@@ -4337,9 +4337,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Notifications.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/notifications/v1"
             ],
