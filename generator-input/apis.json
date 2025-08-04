@@ -6675,7 +6675,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Conversions.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
