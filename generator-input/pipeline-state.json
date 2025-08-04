@@ -4330,6 +4330,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "bf4323361090d10caee451c97f157a21b9403d61",
             "apiPaths": [
                 "google/shopping/merchant/inventories/v1"
             ],
