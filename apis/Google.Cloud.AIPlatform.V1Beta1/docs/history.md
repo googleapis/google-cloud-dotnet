@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta42, released 2025-08-04
+
+### New features
+
+- Add field ReasoningEngineSpec.service_account
+- Add field ReasoningEngine.encryption_spec
+- Add `DeploymentStage` for CreateEndpointOperationMetadata and DeployModelOperationMetadata
+- Add the VeoTuningSpec
+- Add enable_datapoint_upsert_logging to google.cloud.aiplatform.v1.DeployedIndex
+- Add a FooBar API
+
+### Documentation improvements
+
+- Update MutateDeployedModel documentation
+
 ## Version 1.0.0-beta41, released 2025-07-28
 
 ### New features
