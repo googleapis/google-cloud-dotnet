@@ -508,6 +508,49 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.AllocationResourceStatusHealthInfo"/> message.
+        /// </summary>
+        public static class AllocationResourceStatusHealthInfo
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.AllocationResourceStatusHealthInfo.Types.HealthStatus"/>
+            /// enum.
+            /// </summary>
+            public static class HealthStatus
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AllocationResourceStatusHealthInfo.Types.HealthStatus.UndefinedHealthStatus"/>
+                /// .
+                /// </summary>
+                public const string UndefinedHealthStatus = "UNDEFINED_HEALTH_STATUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AllocationResourceStatusHealthInfo.Types.HealthStatus.Degraded"/>
+                /// .
+                /// </summary>
+                public const string Degraded = "DEGRADED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AllocationResourceStatusHealthInfo.Types.HealthStatus.Healthy"/>
+                /// .
+                /// </summary>
+                public const string Healthy = "HEALTHY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AllocationResourceStatusHealthInfo.Types.HealthStatus.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "HEALTH_STATUS_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
         /// <see cref="global::Google.Cloud.Compute.V1.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk"/>
         ///  message.
         /// </summary>
@@ -12281,6 +12324,39 @@ namespace Google.Cloud.Compute.V1
 
             /// <summary>
             /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.SchedulingType"/> enum.
+            /// </summary>
+            public static class SchedulingType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.SchedulingType.UndefinedSchedulingType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedSchedulingType = "UNDEFINED_SCHEDULING_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.SchedulingType.Grouped"/>.
+                /// </summary>
+                public const string Grouped = "GROUPED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.SchedulingType.GroupMaintenanceTypeUnspecified"/>
+                /// .
+                /// </summary>
+                public const string GroupMaintenanceTypeUnspecified = "GROUP_MAINTENANCE_TYPE_UNSPECIFIED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.SchedulingType.Independent"/>.
+                /// </summary>
+                public const string Independent = "INDEPENDENT";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.Status"/> enum.
             /// </summary>
             public static class Status
@@ -12415,6 +12491,47 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ReservationBlockHealthInfo"/> message.
+        /// </summary>
+        public static class ReservationBlockHealthInfo
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ReservationBlockHealthInfo.Types.HealthStatus"/> enum.
+            /// </summary>
+            public static class HealthStatus
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationBlockHealthInfo.Types.HealthStatus.UndefinedHealthStatus"/>
+                /// .
+                /// </summary>
+                public const string UndefinedHealthStatus = "UNDEFINED_HEALTH_STATUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationBlockHealthInfo.Types.HealthStatus.Degraded"/>
+                /// .
+                /// </summary>
+                public const string Degraded = "DEGRADED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationBlockHealthInfo.Types.HealthStatus.Healthy"/>.
+                /// </summary>
+                public const string Healthy = "HEALTHY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationBlockHealthInfo.Types.HealthStatus.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "HEALTH_STATUS_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlock"/>
         /// message.
         /// </summary>
@@ -12455,6 +12572,48 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlock.Types.Status.Ready"/>.
                 /// </summary>
                 public const string Ready = "READY";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlockHealthInfo"/> message.
+        /// </summary>
+        public static class ReservationSubBlockHealthInfo
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlockHealthInfo.Types.HealthStatus"/> enum.
+            /// </summary>
+            public static class HealthStatus
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlockHealthInfo.Types.HealthStatus.UndefinedHealthStatus"/>
+                /// .
+                /// </summary>
+                public const string UndefinedHealthStatus = "UNDEFINED_HEALTH_STATUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlockHealthInfo.Types.HealthStatus.Degraded"/>
+                /// .
+                /// </summary>
+                public const string Degraded = "DEGRADED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlockHealthInfo.Types.HealthStatus.Healthy"/>
+                /// .
+                /// </summary>
+                public const string Healthy = "HEALTHY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationSubBlockHealthInfo.Types.HealthStatus.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "HEALTH_STATUS_UNSPECIFIED";
             }
         }
 
@@ -16339,6 +16498,97 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         public static class UpcomingMaintenance
         {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons"/> enum.
+            /// </summary>
+            public static class MaintenanceReasons
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.UndefinedMaintenanceReasons"/>
+                /// .
+                /// </summary>
+                public const string UndefinedMaintenanceReasons = "UNDEFINED_MAINTENANCE_REASONS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureDisk"/>
+                /// .
+                /// </summary>
+                public const string FailureDisk = "FAILURE_DISK";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureGpu"/>
+                /// .
+                /// </summary>
+                public const string FailureGpu = "FAILURE_GPU";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureGpuTemperature"/>
+                /// .
+                /// </summary>
+                public const string FailureGpuTemperature = "FAILURE_GPU_TEMPERATURE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureGpuXid"/>
+                /// .
+                /// </summary>
+                public const string FailureGpuXid = "FAILURE_GPU_XID";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureInfra"/>
+                /// .
+                /// </summary>
+                public const string FailureInfra = "FAILURE_INFRA";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureInterface"/>
+                /// .
+                /// </summary>
+                public const string FailureInterface = "FAILURE_INTERFACE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureMemory"/>
+                /// .
+                /// </summary>
+                public const string FailureMemory = "FAILURE_MEMORY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureNetwork"/>
+                /// .
+                /// </summary>
+                public const string FailureNetwork = "FAILURE_NETWORK";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureNvlink"/>
+                /// .
+                /// </summary>
+                public const string FailureNvlink = "FAILURE_NVLINK";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.InfrastructureRelocation"/>
+                /// .
+                /// </summary>
+                public const string InfrastructureRelocation = "INFRASTRUCTURE_RELOCATION";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.MaintenanceReasonUnknown"/>
+                /// .
+                /// </summary>
+                public const string MaintenanceReasonUnknown = "MAINTENANCE_REASON_UNKNOWN";
+            }
+
             /// <summary>
             /// Constants for wire representations of the
             /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceStatus"/> enum.
