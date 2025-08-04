@@ -16,6 +16,12 @@
                 "BulkDeleteDocumentsAsync"
               ]
             },
+            "CloneDatabase": {
+              "methods": [
+                "CloneDatabase",
+                "CloneDatabaseAsync"
+              ]
+            },
             "CreateBackupSchedule": {
               "methods": [
                 "CreateBackupSchedule",

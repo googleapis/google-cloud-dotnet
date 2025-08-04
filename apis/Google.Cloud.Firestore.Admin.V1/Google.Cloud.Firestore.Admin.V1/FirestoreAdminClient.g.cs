@@ -89,6 +89,8 @@ namespace Google.Cloud.Firestore.Admin.V1
             ListBackupSchedulesSettings = existing.ListBackupSchedulesSettings;
             UpdateBackupScheduleSettings = existing.UpdateBackupScheduleSettings;
             DeleteBackupScheduleSettings = existing.DeleteBackupScheduleSettings;
+            CloneDatabaseSettings = existing.CloneDatabaseSettings;
+            CloneDatabaseOperationsSettings = existing.CloneDatabaseOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -673,6 +675,36 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteBackupScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.CloneDatabase</c> and <c>FirestoreAdminClient.CloneDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CloneDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.CloneDatabase</c> and
+        /// <c>FirestoreAdminClient.CloneDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CloneDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -5139,6 +5171,107 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
             DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new database by cloning an existing one.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing database. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// database.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the clone, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the clone was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CloneDatabaseMetadata> CloneDatabase(CloneDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new database by cloning an existing one.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing database. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// database.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the clone, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the clone was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CloneDatabaseMetadata>> CloneDatabaseAsync(CloneDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new database by cloning an existing one.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing database. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// database.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the clone, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the clone was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CloneDatabaseMetadata>> CloneDatabaseAsync(CloneDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            CloneDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CloneDatabase</c>.</summary>
+        public virtual lro::OperationsClient CloneDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CloneDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, CloneDatabaseMetadata> PollOnceCloneDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, CloneDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CloneDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CloneDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, CloneDatabaseMetadata>> PollOnceCloneDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, CloneDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CloneDatabaseOperationsClient, callSettings);
     }
 
     /// <summary>FirestoreAdmin client wrapper implementation, for convenient use.</summary>
@@ -5236,6 +5369,8 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> _callDeleteBackupSchedule;
 
+        private readonly gaxgrpc::ApiCall<CloneDatabaseRequest, lro::Operation> _callCloneDatabase;
+
         /// <summary>
         /// Constructs a client wrapper for the FirestoreAdmin service, with the specified gRPC client and settings.
         /// </summary>
@@ -5260,6 +5395,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
             DeleteDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatabaseOperationsSettings, logger);
             RestoreDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreDatabaseOperationsSettings, logger);
+            CloneDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CloneDatabaseOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndex);
@@ -5354,6 +5490,9 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callDeleteBackupSchedule = clientHelper.BuildApiCall<DeleteBackupScheduleRequest, wkt::Empty>("DeleteBackupSchedule", grpcClient.DeleteBackupScheduleAsync, grpcClient.DeleteBackupSchedule, effectiveSettings.DeleteBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackupSchedule);
             Modify_DeleteBackupScheduleApiCall(ref _callDeleteBackupSchedule);
+            _callCloneDatabase = clientHelper.BuildApiCall<CloneDatabaseRequest, lro::Operation>("CloneDatabase", grpcClient.CloneDatabaseAsync, grpcClient.CloneDatabase, effectiveSettings.CloneDatabaseSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CloneDatabaseRequest>().WithExtractedParameter("project_id", "^projects/([^/]+)(?:/.*)?$", request => request.PitrSnapshot?.Database).WithExtractedParameter("database_id", "^projects/[^/]+/databases/([^/]+)(?:/.*)?$", request => request.PitrSnapshot?.Database));
+            Modify_ApiCall(ref _callCloneDatabase);
+            Modify_CloneDatabaseApiCall(ref _callCloneDatabase);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5420,6 +5559,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_UpdateBackupScheduleApiCall(ref gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> call);
 
         partial void Modify_DeleteBackupScheduleApiCall(ref gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> call);
+
+        partial void Modify_CloneDatabaseApiCall(ref gaxgrpc::ApiCall<CloneDatabaseRequest, lro::Operation> call);
 
         partial void OnConstruction(FirestoreAdmin.FirestoreAdminClient grpcClient, FirestoreAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5490,6 +5631,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_UpdateBackupScheduleRequest(ref UpdateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteBackupScheduleRequest(ref DeleteBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CloneDatabaseRequest(ref CloneDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateIndex</c>.</summary>
         public override lro::OperationsClient CreateIndexOperationsClient { get; }
@@ -6396,6 +6539,65 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
             return _callDeleteBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CloneDatabase</c>.</summary>
+        public override lro::OperationsClient CloneDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new database by cloning an existing one.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing database. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// database.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the clone, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the clone was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, CloneDatabaseMetadata> CloneDatabase(CloneDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CloneDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, CloneDatabaseMetadata>(_callCloneDatabase.Sync(request, callSettings), CloneDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new database by cloning an existing one.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing database. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// database.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the clone, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [CloneDatabaseMetadata][google.firestore.admin.v1.CloneDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the clone was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, CloneDatabaseMetadata>> CloneDatabaseAsync(CloneDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CloneDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, CloneDatabaseMetadata>(await _callCloneDatabase.Async(request, callSettings).ConfigureAwait(false), CloneDatabaseOperationsClient);
         }
     }
 

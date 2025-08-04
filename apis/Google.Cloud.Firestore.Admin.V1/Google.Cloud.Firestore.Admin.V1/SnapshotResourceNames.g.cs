@@ -18,26 +18,7 @@
 
 namespace Google.Cloud.Firestore.Admin.V1
 {
-    public partial class RestoreDatabaseMetadata
-    {
-        /// <summary>
-        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
-        /// </summary>
-        public DatabaseName DatabaseAsDatabaseName
-        {
-            get => string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database, allowUnparsed: true);
-            set => Database = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
-        public BackupName BackupAsBackupName
-        {
-            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
-            set => Backup = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class CloneDatabaseMetadata
+    public partial class PitrSnapshot
     {
         /// <summary>
         /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
