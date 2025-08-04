@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.40.0, released 2025-08-04
+
+### New features
+
+- Add exclude_domains for grounding with GoogleSearch and EnterpriseWebSearch
+- Add embedding_metadata to google.cloud.aiplatform.v1.Index
+- Remove private preview label from Model Armor protos
+- Added the ability to use the Model Armor service for content sanitization
+- Add enable_datapoint_upsert_logging to google.cloud.aiplatform.v1.DeployedIndex
+- Add `DeploymentStage` for CreateEndpointOperationMetadata and DeployModelOperationMetadata
+
+### Documentation improvements
+
+- Update MutateDeployedModel documentation
+
 ## Version 3.39.0, released 2025-07-28
 
 ### New features
