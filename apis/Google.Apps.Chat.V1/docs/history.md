@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta16, released 2025-08-04
+
+### New features
+
+- Addition of app auth support for chat api
+
+### Documentation improvements
+
+- Update reference documentation for createSpace,updateSpace,deleteSpace,createMembership,updateMembership,deleteMembership and the newly added field -customer- in space.proto
+
 ## Version 1.0.0-beta15, released 2025-07-28
 
 ### New features
