@@ -4343,6 +4343,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "cc9fc0f686d4a64838acfe27f195d917634bb09f",
             "apiPaths": [
                 "google/shopping/merchant/notifications/v1"
             ],
