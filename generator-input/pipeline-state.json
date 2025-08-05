@@ -4411,6 +4411,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "d1c0c033f7cdc9a3540ed7eafc7ba096fe56cba5",
             "apiPaths": [
                 "google/shopping/merchant/accounts/v1"
             ],
