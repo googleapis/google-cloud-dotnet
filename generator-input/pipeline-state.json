@@ -4388,6 +4388,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "32258785e429b3a6ea357ba8cd850b024b5363a9",
             "apiPaths": [
                 "google/shopping/merchant/quota/v1"
             ],
