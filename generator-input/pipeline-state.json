@@ -4438,10 +4438,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Products.V1",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2025-08-05T17:05:48.401575314Z",
             "lastGeneratedCommit": "e14e0bf384fdb087cf38d60252fb5c87b949ffaf",
+            "lastReleasedCommit": "e14e0bf384fdb087cf38d60252fb5c87b949ffaf",
             "apiPaths": [
                 "google/shopping/merchant/products/v1"
             ],
