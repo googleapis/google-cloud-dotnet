@@ -4441,6 +4441,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.Products.V1/Google.Shopping.Merchant.Products.V1"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.Promotions.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/promotions/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.Promotions.V1/Google.Shopping.Merchant.Promotions.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
