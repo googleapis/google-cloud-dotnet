@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,6 +33,17 @@ namespace Google.Cloud.Spanner.Data.CleanTestData
             string instanceId = args.Length == 2 ? args[1] : "spannerintegration";
             var client = DatabaseAdminClient.Create();
             var instanceName = new InstanceName(projectId, instanceId);
+
+            var backups = client.ListBackups(instanceName).ToList();
+            foreach (var backup in backups)
+            {
+                if (backup.DatabaseAsDatabaseName.DatabaseId.StartsWith("testdb"))
+                {
+                    Console.WriteLine($"Dropping backup {backup.Name}");
+                    client.DeleteBackup(backup.Name);
+                }
+            }
+
             var databases = client.ListDatabases(instanceName).ToList();
             foreach (var database in databases)
             {
