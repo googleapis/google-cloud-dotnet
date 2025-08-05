@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta43, released 2025-08-05
+
+### New features
+
+- Add embedding_metadata to google.cloud.aiplatform.v1.Index
+- A new value `NVIDIA_GB200` is added to enum `AcceleratorType`
+- Add exclude_domains for grounding with GoogleSearch and EnterpriseWebSearch
+- Online Prediction DeployModel API to support custom metrics based autoscaling
+- Add FeatureViewDirectWrite API in v1
+
 ## Version 1.0.0-beta42, released 2025-08-04
 
 ### New features
