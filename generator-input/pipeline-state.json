@@ -4453,6 +4453,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.Promotions.V1/Google.Shopping.Merchant.Promotions.V1"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.Reports.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/reports/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.Reports.V1/Google.Shopping.Merchant.Reports.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
