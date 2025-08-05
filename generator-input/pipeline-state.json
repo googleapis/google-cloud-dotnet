@@ -4408,9 +4408,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Accounts.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/accounts/v1"
             ],
@@ -4420,9 +4420,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.OrderTracking.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/ordertracking/v1"
             ],
@@ -4432,9 +4432,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Products.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/products/v1"
             ],
@@ -4444,9 +4444,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Promotions.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/promotions/v1"
             ],
@@ -4456,9 +4456,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Reports.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/reports/v1"
             ],

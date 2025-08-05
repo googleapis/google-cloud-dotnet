@@ -6657,8 +6657,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Accounts API (v1) which allows developers to programmatically manage conversion sources.",
+      "tags": [
+        "shopping",
+        "accounts"
+      ],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0"
       },
@@ -6962,8 +6965,12 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Order Tracking API (v1).",
+      "tags": [
+        "shopping",
+        "orders",
+        "tracking"
+      ],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0"
       },
@@ -7004,8 +7011,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Products API (v1) which allows you to programmatically manage your Merchant Center accounts.",
+      "tags": [
+        "shopping",
+        "products"
+      ],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0"
       },
@@ -7045,8 +7055,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
-      "tags": [],
+      "description": "Recommended Google client library to access the Merchant Promotions API (v1) which allows you to programmatically manage your Merchant Center accounts.",
+      "tags": [
+        "shopping",
+        "promotions"
+      ],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0"
       },
@@ -7126,7 +7139,11 @@
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Programmatically manage your Merchant Center Accounts.",
+      "description": "Recommended Google client library to access the Merchant Reports API (v1) which allows you to programmatically manage your Merchant Center accounts.",
+      "tags": [
+        "shopping",
+        "reports"
+      ],
       "tags": [],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0"
