@@ -315,6 +315,7 @@
     "apis/Google.Shopping.Merchant.Lfp.V1Beta/Google.Shopping.Merchant.Lfp.V1Beta/**",
     "apis/Google.Shopping.Merchant.Notifications.V1/Google.Shopping.Merchant.Notifications.V1/**",
     "apis/Google.Shopping.Merchant.Notifications.V1Beta/Google.Shopping.Merchant.Notifications.V1Beta/**",
+    "apis/Google.Shopping.Merchant.OrderTracking.V1/Google.Shopping.Merchant.OrderTracking.V1/**",
     "apis/Google.Shopping.Merchant.OrderTracking.V1Beta/Google.Shopping.Merchant.OrderTracking.V1Beta/**",
     "apis/Google.Shopping.Merchant.Products.V1Beta/Google.Shopping.Merchant.Products.V1Beta/**",
     "apis/Google.Shopping.Merchant.Promotions.V1Beta/Google.Shopping.Merchant.Promotions.V1Beta/**",
