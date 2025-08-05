@@ -4358,9 +4358,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.IssueResolution.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/issueresolution/v1"
             ],
@@ -4370,9 +4370,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Lfp.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/lfp/v1"
             ],
@@ -4382,9 +4382,9 @@
         },
         {
             "id": "Google.Shopping.Merchant.Quota.V1",
-            "nextVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/shopping/merchant/quota/v1"
             ],
