@@ -4368,6 +4368,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.IssueResolution.V1/Google.Shopping.Merchant.IssueResolution.V1"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.Lfp.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/lfp/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.Lfp.V1/Google.Shopping.Merchant.Lfp.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
