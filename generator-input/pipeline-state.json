@@ -3871,11 +3871,12 @@
         },
         {
             "id": "Google.Shopping.Type",
-            "currentVersion": "1.0.0-beta06",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-09T17:14:21Z",
+            "releaseTimestamp": "2025-08-05T06:10:24.636412761Z",
             "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastReleasedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/shopping/type"
             ],
