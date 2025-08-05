@@ -343,6 +343,12 @@
         "grpc": {
           "libraryClient": "FeatureOnlineStoreServiceClient",
           "rpcs": {
+            "FeatureViewDirectWrite": {
+              "methods": [
+                "FeatureViewDirectWrite",
+                "FeatureViewDirectWriteAsync"
+              ]
+            },
             "FetchFeatureValues": {
               "methods": [
                 "FetchFeatureValues",
