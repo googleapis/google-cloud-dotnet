@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.41.0, released 2025-08-05
+
+### New features
+
+- A new value `NVIDIA_GB200` is added to enum `AcceleratorType`
+- Add FeatureViewDirectWrite API in v1
+
 ## Version 3.40.0, released 2025-08-04
 
 ### New features
