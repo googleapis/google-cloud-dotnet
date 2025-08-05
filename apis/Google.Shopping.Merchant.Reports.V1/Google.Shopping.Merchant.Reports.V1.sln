@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.Reports.V1", "Google.Shopping.Merchant.Reports.V1\Google.Shopping.Merchant.Reports.V1.csproj", "{DF37130B-A8C3-14E1-4C67-25C2046E5D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.Reports.V1.Snippets", "Google.Shopping.Merchant.Reports.V1.Snippets\Google.Shopping.Merchant.Reports.V1.Snippets.csproj", "{7E3C3606-BD43-0D98-8C09-A6BC5228E2AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.Reports.V1.GeneratedSnippets", "Google.Shopping.Merchant.Reports.V1.GeneratedSnippets\Google.Shopping.Merchant.Reports.V1.GeneratedSnippets.csproj", "{F9613B2D-482B-CB83-1BEA-05725A4E7A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF37130B-A8C3-14E1-4C67-25C2046E5D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF37130B-A8C3-14E1-4C67-25C2046E5D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF37130B-A8C3-14E1-4C67-25C2046E5D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF37130B-A8C3-14E1-4C67-25C2046E5D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E3C3606-BD43-0D98-8C09-A6BC5228E2AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E3C3606-BD43-0D98-8C09-A6BC5228E2AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E3C3606-BD43-0D98-8C09-A6BC5228E2AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E3C3606-BD43-0D98-8C09-A6BC5228E2AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9613B2D-482B-CB83-1BEA-05725A4E7A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9613B2D-482B-CB83-1BEA-05725A4E7A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9613B2D-482B-CB83-1BEA-05725A4E7A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9613B2D-482B-CB83-1BEA-05725A4E7A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

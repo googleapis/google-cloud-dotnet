@@ -4463,6 +4463,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "daaa0a7e56b20b97835ac1bbcd5f5a83eb087f79",
             "apiPaths": [
                 "google/shopping/merchant/reports/v1"
             ],
