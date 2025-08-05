@@ -6653,7 +6653,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Accounts.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
@@ -7140,10 +7140,6 @@
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
       "description": "Recommended Google client library to access the Merchant Reports API (v1) which allows you to programmatically manage your Merchant Center accounts.",
-      "tags": [
-        "shopping",
-        "reports"
-      ],
       "tags": [],
       "dependencies": {
         "Google.Shopping.Type": "1.0.0"
