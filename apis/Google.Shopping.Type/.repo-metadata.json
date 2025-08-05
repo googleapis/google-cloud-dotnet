@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Shopping.Type",
-  "release_level": "preview",
+  "release_level": "stable",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Shopping.Type/latest",
   "library_type": "OTHER",
   "language": "dotnet"
