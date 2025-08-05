@@ -1,0 +1,1194 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.IssueResolution.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.issueresolution.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1_generated_AggregateProductStatusesService_ListAggregateProductStatuses_sync",
+      "title": "ListAggregateProductStatusesRequestObject",
+      "description": "Snippet for ListAggregateProductStatuses",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatuses",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient.ListAggregateProductStatuses",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AggregateProductStatusesService_ListAggregateProductStatuses_async",
+      "title": "ListAggregateProductStatusesRequestObjectAsync",
+      "description": "Snippet for ListAggregateProductStatusesAsync",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatusesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AggregateProductStatusesService_ListAggregateProductStatuses_sync_flattened",
+      "title": "ListAggregateProductStatuses",
+      "description": "Snippet for ListAggregateProductStatuses",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatuses",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient.ListAggregateProductStatuses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AggregateProductStatusesService_ListAggregateProductStatuses_async_flattened",
+      "title": "ListAggregateProductStatusesAsync",
+      "description": "Snippet for ListAggregateProductStatusesAsync",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatusesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AggregateProductStatusesService_ListAggregateProductStatuses_sync_flattened_resourceNames",
+      "title": "ListAggregateProductStatusesResourceNames",
+      "description": "Snippet for ListAggregateProductStatuses",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatuses",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient.ListAggregateProductStatuses",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AggregateProductStatusesService_ListAggregateProductStatuses_async_flattened_resourceNames",
+      "title": "ListAggregateProductStatusesResourceNamesAsync",
+      "description": "Snippet for ListAggregateProductStatusesAsync",
+      "file": "AggregateProductStatusesServiceClient.ListAggregateProductStatusesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAggregateProductStatusesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient.ListAggregateProductStatusesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.IssueResolution.V1.ListAggregateProductStatusesResponse, Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatus>",
+        "client": {
+          "shortName": "AggregateProductStatusesServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.AggregateProductStatusesServiceClient"
+        },
+        "method": {
+          "shortName": "ListAggregateProductStatuses",
+          "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService.ListAggregateProductStatuses",
+          "service": {
+            "shortName": "AggregateProductStatusesService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.AggregateProductStatusesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderAccountIssues_sync",
+      "title": "RenderAccountIssuesRequestObject",
+      "description": "Snippet for RenderAccountIssues",
+      "file": "IssueResolutionServiceClient.RenderAccountIssuesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderAccountIssues",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderAccountIssues",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderAccountIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderAccountIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderAccountIssues_async",
+      "title": "RenderAccountIssuesRequestObjectAsync",
+      "description": "Snippet for RenderAccountIssuesAsync",
+      "file": "IssueResolutionServiceClient.RenderAccountIssuesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderAccountIssuesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderAccountIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderAccountIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderAccountIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderAccountIssues_sync_flattened",
+      "title": "RenderAccountIssues",
+      "description": "Snippet for RenderAccountIssues",
+      "file": "IssueResolutionServiceClient.RenderAccountIssuesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderAccountIssues",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderAccountIssues",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderAccountIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderAccountIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderAccountIssues_async_flattened",
+      "title": "RenderAccountIssuesAsync",
+      "description": "Snippet for RenderAccountIssuesAsync",
+      "file": "IssueResolutionServiceClient.RenderAccountIssuesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderAccountIssuesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderAccountIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderAccountIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderAccountIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderAccountIssues_sync_flattened_resourceNames",
+      "title": "RenderAccountIssuesResourceNames",
+      "description": "Snippet for RenderAccountIssues",
+      "file": "IssueResolutionServiceClient.RenderAccountIssuesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderAccountIssues",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderAccountIssues",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderAccountIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderAccountIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderAccountIssues_async_flattened_resourceNames",
+      "title": "RenderAccountIssuesResourceNamesAsync",
+      "description": "Snippet for RenderAccountIssuesAsync",
+      "file": "IssueResolutionServiceClient.RenderAccountIssuesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderAccountIssuesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderAccountIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.RenderAccountIssuesResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderAccountIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderAccountIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderProductIssues_sync",
+      "title": "RenderProductIssuesRequestObject",
+      "description": "Snippet for RenderProductIssues",
+      "file": "IssueResolutionServiceClient.RenderProductIssuesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderProductIssues",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderProductIssues",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderProductIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderProductIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderProductIssues_async",
+      "title": "RenderProductIssuesRequestObjectAsync",
+      "description": "Snippet for RenderProductIssuesAsync",
+      "file": "IssueResolutionServiceClient.RenderProductIssuesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderProductIssuesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderProductIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderProductIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderProductIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderProductIssues_sync_flattened",
+      "title": "RenderProductIssues",
+      "description": "Snippet for RenderProductIssues",
+      "file": "IssueResolutionServiceClient.RenderProductIssuesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderProductIssues",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderProductIssues",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderProductIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderProductIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderProductIssues_async_flattened",
+      "title": "RenderProductIssuesAsync",
+      "description": "Snippet for RenderProductIssuesAsync",
+      "file": "IssueResolutionServiceClient.RenderProductIssuesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderProductIssuesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderProductIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderProductIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderProductIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderProductIssues_sync_flattened_resourceNames",
+      "title": "RenderProductIssuesResourceNames",
+      "description": "Snippet for RenderProductIssues",
+      "file": "IssueResolutionServiceClient.RenderProductIssuesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderProductIssues",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderProductIssues",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderProductIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderProductIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_RenderProductIssues_async_flattened_resourceNames",
+      "title": "RenderProductIssuesResourceNamesAsync",
+      "description": "Snippet for RenderProductIssuesAsync",
+      "file": "IssueResolutionServiceClient.RenderProductIssuesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderProductIssuesAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.RenderProductIssuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.RenderProductIssuesResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "RenderProductIssues",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.RenderProductIssues",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_TriggerAction_sync",
+      "title": "TriggerActionRequestObject",
+      "description": "Snippet for TriggerAction",
+      "file": "IssueResolutionServiceClient.TriggerActionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerAction",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.TriggerAction",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.TriggerActionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.TriggerActionResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "TriggerAction",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.TriggerAction",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_TriggerAction_async",
+      "title": "TriggerActionRequestObjectAsync",
+      "description": "Snippet for TriggerActionAsync",
+      "file": "IssueResolutionServiceClient.TriggerActionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerActionAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.TriggerActionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.TriggerActionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.TriggerActionResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "TriggerAction",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.TriggerAction",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_TriggerAction_sync_flattened",
+      "title": "TriggerAction",
+      "description": "Snippet for TriggerAction",
+      "file": "IssueResolutionServiceClient.TriggerActionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerAction",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.TriggerAction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.TriggerActionResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "TriggerAction",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.TriggerAction",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_TriggerAction_async_flattened",
+      "title": "TriggerActionAsync",
+      "description": "Snippet for TriggerActionAsync",
+      "file": "IssueResolutionServiceClient.TriggerActionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerActionAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.TriggerActionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.TriggerActionResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "TriggerAction",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.TriggerAction",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_TriggerAction_sync_flattened_resourceNames",
+      "title": "TriggerActionResourceNames",
+      "description": "Snippet for TriggerAction",
+      "file": "IssueResolutionServiceClient.TriggerActionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerAction",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.TriggerAction",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.IssueResolution.V1.TriggerActionResponse",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "TriggerAction",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.TriggerAction",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_IssueResolutionService_TriggerAction_async_flattened_resourceNames",
+      "title": "TriggerActionResourceNamesAsync",
+      "description": "Snippet for TriggerActionAsync",
+      "file": "IssueResolutionServiceClient.TriggerActionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerActionAsync",
+        "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient.TriggerActionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.IssueResolution.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.IssueResolution.V1.TriggerActionResponse>",
+        "client": {
+          "shortName": "IssueResolutionServiceClient",
+          "fullName": "Google.Shopping.Merchant.IssueResolution.V1.IssueResolutionServiceClient"
+        },
+        "method": {
+          "shortName": "TriggerAction",
+          "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService.TriggerAction",
+          "service": {
+            "shortName": "IssueResolutionService",
+            "fullName": "google.shopping.merchant.issueresolution.v1.IssueResolutionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
