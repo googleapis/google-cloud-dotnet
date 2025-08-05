@@ -4450,6 +4450,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "a3bdabe06a6814daefb532979b0b0cc65e362479",
             "apiPaths": [
                 "google/shopping/merchant/promotions/v1"
             ],
