@@ -4375,6 +4375,7 @@
             "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "82e21d0767ab2e3b84b9de3e2aa0e90535125543",
             "apiPaths": [
                 "google/shopping/merchant/lfp/v1"
             ],

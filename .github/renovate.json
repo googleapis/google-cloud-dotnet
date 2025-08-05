@@ -310,6 +310,7 @@
     "apis/Google.Shopping.Merchant.Inventories.V1Beta/Google.Shopping.Merchant.Inventories.V1Beta/**",
     "apis/Google.Shopping.Merchant.IssueResolution.V1/Google.Shopping.Merchant.IssueResolution.V1/**",
     "apis/Google.Shopping.Merchant.IssueResolution.V1Beta/Google.Shopping.Merchant.IssueResolution.V1Beta/**",
+    "apis/Google.Shopping.Merchant.Lfp.V1/Google.Shopping.Merchant.Lfp.V1/**",
     "apis/Google.Shopping.Merchant.Lfp.V1Beta/Google.Shopping.Merchant.Lfp.V1Beta/**",
     "apis/Google.Shopping.Merchant.Notifications.V1/Google.Shopping.Merchant.Notifications.V1/**",
     "apis/Google.Shopping.Merchant.Notifications.V1Beta/Google.Shopping.Merchant.Notifications.V1Beta/**",
