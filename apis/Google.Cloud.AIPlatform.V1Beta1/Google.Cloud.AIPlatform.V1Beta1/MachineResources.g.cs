@@ -59,16 +59,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "cnNpc3RlbnREaXNrU3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19z",
             "aXplX2diGAIgASgDIkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EEC",
             "EhEKBHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EEC",
-            "IkEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgBIAEo",
-            "CUID4EECEg4KBnRhcmdldBgCIAEoBSIuChBTaGllbGRlZFZtQ29uZmlnEhoK",
-            "EmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCCJECglGbGV4U3RhcnQSNwoUbWF4",
-            "X3J1bnRpbWVfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb25C7AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "QhVNYWNoaW5lUmVzb3VyY2VzUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZv",
-            "cm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29n",
-            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "Iv4BChVBdXRvc2NhbGluZ01ldHJpY1NwZWMSGAoLbWV0cmljX25hbWUYASAB",
+            "KAlCA+BBAhIOCgZ0YXJnZXQYAiABKAUSewoZbW9uaXRvcmVkX3Jlc291cmNl",
+            "X2xhYmVscxgDIAMoCzJTLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuQXV0b3NjYWxpbmdNZXRyaWNTcGVjLk1vbml0b3JlZFJlc291cmNlTGFi",
+            "ZWxzRW50cnlCA+BBARo+ChxNb25pdG9yZWRSZXNvdXJjZUxhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLgoQU2hpZWxkZWRW",
+            "bUNvbmZpZxIaChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgiRAoJRmxleFN0",
+            "YXJ0EjcKFG1heF9ydW50aW1lX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMUIVTWFjaGluZVJlc291cmNlc1Byb3RvUAFaQ2Nsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1w",
+            "YjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJl",
+            "dGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2ds",
+            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,7 +84,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.NfsMount), global::Google.Cloud.AIPlatform.V1Beta1.NfsMount.Parser, new[]{ "Server", "Path", "MountPoint" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target", "MonitoredResourceLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig), global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig.Parser, new[]{ "EnableSecureBoot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FlexStart), global::Google.Cloud.AIPlatform.V1Beta1.FlexStart.Parser, new[]{ "MaxRuntimeDuration" }, null, null, null, null)
           }));
@@ -2631,6 +2635,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public AutoscalingMetricSpec(AutoscalingMetricSpec other) : this() {
       metricName_ = other.metricName_;
       target_ = other.target_;
+      monitoredResourceLabels_ = other.monitoredResourceLabels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2679,6 +2684,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "monitored_resource_labels" field.</summary>
+    public const int MonitoredResourceLabelsFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_monitoredResourceLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+    private readonly pbc::MapField<string, string> monitoredResourceLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The Cloud Monitoring monitored resource labels used for metrics
+    /// filtering. See Cloud Monitoring Labels
+    /// https://cloud.google.com/monitoring/api/v3/metric-model#generic-label-info
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> MonitoredResourceLabels {
+      get { return monitoredResourceLabels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2696,6 +2717,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (MetricName != other.MetricName) return false;
       if (Target != other.Target) return false;
+      if (!MonitoredResourceLabels.Equals(other.MonitoredResourceLabels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2705,6 +2727,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (MetricName.Length != 0) hash ^= MetricName.GetHashCode();
       if (Target != 0) hash ^= Target.GetHashCode();
+      hash ^= MonitoredResourceLabels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2731,6 +2754,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(Target);
       }
+      monitoredResourceLabels_.WriteTo(output, _map_monitoredResourceLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2749,6 +2773,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(Target);
       }
+      monitoredResourceLabels_.WriteTo(ref output, _map_monitoredResourceLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2765,6 +2790,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Target != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Target);
       }
+      size += monitoredResourceLabels_.CalculateSize(_map_monitoredResourceLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2783,6 +2809,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.Target != 0) {
         Target = other.Target;
       }
+      monitoredResourceLabels_.MergeFrom(other.monitoredResourceLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2806,6 +2833,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Target = input.ReadInt32();
             break;
           }
+          case 26: {
+            monitoredResourceLabels_.AddEntriesFrom(input, _map_monitoredResourceLabels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2827,6 +2858,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 16: {
             Target = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            monitoredResourceLabels_.AddEntriesFrom(ref input, _map_monitoredResourceLabels_codec);
             break;
           }
         }
