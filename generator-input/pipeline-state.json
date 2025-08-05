@@ -4429,6 +4429,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.OrderTracking.V1/Google.Shopping.Merchant.OrderTracking.V1"
             ]
+        },
+        {
+            "id": "Google.Shopping.Merchant.Products.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/shopping/merchant/products/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Shopping.Merchant.Products.V1/Google.Shopping.Merchant.Products.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
