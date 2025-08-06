@@ -4,6 +4,7 @@
     "client": "DataAgentServiceClient",
     "clientNavigationProperty": "LocationsClient",
     "skip": "b/428834051",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "request": {
         "name": "projects/${PROJECT_ID}"
@@ -13,6 +14,7 @@
   {
     "method": "ListDataAgents",
     "client": "DataAgentServiceClient",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global"
     }
@@ -20,6 +22,7 @@
   {
     "method": "ListAccessibleDataAgents",
     "client": "DataAgentServiceClient",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global"
     }
@@ -27,6 +30,7 @@
   {
     "method": "ListConversations",
     "client": "DataChatServiceClient",
+    "restrictedSkip": "Requires API enablement",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global"
     }
