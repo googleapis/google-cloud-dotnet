@@ -93,15 +93,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
         }
 
-        [Fact]
-        public async Task Equality_UniverseDomainAndEndpoint()
-        {
-            var builder = new SpannerConnectionStringBuilder("UniverseDomain=test-domain.test.goog");
-            var options = new SpannerClientCreationOptions(builder);
-
-            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
-        }
-
         [Theory]
         [InlineData("UniverseDomain=test-domain.test", "test-domain.test", null)]
         [InlineData("Host=test-host;Port=567", null, "test-host:567")]
@@ -115,7 +106,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var options = new SpannerClientCreationOptions(builder);
 
             // These tests are only to test the correct setting null or otherwise of UniverseDomain and Endpoint in the SpannerClientCreationOptions
-            // For tests on setting the correct EffectiveEndpoint for the CallInvoker, ClientBuilderBase.EffectiveEndpoint tests in GAX
+            // For tests on setting the correct EffectiveEndpoint for the CallInvoker see ClientBuilderBase.EffectiveEndpoint tests in GAX
             Assert.Equal(expectedUniverseDomain, options.ClientBuilder.UniverseDomain);
             Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
         }

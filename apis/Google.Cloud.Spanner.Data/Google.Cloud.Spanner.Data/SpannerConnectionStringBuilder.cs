@@ -287,14 +287,12 @@ namespace Google.Cloud.Spanner.Data
         /// <remarks>
         /// <para>
         /// <see cref="UniverseDomain"/> is used to build the endpoint to connect to, unless <see cref="EndPoint"/> or <see cref="Host"/>
-        /// is explicitly set, in which case <see cref="EndPoint"/> will be used without further modification.
+        /// are explicitly set, in which case <see cref="EndPoint"/> will be used without further modification.
         /// </para>
         /// <para>
         /// If default credentials or one of <see cref="GoogleCredential"/> or <see cref="CredentialFile"/>
         /// is used, <see cref="GoogleCredential.GetUniverseDomain"/> should be:
-        /// <list type="bullet">
-        /// <item>The same as <see cref="UniverseDomain"/> if <see cref="UniverseDomain"/> has been set otherwise should be same as <see cref="DefaultDomain"/></item>
-        /// </list>
+        /// The same as <see cref="UniverseDomain"/> if <see cref="UniverseDomain"/> has been set otherwise should be same as <see cref="DefaultDomain"/>
         /// </para>
         /// </remarks>
         public string UniverseDomain

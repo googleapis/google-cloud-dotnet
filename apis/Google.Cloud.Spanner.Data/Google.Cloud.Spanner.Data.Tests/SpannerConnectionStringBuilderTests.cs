@@ -338,15 +338,24 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void UniverseDomainTest()
+        public void Default_UniverseDomain()
         {
             var builder = new SpannerConnectionStringBuilder();
-            Assert.Equal(SpannerConnectionStringBuilder.DefaultDomain, builder.UniverseDomain);
 
+            Assert.Equal(SpannerConnectionStringBuilder.DefaultDomain, builder.UniverseDomain);
+            Assert.Equal($"spanner.{SpannerConnectionStringBuilder.DefaultDomain}", builder.Host);
+            Assert.Equal($"spanner.{SpannerConnectionStringBuilder.DefaultDomain}:443", builder.EndPoint);
+        }
+
+        [Fact]
+        public void Custom_UniverseDomain()
+        {
             string universeDomain = "test-domain.test.goog";
-            builder = new SpannerConnectionStringBuilder($"UniverseDomain={universeDomain}");
+            var builder = new SpannerConnectionStringBuilder($"UniverseDomain={universeDomain}");
 
             Assert.Equal(universeDomain, builder.UniverseDomain);
+            Assert.Equal($"spanner.{universeDomain}", builder.Host);
+            Assert.Equal($"spanner.{universeDomain}:443", builder.EndPoint);
         }
     }
 }
