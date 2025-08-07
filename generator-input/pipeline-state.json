@@ -4322,7 +4322,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-08-05T07:31:30.896215626Z",
-            "lastGeneratedCommit": "da8916b715b0ddc3f9592777ceaa63a2f9d1a4c7",
+            "lastGeneratedCommit": "e64f292bd17863a1ffa003a241213e07968bd447",
             "lastReleasedCommit": "da8916b715b0ddc3f9592777ceaa63a2f9d1a4c7",
             "apiPaths": [
                 "google/shopping/merchant/datasources/v1"
