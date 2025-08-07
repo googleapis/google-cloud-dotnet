@@ -4786,6 +4786,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "SaaS Runtime",
+      "productUrl": "https://cloud.google.com/saas-runtime/docs/overview",
+      "description": "Model, deploy, and operate your SaaS at scale.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/saasplatform/saasservicemgmt/v1beta1",
+      "includeCommonResourcesProto": true,
+      "shortName": "saasservicemgmt",
+      "serviceConfigFile": "saasservicemgmt_v1beta1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Scheduler.V1",
       "generator": "micro",
       "protoPath": "google/cloud/scheduler/v1",
