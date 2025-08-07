@@ -4480,6 +4480,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.Reports.V1/Google.Shopping.Merchant.Reports.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/saasplatform/saasservicemgmt/v1beta1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
