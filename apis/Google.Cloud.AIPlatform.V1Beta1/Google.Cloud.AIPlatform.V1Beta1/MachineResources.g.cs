@@ -2690,8 +2690,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> monitoredResourceLabels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. The Cloud Monitoring monitored resource labels used for metrics
-    /// filtering. See Cloud Monitoring Labels
+    /// Optional. The Cloud Monitoring monitored resource labels as key value pairs
+    /// used for metrics filtering. See Cloud Monitoring Labels
     /// https://cloud.google.com/monitoring/api/v3/metric-model#generic-label-info
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

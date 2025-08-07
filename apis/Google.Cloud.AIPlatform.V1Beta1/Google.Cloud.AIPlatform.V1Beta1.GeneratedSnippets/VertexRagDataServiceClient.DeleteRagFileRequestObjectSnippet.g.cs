@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             DeleteRagFileRequest request = new DeleteRagFileRequest
             {
                 RagFileName = RagFileName.FromProjectLocationRagCorpusRagFile("[PROJECT]", "[LOCATION]", "[RAG_CORPUS]", "[RAG_FILE]"),
+                ForceDelete = false,
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = vertexRagDataServiceClient.DeleteRagFile(request);
