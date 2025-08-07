@@ -352,7 +352,7 @@ namespace Google.Cloud.Compute.V1
         /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to return, or its unique numeric identifier.
+        /// Name of the Operations resource to return. Parent is derived from this field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -366,7 +366,7 @@ namespace Google.Cloud.Compute.V1
         /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to return, or its unique numeric identifier.
+        /// Name of the Operations resource to return. Parent is derived from this field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -380,7 +380,7 @@ namespace Google.Cloud.Compute.V1
         /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to return, or its unique numeric identifier.
+        /// Name of the Operations resource to return. Parent is derived from this field.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
