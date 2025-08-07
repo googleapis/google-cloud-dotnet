@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ReturnPartialSuccess = false,
+                ServiceProject = "",
             };
             // Make the request
             PagedEnumerable<UsableSubnetworksAggregatedList, UsableSubnetwork> response = subnetworksClient.ListUsable(request);

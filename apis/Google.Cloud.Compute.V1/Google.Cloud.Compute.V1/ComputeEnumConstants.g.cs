@@ -16587,6 +16587,20 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string MaintenanceReasonUnknown = "MAINTENANCE_REASON_UNKNOWN";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.PlannedNetworkUpdate"/>
+                /// .
+                /// </summary>
+                public const string PlannedNetworkUpdate = "PLANNED_NETWORK_UPDATE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.PlannedUpdate"/>
+                /// .
+                /// </summary>
+                public const string PlannedUpdate = "PLANNED_UPDATE";
             }
 
             /// <summary>
@@ -16632,6 +16646,12 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.Type.UndefinedType"/>.
                 /// </summary>
                 public const string UndefinedType = "UNDEFINED_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.Type.Multiple"/>.
+                /// </summary>
+                public const string Multiple = "MULTIPLE";
 
                 /// <summary>
                 /// Wire representation of
