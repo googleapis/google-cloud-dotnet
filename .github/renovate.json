@@ -330,7 +330,10 @@
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
   "ignoreDeps": [
-    "Grpc.Core"
+    "Grpc.Core",
+    "Microsoft.CodeAnalysis.CSharp.Workspaces",
+    "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+    "dotnet-sdk"
   ],
   "packageRules": [
     {
@@ -338,14 +341,14 @@
         "Microsoft.Extensions.",
         "mcr.microsoft.com/dotnet/"
       ],
-      "allowedVersions": "<9.0.0"
+      "allowedVersions": "<7.0.0"
     },
     {
       "matchPackageNames": [
         "System.Collections.Immutable",
         "dotnet-sdk"
       ],
-      "allowedVersions": "<9.0.0"
+      "allowedVersions": "<7.0.0"
     },
     {
       "matchPaths": [
