@@ -18,13 +18,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START run_v2_generated_Builds_SubmitBuild_async]
+    // [START run_v2_generated_WorkerPools_GetIamPolicy_async]
+    using Google.Api.Gax;
+    using Google.Cloud.Iam.V1;
     using System.Threading.Tasks;
     using gcrv = Google.Cloud.Run.V2;
 
-    public sealed partial class GeneratedBuildsClientSnippets
+    public sealed partial class GeneratedWorkerPoolsClientSnippets
     {
-        /// <summary>Snippet for SubmitBuildAsync</summary>
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +34,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SubmitBuildRequestObjectAsync()
+        public async Task GetIamPolicyRequestObjectAsync()
         {
             // Create client
-            gcrv::BuildsClient buildsClient = await gcrv::BuildsClient.CreateAsync();
+            gcrv::WorkerPoolsClient workerPoolsClient = await gcrv::WorkerPoolsClient.CreateAsync();
             // Initialize request argument(s)
-            gcrv::SubmitBuildRequest request = new gcrv::SubmitBuildRequest
+            GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                Parent = "",
-                StorageSource = new gcrv::StorageSource(),
-                ImageUri = "",
-                BuildpackBuild = new gcrv::SubmitBuildRequest.Types.BuildpacksBuild(),
-                ServiceAccount = "",
-                WorkerPoolAsBuildWorkerPoolName = gcrv::BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
-                Tags = { "", },
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
             };
             // Make the request
-            gcrv::SubmitBuildResponse response = await buildsClient.SubmitBuildAsync(request);
+            Policy response = await workerPoolsClient.GetIamPolicyAsync(request);
         }
     }
-    // [END run_v2_generated_Builds_SubmitBuild_async]
+    // [END run_v2_generated_WorkerPools_GetIamPolicy_async]
 }

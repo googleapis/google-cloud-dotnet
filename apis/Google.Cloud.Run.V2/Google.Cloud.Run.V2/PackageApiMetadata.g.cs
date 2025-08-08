@@ -61,6 +61,7 @@ namespace Google.Cloud.Run.V2
             yield return ConditionReflection.Descriptor;
             yield return ExecutionReflection.Descriptor;
             yield return ExecutionTemplateReflection.Descriptor;
+            yield return InstanceSplitReflection.Descriptor;
             yield return JobReflection.Descriptor;
             yield return K8SMinReflection.Descriptor;
             yield return RevisionReflection.Descriptor;
@@ -71,6 +72,8 @@ namespace Google.Cloud.Run.V2
             yield return TaskTemplateReflection.Descriptor;
             yield return TrafficTargetReflection.Descriptor;
             yield return VendorSettingsReflection.Descriptor;
+            yield return WorkerPoolReflection.Descriptor;
+            yield return WorkerPoolRevisionTemplateReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

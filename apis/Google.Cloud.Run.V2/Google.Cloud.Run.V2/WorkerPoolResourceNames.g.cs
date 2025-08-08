@@ -15,15 +15,17 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
+using gcrv = Google.Cloud.Run.V2;
 using sys = System;
 
 namespace Google.Cloud.Run.V2
 {
-    /// <summary>Resource name for the <c>BuildWorkerPool</c> resource.</summary>
-    public sealed partial class BuildWorkerPoolName : gax::IResourceName, sys::IEquatable<BuildWorkerPoolName>
+    /// <summary>Resource name for the <c>WorkerPool</c> resource.</summary>
+    public sealed partial class WorkerPoolName : gax::IResourceName, sys::IEquatable<WorkerPoolName>
     {
-        /// <summary>The possible contents of <see cref="BuildWorkerPoolName"/>.</summary>
+        /// <summary>The possible contents of <see cref="WorkerPoolName"/>.</summary>
         public enum ResourceNameType
         {
             /// <summary>An unparsed resource name.</summary>
@@ -37,56 +39,92 @@ namespace Google.Cloud.Run.V2
 
         private static gax::PathTemplate s_projectLocationWorkerPool = new gax::PathTemplate("projects/{project}/locations/{location}/workerPools/{worker_pool}");
 
-        /// <summary>Creates a <see cref="BuildWorkerPoolName"/> containing an unparsed resource name.</summary>
+        /// <summary>Creates a <see cref="WorkerPoolName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
         /// <returns>
-        /// A new instance of <see cref="BuildWorkerPoolName"/> containing the provided
+        /// A new instance of <see cref="WorkerPoolName"/> containing the provided
         /// <paramref name="unparsedResourceName"/>.
         /// </returns>
-        public static BuildWorkerPoolName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new BuildWorkerPoolName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+        public static WorkerPoolName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new WorkerPoolName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="BuildWorkerPoolName"/> with the pattern
+        /// Creates a <see cref="WorkerPoolName"/> with the pattern
         /// <c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="workerPoolId">The <c>WorkerPool</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="BuildWorkerPoolName"/> constructed from the provided ids.</returns>
-        public static BuildWorkerPoolName FromProjectLocationWorkerPool(string projectId, string locationId, string workerPoolId) =>
-            new BuildWorkerPoolName(ResourceNameType.ProjectLocationWorkerPool, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workerPoolId: gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)));
+        /// <returns>A new instance of <see cref="WorkerPoolName"/> constructed from the provided ids.</returns>
+        public static WorkerPoolName FromProjectLocationWorkerPool(string projectId, string locationId, string workerPoolId) =>
+            new WorkerPoolName(ResourceNameType.ProjectLocationWorkerPool, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workerPoolId: gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)));
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="BuildWorkerPoolName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="WorkerPoolName"/> with pattern
         /// <c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="workerPoolId">The <c>WorkerPool</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="BuildWorkerPoolName"/> with pattern
+        /// The string representation of this <see cref="WorkerPoolName"/> with pattern
         /// <c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string workerPoolId) =>
             FormatProjectLocationWorkerPool(projectId, locationId, workerPoolId);
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="BuildWorkerPoolName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="WorkerPoolName"/> with pattern
         /// <c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="workerPoolId">The <c>WorkerPool</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="BuildWorkerPoolName"/> with pattern
+        /// The string representation of this <see cref="WorkerPoolName"/> with pattern
         /// <c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c>.
         /// </returns>
         public static string FormatProjectLocationWorkerPool(string projectId, string locationId, string workerPoolId) =>
             s_projectLocationWorkerPool.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)));
 
+        /// <summary>Parses the given resource name string into a new <see cref="WorkerPoolName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="WorkerPoolName"/> if successful.</returns>
+        public static WorkerPoolName Parse(string workerPoolName) => Parse(workerPoolName, false);
+
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="BuildWorkerPoolName"/> instance.
+        /// Parses the given resource name string into a new <see cref="WorkerPoolName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="WorkerPoolName"/> if successful.</returns>
+        public static WorkerPoolName Parse(string workerPoolName, bool allowUnparsed) =>
+            TryParse(workerPoolName, allowUnparsed, out WorkerPoolName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkerPoolName"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -96,12 +134,16 @@ namespace Google.Cloud.Run.V2
         /// </item>
         /// </list>
         /// </remarks>
-        /// <param name="buildWorkerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="BuildWorkerPoolName"/> if successful.</returns>
-        public static BuildWorkerPoolName Parse(string buildWorkerPoolName) => Parse(buildWorkerPoolName, false);
+        /// <param name="workerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkerPoolName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workerPoolName, out WorkerPoolName result) =>
+            TryParse(workerPoolName, false, out result);
 
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="BuildWorkerPoolName"/> instance; optionally
+        /// Tries to parse the given resource name string into a new <see cref="WorkerPoolName"/> instance; optionally
         /// allowing an unparseable resource name.
         /// </summary>
         /// <remarks>
@@ -113,70 +155,28 @@ namespace Google.Cloud.Run.V2
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="buildWorkerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <returns>The parsed <see cref="BuildWorkerPoolName"/> if successful.</returns>
-        public static BuildWorkerPoolName Parse(string buildWorkerPoolName, bool allowUnparsed) =>
-            TryParse(buildWorkerPoolName, allowUnparsed, out BuildWorkerPoolName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="BuildWorkerPoolName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c></description>
-        /// </item>
-        /// </list>
-        /// </remarks>
-        /// <param name="buildWorkerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="BuildWorkerPoolName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string buildWorkerPoolName, out BuildWorkerPoolName result) =>
-            TryParse(buildWorkerPoolName, false, out result);
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="BuildWorkerPoolName"/> instance;
-        /// optionally allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item>
-        /// <description><c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c></description>
-        /// </item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="buildWorkerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="workerPoolName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="BuildWorkerPoolName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="WorkerPoolName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string buildWorkerPoolName, bool allowUnparsed, out BuildWorkerPoolName result)
+        public static bool TryParse(string workerPoolName, bool allowUnparsed, out WorkerPoolName result)
         {
-            gax::GaxPreconditions.CheckNotNull(buildWorkerPoolName, nameof(buildWorkerPoolName));
+            gax::GaxPreconditions.CheckNotNull(workerPoolName, nameof(workerPoolName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectLocationWorkerPool.TryParseName(buildWorkerPoolName, out resourceName))
+            if (s_projectLocationWorkerPool.TryParseName(workerPoolName, out resourceName))
             {
                 result = FromProjectLocationWorkerPool(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
             if (allowUnparsed)
             {
-                if (gax::UnparsedResourceName.TryParse(buildWorkerPoolName, out gax::UnparsedResourceName unparsedResourceName))
+                if (gax::UnparsedResourceName.TryParse(workerPoolName, out gax::UnparsedResourceName unparsedResourceName))
                 {
                     result = FromUnparsed(unparsedResourceName);
                     return true;
@@ -186,7 +186,7 @@ namespace Google.Cloud.Run.V2
             return false;
         }
 
-        private BuildWorkerPoolName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string workerPoolId = null)
+        private WorkerPoolName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string workerPoolId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
@@ -196,13 +196,13 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Constructs a new instance of a <see cref="BuildWorkerPoolName"/> class from the component parts of pattern
+        /// Constructs a new instance of a <see cref="WorkerPoolName"/> class from the component parts of pattern
         /// <c>projects/{project}/locations/{location}/workerPools/{worker_pool}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="workerPoolId">The <c>WorkerPool</c> ID. Must not be <c>null</c> or empty.</param>
-        public BuildWorkerPoolName(string projectId, string locationId, string workerPoolId) : this(ResourceNameType.ProjectLocationWorkerPool, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workerPoolId: gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)))
+        public WorkerPoolName(string projectId, string locationId, string workerPoolId) : this(ResourceNameType.ProjectLocationWorkerPool, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), workerPoolId: gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)))
         {
         }
 
@@ -249,10 +249,10 @@ namespace Google.Cloud.Run.V2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as BuildWorkerPoolName);
+        public override bool Equals(object obj) => Equals(obj as WorkerPoolName);
 
         /// <inheritdoc/>
-        public bool Equals(BuildWorkerPoolName other) => ToString() == other?.ToString();
+        public bool Equals(WorkerPoolName other) => ToString() == other?.ToString();
 
         /// <summary>Determines whether two specified resource names have the same value.</summary>
         /// <param name="a">The first resource name to compare, or null.</param>
@@ -261,7 +261,7 @@ namespace Google.Cloud.Run.V2
         /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
         /// false.
         /// </returns>
-        public static bool operator ==(BuildWorkerPoolName a, BuildWorkerPoolName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(WorkerPoolName a, WorkerPoolName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <summary>Determines whether two specified resource names have different values.</summary>
         /// <param name="a">The first resource name to compare, or null.</param>
@@ -270,18 +270,84 @@ namespace Google.Cloud.Run.V2
         /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
         /// false.
         /// </returns>
-        public static bool operator !=(BuildWorkerPoolName a, BuildWorkerPoolName b) => !(a == b);
+        public static bool operator !=(WorkerPoolName a, WorkerPoolName b) => !(a == b);
     }
 
-    public partial class SubmitBuildRequest
+    public partial class CreateWorkerPoolRequest
     {
         /// <summary>
-        /// <see cref="BuildWorkerPoolName"/>-typed view over the <see cref="WorkerPool"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public BuildWorkerPoolName WorkerPoolAsBuildWorkerPoolName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(WorkerPool) ? null : BuildWorkerPoolName.Parse(WorkerPool, allowUnparsed: true);
-            set => WorkerPool = value?.ToString() ?? "";
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListWorkerPoolsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetWorkerPoolRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::WorkerPoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::WorkerPoolName WorkerPoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::WorkerPoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteWorkerPoolRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::WorkerPoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::WorkerPoolName WorkerPoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::WorkerPoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class WorkerPool
+    {
+        /// <summary>
+        /// <see cref="gcrv::WorkerPoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::WorkerPoolName WorkerPoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::WorkerPoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="RevisionName"/>-typed view over the <see cref="LatestReadyRevision"/> resource name property.
+        /// </summary>
+        public RevisionName LatestReadyRevisionAsRevisionName
+        {
+            get => string.IsNullOrEmpty(LatestReadyRevision) ? null : RevisionName.Parse(LatestReadyRevision, allowUnparsed: true);
+            set => LatestReadyRevision = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="RevisionName"/>-typed view over the <see cref="LatestCreatedRevision"/> resource name property.
+        /// </summary>
+        public RevisionName LatestCreatedRevisionAsRevisionName
+        {
+            get => string.IsNullOrEmpty(LatestCreatedRevision) ? null : RevisionName.Parse(LatestCreatedRevision, allowUnparsed: true);
+            set => LatestCreatedRevision = value?.ToString() ?? "";
         }
     }
 }

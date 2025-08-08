@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
                 ImageUri = "",
                 BuildpackBuild = new gcrv::SubmitBuildRequest.Types.BuildpacksBuild(),
                 ServiceAccount = "",
-                WorkerPoolAsWorkerPoolName = gcrv::WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                WorkerPoolAsBuildWorkerPoolName = gcrv::BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
                 Tags = { "", },
             };
             // Make the request
@@ -61,7 +61,7 @@ namespace GoogleCSharpSnippets
                 ImageUri = "",
                 BuildpackBuild = new gcrv::SubmitBuildRequest.Types.BuildpacksBuild(),
                 ServiceAccount = "",
-                WorkerPoolAsWorkerPoolName = gcrv::WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                WorkerPoolAsBuildWorkerPoolName = gcrv::BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
                 Tags = { "", },
             };
             // Make the request

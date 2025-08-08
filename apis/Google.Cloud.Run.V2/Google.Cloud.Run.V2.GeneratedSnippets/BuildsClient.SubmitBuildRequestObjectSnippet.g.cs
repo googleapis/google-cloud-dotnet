@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
                 ImageUri = "",
                 BuildpackBuild = new SubmitBuildRequest.Types.BuildpacksBuild(),
                 ServiceAccount = "",
-                WorkerPoolAsWorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
+                WorkerPoolAsBuildWorkerPoolName = BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
                 Tags = { "", },
             };
             // Make the request

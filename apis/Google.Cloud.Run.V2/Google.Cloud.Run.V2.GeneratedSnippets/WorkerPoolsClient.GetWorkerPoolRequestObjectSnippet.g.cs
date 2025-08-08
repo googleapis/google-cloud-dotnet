@@ -14,17 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
-#pragma warning disable CS8981
-
 namespace GoogleCSharpSnippets
 {
-    // [START run_v2_generated_Builds_SubmitBuild_async]
-    using System.Threading.Tasks;
-    using gcrv = Google.Cloud.Run.V2;
+    // [START run_v2_generated_WorkerPools_GetWorkerPool_sync]
+    using Google.Cloud.Run.V2;
 
-    public sealed partial class GeneratedBuildsClientSnippets
+    public sealed partial class GeneratedWorkerPoolsClientSnippets
     {
-        /// <summary>Snippet for SubmitBuildAsync</summary>
+        /// <summary>Snippet for GetWorkerPool</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +29,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SubmitBuildRequestObjectAsync()
+        public void GetWorkerPoolRequestObject()
         {
             // Create client
-            gcrv::BuildsClient buildsClient = await gcrv::BuildsClient.CreateAsync();
+            WorkerPoolsClient workerPoolsClient = WorkerPoolsClient.Create();
             // Initialize request argument(s)
-            gcrv::SubmitBuildRequest request = new gcrv::SubmitBuildRequest
+            GetWorkerPoolRequest request = new GetWorkerPoolRequest
             {
-                Parent = "",
-                StorageSource = new gcrv::StorageSource(),
-                ImageUri = "",
-                BuildpackBuild = new gcrv::SubmitBuildRequest.Types.BuildpacksBuild(),
-                ServiceAccount = "",
-                WorkerPoolAsBuildWorkerPoolName = gcrv::BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
-                Tags = { "", },
+                WorkerPoolName = WorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
             };
             // Make the request
-            gcrv::SubmitBuildResponse response = await buildsClient.SubmitBuildAsync(request);
+            WorkerPool response = workerPoolsClient.GetWorkerPool(request);
         }
     }
-    // [END run_v2_generated_Builds_SubmitBuild_async]
+    // [END run_v2_generated_WorkerPools_GetWorkerPool_sync]
 }
