@@ -58,111 +58,117 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ASgJQijgQQL6QSIKIGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTWVtb3J5",
             "InQKHURlbGV0ZU1lbW9yeU9wZXJhdGlvbk1ldGFkYXRhElMKEGdlbmVyaWNf",
             "bWV0YWRhdGEYASABKAsyOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSL5BgoXR2VuZXJhdGVNZW1v",
+            "dGExLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSKgCQoXR2VuZXJhdGVNZW1v",
             "cmllc1JlcXVlc3QSbQoVdmVydGV4X3Nlc3Npb25fc291cmNlGAIgASgLMkwu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HZW5lcmF0ZU1lbW9y",
             "aWVzUmVxdWVzdC5WZXJ0ZXhTZXNzaW9uU291cmNlSAASbwoWZGlyZWN0X2Nv",
             "bnRlbnRzX3NvdXJjZRgDIAEoCzJNLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
             "LnYxYmV0YTEuR2VuZXJhdGVNZW1vcmllc1JlcXVlc3QuRGlyZWN0Q29udGVu",
-            "dHNTb3VyY2VIABJBCgZwYXJlbnQYASABKAlCMeBBAvpBKwopYWlwbGF0Zm9y",
-            "bS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdFbmdpbmUSIgoVZGlzYWJsZV9j",
-            "b25zb2xpZGF0aW9uGAQgASgIQgPgQQESVwoFc2NvcGUYCCADKAsyQy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdlbmVyYXRlTWVtb3JpZXNS",
-            "ZXF1ZXN0LlNjb3BlRW50cnlCA+BBARq5AQoTVmVydGV4U2Vzc2lvblNvdXJj",
-            "ZRI6CgdzZXNzaW9uGAEgASgJQingQQL6QSMKIWFpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb20vU2Vzc2lvbhIzCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEjEKCGVuZF90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBGskBChREaXJlY3RDb250",
-            "ZW50c1NvdXJjZRJoCgZldmVudHMYASADKAsyUy5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MWJldGExLkdlbmVyYXRlTWVtb3JpZXNSZXF1ZXN0LkRpcmVj",
-            "dENvbnRlbnRzU291cmNlLkV2ZW50QgPgQQIaRwoFRXZlbnQSPgoHY29udGVu",
-            "dBgBIAEoCzIoLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQ29u",
-            "dGVudEID4EECGiwKClNjb3BlRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4AUIICgZzb3VyY2Ui+QIKGEdlbmVyYXRlTWVtb3JpZXNSZXNw",
-            "b25zZRJlChJnZW5lcmF0ZWRfbWVtb3JpZXMYASADKAsySS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkdlbmVyYXRlTWVtb3JpZXNSZXNwb25z",
-            "ZS5HZW5lcmF0ZWRNZW1vcnka9QEKD0dlbmVyYXRlZE1lbW9yeRI3CgZtZW1v",
-            "cnkYASABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk1l",
-            "bW9yeRJgCgZhY3Rpb24YAiABKA4yUC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLkdlbmVyYXRlTWVtb3JpZXNSZXNwb25zZS5HZW5lcmF0ZWRN",
-            "ZW1vcnkuQWN0aW9uIkcKBkFjdGlvbhIWChJBQ1RJT05fVU5TUEVDSUZJRUQQ",
-            "ABILCgdDUkVBVEVEEAESCwoHVVBEQVRFRBACEgsKB0RFTEVURUQQAyJ4CiFH",
-            "ZW5lcmF0ZU1lbW9yaWVzT3BlcmF0aW9uTWV0YWRhdGESUwoQZ2VuZXJpY19t",
-            "ZXRhZGF0YRgBIAEoCzI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhIvIEChdSZXRyaWV2ZU1lbW9y",
-            "aWVzUmVxdWVzdBJzChhzaW1pbGFyaXR5X3NlYXJjaF9wYXJhbXMYBiABKAsy",
-            "Ty5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJldHJpZXZlTWVt",
-            "b3JpZXNSZXF1ZXN0LlNpbWlsYXJpdHlTZWFyY2hQYXJhbXNIABJxChdzaW1w",
-            "bGVfcmV0cmlldmFsX3BhcmFtcxgHIAEoCzJOLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuUmV0cmlldmVNZW1vcmllc1JlcXVlc3QuU2ltcGxl",
-            "UmV0cmlldmFsUGFyYW1zSAASQQoGcGFyZW50GAEgASgJQjHgQQL6QSsKKWFp",
-            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUmVhc29uaW5nRW5naW5lElcKBXNj",
-            "b3BlGAggAygLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5S",
-            "ZXRyaWV2ZU1lbW9yaWVzUmVxdWVzdC5TY29wZUVudHJ5QgPgQQIaRwoWU2lt",
-            "aWxhcml0eVNlYXJjaFBhcmFtcxIZCgxzZWFyY2hfcXVlcnkYASABKAlCA+BB",
-            "AhISCgV0b3BfaxgCIAEoBUID4EEBGkgKFVNpbXBsZVJldHJpZXZhbFBhcmFt",
-            "cxIWCglwYWdlX3NpemUYASABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAIgASgJ",
-            "QgPgQQEaLAoKU2NvcGVFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBQhIKEHJldHJpZXZhbF9wYXJhbXMi+AEKGFJldHJpZXZlTWVtb3Jp",
-            "ZXNSZXNwb25zZRJlChJyZXRyaWV2ZWRfbWVtb3JpZXMYASADKAsySS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJldHJpZXZlTWVtb3JpZXNS",
-            "ZXNwb25zZS5SZXRyaWV2ZWRNZW1vcnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJGlwKD1JldHJpZXZlZE1lbW9yeRI3CgZtZW1vcnkYASABKAsyJy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk1lbW9yeRIQCghkaXN0YW5j",
-            "ZRgCIAEoATLhEAoRTWVtb3J5QmFua1NlcnZpY2USngIKDENyZWF0ZU1lbW9y",
-            "eRI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQ3JlYXRlTWVt",
-            "b3J5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuAHK",
-            "QScKBk1lbW9yeRIdQ3JlYXRlTWVtb3J5T3BlcmF0aW9uTWV0YWRhdGGC0+ST",
-            "AocBIkQvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "cmVhc29uaW5nRW5naW5lcy8qfS9tZW1vcmllczoGbWVtb3J5WjciLS92MWJl",
-            "dGExL3twYXJlbnQ9cmVhc29uaW5nRW5naW5lcy8qfS9tZW1vcmllczoGbWVt",
-            "b3J5Eu4BCglHZXRNZW1vcnkSMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkdldE1lbW9yeVJlcXVlc3QaJy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLk1lbW9yeSKEAdpBBG5hbWWC0+STAncSRC92MWJldGEx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVhc29uaW5nRW5naW5l",
-            "cy8qL21lbW9yaWVzLyp9Wi8SLS92MWJldGExL3tuYW1lPXJlYXNvbmluZ0Vu",
-            "Z2luZXMvKi9tZW1vcmllcy8qfRLBAgoMVXBkYXRlTWVtb3J5EjQuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5VcGRhdGVNZW1vcnlSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLbAcpBJwoGTWVtb3J5",
-            "Eh1VcGRhdGVNZW1vcnlPcGVyYXRpb25NZXRhZGF0YdpBEm1lbW9yeSx1cGRh",
-            "dGVfbWFza4LT5JMClQEySy92MWJldGExL3ttZW1vcnkubmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3JlYXNvbmluZ0VuZ2luZXMvKi9tZW1vcmllcy8q",
-            "fToGbWVtb3J5Wj4yNC92MWJldGExL3ttZW1vcnkubmFtZT1yZWFzb25pbmdF",
-            "bmdpbmVzLyovbWVtb3JpZXMvKn06Bm1lbW9yeRKEAgoMTGlzdE1lbW9yaWVz",
-            "EjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5MaXN0TWVtb3Jp",
-            "ZXNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5M",
-            "aXN0TWVtb3JpZXNSZXNwb25zZSKGAdpBBnBhcmVudILT5JMCdxJEL3YxYmV0",
-            "YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlYXNvbmluZ0Vu",
-            "Z2luZXMvKn0vbWVtb3JpZXNaLxItL3YxYmV0YTEve3BhcmVudD1yZWFzb25p",
-            "bmdFbmdpbmVzLyp9L21lbW9yaWVzEqMCCgxEZWxldGVNZW1vcnkSNC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkRlbGV0ZU1lbW9yeVJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIr0BykE2ChVnb29n",
-            "bGUucHJvdG9idWYuRW1wdHkSHURlbGV0ZU1lbW9yeU9wZXJhdGlvbk1ldGFk",
-            "YXRh2kEEbmFtZYLT5JMCdypEL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9yZWFzb25pbmdFbmdpbmVzLyovbWVtb3JpZXMvKn1aLyot",
-            "L3YxYmV0YTEve25hbWU9cmVhc29uaW5nRW5naW5lcy8qL21lbW9yaWVzLyp9",
-            "Es0CChBHZW5lcmF0ZU1lbW9yaWVzEjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5HZW5lcmF0ZU1lbW9yaWVzUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24i3wHKQT0KGEdlbmVyYXRlTWVtb3JpZXNS",
-            "ZXNwb25zZRIhR2VuZXJhdGVNZW1vcmllc09wZXJhdGlvbk1ldGFkYXRh2kEG",
-            "cGFyZW50gtPkkwKPASJNL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL3JlYXNvbmluZ0VuZ2luZXMvKn0vbWVtb3JpZXM6Z2VuZXJh",
-            "dGU6ASpaOyI2L3YxYmV0YTEve3BhcmVudD1yZWFzb25pbmdFbmdpbmVzLyp9",
-            "L21lbW9yaWVzOmdlbmVyYXRlOgEqEqkCChBSZXRyaWV2ZU1lbW9yaWVzEjgu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZXRyaWV2ZU1lbW9y",
-            "aWVzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "UmV0cmlldmVNZW1vcmllc1Jlc3BvbnNlIp8B2kEGcGFyZW50gtPkkwKPASJN",
-            "L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlYXNv",
-            "bmluZ0VuZ2luZXMvKn0vbWVtb3JpZXM6cmV0cmlldmU6ASpaOyI2L3YxYmV0",
-            "YTEve3BhcmVudD1yZWFzb25pbmdFbmdpbmVzLyp9L21lbW9yaWVzOnJldHJp",
-            "ZXZlOgEqGk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULtAQoj",
-            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCFk1lbW9yeUJh",
-            "bmtTZXJ2aWNlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRm",
-            "b3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dv",
-            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRc",
-            "QUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9y",
-            "bTo6VjFiZXRhMWIGcHJvdG8z"));
+            "dHNTb3VyY2VIABJvChZkaXJlY3RfbWVtb3JpZXNfc291cmNlGAkgASgLMk0u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HZW5lcmF0ZU1lbW9y",
+            "aWVzUmVxdWVzdC5EaXJlY3RNZW1vcmllc1NvdXJjZUgAEkEKBnBhcmVudBgB",
+            "IAEoCUIx4EEC+kErCilhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1JlYXNv",
+            "bmluZ0VuZ2luZRIiChVkaXNhYmxlX2NvbnNvbGlkYXRpb24YBCABKAhCA+BB",
+            "ARJXCgVzY29wZRgIIAMoCzJDLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuR2VuZXJhdGVNZW1vcmllc1JlcXVlc3QuU2NvcGVFbnRyeUID4EEB",
+            "GrkBChNWZXJ0ZXhTZXNzaW9uU291cmNlEjoKB3Nlc3Npb24YASABKAlCKeBB",
+            "AvpBIwohYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEjMKCnN0",
+            "YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQESMQoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQEayQEKFERpcmVjdENvbnRlbnRzU291cmNlEmgKBmV2ZW50cxgB",
+            "IAMoCzJTLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2VuZXJh",
+            "dGVNZW1vcmllc1JlcXVlc3QuRGlyZWN0Q29udGVudHNTb3VyY2UuRXZlbnRC",
+            "A+BBAhpHCgVFdmVudBI+Cgdjb250ZW50GAEgASgLMiguZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5Db250ZW50QgPgQQIaswEKFERpcmVjdE1l",
+            "bW9yaWVzU291cmNlEngKD2RpcmVjdF9tZW1vcmllcxgBIAMoCzJaLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2VuZXJhdGVNZW1vcmllc1Jl",
+            "cXVlc3QuRGlyZWN0TWVtb3JpZXNTb3VyY2UuRGlyZWN0TWVtb3J5QgPgQQIa",
+            "IQoMRGlyZWN0TWVtb3J5EhEKBGZhY3QYASABKAlCA+BBAhosCgpTY29wZUVu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNl",
+            "IvkCChhHZW5lcmF0ZU1lbW9yaWVzUmVzcG9uc2USZQoSZ2VuZXJhdGVkX21l",
+            "bW9yaWVzGAEgAygLMkkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5HZW5lcmF0ZU1lbW9yaWVzUmVzcG9uc2UuR2VuZXJhdGVkTWVtb3J5GvUB",
+            "Cg9HZW5lcmF0ZWRNZW1vcnkSNwoGbWVtb3J5GAEgASgLMicuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5NZW1vcnkSYAoGYWN0aW9uGAIgASgO",
+            "MlAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HZW5lcmF0ZU1l",
+            "bW9yaWVzUmVzcG9uc2UuR2VuZXJhdGVkTWVtb3J5LkFjdGlvbiJHCgZBY3Rp",
+            "b24SFgoSQUNUSU9OX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQ",
+            "REFURUQQAhILCgdERUxFVEVEEAMieAohR2VuZXJhdGVNZW1vcmllc09wZXJh",
+            "dGlvbk1ldGFkYXRhElMKEGdlbmVyaWNfbWV0YWRhdGEYASABKAsyOS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdlbmVyaWNPcGVyYXRpb25N",
+            "ZXRhZGF0YSLyBAoXUmV0cmlldmVNZW1vcmllc1JlcXVlc3QScwoYc2ltaWxh",
+            "cml0eV9zZWFyY2hfcGFyYW1zGAYgASgLMk8uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5SZXRyaWV2ZU1lbW9yaWVzUmVxdWVzdC5TaW1pbGFy",
+            "aXR5U2VhcmNoUGFyYW1zSAAScQoXc2ltcGxlX3JldHJpZXZhbF9wYXJhbXMY",
+            "ByABKAsyTi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJldHJp",
+            "ZXZlTWVtb3JpZXNSZXF1ZXN0LlNpbXBsZVJldHJpZXZhbFBhcmFtc0gAEkEK",
+            "BnBhcmVudBgBIAEoCUIx4EEC+kErCilhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
+            "Y29tL1JlYXNvbmluZ0VuZ2luZRJXCgVzY29wZRgIIAMoCzJDLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmV0cmlldmVNZW1vcmllc1JlcXVl",
+            "c3QuU2NvcGVFbnRyeUID4EECGkcKFlNpbWlsYXJpdHlTZWFyY2hQYXJhbXMS",
+            "GQoMc2VhcmNoX3F1ZXJ5GAEgASgJQgPgQQISEgoFdG9wX2sYAiABKAVCA+BB",
+            "ARpIChVTaW1wbGVSZXRyaWV2YWxQYXJhbXMSFgoJcGFnZV9zaXplGAEgASgF",
+            "QgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBGiwKClNjb3BlRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUISChByZXRyaWV2YWxf",
+            "cGFyYW1zIvgBChhSZXRyaWV2ZU1lbW9yaWVzUmVzcG9uc2USZQoScmV0cmll",
+            "dmVkX21lbW9yaWVzGAEgAygLMkkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5SZXRyaWV2ZU1lbW9yaWVzUmVzcG9uc2UuUmV0cmlldmVkTWVt",
+            "b3J5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRpcCg9SZXRyaWV2ZWRNZW1v",
+            "cnkSNwoGbWVtb3J5GAEgASgLMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5NZW1vcnkSEAoIZGlzdGFuY2UYAiABKAEy4RAKEU1lbW9yeUJh",
+            "bmtTZXJ2aWNlEp4CCgxDcmVhdGVNZW1vcnkSNC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExLkNyZWF0ZU1lbW9yeVJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrgBykEnCgZNZW1vcnkSHUNyZWF0ZU1l",
+            "bW9yeU9wZXJhdGlvbk1ldGFkYXRhgtPkkwKHASJEL3YxYmV0YTEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlYXNvbmluZ0VuZ2luZXMvKn0v",
+            "bWVtb3JpZXM6Bm1lbW9yeVo3Ii0vdjFiZXRhMS97cGFyZW50PXJlYXNvbmlu",
+            "Z0VuZ2luZXMvKn0vbWVtb3JpZXM6Bm1lbW9yeRLuAQoJR2V0TWVtb3J5EjEu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HZXRNZW1vcnlSZXF1",
+            "ZXN0GicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5NZW1vcnki",
+            "hAHaQQRuYW1lgtPkkwJ3EkQvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3JlYXNvbmluZ0VuZ2luZXMvKi9tZW1vcmllcy8qfVovEi0v",
+            "djFiZXRhMS97bmFtZT1yZWFzb25pbmdFbmdpbmVzLyovbWVtb3JpZXMvKn0S",
+            "wQIKDFVwZGF0ZU1lbW9yeRI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuVXBkYXRlTWVtb3J5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24i2wHKQScKBk1lbW9yeRIdVXBkYXRlTWVtb3J5T3BlcmF0",
+            "aW9uTWV0YWRhdGHaQRJtZW1vcnksdXBkYXRlX21hc2uC0+STApUBMksvdjFi",
+            "ZXRhMS97bWVtb3J5Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWFz",
+            "b25pbmdFbmdpbmVzLyovbWVtb3JpZXMvKn06Bm1lbW9yeVo+MjQvdjFiZXRh",
+            "MS97bWVtb3J5Lm5hbWU9cmVhc29uaW5nRW5naW5lcy8qL21lbW9yaWVzLyp9",
+            "OgZtZW1vcnkShAIKDExpc3RNZW1vcmllcxI0Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuTGlzdE1lbW9yaWVzUmVxdWVzdBo1Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuTGlzdE1lbW9yaWVzUmVzcG9uc2Ui",
+            "hgHaQQZwYXJlbnSC0+STAncSRC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9yZWFzb25pbmdFbmdpbmVzLyp9L21lbW9yaWVzWi8S",
+            "LS92MWJldGExL3twYXJlbnQ9cmVhc29uaW5nRW5naW5lcy8qfS9tZW1vcmll",
+            "cxKjAgoMRGVsZXRlTWVtb3J5EjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5EZWxldGVNZW1vcnlSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiK9AcpBNgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5Eh1E",
+            "ZWxldGVNZW1vcnlPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAncqRC92",
+            "MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVhc29uaW5n",
+            "RW5naW5lcy8qL21lbW9yaWVzLyp9Wi8qLS92MWJldGExL3tuYW1lPXJlYXNv",
+            "bmluZ0VuZ2luZXMvKi9tZW1vcmllcy8qfRLNAgoQR2VuZXJhdGVNZW1vcmll",
+            "cxI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR2VuZXJhdGVN",
+            "ZW1vcmllc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "It8BykE9ChhHZW5lcmF0ZU1lbW9yaWVzUmVzcG9uc2USIUdlbmVyYXRlTWVt",
+            "b3JpZXNPcGVyYXRpb25NZXRhZGF0YdpBBnBhcmVudILT5JMCjwEiTS92MWJl",
+            "dGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWFzb25pbmdF",
+            "bmdpbmVzLyp9L21lbW9yaWVzOmdlbmVyYXRlOgEqWjsiNi92MWJldGExL3tw",
+            "YXJlbnQ9cmVhc29uaW5nRW5naW5lcy8qfS9tZW1vcmllczpnZW5lcmF0ZToB",
+            "KhKpAgoQUmV0cmlldmVNZW1vcmllcxI4Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuUmV0cmlldmVNZW1vcmllc1JlcXVlc3QaOS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJldHJpZXZlTWVtb3JpZXNSZXNw",
+            "b25zZSKfAdpBBnBhcmVudILT5JMCjwEiTS92MWJldGExL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9yZWFzb25pbmdFbmdpbmVzLyp9L21lbW9y",
+            "aWVzOnJldHJpZXZlOgEqWjsiNi92MWJldGExL3twYXJlbnQ9cmVhc29uaW5n",
+            "RW5naW5lcy8qfS9tZW1vcmllczpyZXRyaWV2ZToBKhpNykEZYWlwbGF0Zm9y",
+            "bS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm1C7QEKI2NvbS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExQhZNZW1vcnlCYW5rU2VydmljZVByb3RvUAFaQ2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
+            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
+            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
+            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MemoryBankReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -175,8 +181,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse), global::Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse.Parser, new[]{ "Memories", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryRequest), global::Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata), global::Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Parser, new[]{ "VertexSessionSource", "DirectContentsSource", "Parent", "DisableConsolidation", "Scope" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.VertexSessionSource), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.VertexSessionSource.Parser, new[]{ "Session", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Parser, new[]{ "VertexSessionSource", "DirectContentsSource", "DirectMemoriesSource", "Parent", "DisableConsolidation", "Scope" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.VertexSessionSource), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.VertexSessionSource.Parser, new[]{ "Session", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectContentsSource), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectContentsSource.Parser, new[]{ "Events" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectContentsSource.Types.Event), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectContentsSource.Types.Event.Parser, new[]{ "Content" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Parser, new[]{ "DirectMemories" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory.Parser, new[]{ "Fact" }, null, null, null, null)}),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse.Parser, new[]{ "GeneratedMemories" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse.Types.GeneratedMemory), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse.Types.GeneratedMemory.Parser, new[]{ "Memory", "Action" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse.Types.GeneratedMemory.Types.Action) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata), global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
@@ -2318,6 +2325,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         case SourceOneofCase.DirectContentsSource:
           DirectContentsSource = other.DirectContentsSource.Clone();
           break;
+        case SourceOneofCase.DirectMemoriesSource:
+          DirectMemoriesSource = other.DirectMemoriesSource.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2358,6 +2368,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       set {
         source_ = value;
         sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.DirectContentsSource;
+      }
+    }
+
+    /// <summary>Field number for the "direct_memories_source" field.</summary>
+    public const int DirectMemoriesSourceFieldNumber = 9;
+    /// <summary>
+    /// Defines a direct source of memories that should be uploaded to Memory
+    /// Bank. This is similar to `CreateMemory`, but it allows for consolidation
+    /// between these new memories and existing memories for the same scope.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource DirectMemoriesSource {
+      get { return sourceCase_ == SourceOneofCase.DirectMemoriesSource ? (global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.DirectMemoriesSource;
       }
     }
 
@@ -2420,6 +2447,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       None = 0,
       VertexSessionSource = 2,
       DirectContentsSource = 3,
+      DirectMemoriesSource = 9,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2452,6 +2480,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (!object.Equals(VertexSessionSource, other.VertexSessionSource)) return false;
       if (!object.Equals(DirectContentsSource, other.DirectContentsSource)) return false;
+      if (!object.Equals(DirectMemoriesSource, other.DirectMemoriesSource)) return false;
       if (Parent != other.Parent) return false;
       if (DisableConsolidation != other.DisableConsolidation) return false;
       if (!Scope.Equals(other.Scope)) return false;
@@ -2465,6 +2494,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.VertexSessionSource) hash ^= VertexSessionSource.GetHashCode();
       if (sourceCase_ == SourceOneofCase.DirectContentsSource) hash ^= DirectContentsSource.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.DirectMemoriesSource) hash ^= DirectMemoriesSource.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (DisableConsolidation != false) hash ^= DisableConsolidation.GetHashCode();
       hash ^= Scope.GetHashCode();
@@ -2504,6 +2534,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteBool(DisableConsolidation);
       }
       scope_.WriteTo(output, _map_scope_codec);
+      if (sourceCase_ == SourceOneofCase.DirectMemoriesSource) {
+        output.WriteRawTag(74);
+        output.WriteMessage(DirectMemoriesSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2531,6 +2565,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteBool(DisableConsolidation);
       }
       scope_.WriteTo(ref output, _map_scope_codec);
+      if (sourceCase_ == SourceOneofCase.DirectMemoriesSource) {
+        output.WriteRawTag(74);
+        output.WriteMessage(DirectMemoriesSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2546,6 +2584,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (sourceCase_ == SourceOneofCase.DirectContentsSource) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DirectContentsSource);
+      }
+      if (sourceCase_ == SourceOneofCase.DirectMemoriesSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DirectMemoriesSource);
       }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
@@ -2585,6 +2626,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             DirectContentsSource = new global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectContentsSource();
           }
           DirectContentsSource.MergeFrom(other.DirectContentsSource);
+          break;
+        case SourceOneofCase.DirectMemoriesSource:
+          if (DirectMemoriesSource == null) {
+            DirectMemoriesSource = new global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource();
+          }
+          DirectMemoriesSource.MergeFrom(other.DirectMemoriesSource);
           break;
       }
 
@@ -2633,6 +2680,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             scope_.AddEntriesFrom(input, _map_scope_codec);
             break;
           }
+          case 74: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource();
+            if (sourceCase_ == SourceOneofCase.DirectMemoriesSource) {
+              subBuilder.MergeFrom(DirectMemoriesSource);
+            }
+            input.ReadMessage(subBuilder);
+            DirectMemoriesSource = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2676,6 +2732,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 66: {
             scope_.AddEntriesFrom(ref input, _map_scope_codec);
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource();
+            if (sourceCase_ == SourceOneofCase.DirectMemoriesSource) {
+              subBuilder.MergeFrom(DirectMemoriesSource);
+            }
+            input.ReadMessage(subBuilder);
+            DirectMemoriesSource = subBuilder;
             break;
           }
         }
@@ -3374,6 +3439,397 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                       Content = new global::Google.Cloud.AIPlatform.V1Beta1.Content();
                     }
                     input.ReadMessage(Content);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Defines a direct source of memories that should be uploaded to Memory Bank
+      /// with consolidation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DirectMemoriesSource : pb::IMessage<DirectMemoriesSource>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DirectMemoriesSource> _parser = new pb::MessageParser<DirectMemoriesSource>(() => new DirectMemoriesSource());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DirectMemoriesSource> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DirectMemoriesSource() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DirectMemoriesSource(DirectMemoriesSource other) : this() {
+          directMemories_ = other.directMemories_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DirectMemoriesSource Clone() {
+          return new DirectMemoriesSource(this);
+        }
+
+        /// <summary>Field number for the "direct_memories" field.</summary>
+        public const int DirectMemoriesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory> _repeated_directMemories_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory> directMemories_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory>();
+        /// <summary>
+        /// Required. The direct memories to upload to Memory Bank. At most 5 direct
+        /// memories are allowed per request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Types.DirectMemory> DirectMemories {
+          get { return directMemories_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DirectMemoriesSource);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DirectMemoriesSource other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!directMemories_.Equals(other.directMemories_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= directMemories_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          directMemories_.WriteTo(output, _repeated_directMemories_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          directMemories_.WriteTo(ref output, _repeated_directMemories_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += directMemories_.CalculateSize(_repeated_directMemories_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DirectMemoriesSource other) {
+          if (other == null) {
+            return;
+          }
+          directMemories_.Add(other.directMemories_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                directMemories_.AddEntriesFrom(input, _repeated_directMemories_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                directMemories_.AddEntriesFrom(ref input, _repeated_directMemories_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DirectMemoriesSource message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// A direct memory to upload to Memory Bank.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DirectMemory : pb::IMessage<DirectMemory>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DirectMemory> _parser = new pb::MessageParser<DirectMemory>(() => new DirectMemory());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DirectMemory> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest.Types.DirectMemoriesSource.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DirectMemory() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DirectMemory(DirectMemory other) : this() {
+              fact_ = other.fact_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DirectMemory Clone() {
+              return new DirectMemory(this);
+            }
+
+            /// <summary>Field number for the "fact" field.</summary>
+            public const int FactFieldNumber = 1;
+            private string fact_ = "";
+            /// <summary>
+            /// Required. The fact to consolidate with existing memories.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Fact {
+              get { return fact_; }
+              set {
+                fact_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DirectMemory);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DirectMemory other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Fact != other.Fact) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Fact.Length != 0) hash ^= Fact.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Fact.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Fact);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Fact.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Fact);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Fact.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Fact);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DirectMemory other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Fact.Length != 0) {
+                Fact = other.Fact;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Fact = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Fact = input.ReadString();
                     break;
                   }
                 }

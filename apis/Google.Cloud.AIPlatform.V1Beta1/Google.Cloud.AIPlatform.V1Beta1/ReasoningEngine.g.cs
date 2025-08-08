@@ -29,9 +29,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aNWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0",
             "YTEvZW5jcnlwdGlvbl9zcGVjLnByb3RvGi1nb29nbGUvY2xvdWQvYWlwbGF0",
-            "Zm9ybS92MWJldGExL2Vudl92YXIucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
+            "Zm9ybS92MWJldGExL2Vudl92YXIucHJvdG8aOGdvb2dsZS9jbG91ZC9haXBs",
+            "YXRmb3JtL3YxYmV0YTEvc2VydmljZV9uZXR3b3JraW5nLnByb3RvGh5nb29n",
+            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
             "dHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "kAUKE1JlYXNvbmluZ0VuZ2luZVNwZWMSIQoPc2VydmljZV9hY2NvdW50GAEg",
+            "vwgKE1JlYXNvbmluZ0VuZ2luZVNwZWMSIQoPc2VydmljZV9hY2NvdW50GAEg",
             "ASgJQgPgQQFIAIgBARJbCgxwYWNrYWdlX3NwZWMYAiABKAsyQC5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZVNwZWMu",
             "UGFja2FnZVNwZWNCA+BBARJhCg9kZXBsb3ltZW50X3NwZWMYBCABKAsyQy5n",
@@ -41,51 +43,73 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "YW1ld29yaxgFIAEoCUID4EEBGpgBCgtQYWNrYWdlU3BlYxIiChVwaWNrbGVf",
             "b2JqZWN0X2djc191cmkYASABKAlCA+BBARIlChhkZXBlbmRlbmN5X2ZpbGVz",
             "X2djc191cmkYAiABKAlCA+BBARIhChRyZXF1aXJlbWVudHNfZ2NzX3VyaRgD",
-            "IAEoCUID4EEBEhsKDnB5dGhvbl92ZXJzaW9uGAQgASgJQgPgQQEakwEKDkRl",
+            "IAEoCUID4EEBEhsKDnB5dGhvbl92ZXJzaW9uGAQgASgJQgPgQQEawgQKDkRl",
             "cGxveW1lbnRTcGVjEjkKA2VudhgBIAMoCzInLmdvb2dsZS5jbG91ZC5haXBs",
             "YXRmb3JtLnYxYmV0YTEuRW52VmFyQgPgQQESRgoKc2VjcmV0X2VudhgCIAMo",
             "CzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2VjcmV0RW52",
-            "VmFyQgPgQQFCEgoQX3NlcnZpY2VfYWNjb3VudCLlBAoPUmVhc29uaW5nRW5n",
-            "aW5lEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
-            "A+BBAhIYCgtkZXNjcmlwdGlvbhgHIAEoCUID4EEBEkcKBHNwZWMYAyABKAsy",
-            "NC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0Vu",
-            "Z2luZVNwZWNCA+BBARI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAYgASgJ",
-            "QgPgQQESVgoMY29udGV4dF9zcGVjGAkgASgLMjsuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVDb250ZXh0U3BlY0ID",
-            "4EEBEkgKD2VuY3J5cHRpb25fc3BlYxgLIAEoCzIvLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxYmV0YTEuRW5jcnlwdGlvblNwZWM6nwHqQZsBCilhaXBs",
-            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL1JlYXNvbmluZ0VuZ2luZRJLcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlYXNvbmluZ0Vu",
-            "Z2luZXMve3JlYXNvbmluZ19lbmdpbmV9KhByZWFzb25pbmdFbmdpbmVzMg9y",
-            "ZWFzb25pbmdFbmdpbmUi2gQKGlJlYXNvbmluZ0VuZ2luZUNvbnRleHRTcGVj",
-            "Em0KEm1lbW9yeV9iYW5rX2NvbmZpZxgBIAEoCzJMLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxYmV0YTEuUmVhc29uaW5nRW5naW5lQ29udGV4dFNwZWMu",
-            "TWVtb3J5QmFua0NvbmZpZ0ID4EEBGswDChBNZW1vcnlCYW5rQ29uZmlnEn0K",
-            "EWdlbmVyYXRpb25fY29uZmlnGAEgASgLMl0uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVDb250ZXh0U3BlYy5NZW1v",
-            "cnlCYW5rQ29uZmlnLkdlbmVyYXRpb25Db25maWdCA+BBARKKAQoYc2ltaWxh",
-            "cml0eV9zZWFyY2hfY29uZmlnGAIgASgLMmMuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVDb250ZXh0U3BlYy5NZW1v",
-            "cnlCYW5rQ29uZmlnLlNpbWlsYXJpdHlTZWFyY2hDb25maWdCA+BBARpNChBH",
-            "ZW5lcmF0aW9uQ29uZmlnEjkKBW1vZGVsGAEgASgJQirgQQL6QSQKImFpcGxh",
-            "dGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQaXQoWU2ltaWxhcml0eVNl",
-            "YXJjaENvbmZpZxJDCg9lbWJlZGRpbmdfbW9kZWwYASABKAlCKuBBAvpBJAoi",
-            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FbmRwb2ludELrAQojY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCFFJlYXNvbmluZ0VuZ2lu",
-            "ZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xv",
-            "dWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZv",
-            "cm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "VmFyQgPgQQESVgoUcHNjX2ludGVyZmFjZV9jb25maWcYBCABKAsyMy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlBzY0ludGVyZmFjZUNvbmZp",
+            "Z0ID4EEBEh8KDW1pbl9pbnN0YW5jZXMYBSABKAVCA+BBAUgAiAEBEh8KDW1h",
+            "eF9pbnN0YW5jZXMYBiABKAVCA+BBAUgBiAEBEnUKD3Jlc291cmNlX2xpbWl0",
+            "cxgHIAMoCzJXLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVh",
+            "c29uaW5nRW5naW5lU3BlYy5EZXBsb3ltZW50U3BlYy5SZXNvdXJjZUxpbWl0",
+            "c0VudHJ5QgPgQQESJwoVY29udGFpbmVyX2NvbmN1cnJlbmN5GAggASgFQgPg",
+            "QQFIAogBARo1ChNSZXNvdXJjZUxpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAFCEAoOX21pbl9pbnN0YW5jZXNCEAoOX21heF9p",
+            "bnN0YW5jZXNCGAoWX2NvbnRhaW5lcl9jb25jdXJyZW5jeUISChBfc2Vydmlj",
+            "ZV9hY2NvdW50IuUECg9SZWFzb25pbmdFbmdpbmUSEQoEbmFtZRgBIAEoCUID",
+            "4EEIEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9u",
+            "GAcgASgJQgPgQQESRwoEc3BlYxgDIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuUmVhc29uaW5nRW5naW5lU3BlY0ID4EEBEjQKC2Ny",
+            "ZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEhEKBGV0YWcYBiABKAlCA+BBARJWCgxjb250ZXh0X3Nw",
+            "ZWMYCSABKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJl",
+            "YXNvbmluZ0VuZ2luZUNvbnRleHRTcGVjQgPgQQESSAoPZW5jcnlwdGlvbl9z",
+            "cGVjGAsgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5F",
+            "bmNyeXB0aW9uU3BlYzqfAepBmwEKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
+            "b20vUmVhc29uaW5nRW5naW5lEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vcmVhc29uaW5nRW5naW5lcy97cmVhc29uaW5nX2Vu",
+            "Z2luZX0qEHJlYXNvbmluZ0VuZ2luZXMyD3JlYXNvbmluZ0VuZ2luZSLsCAoa",
+            "UmVhc29uaW5nRW5naW5lQ29udGV4dFNwZWMSbQoSbWVtb3J5X2JhbmtfY29u",
+            "ZmlnGAEgASgLMkwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5S",
+            "ZWFzb25pbmdFbmdpbmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnQgPg",
+            "QQEa3gcKEE1lbW9yeUJhbmtDb25maWcSfQoRZ2VuZXJhdGlvbl9jb25maWcY",
+            "ASABKAsyXS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNv",
+            "bmluZ0VuZ2luZUNvbnRleHRTcGVjLk1lbW9yeUJhbmtDb25maWcuR2VuZXJh",
+            "dGlvbkNvbmZpZ0ID4EEBEooBChhzaW1pbGFyaXR5X3NlYXJjaF9jb25maWcY",
+            "AiABKAsyYy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNv",
+            "bmluZ0VuZ2luZUNvbnRleHRTcGVjLk1lbW9yeUJhbmtDb25maWcuU2ltaWxh",
+            "cml0eVNlYXJjaENvbmZpZ0ID4EEBEm8KCnR0bF9jb25maWcYBSABKAsyVi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2lu",
+            "ZUNvbnRleHRTcGVjLk1lbW9yeUJhbmtDb25maWcuVHRsQ29uZmlnQgPgQQEa",
+            "ngMKCVR0bENvbmZpZxI1CgtkZWZhdWx0X3R0bBgBIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbkID4EEBSAASjAEKE2dyYW51bGFyX3R0bF9jb25m",
+            "aWcYAiABKAsyaC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJl",
+            "YXNvbmluZ0VuZ2luZUNvbnRleHRTcGVjLk1lbW9yeUJhbmtDb25maWcuVHRs",
+            "Q29uZmlnLkdyYW51bGFyVHRsQ29uZmlnQgPgQQFIABrDAQoRR3JhbnVsYXJU",
+            "dGxDb25maWcSMgoKY3JlYXRlX3R0bBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbkID4EEBEjwKFGdlbmVyYXRlX2NyZWF0ZWRfdHRsGAIgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQESPAoUZ2VuZXJhdGVf",
+            "dXBkYXRlZF90dGwYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25C",
+            "A+BBAUIFCgN0dGwaTQoQR2VuZXJhdGlvbkNvbmZpZxI5CgVtb2RlbBgBIAEo",
+            "CUIq4EEC+kEkCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBvaW50",
+            "Gl0KFlNpbWlsYXJpdHlTZWFyY2hDb25maWcSQwoPZW1iZWRkaW5nX21vZGVs",
+            "GAEgASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5k",
+            "cG9pbnRC6wEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "QhRSZWFzb25pbmdFbmdpbmVQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
+            "bXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2ds",
+            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpB",
+            "SVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Parser, new[]{ "ServiceAccount", "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, new[]{ "ServiceAccount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv", "PscInterfaceConfig", "MinInstances", "MaxInstances", "ResourceLimits", "ContainerConcurrency" }, new[]{ "MinInstances", "MaxInstances", "ContainerConcurrency" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag", "ContextSpec", "EncryptionSpec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Parser, new[]{ "MemoryBankConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Parser, new[]{ "GenerationConfig", "SimilaritySearchConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Parser, new[]{ "MemoryBankConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Parser, new[]{ "GenerationConfig", "SimilaritySearchConfig", "TtlConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Parser, new[]{ "DefaultTtl", "GranularTtlConfig" }, new[]{ "Ttl" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig.Parser, new[]{ "CreateTtl", "GenerateCreatedTtl", "GenerateUpdatedTtl" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig.Parser, new[]{ "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig.Parser, new[]{ "EmbeddingModel" }, null, null, null, null)})})
           }));
     }
@@ -811,6 +835,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         private static readonly pb::MessageParser<DeploymentSpec> _parser = new pb::MessageParser<DeploymentSpec>(() => new DeploymentSpec());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeploymentSpec> Parser { get { return _parser; } }
@@ -838,8 +863,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeploymentSpec(DeploymentSpec other) : this() {
+          _hasBits0 = other._hasBits0;
           env_ = other.env_.Clone();
           secretEnv_ = other.secretEnv_.Clone();
+          pscInterfaceConfig_ = other.pscInterfaceConfig_ != null ? other.pscInterfaceConfig_.Clone() : null;
+          minInstances_ = other.minInstances_;
+          maxInstances_ = other.maxInstances_;
+          resourceLimits_ = other.resourceLimits_.Clone();
+          containerConcurrency_ = other.containerConcurrency_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -883,6 +914,135 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return secretEnv_; }
         }
 
+        /// <summary>Field number for the "psc_interface_config" field.</summary>
+        public const int PscInterfaceConfigFieldNumber = 4;
+        private global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig pscInterfaceConfig_;
+        /// <summary>
+        /// Optional. Configuration for PSC-I.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig PscInterfaceConfig {
+          get { return pscInterfaceConfig_; }
+          set {
+            pscInterfaceConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_instances" field.</summary>
+        public const int MinInstancesFieldNumber = 5;
+        private readonly static int MinInstancesDefaultValue = 0;
+
+        private int minInstances_;
+        /// <summary>
+        /// Optional. The minimum number of application instances that will be kept
+        /// running at all times. Defaults to 1.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinInstances {
+          get { if ((_hasBits0 & 1) != 0) { return minInstances_; } else { return MinInstancesDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            minInstances_ = value;
+          }
+        }
+        /// <summary>Gets whether the "min_instances" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinInstances {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "min_instances" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinInstances() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "max_instances" field.</summary>
+        public const int MaxInstancesFieldNumber = 6;
+        private readonly static int MaxInstancesDefaultValue = 0;
+
+        private int maxInstances_;
+        /// <summary>
+        /// Optional. The maximum number of application instances that can be
+        /// launched to handle increased traffic. Defaults to 100.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxInstances {
+          get { if ((_hasBits0 & 2) != 0) { return maxInstances_; } else { return MaxInstancesDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            maxInstances_ = value;
+          }
+        }
+        /// <summary>Gets whether the "max_instances" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxInstances {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "max_instances" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxInstances() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "resource_limits" field.</summary>
+        public const int ResourceLimitsFieldNumber = 7;
+        private static readonly pbc::MapField<string, string>.Codec _map_resourceLimits_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+        private readonly pbc::MapField<string, string> resourceLimits_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Optional. Resource limits for each container. Only 'cpu' and 'memory'
+        /// keys are supported. Defaults to {"cpu": "4", "memory": "4Gi"}.
+        ///
+        ///   * The only supported values for CPU are '1', '2', '4', and '8'. For
+        ///   more information, go to
+        ///   https://cloud.google.com/run/docs/configuring/cpu.
+        ///   * For supported 'memory' values and syntax, go to
+        ///   https://cloud.google.com/run/docs/configuring/memory-limits
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> ResourceLimits {
+          get { return resourceLimits_; }
+        }
+
+        /// <summary>Field number for the "container_concurrency" field.</summary>
+        public const int ContainerConcurrencyFieldNumber = 8;
+        private readonly static int ContainerConcurrencyDefaultValue = 0;
+
+        private int containerConcurrency_;
+        /// <summary>
+        /// Optional. Concurrency for each container and agent server. Recommended
+        /// value: 2 * cpu + 1. Defaults to 9.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ContainerConcurrency {
+          get { if ((_hasBits0 & 4) != 0) { return containerConcurrency_; } else { return ContainerConcurrencyDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            containerConcurrency_ = value;
+          }
+        }
+        /// <summary>Gets whether the "container_concurrency" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasContainerConcurrency {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "container_concurrency" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearContainerConcurrency() {
+          _hasBits0 &= ~4;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -900,6 +1060,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if(!env_.Equals(other.env_)) return false;
           if(!secretEnv_.Equals(other.secretEnv_)) return false;
+          if (!object.Equals(PscInterfaceConfig, other.PscInterfaceConfig)) return false;
+          if (MinInstances != other.MinInstances) return false;
+          if (MaxInstances != other.MaxInstances) return false;
+          if (!ResourceLimits.Equals(other.ResourceLimits)) return false;
+          if (ContainerConcurrency != other.ContainerConcurrency) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -909,6 +1074,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           hash ^= env_.GetHashCode();
           hash ^= secretEnv_.GetHashCode();
+          if (pscInterfaceConfig_ != null) hash ^= PscInterfaceConfig.GetHashCode();
+          if (HasMinInstances) hash ^= MinInstances.GetHashCode();
+          if (HasMaxInstances) hash ^= MaxInstances.GetHashCode();
+          hash ^= ResourceLimits.GetHashCode();
+          if (HasContainerConcurrency) hash ^= ContainerConcurrency.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -929,6 +1099,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         #else
           env_.WriteTo(output, _repeated_env_codec);
           secretEnv_.WriteTo(output, _repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            output.WriteRawTag(40);
+            output.WriteInt32(MinInstances);
+          }
+          if (HasMaxInstances) {
+            output.WriteRawTag(48);
+            output.WriteInt32(MaxInstances);
+          }
+          resourceLimits_.WriteTo(output, _map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            output.WriteRawTag(64);
+            output.WriteInt32(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -941,6 +1128,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           env_.WriteTo(ref output, _repeated_env_codec);
           secretEnv_.WriteTo(ref output, _repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            output.WriteRawTag(40);
+            output.WriteInt32(MinInstances);
+          }
+          if (HasMaxInstances) {
+            output.WriteRawTag(48);
+            output.WriteInt32(MaxInstances);
+          }
+          resourceLimits_.WriteTo(ref output, _map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            output.WriteRawTag(64);
+            output.WriteInt32(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -953,6 +1157,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int size = 0;
           size += env_.CalculateSize(_repeated_env_codec);
           size += secretEnv_.CalculateSize(_repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinInstances);
+          }
+          if (HasMaxInstances) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstances);
+          }
+          size += resourceLimits_.CalculateSize(_map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -967,6 +1184,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           env_.Add(other.env_);
           secretEnv_.Add(other.secretEnv_);
+          if (other.pscInterfaceConfig_ != null) {
+            if (pscInterfaceConfig_ == null) {
+              PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig();
+            }
+            PscInterfaceConfig.MergeFrom(other.PscInterfaceConfig);
+          }
+          if (other.HasMinInstances) {
+            MinInstances = other.MinInstances;
+          }
+          if (other.HasMaxInstances) {
+            MaxInstances = other.MaxInstances;
+          }
+          resourceLimits_.MergeFrom(other.resourceLimits_);
+          if (other.HasContainerConcurrency) {
+            ContainerConcurrency = other.ContainerConcurrency;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -990,6 +1223,29 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 secretEnv_.AddEntriesFrom(input, _repeated_secretEnv_codec);
                 break;
               }
+              case 34: {
+                if (pscInterfaceConfig_ == null) {
+                  PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig();
+                }
+                input.ReadMessage(PscInterfaceConfig);
+                break;
+              }
+              case 40: {
+                MinInstances = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                MaxInstances = input.ReadInt32();
+                break;
+              }
+              case 58: {
+                resourceLimits_.AddEntriesFrom(input, _map_resourceLimits_codec);
+                break;
+              }
+              case 64: {
+                ContainerConcurrency = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -1011,6 +1267,29 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 18: {
                 secretEnv_.AddEntriesFrom(ref input, _repeated_secretEnv_codec);
+                break;
+              }
+              case 34: {
+                if (pscInterfaceConfig_ == null) {
+                  PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig();
+                }
+                input.ReadMessage(PscInterfaceConfig);
+                break;
+              }
+              case 40: {
+                MinInstances = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                MaxInstances = input.ReadInt32();
+                break;
+              }
+              case 58: {
+                resourceLimits_.AddEntriesFrom(ref input, _map_resourceLimits_codec);
+                break;
+              }
+              case 64: {
+                ContainerConcurrency = input.ReadInt32();
                 break;
               }
             }
@@ -1842,6 +2121,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public MemoryBankConfig(MemoryBankConfig other) : this() {
           generationConfig_ = other.generationConfig_ != null ? other.generationConfig_.Clone() : null;
           similaritySearchConfig_ = other.similaritySearchConfig_ != null ? other.similaritySearchConfig_.Clone() : null;
+          ttlConfig_ = other.ttlConfig_ != null ? other.ttlConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1883,6 +2163,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "ttl_config" field.</summary>
+        public const int TtlConfigFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig ttlConfig_;
+        /// <summary>
+        /// Optional. Configuration for automatic TTL ("time-to-live") of the
+        /// memories in the Memory Bank. If not set, TTL will not be applied
+        /// automatically. The TTL can be explicitly set by modifying the
+        /// `expire_time` of each Memory resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig TtlConfig {
+          get { return ttlConfig_; }
+          set {
+            ttlConfig_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1900,6 +2198,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (!object.Equals(GenerationConfig, other.GenerationConfig)) return false;
           if (!object.Equals(SimilaritySearchConfig, other.SimilaritySearchConfig)) return false;
+          if (!object.Equals(TtlConfig, other.TtlConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1909,6 +2208,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (generationConfig_ != null) hash ^= GenerationConfig.GetHashCode();
           if (similaritySearchConfig_ != null) hash ^= SimilaritySearchConfig.GetHashCode();
+          if (ttlConfig_ != null) hash ^= TtlConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1935,6 +2235,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(18);
             output.WriteMessage(SimilaritySearchConfig);
           }
+          if (ttlConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(TtlConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1953,6 +2257,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(18);
             output.WriteMessage(SimilaritySearchConfig);
           }
+          if (ttlConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(TtlConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1968,6 +2276,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (similaritySearchConfig_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(SimilaritySearchConfig);
+          }
+          if (ttlConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TtlConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1992,6 +2303,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               SimilaritySearchConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig();
             }
             SimilaritySearchConfig.MergeFrom(other.SimilaritySearchConfig);
+          }
+          if (other.ttlConfig_ != null) {
+            if (ttlConfig_ == null) {
+              TtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig();
+            }
+            TtlConfig.MergeFrom(other.TtlConfig);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2020,6 +2337,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                   SimilaritySearchConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig();
                 }
                 input.ReadMessage(SimilaritySearchConfig);
+                break;
+              }
+              case 42: {
+                if (ttlConfig_ == null) {
+                  TtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig();
+                }
+                input.ReadMessage(TtlConfig);
                 break;
               }
             }
@@ -2051,6 +2375,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 input.ReadMessage(SimilaritySearchConfig);
                 break;
               }
+              case 42: {
+                if (ttlConfig_ == null) {
+                  TtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig();
+                }
+                input.ReadMessage(TtlConfig);
+                break;
+              }
             }
           }
         }
@@ -2061,6 +2392,621 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          /// <summary>
+          /// Configuration for automatically setting the TTL ("time-to-live") of the
+          /// memories in the Memory Bank.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TtlConfig : pb::IMessage<TtlConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TtlConfig> _parser = new pb::MessageParser<TtlConfig>(() => new TtlConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TtlConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlConfig(TtlConfig other) : this() {
+              switch (other.TtlCase) {
+                case TtlOneofCase.DefaultTtl:
+                  DefaultTtl = other.DefaultTtl.Clone();
+                  break;
+                case TtlOneofCase.GranularTtlConfig:
+                  GranularTtlConfig = other.GranularTtlConfig.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlConfig Clone() {
+              return new TtlConfig(this);
+            }
+
+            /// <summary>Field number for the "default_ttl" field.</summary>
+            public const int DefaultTtlFieldNumber = 1;
+            /// <summary>
+            /// Optional. The default TTL duration of the memories in the Memory
+            /// Bank. This applies to all operations that create or update a memory.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Duration DefaultTtl {
+              get { return ttlCase_ == TtlOneofCase.DefaultTtl ? (global::Google.Protobuf.WellKnownTypes.Duration) ttl_ : null; }
+              set {
+                ttl_ = value;
+                ttlCase_ = value == null ? TtlOneofCase.None : TtlOneofCase.DefaultTtl;
+              }
+            }
+
+            /// <summary>Field number for the "granular_ttl_config" field.</summary>
+            public const int GranularTtlConfigFieldNumber = 2;
+            /// <summary>
+            /// Optional. The granular TTL configuration of the memories in the
+            /// Memory Bank.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig GranularTtlConfig {
+              get { return ttlCase_ == TtlOneofCase.GranularTtlConfig ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig) ttl_ : null; }
+              set {
+                ttl_ = value;
+                ttlCase_ = value == null ? TtlOneofCase.None : TtlOneofCase.GranularTtlConfig;
+              }
+            }
+
+            private object ttl_;
+            /// <summary>Enum of possible cases for the "ttl" oneof.</summary>
+            public enum TtlOneofCase {
+              None = 0,
+              DefaultTtl = 1,
+              GranularTtlConfig = 2,
+            }
+            private TtlOneofCase ttlCase_ = TtlOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlOneofCase TtlCase {
+              get { return ttlCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearTtl() {
+              ttlCase_ = TtlOneofCase.None;
+              ttl_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TtlConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TtlConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(DefaultTtl, other.DefaultTtl)) return false;
+              if (!object.Equals(GranularTtlConfig, other.GranularTtlConfig)) return false;
+              if (TtlCase != other.TtlCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) hash ^= DefaultTtl.GetHashCode();
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) hash ^= GranularTtlConfig.GetHashCode();
+              hash ^= (int) ttlCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                output.WriteRawTag(10);
+                output.WriteMessage(DefaultTtl);
+              }
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                output.WriteRawTag(18);
+                output.WriteMessage(GranularTtlConfig);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                output.WriteRawTag(10);
+                output.WriteMessage(DefaultTtl);
+              }
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                output.WriteRawTag(18);
+                output.WriteMessage(GranularTtlConfig);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultTtl);
+              }
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(GranularTtlConfig);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TtlConfig other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.TtlCase) {
+                case TtlOneofCase.DefaultTtl:
+                  if (DefaultTtl == null) {
+                    DefaultTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                  }
+                  DefaultTtl.MergeFrom(other.DefaultTtl);
+                  break;
+                case TtlOneofCase.GranularTtlConfig:
+                  if (GranularTtlConfig == null) {
+                    GranularTtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig();
+                  }
+                  GranularTtlConfig.MergeFrom(other.GranularTtlConfig);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                      subBuilder.MergeFrom(DefaultTtl);
+                    }
+                    input.ReadMessage(subBuilder);
+                    DefaultTtl = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig();
+                    if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                      subBuilder.MergeFrom(GranularTtlConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    GranularTtlConfig = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                      subBuilder.MergeFrom(DefaultTtl);
+                    }
+                    input.ReadMessage(subBuilder);
+                    DefaultTtl = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig();
+                    if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                      subBuilder.MergeFrom(GranularTtlConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    GranularTtlConfig = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the TtlConfig message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Configuration for TTL of the memories in the Memory Bank based on the
+              /// action that created or updated the memory.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class GranularTtlConfig : pb::IMessage<GranularTtlConfig>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<GranularTtlConfig> _parser = new pb::MessageParser<GranularTtlConfig>(() => new GranularTtlConfig());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<GranularTtlConfig> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public GranularTtlConfig() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public GranularTtlConfig(GranularTtlConfig other) : this() {
+                  createTtl_ = other.createTtl_ != null ? other.createTtl_.Clone() : null;
+                  generateCreatedTtl_ = other.generateCreatedTtl_ != null ? other.generateCreatedTtl_.Clone() : null;
+                  generateUpdatedTtl_ = other.generateUpdatedTtl_ != null ? other.generateUpdatedTtl_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public GranularTtlConfig Clone() {
+                  return new GranularTtlConfig(this);
+                }
+
+                /// <summary>Field number for the "create_ttl" field.</summary>
+                public const int CreateTtlFieldNumber = 1;
+                private global::Google.Protobuf.WellKnownTypes.Duration createTtl_;
+                /// <summary>
+                /// Optional. The TTL duration for memories uploaded via CreateMemory.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration CreateTtl {
+                  get { return createTtl_; }
+                  set {
+                    createTtl_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "generate_created_ttl" field.</summary>
+                public const int GenerateCreatedTtlFieldNumber = 2;
+                private global::Google.Protobuf.WellKnownTypes.Duration generateCreatedTtl_;
+                /// <summary>
+                /// Optional. The TTL duration for memories newly generated via
+                /// GenerateMemories
+                /// ([GenerateMemoriesResponse.GeneratedMemory.Action.CREATED][google.cloud.aiplatform.v1beta1.GenerateMemoriesResponse.GeneratedMemory.Action.CREATED]).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration GenerateCreatedTtl {
+                  get { return generateCreatedTtl_; }
+                  set {
+                    generateCreatedTtl_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "generate_updated_ttl" field.</summary>
+                public const int GenerateUpdatedTtlFieldNumber = 3;
+                private global::Google.Protobuf.WellKnownTypes.Duration generateUpdatedTtl_;
+                /// <summary>
+                /// Optional. The TTL duration for memories updated via GenerateMemories
+                /// ([GenerateMemoriesResponse.GeneratedMemory.Action.CREATED][google.cloud.aiplatform.v1beta1.GenerateMemoriesResponse.GeneratedMemory.Action.CREATED]).
+                /// In the case of an UPDATE action, the `expire_time` of the existing
+                /// memory will be updated to the new value (now + TTL).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration GenerateUpdatedTtl {
+                  get { return generateUpdatedTtl_; }
+                  set {
+                    generateUpdatedTtl_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as GranularTtlConfig);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(GranularTtlConfig other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (!object.Equals(CreateTtl, other.CreateTtl)) return false;
+                  if (!object.Equals(GenerateCreatedTtl, other.GenerateCreatedTtl)) return false;
+                  if (!object.Equals(GenerateUpdatedTtl, other.GenerateUpdatedTtl)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (createTtl_ != null) hash ^= CreateTtl.GetHashCode();
+                  if (generateCreatedTtl_ != null) hash ^= GenerateCreatedTtl.GetHashCode();
+                  if (generateUpdatedTtl_ != null) hash ^= GenerateUpdatedTtl.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (createTtl_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(CreateTtl);
+                  }
+                  if (generateCreatedTtl_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(GenerateCreatedTtl);
+                  }
+                  if (generateUpdatedTtl_ != null) {
+                    output.WriteRawTag(26);
+                    output.WriteMessage(GenerateUpdatedTtl);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (createTtl_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(CreateTtl);
+                  }
+                  if (generateCreatedTtl_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(GenerateCreatedTtl);
+                  }
+                  if (generateUpdatedTtl_ != null) {
+                    output.WriteRawTag(26);
+                    output.WriteMessage(GenerateUpdatedTtl);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (createTtl_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTtl);
+                  }
+                  if (generateCreatedTtl_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenerateCreatedTtl);
+                  }
+                  if (generateUpdatedTtl_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenerateUpdatedTtl);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(GranularTtlConfig other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.createTtl_ != null) {
+                    if (createTtl_ == null) {
+                      CreateTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    CreateTtl.MergeFrom(other.CreateTtl);
+                  }
+                  if (other.generateCreatedTtl_ != null) {
+                    if (generateCreatedTtl_ == null) {
+                      GenerateCreatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    GenerateCreatedTtl.MergeFrom(other.GenerateCreatedTtl);
+                  }
+                  if (other.generateUpdatedTtl_ != null) {
+                    if (generateUpdatedTtl_ == null) {
+                      GenerateUpdatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    GenerateUpdatedTtl.MergeFrom(other.GenerateUpdatedTtl);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        if (createTtl_ == null) {
+                          CreateTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(CreateTtl);
+                        break;
+                      }
+                      case 18: {
+                        if (generateCreatedTtl_ == null) {
+                          GenerateCreatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateCreatedTtl);
+                        break;
+                      }
+                      case 26: {
+                        if (generateUpdatedTtl_ == null) {
+                          GenerateUpdatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateUpdatedTtl);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        if (createTtl_ == null) {
+                          CreateTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(CreateTtl);
+                        break;
+                      }
+                      case 18: {
+                        if (generateCreatedTtl_ == null) {
+                          GenerateCreatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateCreatedTtl);
+                        break;
+                      }
+                      case 26: {
+                        if (generateUpdatedTtl_ == null) {
+                          GenerateUpdatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateUpdatedTtl);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
           /// <summary>
           /// Configuration for how to generate memories.
           /// </summary>
@@ -2079,7 +3025,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[1]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2115,8 +3061,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             /// <summary>
             /// Required. The model used to generate memories.
             /// Format:
-            /// `projects/{project}/locations/{location}/publishers/google/models/{model}`
-            /// or `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+            /// `projects/{project}/locations/{location}/publishers/google/models/{model}`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2278,7 +3223,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[1]; }
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[2]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2314,8 +3259,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             /// <summary>
             /// Required. The model used to generate embeddings to lookup similar
             /// memories. Format:
-            /// `projects/{project}/locations/{location}/publishers/google/models/{model}`
-            /// or `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+            /// `projects/{project}/locations/{location}/publishers/google/models/{model}`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
