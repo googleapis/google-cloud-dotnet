@@ -220,6 +220,63 @@
           }
         }
       }
+    },
+    "WorkerPools": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WorkerPoolsClient",
+          "rpcs": {
+            "CreateWorkerPool": {
+              "methods": [
+                "CreateWorkerPool",
+                "CreateWorkerPoolAsync"
+              ]
+            },
+            "DeleteWorkerPool": {
+              "methods": [
+                "DeleteWorkerPool",
+                "DeleteWorkerPoolAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetWorkerPool": {
+              "methods": [
+                "GetWorkerPool",
+                "GetWorkerPoolAsync"
+              ]
+            },
+            "ListWorkerPools": {
+              "methods": [
+                "ListWorkerPools",
+                "ListWorkerPoolsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateWorkerPool": {
+              "methods": [
+                "UpdateWorkerPool",
+                "UpdateWorkerPoolAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -6565,6 +6565,1804 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_CreateWorkerPool_sync",
+      "title": "CreateWorkerPoolRequestObject",
+      "description": "Snippet for CreateWorkerPool",
+      "file": "WorkerPoolsClient.CreateWorkerPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.CreateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.CreateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.CreateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_CreateWorkerPool_async",
+      "title": "CreateWorkerPoolRequestObjectAsync",
+      "description": "Snippet for CreateWorkerPoolAsync",
+      "file": "WorkerPoolsClient.CreateWorkerPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.CreateWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.CreateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.CreateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_CreateWorkerPool_sync_flattened",
+      "title": "CreateWorkerPool",
+      "description": "Snippet for CreateWorkerPool",
+      "file": "WorkerPoolsClient.CreateWorkerPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.CreateWorkerPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.CreateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_CreateWorkerPool_async_flattened",
+      "title": "CreateWorkerPoolAsync",
+      "description": "Snippet for CreateWorkerPoolAsync",
+      "file": "WorkerPoolsClient.CreateWorkerPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.CreateWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.CreateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_CreateWorkerPool_sync_flattened_resourceNames",
+      "title": "CreateWorkerPoolResourceNames",
+      "description": "Snippet for CreateWorkerPool",
+      "file": "WorkerPoolsClient.CreateWorkerPoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.CreateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.CreateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_CreateWorkerPool_async_flattened_resourceNames",
+      "title": "CreateWorkerPoolResourceNamesAsync",
+      "description": "Snippet for CreateWorkerPoolAsync",
+      "file": "WorkerPoolsClient.CreateWorkerPoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.CreateWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.CreateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetWorkerPool_sync",
+      "title": "GetWorkerPoolRequestObject",
+      "description": "Snippet for GetWorkerPool",
+      "file": "WorkerPoolsClient.GetWorkerPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.GetWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Run.V2.WorkerPool",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetWorkerPool_async",
+      "title": "GetWorkerPoolRequestObjectAsync",
+      "description": "Snippet for GetWorkerPoolAsync",
+      "file": "WorkerPoolsClient.GetWorkerPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.GetWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetWorkerPool_sync_flattened",
+      "title": "GetWorkerPool",
+      "description": "Snippet for GetWorkerPool",
+      "file": "WorkerPoolsClient.GetWorkerPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetWorkerPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Run.V2.WorkerPool",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetWorkerPool_async_flattened",
+      "title": "GetWorkerPoolAsync",
+      "description": "Snippet for GetWorkerPoolAsync",
+      "file": "WorkerPoolsClient.GetWorkerPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetWorkerPool_sync_flattened_resourceNames",
+      "title": "GetWorkerPoolResourceNames",
+      "description": "Snippet for GetWorkerPool",
+      "file": "WorkerPoolsClient.GetWorkerPoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Run.V2.WorkerPool",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetWorkerPool_async_flattened_resourceNames",
+      "title": "GetWorkerPoolResourceNamesAsync",
+      "description": "Snippet for GetWorkerPoolAsync",
+      "file": "WorkerPoolsClient.GetWorkerPoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_ListWorkerPools_sync",
+      "title": "ListWorkerPoolsRequestObject",
+      "description": "Snippet for ListWorkerPools",
+      "file": "WorkerPoolsClient.ListWorkerPoolsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkerPools",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.ListWorkerPools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.ListWorkerPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListWorkerPoolsResponse, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "ListWorkerPools",
+          "fullName": "google.cloud.run.v2.WorkerPools.ListWorkerPools",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_ListWorkerPools_async",
+      "title": "ListWorkerPoolsRequestObjectAsync",
+      "description": "Snippet for ListWorkerPoolsAsync",
+      "file": "WorkerPoolsClient.ListWorkerPoolsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkerPoolsAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.ListWorkerPoolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.ListWorkerPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListWorkerPoolsResponse, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "ListWorkerPools",
+          "fullName": "google.cloud.run.v2.WorkerPools.ListWorkerPools",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_ListWorkerPools_sync_flattened",
+      "title": "ListWorkerPools",
+      "description": "Snippet for ListWorkerPools",
+      "file": "WorkerPoolsClient.ListWorkerPoolsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkerPools",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.ListWorkerPools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListWorkerPoolsResponse, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "ListWorkerPools",
+          "fullName": "google.cloud.run.v2.WorkerPools.ListWorkerPools",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_ListWorkerPools_async_flattened",
+      "title": "ListWorkerPoolsAsync",
+      "description": "Snippet for ListWorkerPoolsAsync",
+      "file": "WorkerPoolsClient.ListWorkerPoolsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkerPoolsAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.ListWorkerPoolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListWorkerPoolsResponse, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "ListWorkerPools",
+          "fullName": "google.cloud.run.v2.WorkerPools.ListWorkerPools",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_ListWorkerPools_sync_flattened_resourceNames",
+      "title": "ListWorkerPoolsResourceNames",
+      "description": "Snippet for ListWorkerPools",
+      "file": "WorkerPoolsClient.ListWorkerPoolsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkerPools",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.ListWorkerPools",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Run.V2.ListWorkerPoolsResponse, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "ListWorkerPools",
+          "fullName": "google.cloud.run.v2.WorkerPools.ListWorkerPools",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_ListWorkerPools_async_flattened_resourceNames",
+      "title": "ListWorkerPoolsResourceNamesAsync",
+      "description": "Snippet for ListWorkerPoolsAsync",
+      "file": "WorkerPoolsClient.ListWorkerPoolsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkerPoolsAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.ListWorkerPoolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Run.V2.ListWorkerPoolsResponse, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "ListWorkerPools",
+          "fullName": "google.cloud.run.v2.WorkerPools.ListWorkerPools",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_UpdateWorkerPool_sync",
+      "title": "UpdateWorkerPoolRequestObject",
+      "description": "Snippet for UpdateWorkerPool",
+      "file": "WorkerPoolsClient.UpdateWorkerPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.UpdateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.UpdateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.UpdateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_UpdateWorkerPool_async",
+      "title": "UpdateWorkerPoolRequestObjectAsync",
+      "description": "Snippet for UpdateWorkerPoolAsync",
+      "file": "WorkerPoolsClient.UpdateWorkerPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.UpdateWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.UpdateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.UpdateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 69,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 67,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_UpdateWorkerPool_sync_flattened1",
+      "title": "UpdateWorkerPool1",
+      "description": "Snippet for UpdateWorkerPool",
+      "file": "WorkerPoolsClient.UpdateWorkerPool1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.UpdateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.UpdateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_UpdateWorkerPool_async_flattened1",
+      "title": "UpdateWorkerPool1Async",
+      "description": "Snippet for UpdateWorkerPoolAsync",
+      "file": "WorkerPoolsClient.UpdateWorkerPool1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.UpdateWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.UpdateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_UpdateWorkerPool_sync_flattened2",
+      "title": "UpdateWorkerPool2",
+      "description": "Snippet for UpdateWorkerPool",
+      "file": "WorkerPoolsClient.UpdateWorkerPool2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.UpdateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.UpdateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_UpdateWorkerPool_async_flattened2",
+      "title": "UpdateWorkerPool2Async",
+      "description": "Snippet for UpdateWorkerPoolAsync",
+      "file": "WorkerPoolsClient.UpdateWorkerPool2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.UpdateWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.UpdateWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_DeleteWorkerPool_sync",
+      "title": "DeleteWorkerPoolRequestObject",
+      "description": "Snippet for DeleteWorkerPool",
+      "file": "WorkerPoolsClient.DeleteWorkerPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.DeleteWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.DeleteWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.DeleteWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_DeleteWorkerPool_async",
+      "title": "DeleteWorkerPoolRequestObjectAsync",
+      "description": "Snippet for DeleteWorkerPoolAsync",
+      "file": "WorkerPoolsClient.DeleteWorkerPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.DeleteWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.DeleteWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.DeleteWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_DeleteWorkerPool_sync_flattened",
+      "title": "DeleteWorkerPool",
+      "description": "Snippet for DeleteWorkerPool",
+      "file": "WorkerPoolsClient.DeleteWorkerPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.DeleteWorkerPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.DeleteWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_DeleteWorkerPool_async_flattened",
+      "title": "DeleteWorkerPoolAsync",
+      "description": "Snippet for DeleteWorkerPoolAsync",
+      "file": "WorkerPoolsClient.DeleteWorkerPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.DeleteWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.DeleteWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_DeleteWorkerPool_sync_flattened_resourceNames",
+      "title": "DeleteWorkerPoolResourceNames",
+      "description": "Snippet for DeleteWorkerPool",
+      "file": "WorkerPoolsClient.DeleteWorkerPoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkerPool",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.DeleteWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.DeleteWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_DeleteWorkerPool_async_flattened_resourceNames",
+      "title": "DeleteWorkerPoolResourceNamesAsync",
+      "description": "Snippet for DeleteWorkerPoolAsync",
+      "file": "WorkerPoolsClient.DeleteWorkerPoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkerPoolAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.DeleteWorkerPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.WorkerPool, Google.Cloud.Run.V2.WorkerPool>>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkerPool",
+          "fullName": "google.cloud.run.v2.WorkerPools.DeleteWorkerPool",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "WorkerPoolsClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetIamPolicy",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "WorkerPoolsClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.run.v2.WorkerPools.GetIamPolicy",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "WorkerPoolsClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.run.v2.WorkerPools.SetIamPolicy",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "WorkerPoolsClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.run.v2.WorkerPools.SetIamPolicy",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "WorkerPoolsClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.run.v2.WorkerPools.TestIamPermissions",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_WorkerPools_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "WorkerPoolsClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "WorkerPoolsClient",
+          "fullName": "Google.Cloud.Run.V2.WorkerPoolsClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.run.v2.WorkerPools.TestIamPermissions",
+          "service": {
+            "shortName": "WorkerPools",
+            "fullName": "google.cloud.run.v2.WorkerPools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
