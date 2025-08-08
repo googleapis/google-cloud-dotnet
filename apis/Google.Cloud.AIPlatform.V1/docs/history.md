@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.42.0, released 2025-08-08
+
+### New features
+
+- Add Grounding with Google Maps tool
+
 ## Version 3.41.0, released 2025-08-05
 
 ### New features
