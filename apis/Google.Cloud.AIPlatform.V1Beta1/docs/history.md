@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta44, released 2025-08-08
+
+### New features
+
+- Add Grounding with Google Maps tool
+- Add expiration for TTL for Memory and Sessions
+- Add direct_memories_source
+- Add force_delete field to DeleteRagFile 'preview' API request for Vertex RAG
+
+### Documentation improvements
+
+- Update comment for allowed values for config models
+- A comment for field `monitored_resource_labels` in message `.google.cloud.aiplatform.v1beta1.AutoscalingMetricSpec` is changed
+
 ## Version 1.0.0-beta43, released 2025-08-05
 
 ### New features
