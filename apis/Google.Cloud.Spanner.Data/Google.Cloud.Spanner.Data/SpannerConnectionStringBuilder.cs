@@ -18,6 +18,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Grpc.Core;
 using System;
+using System.Data;
 using System.Data.Common;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -58,6 +59,7 @@ namespace Google.Cloud.Spanner.Data
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
         private const string DatabaseRoleKeyword = "DatabaseRole";
+        private const string IsolationLevelKeyword = "IsolationLevel";
         private const string EnableLeaderRoutingKeyword = "EnableLeaderRouting";
 
         private InstanceName _instanceName;
@@ -70,6 +72,16 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(DatabaseRoleKeyword);
             set => this[DatabaseRoleKeyword] = value;
+        }
+
+        /// <summary>
+        /// Option to set the default for <see cref="System.Data.IsolationLevel"/> for all transactions executed on this connection.
+        /// Override on a per-transaction basis using <see cref="SpannerTransactionCreationOptions" />.
+        /// </summary>
+        public IsolationLevel IsolationLevel
+        {
+            get => GetEnumValueOrDefault(GetValueOrDefault(IsolationLevelKeyword), IsolationLevel.Unspecified);
+            set => this[IsolationLevelKeyword] = value.ToString();
         }
 
         /// <summary>
@@ -597,6 +609,19 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return defaultValue;
+        }
+
+        private TEnum GetEnumValueOrDefault<TEnum>(string key, TEnum defaultValue)
+        where TEnum : struct
+        {
+            if (Enum.TryParse<TEnum>(key, true, out TEnum result))
+            {
+                return result;
+            }
+            else
+            {
+                return defaultValue;
+            }
         }
 
         /// <inheritdoc />
