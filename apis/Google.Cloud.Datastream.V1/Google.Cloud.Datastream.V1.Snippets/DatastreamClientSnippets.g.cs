@@ -2772,6 +2772,7 @@ namespace GoogleCSharpSnippets
                 PrivateConnection = new PrivateConnection(),
                 RequestId = "",
                 Force = false,
+                ValidateOnly = false,
             };
             // Make the request
             Operation<PrivateConnection, OperationMetadata> response = datastreamClient.CreatePrivateConnection(request);
@@ -2809,6 +2810,7 @@ namespace GoogleCSharpSnippets
                 PrivateConnection = new PrivateConnection(),
                 RequestId = "",
                 Force = false,
+                ValidateOnly = false,
             };
             // Make the request
             Operation<PrivateConnection, OperationMetadata> response = await datastreamClient.CreatePrivateConnectionAsync(request);

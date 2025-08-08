@@ -1547,6 +1547,269 @@ namespace Google.Cloud.Datastream.V1
         public static bool operator !=(NetworksName a, NetworksName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>NetworkAttachment</c> resource.</summary>
+    public sealed partial class NetworkAttachmentName : gax::IResourceName, sys::IEquatable<NetworkAttachmentName>
+    {
+        /// <summary>The possible contents of <see cref="NetworkAttachmentName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>.
+            /// </summary>
+            ProjectRegionNetworkAttachment = 1,
+        }
+
+        private static gax::PathTemplate s_projectRegionNetworkAttachment = new gax::PathTemplate("projects/{project}/regions/{region}/networkAttachments/{network_attachment}");
+
+        /// <summary>Creates a <see cref="NetworkAttachmentName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="NetworkAttachmentName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static NetworkAttachmentName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new NetworkAttachmentName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="NetworkAttachmentName"/> with the pattern
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkAttachmentId">The <c>NetworkAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="NetworkAttachmentName"/> constructed from the provided ids.</returns>
+        public static NetworkAttachmentName FromProjectRegionNetworkAttachment(string projectId, string regionId, string networkAttachmentId) =>
+            new NetworkAttachmentName(ResourceNameType.ProjectRegionNetworkAttachment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), networkAttachmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkAttachmentId, nameof(networkAttachmentId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NetworkAttachmentName"/> with pattern
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkAttachmentId">The <c>NetworkAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="NetworkAttachmentName"/> with pattern
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>.
+        /// </returns>
+        public static string Format(string projectId, string regionId, string networkAttachmentId) =>
+            FormatProjectRegionNetworkAttachment(projectId, regionId, networkAttachmentId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NetworkAttachmentName"/> with pattern
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkAttachmentId">The <c>NetworkAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="NetworkAttachmentName"/> with pattern
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>.
+        /// </returns>
+        public static string FormatProjectRegionNetworkAttachment(string projectId, string regionId, string networkAttachmentId) =>
+            s_projectRegionNetworkAttachment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(networkAttachmentId, nameof(networkAttachmentId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="NetworkAttachmentName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="networkAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="NetworkAttachmentName"/> if successful.</returns>
+        public static NetworkAttachmentName Parse(string networkAttachmentName) => Parse(networkAttachmentName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="NetworkAttachmentName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="networkAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="NetworkAttachmentName"/> if successful.</returns>
+        public static NetworkAttachmentName Parse(string networkAttachmentName, bool allowUnparsed) =>
+            TryParse(networkAttachmentName, allowUnparsed, out NetworkAttachmentName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="NetworkAttachmentName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="networkAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="NetworkAttachmentName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string networkAttachmentName, out NetworkAttachmentName result) =>
+            TryParse(networkAttachmentName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="NetworkAttachmentName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="networkAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="NetworkAttachmentName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string networkAttachmentName, bool allowUnparsed, out NetworkAttachmentName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(networkAttachmentName, nameof(networkAttachmentName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectRegionNetworkAttachment.TryParseName(networkAttachmentName, out resourceName))
+            {
+                result = FromProjectRegionNetworkAttachment(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(networkAttachmentName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private NetworkAttachmentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string networkAttachmentId = null, string projectId = null, string regionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            NetworkAttachmentId = networkAttachmentId;
+            ProjectId = projectId;
+            RegionId = regionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="NetworkAttachmentName"/> class from the component parts of pattern
+        /// <c>projects/{project}/regions/{region}/networkAttachments/{network_attachment}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="regionId">The <c>Region</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkAttachmentId">The <c>NetworkAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        public NetworkAttachmentName(string projectId, string regionId, string networkAttachmentId) : this(ResourceNameType.ProjectRegionNetworkAttachment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), regionId: gax::GaxPreconditions.CheckNotNullOrEmpty(regionId, nameof(regionId)), networkAttachmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkAttachmentId, nameof(networkAttachmentId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>NetworkAttachment</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string NetworkAttachmentId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Region</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RegionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectRegionNetworkAttachment: return s_projectRegionNetworkAttachment.Expand(ProjectId, RegionId, NetworkAttachmentId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as NetworkAttachmentName);
+
+        /// <inheritdoc/>
+        public bool Equals(NetworkAttachmentName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(NetworkAttachmentName a, NetworkAttachmentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(NetworkAttachmentName a, NetworkAttachmentName b) => !(a == b);
+    }
+
     public partial class VpcPeeringConfig
     {
         /// <summary><see cref="NetworksName"/>-typed view over the <see cref="Vpc"/> resource name property.</summary>
@@ -1554,6 +1817,19 @@ namespace Google.Cloud.Datastream.V1
         {
             get => string.IsNullOrEmpty(Vpc) ? null : NetworksName.Parse(Vpc, allowUnparsed: true);
             set => Vpc = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PscInterfaceConfig
+    {
+        /// <summary>
+        /// <see cref="NetworkAttachmentName"/>-typed view over the <see cref="NetworkAttachment"/> resource name
+        /// property.
+        /// </summary>
+        public NetworkAttachmentName NetworkAttachmentAsNetworkAttachmentName
+        {
+            get => string.IsNullOrEmpty(NetworkAttachment) ? null : NetworkAttachmentName.Parse(NetworkAttachment, allowUnparsed: true);
+            set => NetworkAttachment = value?.ToString() ?? "";
         }
     }
 
