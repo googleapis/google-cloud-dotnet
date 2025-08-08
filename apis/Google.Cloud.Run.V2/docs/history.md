@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.16.0, released 2025-08-08
+
+### New features
+
+- Adding new resource tpye run.googleapis.com/WorkerPool.
+
+### Bug fixes
+
+- An existing resource_definition `cloudbuild.googleapis.com/WorkerPool` is removed
+- A type of an existing resource_reference option of the field `worker_pool` in message `.google.cloud.run.v2.SubmitBuildRequest` is changed from `cloudbuild.googleapis.com/WorkerPool` to `cloudbuild.googleapis.com/BuildWorkerPool`
+- A type of an existing resource_reference option of the field `worker_pool` in message `.google.cloud.run.v2.BuildConfig` is changed from `cloudbuild.googleapis.com/WorkerPool` to `cloudbuild.googleapis.com/BuildWorkerPool`
+
 ## Version 2.15.0, released 2025-07-22
 
 ### New features
