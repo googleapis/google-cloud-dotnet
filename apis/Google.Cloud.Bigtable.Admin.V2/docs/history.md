@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.29.0, released 2025-08-08
+
+### New features
+
+- Add tags field to Instance proto (stable branch)
+
 ## Version 3.28.0, released 2025-07-22
 
 ### New features
