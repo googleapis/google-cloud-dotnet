@@ -1212,6 +1212,140 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RequestRemovePeering</summary>
+        public void RequestRemovePeeringRequestObject()
+        {
+            // Snippet: RequestRemovePeering(RequestRemovePeeringNetworkRequest, CallSettings)
+            // Create client
+            NetworksClient networksClient = NetworksClient.Create();
+            // Initialize request argument(s)
+            RequestRemovePeeringNetworkRequest request = new RequestRemovePeeringNetworkRequest
+            {
+                RequestId = "",
+                NetworksRequestRemovePeeringRequestResource = new NetworksRequestRemovePeeringRequest(),
+                Project = "",
+                Network = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = networksClient.RequestRemovePeering(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceRequestRemovePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestRemovePeeringAsync</summary>
+        public async Task RequestRemovePeeringRequestObjectAsync()
+        {
+            // Snippet: RequestRemovePeeringAsync(RequestRemovePeeringNetworkRequest, CallSettings)
+            // Additional: RequestRemovePeeringAsync(RequestRemovePeeringNetworkRequest, CancellationToken)
+            // Create client
+            NetworksClient networksClient = await NetworksClient.CreateAsync();
+            // Initialize request argument(s)
+            RequestRemovePeeringNetworkRequest request = new RequestRemovePeeringNetworkRequest
+            {
+                RequestId = "",
+                NetworksRequestRemovePeeringRequestResource = new NetworksRequestRemovePeeringRequest(),
+                Project = "",
+                Network = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networksClient.RequestRemovePeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceRequestRemovePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestRemovePeering</summary>
+        public void RequestRemovePeering()
+        {
+            // Snippet: RequestRemovePeering(string, string, NetworksRequestRemovePeeringRequest, CallSettings)
+            // Create client
+            NetworksClient networksClient = NetworksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string network = "";
+            NetworksRequestRemovePeeringRequest networksRequestRemovePeeringRequestResource = new NetworksRequestRemovePeeringRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = networksClient.RequestRemovePeering(project, network, networksRequestRemovePeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceRequestRemovePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestRemovePeeringAsync</summary>
+        public async Task RequestRemovePeeringAsync()
+        {
+            // Snippet: RequestRemovePeeringAsync(string, string, NetworksRequestRemovePeeringRequest, CallSettings)
+            // Additional: RequestRemovePeeringAsync(string, string, NetworksRequestRemovePeeringRequest, CancellationToken)
+            // Create client
+            NetworksClient networksClient = await NetworksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string network = "";
+            NetworksRequestRemovePeeringRequest networksRequestRemovePeeringRequestResource = new NetworksRequestRemovePeeringRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networksClient.RequestRemovePeeringAsync(project, network, networksRequestRemovePeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceRequestRemovePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SwitchToCustomMode</summary>
         public void SwitchToCustomModeRequestObject()
         {

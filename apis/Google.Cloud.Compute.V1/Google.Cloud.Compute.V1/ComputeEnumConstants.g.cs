@@ -5584,6 +5584,71 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage"/>
+        /// message.
+        /// </summary>
+        public static class InterconnectApplicationAwareInterconnectBandwidthPercentage
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass"/>
+            ///  enum.
+            /// </summary>
+            public static class TrafficClass
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.UndefinedTrafficClass"/>
+                /// .
+                /// </summary>
+                public const string UndefinedTrafficClass = "UNDEFINED_TRAFFIC_CLASS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.Tc1"/>
+                /// .
+                /// </summary>
+                public const string Tc1 = "TC1";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.Tc2"/>
+                /// .
+                /// </summary>
+                public const string Tc2 = "TC2";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.Tc3"/>
+                /// .
+                /// </summary>
+                public const string Tc3 = "TC3";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.Tc4"/>
+                /// .
+                /// </summary>
+                public const string Tc4 = "TC4";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.Tc5"/>
+                /// .
+                /// </summary>
+                public const string Tc5 = "TC5";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectApplicationAwareInterconnectBandwidthPercentage.Types.TrafficClass.Tc6"/>
+                /// .
+                /// </summary>
+                public const string Tc6 = "TC6";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachment"/>
         /// message.
         /// </summary>
@@ -8530,6 +8595,209 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeering.Types.State.Inactive"/>.
                 /// </summary>
                 public const string Inactive = "INACTIVE";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeering.Types.UpdateStrategy"/> enum.
+            /// </summary>
+            public static class UpdateStrategy
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeering.Types.UpdateStrategy.UndefinedUpdateStrategy"/>
+                /// .
+                /// </summary>
+                public const string UndefinedUpdateStrategy = "UNDEFINED_UPDATE_STRATEGY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeering.Types.UpdateStrategy.Consensus"/>.
+                /// </summary>
+                public const string Consensus = "CONSENSUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeering.Types.UpdateStrategy.Independent"/>.
+                /// </summary>
+                public const string Independent = "INDEPENDENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeering.Types.UpdateStrategy.Unspecified"/>.
+                /// </summary>
+                public const string Unspecified = "UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatus"/> message.
+        /// </summary>
+        public static class NetworkPeeringConnectionStatus
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatus.Types.UpdateStrategy"/> enum.
+            /// </summary>
+            public static class UpdateStrategy
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatus.Types.UpdateStrategy.UndefinedUpdateStrategy"/>
+                /// .
+                /// </summary>
+                public const string UndefinedUpdateStrategy = "UNDEFINED_UPDATE_STRATEGY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatus.Types.UpdateStrategy.Consensus"/>
+                /// .
+                /// </summary>
+                public const string Consensus = "CONSENSUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatus.Types.UpdateStrategy.Independent"/>
+                /// .
+                /// </summary>
+                public const string Independent = "INDEPENDENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatus.Types.UpdateStrategy.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState"/> message.
+        /// </summary>
+        public static class NetworkPeeringConnectionStatusConsensusState
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.DeleteStatus"/>
+            ///  enum.
+            /// </summary>
+            public static class DeleteStatus
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.DeleteStatus.UndefinedDeleteStatus"/>
+                /// .
+                /// </summary>
+                public const string UndefinedDeleteStatus = "UNDEFINED_DELETE_STATUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.DeleteStatus.DeleteAcknowledged"/>
+                /// .
+                /// </summary>
+                public const string DeleteAcknowledged = "DELETE_ACKNOWLEDGED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.DeleteStatus.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "DELETE_STATUS_UNSPECIFIED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.DeleteStatus.LocalDeleteRequested"/>
+                /// .
+                /// </summary>
+                public const string LocalDeleteRequested = "LOCAL_DELETE_REQUESTED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.DeleteStatus.PeerDeleteRequested"/>
+                /// .
+                /// </summary>
+                public const string PeerDeleteRequested = "PEER_DELETE_REQUESTED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.UpdateStatus"/>
+            ///  enum.
+            /// </summary>
+            public static class UpdateStatus
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.UpdateStatus.UndefinedUpdateStatus"/>
+                /// .
+                /// </summary>
+                public const string UndefinedUpdateStatus = "UNDEFINED_UPDATE_STATUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.UpdateStatus.InSync"/>
+                /// .
+                /// </summary>
+                public const string InSync = "IN_SYNC";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.UpdateStatus.PendingLocalAcknowledment"/>
+                /// .
+                /// </summary>
+                public const string PendingLocalAcknowledment = "PENDING_LOCAL_ACKNOWLEDMENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.UpdateStatus.PendingPeerAcknowledgement"/>
+                /// .
+                /// </summary>
+                public const string PendingPeerAcknowledgement = "PENDING_PEER_ACKNOWLEDGEMENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusConsensusState.Types.UpdateStatus.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "UPDATE_STATUS_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusTrafficConfiguration"/> message.
+        /// </summary>
+        public static class NetworkPeeringConnectionStatusTrafficConfiguration
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusTrafficConfiguration.Types.StackType"/>
+            ///  enum.
+            /// </summary>
+            public static class StackType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusTrafficConfiguration.Types.StackType.UndefinedStackType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedStackType = "UNDEFINED_STACK_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusTrafficConfiguration.Types.StackType.Ipv4Ipv6"/>
+                /// .
+                /// </summary>
+                public const string Ipv4Ipv6 = "IPV4_IPV6";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkPeeringConnectionStatusTrafficConfiguration.Types.StackType.Ipv4Only"/>
+                /// .
+                /// </summary>
+                public const string Ipv4Only = "IPV4_ONLY";
             }
         }
 
@@ -12395,6 +12663,49 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.Reservation.Types.Status.Updating"/>.
                 /// </summary>
                 public const string Updating = "UPDATING";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ReservationAdvancedDeploymentControl"/> message.
+        /// </summary>
+        public static class ReservationAdvancedDeploymentControl
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ReservationAdvancedDeploymentControl.Types.ReservationOperationalMode"/>
+            ///  enum.
+            /// </summary>
+            public static class ReservationOperationalMode
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationAdvancedDeploymentControl.Types.ReservationOperationalMode.UndefinedReservationOperationalMode"/>
+                /// .
+                /// </summary>
+                public const string UndefinedReservationOperationalMode = "UNDEFINED_RESERVATION_OPERATIONAL_MODE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationAdvancedDeploymentControl.Types.ReservationOperationalMode.AllCapacity"/>
+                /// .
+                /// </summary>
+                public const string AllCapacity = "ALL_CAPACITY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationAdvancedDeploymentControl.Types.ReservationOperationalMode.HighlyAvailableCapacity"/>
+                /// .
+                /// </summary>
+                public const string HighlyAvailableCapacity = "HIGHLY_AVAILABLE_CAPACITY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ReservationAdvancedDeploymentControl.Types.ReservationOperationalMode.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "RESERVATION_OPERATIONAL_MODE_UNSPECIFIED";
             }
         }
 
