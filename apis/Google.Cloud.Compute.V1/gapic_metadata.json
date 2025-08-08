@@ -2650,6 +2650,12 @@
                 "RemovePeeringAsync"
               ]
             },
+            "RequestRemovePeering": {
+              "methods": [
+                "RequestRemovePeering",
+                "RequestRemovePeeringAsync"
+              ]
+            },
             "SwitchToCustomMode": {
               "methods": [
                 "SwitchToCustomMode",

@@ -1457,6 +1457,11 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class RequestRemovePeeringNetworkRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class SwitchToCustomModeNetworkRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
