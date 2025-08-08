@@ -157,52 +157,59 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Y2xvdWQuYWlwbGF0Zm9ybS52MS5Mb2dwcm9ic1Jlc3VsdC5DYW5kaWRhdGUi",
             "ZwoHU2VnbWVudBIXCgpwYXJ0X2luZGV4GAEgASgFQgPgQQMSGAoLc3RhcnRf",
             "aW5kZXgYAiABKAVCA+BBAxIWCgllbmRfaW5kZXgYAyABKAVCA+BBAxIRCgR0",
-            "ZXh0GAQgASgJQgPgQQMirQMKDkdyb3VuZGluZ0NodW5rEj0KA3dlYhgBIAEo",
+            "ZXh0GAQgASgJQgPgQQMi7gQKDkdyb3VuZGluZ0NodW5rEj0KA3dlYhgBIAEo",
             "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ0NodW5r",
             "LldlYkgAElgKEXJldHJpZXZlZF9jb250ZXh0GAIgASgLMjsuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjEuR3JvdW5kaW5nQ2h1bmsuUmV0cmlldmVkQ29u",
-            "dGV4dEgAGj0KA1dlYhIQCgN1cmkYASABKAlIAIgBARISCgV0aXRsZRgCIAEo",
-            "CUgBiAEBQgYKBF91cmlCCAoGX3RpdGxlGrQBChBSZXRyaWV2ZWRDb250ZXh0",
-            "EjkKCXJhZ19jaHVuaxgEIAEoCzIkLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlJhZ0NodW5rSAASEAoDdXJpGAEgASgJSAGIAQESEgoFdGl0bGUYAiAB",
-            "KAlIAogBARIRCgR0ZXh0GAMgASgJSAOIAQFCEQoPY29udGV4dF9kZXRhaWxz",
-            "QgYKBF91cmlCCAoGX3RpdGxlQgcKBV90ZXh0QgwKCmNodW5rX3R5cGUilQEK",
-            "EEdyb3VuZGluZ1N1cHBvcnQSOQoHc2VnbWVudBgBIAEoCzIjLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlNlZ21lbnRIAIgBARIfChdncm91bmRpbmdf",
-            "Y2h1bmtfaW5kaWNlcxgCIAMoBRIZChFjb25maWRlbmNlX3Njb3JlcxgDIAMo",
-            "AkIKCghfc2VnbWVudCKjAwoRR3JvdW5kaW5nTWV0YWRhdGESHwoSd2ViX3Nl",
-            "YXJjaF9xdWVyaWVzGAEgAygJQgPgQQESUgoSc2VhcmNoX2VudHJ5X3BvaW50",
-            "GAQgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2VhcmNoRW50",
-            "cnlQb2ludEID4EEBSACIAQESRAoQZ3JvdW5kaW5nX2NodW5rcxgFIAMoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ0NodW5rEk0K",
-            "Emdyb3VuZGluZ19zdXBwb3J0cxgGIAMoCzIsLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkdyb3VuZGluZ1N1cHBvcnRCA+BBARJWChJyZXRyaWV2YWxf",
-            "bWV0YWRhdGEYByABKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5S",
-            "ZXRyaWV2YWxNZXRhZGF0YUIG4EEB4EEDSAGIAQFCFQoTX3NlYXJjaF9lbnRy",
-            "eV9wb2ludEIVChNfcmV0cmlldmFsX21ldGFkYXRhIkgKEFNlYXJjaEVudHJ5",
-            "UG9pbnQSHQoQcmVuZGVyZWRfY29udGVudBgBIAEoCUID4EEBEhUKCHNka19i",
-            "bG9iGAIgASgMQgPgQQEiRwoRUmV0cmlldmFsTWV0YWRhdGESMgolZ29vZ2xl",
-            "X3NlYXJjaF9keW5hbWljX3JldHJpZXZhbF9zY29yZRgCIAEoAkID4EEBIqgB",
-            "ChBNb2RlbEFybW9yQ29uZmlnEkgKFHByb21wdF90ZW1wbGF0ZV9uYW1lGAEg",
-            "ASgJQirgQQH6QSQKIm1vZGVsYXJtb3IuZ29vZ2xlYXBpcy5jb20vVGVtcGxh",
-            "dGUSSgoWcmVzcG9uc2VfdGVtcGxhdGVfbmFtZRgCIAEoCUIq4EEB+kEkCiJt",
-            "b2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRlImEKEk1vZGFsaXR5",
-            "VG9rZW5Db3VudBI2Cghtb2RhbGl0eRgBIAEoDjIkLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLk1vZGFsaXR5EhMKC3Rva2VuX2NvdW50GAIgASgFKtsB",
-            "CgxIYXJtQ2F0ZWdvcnkSHQoZSEFSTV9DQVRFR09SWV9VTlNQRUNJRklFRBAA",
-            "Eh0KGUhBUk1fQ0FURUdPUllfSEFURV9TUEVFQ0gQARIjCh9IQVJNX0NBVEVH",
-            "T1JZX0RBTkdFUk9VU19DT05URU5UEAISHAoYSEFSTV9DQVRFR09SWV9IQVJB",
-            "U1NNRU5UEAMSIwofSEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVBAE",
-            "EiUKHUhBUk1fQ0FURUdPUllfQ0lWSUNfSU5URUdSSVRZEAUaAggBKl0KCE1v",
-            "ZGFsaXR5EhgKFE1PREFMSVRZX1VOU1BFQ0lGSUVEEAASCAoEVEVYVBABEgkK",
-            "BUlNQUdFEAISCQoFVklERU8QAxIJCgVBVURJTxAEEgwKCERPQ1VNRU5UEAVC",
-            "rwIKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIMQ29udGVudFBy",
-            "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9h",
-            "aXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxh",
-            "dGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2ds",
-            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx6kFiCiJtb2RlbGFybW9yLmdvb2ds",
-            "ZWFwaXMuY29tL1RlbXBsYXRlEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vdGVtcGxhdGVzL3t0ZW1wbGF0ZX1iBnByb3RvMw=="));
+            "dGV4dEgAEj8KBG1hcHMYAyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5Hcm91bmRpbmdDaHVuay5NYXBzSAAaPQoDV2ViEhAKA3VyaRgBIAEo",
+            "CUgAiAEBEhIKBXRpdGxlGAIgASgJSAGIAQFCBgoEX3VyaUIICgZfdGl0bGUa",
+            "tAEKEFJldHJpZXZlZENvbnRleHQSOQoJcmFnX2NodW5rGAQgASgLMiQuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmFnQ2h1bmtIABIQCgN1cmkYASAB",
+            "KAlIAYgBARISCgV0aXRsZRgCIAEoCUgCiAEBEhEKBHRleHQYAyABKAlIA4gB",
+            "AUIRCg9jb250ZXh0X2RldGFpbHNCBgoEX3VyaUIICgZfdGl0bGVCBwoFX3Rl",
+            "eHQafgoETWFwcxIQCgN1cmkYASABKAlIAIgBARISCgV0aXRsZRgCIAEoCUgB",
+            "iAEBEhEKBHRleHQYAyABKAlIAogBARIVCghwbGFjZV9pZBgEIAEoCUgDiAEB",
+            "QgYKBF91cmlCCAoGX3RpdGxlQgcKBV90ZXh0QgsKCV9wbGFjZV9pZEIMCgpj",
+            "aHVua190eXBlIpUBChBHcm91bmRpbmdTdXBwb3J0EjkKB3NlZ21lbnQYASAB",
+            "KAsyIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TZWdtZW50SACIAQES",
+            "HwoXZ3JvdW5kaW5nX2NodW5rX2luZGljZXMYAiADKAUSGQoRY29uZmlkZW5j",
+            "ZV9zY29yZXMYAyADKAJCCgoIX3NlZ21lbnQi/wMKEUdyb3VuZGluZ01ldGFk",
+            "YXRhEh8KEndlYl9zZWFyY2hfcXVlcmllcxgBIAMoCUID4EEBElIKEnNlYXJj",
+            "aF9lbnRyeV9wb2ludBgEIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLlNlYXJjaEVudHJ5UG9pbnRCA+BBAUgAiAEBEkQKEGdyb3VuZGluZ19j",
+            "aHVua3MYBSADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91",
+            "bmRpbmdDaHVuaxJNChJncm91bmRpbmdfc3VwcG9ydHMYBiADKAsyLC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91bmRpbmdTdXBwb3J0QgPgQQES",
+            "VgoScmV0cmlldmFsX21ldGFkYXRhGAcgASgLMi0uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuUmV0cmlldmFsTWV0YWRhdGFCBuBBAeBBA0gBiAEBEjUK",
+            "IGdvb2dsZV9tYXBzX3dpZGdldF9jb250ZXh0X3Rva2VuGAggASgJQgbgQQHg",
+            "QQNIAogBAUIVChNfc2VhcmNoX2VudHJ5X3BvaW50QhUKE19yZXRyaWV2YWxf",
+            "bWV0YWRhdGFCIwohX2dvb2dsZV9tYXBzX3dpZGdldF9jb250ZXh0X3Rva2Vu",
+            "IkgKEFNlYXJjaEVudHJ5UG9pbnQSHQoQcmVuZGVyZWRfY29udGVudBgBIAEo",
+            "CUID4EEBEhUKCHNka19ibG9iGAIgASgMQgPgQQEiRwoRUmV0cmlldmFsTWV0",
+            "YWRhdGESMgolZ29vZ2xlX3NlYXJjaF9keW5hbWljX3JldHJpZXZhbF9zY29y",
+            "ZRgCIAEoAkID4EEBIqgBChBNb2RlbEFybW9yQ29uZmlnEkgKFHByb21wdF90",
+            "ZW1wbGF0ZV9uYW1lGAEgASgJQirgQQH6QSQKIm1vZGVsYXJtb3IuZ29vZ2xl",
+            "YXBpcy5jb20vVGVtcGxhdGUSSgoWcmVzcG9uc2VfdGVtcGxhdGVfbmFtZRgC",
+            "IAEoCUIq4EEB+kEkCiJtb2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBs",
+            "YXRlImEKEk1vZGFsaXR5VG9rZW5Db3VudBI2Cghtb2RhbGl0eRgBIAEoDjIk",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGFsaXR5EhMKC3Rva2Vu",
+            "X2NvdW50GAIgASgFKtsBCgxIYXJtQ2F0ZWdvcnkSHQoZSEFSTV9DQVRFR09S",
+            "WV9VTlNQRUNJRklFRBAAEh0KGUhBUk1fQ0FURUdPUllfSEFURV9TUEVFQ0gQ",
+            "ARIjCh9IQVJNX0NBVEVHT1JZX0RBTkdFUk9VU19DT05URU5UEAISHAoYSEFS",
+            "TV9DQVRFR09SWV9IQVJBU1NNRU5UEAMSIwofSEFSTV9DQVRFR09SWV9TRVhV",
+            "QUxMWV9FWFBMSUNJVBAEEiUKHUhBUk1fQ0FURUdPUllfQ0lWSUNfSU5URUdS",
+            "SVRZEAUaAggBKl0KCE1vZGFsaXR5EhgKFE1PREFMSVRZX1VOU1BFQ0lGSUVE",
+            "EAASCAoEVEVYVBABEgkKBUlNQUdFEAISCQoFVklERU8QAxIJCgVBVURJTxAE",
+            "EgwKCERPQ1VNRU5UEAVCrwIKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MUIMQ29udGVudFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlw",
+            "bGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29v",
+            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0",
+            "Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx6kFiCiJt",
+            "b2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRlEjxwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdGVtcGxhdGVzL3t0ZW1w",
+            "bGF0ZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -224,10 +231,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.LogprobsResult), global::Google.Cloud.AIPlatform.V1.LogprobsResult.Parser, new[]{ "TopCandidates", "ChosenCandidates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.LogprobsResult.Types.Candidate), global::Google.Cloud.AIPlatform.V1.LogprobsResult.Types.Candidate.Parser, new[]{ "Token", "TokenId", "LogProbability" }, new[]{ "Token", "TokenId", "LogProbability" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.LogprobsResult.Types.TopCandidates), global::Google.Cloud.AIPlatform.V1.LogprobsResult.Types.TopCandidates.Parser, new[]{ "Candidates" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Segment), global::Google.Cloud.AIPlatform.V1.Segment.Parser, new[]{ "PartIndex", "StartIndex", "EndIndex", "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Parser, new[]{ "Web", "RetrievedContext" }, new[]{ "ChunkType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Web), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Web.Parser, new[]{ "Uri", "Title" }, new[]{ "Uri", "Title" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext.Parser, new[]{ "RagChunk", "Uri", "Title", "Text" }, new[]{ "ContextDetails", "Uri", "Title", "Text" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Parser, new[]{ "Web", "RetrievedContext", "Maps" }, new[]{ "ChunkType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Web), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Web.Parser, new[]{ "Uri", "Title" }, new[]{ "Uri", "Title" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext.Parser, new[]{ "RagChunk", "Uri", "Title", "Text" }, new[]{ "ContextDetails", "Uri", "Title", "Text" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps.Parser, new[]{ "Uri", "Title", "Text", "PlaceId" }, new[]{ "Uri", "Title", "Text", "PlaceId" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingSupport), global::Google.Cloud.AIPlatform.V1.GroundingSupport.Parser, new[]{ "Segment", "GroundingChunkIndices", "ConfidenceScores" }, new[]{ "Segment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingMetadata), global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Parser, new[]{ "WebSearchQueries", "SearchEntryPoint", "GroundingChunks", "GroundingSupports", "RetrievalMetadata" }, new[]{ "SearchEntryPoint", "RetrievalMetadata" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingMetadata), global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Parser, new[]{ "WebSearchQueries", "SearchEntryPoint", "GroundingChunks", "GroundingSupports", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, new[]{ "SearchEntryPoint", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchEntryPoint), global::Google.Cloud.AIPlatform.V1.SearchEntryPoint.Parser, new[]{ "RenderedContent", "SdkBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RetrievalMetadata), global::Google.Cloud.AIPlatform.V1.RetrievalMetadata.Parser, new[]{ "GoogleSearchDynamicRetrievalScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelArmorConfig), global::Google.Cloud.AIPlatform.V1.ModelArmorConfig.Parser, new[]{ "PromptTemplateName", "ResponseTemplateName" }, null, null, null, null),
@@ -7743,6 +7751,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         case ChunkTypeOneofCase.RetrievedContext:
           RetrievedContext = other.RetrievedContext.Clone();
           break;
+        case ChunkTypeOneofCase.Maps:
+          Maps = other.Maps.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -7784,12 +7795,28 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "maps" field.</summary>
+    public const int MapsFieldNumber = 3;
+    /// <summary>
+    /// Grounding chunk from Google Maps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps Maps {
+      get { return chunkTypeCase_ == ChunkTypeOneofCase.Maps ? (global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps) chunkType_ : null; }
+      set {
+        chunkType_ = value;
+        chunkTypeCase_ = value == null ? ChunkTypeOneofCase.None : ChunkTypeOneofCase.Maps;
+      }
+    }
+
     private object chunkType_;
     /// <summary>Enum of possible cases for the "chunk_type" oneof.</summary>
     public enum ChunkTypeOneofCase {
       None = 0,
       Web = 1,
       RetrievedContext = 2,
+      Maps = 3,
     }
     private ChunkTypeOneofCase chunkTypeCase_ = ChunkTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7822,6 +7849,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(Web, other.Web)) return false;
       if (!object.Equals(RetrievedContext, other.RetrievedContext)) return false;
+      if (!object.Equals(Maps, other.Maps)) return false;
       if (ChunkTypeCase != other.ChunkTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7832,6 +7860,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (chunkTypeCase_ == ChunkTypeOneofCase.Web) hash ^= Web.GetHashCode();
       if (chunkTypeCase_ == ChunkTypeOneofCase.RetrievedContext) hash ^= RetrievedContext.GetHashCode();
+      if (chunkTypeCase_ == ChunkTypeOneofCase.Maps) hash ^= Maps.GetHashCode();
       hash ^= (int) chunkTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7859,6 +7888,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(RetrievedContext);
       }
+      if (chunkTypeCase_ == ChunkTypeOneofCase.Maps) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Maps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7877,6 +7910,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(RetrievedContext);
       }
+      if (chunkTypeCase_ == ChunkTypeOneofCase.Maps) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Maps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7892,6 +7929,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (chunkTypeCase_ == ChunkTypeOneofCase.RetrievedContext) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetrievedContext);
+      }
+      if (chunkTypeCase_ == ChunkTypeOneofCase.Maps) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Maps);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7917,6 +7957,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             RetrievedContext = new global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext();
           }
           RetrievedContext.MergeFrom(other.RetrievedContext);
+          break;
+        case ChunkTypeOneofCase.Maps:
+          if (Maps == null) {
+            Maps = new global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps();
+          }
+          Maps.MergeFrom(other.Maps);
           break;
       }
 
@@ -7953,6 +7999,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             RetrievedContext = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps subBuilder = new global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps();
+            if (chunkTypeCase_ == ChunkTypeOneofCase.Maps) {
+              subBuilder.MergeFrom(Maps);
+            }
+            input.ReadMessage(subBuilder);
+            Maps = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7984,6 +8039,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             RetrievedContext = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps subBuilder = new global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps();
+            if (chunkTypeCase_ == ChunkTypeOneofCase.Maps) {
+              subBuilder.MergeFrom(Maps);
+            }
+            input.ReadMessage(subBuilder);
+            Maps = subBuilder;
             break;
           }
         }
@@ -8662,6 +8726,379 @@ namespace Google.Cloud.AIPlatform.V1 {
 
       }
 
+      /// <summary>
+      /// Chunk from Google Maps.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Maps : pb::IMessage<Maps>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Maps> _parser = new pb::MessageParser<Maps>(() => new Maps());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Maps> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.GroundingChunk.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Maps() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Maps(Maps other) : this() {
+          uri_ = other.uri_;
+          title_ = other.title_;
+          text_ = other.text_;
+          placeId_ = other.placeId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Maps Clone() {
+          return new Maps(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private readonly static string UriDefaultValue = "";
+
+        private string uri_;
+        /// <summary>
+        /// URI reference of the chunk.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_ ?? UriDefaultValue; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "uri" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasUri {
+          get { return uri_ != null; }
+        }
+        /// <summary>Clears the value of the "uri" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearUri() {
+          uri_ = null;
+        }
+
+        /// <summary>Field number for the "title" field.</summary>
+        public const int TitleFieldNumber = 2;
+        private readonly static string TitleDefaultValue = "";
+
+        private string title_;
+        /// <summary>
+        /// Title of the chunk.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Title {
+          get { return title_ ?? TitleDefaultValue; }
+          set {
+            title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "title" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTitle {
+          get { return title_ != null; }
+        }
+        /// <summary>Clears the value of the "title" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTitle() {
+          title_ = null;
+        }
+
+        /// <summary>Field number for the "text" field.</summary>
+        public const int TextFieldNumber = 3;
+        private readonly static string TextDefaultValue = "";
+
+        private string text_;
+        /// <summary>
+        /// Text of the chunk.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Text {
+          get { return text_ ?? TextDefaultValue; }
+          set {
+            text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "text" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasText {
+          get { return text_ != null; }
+        }
+        /// <summary>Clears the value of the "text" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearText() {
+          text_ = null;
+        }
+
+        /// <summary>Field number for the "place_id" field.</summary>
+        public const int PlaceIdFieldNumber = 4;
+        private readonly static string PlaceIdDefaultValue = "";
+
+        private string placeId_;
+        /// <summary>
+        /// This Place's resource name, in `places/{place_id}` format.  Can be used
+        /// to look up the Place.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PlaceId {
+          get { return placeId_ ?? PlaceIdDefaultValue; }
+          set {
+            placeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "place_id" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPlaceId {
+          get { return placeId_ != null; }
+        }
+        /// <summary>Clears the value of the "place_id" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPlaceId() {
+          placeId_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Maps);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Maps other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          if (Title != other.Title) return false;
+          if (Text != other.Text) return false;
+          if (PlaceId != other.PlaceId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasUri) hash ^= Uri.GetHashCode();
+          if (HasTitle) hash ^= Title.GetHashCode();
+          if (HasText) hash ^= Text.GetHashCode();
+          if (HasPlaceId) hash ^= PlaceId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasUri) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (HasTitle) {
+            output.WriteRawTag(18);
+            output.WriteString(Title);
+          }
+          if (HasText) {
+            output.WriteRawTag(26);
+            output.WriteString(Text);
+          }
+          if (HasPlaceId) {
+            output.WriteRawTag(34);
+            output.WriteString(PlaceId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasUri) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (HasTitle) {
+            output.WriteRawTag(18);
+            output.WriteString(Title);
+          }
+          if (HasText) {
+            output.WriteRawTag(26);
+            output.WriteString(Text);
+          }
+          if (HasPlaceId) {
+            output.WriteRawTag(34);
+            output.WriteString(PlaceId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasUri) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (HasTitle) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+          }
+          if (HasText) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+          }
+          if (HasPlaceId) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Maps other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasUri) {
+            Uri = other.Uri;
+          }
+          if (other.HasTitle) {
+            Title = other.Title;
+          }
+          if (other.HasText) {
+            Text = other.Text;
+          }
+          if (other.HasPlaceId) {
+            PlaceId = other.PlaceId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 18: {
+                Title = input.ReadString();
+                break;
+              }
+              case 26: {
+                Text = input.ReadString();
+                break;
+              }
+              case 34: {
+                PlaceId = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 18: {
+                Title = input.ReadString();
+                break;
+              }
+              case 26: {
+                Text = input.ReadString();
+                break;
+              }
+              case 34: {
+                PlaceId = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -8982,6 +9419,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       groundingChunks_ = other.groundingChunks_.Clone();
       groundingSupports_ = other.groundingSupports_.Clone();
       retrievalMetadata_ = other.retrievalMetadata_ != null ? other.retrievalMetadata_.Clone() : null;
+      googleMapsWidgetContextToken_ = other.googleMapsWidgetContextToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9063,6 +9501,37 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "google_maps_widget_context_token" field.</summary>
+    public const int GoogleMapsWidgetContextTokenFieldNumber = 8;
+    private readonly static string GoogleMapsWidgetContextTokenDefaultValue = "";
+
+    private string googleMapsWidgetContextToken_;
+    /// <summary>
+    /// Optional. Output only. Resource name of the Google Maps widget context
+    /// token to be used with the PlacesContextElement widget to render contextual
+    /// data. This is populated only for Google Maps grounding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GoogleMapsWidgetContextToken {
+      get { return googleMapsWidgetContextToken_ ?? GoogleMapsWidgetContextTokenDefaultValue; }
+      set {
+        googleMapsWidgetContextToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "google_maps_widget_context_token" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGoogleMapsWidgetContextToken {
+      get { return googleMapsWidgetContextToken_ != null; }
+    }
+    /// <summary>Clears the value of the "google_maps_widget_context_token" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGoogleMapsWidgetContextToken() {
+      googleMapsWidgetContextToken_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9083,6 +9552,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if(!groundingChunks_.Equals(other.groundingChunks_)) return false;
       if(!groundingSupports_.Equals(other.groundingSupports_)) return false;
       if (!object.Equals(RetrievalMetadata, other.RetrievalMetadata)) return false;
+      if (GoogleMapsWidgetContextToken != other.GoogleMapsWidgetContextToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9095,6 +9565,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= groundingChunks_.GetHashCode();
       hash ^= groundingSupports_.GetHashCode();
       if (retrievalMetadata_ != null) hash ^= RetrievalMetadata.GetHashCode();
+      if (HasGoogleMapsWidgetContextToken) hash ^= GoogleMapsWidgetContextToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9124,6 +9595,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(RetrievalMetadata);
       }
+      if (HasGoogleMapsWidgetContextToken) {
+        output.WriteRawTag(66);
+        output.WriteString(GoogleMapsWidgetContextToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9145,6 +9620,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(RetrievalMetadata);
       }
+      if (HasGoogleMapsWidgetContextToken) {
+        output.WriteRawTag(66);
+        output.WriteString(GoogleMapsWidgetContextToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9163,6 +9642,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += groundingSupports_.CalculateSize(_repeated_groundingSupports_codec);
       if (retrievalMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetrievalMetadata);
+      }
+      if (HasGoogleMapsWidgetContextToken) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleMapsWidgetContextToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9190,6 +9672,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           RetrievalMetadata = new global::Google.Cloud.AIPlatform.V1.RetrievalMetadata();
         }
         RetrievalMetadata.MergeFrom(other.RetrievalMetadata);
+      }
+      if (other.HasGoogleMapsWidgetContextToken) {
+        GoogleMapsWidgetContextToken = other.GoogleMapsWidgetContextToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9232,6 +9717,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(RetrievalMetadata);
             break;
           }
+          case 66: {
+            GoogleMapsWidgetContextToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -9271,6 +9760,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               RetrievalMetadata = new global::Google.Cloud.AIPlatform.V1.RetrievalMetadata();
             }
             input.ReadMessage(RetrievalMetadata);
+            break;
+          }
+          case 66: {
+            GoogleMapsWidgetContextToken = input.ReadString();
             break;
           }
         }
