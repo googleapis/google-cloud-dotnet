@@ -1256,7 +1256,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-31T16:10:54Z",
-            "lastGeneratedCommit": "18f8cb5b581d073222006396175cd0a360a72adf",
+            "lastGeneratedCommit": "ee5d4f3dfdf9ac08c3e6807054e5408da88f2bb7",
             "apiPaths": [
                 "google/cloud/datastream/v1"
             ],
