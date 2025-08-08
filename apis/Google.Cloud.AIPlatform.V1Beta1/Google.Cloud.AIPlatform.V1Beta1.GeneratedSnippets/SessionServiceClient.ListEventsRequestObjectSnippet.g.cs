@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             ListEventsRequest request = new ListEventsRequest
             {
                 ParentAsSessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEvents(request);

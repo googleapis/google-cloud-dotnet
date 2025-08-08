@@ -27,8 +27,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL21lbW9yeV9iYW5r",
             "LnByb3RvEh9nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExGh9nb29n",
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIt8D",
-            "CgZNZW1vcnkSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlfbmFtZRgC",
+            "cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dv",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i1AQKBk1lbW9yeRI2Cgtl",
+            "eHBpcmVfdGltZRgNIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAUgAEi0KA3R0bBgOIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkID4EEBSAASEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESNAoLY3JlYXRl",
             "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
             "NAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
@@ -38,16 +41,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "GAIgASgJOgI4ATqXAepBkwEKIGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
             "TWVtb3J5El1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
             "bn0vcmVhc29uaW5nRW5naW5lcy97cmVhc29uaW5nX2VuZ2luZX0vbWVtb3Jp",
-            "ZXMve21lbW9yeX0qCG1lbW9yaWVzMgZtZW1vcnlC5gEKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQg9NZW1vcnlCYW5rUHJvdG9QAVpD",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlw",
-            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRm",
-            "b3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx",
-            "6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "ZXMve21lbW9yeX0qCG1lbW9yaWVzMgZtZW1vcnlCDAoKZXhwaXJhdGlvbkLm",
+            "AQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCD01lbW9y",
+            "eUJhbmtQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
+            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
+            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Memory), global::Google.Cloud.AIPlatform.V1Beta1.Memory.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "Fact", "Scope" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Memory), global::Google.Cloud.AIPlatform.V1Beta1.Memory.Parser, new[]{ "ExpireTime", "Ttl", "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "Fact", "Scope" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -99,6 +103,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       fact_ = other.fact_;
       scope_ = other.scope_.Clone();
+      switch (other.ExpirationCase) {
+        case ExpirationOneofCase.ExpireTime:
+          ExpireTime = other.ExpireTime.Clone();
+          break;
+        case ExpirationOneofCase.Ttl:
+          Ttl = other.Ttl.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -106,6 +119,39 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Memory Clone() {
       return new Memory(this);
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 13;
+    /// <summary>
+    /// Optional. Timestamp of when this resource is considered expired.
+    /// This is *always* provided on output, regardless of what `expiration` was
+    /// sent on input.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expirationCase_ == ExpirationOneofCase.ExpireTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) expiration_ : null; }
+      set {
+        expiration_ = value;
+        expirationCase_ = value == null ? ExpirationOneofCase.None : ExpirationOneofCase.ExpireTime;
+      }
+    }
+
+    /// <summary>Field number for the "ttl" field.</summary>
+    public const int TtlFieldNumber = 14;
+    /// <summary>
+    /// Optional. Input only. The TTL for this resource. The expiration time is
+    /// computed: now + TTL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Ttl {
+      get { return expirationCase_ == ExpirationOneofCase.Ttl ? (global::Google.Protobuf.WellKnownTypes.Duration) expiration_ : null; }
+      set {
+        expiration_ = value;
+        expirationCase_ = value == null ? ExpirationOneofCase.None : ExpirationOneofCase.Ttl;
+      }
     }
 
     /// <summary>Field number for the "name" field.</summary>
@@ -216,6 +262,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return scope_; }
     }
 
+    private object expiration_;
+    /// <summary>Enum of possible cases for the "expiration" oneof.</summary>
+    public enum ExpirationOneofCase {
+      None = 0,
+      ExpireTime = 13,
+      Ttl = 14,
+    }
+    private ExpirationOneofCase expirationCase_ = ExpirationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExpirationOneofCase ExpirationCase {
+      get { return expirationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExpiration() {
+      expirationCase_ = ExpirationOneofCase.None;
+      expiration_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -231,6 +298,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!object.Equals(Ttl, other.Ttl)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
@@ -238,6 +307,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Fact != other.Fact) return false;
       if (!Scope.Equals(other.Scope)) return false;
+      if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -245,6 +315,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) hash ^= ExpireTime.GetHashCode();
+      if (expirationCase_ == ExpirationOneofCase.Ttl) hash ^= Ttl.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -252,6 +324,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Fact.Length != 0) hash ^= Fact.GetHashCode();
       hash ^= Scope.GetHashCode();
+      hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -295,6 +368,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteString(Fact);
       }
       scope_.WriteTo(output, _map_scope_codec);
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Ttl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -330,6 +411,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteString(Fact);
       }
       scope_.WriteTo(ref output, _map_scope_codec);
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Ttl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -340,6 +429,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ttl);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -396,6 +491,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         Fact = other.Fact;
       }
       scope_.MergeFrom(other.scope_);
+      switch (other.ExpirationCase) {
+        case ExpirationOneofCase.ExpireTime:
+          if (ExpireTime == null) {
+            ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          ExpireTime.MergeFrom(other.ExpireTime);
+          break;
+        case ExpirationOneofCase.Ttl:
+          if (Ttl == null) {
+            Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
+          }
+          Ttl.MergeFrom(other.Ttl);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -445,6 +555,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             scope_.AddEntriesFrom(input, _map_scope_codec);
             break;
           }
+          case 106: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+              subBuilder.MergeFrom(ExpireTime);
+            }
+            input.ReadMessage(subBuilder);
+            ExpireTime = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (expirationCase_ == ExpirationOneofCase.Ttl) {
+              subBuilder.MergeFrom(Ttl);
+            }
+            input.ReadMessage(subBuilder);
+            Ttl = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -492,6 +620,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 90: {
             scope_.AddEntriesFrom(ref input, _map_scope_codec);
+            break;
+          }
+          case 106: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+              subBuilder.MergeFrom(ExpireTime);
+            }
+            input.ReadMessage(subBuilder);
+            ExpireTime = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (expirationCase_ == ExpirationOneofCase.Ttl) {
+              subBuilder.MergeFrom(Ttl);
+            }
+            input.ReadMessage(subBuilder);
+            Ttl = subBuilder;
             break;
           }
         }
