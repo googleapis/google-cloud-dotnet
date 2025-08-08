@@ -93,6 +93,24 @@ namespace Google.Cloud.Spanner.Data.Tests
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
         }
 
+        [Theory]
+        [InlineData("UniverseDomain=test-domain.test", "test-domain.test", null)]
+        [InlineData("Host=test-host;Port=567", null, "test-host:567")]
+        [InlineData("Host=test-host", null, "test-host:443")]
+        [InlineData("Port=567", null, "spanner.googleapis.com:567")]
+        [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test", null, "test-host:567")]
+        [InlineData("Data Source=projects/p1/instances/i1/databases/d1", null, null)]
+        public void UniverseDomainEndpoint(string connectionString, string expectedUniverseDomain, string expectedEndpoint)
+        {
+            var builder = new SpannerConnectionStringBuilder(connectionString);
+            var options = new SpannerClientCreationOptions(builder);
+
+            // These tests are only to test the correct setting null or otherwise of UniverseDomain and Endpoint in the SpannerClientCreationOptions
+            // For tests on setting the correct EffectiveEndpoint for the CallInvoker see ClientBuilderBase.EffectiveEndpoint tests in GAX
+            Assert.Equal(expectedUniverseDomain, options.ClientBuilder.UniverseDomain);
+            Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
+        }
+
         // Credential tests moved from the previous SpannerConnectionStringBuilder tests
         [Fact]
         public async Task CredentialFile()

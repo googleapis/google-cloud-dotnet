@@ -27,7 +27,8 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal sealed class SpannerClientCreationOptions : IEquatable<SpannerClientCreationOptions>
     {
-        private readonly SpannerClientBuilder _clientBuilder;
+        // Internal for testing purposes
+        internal SpannerClientBuilder ClientBuilder { get; }
 
         internal bool UsesEmulator { get; }
 
@@ -37,7 +38,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 EmulatorDetection = builder.EmulatorDetection,
                 EnvironmentVariableProvider = builder.EnvironmentVariableProvider,
-                Endpoint = builder.Host == SpannerConnectionStringBuilder.DefaultHost && builder.Port == SpannerConnectionStringBuilder.DefaultPort ? null : builder.EndPoint,
+                Endpoint = builder.ContainsKey(nameof(builder.Host)) || builder.ContainsKey(nameof(builder.Port)) ? builder.EndPoint : null,
                 CredentialsPath = builder.CredentialFile == "" ? null: builder.CredentialFile,
                 ChannelCredentials = builder.CredentialOverride,
                 GoogleCredential = builder.GoogleCredential,
@@ -50,10 +51,12 @@ namespace Google.Cloud.Spanner.Data
                 DirectedReadOptions = builder.DirectedReadOptions,
             };
 
+            clientBuilder.UniverseDomain = clientBuilder.Endpoint is null && builder.ContainsKey(nameof(builder.UniverseDomain)) ? builder.UniverseDomain : null;
+
             var emulatorBuilder = clientBuilder.MaybeCreateEmulatorClientBuilder();
 
             UsesEmulator = emulatorBuilder is not null;
-            _clientBuilder = emulatorBuilder ?? clientBuilder;
+            ClientBuilder = emulatorBuilder ?? clientBuilder;
         }
 
         internal Task<SpannerClient> CreateSpannerClientAsync(SpannerSettings settings) =>
@@ -62,15 +65,16 @@ namespace Google.Cloud.Spanner.Data
             {
                 // Note we don't copy emulator detection properties because we already took care
                 // of emulator detection on the constructor.
-                Endpoint = _clientBuilder.Endpoint,
-                CredentialsPath = _clientBuilder.CredentialsPath,
-                ChannelCredentials = _clientBuilder.ChannelCredentials,
-                GoogleCredential = _clientBuilder.GoogleCredential,
-                AffinityChannelPoolConfiguration = _clientBuilder.AffinityChannelPoolConfiguration,
-                LeaderRoutingEnabled = _clientBuilder.LeaderRoutingEnabled,
-                DirectedReadOptions = _clientBuilder.DirectedReadOptions,
+                Endpoint = ClientBuilder.Endpoint,
+                CredentialsPath = ClientBuilder.CredentialsPath,
+                ChannelCredentials = ClientBuilder.ChannelCredentials,
+                GoogleCredential = ClientBuilder.GoogleCredential,
+                AffinityChannelPoolConfiguration = ClientBuilder.AffinityChannelPoolConfiguration,
+                LeaderRoutingEnabled = ClientBuilder.LeaderRoutingEnabled,
+                DirectedReadOptions = ClientBuilder.DirectedReadOptions,
                 // If we ever have settings of our own, we need to merge those with these.
                 Settings = settings,
+                UniverseDomain = ClientBuilder.UniverseDomain,
             }.BuildAsync();
 
         internal DatabaseAdminClientBuilder CreateDatabaseAdminClientBuilder()
@@ -79,12 +83,13 @@ namespace Google.Cloud.Spanner.Data
             {
                 // Note we don't copy emulator detection properties because we already took care
                 // of emulator detection on the constructor.
-                Endpoint = _clientBuilder.Endpoint,
-                CredentialsPath = _clientBuilder.CredentialsPath,
-                ChannelCredentials = _clientBuilder.ChannelCredentials,
-                GoogleCredential = _clientBuilder.GoogleCredential,
+                Endpoint = ClientBuilder.Endpoint,
+                CredentialsPath = ClientBuilder.CredentialsPath,
+                ChannelCredentials = ClientBuilder.ChannelCredentials,
+                GoogleCredential = ClientBuilder.GoogleCredential,
                 // If we ever have settings of our own, we need to merge those with these.
                 Settings = CreateDatabaseAdminSettings(),
+                UniverseDomain = ClientBuilder.UniverseDomain,
             };
 
             DatabaseAdminSettings CreateDatabaseAdminSettings()
@@ -101,29 +106,29 @@ namespace Google.Cloud.Spanner.Data
             other is not null &&
             UsesEmulator == other.UsesEmulator &&
             // TODO: Consider overriding ClientBuilderBase and SpannerClientBuilder Equals, etc.
-            Equals(_clientBuilder.Endpoint, other._clientBuilder.Endpoint) &&
-            Equals(_clientBuilder.CredentialsPath, other._clientBuilder.CredentialsPath) &&
-            Equals(_clientBuilder.ChannelCredentials, other._clientBuilder.ChannelCredentials) &&
-            Equals(_clientBuilder.GoogleCredential, other._clientBuilder.GoogleCredential) &&
-            Equals(_clientBuilder.AffinityChannelPoolConfiguration, other._clientBuilder.AffinityChannelPoolConfiguration) &&
-            _clientBuilder.LeaderRoutingEnabled == other._clientBuilder.LeaderRoutingEnabled &&
-            Equals(_clientBuilder.DirectedReadOptions, other._clientBuilder.DirectedReadOptions) &&
-            Equals(_clientBuilder.GrpcAdapter, other._clientBuilder.GrpcAdapter);
+            Equals(ClientBuilder.Endpoint, other.ClientBuilder.Endpoint) &&
+            Equals(ClientBuilder.CredentialsPath, other.ClientBuilder.CredentialsPath) &&
+            Equals(ClientBuilder.ChannelCredentials, other.ClientBuilder.ChannelCredentials) &&
+            Equals(ClientBuilder.GoogleCredential, other.ClientBuilder.GoogleCredential) &&
+            Equals(ClientBuilder.AffinityChannelPoolConfiguration, other.ClientBuilder.AffinityChannelPoolConfiguration) &&
+            ClientBuilder.LeaderRoutingEnabled == other.ClientBuilder.LeaderRoutingEnabled &&
+            Equals(ClientBuilder.DirectedReadOptions, other.ClientBuilder.DirectedReadOptions) &&
+            Equals(ClientBuilder.GrpcAdapter, other.ClientBuilder.GrpcAdapter);
 
         public override int GetHashCode()
         {
             unchecked
             {
                 int hash = 31;
-                hash = hash * 23 + (_clientBuilder.Endpoint?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_clientBuilder.CredentialsPath?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_clientBuilder.ChannelCredentials?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_clientBuilder.GoogleCredential?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.Endpoint?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.CredentialsPath?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.ChannelCredentials?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.GoogleCredential?.GetHashCode() ?? 0);
                 hash = hash * 23 + UsesEmulator.GetHashCode();
-                hash = hash * 23 + (_clientBuilder.AffinityChannelPoolConfiguration?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_clientBuilder.LeaderRoutingEnabled.GetHashCode());
-                hash = hash * 23 + (_clientBuilder.DirectedReadOptions?.GetHashCode() ?? 0);
-                hash = hash * 23 + (_clientBuilder.GrpcAdapter?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.AffinityChannelPoolConfiguration?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.LeaderRoutingEnabled.GetHashCode());
+                hash = hash * 23 + (ClientBuilder.DirectedReadOptions?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.GrpcAdapter?.GetHashCode() ?? 0);
                 return hash;
             }
         }
@@ -134,24 +139,25 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A diagnostic string representation of this value.</returns>
         public override string ToString()
         {
-            var builder = new StringBuilder($"EndPoint: {_clientBuilder.Endpoint}");
-            if (!string.IsNullOrEmpty(_clientBuilder.CredentialsPath))
+            var builder = new StringBuilder($"EndPoint: {ClientBuilder.Endpoint ?? "Default"}");
+            if (!string.IsNullOrEmpty(ClientBuilder.CredentialsPath))
             {
-                builder.Append($"; CredentialsFile: {_clientBuilder.CredentialsPath}");
+                builder.Append($"; CredentialsFile: {ClientBuilder.CredentialsPath}");
             }
-            if (_clientBuilder.ChannelCredentials is not null)
+            if (ClientBuilder.ChannelCredentials is not null)
             {
                 builder.Append($"; CredentialsOverride: True");
             }
-            if (_clientBuilder.GoogleCredential is not null)
+            if (ClientBuilder.GoogleCredential is not null)
             {
                 builder.Append($"; GoogleCredential: True");
             }
+            builder.Append($"; UniverseDomain: {ClientBuilder.UniverseDomain ?? SpannerConnectionStringBuilder.DefaultDomain}");
             builder.Append($"; UsesEmulator: {UsesEmulator}");
-            builder.Append($"; AffinityChannelPoolConfiguration: {_clientBuilder.AffinityChannelPoolConfiguration?.ToString() ?? "None"}");
-            builder.Append($"; LeaderRoutingEnabled: {_clientBuilder.LeaderRoutingEnabled}");
-            builder.Append($"; DirectedReadOptions: {_clientBuilder.DirectedReadOptions?.ToString() ?? "None"}");
-            builder.Append($"; GrpcAdapter: {_clientBuilder.GrpcAdapter?.GetType().Name ?? "None"}");
+            builder.Append($"; AffinityChannelPoolConfiguration: {ClientBuilder.AffinityChannelPoolConfiguration?.ToString() ?? "None"}");
+            builder.Append($"; LeaderRoutingEnabled: {ClientBuilder.LeaderRoutingEnabled}");
+            builder.Append($"; DirectedReadOptions: {ClientBuilder.DirectedReadOptions?.ToString() ?? "None"}");
+            builder.Append($"; GrpcAdapter: {ClientBuilder.GrpcAdapter?.GetType().Name ?? "None"}");
             return builder.ToString();
         }
     }
