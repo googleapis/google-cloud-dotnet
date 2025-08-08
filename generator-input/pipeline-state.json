@@ -263,12 +263,12 @@
         },
         {
             "id": "Google.Cloud.AIPlatform.V1Beta1",
-            "currentVersion": "1.0.0-beta43",
+            "currentVersion": "1.0.0-beta44",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-05T07:24:14.147882570Z",
+            "releaseTimestamp": "2025-08-08T08:17:03.049085247Z",
             "lastGeneratedCommit": "c5334a83d6966439a2273a4ef64e6779ffba97a1",
-            "lastReleasedCommit": "8c74a4f9ad52cfd7a7d1f6427fa0a0511377a395",
+            "lastReleasedCommit": "c5334a83d6966439a2273a4ef64e6779ffba97a1",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
             ],
