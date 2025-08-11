@@ -4486,7 +4486,7 @@
             "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "67fe1ece997ef298d8d86b026195ea2fd588c538",
             "apiPaths": [
                 "google/cloud/saasplatform/saasservicemgmt/v1beta1"
