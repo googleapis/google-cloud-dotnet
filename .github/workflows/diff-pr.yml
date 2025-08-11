@@ -37,8 +37,9 @@ jobs:
     - name: Detect PR changes
       env:
         ALLOW_BREAKING_CHANGES: ${{contains(github.event.pull_request.labels.*.name, 'allow breaking changes')}}
+        IS_RELEASE_PR: "${{contains(github.event.pull_request.title, 'chore: Library release')}}"
       run: |
-        if [[ $ALLOW_BREAKING_CHANGES == "true" ]]
+        if [[ $ALLOW_BREAKING_CHANGES == "true" || $IS_RELEASE_PR == "true" ]]
         then
           SCRIPT_OPTION=--allow-breaking-changes
         fi
