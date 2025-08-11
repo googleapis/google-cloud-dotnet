@@ -393,5 +393,92 @@ namespace GoogleCSharpSnippets
             Comment response = await commentServiceClient.CreateCommentAsync(parent, comment);
             // End snippet
         }
+
+        /// <summary>Snippet for GetComment</summary>
+        public void GetCommentRequestObject()
+        {
+            // Snippet: GetComment(GetCommentRequest, CallSettings)
+            // Create client
+            CommentServiceClient commentServiceClient = CommentServiceClient.Create();
+            // Initialize request argument(s)
+            GetCommentRequest request = new GetCommentRequest
+            {
+                CommentName = CommentName.FromOrganizationCaseComment("[ORGANIZATION]", "[CASE]", "[COMMENT]"),
+            };
+            // Make the request
+            Comment response = commentServiceClient.GetComment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCommentAsync</summary>
+        public async Task GetCommentRequestObjectAsync()
+        {
+            // Snippet: GetCommentAsync(GetCommentRequest, CallSettings)
+            // Additional: GetCommentAsync(GetCommentRequest, CancellationToken)
+            // Create client
+            CommentServiceClient commentServiceClient = await CommentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCommentRequest request = new GetCommentRequest
+            {
+                CommentName = CommentName.FromOrganizationCaseComment("[ORGANIZATION]", "[CASE]", "[COMMENT]"),
+            };
+            // Make the request
+            Comment response = await commentServiceClient.GetCommentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetComment</summary>
+        public void GetComment()
+        {
+            // Snippet: GetComment(string, CallSettings)
+            // Create client
+            CommentServiceClient commentServiceClient = CommentServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/cases/[CASE]/comments/[COMMENT]";
+            // Make the request
+            Comment response = commentServiceClient.GetComment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCommentAsync</summary>
+        public async Task GetCommentAsync()
+        {
+            // Snippet: GetCommentAsync(string, CallSettings)
+            // Additional: GetCommentAsync(string, CancellationToken)
+            // Create client
+            CommentServiceClient commentServiceClient = await CommentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/cases/[CASE]/comments/[COMMENT]";
+            // Make the request
+            Comment response = await commentServiceClient.GetCommentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetComment</summary>
+        public void GetCommentResourceNames()
+        {
+            // Snippet: GetComment(CommentName, CallSettings)
+            // Create client
+            CommentServiceClient commentServiceClient = CommentServiceClient.Create();
+            // Initialize request argument(s)
+            CommentName name = CommentName.FromOrganizationCaseComment("[ORGANIZATION]", "[CASE]", "[COMMENT]");
+            // Make the request
+            Comment response = commentServiceClient.GetComment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCommentAsync</summary>
+        public async Task GetCommentResourceNamesAsync()
+        {
+            // Snippet: GetCommentAsync(CommentName, CallSettings)
+            // Additional: GetCommentAsync(CommentName, CancellationToken)
+            // Create client
+            CommentServiceClient commentServiceClient = await CommentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CommentName name = CommentName.FromOrganizationCaseComment("[ORGANIZATION]", "[CASE]", "[COMMENT]");
+            // Make the request
+            Comment response = await commentServiceClient.GetCommentAsync(name);
+            // End snippet
+        }
     }
 }

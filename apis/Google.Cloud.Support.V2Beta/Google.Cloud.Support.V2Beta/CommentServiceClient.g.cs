@@ -47,6 +47,7 @@ namespace Google.Cloud.Support.V2Beta
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListCommentsSettings = existing.ListCommentsSettings;
             CreateCommentSettings = existing.CreateCommentSettings;
+            GetCommentSettings = existing.GetCommentSettings;
             OnCopy(existing);
         }
 
@@ -81,6 +82,18 @@ namespace Google.Cloud.Support.V2Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateCommentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CommentServiceClient.GetComment</c> and <c>CommentServiceClient.GetCommentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCommentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CommentServiceSettings"/> object.</returns>
@@ -517,6 +530,111 @@ namespace Google.Cloud.Support.V2Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Comment> CreateCommentAsync(CaseName parent, Comment comment, st::CancellationToken cancellationToken) =>
             CreateCommentAsync(parent, comment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Comment GetComment(GetCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> GetCommentAsync(GetCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> GetCommentAsync(GetCommentRequest request, st::CancellationToken cancellationToken) =>
+            GetCommentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Comment GetComment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetComment(new GetCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> GetCommentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCommentAsync(new GetCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> GetCommentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCommentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Comment GetComment(CommentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetComment(new GetCommentRequest
+            {
+                CommentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> GetCommentAsync(CommentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCommentAsync(new GetCommentRequest
+            {
+                CommentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the comment to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Comment> GetCommentAsync(CommentName name, st::CancellationToken cancellationToken) =>
+            GetCommentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CommentService client wrapper implementation, for convenient use.</summary>
@@ -528,6 +646,8 @@ namespace Google.Cloud.Support.V2Beta
         private readonly gaxgrpc::ApiCall<ListCommentsRequest, ListCommentsResponse> _callListComments;
 
         private readonly gaxgrpc::ApiCall<CreateCommentRequest, Comment> _callCreateComment;
+
+        private readonly gaxgrpc::ApiCall<GetCommentRequest, Comment> _callGetComment;
 
         /// <summary>
         /// Constructs a client wrapper for the CommentService service, with the specified gRPC client and settings.
@@ -550,6 +670,9 @@ namespace Google.Cloud.Support.V2Beta
             _callCreateComment = clientHelper.BuildApiCall<CreateCommentRequest, Comment>("CreateComment", grpcClient.CreateCommentAsync, grpcClient.CreateComment, effectiveSettings.CreateCommentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateComment);
             Modify_CreateCommentApiCall(ref _callCreateComment);
+            _callGetComment = clientHelper.BuildApiCall<GetCommentRequest, Comment>("GetComment", grpcClient.GetCommentAsync, grpcClient.GetComment, effectiveSettings.GetCommentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetComment);
+            Modify_GetCommentApiCall(ref _callGetComment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -559,6 +682,8 @@ namespace Google.Cloud.Support.V2Beta
 
         partial void Modify_CreateCommentApiCall(ref gaxgrpc::ApiCall<CreateCommentRequest, Comment> call);
 
+        partial void Modify_GetCommentApiCall(ref gaxgrpc::ApiCall<GetCommentRequest, Comment> call);
+
         partial void OnConstruction(CommentService.CommentServiceClient grpcClient, CommentServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CommentService client</summary>
@@ -567,6 +692,8 @@ namespace Google.Cloud.Support.V2Beta
         partial void Modify_ListCommentsRequest(ref ListCommentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCommentRequest(ref CreateCommentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCommentRequest(ref GetCommentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// List all the comments associated with a case.
@@ -618,6 +745,30 @@ namespace Google.Cloud.Support.V2Beta
         {
             Modify_CreateCommentRequest(ref request, ref callSettings);
             return _callCreateComment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Comment GetComment(GetCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCommentRequest(ref request, ref callSettings);
+            return _callGetComment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve a comment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Comment> GetCommentAsync(GetCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCommentRequest(ref request, ref callSettings);
+            return _callGetComment.Async(request, callSettings);
         }
     }
 

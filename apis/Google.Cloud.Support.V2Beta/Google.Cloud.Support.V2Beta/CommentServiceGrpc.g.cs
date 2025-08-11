@@ -71,6 +71,8 @@ namespace Google.Cloud.Support.V2Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.CreateCommentRequest> __Marshaller_google_cloud_support_v2beta_CreateCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.CreateCommentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.Comment> __Marshaller_google_cloud_support_v2beta_Comment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.Comment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.GetCommentRequest> __Marshaller_google_cloud_support_v2beta_GetCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.GetCommentRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Support.V2Beta.ListCommentsRequest, global::Google.Cloud.Support.V2Beta.ListCommentsResponse> __Method_ListComments = new grpc::Method<global::Google.Cloud.Support.V2Beta.ListCommentsRequest, global::Google.Cloud.Support.V2Beta.ListCommentsResponse>(
@@ -86,6 +88,14 @@ namespace Google.Cloud.Support.V2Beta {
         __ServiceName,
         "CreateComment",
         __Marshaller_google_cloud_support_v2beta_CreateCommentRequest,
+        __Marshaller_google_cloud_support_v2beta_Comment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Support.V2Beta.GetCommentRequest, global::Google.Cloud.Support.V2Beta.Comment> __Method_GetComment = new grpc::Method<global::Google.Cloud.Support.V2Beta.GetCommentRequest, global::Google.Cloud.Support.V2Beta.Comment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetComment",
+        __Marshaller_google_cloud_support_v2beta_GetCommentRequest,
         __Marshaller_google_cloud_support_v2beta_Comment);
 
     /// <summary>Service descriptor</summary>
@@ -120,6 +130,18 @@ namespace Google.Cloud.Support.V2Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2Beta.Comment> CreateComment(global::Google.Cloud.Support.V2Beta.CreateCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve a comment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2Beta.Comment> GetComment(global::Google.Cloud.Support.V2Beta.GetCommentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -257,6 +279,54 @@ namespace Google.Cloud.Support.V2Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateComment, null, options, request);
       }
+      /// <summary>
+      /// Retrieve a comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2Beta.Comment GetComment(global::Google.Cloud.Support.V2Beta.GetCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2Beta.Comment GetComment(global::Google.Cloud.Support.V2Beta.GetCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetComment, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2Beta.Comment> GetCommentAsync(global::Google.Cloud.Support.V2Beta.GetCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a comment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2Beta.Comment> GetCommentAsync(global::Google.Cloud.Support.V2Beta.GetCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetComment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CommentServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -272,7 +342,8 @@ namespace Google.Cloud.Support.V2Beta {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListComments, serviceImpl.ListComments)
-          .AddMethod(__Method_CreateComment, serviceImpl.CreateComment).Build();
+          .AddMethod(__Method_CreateComment, serviceImpl.CreateComment)
+          .AddMethod(__Method_GetComment, serviceImpl.GetComment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -284,6 +355,7 @@ namespace Google.Cloud.Support.V2Beta {
     {
       serviceBinder.AddMethod(__Method_ListComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2Beta.ListCommentsRequest, global::Google.Cloud.Support.V2Beta.ListCommentsResponse>(serviceImpl.ListComments));
       serviceBinder.AddMethod(__Method_CreateComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2Beta.CreateCommentRequest, global::Google.Cloud.Support.V2Beta.Comment>(serviceImpl.CreateComment));
+      serviceBinder.AddMethod(__Method_GetComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2Beta.GetCommentRequest, global::Google.Cloud.Support.V2Beta.Comment>(serviceImpl.GetComment));
     }
 
   }

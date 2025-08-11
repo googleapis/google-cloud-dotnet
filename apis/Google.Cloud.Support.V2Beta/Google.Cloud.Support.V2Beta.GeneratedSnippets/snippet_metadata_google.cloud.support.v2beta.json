@@ -330,6 +330,293 @@
       ]
     },
     {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_GetAttachment_sync",
+      "title": "GetAttachmentRequestObject",
+      "description": "Snippet for GetAttachment",
+      "file": "CaseAttachmentServiceClient.GetAttachmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachment",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.GetAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.GetAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Attachment",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.GetAttachment",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_GetAttachment_async",
+      "title": "GetAttachmentRequestObjectAsync",
+      "description": "Snippet for GetAttachmentAsync",
+      "file": "CaseAttachmentServiceClient.GetAttachmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachmentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.GetAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.GetAttachmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.GetAttachment",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_GetAttachment_sync_flattened",
+      "title": "GetAttachment",
+      "description": "Snippet for GetAttachment",
+      "file": "CaseAttachmentServiceClient.GetAttachmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachment",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.GetAttachment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Attachment",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.GetAttachment",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_GetAttachment_async_flattened",
+      "title": "GetAttachmentAsync",
+      "description": "Snippet for GetAttachmentAsync",
+      "file": "CaseAttachmentServiceClient.GetAttachmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachmentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.GetAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.GetAttachment",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_GetAttachment_sync_flattened_resourceNames",
+      "title": "GetAttachmentResourceNames",
+      "description": "Snippet for GetAttachment",
+      "file": "CaseAttachmentServiceClient.GetAttachmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachment",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.GetAttachment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.AttachmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Attachment",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.GetAttachment",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CaseAttachmentService_GetAttachment_async_flattened_resourceNames",
+      "title": "GetAttachmentResourceNamesAsync",
+      "description": "Snippet for GetAttachmentAsync",
+      "file": "CaseAttachmentServiceClient.GetAttachmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAttachmentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient.GetAttachmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.AttachmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Attachment>",
+        "client": {
+          "shortName": "CaseAttachmentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CaseAttachmentServiceClient"
+        },
+        "method": {
+          "shortName": "GetAttachment",
+          "fullName": "google.cloud.support.v2beta.CaseAttachmentService.GetAttachment",
+          "service": {
+            "shortName": "CaseAttachmentService",
+            "fullName": "google.cloud.support.v2beta.CaseAttachmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudsupport_v2beta_generated_CaseService_GetCase_sync",
       "title": "GetCaseRequestObject",
       "description": "Snippet for GetCase",
@@ -2658,6 +2945,293 @@
         {
           "start": 35,
           "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_GetComment_sync",
+      "title": "GetCommentRequestObject",
+      "description": "Snippet for GetComment",
+      "file": "CommentServiceClient.GetCommentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetComment",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.GetComment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.GetCommentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Comment",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "GetComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.GetComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_GetComment_async",
+      "title": "GetCommentRequestObjectAsync",
+      "description": "Snippet for GetCommentAsync",
+      "file": "CommentServiceClient.GetCommentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCommentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.GetCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.GetCommentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "GetComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.GetComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_GetComment_sync_flattened",
+      "title": "GetComment",
+      "description": "Snippet for GetComment",
+      "file": "CommentServiceClient.GetCommentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetComment",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.GetComment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Comment",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "GetComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.GetComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_GetComment_async_flattened",
+      "title": "GetCommentAsync",
+      "description": "Snippet for GetCommentAsync",
+      "file": "CommentServiceClient.GetCommentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCommentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.GetCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "GetComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.GetComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_GetComment_sync_flattened_resourceNames",
+      "title": "GetCommentResourceNames",
+      "description": "Snippet for GetComment",
+      "file": "CommentServiceClient.GetCommentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetComment",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.GetComment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CommentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2Beta.Comment",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "GetComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.GetComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2beta_generated_CommentService_GetComment_async_flattened_resourceNames",
+      "title": "GetCommentResourceNamesAsync",
+      "description": "Snippet for GetCommentAsync",
+      "file": "CommentServiceClient.GetCommentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCommentAsync",
+        "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient.GetCommentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2Beta.CommentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2Beta.Comment>",
+        "client": {
+          "shortName": "CommentServiceClient",
+          "fullName": "Google.Cloud.Support.V2Beta.CommentServiceClient"
+        },
+        "method": {
+          "shortName": "GetComment",
+          "fullName": "google.cloud.support.v2beta.CommentService.GetComment",
+          "service": {
+            "shortName": "CommentService",
+            "fullName": "google.cloud.support.v2beta.CommentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
