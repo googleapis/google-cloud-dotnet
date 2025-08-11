@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "CaseAttachmentServiceClient",
           "rpcs": {
+            "GetAttachment": {
+              "methods": [
+                "GetAttachment",
+                "GetAttachmentAsync"
+              ]
+            },
             "ListAttachments": {
               "methods": [
                 "ListAttachments",
@@ -86,6 +92,12 @@
               "methods": [
                 "CreateComment",
                 "CreateCommentAsync"
+              ]
+            },
+            "GetComment": {
+              "methods": [
+                "GetComment",
+                "GetCommentAsync"
               ]
             },
             "ListComments": {

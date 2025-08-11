@@ -37,31 +37,37 @@ namespace Google.Cloud.Support.V2Beta {
             "ZV90b2tlbhgCIAEoCSKMAQoUQ3JlYXRlQ29tbWVudFJlcXVlc3QSOAoGcGFy",
             "ZW50GAEgASgJQijgQQL6QSIKIGNsb3Vkc3VwcG9ydC5nb29nbGVhcGlzLmNv",
             "bS9DYXNlEjoKB2NvbW1lbnQYAiABKAsyJC5nb29nbGUuY2xvdWQuc3VwcG9y",
-            "dC52MmJldGEuQ29tbWVudEID4EECMsUECg5Db21tZW50U2VydmljZRLnAQoM",
-            "TGlzdENvbW1lbnRzEjAuZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJiZXRhLkxp",
-            "c3RDb21tZW50c1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuc3VwcG9ydC52MmJl",
-            "dGEuTGlzdENvbW1lbnRzUmVzcG9uc2UictpBBnBhcmVudILT5JMCYxIsL3Yy",
-            "YmV0YS97cGFyZW50PXByb2plY3RzLyovY2FzZXMvKn0vY29tbWVudHNaMxIx",
-            "L3YyYmV0YS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9jYXNlcy8qfS9jb21t",
-            "ZW50cxL3AQoNQ3JlYXRlQ29tbWVudBIxLmdvb2dsZS5jbG91ZC5zdXBwb3J0",
-            "LnYyYmV0YS5DcmVhdGVDb21tZW50UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5z",
-            "dXBwb3J0LnYyYmV0YS5Db21tZW50IowB2kEOcGFyZW50LGNvbW1lbnSC0+ST",
-            "AnUiLC92MmJldGEve3BhcmVudD1wcm9qZWN0cy8qL2Nhc2VzLyp9L2NvbW1l",
-            "bnRzOgdjb21tZW50WjwiMS92MmJldGEve3BhcmVudD1vcmdhbml6YXRpb25z",
-            "LyovY2FzZXMvKn0vY29tbWVudHM6B2NvbW1lbnQaT8pBG2Nsb3Vkc3VwcG9y",
-            "dC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvY2xvdWQtcGxhdGZvcm1C0AEKH2NvbS5nb29nbGUuY2xvdWQuc3Vw",
-            "cG9ydC52MmJldGFCE0NvbW1lbnRTZXJ2aWNlUHJvdG9QAVo5Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9zdXBwb3J0L2FwaXYyYmV0YS9zdXBwb3J0cGI7c3VwcG9y",
-            "dHBiqgIbR29vZ2xlLkNsb3VkLlN1cHBvcnQuVjJCZXRhygIbR29vZ2xlXENs",
-            "b3VkXFN1cHBvcnRcVjJiZXRh6gIeR29vZ2xlOjpDbG91ZDo6U3VwcG9ydDo6",
-            "VjJiZXRhYgZwcm90bzM="));
+            "dC52MmJldGEuQ29tbWVudEID4EECIk4KEUdldENvbW1lbnRSZXF1ZXN0EjkK",
+            "BG5hbWUYASABKAlCK+BBAvpBJQojY2xvdWRzdXBwb3J0Lmdvb2dsZWFwaXMu",
+            "Y29tL0NvbW1lbnQy4AUKDkNvbW1lbnRTZXJ2aWNlEucBCgxMaXN0Q29tbWVu",
+            "dHMSMC5nb29nbGUuY2xvdWQuc3VwcG9ydC52MmJldGEuTGlzdENvbW1lbnRz",
+            "UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5zdXBwb3J0LnYyYmV0YS5MaXN0Q29t",
+            "bWVudHNSZXNwb25zZSJy2kEGcGFyZW50gtPkkwJjEiwvdjJiZXRhL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9jYXNlcy8qfS9jb21tZW50c1ozEjEvdjJiZXRhL3tw",
+            "YXJlbnQ9b3JnYW5pemF0aW9ucy8qL2Nhc2VzLyp9L2NvbW1lbnRzEvcBCg1D",
+            "cmVhdGVDb21tZW50EjEuZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJiZXRhLkNy",
+            "ZWF0ZUNvbW1lbnRSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJi",
+            "ZXRhLkNvbW1lbnQijAHaQQ5wYXJlbnQsY29tbWVudILT5JMCdSIsL3YyYmV0",
+            "YS97cGFyZW50PXByb2plY3RzLyovY2FzZXMvKn0vY29tbWVudHM6B2NvbW1l",
+            "bnRaPCIxL3YyYmV0YS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9jYXNlcy8q",
+            "fS9jb21tZW50czoHY29tbWVudBKYAQoKR2V0Q29tbWVudBIuLmdvb2dsZS5j",
+            "bG91ZC5zdXBwb3J0LnYyYmV0YS5HZXRDb21tZW50UmVxdWVzdBokLmdvb2ds",
+            "ZS5jbG91ZC5zdXBwb3J0LnYyYmV0YS5Db21tZW50IjTaQQRuYW1lgtPkkwIn",
+            "EiUvdjJiZXRhL3tuYW1lPSovKi9jYXNlcy8qL2NvbW1lbnRzLyp9Gk/KQRtj",
+            "bG91ZHN1cHBvcnQuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtABCh9jb20uZ29vZ2xl",
+            "LmNsb3VkLnN1cHBvcnQudjJiZXRhQhNDb21tZW50U2VydmljZVByb3RvUAFa",
+            "OWNsb3VkLmdvb2dsZS5jb20vZ28vc3VwcG9ydC9hcGl2MmJldGEvc3VwcG9y",
+            "dHBiO3N1cHBvcnRwYqoCG0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyQmV0YcoC",
+            "G0dvb2dsZVxDbG91ZFxTdXBwb3J0XFYyYmV0YeoCHkdvb2dsZTo6Q2xvdWQ6",
+            "OlN1cHBvcnQ6OlYyYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Support.V2Beta.CommentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.ListCommentsRequest), global::Google.Cloud.Support.V2Beta.ListCommentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.ListCommentsResponse), global::Google.Cloud.Support.V2Beta.ListCommentsResponse.Parser, new[]{ "Comments", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.CreateCommentRequest), global::Google.Cloud.Support.V2Beta.CreateCommentRequest.Parser, new[]{ "Parent", "Comment" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.CreateCommentRequest), global::Google.Cloud.Support.V2Beta.CreateCommentRequest.Parser, new[]{ "Parent", "Comment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.GetCommentRequest), global::Google.Cloud.Support.V2Beta.GetCommentRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -808,6 +814,202 @@ namespace Google.Cloud.Support.V2Beta {
               Comment = new global::Google.Cloud.Support.V2Beta.Comment();
             }
             input.ReadMessage(Comment);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for the GetComment endpoint.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetCommentRequest : pb::IMessage<GetCommentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetCommentRequest> _parser = new pb::MessageParser<GetCommentRequest>(() => new GetCommentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetCommentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Support.V2Beta.CommentServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCommentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCommentRequest(GetCommentRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCommentRequest Clone() {
+      return new GetCommentRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the comment to retrieve.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetCommentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetCommentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetCommentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

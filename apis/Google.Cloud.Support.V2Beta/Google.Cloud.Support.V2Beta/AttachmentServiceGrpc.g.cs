@@ -67,6 +67,10 @@ namespace Google.Cloud.Support.V2Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest> __Marshaller_google_cloud_support_v2beta_ListAttachmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse> __Marshaller_google_cloud_support_v2beta_ListAttachmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.GetAttachmentRequest> __Marshaller_google_cloud_support_v2beta_GetAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.GetAttachmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2Beta.Attachment> __Marshaller_google_cloud_support_v2beta_Attachment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2Beta.Attachment.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest, global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse> __Method_ListAttachments = new grpc::Method<global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest, global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse>(
@@ -75,6 +79,14 @@ namespace Google.Cloud.Support.V2Beta {
         "ListAttachments",
         __Marshaller_google_cloud_support_v2beta_ListAttachmentsRequest,
         __Marshaller_google_cloud_support_v2beta_ListAttachmentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Support.V2Beta.GetAttachmentRequest, global::Google.Cloud.Support.V2Beta.Attachment> __Method_GetAttachment = new grpc::Method<global::Google.Cloud.Support.V2Beta.GetAttachmentRequest, global::Google.Cloud.Support.V2Beta.Attachment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAttachment",
+        __Marshaller_google_cloud_support_v2beta_GetAttachmentRequest,
+        __Marshaller_google_cloud_support_v2beta_Attachment);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +106,18 @@ namespace Google.Cloud.Support.V2Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse> ListAttachments(global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve an attachment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2Beta.Attachment> GetAttachment(global::Google.Cloud.Support.V2Beta.GetAttachmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +199,54 @@ namespace Google.Cloud.Support.V2Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAttachments, null, options, request);
       }
+      /// <summary>
+      /// Retrieve an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2Beta.Attachment GetAttachment(global::Google.Cloud.Support.V2Beta.GetAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttachment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2Beta.Attachment GetAttachment(global::Google.Cloud.Support.V2Beta.GetAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2Beta.Attachment> GetAttachmentAsync(global::Google.Cloud.Support.V2Beta.GetAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttachmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve an attachment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2Beta.Attachment> GetAttachmentAsync(global::Google.Cloud.Support.V2Beta.GetAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAttachment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CaseAttachmentServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +261,8 @@ namespace Google.Cloud.Support.V2Beta {
     public static grpc::ServerServiceDefinition BindService(CaseAttachmentServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ListAttachments, serviceImpl.ListAttachments).Build();
+          .AddMethod(__Method_ListAttachments, serviceImpl.ListAttachments)
+          .AddMethod(__Method_GetAttachment, serviceImpl.GetAttachment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +273,7 @@ namespace Google.Cloud.Support.V2Beta {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CaseAttachmentServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListAttachments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest, global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse>(serviceImpl.ListAttachments));
+      serviceBinder.AddMethod(__Method_GetAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2Beta.GetAttachmentRequest, global::Google.Cloud.Support.V2Beta.Attachment>(serviceImpl.GetAttachment));
     }
 
   }

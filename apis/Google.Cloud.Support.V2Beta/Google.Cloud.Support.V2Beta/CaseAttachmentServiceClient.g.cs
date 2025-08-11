@@ -48,6 +48,7 @@ namespace Google.Cloud.Support.V2Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListAttachmentsSettings = existing.ListAttachmentsSettings;
+            GetAttachmentSettings = existing.GetAttachmentSettings;
             OnCopy(existing);
         }
 
@@ -71,6 +72,18 @@ namespace Google.Cloud.Support.V2Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListAttachmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CaseAttachmentServiceClient.GetAttachment</c> and <c>CaseAttachmentServiceClient.GetAttachmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAttachmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CaseAttachmentServiceSettings"/> object.</returns>
@@ -365,6 +378,111 @@ namespace Google.Cloud.Support.V2Beta
             }
             return ListAttachmentsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Attachment GetAttachment(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(GetAttachmentRequest request, st::CancellationToken cancellationToken) =>
+            GetAttachmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Attachment GetAttachment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachment(new GetAttachmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachmentAsync(new GetAttachmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Attachment GetAttachment(AttachmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachment(new GetAttachmentRequest
+            {
+                AttachmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(AttachmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAttachmentAsync(new GetAttachmentRequest
+            {
+                AttachmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the attachment to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Attachment> GetAttachmentAsync(AttachmentName name, st::CancellationToken cancellationToken) =>
+            GetAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CaseAttachmentService client wrapper implementation, for convenient use.</summary>
@@ -374,6 +492,8 @@ namespace Google.Cloud.Support.V2Beta
     public sealed partial class CaseAttachmentServiceClientImpl : CaseAttachmentServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListAttachmentsRequest, ListAttachmentsResponse> _callListAttachments;
+
+        private readonly gaxgrpc::ApiCall<GetAttachmentRequest, Attachment> _callGetAttachment;
 
         /// <summary>
         /// Constructs a client wrapper for the CaseAttachmentService service, with the specified gRPC client and
@@ -394,6 +514,9 @@ namespace Google.Cloud.Support.V2Beta
             _callListAttachments = clientHelper.BuildApiCall<ListAttachmentsRequest, ListAttachmentsResponse>("ListAttachments", grpcClient.ListAttachmentsAsync, grpcClient.ListAttachments, effectiveSettings.ListAttachmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAttachments);
             Modify_ListAttachmentsApiCall(ref _callListAttachments);
+            _callGetAttachment = clientHelper.BuildApiCall<GetAttachmentRequest, Attachment>("GetAttachment", grpcClient.GetAttachmentAsync, grpcClient.GetAttachment, effectiveSettings.GetAttachmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAttachment);
+            Modify_GetAttachmentApiCall(ref _callGetAttachment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -401,12 +524,16 @@ namespace Google.Cloud.Support.V2Beta
 
         partial void Modify_ListAttachmentsApiCall(ref gaxgrpc::ApiCall<ListAttachmentsRequest, ListAttachmentsResponse> call);
 
+        partial void Modify_GetAttachmentApiCall(ref gaxgrpc::ApiCall<GetAttachmentRequest, Attachment> call);
+
         partial void OnConstruction(CaseAttachmentService.CaseAttachmentServiceClient grpcClient, CaseAttachmentServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CaseAttachmentService client</summary>
         public override CaseAttachmentService.CaseAttachmentServiceClient GrpcClient { get; }
 
         partial void Modify_ListAttachmentsRequest(ref ListAttachmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAttachmentRequest(ref GetAttachmentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// List all the attachments associated with a support case.
@@ -430,6 +557,30 @@ namespace Google.Cloud.Support.V2Beta
         {
             Modify_ListAttachmentsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAttachmentsRequest, ListAttachmentsResponse, Attachment>(_callListAttachments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Attachment GetAttachment(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttachmentRequest(ref request, ref callSettings);
+            return _callGetAttachment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve an attachment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Attachment> GetAttachmentAsync(GetAttachmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAttachmentRequest(ref request, ref callSettings);
+            return _callGetAttachment.Async(request, callSettings);
         }
     }
 

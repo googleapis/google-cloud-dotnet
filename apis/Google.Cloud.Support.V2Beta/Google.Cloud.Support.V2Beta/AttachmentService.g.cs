@@ -32,26 +32,33 @@ namespace Google.Cloud.Support.V2Beta {
             "dGEvYXR0YWNobWVudC5wcm90byJ5ChZMaXN0QXR0YWNobWVudHNSZXF1ZXN0",
             "EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBjbG91ZHN1cHBvcnQuZ29vZ2xl",
             "YXBpcy5jb20vQ2FzZRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
-            "bhgDIAEoCSJwChdMaXN0QXR0YWNobWVudHNSZXNwb25zZRI8CgthdHRhY2ht",
-            "ZW50cxgBIAMoCzInLmdvb2dsZS5jbG91ZC5zdXBwb3J0LnYyYmV0YS5BdHRh",
-            "Y2htZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLhAgoVQ2FzZUF0dGFj",
-            "aG1lbnRTZXJ2aWNlEvYBCg9MaXN0QXR0YWNobWVudHMSMy5nb29nbGUuY2xv",
-            "dWQuc3VwcG9ydC52MmJldGEuTGlzdEF0dGFjaG1lbnRzUmVxdWVzdBo0Lmdv",
-            "b2dsZS5jbG91ZC5zdXBwb3J0LnYyYmV0YS5MaXN0QXR0YWNobWVudHNSZXNw",
-            "b25zZSJ42kEGcGFyZW50gtPkkwJpEi8vdjJiZXRhL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9jYXNlcy8qfS9hdHRhY2htZW50c1o2EjQvdjJiZXRhL3twYXJlbnQ9",
-            "b3JnYW5pemF0aW9ucy8qL2Nhc2VzLyp9L2F0dGFjaG1lbnRzGk/KQRtjbG91",
-            "ZHN1cHBvcnQuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtMBCh9jb20uZ29vZ2xlLmNs",
-            "b3VkLnN1cHBvcnQudjJiZXRhQhZBdHRhY2htZW50U2VydmljZVByb3RvUAFa",
-            "OWNsb3VkLmdvb2dsZS5jb20vZ28vc3VwcG9ydC9hcGl2MmJldGEvc3VwcG9y",
-            "dHBiO3N1cHBvcnRwYqoCG0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyQmV0YcoC",
-            "G0dvb2dsZVxDbG91ZFxTdXBwb3J0XFYyYmV0YeoCHkdvb2dsZTo6Q2xvdWQ6",
-            "OlN1cHBvcnQ6OlYyYmV0YWIGcHJvdG8z"));
+            "bhgDIAEoCSJUChRHZXRBdHRhY2htZW50UmVxdWVzdBI8CgRuYW1lGAEgASgJ",
+            "Qi7gQQL6QSgKJmNsb3Vkc3VwcG9ydC5nb29nbGVhcGlzLmNvbS9BdHRhY2ht",
+            "ZW50InAKF0xpc3RBdHRhY2htZW50c1Jlc3BvbnNlEjwKC2F0dGFjaG1lbnRz",
+            "GAEgAygLMicuZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJiZXRhLkF0dGFjaG1l",
+            "bnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMogEChVDYXNlQXR0YWNobWVu",
+            "dFNlcnZpY2US9gEKD0xpc3RBdHRhY2htZW50cxIzLmdvb2dsZS5jbG91ZC5z",
+            "dXBwb3J0LnYyYmV0YS5MaXN0QXR0YWNobWVudHNSZXF1ZXN0GjQuZ29vZ2xl",
+            "LmNsb3VkLnN1cHBvcnQudjJiZXRhLkxpc3RBdHRhY2htZW50c1Jlc3BvbnNl",
+            "InjaQQZwYXJlbnSC0+STAmkSLy92MmJldGEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2Nhc2VzLyp9L2F0dGFjaG1lbnRzWjYSNC92MmJldGEve3BhcmVudD1vcmdh",
+            "bml6YXRpb25zLyovY2FzZXMvKn0vYXR0YWNobWVudHMSpAEKDUdldEF0dGFj",
+            "aG1lbnQSMS5nb29nbGUuY2xvdWQuc3VwcG9ydC52MmJldGEuR2V0QXR0YWNo",
+            "bWVudFJlcXVlc3QaJy5nb29nbGUuY2xvdWQuc3VwcG9ydC52MmJldGEuQXR0",
+            "YWNobWVudCI32kEEbmFtZYLT5JMCKhIoL3YyYmV0YS97bmFtZT0qLyovY2Fz",
+            "ZXMvKi9hdHRhY2htZW50cy8qfRpPykEbY2xvdWRzdXBwb3J0Lmdvb2dsZWFw",
+            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybULTAQofY29tLmdvb2dsZS5jbG91ZC5zdXBwb3J0LnYyYmV0",
+            "YUIWQXR0YWNobWVudFNlcnZpY2VQcm90b1ABWjljbG91ZC5nb29nbGUuY29t",
+            "L2dvL3N1cHBvcnQvYXBpdjJiZXRhL3N1cHBvcnRwYjtzdXBwb3J0cGKqAhtH",
+            "b29nbGUuQ2xvdWQuU3VwcG9ydC5WMkJldGHKAhtHb29nbGVcQ2xvdWRcU3Vw",
+            "cG9ydFxWMmJldGHqAh5Hb29nbGU6OkNsb3VkOjpTdXBwb3J0OjpWMmJldGFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Support.V2Beta.AttachmentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest), global::Google.Cloud.Support.V2Beta.ListAttachmentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.GetAttachmentRequest), global::Google.Cloud.Support.V2Beta.GetAttachmentRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse), global::Google.Cloud.Support.V2Beta.ListAttachmentsResponse.Parser, new[]{ "Attachments", "NextPageToken" }, null, null, null, null)
           }));
     }
@@ -344,6 +351,202 @@ namespace Google.Cloud.Support.V2Beta {
   }
 
   /// <summary>
+  /// Request for getting an attachment.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAttachmentRequest : pb::IMessage<GetAttachmentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAttachmentRequest> _parser = new pb::MessageParser<GetAttachmentRequest>(() => new GetAttachmentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAttachmentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Support.V2Beta.AttachmentServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAttachmentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAttachmentRequest(GetAttachmentRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAttachmentRequest Clone() {
+      return new GetAttachmentRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the attachment to get.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAttachmentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAttachmentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAttachmentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The response message for the ListAttachments endpoint.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -361,7 +564,7 @@ namespace Google.Cloud.Support.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Support.V2Beta.AttachmentServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Support.V2Beta.AttachmentServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

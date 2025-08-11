@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gcsv = Google.Cloud.Support.V2Beta;
 
 namespace Google.Cloud.Support.V2Beta
 {
@@ -25,6 +26,18 @@ namespace Google.Cloud.Support.V2Beta
         {
             get => string.IsNullOrEmpty(Parent) ? null : CaseName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAttachmentRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::AttachmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::AttachmentName AttachmentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::AttachmentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

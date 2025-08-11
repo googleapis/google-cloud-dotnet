@@ -300,5 +300,92 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GetAttachment</summary>
+        public void GetAttachmentRequestObject()
+        {
+            // Snippet: GetAttachment(GetAttachmentRequest, CallSettings)
+            // Create client
+            CaseAttachmentServiceClient caseAttachmentServiceClient = CaseAttachmentServiceClient.Create();
+            // Initialize request argument(s)
+            GetAttachmentRequest request = new GetAttachmentRequest
+            {
+                AttachmentName = AttachmentName.FromOrganizationCaseAttachment("[ORGANIZATION]", "[CASE]", "[ATTACHMENT_ID]"),
+            };
+            // Make the request
+            Attachment response = caseAttachmentServiceClient.GetAttachment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachmentAsync</summary>
+        public async Task GetAttachmentRequestObjectAsync()
+        {
+            // Snippet: GetAttachmentAsync(GetAttachmentRequest, CallSettings)
+            // Additional: GetAttachmentAsync(GetAttachmentRequest, CancellationToken)
+            // Create client
+            CaseAttachmentServiceClient caseAttachmentServiceClient = await CaseAttachmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAttachmentRequest request = new GetAttachmentRequest
+            {
+                AttachmentName = AttachmentName.FromOrganizationCaseAttachment("[ORGANIZATION]", "[CASE]", "[ATTACHMENT_ID]"),
+            };
+            // Make the request
+            Attachment response = await caseAttachmentServiceClient.GetAttachmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachment</summary>
+        public void GetAttachment()
+        {
+            // Snippet: GetAttachment(string, CallSettings)
+            // Create client
+            CaseAttachmentServiceClient caseAttachmentServiceClient = CaseAttachmentServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/cases/[CASE]/attachments/[ATTACHMENT_ID]";
+            // Make the request
+            Attachment response = caseAttachmentServiceClient.GetAttachment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachmentAsync</summary>
+        public async Task GetAttachmentAsync()
+        {
+            // Snippet: GetAttachmentAsync(string, CallSettings)
+            // Additional: GetAttachmentAsync(string, CancellationToken)
+            // Create client
+            CaseAttachmentServiceClient caseAttachmentServiceClient = await CaseAttachmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/cases/[CASE]/attachments/[ATTACHMENT_ID]";
+            // Make the request
+            Attachment response = await caseAttachmentServiceClient.GetAttachmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachment</summary>
+        public void GetAttachmentResourceNames()
+        {
+            // Snippet: GetAttachment(AttachmentName, CallSettings)
+            // Create client
+            CaseAttachmentServiceClient caseAttachmentServiceClient = CaseAttachmentServiceClient.Create();
+            // Initialize request argument(s)
+            AttachmentName name = AttachmentName.FromOrganizationCaseAttachment("[ORGANIZATION]", "[CASE]", "[ATTACHMENT_ID]");
+            // Make the request
+            Attachment response = caseAttachmentServiceClient.GetAttachment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAttachmentAsync</summary>
+        public async Task GetAttachmentResourceNamesAsync()
+        {
+            // Snippet: GetAttachmentAsync(AttachmentName, CallSettings)
+            // Additional: GetAttachmentAsync(AttachmentName, CancellationToken)
+            // Create client
+            CaseAttachmentServiceClient caseAttachmentServiceClient = await CaseAttachmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AttachmentName name = AttachmentName.FromOrganizationCaseAttachment("[ORGANIZATION]", "[CASE]", "[ATTACHMENT_ID]");
+            // Make the request
+            Attachment response = await caseAttachmentServiceClient.GetAttachmentAsync(name);
+            // End snippet
+        }
     }
 }
