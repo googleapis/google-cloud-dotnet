@@ -27,44 +27,57 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9yZWFzb25pbmdfZW5naW5l",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxooZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW52X3Zhci5wcm90",
-            "bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byL8BAoTUmVhc29uaW5nRW5naW5lU3BlYxIh",
-            "Cg9zZXJ2aWNlX2FjY291bnQYASABKAlCA+BBAUgAiAEBElYKDHBhY2thZ2Vf",
-            "c3BlYxgCIAEoCzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJlYXNv",
-            "bmluZ0VuZ2luZVNwZWMuUGFja2FnZVNwZWNCA+BBARJcCg9kZXBsb3ltZW50",
-            "X3NwZWMYBCABKAsyPi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFz",
-            "b25pbmdFbmdpbmVTcGVjLkRlcGxveW1lbnRTcGVjQgPgQQESMwoNY2xhc3Nf",
-            "bWV0aG9kcxgDIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIc",
-            "Cg9hZ2VudF9mcmFtZXdvcmsYBSABKAlCA+BBARqYAQoLUGFja2FnZVNwZWMS",
-            "IgoVcGlja2xlX29iamVjdF9nY3NfdXJpGAEgASgJQgPgQQESJQoYZGVwZW5k",
-            "ZW5jeV9maWxlc19nY3NfdXJpGAIgASgJQgPgQQESIQoUcmVxdWlyZW1lbnRz",
-            "X2djc191cmkYAyABKAlCA+BBARIbCg5weXRob25fdmVyc2lvbhgEIAEoCUID",
-            "4EEBGokBCg5EZXBsb3ltZW50U3BlYxI0CgNlbnYYASADKAsyIi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5FbnZWYXJCA+BBARJBCgpzZWNyZXRfZW52",
-            "GAIgAygLMiguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2VjcmV0RW52",
-            "VmFyQgPgQQFCEgoQX3NlcnZpY2VfYWNjb3VudCK+AwoPUmVhc29uaW5nRW5n",
-            "aW5lEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
-            "A+BBAhIYCgtkZXNjcmlwdGlvbhgHIAEoCUID4EEBEkIKBHNwZWMYAyABKAsy",
-            "Ly5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFzb25pbmdFbmdpbmVT",
-            "cGVjQgPgQQESNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgGIAEoCUID4EEB",
-            "Op8B6kGbAQopYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdF",
-            "bmdpbmUSS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9yZWFzb25pbmdFbmdpbmVzL3tyZWFzb25pbmdfZW5naW5lfSoQcmVhc29u",
-            "aW5nRW5naW5lczIPcmVhc29uaW5nRW5naW5lQtIBCh5jb20uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFCFFJlYXNvbmluZ0VuZ2luZVByb3RvUAFaPmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
-            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
-            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
-            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "cm90bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9z",
+            "cGVjLnByb3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFy",
+            "LnByb3RvGjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zZXJ2aWNlX25l",
+            "dHdvcmtpbmcucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ioQgKE1JlYXNvbmlu",
+            "Z0VuZ2luZVNwZWMSIQoPc2VydmljZV9hY2NvdW50GAEgASgJQgPgQQFIAIgB",
+            "ARJWCgxwYWNrYWdlX3NwZWMYAiABKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5SZWFzb25pbmdFbmdpbmVTcGVjLlBhY2thZ2VTcGVjQgPgQQES",
+            "XAoPZGVwbG95bWVudF9zcGVjGAQgASgLMj4uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuUmVhc29uaW5nRW5naW5lU3BlYy5EZXBsb3ltZW50U3BlY0ID",
+            "4EEBEjMKDWNsYXNzX21ldGhvZHMYAyADKAsyFy5nb29nbGUucHJvdG9idWYu",
+            "U3RydWN0QgPgQQESHAoPYWdlbnRfZnJhbWV3b3JrGAUgASgJQgPgQQEamAEK",
+            "C1BhY2thZ2VTcGVjEiIKFXBpY2tsZV9vYmplY3RfZ2NzX3VyaRgBIAEoCUID",
+            "4EEBEiUKGGRlcGVuZGVuY3lfZmlsZXNfZ2NzX3VyaRgCIAEoCUID4EEBEiEK",
+            "FHJlcXVpcmVtZW50c19nY3NfdXJpGAMgASgJQgPgQQESGwoOcHl0aG9uX3Zl",
+            "cnNpb24YBCABKAlCA+BBARquBAoORGVwbG95bWVudFNwZWMSNAoDZW52GAEg",
+            "AygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW52VmFyQgPgQQES",
+            "QQoKc2VjcmV0X2VudhgCIAMoCzIoLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLlNlY3JldEVudlZhckID4EEBElEKFHBzY19pbnRlcmZhY2VfY29uZmln",
+            "GAQgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHNjSW50ZXJm",
+            "YWNlQ29uZmlnQgPgQQESHwoNbWluX2luc3RhbmNlcxgFIAEoBUID4EEBSACI",
+            "AQESHwoNbWF4X2luc3RhbmNlcxgGIAEoBUID4EEBSAGIAQEScAoPcmVzb3Vy",
+            "Y2VfbGltaXRzGAcgAygLMlIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "UmVhc29uaW5nRW5naW5lU3BlYy5EZXBsb3ltZW50U3BlYy5SZXNvdXJjZUxp",
+            "bWl0c0VudHJ5QgPgQQESJwoVY29udGFpbmVyX2NvbmN1cnJlbmN5GAggASgF",
+            "QgPgQQFIAogBARo1ChNSZXNvdXJjZUxpbWl0c0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAFCEAoOX21pbl9pbnN0YW5jZXNCEAoOX21h",
+            "eF9pbnN0YW5jZXNCGAoWX2NvbnRhaW5lcl9jb25jdXJyZW5jeUISChBfc2Vy",
+            "dmljZV9hY2NvdW50IoMECg9SZWFzb25pbmdFbmdpbmUSEQoEbmFtZRgBIAEo",
+            "CUID4EEIEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0",
+            "aW9uGAcgASgJQgPgQQESQgoEc3BlYxgDIAEoCzIvLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlJlYXNvbmluZ0VuZ2luZVNwZWNCA+BBARI0CgtjcmVh",
+            "dGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIRCgRldGFnGAYgASgJQgPgQQESQwoPZW5jcnlwdGlvbl9z",
+            "cGVjGAsgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlw",
+            "dGlvblNwZWM6nwHqQZsBCilhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1Jl",
+            "YXNvbmluZ0VuZ2luZRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L3JlYXNvbmluZ0VuZ2luZXMve3JlYXNvbmluZ19lbmdpbmV9",
+            "KhByZWFzb25pbmdFbmdpbmVzMg9yZWFzb25pbmdFbmdpbmVC0gEKHmNvbS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIUUmVhc29uaW5nRW5naW5lUHJv",
+            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2Fp",
+            "cGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
+            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
+            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Parser, new[]{ "ServiceAccount", "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, new[]{ "ServiceAccount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv", "PscInterfaceConfig", "MinInstances", "MaxInstances", "ResourceLimits", "ContainerConcurrency" }, new[]{ "MinInstances", "MaxInstances", "ContainerConcurrency" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag", "EncryptionSpec" }, null, null, null, null)
           }));
     }
     #endregion
@@ -209,7 +222,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string agentFramework_ = "";
     /// <summary>
     /// Optional. The OSS agent framework used to develop the agent.
-    /// Currently supported values: "langchain", "langgraph", "ag2", "custom".
+    /// Currently supported values: "google-adk", "langchain", "langgraph", "ag2",
+    /// "llama-index", "custom".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -788,6 +802,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         private static readonly pb::MessageParser<DeploymentSpec> _parser = new pb::MessageParser<DeploymentSpec>(() => new DeploymentSpec());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeploymentSpec> Parser { get { return _parser; } }
@@ -815,8 +830,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeploymentSpec(DeploymentSpec other) : this() {
+          _hasBits0 = other._hasBits0;
           env_ = other.env_.Clone();
           secretEnv_ = other.secretEnv_.Clone();
+          pscInterfaceConfig_ = other.pscInterfaceConfig_ != null ? other.pscInterfaceConfig_.Clone() : null;
+          minInstances_ = other.minInstances_;
+          maxInstances_ = other.maxInstances_;
+          resourceLimits_ = other.resourceLimits_.Clone();
+          containerConcurrency_ = other.containerConcurrency_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -860,6 +881,138 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return secretEnv_; }
         }
 
+        /// <summary>Field number for the "psc_interface_config" field.</summary>
+        public const int PscInterfaceConfigFieldNumber = 4;
+        private global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig pscInterfaceConfig_;
+        /// <summary>
+        /// Optional. Configuration for PSC-I.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig PscInterfaceConfig {
+          get { return pscInterfaceConfig_; }
+          set {
+            pscInterfaceConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_instances" field.</summary>
+        public const int MinInstancesFieldNumber = 5;
+        private readonly static int MinInstancesDefaultValue = 0;
+
+        private int minInstances_;
+        /// <summary>
+        /// Optional. The minimum number of application instances that will be kept
+        /// running at all times. Defaults to 1. Range: [0, 10].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinInstances {
+          get { if ((_hasBits0 & 1) != 0) { return minInstances_; } else { return MinInstancesDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            minInstances_ = value;
+          }
+        }
+        /// <summary>Gets whether the "min_instances" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinInstances {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "min_instances" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinInstances() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "max_instances" field.</summary>
+        public const int MaxInstancesFieldNumber = 6;
+        private readonly static int MaxInstancesDefaultValue = 0;
+
+        private int maxInstances_;
+        /// <summary>
+        /// Optional. The maximum number of application instances that can be
+        /// launched to handle increased traffic. Defaults to 100. Range: [1, 1000].
+        ///
+        /// If VPC-SC or PSC-I is enabled, the acceptable range is [1, 100].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxInstances {
+          get { if ((_hasBits0 & 2) != 0) { return maxInstances_; } else { return MaxInstancesDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            maxInstances_ = value;
+          }
+        }
+        /// <summary>Gets whether the "max_instances" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxInstances {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "max_instances" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxInstances() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "resource_limits" field.</summary>
+        public const int ResourceLimitsFieldNumber = 7;
+        private static readonly pbc::MapField<string, string>.Codec _map_resourceLimits_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+        private readonly pbc::MapField<string, string> resourceLimits_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Optional. Resource limits for each container. Only 'cpu' and 'memory'
+        /// keys are supported. Defaults to {"cpu": "4", "memory": "4Gi"}.
+        ///
+        ///   * The only supported values for CPU are '1', '2', '4', '6' and '8'. For
+        ///   more information, go to
+        ///   https://cloud.google.com/run/docs/configuring/cpu.
+        ///   * The only supported values for memory are '1Gi', '2Gi', ... '32 Gi'.
+        ///   * For required cpu on different memory values, go to
+        ///   https://cloud.google.com/run/docs/configuring/memory-limits
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> ResourceLimits {
+          get { return resourceLimits_; }
+        }
+
+        /// <summary>Field number for the "container_concurrency" field.</summary>
+        public const int ContainerConcurrencyFieldNumber = 8;
+        private readonly static int ContainerConcurrencyDefaultValue = 0;
+
+        private int containerConcurrency_;
+        /// <summary>
+        /// Optional. Concurrency for each container and agent server. Recommended
+        /// value: 2 * cpu + 1. Defaults to 9.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ContainerConcurrency {
+          get { if ((_hasBits0 & 4) != 0) { return containerConcurrency_; } else { return ContainerConcurrencyDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            containerConcurrency_ = value;
+          }
+        }
+        /// <summary>Gets whether the "container_concurrency" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasContainerConcurrency {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "container_concurrency" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearContainerConcurrency() {
+          _hasBits0 &= ~4;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -877,6 +1030,11 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if(!env_.Equals(other.env_)) return false;
           if(!secretEnv_.Equals(other.secretEnv_)) return false;
+          if (!object.Equals(PscInterfaceConfig, other.PscInterfaceConfig)) return false;
+          if (MinInstances != other.MinInstances) return false;
+          if (MaxInstances != other.MaxInstances) return false;
+          if (!ResourceLimits.Equals(other.ResourceLimits)) return false;
+          if (ContainerConcurrency != other.ContainerConcurrency) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -886,6 +1044,11 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           hash ^= env_.GetHashCode();
           hash ^= secretEnv_.GetHashCode();
+          if (pscInterfaceConfig_ != null) hash ^= PscInterfaceConfig.GetHashCode();
+          if (HasMinInstances) hash ^= MinInstances.GetHashCode();
+          if (HasMaxInstances) hash ^= MaxInstances.GetHashCode();
+          hash ^= ResourceLimits.GetHashCode();
+          if (HasContainerConcurrency) hash ^= ContainerConcurrency.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -906,6 +1069,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         #else
           env_.WriteTo(output, _repeated_env_codec);
           secretEnv_.WriteTo(output, _repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            output.WriteRawTag(40);
+            output.WriteInt32(MinInstances);
+          }
+          if (HasMaxInstances) {
+            output.WriteRawTag(48);
+            output.WriteInt32(MaxInstances);
+          }
+          resourceLimits_.WriteTo(output, _map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            output.WriteRawTag(64);
+            output.WriteInt32(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -918,6 +1098,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           env_.WriteTo(ref output, _repeated_env_codec);
           secretEnv_.WriteTo(ref output, _repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            output.WriteRawTag(40);
+            output.WriteInt32(MinInstances);
+          }
+          if (HasMaxInstances) {
+            output.WriteRawTag(48);
+            output.WriteInt32(MaxInstances);
+          }
+          resourceLimits_.WriteTo(ref output, _map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            output.WriteRawTag(64);
+            output.WriteInt32(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -930,6 +1127,19 @@ namespace Google.Cloud.AIPlatform.V1 {
           int size = 0;
           size += env_.CalculateSize(_repeated_env_codec);
           size += secretEnv_.CalculateSize(_repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinInstances);
+          }
+          if (HasMaxInstances) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstances);
+          }
+          size += resourceLimits_.CalculateSize(_map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -944,6 +1154,22 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           env_.Add(other.env_);
           secretEnv_.Add(other.secretEnv_);
+          if (other.pscInterfaceConfig_ != null) {
+            if (pscInterfaceConfig_ == null) {
+              PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig();
+            }
+            PscInterfaceConfig.MergeFrom(other.PscInterfaceConfig);
+          }
+          if (other.HasMinInstances) {
+            MinInstances = other.MinInstances;
+          }
+          if (other.HasMaxInstances) {
+            MaxInstances = other.MaxInstances;
+          }
+          resourceLimits_.MergeFrom(other.resourceLimits_);
+          if (other.HasContainerConcurrency) {
+            ContainerConcurrency = other.ContainerConcurrency;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -967,6 +1193,29 @@ namespace Google.Cloud.AIPlatform.V1 {
                 secretEnv_.AddEntriesFrom(input, _repeated_secretEnv_codec);
                 break;
               }
+              case 34: {
+                if (pscInterfaceConfig_ == null) {
+                  PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig();
+                }
+                input.ReadMessage(PscInterfaceConfig);
+                break;
+              }
+              case 40: {
+                MinInstances = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                MaxInstances = input.ReadInt32();
+                break;
+              }
+              case 58: {
+                resourceLimits_.AddEntriesFrom(input, _map_resourceLimits_codec);
+                break;
+              }
+              case 64: {
+                ContainerConcurrency = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -988,6 +1237,29 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 18: {
                 secretEnv_.AddEntriesFrom(ref input, _repeated_secretEnv_codec);
+                break;
+              }
+              case 34: {
+                if (pscInterfaceConfig_ == null) {
+                  PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig();
+                }
+                input.ReadMessage(PscInterfaceConfig);
+                break;
+              }
+              case 40: {
+                MinInstances = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                MaxInstances = input.ReadInt32();
+                break;
+              }
+              case 58: {
+                resourceLimits_.AddEntriesFrom(ref input, _map_resourceLimits_codec);
+                break;
+              }
+              case 64: {
+                ContainerConcurrency = input.ReadInt32();
                 break;
               }
             }
@@ -1048,6 +1320,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
+      encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1062,6 +1335,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the ReasoningEngine.
+    /// Format:
+    /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1163,6 +1438,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "encryption_spec" field.</summary>
+    public const int EncryptionSpecFieldNumber = 11;
+    private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
+    /// <summary>
+    /// Customer-managed encryption key spec for a ReasoningEngine. If set, this
+    /// ReasoningEngine and all sub-resources of this ReasoningEngine will be
+    /// secured by this key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EncryptionSpec EncryptionSpec {
+      get { return encryptionSpec_; }
+      set {
+        encryptionSpec_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1185,6 +1477,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
+      if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1199,6 +1492,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1245,6 +1539,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1283,6 +1581,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1313,6 +1615,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (encryptionSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1355,6 +1660,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.encryptionSpec_ != null) {
+        if (encryptionSpec_ == null) {
+          EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+        }
+        EncryptionSpec.MergeFrom(other.EncryptionSpec);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1408,6 +1719,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             Description = input.ReadString();
             break;
           }
+          case 90: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
         }
       }
     #endif
@@ -1458,6 +1776,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 58: {
             Description = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
             break;
           }
         }
