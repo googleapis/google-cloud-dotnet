@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta45, released 2025-08-12
+
+### New features
+
+- Added document_name for vertex ai search as part of retrieved context from grounding chunk
+- Expose RecommendSpecs api to vertex python SDK for Custom Weights Model deployment
+
 ## Version 1.0.0-beta44, released 2025-08-08
 
 ### New features
