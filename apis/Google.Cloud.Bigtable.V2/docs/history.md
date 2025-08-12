@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.23.0, released 2025-08-12
+
+### Bug fixes
+
+- Add ReadRows/SampleRowKeys bindings for materialized views
+
 ## Version 3.22.0, released 2025-08-04
 
 ### Bug fixes

@@ -778,12 +778,12 @@
         },
         {
             "id": "Google.Cloud.Bigtable.V2",
-            "currentVersion": "3.22.0",
+            "currentVersion": "3.23.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-04T18:43:10.586174608Z",
+            "releaseTimestamp": "2025-08-12T08:23:24.366285726Z",
             "lastGeneratedCommit": "fe06a492944dc3a8360ed5b426942d34631eeca7",
-            "lastReleasedCommit": "6588689155df35bb46974c477505990f0034f569",
+            "lastReleasedCommit": "fe06a492944dc3a8360ed5b426942d34631eeca7",
             "apiPaths": [
                 "google/bigtable/v2"
             ],
