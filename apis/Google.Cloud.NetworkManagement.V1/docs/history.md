@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.15.0, released 2025-08-12
+
+### New features
+
+- Add `service_uri` field to CloudRunRevisionEndpoint
+
 ## Version 2.14.0, released 2025-04-14
 
 ### New features
