@@ -39,7 +39,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "QQESQQoEdmlldxgDIAEoDjIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "LlB1Ymxpc2hlck1vZGVsVmlld0ID4EEBEiIKFWlzX2h1Z2dpbmdfZmFjZV9t",
             "b2RlbBgFIAEoCEID4EEBEh8KEmh1Z2dpbmdfZmFjZV90b2tlbhgGIAEoCUID",
-            "4EEBIrIICg1EZXBsb3lSZXF1ZXN0Ek0KFHB1Ymxpc2hlcl9tb2RlbF9uYW1l",
+            "4EEBIp0JCg1EZXBsb3lSZXF1ZXN0Ek0KFHB1Ymxpc2hlcl9tb2RlbF9uYW1l",
             "GAEgASgJQi36QSoKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUHVibGlz",
             "aGVyTW9kZWxIABIfChVodWdnaW5nX2ZhY2VfbW9kZWxfaWQYAiABKAlIABI+",
             "CgtkZXN0aW5hdGlvbhgEIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
@@ -49,57 +49,59 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveVJlcXVlc3QuRW5kcG9pbnRDb25m",
             "aWdCA+BBARJSCg1kZXBsb3lfY29uZmlnGAcgASgLMjYuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRGVwbG95UmVxdWVzdC5EZXBsb3lDb25maWdCA+BB",
-            "ARrmAQoLTW9kZWxDb25maWcSGAoLYWNjZXB0X2V1bGEYASABKAhCA+BBARIm",
+            "ARqCAgoLTW9kZWxDb25maWcSGAoLYWNjZXB0X2V1bGEYASABKAhCA+BBARIm",
             "ChlodWdnaW5nX2ZhY2VfYWNjZXNzX3Rva2VuGAIgASgJQgPgQQESJwoaaHVn",
             "Z2luZ19mYWNlX2NhY2hlX2VuYWJsZWQYAyABKAhCA+BBARIfChJtb2RlbF9k",
             "aXNwbGF5X25hbWUYBCABKAlCA+BBARJLCg5jb250YWluZXJfc3BlYxgFIAEo",
             "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsQ29udGFpbmVy",
-            "U3BlY0ID4EEBGl0KDkVuZHBvaW50Q29uZmlnEiIKFWVuZHBvaW50X2Rpc3Bs",
-            "YXlfbmFtZRgBIAEoCUID4EEBEicKGmRlZGljYXRlZF9lbmRwb2ludF9lbmFi",
-            "bGVkGAIgASgIQgPgQQEanQIKDERlcGxveUNvbmZpZxJQChNkZWRpY2F0ZWRf",
-            "cmVzb3VyY2VzGAEgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "RGVkaWNhdGVkUmVzb3VyY2VzQgPgQQESIAoTZmFzdF90cnlvdXRfZW5hYmxl",
-            "ZBgCIAEoCEID4EEBEmQKDXN5c3RlbV9sYWJlbHMYAyADKAsySC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5EZXBsb3lSZXF1ZXN0LkRlcGxveUNvbmZp",
-            "Zy5TeXN0ZW1MYWJlbHNFbnRyeUID4EEBGjMKEVN5c3RlbUxhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCwoJYXJ0aWZhY3Rz",
-            "ItEBCg5EZXBsb3lSZXNwb25zZRJJCg9wdWJsaXNoZXJfbW9kZWwYASABKAlC",
-            "MOBBA/pBKgooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QdWJsaXNoZXJN",
-            "b2RlbBI8CghlbmRwb2ludBgCIAEoCUIq4EED+kEkCiJhaXBsYXRmb3JtLmdv",
-            "b2dsZWFwaXMuY29tL0VuZHBvaW50EjYKBW1vZGVsGAMgASgJQifgQQP6QSEK",
-            "H2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwiqAIKF0RlcGxveU9w",
-            "ZXJhdGlvbk1ldGFkYXRhEk4KEGdlbmVyaWNfbWV0YWRhdGEYASABKAsyNC5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5lcmljT3BlcmF0aW9uTWV0",
-            "YWRhdGESSQoPcHVibGlzaGVyX21vZGVsGAIgASgJQjDgQQP6QSoKKGFpcGxh",
-            "dGZvcm0uZ29vZ2xlYXBpcy5jb20vUHVibGlzaGVyTW9kZWwSPgoLZGVzdGlu",
-            "YXRpb24YAyABKAlCKeBBA/pBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29t",
-            "L0xvY2F0aW9uEhsKDnByb2plY3RfbnVtYmVyGAQgASgDQgPgQQMSFQoIbW9k",
-            "ZWxfaWQYBSABKAlCA+BBAyqhAQoSUHVibGlzaGVyTW9kZWxWaWV3EiQKIFBV",
-            "QkxJU0hFUl9NT0RFTF9WSUVXX1VOU1BFQ0lGSUVEEAASHgoaUFVCTElTSEVS",
-            "X01PREVMX1ZJRVdfQkFTSUMQARIdChlQVUJMSVNIRVJfTU9ERUxfVklFV19G",
-            "VUxMEAISJgoiUFVCTElTSEVSX01PREVMX1ZFUlNJT05fVklFV19CQVNJQxAD",
-            "MskDChJNb2RlbEdhcmRlblNlcnZpY2USpgEKEUdldFB1Ymxpc2hlck1vZGVs",
-            "EjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0UHVibGlzaGVyTW9k",
-            "ZWxSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHVibGlz",
-            "aGVyTW9kZWwiL9pBBG5hbWWC0+STAiISIC92MS97bmFtZT1wdWJsaXNoZXJz",
-            "LyovbW9kZWxzLyp9EroBCgZEZXBsb3kSKS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5EZXBsb3lSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJmykEpCg5EZXBsb3lSZXNwb25zZRIXRGVwbG95T3BlcmF0aW9u",
-            "TWV0YWRhdGGC0+STAjQiLy92MS97ZGVzdGluYXRpb249cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn06ZGVwbG95OgEqGk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFw",
-            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
-            "ZC1wbGF0Zm9ybULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "QhdNb2RlbEdhcmRlblNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
-            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
-            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWIGcHJvdG8z"));
+            "U3BlY0ID4EEBEhoKDW1vZGVsX3VzZXJfaWQYBiABKAlCA+BBARqrAQoORW5k",
+            "cG9pbnRDb25maWcSIgoVZW5kcG9pbnRfZGlzcGxheV9uYW1lGAEgASgJQgPg",
+            "QQESKQoaZGVkaWNhdGVkX2VuZHBvaW50X2VuYWJsZWQYAiABKAhCBRgB4EEB",
+            "EigKG2RlZGljYXRlZF9lbmRwb2ludF9kaXNhYmxlZBgEIAEoCEID4EEBEiAK",
+            "EGVuZHBvaW50X3VzZXJfaWQYAyABKAlCBuBBBeBBARqdAgoMRGVwbG95Q29u",
+            "ZmlnElAKE2RlZGljYXRlZF9yZXNvdXJjZXMYASABKAsyLi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5EZWRpY2F0ZWRSZXNvdXJjZXNCA+BBARIgChNm",
+            "YXN0X3RyeW91dF9lbmFibGVkGAIgASgIQgPgQQESZAoNc3lzdGVtX2xhYmVs",
+            "cxgDIAMoCzJILmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveVJl",
+            "cXVlc3QuRGVwbG95Q29uZmlnLlN5c3RlbUxhYmVsc0VudHJ5QgPgQQEaMwoR",
+            "U3lzdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4AUILCglhcnRpZmFjdHMi0QEKDkRlcGxveVJlc3BvbnNlEkkKD3B1Ymxp",
+            "c2hlcl9tb2RlbBgBIAEoCUIw4EED+kEqCihhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL1B1Ymxpc2hlck1vZGVsEjwKCGVuZHBvaW50GAIgASgJQirgQQP6",
+            "QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSNgoFbW9k",
+            "ZWwYAyABKAlCJ+BBA/pBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9N",
+            "b2RlbCKoAgoXRGVwbG95T3BlcmF0aW9uTWV0YWRhdGESTgoQZ2VuZXJpY19t",
+            "ZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdl",
+            "bmVyaWNPcGVyYXRpb25NZXRhZGF0YRJJCg9wdWJsaXNoZXJfbW9kZWwYAiAB",
+            "KAlCMOBBA/pBKgooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QdWJsaXNo",
+            "ZXJNb2RlbBI+CgtkZXN0aW5hdGlvbhgDIAEoCUIp4EED+kEjCiFsb2NhdGlv",
+            "bnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGwoOcHJvamVjdF9udW1iZXIY",
+            "BCABKANCA+BBAxIVCghtb2RlbF9pZBgFIAEoCUID4EEDKqEBChJQdWJsaXNo",
+            "ZXJNb2RlbFZpZXcSJAogUFVCTElTSEVSX01PREVMX1ZJRVdfVU5TUEVDSUZJ",
+            "RUQQABIeChpQVUJMSVNIRVJfTU9ERUxfVklFV19CQVNJQxABEh0KGVBVQkxJ",
+            "U0hFUl9NT0RFTF9WSUVXX0ZVTEwQAhImCiJQVUJMSVNIRVJfTU9ERUxfVkVS",
+            "U0lPTl9WSUVXX0JBU0lDEAMyyQMKEk1vZGVsR2FyZGVuU2VydmljZRKmAQoR",
+            "R2V0UHVibGlzaGVyTW9kZWwSNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5HZXRQdWJsaXNoZXJNb2RlbFJlcXVlc3QaKi5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5QdWJsaXNoZXJNb2RlbCIv2kEEbmFtZYLT5JMCIhIgL3Yx",
+            "L3tuYW1lPXB1Ymxpc2hlcnMvKi9tb2RlbHMvKn0SugEKBkRlcGxveRIpLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveVJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImbKQSkKDkRlcGxveVJlc3BvbnNl",
+            "EhdEZXBsb3lPcGVyYXRpb25NZXRhZGF0YYLT5JMCNCIvL3YxL3tkZXN0aW5h",
+            "dGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpkZXBsb3k6ASoaTcpBGWFp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtUBCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFCF01vZGVsR2FyZGVuU2VydmljZVByb3RvUAFa",
+            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
+            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
+            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PublisherModelReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PublisherModelView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest), global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest.Parser, new[]{ "Name", "LanguageCode", "View", "IsHuggingFaceModel", "HuggingFaceToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest), global::Google.Cloud.AIPlatform.V1.DeployRequest.Parser, new[]{ "PublisherModelName", "HuggingFaceModelId", "Destination", "ModelConfig", "EndpointConfig", "DeployConfig" }, new[]{ "Artifacts" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig.Parser, new[]{ "AcceptEula", "HuggingFaceAccessToken", "HuggingFaceCacheEnabled", "ModelDisplayName", "ContainerSpec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig.Parser, new[]{ "EndpointDisplayName", "DedicatedEndpointEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest), global::Google.Cloud.AIPlatform.V1.DeployRequest.Parser, new[]{ "PublisherModelName", "HuggingFaceModelId", "Destination", "ModelConfig", "EndpointConfig", "DeployConfig" }, new[]{ "Artifacts" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig.Parser, new[]{ "AcceptEula", "HuggingFaceAccessToken", "HuggingFaceCacheEnabled", "ModelDisplayName", "ContainerSpec", "ModelUserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig.Parser, new[]{ "EndpointDisplayName", "DedicatedEndpointEnabled", "DedicatedEndpointDisabled", "EndpointUserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig.Parser, new[]{ "DedicatedResources", "FastTryoutEnabled", "SystemLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployResponse), global::Google.Cloud.AIPlatform.V1.DeployResponse.Parser, new[]{ "PublisherModel", "Endpoint", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployOperationMetadata), global::Google.Cloud.AIPlatform.V1.DeployOperationMetadata.Parser, new[]{ "GenericMetadata", "PublisherModel", "Destination", "ProjectNumber", "ModelId" }, null, null, null, null)
@@ -1035,6 +1037,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           huggingFaceCacheEnabled_ = other.huggingFaceCacheEnabled_;
           modelDisplayName_ = other.modelDisplayName_;
           containerSpec_ = other.containerSpec_ != null ? other.containerSpec_.Clone() : null;
+          modelUserId_ = other.modelUserId_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1125,6 +1128,27 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "model_user_id" field.</summary>
+        public const int ModelUserIdFieldNumber = 6;
+        private string modelUserId_ = "";
+        /// <summary>
+        /// Optional. The ID to use for the uploaded Model, which will become the
+        /// final component of the model resource name. When not provided, Vertex AI
+        /// will generate a value for this ID. When Model Registry model is provided,
+        /// this field will be ignored.
+        ///
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ModelUserId {
+          get { return modelUserId_; }
+          set {
+            modelUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1145,6 +1169,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (HuggingFaceCacheEnabled != other.HuggingFaceCacheEnabled) return false;
           if (ModelDisplayName != other.ModelDisplayName) return false;
           if (!object.Equals(ContainerSpec, other.ContainerSpec)) return false;
+          if (ModelUserId != other.ModelUserId) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1157,6 +1182,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (HuggingFaceCacheEnabled != false) hash ^= HuggingFaceCacheEnabled.GetHashCode();
           if (ModelDisplayName.Length != 0) hash ^= ModelDisplayName.GetHashCode();
           if (containerSpec_ != null) hash ^= ContainerSpec.GetHashCode();
+          if (ModelUserId.Length != 0) hash ^= ModelUserId.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1195,6 +1221,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(ContainerSpec);
           }
+          if (ModelUserId.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ModelUserId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1225,6 +1255,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(ContainerSpec);
           }
+          if (ModelUserId.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ModelUserId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1249,6 +1283,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (containerSpec_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerSpec);
+          }
+          if (ModelUserId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelUserId);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1279,6 +1316,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               ContainerSpec = new global::Google.Cloud.AIPlatform.V1.ModelContainerSpec();
             }
             ContainerSpec.MergeFrom(other.ContainerSpec);
+          }
+          if (other.ModelUserId.Length != 0) {
+            ModelUserId = other.ModelUserId;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1318,6 +1358,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 input.ReadMessage(ContainerSpec);
                 break;
               }
+              case 50: {
+                ModelUserId = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1354,6 +1398,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   ContainerSpec = new global::Google.Cloud.AIPlatform.V1.ModelContainerSpec();
                 }
                 input.ReadMessage(ContainerSpec);
+                break;
+              }
+              case 50: {
+                ModelUserId = input.ReadString();
                 break;
               }
             }
@@ -1403,6 +1451,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public EndpointConfig(EndpointConfig other) : this() {
           endpointDisplayName_ = other.endpointDisplayName_;
           dedicatedEndpointEnabled_ = other.dedicatedEndpointEnabled_;
+          dedicatedEndpointDisabled_ = other.dedicatedEndpointDisabled_;
+          endpointUserId_ = other.endpointUserId_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1432,19 +1482,75 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int DedicatedEndpointEnabledFieldNumber = 2;
         private bool dedicatedEndpointEnabled_;
         /// <summary>
-        /// Optional. If true, the endpoint will be exposed through a dedicated
-        /// DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS
-        /// will be isolated from other users' traffic and will have better
-        /// performance and reliability. Note: Once you enabled dedicated endpoint,
-        /// you won't be able to send request to the shared DNS
+        /// Optional. Deprecated. Use dedicated_endpoint_disabled instead.
+        /// If true, the endpoint will be exposed through a
+        /// dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the
+        /// dedicated DNS will be isolated from other users' traffic and will have
+        /// better performance and reliability. Note: Once you enabled dedicated
+        /// endpoint, you won't be able to send request to the shared DNS
         /// {region}-aiplatform.googleapis.com. The limitations will be removed soon.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool DedicatedEndpointEnabled {
           get { return dedicatedEndpointEnabled_; }
           set {
             dedicatedEndpointEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "dedicated_endpoint_disabled" field.</summary>
+        public const int DedicatedEndpointDisabledFieldNumber = 4;
+        private bool dedicatedEndpointDisabled_;
+        /// <summary>
+        /// Optional. By default, if dedicated endpoint is enabled, the endpoint will
+        /// be exposed through a dedicated DNS [Endpoint.dedicated_endpoint_dns].
+        /// Your request to the dedicated DNS will be isolated from other users'
+        /// traffic and will have better performance and reliability. Note: Once you
+        /// enabled dedicated endpoint, you won't be able to send request to the
+        /// shared DNS {region}-aiplatform.googleapis.com. The limitations will be
+        /// removed soon.
+        ///
+        /// If this field is set to true, the dedicated endpoint will be disabled
+        /// and the deployed model will be exposed through the shared DNS
+        /// {region}-aiplatform.googleapis.com.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DedicatedEndpointDisabled {
+          get { return dedicatedEndpointDisabled_; }
+          set {
+            dedicatedEndpointDisabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "endpoint_user_id" field.</summary>
+        public const int EndpointUserIdFieldNumber = 3;
+        private string endpointUserId_ = "";
+        /// <summary>
+        /// Optional. Immutable. The ID to use for endpoint, which will become the
+        /// final component of the endpoint resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        ///
+        /// If the first character is a letter, this value may be up to 63
+        /// characters, and valid characters are `[a-z0-9-]`. The last character must
+        /// be a letter or number.
+        ///
+        /// If the first character is a number, this value may be up to 9 characters,
+        /// and valid characters are `[0-9]` with no leading zeros.
+        ///
+        /// When using HTTP/JSON, this field is populated
+        /// based on a query string argument, such as `?endpoint_id=12345`. This is
+        /// the fallback for fields that are not included in either the URI or the
+        /// body.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EndpointUserId {
+          get { return endpointUserId_; }
+          set {
+            endpointUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -1465,6 +1571,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (EndpointDisplayName != other.EndpointDisplayName) return false;
           if (DedicatedEndpointEnabled != other.DedicatedEndpointEnabled) return false;
+          if (DedicatedEndpointDisabled != other.DedicatedEndpointDisabled) return false;
+          if (EndpointUserId != other.EndpointUserId) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1474,6 +1582,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (EndpointDisplayName.Length != 0) hash ^= EndpointDisplayName.GetHashCode();
           if (DedicatedEndpointEnabled != false) hash ^= DedicatedEndpointEnabled.GetHashCode();
+          if (DedicatedEndpointDisabled != false) hash ^= DedicatedEndpointDisabled.GetHashCode();
+          if (EndpointUserId.Length != 0) hash ^= EndpointUserId.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1500,6 +1610,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteBool(DedicatedEndpointEnabled);
           }
+          if (EndpointUserId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(EndpointUserId);
+          }
+          if (DedicatedEndpointDisabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DedicatedEndpointDisabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1518,6 +1636,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(16);
             output.WriteBool(DedicatedEndpointEnabled);
           }
+          if (EndpointUserId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(EndpointUserId);
+          }
+          if (DedicatedEndpointDisabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DedicatedEndpointDisabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1533,6 +1659,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (DedicatedEndpointEnabled != false) {
             size += 1 + 1;
+          }
+          if (DedicatedEndpointDisabled != false) {
+            size += 1 + 1;
+          }
+          if (EndpointUserId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EndpointUserId);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1551,6 +1683,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.DedicatedEndpointEnabled != false) {
             DedicatedEndpointEnabled = other.DedicatedEndpointEnabled;
+          }
+          if (other.DedicatedEndpointDisabled != false) {
+            DedicatedEndpointDisabled = other.DedicatedEndpointDisabled;
+          }
+          if (other.EndpointUserId.Length != 0) {
+            EndpointUserId = other.EndpointUserId;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1575,6 +1713,14 @@ namespace Google.Cloud.AIPlatform.V1 {
                 DedicatedEndpointEnabled = input.ReadBool();
                 break;
               }
+              case 26: {
+                EndpointUserId = input.ReadString();
+                break;
+              }
+              case 32: {
+                DedicatedEndpointDisabled = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1596,6 +1742,14 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 16: {
                 DedicatedEndpointEnabled = input.ReadBool();
+                break;
+              }
+              case 26: {
+                EndpointUserId = input.ReadString();
+                break;
+              }
+              case 32: {
+                DedicatedEndpointDisabled = input.ReadBool();
                 break;
               }
             }
