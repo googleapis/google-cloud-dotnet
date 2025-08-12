@@ -1756,6 +1756,12 @@
                 "MergeVersionAliasesAsync"
               ]
             },
+            "RecommendSpec": {
+              "methods": [
+                "RecommendSpec",
+                "RecommendSpecAsync"
+              ]
+            },
             "UpdateExplanationDataset": {
               "methods": [
                 "UpdateExplanationDataset",

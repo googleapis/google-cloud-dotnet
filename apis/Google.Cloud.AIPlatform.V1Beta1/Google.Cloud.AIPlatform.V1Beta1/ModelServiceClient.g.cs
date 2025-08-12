@@ -75,6 +75,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             ListModelEvaluationsSettings = existing.ListModelEvaluationsSettings;
             GetModelEvaluationSliceSettings = existing.GetModelEvaluationSliceSettings;
             ListModelEvaluationSlicesSettings = existing.ListModelEvaluationSlicesSettings;
+            RecommendSpecSettings = existing.RecommendSpecSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -423,6 +424,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListModelEvaluationSlicesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.RecommendSpec</c> and <c>ModelServiceClient.RecommendSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RecommendSpecSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3675,6 +3688,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }
             return ListModelEvaluationSlicesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets a Model's spec recommendations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RecommendSpecResponse RecommendSpec(RecommendSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Model's spec recommendations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommendSpecResponse> RecommendSpecAsync(RecommendSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Model's spec recommendations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RecommendSpecResponse> RecommendSpecAsync(RecommendSpecRequest request, st::CancellationToken cancellationToken) =>
+            RecommendSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ModelService client wrapper implementation, for convenient use.</summary>
@@ -3720,6 +3760,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiCall<GetModelEvaluationSliceRequest, ModelEvaluationSlice> _callGetModelEvaluationSlice;
 
         private readonly gaxgrpc::ApiCall<ListModelEvaluationSlicesRequest, ListModelEvaluationSlicesResponse> _callListModelEvaluationSlices;
+
+        private readonly gaxgrpc::ApiCall<RecommendSpecRequest, RecommendSpecResponse> _callRecommendSpec;
 
         /// <summary>
         /// Constructs a client wrapper for the ModelService service, with the specified gRPC client and settings.
@@ -3801,6 +3843,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callListModelEvaluationSlices = clientHelper.BuildApiCall<ListModelEvaluationSlicesRequest, ListModelEvaluationSlicesResponse>("ListModelEvaluationSlices", grpcClient.ListModelEvaluationSlicesAsync, grpcClient.ListModelEvaluationSlices, effectiveSettings.ListModelEvaluationSlicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListModelEvaluationSlices);
             Modify_ListModelEvaluationSlicesApiCall(ref _callListModelEvaluationSlices);
+            _callRecommendSpec = clientHelper.BuildApiCall<RecommendSpecRequest, RecommendSpecResponse>("RecommendSpec", grpcClient.RecommendSpecAsync, grpcClient.RecommendSpec, effectiveSettings.RecommendSpecSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRecommendSpec);
+            Modify_RecommendSpecApiCall(ref _callRecommendSpec);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3843,6 +3888,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetModelEvaluationSliceApiCall(ref gaxgrpc::ApiCall<GetModelEvaluationSliceRequest, ModelEvaluationSlice> call);
 
         partial void Modify_ListModelEvaluationSlicesApiCall(ref gaxgrpc::ApiCall<ListModelEvaluationSlicesRequest, ListModelEvaluationSlicesResponse> call);
+
+        partial void Modify_RecommendSpecApiCall(ref gaxgrpc::ApiCall<RecommendSpecRequest, RecommendSpecResponse> call);
 
         partial void OnConstruction(ModelService.ModelServiceClient grpcClient, ModelServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3892,6 +3939,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetModelEvaluationSliceRequest(ref GetModelEvaluationSliceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListModelEvaluationSlicesRequest(ref ListModelEvaluationSlicesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RecommendSpecRequest(ref RecommendSpecRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>UploadModel</c>.</summary>
         public override lro::OperationsClient UploadModelOperationsClient { get; }
@@ -4407,6 +4456,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ListModelEvaluationSlicesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListModelEvaluationSlicesRequest, ListModelEvaluationSlicesResponse, ModelEvaluationSlice>(_callListModelEvaluationSlices, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a Model's spec recommendations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RecommendSpecResponse RecommendSpec(RecommendSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RecommendSpecRequest(ref request, ref callSettings);
+            return _callRecommendSpec.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a Model's spec recommendations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RecommendSpecResponse> RecommendSpecAsync(RecommendSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RecommendSpecRequest(ref request, ref callSettings);
+            return _callRecommendSpec.Async(request, callSettings);
         }
     }
 
