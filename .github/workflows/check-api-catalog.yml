@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
         
     - name: Validate API catalog
       run: python -c 'import json; json.load(open("generator-input/apis.json", "r"))'
