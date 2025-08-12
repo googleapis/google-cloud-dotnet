@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.43.0, released 2025-08-12
+
+### New features
+
+- Added document_name for vertex ai search as part of retrieved context from grounding chunk
+- Add option EndpointUserId and ModelUserId fields
+- Migrate dedicated endpoint to be enabled by default
+- Add support for CMEK, runtime controls, and PSC-I to Reasoning Engine protos
+
+### Documentation improvements
+
+- A comment for field `dedicated_endpoint_enabled` in message `.google.cloud.aiplatform.v1.DeployRequest` is changed
+- Add psc_interface_config, min/max_instances, resource_limits, container_concurrency to ReasoningEngineSpec
+- Add encryption_spec to ReasoningEngine
+
 ## Version 3.42.0, released 2025-08-08
 
 ### New features
