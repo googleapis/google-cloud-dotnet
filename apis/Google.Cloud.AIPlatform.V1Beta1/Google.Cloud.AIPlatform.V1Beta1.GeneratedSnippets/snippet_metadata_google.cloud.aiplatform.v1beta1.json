@@ -72595,6 +72595,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ModelService_RecommendSpec_sync",
+      "title": "RecommendSpecRequestObject",
+      "description": "Snippet for RecommendSpec",
+      "file": "ModelServiceClient.RecommendSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecommendSpec",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient.RecommendSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "RecommendSpec",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelService.RecommendSpec",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelService_RecommendSpec_async",
+      "title": "RecommendSpecRequestObjectAsync",
+      "description": "Snippet for RecommendSpecAsync",
+      "file": "ModelServiceClient.RecommendSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecommendSpecAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient.RecommendSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "RecommendSpec",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelService.RecommendSpec",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_NotebookService_CreateNotebookRuntimeTemplate_sync",
       "title": "CreateNotebookRuntimeTemplateRequestObject",
       "description": "Snippet for CreateNotebookRuntimeTemplate",

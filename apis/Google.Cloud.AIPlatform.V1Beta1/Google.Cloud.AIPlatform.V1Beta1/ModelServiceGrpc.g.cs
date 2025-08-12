@@ -123,6 +123,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ListModelEvaluationSlicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesResponse> __Marshaller_google_cloud_aiplatform_v1beta1_ListModelEvaluationSlicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest> __Marshaller_google_cloud_aiplatform_v1beta1_RecommendSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse> __Marshaller_google_cloud_aiplatform_v1beta1_RecommendSpecResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UploadModelRequest, global::Google.LongRunning.Operation> __Method_UploadModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UploadModelRequest, global::Google.LongRunning.Operation>(
@@ -275,6 +279,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "ListModelEvaluationSlices",
         __Marshaller_google_cloud_aiplatform_v1beta1_ListModelEvaluationSlicesRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_ListModelEvaluationSlicesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest, global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse> __Method_RecommendSpec = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest, global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RecommendSpec",
+        __Marshaller_google_cloud_aiplatform_v1beta1_RecommendSpecRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_RecommendSpecResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -531,6 +543,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesResponse> ListModelEvaluationSlices(global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a Model's spec recommendations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse> RecommendSpec(global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1560,6 +1584,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListModelEvaluationSlices, null, options, request);
       }
+      /// <summary>
+      /// Gets a Model's spec recommendations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse RecommendSpec(global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RecommendSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Model's spec recommendations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse RecommendSpec(global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RecommendSpec, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Model's spec recommendations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse> RecommendSpecAsync(global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RecommendSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Model's spec recommendations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse> RecommendSpecAsync(global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RecommendSpec, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ModelServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1592,7 +1664,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_GetModelEvaluation, serviceImpl.GetModelEvaluation)
           .AddMethod(__Method_ListModelEvaluations, serviceImpl.ListModelEvaluations)
           .AddMethod(__Method_GetModelEvaluationSlice, serviceImpl.GetModelEvaluationSlice)
-          .AddMethod(__Method_ListModelEvaluationSlices, serviceImpl.ListModelEvaluationSlices).Build();
+          .AddMethod(__Method_ListModelEvaluationSlices, serviceImpl.ListModelEvaluationSlices)
+          .AddMethod(__Method_RecommendSpec, serviceImpl.RecommendSpec).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1621,6 +1694,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_ListModelEvaluations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationsRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationsResponse>(serviceImpl.ListModelEvaluations));
       serviceBinder.AddMethod(__Method_GetModelEvaluationSlice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetModelEvaluationSliceRequest, global::Google.Cloud.AIPlatform.V1Beta1.ModelEvaluationSlice>(serviceImpl.GetModelEvaluationSlice));
       serviceBinder.AddMethod(__Method_ListModelEvaluationSlices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListModelEvaluationSlicesResponse>(serviceImpl.ListModelEvaluationSlices));
+      serviceBinder.AddMethod(__Method_RecommendSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest, global::Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse>(serviceImpl.RecommendSpec));
     }
 
   }
