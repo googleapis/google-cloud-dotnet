@@ -2315,11 +2315,12 @@
         },
         {
             "id": "Google.Cloud.OsConfig.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:18:26Z",
+            "releaseTimestamp": "2025-08-12T08:27:24.277205215Z",
             "lastGeneratedCommit": "eef0d65ed2dcf69de78bd773478d0de7436a4bc7",
+            "lastReleasedCommit": "eef0d65ed2dcf69de78bd773478d0de7436a4bc7",
             "apiPaths": [
                 "google/cloud/osconfig/v1"
             ],
