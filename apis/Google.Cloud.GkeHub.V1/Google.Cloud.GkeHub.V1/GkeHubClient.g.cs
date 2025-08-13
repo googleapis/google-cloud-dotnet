@@ -711,8 +711,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Features in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Features will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Features will be
+        /// listed. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -742,8 +742,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Features in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Features will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Features will be
+        /// listed. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -773,8 +773,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Features in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Features will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Features will be
+        /// listed. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -807,8 +807,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Features in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Features will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Features will be
+        /// listed. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1369,8 +1369,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Feature will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Feature will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// The Feature resource to create.
@@ -1392,8 +1392,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Feature will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Feature will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// The Feature resource to create.
@@ -1415,8 +1415,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Feature will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Feature will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// The Feature resource to create.
@@ -1433,8 +1433,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Feature will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Feature will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// The Feature resource to create.
@@ -1456,8 +1456,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Feature will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Feature will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// The Feature resource to create.
@@ -1479,8 +1479,8 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Feature will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Feature will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// The Feature resource to create.
