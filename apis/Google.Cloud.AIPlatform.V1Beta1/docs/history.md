@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta46, released 2025-08-13
+
+### New features
+
+- Add API for Gen AI Evaluation in Tuning
+- Add `gpu_partition_size` to `MachineSpec`
+
 ## Version 1.0.0-beta45, released 2025-08-12
 
 ### New features
