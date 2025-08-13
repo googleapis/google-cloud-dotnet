@@ -3,7 +3,6 @@
     "method": "ListLocations",
     "client": "DataAgentServiceClient",
     "clientNavigationProperty": "LocationsClient",
-    "skip": "b/428834051",
     "restrictedSkip": "Requires API enablement",
     "arguments": {
       "request": {
