@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.44.0, released 2025-08-14
+
+### Bug fixes
+
+- Fields are not part of `oneof`
+
 ## Version 3.43.0, released 2025-08-12
 
 ### New features
