@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta47, released 2025-08-14
+
+### New features
+
+- Add option EndpointUserId and ModelUserId fields
+- Migrate dedicated endpoint to be enabled by default
+
+### Documentation improvements
+
+- A comment for field `dedicated_endpoint_enabled` in message `.google.cloud.aiplatform.v1beta1.DeployRequest` is changed
+
 ## Version 1.0.0-beta46, released 2025-08-13
 
 ### New features
