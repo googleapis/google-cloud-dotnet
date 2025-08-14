@@ -4346,7 +4346,7 @@ namespace Google.Shopping.Merchant.IssueResolution.V1 {
   /// business. They can start the action only when they provided all required
   /// inputs. The application will request processing of the action by calling the
   /// [triggeraction
-  /// method](https://developers.google.com/merchant/api/reference/rest/issueresolution_v1beta/issueresolution/triggeraction).
+  /// method](https://developers.google.com/merchant/api/reference/rest/issueresolution_v1/issueresolution/triggeraction).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BuiltInUserInputAction : pb::IMessage<BuiltInUserInputAction>
