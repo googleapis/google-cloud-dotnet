@@ -28,7 +28,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
   /// configuration, encompassing return policies for both ads and free listings
   /// ## programs. This API defines the following resource model:
   ///
-  /// [OnlineReturnPolicy](/merchant/api/reference/rpc/google.shopping.merchant.accounts.v1#google.shopping.merchant.accounts.v1.OnlineReturnPolicy)
+  /// [OnlineReturnPolicy][google.shopping.merchant.accounts.v1.OnlineReturnPolicy]
   /// </summary>
   public static partial class OnlineReturnPolicyService
   {
