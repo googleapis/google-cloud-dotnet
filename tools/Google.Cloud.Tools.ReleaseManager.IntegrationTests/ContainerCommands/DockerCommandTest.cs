@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using SharpCompress.Readers;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -66,6 +67,30 @@ public class DockerCommandTest
             var path = Path.Combine(outputDirectory, containsTextAssertion.File);
             var actualText = File.ReadAllText(path);
             Assert.Contains(containsTextAssertion.Text, actualText);
+        }
+        foreach (var archiveAssertion in fileExpectations.Archive)
+        {
+            // SharpCompress makes it harder than I'd expect to get all the paths
+            // within a .tar.gz file...
+            var path = Path.Combine(outputDirectory, archiveAssertion.File);
+            var data = File.ReadAllBytes(path);
+            using var reader = ReaderFactory.Open(new MemoryStream(data));
+            var archivePaths = new List<string>();
+            while (reader.MoveToNextEntry())
+            {
+                if (reader.Entry.Key is string archivePath)
+                {
+                    archivePaths.Add(archivePath);
+                }
+            }
+            foreach (var present in archiveAssertion.PresentInArchive)
+            {
+                Assert.Contains(present, archivePaths);
+            }
+            foreach (var absent in archiveAssertion.AbsentInArchive)
+            {
+                Assert.DoesNotContain(absent, archivePaths);
+            }
         }
         var expectedDirectory = Path.Combine(outputDirectory, "expected");
         if (Directory.Exists(expectedDirectory))
@@ -151,12 +176,20 @@ public class DockerCommandTest
         public List<string> Present { get; set; } = [];
         public List<string> Absent { get; set; } = [];
         public List<TextAssertion> ContainsText { get; set; } = [];
+        public List<ArchiveAssertion> Archive { get; set; } = [];
     }
 
     public class TextAssertion
     {
         public string File { get; set; }
         public string Text { get; set; }
+    }
+
+    public class ArchiveAssertion
+    {
+        public string File { get; set; }
+        public List<string> PresentInArchive { get; set; } = [];
+        public List<string> AbsentInArchive { get; set; } = [];
     }
 
     private class FileCopy
