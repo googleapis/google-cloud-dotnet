@@ -88,7 +88,8 @@ internal class PackageLibraryCommand : IContainerCommand
         FixDocfxOutput(siteDir, api);
 
         var devSiteDir = Path.Combine(docsDir, "devsite");
-
+        // The output prefix will be used later on to work out which bucket to write to.
+        // The output prefix will be replaced (on upload) with "dotnet" to create the appropriate file for processing.
         BundleDocumentation(siteDir, api, outputDirectory, "googleapisdev");
         if (Directory.Exists(devSiteDir))
         {
@@ -114,15 +115,13 @@ internal class PackageLibraryCommand : IContainerCommand
         // Insert a baseUrl at the start of xrefmap.yml
         var xrefmapFile = Path.Combine(directory, "xrefmap.yml");
         var xrefmapLines = File.ReadLines(xrefmapFile).ToList();
-        if (xrefmapLines[0].StartsWith("baseUrl"))
+        if (!xrefmapLines[0].StartsWith("baseUrl"))
         {
             xrefmapLines.Insert(0, $"baseUrl: https://googleapis.dev/dotnet/{api.Id}/{api.Version}/");
             File.WriteAllLines(xrefmapFile, xrefmapLines);
         }
-    }
 
-    private static void BundleDocumentation(string inputDirectory, ApiMetadata api, string outputDirectory, string outputPrefix)
-    {
+        // Create a docs.metadata.json file for googleapis.dev - this will already be present in the devsite directory.
         var metadata = new Metadata
         {
             UpdateTime = Timestamp.FromDateTimeOffset(DateTimeOffset.UtcNow).ToString().Trim('\"'),
@@ -131,10 +130,12 @@ internal class PackageLibraryCommand : IContainerCommand
             Language = "dotnet",
             GithubRepository = Environment.GetEnvironmentVariable("DOCS_METADATA_REPO") ?? ""
         };
-        // The output prefix will be used later on to work out which bucket to write to.
-        // The output prefix will be replaced (on upload) by "dotnet" to create the appropriate file for processing.
         var json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
-        File.WriteAllText("docs.metadata.json", json);
+        File.WriteAllText(Path.Combine(directory, "docs.metadata.json"), json);
+    }
+
+    private static void BundleDocumentation(string inputDirectory, ApiMetadata api, string outputDirectory, string outputPrefix)
+    {
         using var tgz = File.Create(Path.Combine(outputDirectory, $"{outputPrefix}-{api.Id}-{api.Version}.tar.gz"));
         CompressDirectory(inputDirectory, tgz);
     }

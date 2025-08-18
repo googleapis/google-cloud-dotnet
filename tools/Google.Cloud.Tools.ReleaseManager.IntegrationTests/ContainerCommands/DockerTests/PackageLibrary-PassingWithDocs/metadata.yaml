@@ -61,4 +61,8 @@ fileExpectations:
   - output/Google.Test.V1.1.0.0.nupkg
   - output/Google.Test.V1.1.0.0.nupkg-sbom.spdx.json  
   - output/package-owner.txt
-  
+  archive:
+  - file: output/googleapisdev-Google.Test.V1-1.0.0.tar.gz
+    presentInArchive:
+    - docs.metadata.json
+    - api/Google.Test.V1.Handwritten.html
