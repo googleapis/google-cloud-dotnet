@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.8.0, released 2025-08-19
+
+### New features
+
+- Add Reservation.max_slots field to Reservation proto, indicating the total max number of slots this reservation can use up to
+- Add Reservation.scaling_mode field and its corresponding enum message ScalingMode. This field should be used together with Reservation.max_slots
+
 ## Version 2.7.0, released 2025-03-03
 
 ### New features
