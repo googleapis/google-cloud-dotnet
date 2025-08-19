@@ -1411,11 +1411,12 @@
         },
         {
             "id": "Google.Cloud.DocumentAI.V1",
-            "currentVersion": "3.20.0",
+            "currentVersion": "3.21.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-23T17:12:22Z",
+            "releaseTimestamp": "2025-08-19T10:18:56.385020243Z",
             "lastGeneratedCommit": "6429996ce986ef871bcfbb5d7389ed5efebe803b",
+            "lastReleasedCommit": "6429996ce986ef871bcfbb5d7389ed5efebe803b",
             "apiPaths": [
                 "google/cloud/documentai/v1"
             ],
