@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateConnectedSiteTag_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async]
     using Google.Analytics.Admin.V1Alpha;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for CreateConnectedSiteTag</summary>
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +30,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateConnectedSiteTagRequestObject()
+        public async Task GetReportingIdentitySettingsRequestObjectAsync()
         {
             // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
+            GetReportingIdentitySettingsRequest request = new GetReportingIdentitySettingsRequest
             {
-                Property = "",
-                ConnectedSiteTag = new ConnectedSiteTag(),
+                ReportingIdentitySettingsName = ReportingIdentitySettingsName.FromProperty("[PROPERTY]"),
             };
             // Make the request
-            CreateConnectedSiteTagResponse response = analyticsAdminServiceClient.CreateConnectedSiteTag(request);
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(request);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateConnectedSiteTag_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async]
 }

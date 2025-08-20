@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchConnectedGa4Property_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async_flattened]
     using Google.Analytics.Admin.V1Alpha;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for FetchConnectedGa4Property</summary>
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,18 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void FetchConnectedGa4PropertyRequestObject()
+        public async Task GetReportingIdentitySettingsAsync()
         {
             // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
-            {
-                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
+            string name = "properties/[PROPERTY]/reportingIdentitySettings";
             // Make the request
-            FetchConnectedGa4PropertyResponse response = analyticsAdminServiceClient.FetchConnectedGa4Property(request);
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchConnectedGa4Property_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async_flattened]
 }

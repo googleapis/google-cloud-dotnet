@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListConnectedSiteTags_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync_flattened]
     using Google.Analytics.Admin.V1Alpha;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for ListConnectedSiteTags</summary>
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,15 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListConnectedSiteTagsRequestObject()
+        public void GetReportingIdentitySettings()
         {
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
+            string name = "properties/[PROPERTY]/reportingIdentitySettings";
             // Make the request
-            ListConnectedSiteTagsResponse response = analyticsAdminServiceClient.ListConnectedSiteTags(request);
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(name);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListConnectedSiteTags_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync_flattened]
 }
