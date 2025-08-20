@@ -26375,200 +26375,6 @@
       ]
     },
     {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_sync",
-      "title": "SetAutomatedGa4ConfigurationOptOutRequestObject",
-      "description": "Snippet for SetAutomatedGa4ConfigurationOptOut",
-      "file": "AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "SetAutomatedGa4ConfigurationOptOut",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "SetAutomatedGa4ConfigurationOptOut",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.SetAutomatedGa4ConfigurationOptOut",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_async",
-      "title": "SetAutomatedGa4ConfigurationOptOutRequestObjectAsync",
-      "description": "Snippet for SetAutomatedGa4ConfigurationOptOutAsync",
-      "file": "AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "SetAutomatedGa4ConfigurationOptOutAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "SetAutomatedGa4ConfigurationOptOut",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.SetAutomatedGa4ConfigurationOptOut",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 46,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 44,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchAutomatedGa4ConfigurationOptOut_sync",
-      "title": "FetchAutomatedGa4ConfigurationOptOutRequestObject",
-      "description": "Snippet for FetchAutomatedGa4ConfigurationOptOut",
-      "file": "AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "FetchAutomatedGa4ConfigurationOptOut",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "FetchAutomatedGa4ConfigurationOptOut",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchAutomatedGa4ConfigurationOptOut",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchAutomatedGa4ConfigurationOptOut_async",
-      "title": "FetchAutomatedGa4ConfigurationOptOutRequestObjectAsync",
-      "description": "Snippet for FetchAutomatedGa4ConfigurationOptOutAsync",
-      "file": "AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "FetchAutomatedGa4ConfigurationOptOutAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "FetchAutomatedGa4ConfigurationOptOut",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchAutomatedGa4ConfigurationOptOut",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateBigQueryLink_sync",
       "title": "CreateBigQueryLinkRequestObject",
       "description": "Snippet for CreateBigQueryLink",
@@ -28444,393 +28250,6 @@
         {
           "start": 36,
           "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateConnectedSiteTag_sync",
-      "title": "CreateConnectedSiteTagRequestObject",
-      "description": "Snippet for CreateConnectedSiteTag",
-      "file": "AnalyticsAdminServiceClient.CreateConnectedSiteTagRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateConnectedSiteTag",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateConnectedSiteTag",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateConnectedSiteTag",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateConnectedSiteTag",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateConnectedSiteTag_async",
-      "title": "CreateConnectedSiteTagRequestObjectAsync",
-      "description": "Snippet for CreateConnectedSiteTagAsync",
-      "file": "AnalyticsAdminServiceClient.CreateConnectedSiteTagRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateConnectedSiteTagAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateConnectedSiteTagAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateConnectedSiteTag",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateConnectedSiteTag",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 46,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 44,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteConnectedSiteTag_sync",
-      "title": "DeleteConnectedSiteTagRequestObject",
-      "description": "Snippet for DeleteConnectedSiteTag",
-      "file": "AnalyticsAdminServiceClient.DeleteConnectedSiteTagRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteConnectedSiteTag",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteConnectedSiteTag",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteConnectedSiteTag",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteConnectedSiteTag",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteConnectedSiteTag_async",
-      "title": "DeleteConnectedSiteTagRequestObjectAsync",
-      "description": "Snippet for DeleteConnectedSiteTagAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteConnectedSiteTagRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteConnectedSiteTagAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteConnectedSiteTagAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteConnectedSiteTag",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteConnectedSiteTag",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 46,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 44,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListConnectedSiteTags_sync",
-      "title": "ListConnectedSiteTagsRequestObject",
-      "description": "Snippet for ListConnectedSiteTags",
-      "file": "AnalyticsAdminServiceClient.ListConnectedSiteTagsRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListConnectedSiteTags",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListConnectedSiteTags",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListConnectedSiteTags",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListConnectedSiteTags",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListConnectedSiteTags_async",
-      "title": "ListConnectedSiteTagsRequestObjectAsync",
-      "description": "Snippet for ListConnectedSiteTagsAsync",
-      "file": "AnalyticsAdminServiceClient.ListConnectedSiteTagsRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListConnectedSiteTagsAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListConnectedSiteTagsAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListConnectedSiteTags",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListConnectedSiteTags",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchConnectedGa4Property_sync",
-      "title": "FetchConnectedGa4PropertyRequestObject",
-      "description": "Snippet for FetchConnectedGa4Property",
-      "file": "AnalyticsAdminServiceClient.FetchConnectedGa4PropertyRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "FetchConnectedGa4Property",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchConnectedGa4Property",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "FetchConnectedGa4Property",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchConnectedGa4Property",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 44,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchConnectedGa4Property_async",
-      "title": "FetchConnectedGa4PropertyRequestObjectAsync",
-      "description": "Snippet for FetchConnectedGa4PropertyAsync",
-      "file": "AnalyticsAdminServiceClient.FetchConnectedGa4PropertyRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "FetchConnectedGa4PropertyAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchConnectedGa4PropertyAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "FetchConnectedGa4Property",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchConnectedGa4Property",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -40052,6 +39471,293 @@
         "method": {
           "shortName": "GetSubpropertySyncConfig",
           "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertySyncConfig",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync",
+      "title": "GetReportingIdentitySettingsRequestObject",
+      "description": "Snippet for GetReportingIdentitySettings",
+      "file": "AnalyticsAdminServiceClient.GetReportingIdentitySettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportingIdentitySettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetReportingIdentitySettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetReportingIdentitySettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetReportingIdentitySettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async",
+      "title": "GetReportingIdentitySettingsRequestObjectAsync",
+      "description": "Snippet for GetReportingIdentitySettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetReportingIdentitySettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportingIdentitySettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetReportingIdentitySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetReportingIdentitySettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetReportingIdentitySettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetReportingIdentitySettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync_flattened",
+      "title": "GetReportingIdentitySettings",
+      "description": "Snippet for GetReportingIdentitySettings",
+      "file": "AnalyticsAdminServiceClient.GetReportingIdentitySettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportingIdentitySettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetReportingIdentitySettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetReportingIdentitySettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetReportingIdentitySettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async_flattened",
+      "title": "GetReportingIdentitySettingsAsync",
+      "description": "Snippet for GetReportingIdentitySettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetReportingIdentitySettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportingIdentitySettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetReportingIdentitySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetReportingIdentitySettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetReportingIdentitySettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync_flattened_resourceNames",
+      "title": "GetReportingIdentitySettingsResourceNames",
+      "description": "Snippet for GetReportingIdentitySettings",
+      "file": "AnalyticsAdminServiceClient.GetReportingIdentitySettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportingIdentitySettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetReportingIdentitySettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ReportingIdentitySettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetReportingIdentitySettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetReportingIdentitySettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async_flattened_resourceNames",
+      "title": "GetReportingIdentitySettingsResourceNamesAsync",
+      "description": "Snippet for GetReportingIdentitySettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetReportingIdentitySettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportingIdentitySettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetReportingIdentitySettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ReportingIdentitySettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ReportingIdentitySettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetReportingIdentitySettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetReportingIdentitySettings",
           "service": {
             "shortName": "AnalyticsAdminService",
             "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"

@@ -1362,30 +1362,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
-    public partial class FetchConnectedGa4PropertyRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
-        /// </summary>
-        public PropertyName PropertyAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
-            set => Property = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class FetchConnectedGa4PropertyResponse
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
-        /// </summary>
-        public PropertyName PropertyAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
-            set => Property = value?.ToString() ?? "";
-        }
-    }
-
     public partial class CreateEventCreateRuleRequest
     {
         /// <summary>
@@ -1677,6 +1653,19 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetReportingIdentitySettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::ReportingIdentitySettingsName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::ReportingIdentitySettingsName ReportingIdentitySettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ReportingIdentitySettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

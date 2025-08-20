@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_async]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync]
     using Google.Analytics.Admin.V1Alpha;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOutAsync</summary>
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +29,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SetAutomatedGa4ConfigurationOptOutRequestObjectAsync()
+        public void GetReportingIdentitySettingsRequestObject()
         {
             // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
+            GetReportingIdentitySettingsRequest request = new GetReportingIdentitySettingsRequest
             {
-                Property = "",
-                OptOut = false,
+                ReportingIdentitySettingsName = ReportingIdentitySettingsName.FromProperty("[PROPERTY]"),
             };
             // Make the request
-            SetAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync(request);
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(request);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_async]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync]
 }

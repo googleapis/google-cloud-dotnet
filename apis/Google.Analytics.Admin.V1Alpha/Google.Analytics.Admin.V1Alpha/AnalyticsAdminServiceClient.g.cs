@@ -152,8 +152,6 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateChannelGroupSettings = existing.CreateChannelGroupSettings;
             UpdateChannelGroupSettings = existing.UpdateChannelGroupSettings;
             DeleteChannelGroupSettings = existing.DeleteChannelGroupSettings;
-            SetAutomatedGa4ConfigurationOptOutSettings = existing.SetAutomatedGa4ConfigurationOptOutSettings;
-            FetchAutomatedGa4ConfigurationOptOutSettings = existing.FetchAutomatedGa4ConfigurationOptOutSettings;
             CreateBigQueryLinkSettings = existing.CreateBigQueryLinkSettings;
             GetBigQueryLinkSettings = existing.GetBigQueryLinkSettings;
             ListBigQueryLinksSettings = existing.ListBigQueryLinksSettings;
@@ -161,10 +159,6 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateBigQueryLinkSettings = existing.UpdateBigQueryLinkSettings;
             GetEnhancedMeasurementSettingsSettings = existing.GetEnhancedMeasurementSettingsSettings;
             UpdateEnhancedMeasurementSettingsSettings = existing.UpdateEnhancedMeasurementSettingsSettings;
-            CreateConnectedSiteTagSettings = existing.CreateConnectedSiteTagSettings;
-            DeleteConnectedSiteTagSettings = existing.DeleteConnectedSiteTagSettings;
-            ListConnectedSiteTagsSettings = existing.ListConnectedSiteTagsSettings;
-            FetchConnectedGa4PropertySettings = existing.FetchConnectedGa4PropertySettings;
             GetAdSenseLinkSettings = existing.GetAdSenseLinkSettings;
             CreateAdSenseLinkSettings = existing.CreateAdSenseLinkSettings;
             DeleteAdSenseLinkSettings = existing.DeleteAdSenseLinkSettings;
@@ -207,6 +201,7 @@ namespace Google.Analytics.Admin.V1Alpha
             ListSubpropertySyncConfigsSettings = existing.ListSubpropertySyncConfigsSettings;
             UpdateSubpropertySyncConfigSettings = existing.UpdateSubpropertySyncConfigSettings;
             GetSubpropertySyncConfigSettings = existing.GetSubpropertySyncConfigSettings;
+            GetReportingIdentitySettingsSettings = existing.GetReportingIdentitySettingsSettings;
             OnCopy(existing);
         }
 
@@ -2330,50 +2325,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut</c> and
-        /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings SetAutomatedGa4ConfigurationOptOutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut</c> and
-        /// <c>AnalyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings FetchAutomatedGa4ConfigurationOptOutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.CreateBigQueryLink</c> and
         /// <c>AnalyticsAdminServiceClient.CreateBigQueryLinkAsync</c>.
         /// </summary>
@@ -2507,94 +2458,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateEnhancedMeasurementSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.CreateConnectedSiteTag</c> and
-        /// <c>AnalyticsAdminServiceClient.CreateConnectedSiteTagAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateConnectedSiteTagSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteConnectedSiteTag</c> and
-        /// <c>AnalyticsAdminServiceClient.DeleteConnectedSiteTagAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteConnectedSiteTagSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.ListConnectedSiteTags</c> and
-        /// <c>AnalyticsAdminServiceClient.ListConnectedSiteTagsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListConnectedSiteTagsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.FetchConnectedGa4Property</c> and
-        /// <c>AnalyticsAdminServiceClient.FetchConnectedGa4PropertyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings FetchConnectedGa4PropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3519,6 +3382,28 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSubpropertySyncConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetReportingIdentitySettings</c> and
+        /// <c>AnalyticsAdminServiceClient.GetReportingIdentitySettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetReportingIdentitySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -15267,72 +15152,6 @@ namespace Google.Analytics.Admin.V1Alpha
             DeleteChannelGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual SetAutomatedGa4ConfigurationOptOutResponse SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Sets the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Sets the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest request, st::CancellationToken cancellationToken) =>
-            SetAutomatedGa4ConfigurationOptOutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Fetches the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual FetchAutomatedGa4ConfigurationOptOutResponse FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Fetches the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Fetches the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest request, st::CancellationToken cancellationToken) =>
-            FetchAutomatedGa4ConfigurationOptOutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Creates a BigQueryLink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -16175,132 +15994,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettings enhancedMeasurementSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateEnhancedMeasurementSettingsAsync(enhancedMeasurementSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a connected site tag for a Universal Analytics property. You can
-        /// create a maximum of 20 connected site tags per property.
-        /// Note: This API cannot be used on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual CreateConnectedSiteTagResponse CreateConnectedSiteTag(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a connected site tag for a Universal Analytics property. You can
-        /// create a maximum of 20 connected site tags per property.
-        /// Note: This API cannot be used on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates a connected site tag for a Universal Analytics property. You can
-        /// create a maximum of 20 connected site tags per property.
-        /// Note: This API cannot be used on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest request, st::CancellationToken cancellationToken) =>
-            CreateConnectedSiteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a connected site tag for a Universal Analytics property.
-        /// Note: this has no effect on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a connected site tag for a Universal Analytics property.
-        /// Note: this has no effect on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a connected site tag for a Universal Analytics property.
-        /// Note: this has no effect on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest request, st::CancellationToken cancellationToken) =>
-            DeleteConnectedSiteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists the connected site tags for a Universal Analytics property. A maximum
-        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
-        /// property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListConnectedSiteTagsResponse ListConnectedSiteTags(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists the connected site tags for a Universal Analytics property. A maximum
-        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
-        /// property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Lists the connected site tags for a Universal Analytics property. A maximum
-        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
-        /// property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, st::CancellationToken cancellationToken) =>
-            ListConnectedSiteTagsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Given a specified UA property, looks up the GA4 property connected to it.
-        /// Note: this cannot be used with GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Given a specified UA property, looks up the GA4 property connected to it.
-        /// Note: this cannot be used with GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Given a specified UA property, looks up the GA4 property connected to it.
-        /// Note: this cannot be used with GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest request, st::CancellationToken cancellationToken) =>
-            FetchConnectedGa4PropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Looks up a single AdSenseLink.
@@ -20920,7 +20613,7 @@ namespace Google.Analytics.Admin.V1Alpha
             SubmitUserDeletionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -20929,7 +20622,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -20938,7 +20631,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the property.
@@ -20973,7 +20666,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the property.
@@ -21008,7 +20701,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the property.
@@ -21043,7 +20736,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the property.
@@ -21078,7 +20771,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -21087,7 +20780,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -21096,7 +20789,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -21105,10 +20798,10 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateSubpropertySyncConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="subpropertySyncConfig">
-        /// Required. The SubpropertySyncConfig to update.
+        /// Required. The `SubpropertySyncConfig` to update.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The list of fields to update. Field names must be in snake case
@@ -21126,10 +20819,10 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="subpropertySyncConfig">
-        /// Required. The SubpropertySyncConfig to update.
+        /// Required. The `SubpropertySyncConfig` to update.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The list of fields to update. Field names must be in snake case
@@ -21147,10 +20840,10 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="subpropertySyncConfig">
-        /// Required. The SubpropertySyncConfig to update.
+        /// Required. The `SubpropertySyncConfig` to update.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The list of fields to update. Field names must be in snake case
@@ -21164,7 +20857,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateSubpropertySyncConfigAsync(subpropertySyncConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -21173,7 +20866,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -21182,7 +20875,7 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -21191,7 +20884,7 @@ namespace Google.Analytics.Admin.V1Alpha
             GetSubpropertySyncConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the SubpropertySyncConfig to lookup.
@@ -21208,7 +20901,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the SubpropertySyncConfig to lookup.
@@ -21225,7 +20918,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the SubpropertySyncConfig to lookup.
@@ -21239,7 +20932,7 @@ namespace Google.Analytics.Admin.V1Alpha
             GetSubpropertySyncConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the SubpropertySyncConfig to lookup.
@@ -21256,7 +20949,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the SubpropertySyncConfig to lookup.
@@ -21273,7 +20966,7 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the SubpropertySyncConfig to lookup.
@@ -21285,6 +20978,129 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SubpropertySyncConfig> GetSubpropertySyncConfigAsync(SubpropertySyncConfigName name, st::CancellationToken cancellationToken) =>
             GetSubpropertySyncConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingIdentitySettings GetReportingIdentitySettings(GetReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetReportingIdentitySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/reportingIdentitySettings
+        /// Example: "properties/1000/reportingIdentitySettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingIdentitySettings GetReportingIdentitySettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingIdentitySettings(new GetReportingIdentitySettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/reportingIdentitySettings
+        /// Example: "properties/1000/reportingIdentitySettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingIdentitySettingsAsync(new GetReportingIdentitySettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/reportingIdentitySettings
+        /// Example: "properties/1000/reportingIdentitySettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetReportingIdentitySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/reportingIdentitySettings
+        /// Example: "properties/1000/reportingIdentitySettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingIdentitySettings GetReportingIdentitySettings(ReportingIdentitySettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingIdentitySettings(new GetReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/reportingIdentitySettings
+        /// Example: "properties/1000/reportingIdentitySettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReportingIdentitySettingsAsync(new GetReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/reportingIdentitySettings
+        /// Example: "properties/1000/reportingIdentitySettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName name, st::CancellationToken cancellationToken) =>
+            GetReportingIdentitySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -21501,10 +21317,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteChannelGroupRequest, wkt::Empty> _callDeleteChannelGroup;
 
-        private readonly gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> _callSetAutomatedGa4ConfigurationOptOut;
-
-        private readonly gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> _callFetchAutomatedGa4ConfigurationOptOut;
-
         private readonly gaxgrpc::ApiCall<CreateBigQueryLinkRequest, BigQueryLink> _callCreateBigQueryLink;
 
         private readonly gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> _callGetBigQueryLink;
@@ -21518,14 +21330,6 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> _callGetEnhancedMeasurementSettings;
 
         private readonly gaxgrpc::ApiCall<UpdateEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> _callUpdateEnhancedMeasurementSettings;
-
-        private readonly gaxgrpc::ApiCall<CreateConnectedSiteTagRequest, CreateConnectedSiteTagResponse> _callCreateConnectedSiteTag;
-
-        private readonly gaxgrpc::ApiCall<DeleteConnectedSiteTagRequest, wkt::Empty> _callDeleteConnectedSiteTag;
-
-        private readonly gaxgrpc::ApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse> _callListConnectedSiteTags;
-
-        private readonly gaxgrpc::ApiCall<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse> _callFetchConnectedGa4Property;
 
         private readonly gaxgrpc::ApiCall<GetAdSenseLinkRequest, AdSenseLink> _callGetAdSenseLink;
 
@@ -21610,6 +21414,8 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<UpdateSubpropertySyncConfigRequest, SubpropertySyncConfig> _callUpdateSubpropertySyncConfig;
 
         private readonly gaxgrpc::ApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig> _callGetSubpropertySyncConfig;
+
+        private readonly gaxgrpc::ApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings> _callGetReportingIdentitySettings;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -21949,12 +21755,6 @@ namespace Google.Analytics.Admin.V1Alpha
             _callDeleteChannelGroup = clientHelper.BuildApiCall<DeleteChannelGroupRequest, wkt::Empty>("DeleteChannelGroup", grpcClient.DeleteChannelGroupAsync, grpcClient.DeleteChannelGroup, effectiveSettings.DeleteChannelGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannelGroup);
             Modify_DeleteChannelGroupApiCall(ref _callDeleteChannelGroup);
-            _callSetAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>("SetAutomatedGa4ConfigurationOptOut", grpcClient.SetAutomatedGa4ConfigurationOptOutAsync, grpcClient.SetAutomatedGa4ConfigurationOptOut, effectiveSettings.SetAutomatedGa4ConfigurationOptOutSettings);
-            Modify_ApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
-            Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
-            _callFetchAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse>("FetchAutomatedGa4ConfigurationOptOut", grpcClient.FetchAutomatedGa4ConfigurationOptOutAsync, grpcClient.FetchAutomatedGa4ConfigurationOptOut, effectiveSettings.FetchAutomatedGa4ConfigurationOptOutSettings);
-            Modify_ApiCall(ref _callFetchAutomatedGa4ConfigurationOptOut);
-            Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref _callFetchAutomatedGa4ConfigurationOptOut);
             _callCreateBigQueryLink = clientHelper.BuildApiCall<CreateBigQueryLinkRequest, BigQueryLink>("CreateBigQueryLink", grpcClient.CreateBigQueryLinkAsync, grpcClient.CreateBigQueryLink, effectiveSettings.CreateBigQueryLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBigQueryLink);
             Modify_CreateBigQueryLinkApiCall(ref _callCreateBigQueryLink);
@@ -21976,18 +21776,6 @@ namespace Google.Analytics.Admin.V1Alpha
             _callUpdateEnhancedMeasurementSettings = clientHelper.BuildApiCall<UpdateEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings>("UpdateEnhancedMeasurementSettings", grpcClient.UpdateEnhancedMeasurementSettingsAsync, grpcClient.UpdateEnhancedMeasurementSettings, effectiveSettings.UpdateEnhancedMeasurementSettingsSettings).WithGoogleRequestParam("enhanced_measurement_settings.name", request => request.EnhancedMeasurementSettings?.Name);
             Modify_ApiCall(ref _callUpdateEnhancedMeasurementSettings);
             Modify_UpdateEnhancedMeasurementSettingsApiCall(ref _callUpdateEnhancedMeasurementSettings);
-            _callCreateConnectedSiteTag = clientHelper.BuildApiCall<CreateConnectedSiteTagRequest, CreateConnectedSiteTagResponse>("CreateConnectedSiteTag", grpcClient.CreateConnectedSiteTagAsync, grpcClient.CreateConnectedSiteTag, effectiveSettings.CreateConnectedSiteTagSettings);
-            Modify_ApiCall(ref _callCreateConnectedSiteTag);
-            Modify_CreateConnectedSiteTagApiCall(ref _callCreateConnectedSiteTag);
-            _callDeleteConnectedSiteTag = clientHelper.BuildApiCall<DeleteConnectedSiteTagRequest, wkt::Empty>("DeleteConnectedSiteTag", grpcClient.DeleteConnectedSiteTagAsync, grpcClient.DeleteConnectedSiteTag, effectiveSettings.DeleteConnectedSiteTagSettings);
-            Modify_ApiCall(ref _callDeleteConnectedSiteTag);
-            Modify_DeleteConnectedSiteTagApiCall(ref _callDeleteConnectedSiteTag);
-            _callListConnectedSiteTags = clientHelper.BuildApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>("ListConnectedSiteTags", grpcClient.ListConnectedSiteTagsAsync, grpcClient.ListConnectedSiteTags, effectiveSettings.ListConnectedSiteTagsSettings);
-            Modify_ApiCall(ref _callListConnectedSiteTags);
-            Modify_ListConnectedSiteTagsApiCall(ref _callListConnectedSiteTags);
-            _callFetchConnectedGa4Property = clientHelper.BuildApiCall<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>("FetchConnectedGa4Property", grpcClient.FetchConnectedGa4PropertyAsync, grpcClient.FetchConnectedGa4Property, effectiveSettings.FetchConnectedGa4PropertySettings);
-            Modify_ApiCall(ref _callFetchConnectedGa4Property);
-            Modify_FetchConnectedGa4PropertyApiCall(ref _callFetchConnectedGa4Property);
             _callGetAdSenseLink = clientHelper.BuildApiCall<GetAdSenseLinkRequest, AdSenseLink>("GetAdSenseLink", grpcClient.GetAdSenseLinkAsync, grpcClient.GetAdSenseLink, effectiveSettings.GetAdSenseLinkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAdSenseLink);
             Modify_GetAdSenseLinkApiCall(ref _callGetAdSenseLink);
@@ -22114,6 +21902,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetSubpropertySyncConfig = clientHelper.BuildApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig>("GetSubpropertySyncConfig", grpcClient.GetSubpropertySyncConfigAsync, grpcClient.GetSubpropertySyncConfig, effectiveSettings.GetSubpropertySyncConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSubpropertySyncConfig);
             Modify_GetSubpropertySyncConfigApiCall(ref _callGetSubpropertySyncConfig);
+            _callGetReportingIdentitySettings = clientHelper.BuildApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings>("GetReportingIdentitySettings", grpcClient.GetReportingIdentitySettingsAsync, grpcClient.GetReportingIdentitySettings, effectiveSettings.GetReportingIdentitySettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetReportingIdentitySettings);
+            Modify_GetReportingIdentitySettingsApiCall(ref _callGetReportingIdentitySettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -22327,10 +22118,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteChannelGroupApiCall(ref gaxgrpc::ApiCall<DeleteChannelGroupRequest, wkt::Empty> call);
 
-        partial void Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> call);
-
-        partial void Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> call);
-
         partial void Modify_CreateBigQueryLinkApiCall(ref gaxgrpc::ApiCall<CreateBigQueryLinkRequest, BigQueryLink> call);
 
         partial void Modify_GetBigQueryLinkApiCall(ref gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> call);
@@ -22344,14 +22131,6 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_GetEnhancedMeasurementSettingsApiCall(ref gaxgrpc::ApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> call);
 
         partial void Modify_UpdateEnhancedMeasurementSettingsApiCall(ref gaxgrpc::ApiCall<UpdateEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> call);
-
-        partial void Modify_CreateConnectedSiteTagApiCall(ref gaxgrpc::ApiCall<CreateConnectedSiteTagRequest, CreateConnectedSiteTagResponse> call);
-
-        partial void Modify_DeleteConnectedSiteTagApiCall(ref gaxgrpc::ApiCall<DeleteConnectedSiteTagRequest, wkt::Empty> call);
-
-        partial void Modify_ListConnectedSiteTagsApiCall(ref gaxgrpc::ApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse> call);
-
-        partial void Modify_FetchConnectedGa4PropertyApiCall(ref gaxgrpc::ApiCall<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse> call);
 
         partial void Modify_GetAdSenseLinkApiCall(ref gaxgrpc::ApiCall<GetAdSenseLinkRequest, AdSenseLink> call);
 
@@ -22436,6 +22215,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateSubpropertySyncConfigApiCall(ref gaxgrpc::ApiCall<UpdateSubpropertySyncConfigRequest, SubpropertySyncConfig> call);
 
         partial void Modify_GetSubpropertySyncConfigApiCall(ref gaxgrpc::ApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig> call);
+
+        partial void Modify_GetReportingIdentitySettingsApiCall(ref gaxgrpc::ApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -22650,10 +22431,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteChannelGroupRequest(ref DeleteChannelGroupRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref SetAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref FetchAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_CreateBigQueryLinkRequest(ref CreateBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBigQueryLinkRequest(ref GetBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
@@ -22667,14 +22444,6 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_GetEnhancedMeasurementSettingsRequest(ref GetEnhancedMeasurementSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateEnhancedMeasurementSettingsRequest(ref UpdateEnhancedMeasurementSettingsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_CreateConnectedSiteTagRequest(ref CreateConnectedSiteTagRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteConnectedSiteTagRequest(ref DeleteConnectedSiteTagRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ListConnectedSiteTagsRequest(ref ListConnectedSiteTagsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_FetchConnectedGa4PropertyRequest(ref FetchConnectedGa4PropertyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAdSenseLinkRequest(ref GetAdSenseLinkRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -22759,6 +22528,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateSubpropertySyncConfigRequest(ref UpdateSubpropertySyncConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSubpropertySyncConfigRequest(ref GetSubpropertySyncConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetReportingIdentitySettingsRequest(ref GetReportingIdentitySettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -25455,62 +25226,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Sets the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override SetAutomatedGa4ConfigurationOptOutResponse SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
-            return _callSetAutomatedGa4ConfigurationOptOut.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Sets the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<SetAutomatedGa4ConfigurationOptOutResponse> SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
-            return _callSetAutomatedGa4ConfigurationOptOut.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Fetches the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override FetchAutomatedGa4ConfigurationOptOutResponse FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
-            return _callFetchAutomatedGa4ConfigurationOptOut.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Fetches the opt out status for the automated GA4 setup process for a UA
-        /// property.
-        /// Note: this has no effect on GA4 property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<FetchAutomatedGa4ConfigurationOptOutResponse> FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref request, ref callSettings);
-            return _callFetchAutomatedGa4ConfigurationOptOut.Async(request, callSettings);
-        }
-
-        /// <summary>
         /// Creates a BigQueryLink.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -25684,114 +25399,6 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_UpdateEnhancedMeasurementSettingsRequest(ref request, ref callSettings);
             return _callUpdateEnhancedMeasurementSettings.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a connected site tag for a Universal Analytics property. You can
-        /// create a maximum of 20 connected site tags per property.
-        /// Note: This API cannot be used on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override CreateConnectedSiteTagResponse CreateConnectedSiteTag(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateConnectedSiteTagRequest(ref request, ref callSettings);
-            return _callCreateConnectedSiteTag.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates a connected site tag for a Universal Analytics property. You can
-        /// create a maximum of 20 connected site tags per property.
-        /// Note: This API cannot be used on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateConnectedSiteTagRequest(ref request, ref callSettings);
-            return _callCreateConnectedSiteTag.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a connected site tag for a Universal Analytics property.
-        /// Note: this has no effect on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteConnectedSiteTagRequest(ref request, ref callSettings);
-            _callDeleteConnectedSiteTag.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a connected site tag for a Universal Analytics property.
-        /// Note: this has no effect on GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteConnectedSiteTagRequest(ref request, ref callSettings);
-            return _callDeleteConnectedSiteTag.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists the connected site tags for a Universal Analytics property. A maximum
-        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
-        /// property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ListConnectedSiteTagsResponse ListConnectedSiteTags(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListConnectedSiteTagsRequest(ref request, ref callSettings);
-            return _callListConnectedSiteTags.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists the connected site tags for a Universal Analytics property. A maximum
-        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
-        /// property.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListConnectedSiteTagsRequest(ref request, ref callSettings);
-            return _callListConnectedSiteTags.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Given a specified UA property, looks up the GA4 property connected to it.
-        /// Note: this cannot be used with GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_FetchConnectedGa4PropertyRequest(ref request, ref callSettings);
-            return _callFetchConnectedGa4Property.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Given a specified UA property, looks up the GA4 property connected to it.
-        /// Note: this cannot be used with GA4 properties.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_FetchConnectedGa4PropertyRequest(ref request, ref callSettings);
-            return _callFetchConnectedGa4Property.Async(request, callSettings);
         }
 
         /// <summary>
@@ -26749,7 +26356,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26761,7 +26368,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// List all Subproperty Sync Configs on a property.
+        /// List all `SubpropertySyncConfig` resources for a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26773,7 +26380,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26785,7 +26392,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Updates a Subproperty Sync Config.
+        /// Updates a `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26797,7 +26404,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26809,7 +26416,7 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Lookup for a single Subproperty Sync Config.
+        /// Lookup for a single `SubpropertySyncConfig`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -26818,6 +26425,30 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_GetSubpropertySyncConfigRequest(ref request, ref callSettings);
             return _callGetSubpropertySyncConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReportingIdentitySettings GetReportingIdentitySettings(GetReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReportingIdentitySettingsRequest(ref request, ref callSettings);
+            return _callGetReportingIdentitySettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the singleton data retention settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReportingIdentitySettings> GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReportingIdentitySettingsRequest(ref request, ref callSettings);
+            return _callGetReportingIdentitySettings.Async(request, callSettings);
         }
     }
 

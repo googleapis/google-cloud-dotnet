@@ -106,12 +106,6 @@
                 "CreateChannelGroupAsync"
               ]
             },
-            "CreateConnectedSiteTag": {
-              "methods": [
-                "CreateConnectedSiteTag",
-                "CreateConnectedSiteTagAsync"
-              ]
-            },
             "CreateConversionEvent": {
               "methods": [
                 "CreateConversionEvent",
@@ -268,12 +262,6 @@
                 "DeleteChannelGroupAsync"
               ]
             },
-            "DeleteConnectedSiteTag": {
-              "methods": [
-                "DeleteConnectedSiteTag",
-                "DeleteConnectedSiteTagAsync"
-              ]
-            },
             "DeleteConversionEvent": {
               "methods": [
                 "DeleteConversionEvent",
@@ -374,18 +362,6 @@
               "methods": [
                 "DeleteSubpropertyEventFilter",
                 "DeleteSubpropertyEventFilterAsync"
-              ]
-            },
-            "FetchAutomatedGa4ConfigurationOptOut": {
-              "methods": [
-                "FetchAutomatedGa4ConfigurationOptOut",
-                "FetchAutomatedGa4ConfigurationOptOutAsync"
-              ]
-            },
-            "FetchConnectedGa4Property": {
-              "methods": [
-                "FetchConnectedGa4Property",
-                "FetchConnectedGa4PropertyAsync"
               ]
             },
             "GetAccessBinding": {
@@ -550,6 +526,12 @@
                 "GetReportingDataAnnotationAsync"
               ]
             },
+            "GetReportingIdentitySettings": {
+              "methods": [
+                "GetReportingIdentitySettings",
+                "GetReportingIdentitySettingsAsync"
+              ]
+            },
             "GetRollupPropertySourceLink": {
               "methods": [
                 "GetRollupPropertySourceLink",
@@ -626,12 +608,6 @@
               "methods": [
                 "ListChannelGroups",
                 "ListChannelGroupsAsync"
-              ]
-            },
-            "ListConnectedSiteTags": {
-              "methods": [
-                "ListConnectedSiteTags",
-                "ListConnectedSiteTagsAsync"
               ]
             },
             "ListConversionEvents": {
@@ -782,12 +758,6 @@
               "methods": [
                 "SearchChangeHistoryEvents",
                 "SearchChangeHistoryEventsAsync"
-              ]
-            },
-            "SetAutomatedGa4ConfigurationOptOut": {
-              "methods": [
-                "SetAutomatedGa4ConfigurationOptOut",
-                "SetAutomatedGa4ConfigurationOptOutAsync"
               ]
             },
             "SubmitUserDeletion": {

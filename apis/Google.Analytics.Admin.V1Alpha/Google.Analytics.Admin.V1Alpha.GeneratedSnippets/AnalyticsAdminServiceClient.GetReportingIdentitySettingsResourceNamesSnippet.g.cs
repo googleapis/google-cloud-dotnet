@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchAutomatedGa4ConfigurationOptOut_async]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync_flattened_resourceNames]
     using Google.Analytics.Admin.V1Alpha;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOutAsync</summary>
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,15 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task FetchAutomatedGa4ConfigurationOptOutRequestObjectAsync()
+        public void GetReportingIdentitySettingsResourceNames()
         {
             // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
+            ReportingIdentitySettingsName name = ReportingIdentitySettingsName.FromProperty("[PROPERTY]");
             // Make the request
-            FetchAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync(request);
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(name);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchAutomatedGa4ConfigurationOptOut_async]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_sync_flattened_resourceNames]
 }

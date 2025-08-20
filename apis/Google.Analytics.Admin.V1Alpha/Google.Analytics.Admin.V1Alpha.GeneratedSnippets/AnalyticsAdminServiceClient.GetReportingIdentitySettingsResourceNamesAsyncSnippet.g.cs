@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteConnectedSiteTag_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async_flattened_resourceNames]
     using Google.Analytics.Admin.V1Alpha;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for DeleteConnectedSiteTag</summary>
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeleteConnectedSiteTagRequestObject()
+        public async Task GetReportingIdentitySettingsResourceNamesAsync()
         {
             // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
-            {
-                Property = "",
-                TagId = "",
-            };
+            ReportingIdentitySettingsName name = ReportingIdentitySettingsName.FromProperty("[PROPERTY]");
             // Make the request
-            analyticsAdminServiceClient.DeleteConnectedSiteTag(request);
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteConnectedSiteTag_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetReportingIdentitySettings_async_flattened_resourceNames]
 }

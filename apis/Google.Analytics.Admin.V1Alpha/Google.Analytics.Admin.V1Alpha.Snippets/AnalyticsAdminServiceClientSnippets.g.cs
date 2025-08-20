@@ -11489,68 +11489,6 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
-        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOut</summary>
-        public void SetAutomatedGa4ConfigurationOptOutRequestObject()
-        {
-            // Snippet: SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
-            {
-                Property = "",
-                OptOut = false,
-            };
-            // Make the request
-            SetAutomatedGa4ConfigurationOptOutResponse response = analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOutAsync</summary>
-        public async Task SetAutomatedGa4ConfigurationOptOutRequestObjectAsync()
-        {
-            // Snippet: SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Additional: SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
-            {
-                Property = "",
-                OptOut = false,
-            };
-            // Make the request
-            SetAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOut</summary>
-        public void FetchAutomatedGa4ConfigurationOptOutRequestObject()
-        {
-            // Snippet: FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
-            // Make the request
-            FetchAutomatedGa4ConfigurationOptOutResponse response = analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOutAsync</summary>
-        public async Task FetchAutomatedGa4ConfigurationOptOutRequestObjectAsync()
-        {
-            // Snippet: FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Additional: FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
-            // Make the request
-            FetchAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateBigQueryLink</summary>
         public void CreateBigQueryLinkRequestObject()
         {
@@ -12306,136 +12244,6 @@ namespace GoogleCSharpSnippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             EnhancedMeasurementSettings response = await analyticsAdminServiceClient.UpdateEnhancedMeasurementSettingsAsync(enhancedMeasurementSettings, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateConnectedSiteTag</summary>
-        public void CreateConnectedSiteTagRequestObject()
-        {
-            // Snippet: CreateConnectedSiteTag(CreateConnectedSiteTagRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
-            {
-                Property = "",
-                ConnectedSiteTag = new ConnectedSiteTag(),
-            };
-            // Make the request
-            CreateConnectedSiteTagResponse response = analyticsAdminServiceClient.CreateConnectedSiteTag(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateConnectedSiteTagAsync</summary>
-        public async Task CreateConnectedSiteTagRequestObjectAsync()
-        {
-            // Snippet: CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest, CallSettings)
-            // Additional: CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
-            {
-                Property = "",
-                ConnectedSiteTag = new ConnectedSiteTag(),
-            };
-            // Make the request
-            CreateConnectedSiteTagResponse response = await analyticsAdminServiceClient.CreateConnectedSiteTagAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteConnectedSiteTag</summary>
-        public void DeleteConnectedSiteTagRequestObject()
-        {
-            // Snippet: DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
-            {
-                Property = "",
-                TagId = "",
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteConnectedSiteTag(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteConnectedSiteTagAsync</summary>
-        public async Task DeleteConnectedSiteTagRequestObjectAsync()
-        {
-            // Snippet: DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest, CallSettings)
-            // Additional: DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
-            {
-                Property = "",
-                TagId = "",
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteConnectedSiteTagAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListConnectedSiteTags</summary>
-        public void ListConnectedSiteTagsRequestObject()
-        {
-            // Snippet: ListConnectedSiteTags(ListConnectedSiteTagsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
-            // Make the request
-            ListConnectedSiteTagsResponse response = analyticsAdminServiceClient.ListConnectedSiteTags(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListConnectedSiteTagsAsync</summary>
-        public async Task ListConnectedSiteTagsRequestObjectAsync()
-        {
-            // Snippet: ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest, CallSettings)
-            // Additional: ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
-            // Make the request
-            ListConnectedSiteTagsResponse response = await analyticsAdminServiceClient.ListConnectedSiteTagsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchConnectedGa4Property</summary>
-        public void FetchConnectedGa4PropertyRequestObject()
-        {
-            // Snippet: FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
-            {
-                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            FetchConnectedGa4PropertyResponse response = analyticsAdminServiceClient.FetchConnectedGa4Property(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchConnectedGa4PropertyAsync</summary>
-        public async Task FetchConnectedGa4PropertyRequestObjectAsync()
-        {
-            // Snippet: FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest, CallSettings)
-            // Additional: FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
-            {
-                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            FetchConnectedGa4PropertyResponse response = await analyticsAdminServiceClient.FetchConnectedGa4PropertyAsync(request);
             // End snippet
         }
 
@@ -17339,6 +17147,93 @@ namespace GoogleCSharpSnippets
             SubpropertySyncConfigName name = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]");
             // Make the request
             SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
+        public void GetReportingIdentitySettingsRequestObject()
+        {
+            // Snippet: GetReportingIdentitySettings(GetReportingIdentitySettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetReportingIdentitySettingsRequest request = new GetReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettingsName = ReportingIdentitySettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
+        public async Task GetReportingIdentitySettingsRequestObjectAsync()
+        {
+            // Snippet: GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest, CallSettings)
+            // Additional: GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetReportingIdentitySettingsRequest request = new GetReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettingsName = ReportingIdentitySettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
+        public void GetReportingIdentitySettings()
+        {
+            // Snippet: GetReportingIdentitySettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingIdentitySettings";
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
+        public async Task GetReportingIdentitySettingsAsync()
+        {
+            // Snippet: GetReportingIdentitySettingsAsync(string, CallSettings)
+            // Additional: GetReportingIdentitySettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingIdentitySettings";
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
+        public void GetReportingIdentitySettingsResourceNames()
+        {
+            // Snippet: GetReportingIdentitySettings(ReportingIdentitySettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportingIdentitySettingsName name = ReportingIdentitySettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
+        public async Task GetReportingIdentitySettingsResourceNamesAsync()
+        {
+            // Snippet: GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName, CallSettings)
+            // Additional: GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportingIdentitySettingsName name = ReportingIdentitySettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
             // End snippet
         }
     }
