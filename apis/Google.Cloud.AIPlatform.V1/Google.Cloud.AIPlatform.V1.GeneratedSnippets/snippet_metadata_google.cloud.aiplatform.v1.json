@@ -11,6 +11,103 @@
   },
   "snippets": [
     {
+      "regionTag": "aiplatform_v1_generated_DataFoundryService_GenerateSyntheticData_sync",
+      "title": "GenerateSyntheticDataRequestObject",
+      "description": "Snippet for GenerateSyntheticData",
+      "file": "DataFoundryServiceClient.GenerateSyntheticDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSyntheticData",
+        "fullName": "Google.Cloud.AIPlatform.V1.DataFoundryServiceClient.GenerateSyntheticData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GenerateSyntheticDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.GenerateSyntheticDataResponse",
+        "client": {
+          "shortName": "DataFoundryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DataFoundryServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSyntheticData",
+          "fullName": "google.cloud.aiplatform.v1.DataFoundryService.GenerateSyntheticData",
+          "service": {
+            "shortName": "DataFoundryService",
+            "fullName": "google.cloud.aiplatform.v1.DataFoundryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DataFoundryService_GenerateSyntheticData_async",
+      "title": "GenerateSyntheticDataRequestObjectAsync",
+      "description": "Snippet for GenerateSyntheticDataAsync",
+      "file": "DataFoundryServiceClient.GenerateSyntheticDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSyntheticDataAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DataFoundryServiceClient.GenerateSyntheticDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GenerateSyntheticDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.GenerateSyntheticDataResponse>",
+        "client": {
+          "shortName": "DataFoundryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DataFoundryServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSyntheticData",
+          "fullName": "google.cloud.aiplatform.v1.DataFoundryService.GenerateSyntheticData",
+          "service": {
+            "shortName": "DataFoundryService",
+            "fullName": "google.cloud.aiplatform.v1.DataFoundryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 56,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DatasetService_CreateDataset_sync",
       "title": "CreateDatasetRequestObject",
       "description": "Snippet for CreateDataset",

@@ -98,6 +98,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return ContentReflection.Descriptor;
             yield return ContextReflection.Descriptor;
             yield return CustomJobReflection.Descriptor;
+            yield return DataFoundryServiceReflection.Descriptor;
             yield return DataItemReflection.Descriptor;
             yield return DataLabelingJobReflection.Descriptor;
             yield return DatasetReflection.Descriptor;
