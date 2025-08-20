@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.45.0, released 2025-08-20
+
+### New features
+
+- Add data foundry service synthetic data generation API for v1
+
 ## Version 3.44.0, released 2025-08-14
 
 ### Bug fixes
