@@ -889,9 +889,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// Required. The resource being created.
         /// </param>
         /// <param name="dataAgentId">
-        /// Optional. Id of the requesting object.
-        /// Must be unique within the parent.
+        /// Optional. Id of the requesting object. Must be unique within the parent.
         /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -913,9 +913,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// Required. The resource being created.
         /// </param>
         /// <param name="dataAgentId">
-        /// Optional. Id of the requesting object.
-        /// Must be unique within the parent.
+        /// Optional. Id of the requesting object. Must be unique within the parent.
         /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -937,9 +937,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// Required. The resource being created.
         /// </param>
         /// <param name="dataAgentId">
-        /// Optional. Id of the requesting object.
-        /// Must be unique within the parent.
+        /// Optional. Id of the requesting object. Must be unique within the parent.
         /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -956,9 +956,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// Required. The resource being created.
         /// </param>
         /// <param name="dataAgentId">
-        /// Optional. Id of the requesting object.
-        /// Must be unique within the parent.
+        /// Optional. Id of the requesting object. Must be unique within the parent.
         /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -980,9 +980,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// Required. The resource being created.
         /// </param>
         /// <param name="dataAgentId">
-        /// Optional. Id of the requesting object.
-        /// Must be unique within the parent.
+        /// Optional. Id of the requesting object. Must be unique within the parent.
         /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1004,9 +1004,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// Required. The resource being created.
         /// </param>
         /// <param name="dataAgentId">
-        /// Optional. Id of the requesting object.
-        /// Must be unique within the parent.
+        /// Optional. Id of the requesting object. Must be unique within the parent.
         /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

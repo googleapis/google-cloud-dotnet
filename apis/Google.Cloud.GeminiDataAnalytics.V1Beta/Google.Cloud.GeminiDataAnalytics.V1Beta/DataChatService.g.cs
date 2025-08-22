@@ -1120,7 +1120,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public const int ProjectFieldNumber = 1;
     private string project_ = "";
     /// <summary>
-    /// Optional. The GCP project to be used for quota and billing.
+    /// Optional. The Google Cloud project to be used for quota and billing.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1540,11 +1540,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public const int CredentialsFieldNumber = 2;
     private global::Google.Cloud.GeminiDataAnalytics.V1Beta.Credentials credentials_;
     /// <summary>
-    /// Optional. The credentials to use when calling the looker datasource
+    /// Optional. The credentials to use when calling the Looker data source.
     ///
-    /// Currently supports both oauth token and api keys based credentials, as
+    /// Currently supports both OAuth token and API key-based credentials, as
     /// described in
-    /// https://cloud.google.com/looker/docs/api-auth#authentication_with_an_sdk
+    /// [Authentication with an
+    /// SDK](https://cloud.google.com/looker/docs/api-auth#authentication_with_an_sdk).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2038,7 +2039,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   }
 
   /// <summary>
-  /// A message from an internaction between the user and the system.
+  /// A message from an interaction between the user and the system.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Message : pb::IMessage<Message>
@@ -4569,8 +4570,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   }
 
   /// <summary>
-  /// A query for retrieving data from a Looker explore. See
-  /// https://cloud.google.com/looker/docs/reference/looker-api/latest/methods/Query/run_inline_query
+  /// A query for retrieving data from a Looker Explore. See
+  /// [Run Inline
+  /// Query](https://cloud.google.com/looker/docs/reference/looker-api/latest/methods/Query/run_inline_query).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookerQuery : pb::IMessage<LookerQuery>
@@ -4641,7 +4643,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public const int ExploreFieldNumber = 2;
     private string explore_ = "";
     /// <summary>
-    /// Required. The LookML explore used to generate the query.
+    /// Required. The LookML Explore used to generate the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4658,7 +4660,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> fields_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The fields to retrieve from the explore.
+    /// Optional. The fields to retrieve from the Explore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4672,7 +4674,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerQuery.Types.Filter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerQuery.Types.Filter> filters_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerQuery.Types.Filter>();
     /// <summary>
-    /// Optional. The filters to apply to the explore.
+    /// Optional. The filters to apply to the Explore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4686,7 +4688,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> sorts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The sorts to apply to the explore.
+    /// Optional. The sorts to apply to the Explore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5797,9 +5799,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// Required. The project the job belongs to.
+    /// Required. The project that the job belongs to.
     ///
-    /// See https://cloud.google.com/bigquery/docs/reference/rest/v2/JobReference
+    /// See
+    /// [JobReference](https://cloud.google.com/bigquery/docs/reference/rest/v2/JobReference).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5816,7 +5819,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>
     /// Required. The ID of the job.
     ///
-    /// See https://cloud.google.com/bigquery/docs/reference/rest/v2/JobReference
+    /// See
+    /// [JobReference](https://cloud.google.com/bigquery/docs/reference/rest/v2/JobReference).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5833,7 +5837,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>
     /// Optional. The location of the job.
     ///
-    /// See https://cloud.google.com/bigquery/docs/reference/rest/v2/JobReference
+    /// See
+    /// [JobReference](https://cloud.google.com/bigquery/docs/reference/rest/v2/JobReference).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5851,7 +5856,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// Optional. A reference to the destination table of the job's query results.
     ///
     /// See
-    /// https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#jobconfigurationquery
+    /// [JobConfigurationQuery](https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#jobconfigurationquery).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5869,7 +5874,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// Optional. The schema of the job's query results.
     ///
     /// See
-    /// https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#jobstatistics2
+    /// [JobStatistics2](https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#jobstatistics2).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

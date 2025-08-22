@@ -142,7 +142,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optional. Identifier. The unique resource name of a Agent.
+    /// Optional. Identifier. The unique resource name of a DataAgent.
     /// Format:
     /// `projects/{project}/locations/{location}/dataAgents/{data_agent_id}`
     /// `{data_agent}` is the resource id and should be 63 characters or less and
@@ -150,6 +150,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// https://google.aip.dev/122#resource-id-segments
     ///
     /// Example: `projects/1234567890/locations/us-central1/dataAgents/my-agent`.
+    ///
+    /// It is recommended to skip setting this field during agent creation as it
+    /// will be inferred automatically and overwritten with the
+    /// {parent}/dataAgents/{data_agent_id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -201,10 +205,11 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Labels to help users filter related agents.
-    /// E.g. "sales", "business", "etl", etc.
-    /// Note labels are only used for filtering and not for policies.
-    /// See https://cloud.google.com/resource-manager/docs/labels-overview for more
-    /// details on label usage.
+    /// For example, "sales", "business", "etl", and so on.
+    /// Note labels are used only for filtering and not for policies.
+    /// See the [labels
+    /// documentation](https://cloud.google.com/resource-manager/docs/labels-overview)
+    /// for more details on label usage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
