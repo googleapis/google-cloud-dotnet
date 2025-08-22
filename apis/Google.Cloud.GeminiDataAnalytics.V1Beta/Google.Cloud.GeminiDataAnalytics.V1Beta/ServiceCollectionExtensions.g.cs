@@ -30,42 +30,6 @@ namespace Microsoft.Extensions.DependencyInjection
     public static partial class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Adds a singleton <see cref="gcgv::ContextRetrievalServiceClient"/> to <paramref name="services"/>.
-        /// </summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddContextRetrievalServiceClient(this IServiceCollection services, sys::Action<gcgv::ContextRetrievalServiceClientBuilder> action = null) =>
-            services.AddSingleton(provider =>
-            {
-                gcgv::ContextRetrievalServiceClientBuilder builder = new gcgv::ContextRetrievalServiceClientBuilder();
-                action?.Invoke(builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>
-        /// Adds a singleton <see cref="gcgv::ContextRetrievalServiceClient"/> to <paramref name="services"/>.
-        /// </summary>
-        /// <param name="services">
-        /// The service collection to add the client to. The services are used to configure the client when requested.
-        /// </param>
-        /// <param name="action">
-        /// An optional action to invoke on the client builder. This is invoked before services from
-        /// <paramref name="services"/> are used.
-        /// </param>
-        public static IServiceCollection AddContextRetrievalServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::ContextRetrievalServiceClientBuilder> action) =>
-            services.AddSingleton(provider =>
-            {
-                gcgv::ContextRetrievalServiceClientBuilder builder = new gcgv::ContextRetrievalServiceClientBuilder();
-                action?.Invoke(provider, builder);
-                return builder.Build(provider);
-            });
-
-        /// <summary>
         /// Adds a singleton <see cref="gcgv::DataAgentServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

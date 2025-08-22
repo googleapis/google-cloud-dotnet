@@ -202,7 +202,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
     /// <summary>DataChatService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Service to ask a natural language question on top of BigQuery
-    /// and LookerStudio datasources to get back streamed responses of various kinds
+    /// and Looker Studio datasources to get back streamed responses of various kinds
     /// to help provide a rich conversational answer.
     /// </remarks>
     public abstract partial class DataChatServiceClient
@@ -294,7 +294,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         }
 
         /// <summary>
-        /// Answers a data question by generating a stream of [Message]s.
+        /// Answers a data question by generating a stream of
+        /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -345,6 +346,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="conversationId">
         /// Optional. The conversation id of the conversation to create.
+        /// Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -369,6 +373,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="conversationId">
         /// Optional. The conversation id of the conversation to create.
+        /// Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -393,6 +400,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="conversationId">
         /// Optional. The conversation id of the conversation to create.
+        /// Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -412,6 +422,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="conversationId">
         /// Optional. The conversation id of the conversation to create.
+        /// Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -436,6 +449,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="conversationId">
         /// Optional. The conversation id of the conversation to create.
+        /// Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -460,6 +476,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </param>
         /// <param name="conversationId">
         /// Optional. The conversation id of the conversation to create.
+        /// Must be unique within the parent.
+        /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// If not provided, the server will auto-generate a value for the id.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -467,7 +486,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             CreateConversationAsync(parent, conversation, conversationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -476,7 +495,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -485,7 +504,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -494,7 +513,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             GetConversationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -510,7 +529,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -526,7 +545,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -539,7 +558,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             GetConversationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -555,7 +574,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -571,7 +590,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -899,7 +918,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
     /// <summary>DataChatService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Service to ask a natural language question on top of BigQuery
-    /// and LookerStudio datasources to get back streamed responses of various kinds
+    /// and Looker Studio datasources to get back streamed responses of various kinds
     /// to help provide a rich conversational answer.
     /// </remarks>
     public sealed partial class DataChatServiceClientImpl : DataChatServiceClient
@@ -990,7 +1009,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         }
 
         /// <summary>
-        /// Answers a data question by generating a stream of [Message]s.
+        /// Answers a data question by generating a stream of
+        /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1028,7 +1048,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1040,7 +1060,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single conversation using conversation id and parent.
+        /// Gets details of a single conversation by using conversation id and parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

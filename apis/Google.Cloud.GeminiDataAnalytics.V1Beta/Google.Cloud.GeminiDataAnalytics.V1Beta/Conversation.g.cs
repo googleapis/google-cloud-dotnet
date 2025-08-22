@@ -131,8 +131,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optional. Identifier. The unique resource name of a conversation.
-    /// It's not expected to be set when creating a conversation.
+    /// Optional. Identifier. The unique resource name of a conversation. Format:
+    /// `projects/{project}/locations/{location}/conversations/{conversation_id}`
+    /// `{conversation_id}` is the resource id and should be 63 characters or less
+    /// and must match the format described in
+    /// https://google.aip.dev/122#resource-id-segments
+    ///
+    /// Example:
+    /// `projects/1234567890/locations/us-central1/conversations/my-conversation`.
+    ///
+    /// It is recommended to skip setting this field during conversation creation
+    /// as it will be inferred automatically and overwritten with the
+    /// {parent}/conversations/{conversation_id}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -505,6 +515,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private string conversationId_ = "";
     /// <summary>
     /// Optional. The conversation id of the conversation to create.
+    /// Must be unique within the parent.
+    /// The allowed format is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+    /// If not provided, the server will auto-generate a value for the id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

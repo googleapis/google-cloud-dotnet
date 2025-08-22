@@ -25,7 +25,7 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   /// <summary>
   /// Service to ask a natural language question on top of BigQuery
-  /// and LookerStudio datasources to get back streamed responses of various kinds
+  /// and Looker Studio datasources to get back streamed responses of various kinds
   /// to help provide a rich conversational answer.
   /// </summary>
   public static partial class DataChatService
@@ -135,7 +135,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public abstract partial class DataChatServiceBase
     {
       /// <summary>
-      /// Answers a data question by generating a stream of [Message]s.
+      /// Answers a data question by generating a stream of
+      /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -161,7 +162,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
 
       /// <summary>
-      /// Gets details of a single conversation using conversation id and parent.
+      /// Gets details of a single conversation by using conversation id and parent.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -226,7 +227,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
 
       /// <summary>
-      /// Answers a data question by generating a stream of [Message]s.
+      /// Answers a data question by generating a stream of
+      /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -239,7 +241,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return Chat(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Answers a data question by generating a stream of [Message]s.
+      /// Answers a data question by generating a stream of
+      /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -302,7 +305,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversation, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single conversation using conversation id and parent.
+      /// Gets details of a single conversation by using conversation id and parent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -315,7 +318,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return GetConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single conversation using conversation id and parent.
+      /// Gets details of a single conversation by using conversation id and parent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -326,7 +329,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetConversation, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single conversation using conversation id and parent.
+      /// Gets details of a single conversation by using conversation id and parent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -339,7 +342,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         return GetConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single conversation using conversation id and parent.
+      /// Gets details of a single conversation by using conversation id and parent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
