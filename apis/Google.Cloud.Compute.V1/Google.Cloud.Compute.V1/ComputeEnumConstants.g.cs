@@ -16887,6 +16887,13 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureRedundantHardwareFault"/>
+                /// .
+                /// </summary>
+                public const string FailureRedundantHardwareFault = "FAILURE_REDUNDANT_HARDWARE_FAULT";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.InfrastructureRelocation"/>
                 /// .
                 /// </summary>
