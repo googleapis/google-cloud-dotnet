@@ -3323,7 +3323,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-07-22T08:07:21.961824403Z",
-            "lastGeneratedCommit": "142ec419af024eed5faa4e793e17c7a37a1a7f12",
+            "lastGeneratedCommit": "c58a1bb42ebe2297b1ce25d75f309475332437c6",
             "lastReleasedCommit": "142ec419af024eed5faa4e793e17c7a37a1a7f12",
             "apiPaths": [
                 "google/cloud/video/transcoder/v1"
