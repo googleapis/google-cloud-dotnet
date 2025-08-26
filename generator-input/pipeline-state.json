@@ -3200,7 +3200,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-01-06T18:06:26Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "b738e78ed63effb7d199ed2d61c9e03291b6077f",
             "apiPaths": [
                 "google/cloud/texttospeech/v1beta1"
             ],
