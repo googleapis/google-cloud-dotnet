@@ -62,15 +62,15 @@ namespace Google.Apps.Chat.V1 {
             "EkAKEWRlbGV0aW9uX21ldGFkYXRhGCYgASgLMiAuZ29vZ2xlLmNoYXQudjEu",
             "RGVsZXRpb25NZXRhZGF0YUID4EEDEksKF3F1b3RlZF9tZXNzYWdlX21ldGFk",
             "YXRhGCcgASgLMiUuZ29vZ2xlLmNoYXQudjEuUXVvdGVkTWVzc2FnZU1ldGFk",
-            "YXRhQgPgQQMSNwoNYXR0YWNoZWRfZ2lmcxgqIAMoCzIbLmdvb2dsZS5jaGF0",
+            "YXRhQgPgQQESNwoNYXR0YWNoZWRfZ2lmcxgqIAMoCzIbLmdvb2dsZS5jaGF0",
             "LnYxLkF0dGFjaGVkR2lmQgPgQQMSPwoRYWNjZXNzb3J5X3dpZGdldHMYLCAD",
             "KAsyHy5nb29nbGUuY2hhdC52MS5BY2Nlc3NvcnlXaWRnZXRCA+BBATpD6kFA",
             "ChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USIXNwYWNlcy97c3BhY2V9",
             "L21lc3NhZ2VzL3ttZXNzYWdlfSIfCgtBdHRhY2hlZEdpZhIQCgN1cmkYASAB",
             "KAlCA+BBAyKJAgoVUXVvdGVkTWVzc2FnZU1ldGFkYXRhEjEKBG5hbWUYASAB",
-            "KAlCI+BBA/pBHQobY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEjkKEGxh",
+            "KAlCI+BBAvpBHQobY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEjkKEGxh",
             "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQM6gQHqQX4KKWNoYXQuZ29vZ2xlYXBpcy5jb20vUXVvdGVkTWVz",
+            "YW1wQgPgQQI6gQHqQX4KKWNoYXQuZ29vZ2xlYXBpcy5jb20vUXVvdGVkTWVz",
             "c2FnZU1ldGFkYXRhElFzcGFjZXMve3NwYWNlfS9tZXNzYWdlcy97bWVzc2Fn",
             "ZX0vcXVvdGVkTWVzc2FnZU1ldGFkYXRhL3txdW90ZWRfbWVzc2FnZV9tZXRh",
             "ZGF0YX0idgoGVGhyZWFkEhEKBG5hbWUYASABKAlCA+BBCBIXCgp0aHJlYWRf",
@@ -674,8 +674,17 @@ namespace Google.Apps.Chat.V1 {
     public const int QuotedMessageMetadataFieldNumber = 39;
     private global::Google.Apps.Chat.V1.QuotedMessageMetadata quotedMessageMetadata_;
     /// <summary>
-    /// Output only. Information about a message that's quoted by a Google Chat
-    /// user in a space. Google Chat users can quote a message to reply to it.
+    /// Optional. Information about a message that another message quotes.
+    ///
+    /// When you create a message, you can quote messages within the same
+    /// thread, or quote a root message to create a new root message.
+    /// However, you can't quote a message reply from a different thread.
+    ///
+    /// When you update a message, you can't add or replace the
+    /// `quotedMessageMetadata` field, but you can remove it.
+    ///
+    /// For example usage, see [Quote another
+    /// message](https://developers.google.com/workspace/chat/create-messages#quote-a-message).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1690,7 +1699,17 @@ namespace Google.Apps.Chat.V1 {
   }
 
   /// <summary>
-  /// Information about a quoted message.
+  /// Information about a message that another message quotes.
+  ///
+  /// When you create a message, you can quote messages within the same
+  /// thread, or quote a root message to create a new root message.
+  /// However, you can't quote a message reply from a different thread.
+  ///
+  /// When you update a message, you can't add or replace the
+  /// `quotedMessageMetadata` field, but you can remove it.
+  ///
+  /// For example usage, see [Quote another
+  /// message](https://developers.google.com/workspace/chat/create-messages#quote-a-message).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotedMessageMetadata : pb::IMessage<QuotedMessageMetadata>
@@ -1742,7 +1761,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of the quoted message.
+    /// Required. Resource name of the message that is quoted.
     ///
     /// Format: `spaces/{space}/messages/{message}`
     /// </summary>
@@ -1759,8 +1778,14 @@ namespace Google.Apps.Chat.V1 {
     public const int LastUpdateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    /// Output only. The timestamp when the quoted message was created or when the
+    /// Required. The timestamp when the quoted message was created or when the
     /// quoted message was last updated.
+    ///
+    /// If the message was edited, use this field, `last_update_time`.
+    /// If the message was never edited, use `create_time`.
+    ///
+    /// If `last_update_time` doesn't match the latest version of the quoted
+    /// message, the request fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3816,6 +3841,8 @@ namespace Google.Apps.Chat.V1 {
     ///
     /// - `accessory_widgets`  (Requires [app
     /// authentication](/chat/api/guides/auth/service-accounts).)
+    ///
+    /// - `quoted_message_metadata` (Only allows removal of the quoted message.)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
