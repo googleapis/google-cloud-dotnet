@@ -1577,6 +1577,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.CloudSecurityCompliance.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Security Compliance",
+      "productUrl": "https://cloud.google.com/security-command-center/docs/compliance-manager-overview",
+      "description": "Recommended Google client library to access the Google Cloud Security Compliance API, which helps ensure that your Google Cloud infrastructure, workloads, and data meet the security and regulatory requirements of your organization.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/cloudsecuritycompliance/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "cloudsecuritycompliance",
+      "serviceConfigFile": "cloudsecuritycompliance_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Commerce.Consumer.Procurement.V1",
       "version": "1.5.0",
       "type": "grpc",
