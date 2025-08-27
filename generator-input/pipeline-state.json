@@ -4503,6 +4503,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1"
             ]
+        },
+        {
+            "id": "Google.Cloud.CloudSecurityCompliance.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/cloudsecuritycompliance/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.CloudSecurityCompliance.V1/Google.Cloud.CloudSecurityCompliance.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
