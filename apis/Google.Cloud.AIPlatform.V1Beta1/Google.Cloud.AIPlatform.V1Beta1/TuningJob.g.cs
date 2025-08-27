@@ -189,17 +189,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "MWJldGExLk1ldHJpY0ID4EECEkkKDW91dHB1dF9jb25maWcYAiABKAsyLS5n",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk91dHB1dENvbmZpZ0ID",
             "4EECEk8KEGF1dG9yYXRlcl9jb25maWcYAyABKAsyMC5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLkF1dG9yYXRlckNvbmZpZ0ID4EEBInUKEkV2",
-            "YWx1YXRlRGF0YXNldFJ1bhIbCg5vcGVyYXRpb25fbmFtZRgBIAEoCUID4EED",
-            "EhoKDWNoZWNrcG9pbnRfaWQYAiABKAlCA+BBAxImCgVlcnJvchgEIAEoCzIS",
-            "Lmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMiXAoUVHVuZWRNb2RlbENoZWNrcG9p",
-            "bnQSFQoNY2hlY2twb2ludF9pZBgBIAEoCRINCgVlcG9jaBgCIAEoAxIMCgRz",
-            "dGVwGAMgASgDEhAKCGVuZHBvaW50GAQgASgJQuUBCiNjb20uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMUIOVHVuaW5nSm9iUHJvdG9QAVpDY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0",
-            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIi",
-            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "YWlwbGF0Zm9ybS52MWJldGExLkF1dG9yYXRlckNvbmZpZ0ID4EEBItcBChJF",
+            "dmFsdWF0ZURhdGFzZXRSdW4SGwoOb3BlcmF0aW9uX25hbWUYASABKAlCA+BB",
+            "AxIaCg1jaGVja3BvaW50X2lkGAIgASgJQgPgQQMSYAoZZXZhbHVhdGVfZGF0",
+            "YXNldF9yZXNwb25zZRgDIAEoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuRXZhbHVhdGVEYXRhc2V0UmVzcG9uc2VCA+BBAxImCgVlcnJv",
+            "chgEIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMiXAoUVHVuZWRNb2Rl",
+            "bENoZWNrcG9pbnQSFQoNY2hlY2twb2ludF9pZBgBIAEoCRINCgVlcG9jaBgC",
+            "IAEoAxIMCgRzdGVwGAMgASgDEhAKCGVuZHBvaW50GAQgASgJQuUBCiNjb20u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIOVHVuaW5nSm9iUHJv",
+            "dG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0",
+            "YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
+            "MWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.JobStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,7 +223,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VeoHyperParameters), global::Google.Cloud.AIPlatform.V1Beta1.VeoHyperParameters.Parser, new[]{ "EpochCount", "LearningRateMultiplier", "TuningTask" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.VeoHyperParameters.Types.TuningTask) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VeoTuningSpec), global::Google.Cloud.AIPlatform.V1Beta1.VeoTuningSpec.Parser, new[]{ "TrainingDatasetUri", "ValidationDatasetUri", "HyperParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EvaluationConfig), global::Google.Cloud.AIPlatform.V1Beta1.EvaluationConfig.Parser, new[]{ "Metrics", "OutputConfig", "AutoraterConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRun), global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRun.Parser, new[]{ "OperationName", "CheckpointId", "Error" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRun), global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRun.Parser, new[]{ "OperationName", "CheckpointId", "EvaluateDatasetResponse", "Error" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.TunedModelCheckpoint), global::Google.Cloud.AIPlatform.V1Beta1.TunedModelCheckpoint.Parser, new[]{ "CheckpointId", "Epoch", "Step", "Endpoint" }, null, null, null, null)
           }));
     }
@@ -8242,6 +8245,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public EvaluateDatasetRun(EvaluateDatasetRun other) : this() {
       operationName_ = other.operationName_;
       checkpointId_ = other.checkpointId_;
+      evaluateDatasetResponse_ = other.evaluateDatasetResponse_ != null ? other.evaluateDatasetResponse_.Clone() : null;
       error_ = other.error_ != null ? other.error_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -8284,6 +8288,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "evaluate_dataset_response" field.</summary>
+    public const int EvaluateDatasetResponseFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse evaluateDatasetResponse_;
+    /// <summary>
+    /// Output only. Results for EvaluationService.EvaluateDataset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse EvaluateDatasetResponse {
+      get { return evaluateDatasetResponse_; }
+      set {
+        evaluateDatasetResponse_ = value;
+      }
+    }
+
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 4;
     private global::Google.Rpc.Status error_;
@@ -8316,6 +8335,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (OperationName != other.OperationName) return false;
       if (CheckpointId != other.CheckpointId) return false;
+      if (!object.Equals(EvaluateDatasetResponse, other.EvaluateDatasetResponse)) return false;
       if (!object.Equals(Error, other.Error)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8326,6 +8346,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (OperationName.Length != 0) hash ^= OperationName.GetHashCode();
       if (CheckpointId.Length != 0) hash ^= CheckpointId.GetHashCode();
+      if (evaluateDatasetResponse_ != null) hash ^= EvaluateDatasetResponse.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8353,6 +8374,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(CheckpointId);
       }
+      if (evaluateDatasetResponse_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EvaluateDatasetResponse);
+      }
       if (error_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(Error);
@@ -8375,6 +8400,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(CheckpointId);
       }
+      if (evaluateDatasetResponse_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EvaluateDatasetResponse);
+      }
       if (error_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(Error);
@@ -8394,6 +8423,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (CheckpointId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckpointId);
+      }
+      if (evaluateDatasetResponse_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvaluateDatasetResponse);
       }
       if (error_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
@@ -8415,6 +8447,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.CheckpointId.Length != 0) {
         CheckpointId = other.CheckpointId;
+      }
+      if (other.evaluateDatasetResponse_ != null) {
+        if (evaluateDatasetResponse_ == null) {
+          EvaluateDatasetResponse = new global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse();
+        }
+        EvaluateDatasetResponse.MergeFrom(other.EvaluateDatasetResponse);
       }
       if (other.error_ != null) {
         if (error_ == null) {
@@ -8445,6 +8483,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             CheckpointId = input.ReadString();
             break;
           }
+          case 26: {
+            if (evaluateDatasetResponse_ == null) {
+              EvaluateDatasetResponse = new global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse();
+            }
+            input.ReadMessage(EvaluateDatasetResponse);
+            break;
+          }
           case 34: {
             if (error_ == null) {
               Error = new global::Google.Rpc.Status();
@@ -8473,6 +8518,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 18: {
             CheckpointId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (evaluateDatasetResponse_ == null) {
+              EvaluateDatasetResponse = new global::Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse();
+            }
+            input.ReadMessage(EvaluateDatasetResponse);
             break;
           }
           case 34: {
