@@ -80,6 +80,7 @@
     "apis/Google.Cloud.CloudDms.V1/Google.Cloud.CloudDms.V1/**",
     "apis/Google.Cloud.CloudQuotas.V1/Google.Cloud.CloudQuotas.V1/**",
     "apis/Google.Cloud.CloudQuotas.V1Beta/Google.Cloud.CloudQuotas.V1Beta/**",
+    "apis/Google.Cloud.CloudSecurityCompliance.V1/Google.Cloud.CloudSecurityCompliance.V1/**",
     "apis/Google.Cloud.Commerce.Consumer.Procurement.V1/Google.Cloud.Commerce.Consumer.Procurement.V1/**",
     "apis/Google.Cloud.Common/Google.Cloud.Common/**",
     "apis/Google.Cloud.Compute.V1/Google.Cloud.Compute.V1/**",

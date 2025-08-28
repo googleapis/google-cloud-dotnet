@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Cloud.CloudSecurityCompliance.V1",
+  "release_level": "unreleased",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.CloudSecurityCompliance.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "cloudsecuritycompliance"
+}
