@@ -37,6 +37,8 @@ namespace Google.Geo.Weather.V1
             yield return HistoryHourReflection.Descriptor;
             yield return IceReflection.Descriptor;
             yield return PrecipitationReflection.Descriptor;
+            yield return PublicAlertsReflection.Descriptor;
+            yield return PublicAlertsEnumsReflection.Descriptor;
             yield return TemperatureReflection.Descriptor;
             yield return UnitsSystemReflection.Descriptor;
             yield return VisibilityReflection.Descriptor;
