@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.13.0, released 2025-08-28
+
+### New features
+
+- Support promptable voices by specifying a model name and a prompt
+- Add enum value M4A to enum AudioEncoding
+
+### Documentation improvements
+
+- A comment for enum value `AUDIO_ENCODING_UNSPECIFIED` in enum `AudioEncoding` is changed
+
 ## Version 3.12.0, released 2025-05-22
 
 ### New features
