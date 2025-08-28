@@ -17,7 +17,11 @@
 namespace GoogleCSharpSnippets
 {
     // [START weather_v1_generated_Weather_LookupPublicAlerts_async]
+    using Google.Api.Gax;
     using Google.Geo.Weather.V1;
+    using Google.Type;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedWeatherClientSnippets
@@ -35,9 +39,45 @@ namespace GoogleCSharpSnippets
             // Create client
             WeatherClient weatherClient = await WeatherClient.CreateAsync();
             // Initialize request argument(s)
-            LookupPublicAlertsRequest request = new LookupPublicAlertsRequest { };
+            LookupPublicAlertsRequest request = new LookupPublicAlertsRequest
+            {
+                Location = new LatLng(),
+                LanguageCode = "",
+            };
             // Make the request
-            LookupPublicAlertsResponse response = await weatherClient.LookupPublicAlertsAsync(request);
+            PagedAsyncEnumerable<LookupPublicAlertsResponse, PublicAlerts> response = weatherClient.LookupPublicAlertsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PublicAlerts item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((LookupPublicAlertsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PublicAlerts item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PublicAlerts> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PublicAlerts item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
         }
     }
     // [END weather_v1_generated_Weather_LookupPublicAlerts_async]

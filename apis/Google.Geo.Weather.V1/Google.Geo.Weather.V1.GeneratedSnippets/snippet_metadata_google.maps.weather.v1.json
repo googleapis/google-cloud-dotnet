@@ -417,7 +417,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Geo.Weather.V1.LookupPublicAlertsResponse",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Geo.Weather.V1.LookupPublicAlertsResponse, Google.Geo.Weather.V1.PublicAlerts>",
         "client": {
           "shortName": "WeatherClient",
           "fullName": "Google.Geo.Weather.V1.WeatherClient"
@@ -436,12 +436,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 80,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 39,
+          "start": 37,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -466,7 +466,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Geo.Weather.V1.LookupPublicAlertsResponse>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Geo.Weather.V1.LookupPublicAlertsResponse, Google.Geo.Weather.V1.PublicAlerts>",
         "client": {
           "shortName": "WeatherClient",
           "fullName": "Google.Geo.Weather.V1.WeatherClient"
@@ -485,12 +485,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 40,
+          "start": 39,
+          "end": 80,
           "type": "SHORT"
         }
       ]

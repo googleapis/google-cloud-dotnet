@@ -32,106 +32,113 @@ namespace Google.Geo.Weather.V1 {
             "L2ZvcmVjYXN0X2RheS5wcm90bxoqZ29vZ2xlL21hcHMvd2VhdGhlci92MS9m",
             "b3JlY2FzdF9ob3VyLnByb3RvGilnb29nbGUvbWFwcy93ZWF0aGVyL3YxL2hp",
             "c3RvcnlfaG91ci5wcm90bxoqZ29vZ2xlL21hcHMvd2VhdGhlci92MS9wcmVj",
-            "aXBpdGF0aW9uLnByb3RvGihnb29nbGUvbWFwcy93ZWF0aGVyL3YxL3RlbXBl",
-            "cmF0dXJlLnByb3RvGilnb29nbGUvbWFwcy93ZWF0aGVyL3YxL3VuaXRzX3N5",
-            "c3RlbS5wcm90bxonZ29vZ2xlL21hcHMvd2VhdGhlci92MS92aXNpYmlsaXR5",
-            "LnByb3RvGi5nb29nbGUvbWFwcy93ZWF0aGVyL3YxL3dlYXRoZXJfY29uZGl0",
-            "aW9uLnByb3RvGiFnb29nbGUvbWFwcy93ZWF0aGVyL3YxL3dpbmQucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aGmdvb2dsZS90eXBl",
-            "L2RhdGV0aW1lLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8ivwEK",
-            "Hkxvb2t1cEN1cnJlbnRDb25kaXRpb25zUmVxdWVzdBIqCghsb2NhdGlvbhgB",
-            "IAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID4EECEj4KDHVuaXRzX3N5c3Rl",
-            "bRgCIAEoDjIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVW5pdHNTeXN0ZW1C",
-            "A+BBARIfCg1sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQFIAIgBAUIQCg5fbGFu",
-            "Z3VhZ2VfY29kZSKdCwofTG9va3VwQ3VycmVudENvbmRpdGlvbnNSZXNwb25z",
-            "ZRIwCgxjdXJyZW50X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEigKCXRpbWVfem9uZRgCIAEoCzIVLmdvb2dsZS50eXBlLlRpbWVa",
-            "b25lEhcKCmlzX2RheXRpbWUYAyABKAhIAIgBARJDChF3ZWF0aGVyX2NvbmRp",
-            "dGlvbhgEIAEoCzIoLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuV2VhdGhlckNv",
-            "bmRpdGlvbhI4Cgt0ZW1wZXJhdHVyZRgFIAEoCzIjLmdvb2dsZS5tYXBzLndl",
-            "YXRoZXIudjEuVGVtcGVyYXR1cmUSQwoWZmVlbHNfbGlrZV90ZW1wZXJhdHVy",
-            "ZRgGIAEoCzIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVGVtcGVyYXR1cmUS",
-            "NgoJZGV3X3BvaW50GAcgASgLMiMuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5U",
-            "ZW1wZXJhdHVyZRI3CgpoZWF0X2luZGV4GAggASgLMiMuZ29vZ2xlLm1hcHMu",
-            "d2VhdGhlci52MS5UZW1wZXJhdHVyZRI3Cgp3aW5kX2NoaWxsGAkgASgLMiMu",
-            "Z29vZ2xlLm1hcHMud2VhdGhlci52MS5UZW1wZXJhdHVyZRIeChFyZWxhdGl2",
-            "ZV9odW1pZGl0eRgKIAEoBUgBiAEBEhUKCHV2X2luZGV4GAsgASgFSAKIAQES",
-            "PAoNcHJlY2lwaXRhdGlvbhgMIAEoCzIlLmdvb2dsZS5tYXBzLndlYXRoZXIu",
-            "djEuUHJlY2lwaXRhdGlvbhIlChh0aHVuZGVyc3Rvcm1fcHJvYmFiaWxpdHkY",
-            "DSABKAVIA4gBARI5CgxhaXJfcHJlc3N1cmUYDiABKAsyIy5nb29nbGUubWFw",
-            "cy53ZWF0aGVyLnYxLkFpclByZXNzdXJlEioKBHdpbmQYDyABKAsyHC5nb29n",
-            "bGUubWFwcy53ZWF0aGVyLnYxLldpbmQSNgoKdmlzaWJpbGl0eRgQIAEoCzIi",
-            "Lmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVmlzaWJpbGl0eRIYCgtjbG91ZF9j",
-            "b3ZlchgRIAEoBUgEiAEBEnQKGmN1cnJlbnRfY29uZGl0aW9uc19oaXN0b3J5",
-            "GBIgASgLMlAuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBDdXJyZW50",
-            "Q29uZGl0aW9uc1Jlc3BvbnNlLkN1cnJlbnRDb25kaXRpb25zSGlzdG9yeRrs",
-            "AgoYQ3VycmVudENvbmRpdGlvbnNIaXN0b3J5Ej8KEnRlbXBlcmF0dXJlX2No",
-            "YW5nZRgBIAEoCzIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVGVtcGVyYXR1",
-            "cmUSPAoPbWF4X3RlbXBlcmF0dXJlGAIgASgLMiMuZ29vZ2xlLm1hcHMud2Vh",
-            "dGhlci52MS5UZW1wZXJhdHVyZRI8Cg9taW5fdGVtcGVyYXR1cmUYAyABKAsy",
-            "Iy5nb29nbGUubWFwcy53ZWF0aGVyLnYxLlRlbXBlcmF0dXJlEksKCHNub3df",
-            "cXBmGAUgASgLMjkuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5RdWFudGl0YXRp",
-            "dmVQcmVjaXBpdGF0aW9uRm9yZWNhc3QSRgoDcXBmGAYgASgLMjkuZ29vZ2xl",
-            "Lm1hcHMud2VhdGhlci52MS5RdWFudGl0YXRpdmVQcmVjaXBpdGF0aW9uRm9y",
-            "ZWNhc3RCDQoLX2lzX2RheXRpbWVCFAoSX3JlbGF0aXZlX2h1bWlkaXR5QgsK",
-            "CV91dl9pbmRleEIbChlfdGh1bmRlcnN0b3JtX3Byb2JhYmlsaXR5Qg4KDF9j",
-            "bG91ZF9jb3ZlciKPAgoaTG9va3VwRm9yZWNhc3RIb3Vyc1JlcXVlc3QSKgoI",
-            "bG9jYXRpb24YASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAhIXCgVo",
-            "b3VycxgCIAEoBUID4EEBSACIAQESPgoMdW5pdHNfc3lzdGVtGAMgASgOMiMu",
-            "Z29vZ2xlLm1hcHMud2VhdGhlci52MS5Vbml0c1N5c3RlbUID4EEBEh8KDWxh",
-            "bmd1YWdlX2NvZGUYBCABKAlCA+BBAUgBiAEBEhYKCXBhZ2Vfc2l6ZRgFIAEo",
-            "BUID4EEBEhcKCnBhZ2VfdG9rZW4YBiABKAlCA+BBAUIICgZfaG91cnNCEAoO",
-            "X2xhbmd1YWdlX2NvZGUingEKG0xvb2t1cEZvcmVjYXN0SG91cnNSZXNwb25z",
-            "ZRI8Cg5mb3JlY2FzdF9ob3VycxgBIAMoCzIkLmdvb2dsZS5tYXBzLndlYXRo",
-            "ZXIudjEuRm9yZWNhc3RIb3VyEigKCXRpbWVfem9uZRgCIAEoCzIVLmdvb2ds",
-            "ZS50eXBlLlRpbWVab25lEhcKD25leHRfcGFnZV90b2tlbhgDIAEoCSKMAgoZ",
-            "TG9va3VwRm9yZWNhc3REYXlzUmVxdWVzdBIqCghsb2NhdGlvbhgBIAEoCzIT",
-            "Lmdvb2dsZS50eXBlLkxhdExuZ0ID4EECEhYKBGRheXMYAiABKAVCA+BBAUgA",
-            "iAEBEj4KDHVuaXRzX3N5c3RlbRgDIAEoDjIjLmdvb2dsZS5tYXBzLndlYXRo",
-            "ZXIudjEuVW5pdHNTeXN0ZW1CA+BBARIfCg1sYW5ndWFnZV9jb2RlGAQgASgJ",
-            "QgPgQQFIAYgBARIWCglwYWdlX3NpemUYBSABKAVCA+BBARIXCgpwYWdlX3Rv",
-            "a2VuGAYgASgJQgPgQQFCBwoFX2RheXNCEAoOX2xhbmd1YWdlX2NvZGUimwEK",
-            "Gkxvb2t1cEZvcmVjYXN0RGF5c1Jlc3BvbnNlEjoKDWZvcmVjYXN0X2RheXMY",
-            "ASADKAsyIy5nb29nbGUubWFwcy53ZWF0aGVyLnYxLkZvcmVjYXN0RGF5EigK",
-            "CXRpbWVfem9uZRgCIAEoCzIVLmdvb2dsZS50eXBlLlRpbWVab25lEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgDIAEoCSKOAgoZTG9va3VwSGlzdG9yeUhvdXJzUmVx",
-            "dWVzdBIqCghsb2NhdGlvbhgBIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID",
-            "4EECEhcKBWhvdXJzGAIgASgFQgPgQQFIAIgBARI+Cgx1bml0c19zeXN0ZW0Y",
-            "AyABKA4yIy5nb29nbGUubWFwcy53ZWF0aGVyLnYxLlVuaXRzU3lzdGVtQgPg",
-            "QQESHwoNbGFuZ3VhZ2VfY29kZRgEIAEoCUID4EEBSAGIAQESFgoJcGFnZV9z",
-            "aXplGAUgASgFQgPgQQESFwoKcGFnZV90b2tlbhgGIAEoCUID4EEBQggKBl9o",
-            "b3Vyc0IQCg5fbGFuZ3VhZ2VfY29kZSKbAQoaTG9va3VwSGlzdG9yeUhvdXJz",
-            "UmVzcG9uc2USOgoNaGlzdG9yeV9ob3VycxgBIAMoCzIjLmdvb2dsZS5tYXBz",
-            "LndlYXRoZXIudjEuSGlzdG9yeUhvdXISKAoJdGltZV96b25lGAIgASgLMhUu",
-            "Z29vZ2xlLnR5cGUuVGltZVpvbmUSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJ",
-            "IhsKGUxvb2t1cFB1YmxpY0FsZXJ0c1JlcXVlc3QiHAoaTG9va3VwUHVibGlj",
-            "QWxlcnRzUmVzcG9uc2UyiwcKB1dlYXRoZXISsAEKF0xvb2t1cEN1cnJlbnRD",
-            "b25kaXRpb25zEjYuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBDdXJy",
-            "ZW50Q29uZGl0aW9uc1JlcXVlc3QaNy5nb29nbGUubWFwcy53ZWF0aGVyLnYx",
-            "Lkxvb2t1cEN1cnJlbnRDb25kaXRpb25zUmVzcG9uc2UiJILT5JMCHhIcL3Yx",
-            "L2N1cnJlbnRDb25kaXRpb25zOmxvb2t1cBKhAQoTTG9va3VwRm9yZWNhc3RI",
-            "b3VycxIyLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwRm9yZWNhc3RI",
-            "b3Vyc1JlcXVlc3QaMy5nb29nbGUubWFwcy53ZWF0aGVyLnYxLkxvb2t1cEZv",
-            "cmVjYXN0SG91cnNSZXNwb25zZSIhgtPkkwIbEhkvdjEvZm9yZWNhc3QvaG91",
-            "cnM6bG9va3VwEp0BChJMb29rdXBGb3JlY2FzdERheXMSMS5nb29nbGUubWFw",
-            "cy53ZWF0aGVyLnYxLkxvb2t1cEZvcmVjYXN0RGF5c1JlcXVlc3QaMi5nb29n",
-            "bGUubWFwcy53ZWF0aGVyLnYxLkxvb2t1cEZvcmVjYXN0RGF5c1Jlc3BvbnNl",
-            "IiCC0+STAhoSGC92MS9mb3JlY2FzdC9kYXlzOmxvb2t1cBKdAQoSTG9va3Vw",
-            "SGlzdG9yeUhvdXJzEjEuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBI",
-            "aXN0b3J5SG91cnNSZXF1ZXN0GjIuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5M",
-            "b29rdXBIaXN0b3J5SG91cnNSZXNwb25zZSIggtPkkwIaEhgvdjEvaGlzdG9y",
-            "eS9ob3Vyczpsb29rdXASnAEKEkxvb2t1cFB1YmxpY0FsZXJ0cxIxLmdvb2ds",
-            "ZS5tYXBzLndlYXRoZXIudjEuTG9va3VwUHVibGljQWxlcnRzUmVxdWVzdBoy",
-            "Lmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwUHVibGljQWxlcnRzUmVz",
-            "cG9uc2UiH4LT5JMCGRIXL3YxL3B1YmxpY0FsZXJ0czpsb29rdXAaSspBFndl",
-            "YXRoZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqcBChpjb20uZ29vZ2xlLm1hcHMu",
-            "d2VhdGhlci52MUITV2VhdGhlclNlcnZpY2VQcm90b1ABWjpjbG91ZC5nb29n",
-            "bGUuY29tL2dvL21hcHMvd2VhdGhlci9hcGl2MS93ZWF0aGVycGI7d2VhdGhl",
-            "cnBiogIFR01XVjGqAhVHb29nbGUuR2VvLldlYXRoZXIuVjHKAhVHb29nbGVc",
-            "R2VvXFdlYXRoZXJcVjFiBnByb3RvMw=="));
+            "aXBpdGF0aW9uLnByb3RvGipnb29nbGUvbWFwcy93ZWF0aGVyL3YxL3B1Ymxp",
+            "Y19hbGVydHMucHJvdG8aKGdvb2dsZS9tYXBzL3dlYXRoZXIvdjEvdGVtcGVy",
+            "YXR1cmUucHJvdG8aKWdvb2dsZS9tYXBzL3dlYXRoZXIvdjEvdW5pdHNfc3lz",
+            "dGVtLnByb3RvGidnb29nbGUvbWFwcy93ZWF0aGVyL3YxL3Zpc2liaWxpdHku",
+            "cHJvdG8aLmdvb2dsZS9tYXBzL3dlYXRoZXIvdjEvd2VhdGhlcl9jb25kaXRp",
+            "b24ucHJvdG8aIWdvb2dsZS9tYXBzL3dlYXRoZXIvdjEvd2luZC5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoaZ29vZ2xlL3R5cGUv",
+            "ZGF0ZXRpbWUucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90byK/AQoe",
+            "TG9va3VwQ3VycmVudENvbmRpdGlvbnNSZXF1ZXN0EioKCGxvY2F0aW9uGAEg",
+            "ASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQISPgoMdW5pdHNfc3lzdGVt",
+            "GAIgASgOMiMuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Vbml0c1N5c3RlbUID",
+            "4EEBEh8KDWxhbmd1YWdlX2NvZGUYAyABKAlCA+BBAUgAiAEBQhAKDl9sYW5n",
+            "dWFnZV9jb2RlIp0LCh9Mb29rdXBDdXJyZW50Q29uZGl0aW9uc1Jlc3BvbnNl",
+            "EjAKDGN1cnJlbnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASKAoJdGltZV96b25lGAIgASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpv",
+            "bmUSFwoKaXNfZGF5dGltZRgDIAEoCEgAiAEBEkMKEXdlYXRoZXJfY29uZGl0",
+            "aW9uGAQgASgLMiguZ29vZ2xlLm1hcHMud2VhdGhlci52MS5XZWF0aGVyQ29u",
+            "ZGl0aW9uEjgKC3RlbXBlcmF0dXJlGAUgASgLMiMuZ29vZ2xlLm1hcHMud2Vh",
+            "dGhlci52MS5UZW1wZXJhdHVyZRJDChZmZWVsc19saWtlX3RlbXBlcmF0dXJl",
+            "GAYgASgLMiMuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5UZW1wZXJhdHVyZRI2",
+            "CglkZXdfcG9pbnQYByABKAsyIy5nb29nbGUubWFwcy53ZWF0aGVyLnYxLlRl",
+            "bXBlcmF0dXJlEjcKCmhlYXRfaW5kZXgYCCABKAsyIy5nb29nbGUubWFwcy53",
+            "ZWF0aGVyLnYxLlRlbXBlcmF0dXJlEjcKCndpbmRfY2hpbGwYCSABKAsyIy5n",
+            "b29nbGUubWFwcy53ZWF0aGVyLnYxLlRlbXBlcmF0dXJlEh4KEXJlbGF0aXZl",
+            "X2h1bWlkaXR5GAogASgFSAGIAQESFQoIdXZfaW5kZXgYCyABKAVIAogBARI8",
+            "Cg1wcmVjaXBpdGF0aW9uGAwgASgLMiUuZ29vZ2xlLm1hcHMud2VhdGhlci52",
+            "MS5QcmVjaXBpdGF0aW9uEiUKGHRodW5kZXJzdG9ybV9wcm9iYWJpbGl0eRgN",
+            "IAEoBUgDiAEBEjkKDGFpcl9wcmVzc3VyZRgOIAEoCzIjLmdvb2dsZS5tYXBz",
+            "LndlYXRoZXIudjEuQWlyUHJlc3N1cmUSKgoEd2luZBgPIAEoCzIcLmdvb2ds",
+            "ZS5tYXBzLndlYXRoZXIudjEuV2luZBI2Cgp2aXNpYmlsaXR5GBAgASgLMiIu",
+            "Z29vZ2xlLm1hcHMud2VhdGhlci52MS5WaXNpYmlsaXR5EhgKC2Nsb3VkX2Nv",
+            "dmVyGBEgASgFSASIAQESdAoaY3VycmVudF9jb25kaXRpb25zX2hpc3RvcnkY",
+            "EiABKAsyUC5nb29nbGUubWFwcy53ZWF0aGVyLnYxLkxvb2t1cEN1cnJlbnRD",
+            "b25kaXRpb25zUmVzcG9uc2UuQ3VycmVudENvbmRpdGlvbnNIaXN0b3J5GuwC",
+            "ChhDdXJyZW50Q29uZGl0aW9uc0hpc3RvcnkSPwoSdGVtcGVyYXR1cmVfY2hh",
+            "bmdlGAEgASgLMiMuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5UZW1wZXJhdHVy",
+            "ZRI8Cg9tYXhfdGVtcGVyYXR1cmUYAiABKAsyIy5nb29nbGUubWFwcy53ZWF0",
+            "aGVyLnYxLlRlbXBlcmF0dXJlEjwKD21pbl90ZW1wZXJhdHVyZRgDIAEoCzIj",
+            "Lmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVGVtcGVyYXR1cmUSSwoIc25vd19x",
+            "cGYYBSABKAsyOS5nb29nbGUubWFwcy53ZWF0aGVyLnYxLlF1YW50aXRhdGl2",
+            "ZVByZWNpcGl0YXRpb25Gb3JlY2FzdBJGCgNxcGYYBiABKAsyOS5nb29nbGUu",
+            "bWFwcy53ZWF0aGVyLnYxLlF1YW50aXRhdGl2ZVByZWNpcGl0YXRpb25Gb3Jl",
+            "Y2FzdEINCgtfaXNfZGF5dGltZUIUChJfcmVsYXRpdmVfaHVtaWRpdHlCCwoJ",
+            "X3V2X2luZGV4QhsKGV90aHVuZGVyc3Rvcm1fcHJvYmFiaWxpdHlCDgoMX2Ns",
+            "b3VkX2NvdmVyIo8CChpMb29rdXBGb3JlY2FzdEhvdXJzUmVxdWVzdBIqCghs",
+            "b2NhdGlvbhgBIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0ID4EECEhcKBWhv",
+            "dXJzGAIgASgFQgPgQQFIAIgBARI+Cgx1bml0c19zeXN0ZW0YAyABKA4yIy5n",
+            "b29nbGUubWFwcy53ZWF0aGVyLnYxLlVuaXRzU3lzdGVtQgPgQQESHwoNbGFu",
+            "Z3VhZ2VfY29kZRgEIAEoCUID4EEBSAGIAQESFgoJcGFnZV9zaXplGAUgASgF",
+            "QgPgQQESFwoKcGFnZV90b2tlbhgGIAEoCUID4EEBQggKBl9ob3Vyc0IQCg5f",
+            "bGFuZ3VhZ2VfY29kZSKeAQobTG9va3VwRm9yZWNhc3RIb3Vyc1Jlc3BvbnNl",
+            "EjwKDmZvcmVjYXN0X2hvdXJzGAEgAygLMiQuZ29vZ2xlLm1hcHMud2VhdGhl",
+            "ci52MS5Gb3JlY2FzdEhvdXISKAoJdGltZV96b25lGAIgASgLMhUuZ29vZ2xl",
+            "LnR5cGUuVGltZVpvbmUSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIowCChlM",
+            "b29rdXBGb3JlY2FzdERheXNSZXF1ZXN0EioKCGxvY2F0aW9uGAEgASgLMhMu",
+            "Z29vZ2xlLnR5cGUuTGF0TG5nQgPgQQISFgoEZGF5cxgCIAEoBUID4EEBSACI",
+            "AQESPgoMdW5pdHNfc3lzdGVtGAMgASgOMiMuZ29vZ2xlLm1hcHMud2VhdGhl",
+            "ci52MS5Vbml0c1N5c3RlbUID4EEBEh8KDWxhbmd1YWdlX2NvZGUYBCABKAlC",
+            "A+BBAUgBiAEBEhYKCXBhZ2Vfc2l6ZRgFIAEoBUID4EEBEhcKCnBhZ2VfdG9r",
+            "ZW4YBiABKAlCA+BBAUIHCgVfZGF5c0IQCg5fbGFuZ3VhZ2VfY29kZSKbAQoa",
+            "TG9va3VwRm9yZWNhc3REYXlzUmVzcG9uc2USOgoNZm9yZWNhc3RfZGF5cxgB",
+            "IAMoCzIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuRm9yZWNhc3REYXkSKAoJ",
+            "dGltZV96b25lGAIgASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpvbmUSFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAMgASgJIo4CChlMb29rdXBIaXN0b3J5SG91cnNSZXF1",
+            "ZXN0EioKCGxvY2F0aW9uGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPg",
+            "QQISFwoFaG91cnMYAiABKAVCA+BBAUgAiAEBEj4KDHVuaXRzX3N5c3RlbRgD",
+            "IAEoDjIjLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuVW5pdHNTeXN0ZW1CA+BB",
+            "ARIfCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPgQQFIAYgBARIWCglwYWdlX3Np",
+            "emUYBSABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAYgASgJQgPgQQFCCAoGX2hv",
+            "dXJzQhAKDl9sYW5ndWFnZV9jb2RlIpsBChpMb29rdXBIaXN0b3J5SG91cnNS",
+            "ZXNwb25zZRI6Cg1oaXN0b3J5X2hvdXJzGAEgAygLMiMuZ29vZ2xlLm1hcHMu",
+            "d2VhdGhlci52MS5IaXN0b3J5SG91chIoCgl0aW1lX3pvbmUYAiABKAsyFS5n",
+            "b29nbGUudHlwZS5UaW1lWm9uZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAki",
+            "qwEKGUxvb2t1cFB1YmxpY0FsZXJ0c1JlcXVlc3QSKgoIbG9jYXRpb24YASAB",
+            "KAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAhIfCg1sYW5ndWFnZV9jb2Rl",
+            "GAIgASgJQgPgQQFIAIgBARIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpw",
+            "YWdlX3Rva2VuGAQgASgJQgPgQQFCEAoOX2xhbmd1YWdlX2NvZGUiiAEKGkxv",
+            "b2t1cFB1YmxpY0FsZXJ0c1Jlc3BvbnNlEjwKDndlYXRoZXJfYWxlcnRzGAEg",
+            "AygLMiQuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5QdWJsaWNBbGVydHMSEwoL",
+            "cmVnaW9uX2NvZGUYAiABKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJMosH",
+            "CgdXZWF0aGVyErABChdMb29rdXBDdXJyZW50Q29uZGl0aW9ucxI2Lmdvb2ds",
+            "ZS5tYXBzLndlYXRoZXIudjEuTG9va3VwQ3VycmVudENvbmRpdGlvbnNSZXF1",
+            "ZXN0GjcuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBDdXJyZW50Q29u",
+            "ZGl0aW9uc1Jlc3BvbnNlIiSC0+STAh4SHC92MS9jdXJyZW50Q29uZGl0aW9u",
+            "czpsb29rdXASoQEKE0xvb2t1cEZvcmVjYXN0SG91cnMSMi5nb29nbGUubWFw",
+            "cy53ZWF0aGVyLnYxLkxvb2t1cEZvcmVjYXN0SG91cnNSZXF1ZXN0GjMuZ29v",
+            "Z2xlLm1hcHMud2VhdGhlci52MS5Mb29rdXBGb3JlY2FzdEhvdXJzUmVzcG9u",
+            "c2UiIYLT5JMCGxIZL3YxL2ZvcmVjYXN0L2hvdXJzOmxvb2t1cBKdAQoSTG9v",
+            "a3VwRm9yZWNhc3REYXlzEjEuZ29vZ2xlLm1hcHMud2VhdGhlci52MS5Mb29r",
+            "dXBGb3JlY2FzdERheXNSZXF1ZXN0GjIuZ29vZ2xlLm1hcHMud2VhdGhlci52",
+            "MS5Mb29rdXBGb3JlY2FzdERheXNSZXNwb25zZSIggtPkkwIaEhgvdjEvZm9y",
+            "ZWNhc3QvZGF5czpsb29rdXASnQEKEkxvb2t1cEhpc3RvcnlIb3VycxIxLmdv",
+            "b2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwSGlzdG9yeUhvdXJzUmVxdWVz",
+            "dBoyLmdvb2dsZS5tYXBzLndlYXRoZXIudjEuTG9va3VwSGlzdG9yeUhvdXJz",
+            "UmVzcG9uc2UiIILT5JMCGhIYL3YxL2hpc3RvcnkvaG91cnM6bG9va3VwEpwB",
+            "ChJMb29rdXBQdWJsaWNBbGVydHMSMS5nb29nbGUubWFwcy53ZWF0aGVyLnYx",
+            "Lkxvb2t1cFB1YmxpY0FsZXJ0c1JlcXVlc3QaMi5nb29nbGUubWFwcy53ZWF0",
+            "aGVyLnYxLkxvb2t1cFB1YmxpY0FsZXJ0c1Jlc3BvbnNlIh+C0+STAhkSFy92",
+            "MS9wdWJsaWNBbGVydHM6bG9va3VwGkrKQRZ3ZWF0aGVyLmdvb2dsZWFwaXMu",
+            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybUKnAQoaY29tLmdvb2dsZS5tYXBzLndlYXRoZXIudjFCE1dlYXRo",
+            "ZXJTZXJ2aWNlUHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3dl",
+            "YXRoZXIvYXBpdjEvd2VhdGhlcnBiO3dlYXRoZXJwYqICBUdNV1YxqgIVR29v",
+            "Z2xlLkdlby5XZWF0aGVyLlYxygIVR29vZ2xlXEdlb1xXZWF0aGVyXFYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Geo.Weather.V1.AirPressureReflection.Descriptor, global::Google.Geo.Weather.V1.ForecastDayReflection.Descriptor, global::Google.Geo.Weather.V1.ForecastHourReflection.Descriptor, global::Google.Geo.Weather.V1.HistoryHourReflection.Descriptor, global::Google.Geo.Weather.V1.PrecipitationReflection.Descriptor, global::Google.Geo.Weather.V1.TemperatureReflection.Descriptor, global::Google.Geo.Weather.V1.UnitsSystemReflection.Descriptor, global::Google.Geo.Weather.V1.VisibilityReflection.Descriptor, global::Google.Geo.Weather.V1.WeatherConditionReflection.Descriptor, global::Google.Geo.Weather.V1.WindReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Geo.Weather.V1.AirPressureReflection.Descriptor, global::Google.Geo.Weather.V1.ForecastDayReflection.Descriptor, global::Google.Geo.Weather.V1.ForecastHourReflection.Descriptor, global::Google.Geo.Weather.V1.HistoryHourReflection.Descriptor, global::Google.Geo.Weather.V1.PrecipitationReflection.Descriptor, global::Google.Geo.Weather.V1.PublicAlertsReflection.Descriptor, global::Google.Geo.Weather.V1.TemperatureReflection.Descriptor, global::Google.Geo.Weather.V1.UnitsSystemReflection.Descriptor, global::Google.Geo.Weather.V1.VisibilityReflection.Descriptor, global::Google.Geo.Weather.V1.WeatherConditionReflection.Descriptor, global::Google.Geo.Weather.V1.WindReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupCurrentConditionsRequest), global::Google.Geo.Weather.V1.LookupCurrentConditionsRequest.Parser, new[]{ "Location", "UnitsSystem", "LanguageCode" }, new[]{ "LanguageCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupCurrentConditionsResponse), global::Google.Geo.Weather.V1.LookupCurrentConditionsResponse.Parser, new[]{ "CurrentTime", "TimeZone", "IsDaytime", "WeatherCondition", "Temperature", "FeelsLikeTemperature", "DewPoint", "HeatIndex", "WindChill", "RelativeHumidity", "UvIndex", "Precipitation", "ThunderstormProbability", "AirPressure", "Wind", "Visibility", "CloudCover", "CurrentConditionsHistory" }, new[]{ "IsDaytime", "RelativeHumidity", "UvIndex", "ThunderstormProbability", "CloudCover" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupCurrentConditionsResponse.Types.CurrentConditionsHistory), global::Google.Geo.Weather.V1.LookupCurrentConditionsResponse.Types.CurrentConditionsHistory.Parser, new[]{ "TemperatureChange", "MaxTemperature", "MinTemperature", "SnowQpf", "Qpf" }, null, null, null, null)}),
@@ -141,8 +148,8 @@ namespace Google.Geo.Weather.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupForecastDaysResponse), global::Google.Geo.Weather.V1.LookupForecastDaysResponse.Parser, new[]{ "ForecastDays", "TimeZone", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupHistoryHoursRequest), global::Google.Geo.Weather.V1.LookupHistoryHoursRequest.Parser, new[]{ "Location", "Hours", "UnitsSystem", "LanguageCode", "PageSize", "PageToken" }, new[]{ "Hours", "LanguageCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupHistoryHoursResponse), global::Google.Geo.Weather.V1.LookupHistoryHoursResponse.Parser, new[]{ "HistoryHours", "TimeZone", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest), global::Google.Geo.Weather.V1.LookupPublicAlertsRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupPublicAlertsResponse), global::Google.Geo.Weather.V1.LookupPublicAlertsResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupPublicAlertsRequest), global::Google.Geo.Weather.V1.LookupPublicAlertsRequest.Parser, new[]{ "Location", "LanguageCode", "PageSize", "PageToken" }, new[]{ "LanguageCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Geo.Weather.V1.LookupPublicAlertsResponse), global::Google.Geo.Weather.V1.LookupPublicAlertsResponse.Parser, new[]{ "WeatherAlerts", "RegionCode", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4104,11 +4111,7 @@ namespace Google.Geo.Weather.V1 {
   }
 
   /// <summary>
-  /// (-- Request for the LookupPublicAlerts RPC. --)
-  /// (-- TODO (418938868): mikesky - Add request fields.
-  /// Reason: We want to parallelize our work and creating a simple proto for
-  /// quick approval could help us do other tasks while the larger proto is
-  /// being approved. --)
+  /// Request for the LookupPublicAlerts RPC.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupPublicAlertsRequest : pb::IMessage<LookupPublicAlertsRequest>
@@ -4145,6 +4148,10 @@ namespace Google.Geo.Weather.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LookupPublicAlertsRequest(LookupPublicAlertsRequest other) : this() {
+      location_ = other.location_ != null ? other.location_.Clone() : null;
+      languageCode_ = other.languageCode_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4152,6 +4159,88 @@ namespace Google.Geo.Weather.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LookupPublicAlertsRequest Clone() {
       return new LookupPublicAlertsRequest(this);
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 1;
+    private global::Google.Type.LatLng location_;
+    /// <summary>
+    /// Required. The location to get public weather alerts for. The service will
+    /// return alerts whose affected area intersects with this location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LatLng Location {
+      get { return location_; }
+      set {
+        location_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 2;
+    private readonly static string LanguageCodeDefaultValue = "";
+
+    private string languageCode_;
+    /// <summary>
+    /// Optional. Allows the client to choose the language for the response. If
+    /// data cannot be provided for that language, the API uses the closest match.
+    /// Allowed values rely on the IETF BCP-47 standard. The default value is "en".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_ ?? LanguageCodeDefaultValue; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "language_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLanguageCode {
+      get { return languageCode_ != null; }
+    }
+    /// <summary>Clears the value of the "language_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLanguageCode() {
+      languageCode_ = null;
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of public weather alert records to return per
+    /// page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token received from a previous
+    /// `LookupPublicAlerts` call. Provide this to retrieve the subsequent
+    /// page. When paginating, all other parameters provided to
+    /// `LookupPublicAlerts` must match the call that provided the page
+    /// token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4169,6 +4258,10 @@ namespace Google.Geo.Weather.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Location, other.Location)) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4176,6 +4269,10 @@ namespace Google.Geo.Weather.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (location_ != null) hash ^= Location.GetHashCode();
+      if (HasLanguageCode) hash ^= LanguageCode.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4194,6 +4291,22 @@ namespace Google.Geo.Weather.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (location_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Location);
+      }
+      if (HasLanguageCode) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4204,6 +4317,22 @@ namespace Google.Geo.Weather.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (location_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Location);
+      }
+      if (HasLanguageCode) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4214,6 +4343,18 @@ namespace Google.Geo.Weather.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (location_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
+      }
+      if (HasLanguageCode) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4225,6 +4366,21 @@ namespace Google.Geo.Weather.V1 {
     public void MergeFrom(LookupPublicAlertsRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.location_ != null) {
+        if (location_ == null) {
+          Location = new global::Google.Type.LatLng();
+        }
+        Location.MergeFrom(other.Location);
+      }
+      if (other.HasLanguageCode) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4241,6 +4397,25 @@ namespace Google.Geo.Weather.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            if (location_ == null) {
+              Location = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4256,6 +4431,25 @@ namespace Google.Geo.Weather.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            if (location_ == null) {
+              Location = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4264,11 +4458,7 @@ namespace Google.Geo.Weather.V1 {
   }
 
   /// <summary>
-  /// (-- Response for the LookupPublicAlerts RPC. --)
-  /// (-- TODO(418938868): mikesky - Add public weather alert records to the
-  /// response. Reason: We want to parallelize our work and creating a simple proto
-  /// for quick approval could help us do other tasks while the larger proto is
-  /// being approved. --)
+  /// Response for the LookupPublicAlerts RPC.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupPublicAlertsResponse : pb::IMessage<LookupPublicAlertsResponse>
@@ -4305,6 +4495,9 @@ namespace Google.Geo.Weather.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LookupPublicAlertsResponse(LookupPublicAlertsResponse other) : this() {
+      weatherAlerts_ = other.weatherAlerts_.Clone();
+      regionCode_ = other.regionCode_;
+      nextPageToken_ = other.nextPageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4312,6 +4505,54 @@ namespace Google.Geo.Weather.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LookupPublicAlertsResponse Clone() {
       return new LookupPublicAlertsResponse(this);
+    }
+
+    /// <summary>Field number for the "weather_alerts" field.</summary>
+    public const int WeatherAlertsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Geo.Weather.V1.PublicAlerts> _repeated_weatherAlerts_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Geo.Weather.V1.PublicAlerts.Parser);
+    private readonly pbc::RepeatedField<global::Google.Geo.Weather.V1.PublicAlerts> weatherAlerts_ = new pbc::RepeatedField<global::Google.Geo.Weather.V1.PublicAlerts>();
+    /// <summary>
+    /// The public weather alert records, according to the number of alerts and
+    /// page size specified in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Geo.Weather.V1.PublicAlerts> WeatherAlerts {
+      get { return weatherAlerts_; }
+    }
+
+    /// <summary>Field number for the "region_code" field.</summary>
+    public const int RegionCodeFieldNumber = 2;
+    private string regionCode_ = "";
+    /// <summary>
+    /// The ISO_3166-1 alpha-2 code of the region corresponding to the
+    /// location provided in the request. The region is stated using
+    /// ISO_3166-1_alpha-2.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RegionCode {
+      get { return regionCode_; }
+      set {
+        regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 3;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token that can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4329,6 +4570,9 @@ namespace Google.Geo.Weather.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!weatherAlerts_.Equals(other.weatherAlerts_)) return false;
+      if (RegionCode != other.RegionCode) return false;
+      if (NextPageToken != other.NextPageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4336,6 +4580,9 @@ namespace Google.Geo.Weather.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= weatherAlerts_.GetHashCode();
+      if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4354,6 +4601,15 @@ namespace Google.Geo.Weather.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      weatherAlerts_.WriteTo(output, _repeated_weatherAlerts_codec);
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RegionCode);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4364,6 +4620,15 @@ namespace Google.Geo.Weather.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      weatherAlerts_.WriteTo(ref output, _repeated_weatherAlerts_codec);
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RegionCode);
+      }
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4374,6 +4639,13 @@ namespace Google.Geo.Weather.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += weatherAlerts_.CalculateSize(_repeated_weatherAlerts_codec);
+      if (RegionCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
+      }
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4385,6 +4657,13 @@ namespace Google.Geo.Weather.V1 {
     public void MergeFrom(LookupPublicAlertsResponse other) {
       if (other == null) {
         return;
+      }
+      weatherAlerts_.Add(other.weatherAlerts_);
+      if (other.RegionCode.Length != 0) {
+        RegionCode = other.RegionCode;
+      }
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4401,6 +4680,18 @@ namespace Google.Geo.Weather.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            weatherAlerts_.AddEntriesFrom(input, _repeated_weatherAlerts_codec);
+            break;
+          }
+          case 18: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4416,6 +4707,18 @@ namespace Google.Geo.Weather.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            weatherAlerts_.AddEntriesFrom(ref input, _repeated_weatherAlerts_codec);
+            break;
+          }
+          case 18: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
         }
       }
     }

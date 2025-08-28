@@ -370,8 +370,8 @@ namespace Google.Geo.Weather.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual LookupPublicAlertsResponse LookupPublicAlerts(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="PublicAlerts"/> resources.</returns>
+        public virtual gax::PagedEnumerable<LookupPublicAlertsResponse, PublicAlerts> LookupPublicAlerts(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -379,18 +379,9 @@ namespace Google.Geo.Weather.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LookupPublicAlertsResponse> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="PublicAlerts"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<LookupPublicAlertsResponse, PublicAlerts> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns public weather alerts for a given location.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LookupPublicAlertsResponse> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, st::CancellationToken cancellationToken) =>
-            LookupPublicAlertsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Weather client wrapper implementation, for convenient use.</summary>
@@ -576,11 +567,11 @@ namespace Google.Geo.Weather.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override LookupPublicAlertsResponse LookupPublicAlerts(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="PublicAlerts"/> resources.</returns>
+        public override gax::PagedEnumerable<LookupPublicAlertsResponse, PublicAlerts> LookupPublicAlerts(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LookupPublicAlertsRequest(ref request, ref callSettings);
-            return _callLookupPublicAlerts.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<LookupPublicAlertsRequest, LookupPublicAlertsResponse, PublicAlerts>(_callLookupPublicAlerts, request, callSettings);
         }
 
         /// <summary>
@@ -588,11 +579,11 @@ namespace Google.Geo.Weather.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<LookupPublicAlertsResponse> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="PublicAlerts"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<LookupPublicAlertsResponse, PublicAlerts> LookupPublicAlertsAsync(LookupPublicAlertsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LookupPublicAlertsRequest(ref request, ref callSettings);
-            return _callLookupPublicAlerts.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<LookupPublicAlertsRequest, LookupPublicAlertsResponse, PublicAlerts>(_callLookupPublicAlerts, request, callSettings);
         }
     }
 
@@ -605,6 +596,10 @@ namespace Google.Geo.Weather.V1
     }
 
     public partial class LookupHistoryHoursRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class LookupPublicAlertsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -628,6 +623,14 @@ namespace Google.Geo.Weather.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<HistoryHour> GetEnumerator() => HistoryHours.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class LookupPublicAlertsResponse : gaxgrpc::IPageResponse<PublicAlerts>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PublicAlerts> GetEnumerator() => WeatherAlerts.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
