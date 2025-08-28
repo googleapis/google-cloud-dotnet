@@ -3321,12 +3321,12 @@
         },
         {
             "id": "Google.Cloud.Video.Transcoder.V1",
-            "currentVersion": "2.10.0",
+            "currentVersion": "2.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-22T08:07:21.961824403Z",
+            "releaseTimestamp": "2025-08-28T07:55:00.793743881Z",
             "lastGeneratedCommit": "c58a1bb42ebe2297b1ce25d75f309475332437c6",
-            "lastReleasedCommit": "142ec419af024eed5faa4e793e17c7a37a1a7f12",
+            "lastReleasedCommit": "c58a1bb42ebe2297b1ce25d75f309475332437c6",
             "apiPaths": [
                 "google/cloud/video/transcoder/v1"
             ],

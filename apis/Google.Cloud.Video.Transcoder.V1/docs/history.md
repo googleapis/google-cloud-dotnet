@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.11.0, released 2025-08-28
+
+### New features
+
+- Add support for automatically generating subtitle for input videos
+
 ## Version 2.10.0, released 2025-07-22
 
 ### New features
