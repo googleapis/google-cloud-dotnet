@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta48, released 2025-08-28
+
+### New features
+
+- Add API response for Gen AI Evaluation in Tuning
+- Add `disable_container_logging` in v1beta1 api
+
 ## Version 1.0.0-beta47, released 2025-08-14
 
 ### New features
