@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-beta00</Version>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Recommended Google client library to access the Google Cloud Security Compliance API, which helps ensure that your Google Cloud infrastructure, workloads, and data meet the security and regulatory requirements of your organization.</Description>
+    <PackageTags>Google;Cloud</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" />
+    <PackageReference Include="Google.Cloud.Location" VersionOverride="[2.3.0, 3.0.0)" />
+    <PackageReference Include="Google.LongRunning" VersionOverride="[3.3.0, 4.0.0)" />
+    <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4650 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.CloudSecurityCompliance.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.cloudsecuritycompliance.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_sync",
+      "title": "ListFrameworksRequestObject",
+      "description": "Snippet for ListFrameworks",
+      "file": "ConfigClient.ListFrameworksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworks",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListFrameworks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksResponse, Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListFrameworks",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListFrameworks",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_async",
+      "title": "ListFrameworksRequestObjectAsync",
+      "description": "Snippet for ListFrameworksAsync",
+      "file": "ConfigClient.ListFrameworksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworksAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListFrameworksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksResponse, Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListFrameworks",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListFrameworks",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_sync_flattened",
+      "title": "ListFrameworks",
+      "description": "Snippet for ListFrameworks",
+      "file": "ConfigClient.ListFrameworksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworks",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListFrameworks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksResponse, Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListFrameworks",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListFrameworks",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_async_flattened",
+      "title": "ListFrameworksAsync",
+      "description": "Snippet for ListFrameworksAsync",
+      "file": "ConfigClient.ListFrameworksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworksAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListFrameworksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksResponse, Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListFrameworks",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListFrameworks",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_sync_flattened_resourceNames",
+      "title": "ListFrameworksResourceNames",
+      "description": "Snippet for ListFrameworks",
+      "file": "ConfigClient.ListFrameworksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworks",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListFrameworks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksResponse, Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListFrameworks",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListFrameworks",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_async_flattened_resourceNames",
+      "title": "ListFrameworksResourceNamesAsync",
+      "description": "Snippet for ListFrameworksAsync",
+      "file": "ConfigClient.ListFrameworksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworksAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListFrameworksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworksResponse, Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListFrameworks",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListFrameworks",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetFramework_sync",
+      "title": "GetFrameworkRequestObject",
+      "description": "Snippet for GetFramework",
+      "file": "ConfigClient.GetFrameworkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetFramework_async",
+      "title": "GetFrameworkRequestObjectAsync",
+      "description": "Snippet for GetFrameworkAsync",
+      "file": "ConfigClient.GetFrameworkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetFramework_sync_flattened",
+      "title": "GetFramework",
+      "description": "Snippet for GetFramework",
+      "file": "ConfigClient.GetFrameworkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetFramework",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetFramework_async_flattened",
+      "title": "GetFrameworkAsync",
+      "description": "Snippet for GetFrameworkAsync",
+      "file": "ConfigClient.GetFrameworkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetFramework_sync_flattened_resourceNames",
+      "title": "GetFrameworkResourceNames",
+      "description": "Snippet for GetFramework",
+      "file": "ConfigClient.GetFrameworkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetFramework_async_flattened_resourceNames",
+      "title": "GetFrameworkResourceNamesAsync",
+      "description": "Snippet for GetFrameworkAsync",
+      "file": "ConfigClient.GetFrameworkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync",
+      "title": "CreateFrameworkRequestObject",
+      "description": "Snippet for CreateFramework",
+      "file": "ConfigClient.CreateFrameworkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateFramework_async",
+      "title": "CreateFrameworkRequestObjectAsync",
+      "description": "Snippet for CreateFrameworkAsync",
+      "file": "ConfigClient.CreateFrameworkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync_flattened",
+      "title": "CreateFramework",
+      "description": "Snippet for CreateFramework",
+      "file": "ConfigClient.CreateFrameworkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateFramework",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+            "name": "framework"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateFramework_async_flattened",
+      "title": "CreateFrameworkAsync",
+      "description": "Snippet for CreateFrameworkAsync",
+      "file": "ConfigClient.CreateFrameworkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+            "name": "framework"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateFramework_sync_flattened_resourceNames",
+      "title": "CreateFrameworkResourceNames",
+      "description": "Snippet for CreateFramework",
+      "file": "ConfigClient.CreateFrameworkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+            "name": "framework"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateFramework_async_flattened_resourceNames",
+      "title": "CreateFrameworkResourceNamesAsync",
+      "description": "Snippet for CreateFrameworkAsync",
+      "file": "ConfigClient.CreateFrameworkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+            "name": "framework"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateFramework_sync",
+      "title": "UpdateFrameworkRequestObject",
+      "description": "Snippet for UpdateFramework",
+      "file": "ConfigClient.UpdateFrameworkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.UpdateFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateFramework_async",
+      "title": "UpdateFrameworkRequestObjectAsync",
+      "description": "Snippet for UpdateFrameworkAsync",
+      "file": "ConfigClient.UpdateFrameworkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.UpdateFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateFramework_sync_flattened",
+      "title": "UpdateFramework",
+      "description": "Snippet for UpdateFramework",
+      "file": "ConfigClient.UpdateFrameworkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+            "name": "framework"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateFramework_async_flattened",
+      "title": "UpdateFrameworkAsync",
+      "description": "Snippet for UpdateFrameworkAsync",
+      "file": "ConfigClient.UpdateFrameworkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.Framework",
+            "name": "framework"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.Framework>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteFramework_sync",
+      "title": "DeleteFrameworkRequestObject",
+      "description": "Snippet for DeleteFramework",
+      "file": "ConfigClient.DeleteFrameworkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteFramework_async",
+      "title": "DeleteFrameworkRequestObjectAsync",
+      "description": "Snippet for DeleteFrameworkAsync",
+      "file": "ConfigClient.DeleteFrameworkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteFramework_sync_flattened",
+      "title": "DeleteFramework",
+      "description": "Snippet for DeleteFramework",
+      "file": "ConfigClient.DeleteFrameworkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteFramework",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteFramework_async_flattened",
+      "title": "DeleteFrameworkAsync",
+      "description": "Snippet for DeleteFrameworkAsync",
+      "file": "ConfigClient.DeleteFrameworkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteFramework_sync_flattened_resourceNames",
+      "title": "DeleteFrameworkResourceNames",
+      "description": "Snippet for DeleteFramework",
+      "file": "ConfigClient.DeleteFrameworkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFramework",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteFramework",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteFramework_async_flattened_resourceNames",
+      "title": "DeleteFrameworkResourceNamesAsync",
+      "description": "Snippet for DeleteFrameworkAsync",
+      "file": "ConfigClient.DeleteFrameworkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteFrameworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteFramework",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteFramework",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListCloudControls_sync",
+      "title": "ListCloudControlsRequestObject",
+      "description": "Snippet for ListCloudControls",
+      "file": "ConfigClient.ListCloudControlsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControls",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListCloudControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListCloudControls",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListCloudControls_async",
+      "title": "ListCloudControlsRequestObjectAsync",
+      "description": "Snippet for ListCloudControlsAsync",
+      "file": "ConfigClient.ListCloudControlsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListCloudControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListCloudControls",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListCloudControls_sync_flattened",
+      "title": "ListCloudControls",
+      "description": "Snippet for ListCloudControls",
+      "file": "ConfigClient.ListCloudControlsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControls",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListCloudControls",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListCloudControls",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListCloudControls_async_flattened",
+      "title": "ListCloudControlsAsync",
+      "description": "Snippet for ListCloudControlsAsync",
+      "file": "ConfigClient.ListCloudControlsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListCloudControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListCloudControls",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListCloudControls_sync_flattened_resourceNames",
+      "title": "ListCloudControlsResourceNames",
+      "description": "Snippet for ListCloudControls",
+      "file": "ConfigClient.ListCloudControlsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControls",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListCloudControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListCloudControls",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListCloudControls_async_flattened_resourceNames",
+      "title": "ListCloudControlsResourceNamesAsync",
+      "description": "Snippet for ListCloudControlsAsync",
+      "file": "ConfigClient.ListCloudControlsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.ListCloudControlsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListCloudControls",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetCloudControl_sync",
+      "title": "GetCloudControlRequestObject",
+      "description": "Snippet for GetCloudControl",
+      "file": "ConfigClient.GetCloudControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetCloudControl_async",
+      "title": "GetCloudControlRequestObjectAsync",
+      "description": "Snippet for GetCloudControlAsync",
+      "file": "ConfigClient.GetCloudControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetCloudControl_sync_flattened",
+      "title": "GetCloudControl",
+      "description": "Snippet for GetCloudControl",
+      "file": "ConfigClient.GetCloudControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetCloudControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetCloudControl_async_flattened",
+      "title": "GetCloudControlAsync",
+      "description": "Snippet for GetCloudControlAsync",
+      "file": "ConfigClient.GetCloudControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetCloudControl_sync_flattened_resourceNames",
+      "title": "GetCloudControlResourceNames",
+      "description": "Snippet for GetCloudControl",
+      "file": "ConfigClient.GetCloudControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_GetCloudControl_async_flattened_resourceNames",
+      "title": "GetCloudControlResourceNamesAsync",
+      "description": "Snippet for GetCloudControlAsync",
+      "file": "ConfigClient.GetCloudControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.GetCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.GetCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_sync",
+      "title": "CreateCloudControlRequestObject",
+      "description": "Snippet for CreateCloudControl",
+      "file": "ConfigClient.CreateCloudControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async",
+      "title": "CreateCloudControlRequestObjectAsync",
+      "description": "Snippet for CreateCloudControlAsync",
+      "file": "ConfigClient.CreateCloudControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_sync_flattened",
+      "title": "CreateCloudControl",
+      "description": "Snippet for CreateCloudControl",
+      "file": "ConfigClient.CreateCloudControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateCloudControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+            "name": "cloudControl"
+          },
+          {
+            "type": "System.String",
+            "name": "cloudControlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async_flattened",
+      "title": "CreateCloudControlAsync",
+      "description": "Snippet for CreateCloudControlAsync",
+      "file": "ConfigClient.CreateCloudControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+            "name": "cloudControl"
+          },
+          {
+            "type": "System.String",
+            "name": "cloudControlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_sync_flattened_resourceNames",
+      "title": "CreateCloudControlResourceNames",
+      "description": "Snippet for CreateCloudControl",
+      "file": "ConfigClient.CreateCloudControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+            "name": "cloudControl"
+          },
+          {
+            "type": "System.String",
+            "name": "cloudControlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_CreateCloudControl_async_flattened_resourceNames",
+      "title": "CreateCloudControlResourceNamesAsync",
+      "description": "Snippet for CreateCloudControlAsync",
+      "file": "ConfigClient.CreateCloudControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.CreateCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+            "name": "cloudControl"
+          },
+          {
+            "type": "System.String",
+            "name": "cloudControlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.CreateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateCloudControl_sync",
+      "title": "UpdateCloudControlRequestObject",
+      "description": "Snippet for UpdateCloudControl",
+      "file": "ConfigClient.UpdateCloudControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.UpdateCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateCloudControl_async",
+      "title": "UpdateCloudControlRequestObjectAsync",
+      "description": "Snippet for UpdateCloudControlAsync",
+      "file": "ConfigClient.UpdateCloudControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.UpdateCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateCloudControl_sync_flattened",
+      "title": "UpdateCloudControl",
+      "description": "Snippet for UpdateCloudControl",
+      "file": "ConfigClient.UpdateCloudControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+            "name": "cloudControl"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_UpdateCloudControl_async_flattened",
+      "title": "UpdateCloudControlAsync",
+      "description": "Snippet for UpdateCloudControlAsync",
+      "file": "ConfigClient.UpdateCloudControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.UpdateCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControl",
+            "name": "cloudControl"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControl>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "UpdateCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.UpdateCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteCloudControl_sync",
+      "title": "DeleteCloudControlRequestObject",
+      "description": "Snippet for DeleteCloudControl",
+      "file": "ConfigClient.DeleteCloudControlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.DeleteCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteCloudControl_async",
+      "title": "DeleteCloudControlRequestObjectAsync",
+      "description": "Snippet for DeleteCloudControlAsync",
+      "file": "ConfigClient.DeleteCloudControlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.DeleteCloudControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteCloudControl_sync_flattened",
+      "title": "DeleteCloudControl",
+      "description": "Snippet for DeleteCloudControl",
+      "file": "ConfigClient.DeleteCloudControlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteCloudControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteCloudControl_async_flattened",
+      "title": "DeleteCloudControlAsync",
+      "description": "Snippet for DeleteCloudControlAsync",
+      "file": "ConfigClient.DeleteCloudControlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteCloudControl_sync_flattened_resourceNames",
+      "title": "DeleteCloudControlResourceNames",
+      "description": "Snippet for DeleteCloudControl",
+      "file": "ConfigClient.DeleteCloudControlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCloudControl",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteCloudControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Config_DeleteCloudControl_async_flattened_resourceNames",
+      "title": "DeleteCloudControlResourceNamesAsync",
+      "description": "Snippet for DeleteCloudControlAsync",
+      "file": "ConfigClient.DeleteCloudControlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCloudControlAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient.DeleteCloudControlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeleteCloudControl",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Config.DeleteCloudControl",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_sync",
+      "title": "CreateFrameworkDeploymentRequestObject",
+      "description": "Snippet for CreateFrameworkDeployment",
+      "file": "DeploymentClient.CreateFrameworkDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.CreateFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.CreateFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async",
+      "title": "CreateFrameworkDeploymentRequestObjectAsync",
+      "description": "Snippet for CreateFrameworkDeploymentAsync",
+      "file": "DeploymentClient.CreateFrameworkDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.CreateFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.CreateFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_sync_flattened",
+      "title": "CreateFrameworkDeployment",
+      "description": "Snippet for CreateFrameworkDeployment",
+      "file": "DeploymentClient.CreateFrameworkDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.CreateFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+            "name": "frameworkDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.CreateFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async_flattened",
+      "title": "CreateFrameworkDeploymentAsync",
+      "description": "Snippet for CreateFrameworkDeploymentAsync",
+      "file": "DeploymentClient.CreateFrameworkDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.CreateFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+            "name": "frameworkDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.CreateFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_sync_flattened_resourceNames",
+      "title": "CreateFrameworkDeploymentResourceNames",
+      "description": "Snippet for CreateFrameworkDeployment",
+      "file": "DeploymentClient.CreateFrameworkDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.CreateFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+            "name": "frameworkDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.CreateFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_CreateFrameworkDeployment_async_flattened_resourceNames",
+      "title": "CreateFrameworkDeploymentResourceNamesAsync",
+      "description": "Snippet for CreateFrameworkDeploymentAsync",
+      "file": "DeploymentClient.CreateFrameworkDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.CreateFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+            "name": "frameworkDeployment"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkDeploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.CreateFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_DeleteFrameworkDeployment_sync",
+      "title": "DeleteFrameworkDeploymentRequestObject",
+      "description": "Snippet for DeleteFrameworkDeployment",
+      "file": "DeploymentClient.DeleteFrameworkDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.DeleteFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "DeleteFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.DeleteFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_DeleteFrameworkDeployment_async",
+      "title": "DeleteFrameworkDeploymentRequestObjectAsync",
+      "description": "Snippet for DeleteFrameworkDeploymentAsync",
+      "file": "DeploymentClient.DeleteFrameworkDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.DeleteFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "DeleteFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.DeleteFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_DeleteFrameworkDeployment_sync_flattened",
+      "title": "DeleteFrameworkDeployment",
+      "description": "Snippet for DeleteFrameworkDeployment",
+      "file": "DeploymentClient.DeleteFrameworkDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.DeleteFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "DeleteFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.DeleteFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_DeleteFrameworkDeployment_async_flattened",
+      "title": "DeleteFrameworkDeploymentAsync",
+      "description": "Snippet for DeleteFrameworkDeploymentAsync",
+      "file": "DeploymentClient.DeleteFrameworkDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.DeleteFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "DeleteFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.DeleteFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_DeleteFrameworkDeployment_sync_flattened_resourceNames",
+      "title": "DeleteFrameworkDeploymentResourceNames",
+      "description": "Snippet for DeleteFrameworkDeployment",
+      "file": "DeploymentClient.DeleteFrameworkDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.DeleteFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "DeleteFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.DeleteFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_DeleteFrameworkDeployment_async_flattened_resourceNames",
+      "title": "DeleteFrameworkDeploymentResourceNamesAsync",
+      "description": "Snippet for DeleteFrameworkDeploymentAsync",
+      "file": "DeploymentClient.DeleteFrameworkDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.DeleteFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "DeleteFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.DeleteFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetFrameworkDeployment_sync",
+      "title": "GetFrameworkDeploymentRequestObject",
+      "description": "Snippet for GetFrameworkDeployment",
+      "file": "DeploymentClient.GetFrameworkDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetFrameworkDeployment_async",
+      "title": "GetFrameworkDeploymentRequestObjectAsync",
+      "description": "Snippet for GetFrameworkDeploymentAsync",
+      "file": "DeploymentClient.GetFrameworkDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetFrameworkDeployment_sync_flattened",
+      "title": "GetFrameworkDeployment",
+      "description": "Snippet for GetFrameworkDeployment",
+      "file": "DeploymentClient.GetFrameworkDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetFrameworkDeployment_async_flattened",
+      "title": "GetFrameworkDeploymentAsync",
+      "description": "Snippet for GetFrameworkDeploymentAsync",
+      "file": "DeploymentClient.GetFrameworkDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetFrameworkDeployment_sync_flattened_resourceNames",
+      "title": "GetFrameworkDeploymentResourceNames",
+      "description": "Snippet for GetFrameworkDeployment",
+      "file": "DeploymentClient.GetFrameworkDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetFrameworkDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetFrameworkDeployment_async_flattened_resourceNames",
+      "title": "GetFrameworkDeploymentResourceNamesAsync",
+      "description": "Snippet for GetFrameworkDeploymentAsync",
+      "file": "DeploymentClient.GetFrameworkDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetFrameworkDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetFrameworkDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_sync",
+      "title": "ListFrameworkDeploymentsRequestObject",
+      "description": "Snippet for ListFrameworkDeployments",
+      "file": "DeploymentClient.ListFrameworkDeploymentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkDeployments",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListFrameworkDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListFrameworkDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async",
+      "title": "ListFrameworkDeploymentsRequestObjectAsync",
+      "description": "Snippet for ListFrameworkDeploymentsAsync",
+      "file": "DeploymentClient.ListFrameworkDeploymentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkDeploymentsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListFrameworkDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListFrameworkDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_sync_flattened",
+      "title": "ListFrameworkDeployments",
+      "description": "Snippet for ListFrameworkDeployments",
+      "file": "DeploymentClient.ListFrameworkDeploymentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkDeployments",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListFrameworkDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListFrameworkDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async_flattened",
+      "title": "ListFrameworkDeploymentsAsync",
+      "description": "Snippet for ListFrameworkDeploymentsAsync",
+      "file": "DeploymentClient.ListFrameworkDeploymentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkDeploymentsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListFrameworkDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListFrameworkDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_sync_flattened_resourceNames",
+      "title": "ListFrameworkDeploymentsResourceNames",
+      "description": "Snippet for ListFrameworkDeployments",
+      "file": "DeploymentClient.ListFrameworkDeploymentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkDeployments",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListFrameworkDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListFrameworkDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListFrameworkDeployments_async_flattened_resourceNames",
+      "title": "ListFrameworkDeploymentsResourceNamesAsync",
+      "description": "Snippet for ListFrameworkDeploymentsAsync",
+      "file": "DeploymentClient.ListFrameworkDeploymentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkDeploymentsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListFrameworkDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListFrameworkDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetCloudControlDeployment_sync",
+      "title": "GetCloudControlDeploymentRequestObject",
+      "description": "Snippet for GetCloudControlDeployment",
+      "file": "DeploymentClient.GetCloudControlDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetCloudControlDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetCloudControlDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetCloudControlDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetCloudControlDeployment_async",
+      "title": "GetCloudControlDeploymentRequestObjectAsync",
+      "description": "Snippet for GetCloudControlDeploymentAsync",
+      "file": "DeploymentClient.GetCloudControlDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetCloudControlDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetCloudControlDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetCloudControlDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetCloudControlDeployment_sync_flattened",
+      "title": "GetCloudControlDeployment",
+      "description": "Snippet for GetCloudControlDeployment",
+      "file": "DeploymentClient.GetCloudControlDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetCloudControlDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetCloudControlDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetCloudControlDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetCloudControlDeployment_async_flattened",
+      "title": "GetCloudControlDeploymentAsync",
+      "description": "Snippet for GetCloudControlDeploymentAsync",
+      "file": "DeploymentClient.GetCloudControlDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetCloudControlDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetCloudControlDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetCloudControlDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetCloudControlDeployment_sync_flattened_resourceNames",
+      "title": "GetCloudControlDeploymentResourceNames",
+      "description": "Snippet for GetCloudControlDeployment",
+      "file": "DeploymentClient.GetCloudControlDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlDeployment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetCloudControlDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetCloudControlDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetCloudControlDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_GetCloudControlDeployment_async_flattened_resourceNames",
+      "title": "GetCloudControlDeploymentResourceNamesAsync",
+      "description": "Snippet for GetCloudControlDeploymentAsync",
+      "file": "DeploymentClient.GetCloudControlDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudControlDeploymentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.GetCloudControlDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "GetCloudControlDeployment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.GetCloudControlDeployment",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListCloudControlDeployments_sync",
+      "title": "ListCloudControlDeploymentsRequestObject",
+      "description": "Snippet for ListCloudControlDeployments",
+      "file": "DeploymentClient.ListCloudControlDeploymentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlDeployments",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListCloudControlDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListCloudControlDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListCloudControlDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListCloudControlDeployments_async",
+      "title": "ListCloudControlDeploymentsRequestObjectAsync",
+      "description": "Snippet for ListCloudControlDeploymentsAsync",
+      "file": "DeploymentClient.ListCloudControlDeploymentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlDeploymentsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListCloudControlDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListCloudControlDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListCloudControlDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListCloudControlDeployments_sync_flattened",
+      "title": "ListCloudControlDeployments",
+      "description": "Snippet for ListCloudControlDeployments",
+      "file": "DeploymentClient.ListCloudControlDeploymentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlDeployments",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListCloudControlDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListCloudControlDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListCloudControlDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListCloudControlDeployments_async_flattened",
+      "title": "ListCloudControlDeploymentsAsync",
+      "description": "Snippet for ListCloudControlDeploymentsAsync",
+      "file": "DeploymentClient.ListCloudControlDeploymentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlDeploymentsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListCloudControlDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListCloudControlDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListCloudControlDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListCloudControlDeployments_sync_flattened_resourceNames",
+      "title": "ListCloudControlDeploymentsResourceNames",
+      "description": "Snippet for ListCloudControlDeployments",
+      "file": "DeploymentClient.ListCloudControlDeploymentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlDeployments",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListCloudControlDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListCloudControlDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListCloudControlDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Deployment_ListCloudControlDeployments_async_flattened_resourceNames",
+      "title": "ListCloudControlDeploymentsResourceNamesAsync",
+      "description": "Snippet for ListCloudControlDeploymentsAsync",
+      "file": "DeploymentClient.ListCloudControlDeploymentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudControlDeploymentsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient.ListCloudControlDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlDeploymentsResponse, Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>",
+        "client": {
+          "shortName": "DeploymentClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.DeploymentClient"
+        },
+        "method": {
+          "shortName": "ListCloudControlDeployments",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment.ListCloudControlDeployments",
+          "service": {
+            "shortName": "Deployment",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Deployment"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
