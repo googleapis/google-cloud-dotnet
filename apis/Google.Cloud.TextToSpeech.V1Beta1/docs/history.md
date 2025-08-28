@@ -1,5 +1,30 @@
 # Version history
 
+## Version 2.0.0-beta13, released 2025-08-28
+
+### New features
+
+- Support promptable voices by specifying a model name and a prompt
+- Add enum value M4A to enum AudioEncoding
+
+### Documentation improvements
+
+- A comment for method `StreamingSynthesize` in service `TextToSpeech` is changed
+- A comment for enum value `AUDIO_ENCODING_UNSPECIFIED` in enum `AudioEncoding` is changed
+- A comment for enum value `OGG_OPUS` in enum `AudioEncoding` is changed
+- A comment for enum value `PCM` in enum `AudioEncoding` is changed
+- A comment for field `low_latency_journey_synthesis` in message `.google.cloud.texttospeech.v1beta1.AdvancedVoiceOptions` is changed
+- A comment for enum value `PHONETIC_ENCODING_IPA` in enum `PhoneticEncoding` is changed
+- A comment for enum value `PHONETIC_ENCODING_X_SAMPA` in enum `PhoneticEncoding` is changed
+- A comment for field `phrase` in message `.google.cloud.texttospeech.v1beta1.CustomPronunciationParams` is changed
+- A comment for field `pronunciations` in message `.google.cloud.texttospeech.v1beta1.CustomPronunciations` is changed
+- A comment for message `MultiSpeakerMarkup` is changed
+- A comment for field `custom_pronunciations` in message `.google.cloud.texttospeech.v1beta1.SynthesisInput` is changed
+- A comment for field `voice_clone` in message `.google.cloud.texttospeech.v1beta1.VoiceSelectionParams` is changed
+- A comment for field `speaking_rate` in message `.google.cloud.texttospeech.v1beta1.AudioConfig` is changed
+- A comment for field `audio_encoding` in message `.google.cloud.texttospeech.v1beta1.StreamingAudioConfig` is changed
+- A comment for field `text` in message `.google.cloud.texttospeech.v1beta1.StreamingSynthesisInput` is changed
+
 ## Version 2.0.0-beta12, released 2025-01-06
 
 ### New features
