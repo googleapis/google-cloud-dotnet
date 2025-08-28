@@ -21,6 +21,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.GdcHardwareManagement.V1Alpha;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
+    using Google.Type;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -1087,6 +1088,191 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceSubmitOrderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrder</summary>
+        public void CancelOrderRequestObject()
+        {
+            // Snippet: CancelOrder(CancelOrderRequest, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            CancelOrderRequest request = new CancelOrderRequest
+            {
+                OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.CancelOrder(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceCancelOrder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrderAsync</summary>
+        public async Task CancelOrderRequestObjectAsync()
+        {
+            // Snippet: CancelOrderAsync(CancelOrderRequest, CallSettings)
+            // Additional: CancelOrderAsync(CancelOrderRequest, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelOrderRequest request = new CancelOrderRequest
+            {
+                OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.CancelOrderAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceCancelOrderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrder</summary>
+        public void CancelOrder()
+        {
+            // Snippet: CancelOrder(string, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/orders/[ORDER]";
+            // Make the request
+            Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.CancelOrder(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceCancelOrder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrderAsync</summary>
+        public async Task CancelOrderAsync()
+        {
+            // Snippet: CancelOrderAsync(string, CallSettings)
+            // Additional: CancelOrderAsync(string, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/orders/[ORDER]";
+            // Make the request
+            Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.CancelOrderAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceCancelOrderAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrder</summary>
+        public void CancelOrderResourceNames()
+        {
+            // Snippet: CancelOrder(OrderName, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            OrderName name = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]");
+            // Make the request
+            Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.CancelOrder(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceCancelOrder(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelOrderAsync</summary>
+        public async Task CancelOrderResourceNamesAsync()
+        {
+            // Snippet: CancelOrderAsync(OrderName, CallSettings)
+            // Additional: CancelOrderAsync(OrderName, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            OrderName name = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]");
+            // Make the request
+            Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.CancelOrderAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceCancelOrderAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -6194,6 +6380,195 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Zone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestOrderDateChange</summary>
+        public void RequestOrderDateChangeRequestObject()
+        {
+            // Snippet: RequestOrderDateChange(RequestOrderDateChangeRequest, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            RequestOrderDateChangeRequest request = new RequestOrderDateChangeRequest
+            {
+                OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
+                RequestedDate = new Date(),
+            };
+            // Make the request
+            Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.RequestOrderDateChange(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceRequestOrderDateChange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestOrderDateChangeAsync</summary>
+        public async Task RequestOrderDateChangeRequestObjectAsync()
+        {
+            // Snippet: RequestOrderDateChangeAsync(RequestOrderDateChangeRequest, CallSettings)
+            // Additional: RequestOrderDateChangeAsync(RequestOrderDateChangeRequest, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            RequestOrderDateChangeRequest request = new RequestOrderDateChangeRequest
+            {
+                OrderName = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]"),
+                RequestedDate = new Date(),
+            };
+            // Make the request
+            Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.RequestOrderDateChangeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceRequestOrderDateChangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestOrderDateChange</summary>
+        public void RequestOrderDateChange()
+        {
+            // Snippet: RequestOrderDateChange(string, Date, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/orders/[ORDER]";
+            Date requestedDate = new Date();
+            // Make the request
+            Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.RequestOrderDateChange(name, requestedDate);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceRequestOrderDateChange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestOrderDateChangeAsync</summary>
+        public async Task RequestOrderDateChangeAsync()
+        {
+            // Snippet: RequestOrderDateChangeAsync(string, Date, CallSettings)
+            // Additional: RequestOrderDateChangeAsync(string, Date, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/orders/[ORDER]";
+            Date requestedDate = new Date();
+            // Make the request
+            Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.RequestOrderDateChangeAsync(name, requestedDate);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceRequestOrderDateChangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestOrderDateChange</summary>
+        public void RequestOrderDateChangeResourceNames()
+        {
+            // Snippet: RequestOrderDateChange(OrderName, Date, CallSettings)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = GDCHardwareManagementClient.Create();
+            // Initialize request argument(s)
+            OrderName name = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]");
+            Date requestedDate = new Date();
+            // Make the request
+            Operation<Order, OperationMetadata> response = gDCHardwareManagementClient.RequestOrderDateChange(name, requestedDate);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = gDCHardwareManagementClient.PollOnceRequestOrderDateChange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestOrderDateChangeAsync</summary>
+        public async Task RequestOrderDateChangeResourceNamesAsync()
+        {
+            // Snippet: RequestOrderDateChangeAsync(OrderName, Date, CallSettings)
+            // Additional: RequestOrderDateChangeAsync(OrderName, Date, CancellationToken)
+            // Create client
+            GDCHardwareManagementClient gDCHardwareManagementClient = await GDCHardwareManagementClient.CreateAsync();
+            // Initialize request argument(s)
+            OrderName name = OrderName.FromProjectLocationOrder("[PROJECT]", "[LOCATION]", "[ORDER]");
+            Date requestedDate = new Date();
+            // Make the request
+            Operation<Order, OperationMetadata> response = await gDCHardwareManagementClient.RequestOrderDateChangeAsync(name, requestedDate);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Order, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Order result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Order, OperationMetadata> retrievedResponse = await gDCHardwareManagementClient.PollOnceRequestOrderDateChangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Order retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

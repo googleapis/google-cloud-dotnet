@@ -21,6 +21,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using gt = Google.Type;
 using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
@@ -61,6 +62,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             DeleteOrderOperationsSettings = existing.DeleteOrderOperationsSettings.Clone();
             SubmitOrderSettings = existing.SubmitOrderSettings;
             SubmitOrderOperationsSettings = existing.SubmitOrderOperationsSettings.Clone();
+            CancelOrderSettings = existing.CancelOrderSettings;
+            CancelOrderOperationsSettings = existing.CancelOrderOperationsSettings.Clone();
             ListSitesSettings = existing.ListSitesSettings;
             GetSiteSettings = existing.GetSiteSettings;
             CreateSiteSettings = existing.CreateSiteSettings;
@@ -104,6 +107,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             DeleteZoneOperationsSettings = existing.DeleteZoneOperationsSettings.Clone();
             SignalZoneStateSettings = existing.SignalZoneStateSettings;
             SignalZoneStateOperationsSettings = existing.SignalZoneStateOperationsSettings.Clone();
+            RequestOrderDateChangeSettings = existing.RequestOrderDateChangeSettings;
+            RequestOrderDateChangeOperationsSettings = existing.RequestOrderDateChangeOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -280,6 +285,42 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </list>
         /// </remarks>
         public lro::OperationsSettings SubmitOrderOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GDCHardwareManagementClient.CancelOrder</c> and <c>GDCHardwareManagementClient.CancelOrderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelOrderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GDCHardwareManagementClient.CancelOrder</c> and
+        /// <c>GDCHardwareManagementClient.CancelOrderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CancelOrderOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1024,6 +1065,37 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// </list>
         /// </remarks>
         public lro::OperationsSettings SignalZoneStateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GDCHardwareManagementClient.RequestOrderDateChange</c> and
+        /// <c>GDCHardwareManagementClient.RequestOrderDateChangeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RequestOrderDateChangeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GDCHardwareManagementClient.RequestOrderDateChange</c> and
+        /// <c>GDCHardwareManagementClient.RequestOrderDateChangeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RequestOrderDateChangeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2063,6 +2135,143 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Order, OperationMetadata>> SubmitOrderAsync(OrderName name, st::CancellationToken cancellationToken) =>
             SubmitOrderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> CancelOrder(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(CancelOrderRequest request, st::CancellationToken cancellationToken) =>
+            CancelOrderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CancelOrder</c>.</summary>
+        public virtual lro::OperationsClient CancelOrderOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CancelOrder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> PollOnceCancelOrder(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelOrderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelOrder</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> PollOnceCancelOrderAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelOrderOperationsClient, callSettings);
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order.
+        /// Format: `projects/{project}/locations/{location}/orders/{order}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> CancelOrder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelOrder(new CancelOrderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order.
+        /// Format: `projects/{project}/locations/{location}/orders/{order}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelOrderAsync(new CancelOrderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order.
+        /// Format: `projects/{project}/locations/{location}/orders/{order}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelOrderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order.
+        /// Format: `projects/{project}/locations/{location}/orders/{order}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> CancelOrder(OrderName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelOrder(new CancelOrderRequest
+            {
+                OrderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order.
+        /// Format: `projects/{project}/locations/{location}/orders/{order}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(OrderName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelOrderAsync(new CancelOrderRequest
+            {
+                OrderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order.
+        /// Format: `projects/{project}/locations/{location}/orders/{order}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(OrderName name, st::CancellationToken cancellationToken) =>
+            CancelOrderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists sites in a given project and location.
@@ -6454,6 +6663,172 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Zone, OperationMetadata>> SignalZoneStateAsync(ZoneName name, SignalZoneStateRequest.Types.StateSignal stateSignal, st::CancellationToken cancellationToken) =>
             SignalZoneStateAsync(name, stateSignal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> RequestOrderDateChange(RequestOrderDateChangeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(RequestOrderDateChangeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(RequestOrderDateChangeRequest request, st::CancellationToken cancellationToken) =>
+            RequestOrderDateChangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RequestOrderDateChange</c>.</summary>
+        public virtual lro::OperationsClient RequestOrderDateChangeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RequestOrderDateChange</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> PollOnceRequestOrderDateChange(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RequestOrderDateChangeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RequestOrderDateChange</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> PollOnceRequestOrderDateChangeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Order, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RequestOrderDateChangeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order to update.
+        /// Format: projects/{project}/locations/{location}/orders/{order}
+        /// </param>
+        /// <param name="requestedDate">
+        /// Required. The date to which the customer or Google wants to set the
+        /// scheduled installation date.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> RequestOrderDateChange(string name, gt::Date requestedDate, gaxgrpc::CallSettings callSettings = null) =>
+            RequestOrderDateChange(new RequestOrderDateChangeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RequestedDate = gax::GaxPreconditions.CheckNotNull(requestedDate, nameof(requestedDate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order to update.
+        /// Format: projects/{project}/locations/{location}/orders/{order}
+        /// </param>
+        /// <param name="requestedDate">
+        /// Required. The date to which the customer or Google wants to set the
+        /// scheduled installation date.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(string name, gt::Date requestedDate, gaxgrpc::CallSettings callSettings = null) =>
+            RequestOrderDateChangeAsync(new RequestOrderDateChangeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RequestedDate = gax::GaxPreconditions.CheckNotNull(requestedDate, nameof(requestedDate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order to update.
+        /// Format: projects/{project}/locations/{location}/orders/{order}
+        /// </param>
+        /// <param name="requestedDate">
+        /// Required. The date to which the customer or Google wants to set the
+        /// scheduled installation date.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(string name, gt::Date requestedDate, st::CancellationToken cancellationToken) =>
+            RequestOrderDateChangeAsync(name, requestedDate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order to update.
+        /// Format: projects/{project}/locations/{location}/orders/{order}
+        /// </param>
+        /// <param name="requestedDate">
+        /// Required. The date to which the customer or Google wants to set the
+        /// scheduled installation date.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Order, OperationMetadata> RequestOrderDateChange(OrderName name, gt::Date requestedDate, gaxgrpc::CallSettings callSettings = null) =>
+            RequestOrderDateChange(new RequestOrderDateChangeRequest
+            {
+                OrderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RequestedDate = gax::GaxPreconditions.CheckNotNull(requestedDate, nameof(requestedDate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order to update.
+        /// Format: projects/{project}/locations/{location}/orders/{order}
+        /// </param>
+        /// <param name="requestedDate">
+        /// Required. The date to which the customer or Google wants to set the
+        /// scheduled installation date.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(OrderName name, gt::Date requestedDate, gaxgrpc::CallSettings callSettings = null) =>
+            RequestOrderDateChangeAsync(new RequestOrderDateChangeRequest
+            {
+                OrderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RequestedDate = gax::GaxPreconditions.CheckNotNull(requestedDate, nameof(requestedDate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the order to update.
+        /// Format: projects/{project}/locations/{location}/orders/{order}
+        /// </param>
+        /// <param name="requestedDate">
+        /// Required. The date to which the customer or Google wants to set the
+        /// scheduled installation date.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(OrderName name, gt::Date requestedDate, st::CancellationToken cancellationToken) =>
+            RequestOrderDateChangeAsync(name, requestedDate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>GDCHardwareManagement client wrapper implementation, for convenient use.</summary>
@@ -6473,6 +6848,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         private readonly gaxgrpc::ApiCall<DeleteOrderRequest, lro::Operation> _callDeleteOrder;
 
         private readonly gaxgrpc::ApiCall<SubmitOrderRequest, lro::Operation> _callSubmitOrder;
+
+        private readonly gaxgrpc::ApiCall<CancelOrderRequest, lro::Operation> _callCancelOrder;
 
         private readonly gaxgrpc::ApiCall<ListSitesRequest, ListSitesResponse> _callListSites;
 
@@ -6532,6 +6909,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
 
         private readonly gaxgrpc::ApiCall<SignalZoneStateRequest, lro::Operation> _callSignalZoneState;
 
+        private readonly gaxgrpc::ApiCall<RequestOrderDateChangeRequest, lro::Operation> _callRequestOrderDateChange;
+
         /// <summary>
         /// Constructs a client wrapper for the GDCHardwareManagement service, with the specified gRPC client and
         /// settings.
@@ -6552,6 +6931,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             UpdateOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOrderOperationsSettings, logger);
             DeleteOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOrderOperationsSettings, logger);
             SubmitOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitOrderOperationsSettings, logger);
+            CancelOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelOrderOperationsSettings, logger);
             CreateSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSiteOperationsSettings, logger);
             UpdateSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSiteOperationsSettings, logger);
             DeleteSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSiteOperationsSettings, logger);
@@ -6566,6 +6946,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             UpdateZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateZoneOperationsSettings, logger);
             DeleteZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteZoneOperationsSettings, logger);
             SignalZoneStateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SignalZoneStateOperationsSettings, logger);
+            RequestOrderDateChangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RequestOrderDateChangeOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListOrders = clientHelper.BuildApiCall<ListOrdersRequest, ListOrdersResponse>("ListOrders", grpcClient.ListOrdersAsync, grpcClient.ListOrders, effectiveSettings.ListOrdersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOrders);
@@ -6585,6 +6966,9 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             _callSubmitOrder = clientHelper.BuildApiCall<SubmitOrderRequest, lro::Operation>("SubmitOrder", grpcClient.SubmitOrderAsync, grpcClient.SubmitOrder, effectiveSettings.SubmitOrderSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSubmitOrder);
             Modify_SubmitOrderApiCall(ref _callSubmitOrder);
+            _callCancelOrder = clientHelper.BuildApiCall<CancelOrderRequest, lro::Operation>("CancelOrder", grpcClient.CancelOrderAsync, grpcClient.CancelOrder, effectiveSettings.CancelOrderSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelOrder);
+            Modify_CancelOrderApiCall(ref _callCancelOrder);
             _callListSites = clientHelper.BuildApiCall<ListSitesRequest, ListSitesResponse>("ListSites", grpcClient.ListSitesAsync, grpcClient.ListSites, effectiveSettings.ListSitesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSites);
             Modify_ListSitesApiCall(ref _callListSites);
@@ -6672,6 +7056,9 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
             _callSignalZoneState = clientHelper.BuildApiCall<SignalZoneStateRequest, lro::Operation>("SignalZoneState", grpcClient.SignalZoneStateAsync, grpcClient.SignalZoneState, effectiveSettings.SignalZoneStateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSignalZoneState);
             Modify_SignalZoneStateApiCall(ref _callSignalZoneState);
+            _callRequestOrderDateChange = clientHelper.BuildApiCall<RequestOrderDateChangeRequest, lro::Operation>("RequestOrderDateChange", grpcClient.RequestOrderDateChangeAsync, grpcClient.RequestOrderDateChange, effectiveSettings.RequestOrderDateChangeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRequestOrderDateChange);
+            Modify_RequestOrderDateChangeApiCall(ref _callRequestOrderDateChange);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6688,6 +7075,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         partial void Modify_DeleteOrderApiCall(ref gaxgrpc::ApiCall<DeleteOrderRequest, lro::Operation> call);
 
         partial void Modify_SubmitOrderApiCall(ref gaxgrpc::ApiCall<SubmitOrderRequest, lro::Operation> call);
+
+        partial void Modify_CancelOrderApiCall(ref gaxgrpc::ApiCall<CancelOrderRequest, lro::Operation> call);
 
         partial void Modify_ListSitesApiCall(ref gaxgrpc::ApiCall<ListSitesRequest, ListSitesResponse> call);
 
@@ -6747,6 +7136,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
 
         partial void Modify_SignalZoneStateApiCall(ref gaxgrpc::ApiCall<SignalZoneStateRequest, lro::Operation> call);
 
+        partial void Modify_RequestOrderDateChangeApiCall(ref gaxgrpc::ApiCall<RequestOrderDateChangeRequest, lro::Operation> call);
+
         partial void OnConstruction(GDCHardwareManagement.GDCHardwareManagementClient grpcClient, GDCHardwareManagementSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC GDCHardwareManagement client</summary>
@@ -6766,6 +7157,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         partial void Modify_DeleteOrderRequest(ref DeleteOrderRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SubmitOrderRequest(ref SubmitOrderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelOrderRequest(ref CancelOrderRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSitesRequest(ref ListSitesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6824,6 +7217,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         partial void Modify_DeleteZoneRequest(ref DeleteZoneRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SignalZoneStateRequest(ref SignalZoneStateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RequestOrderDateChangeRequest(ref RequestOrderDateChangeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists orders in a given project and location.
@@ -6979,6 +7374,33 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         {
             Modify_SubmitOrderRequest(ref request, ref callSettings);
             return new lro::Operation<Order, OperationMetadata>(await _callSubmitOrder.Async(request, callSettings).ConfigureAwait(false), SubmitOrderOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CancelOrder</c>.</summary>
+        public override lro::OperationsClient CancelOrderOperationsClient { get; }
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Order, OperationMetadata> CancelOrder(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelOrderRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, OperationMetadata>(_callCancelOrder.Sync(request, callSettings), CancelOrderOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels an order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Order, OperationMetadata>> CancelOrderAsync(CancelOrderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelOrderRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, OperationMetadata>(await _callCancelOrder.Async(request, callSettings).ConfigureAwait(false), CancelOrderOperationsClient);
         }
 
         /// <summary>
@@ -7723,6 +8145,33 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         {
             Modify_SignalZoneStateRequest(ref request, ref callSettings);
             return new lro::Operation<Zone, OperationMetadata>(await _callSignalZoneState.Async(request, callSettings).ConfigureAwait(false), SignalZoneStateOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RequestOrderDateChange</c>.</summary>
+        public override lro::OperationsClient RequestOrderDateChangeOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Order, OperationMetadata> RequestOrderDateChange(RequestOrderDateChangeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RequestOrderDateChangeRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, OperationMetadata>(_callRequestOrderDateChange.Sync(request, callSettings), RequestOrderDateChangeOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the requested date change of a single Order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Order, OperationMetadata>> RequestOrderDateChangeAsync(RequestOrderDateChangeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RequestOrderDateChangeRequest(ref request, ref callSettings);
+            return new lro::Operation<Order, OperationMetadata>(await _callRequestOrderDateChange.Async(request, callSettings).ConfigureAwait(false), RequestOrderDateChangeOperationsClient);
         }
     }
 
