@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta17, released 2025-08-28
+
+### Bug fixes
+
+- Changed field behavior for an existing field `name` in message `.google.chat.v1.QuotedMessageMetadata`
+- Changed field behavior for an existing field `last_update_time` in message `.google.chat.v1.QuotedMessageMetadata`
+
+### Documentation improvements
+
+- A comment for field `quoted_message_metadata` in message `.google.chat.v1.Message` is changed
+- A comment for message `QuotedMessageMetadata` is changed
+- A comment for field `name` in message `.google.chat.v1.QuotedMessageMetadata` is changed
+- A comment for field `last_update_time` in message `.google.chat.v1.QuotedMessageMetadata` is changed
+- A comment for field `update_mask` in message `.google.chat.v1.UpdateMessageRequest` is changed
+- A comment for field `customer` in message `.google.chat.v1.Space` is changed
+
 ## Version 1.0.0-beta16, released 2025-08-04
 
 ### New features
