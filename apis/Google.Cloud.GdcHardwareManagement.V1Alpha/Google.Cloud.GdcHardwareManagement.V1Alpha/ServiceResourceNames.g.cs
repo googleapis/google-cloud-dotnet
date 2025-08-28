@@ -80,6 +80,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         }
     }
 
+    public partial class CancelOrderRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::OrderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::OrderName OrderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::OrderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListSitesRequest
     {
         /// <summary>
@@ -366,6 +378,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha
         public gcgv::ZoneName ZoneName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::ZoneName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RequestOrderDateChangeRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::OrderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::OrderName OrderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::OrderName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
