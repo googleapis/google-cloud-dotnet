@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-alpha06, released 2025-08-28
+
+### New features
+
+- Added RequestOrderDateChange RPC - allows Customers to request date changes
+- Added CancelOrder RPC - allows Customers to request cancellation
+- Exposed Order-level output-only fields for transparency
+
+### Documentation improvements
+
+- `fulfillment_time` marked as deprecated
+
 ## Version 1.0.0-alpha05, released 2025-04-23
 
 ### New features
