@@ -48,8 +48,11 @@ namespace Google.Shopping.Merchant.Accounts.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetRegionSettings = existing.GetRegionSettings;
             CreateRegionSettings = existing.CreateRegionSettings;
+            BatchCreateRegionsSettings = existing.BatchCreateRegionsSettings;
             UpdateRegionSettings = existing.UpdateRegionSettings;
+            BatchUpdateRegionsSettings = existing.BatchUpdateRegionsSettings;
             DeleteRegionSettings = existing.DeleteRegionSettings;
+            BatchDeleteRegionsSettings = existing.BatchDeleteRegionsSettings;
             ListRegionsSettings = existing.ListRegionsSettings;
             OnCopy(existing);
         }
@@ -94,6 +97,24 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionsServiceClient.BatchCreateRegions</c> and <c>RegionsServiceClient.BatchCreateRegionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateRegionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>RegionsServiceClient.UpdateRegion</c> and <c>RegionsServiceClient.UpdateRegionAsync</c>.
         /// </summary>
         /// <remarks>
@@ -112,6 +133,24 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionsServiceClient.BatchUpdateRegions</c> and <c>RegionsServiceClient.BatchUpdateRegionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateRegionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>RegionsServiceClient.DeleteRegion</c> and <c>RegionsServiceClient.DeleteRegionAsync</c>.
         /// </summary>
         /// <remarks>
@@ -127,6 +166,24 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteRegionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionsServiceClient.BatchDeleteRegions</c> and <c>RegionsServiceClient.BatchDeleteRegionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteRegionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -571,6 +628,36 @@ namespace Google.Shopping.Merchant.Accounts.V1
             CreateRegionAsync(parent, region, regionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateRegionsResponse BatchCreateRegions(BatchCreateRegionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateRegionsResponse> BatchCreateRegionsAsync(BatchCreateRegionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateRegionsResponse> BatchCreateRegionsAsync(BatchCreateRegionsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateRegionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates a region definition in your Merchant Center account.
         /// Executing this method requires admin access.
         /// </summary>
@@ -658,6 +745,36 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Region> UpdateRegionAsync(Region region, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateRegionAsync(region, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateRegionsResponse BatchUpdateRegions(BatchUpdateRegionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateRegionsResponse> BatchUpdateRegionsAsync(BatchUpdateRegionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateRegionsResponse> BatchUpdateRegionsAsync(BatchUpdateRegionsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateRegionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a region definition from your Merchant Center account. Executing
@@ -778,6 +895,36 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteRegionAsync(RegionName name, st::CancellationToken cancellationToken) =>
             DeleteRegionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple regions by name from your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteRegions(BatchDeleteRegionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple regions by name from your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteRegionsAsync(BatchDeleteRegionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple regions by name from your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteRegionsAsync(BatchDeleteRegionsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteRegionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the regions in your Merchant Center account.
@@ -948,9 +1095,15 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         private readonly gaxgrpc::ApiCall<CreateRegionRequest, Region> _callCreateRegion;
 
+        private readonly gaxgrpc::ApiCall<BatchCreateRegionsRequest, BatchCreateRegionsResponse> _callBatchCreateRegions;
+
         private readonly gaxgrpc::ApiCall<UpdateRegionRequest, Region> _callUpdateRegion;
 
+        private readonly gaxgrpc::ApiCall<BatchUpdateRegionsRequest, BatchUpdateRegionsResponse> _callBatchUpdateRegions;
+
         private readonly gaxgrpc::ApiCall<DeleteRegionRequest, wkt::Empty> _callDeleteRegion;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteRegionsRequest, wkt::Empty> _callBatchDeleteRegions;
 
         private readonly gaxgrpc::ApiCall<ListRegionsRequest, ListRegionsResponse> _callListRegions;
 
@@ -975,12 +1128,21 @@ namespace Google.Shopping.Merchant.Accounts.V1
             _callCreateRegion = clientHelper.BuildApiCall<CreateRegionRequest, Region>("CreateRegion", grpcClient.CreateRegionAsync, grpcClient.CreateRegion, effectiveSettings.CreateRegionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRegion);
             Modify_CreateRegionApiCall(ref _callCreateRegion);
+            _callBatchCreateRegions = clientHelper.BuildApiCall<BatchCreateRegionsRequest, BatchCreateRegionsResponse>("BatchCreateRegions", grpcClient.BatchCreateRegionsAsync, grpcClient.BatchCreateRegions, effectiveSettings.BatchCreateRegionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateRegions);
+            Modify_BatchCreateRegionsApiCall(ref _callBatchCreateRegions);
             _callUpdateRegion = clientHelper.BuildApiCall<UpdateRegionRequest, Region>("UpdateRegion", grpcClient.UpdateRegionAsync, grpcClient.UpdateRegion, effectiveSettings.UpdateRegionSettings).WithGoogleRequestParam("region.name", request => request.Region?.Name);
             Modify_ApiCall(ref _callUpdateRegion);
             Modify_UpdateRegionApiCall(ref _callUpdateRegion);
+            _callBatchUpdateRegions = clientHelper.BuildApiCall<BatchUpdateRegionsRequest, BatchUpdateRegionsResponse>("BatchUpdateRegions", grpcClient.BatchUpdateRegionsAsync, grpcClient.BatchUpdateRegions, effectiveSettings.BatchUpdateRegionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateRegions);
+            Modify_BatchUpdateRegionsApiCall(ref _callBatchUpdateRegions);
             _callDeleteRegion = clientHelper.BuildApiCall<DeleteRegionRequest, wkt::Empty>("DeleteRegion", grpcClient.DeleteRegionAsync, grpcClient.DeleteRegion, effectiveSettings.DeleteRegionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRegion);
             Modify_DeleteRegionApiCall(ref _callDeleteRegion);
+            _callBatchDeleteRegions = clientHelper.BuildApiCall<BatchDeleteRegionsRequest, wkt::Empty>("BatchDeleteRegions", grpcClient.BatchDeleteRegionsAsync, grpcClient.BatchDeleteRegions, effectiveSettings.BatchDeleteRegionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteRegions);
+            Modify_BatchDeleteRegionsApiCall(ref _callBatchDeleteRegions);
             _callListRegions = clientHelper.BuildApiCall<ListRegionsRequest, ListRegionsResponse>("ListRegions", grpcClient.ListRegionsAsync, grpcClient.ListRegions, effectiveSettings.ListRegionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRegions);
             Modify_ListRegionsApiCall(ref _callListRegions);
@@ -993,9 +1155,15 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         partial void Modify_CreateRegionApiCall(ref gaxgrpc::ApiCall<CreateRegionRequest, Region> call);
 
+        partial void Modify_BatchCreateRegionsApiCall(ref gaxgrpc::ApiCall<BatchCreateRegionsRequest, BatchCreateRegionsResponse> call);
+
         partial void Modify_UpdateRegionApiCall(ref gaxgrpc::ApiCall<UpdateRegionRequest, Region> call);
 
+        partial void Modify_BatchUpdateRegionsApiCall(ref gaxgrpc::ApiCall<BatchUpdateRegionsRequest, BatchUpdateRegionsResponse> call);
+
         partial void Modify_DeleteRegionApiCall(ref gaxgrpc::ApiCall<DeleteRegionRequest, wkt::Empty> call);
+
+        partial void Modify_BatchDeleteRegionsApiCall(ref gaxgrpc::ApiCall<BatchDeleteRegionsRequest, wkt::Empty> call);
 
         partial void Modify_ListRegionsApiCall(ref gaxgrpc::ApiCall<ListRegionsRequest, ListRegionsResponse> call);
 
@@ -1008,9 +1176,15 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         partial void Modify_CreateRegionRequest(ref CreateRegionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchCreateRegionsRequest(ref BatchCreateRegionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateRegionRequest(ref UpdateRegionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchUpdateRegionsRequest(ref BatchUpdateRegionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteRegionRequest(ref DeleteRegionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteRegionsRequest(ref BatchDeleteRegionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRegionsRequest(ref ListRegionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1065,6 +1239,32 @@ namespace Google.Shopping.Merchant.Accounts.V1
         }
 
         /// <summary>
+        /// Creates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateRegionsResponse BatchCreateRegions(BatchCreateRegionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateRegionsRequest(ref request, ref callSettings);
+            return _callBatchCreateRegions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateRegionsResponse> BatchCreateRegionsAsync(BatchCreateRegionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateRegionsRequest(ref request, ref callSettings);
+            return _callBatchCreateRegions.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Updates a region definition in your Merchant Center account.
         /// Executing this method requires admin access.
         /// </summary>
@@ -1091,6 +1291,32 @@ namespace Google.Shopping.Merchant.Accounts.V1
         }
 
         /// <summary>
+        /// Updates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateRegionsResponse BatchUpdateRegions(BatchUpdateRegionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateRegionsRequest(ref request, ref callSettings);
+            return _callBatchUpdateRegions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates one or more regions in your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateRegionsResponse> BatchUpdateRegionsAsync(BatchUpdateRegionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateRegionsRequest(ref request, ref callSettings);
+            return _callBatchUpdateRegions.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Deletes a region definition from your Merchant Center account. Executing
         /// this method requires admin access.
         /// </summary>
@@ -1114,6 +1340,32 @@ namespace Google.Shopping.Merchant.Accounts.V1
         {
             Modify_DeleteRegionRequest(ref request, ref callSettings);
             return _callDeleteRegion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes multiple regions by name from your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void BatchDeleteRegions(BatchDeleteRegionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRegionsRequest(ref request, ref callSettings);
+            _callBatchDeleteRegions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes multiple regions by name from your Merchant Center account.
+        /// Executing this method requires admin access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task BatchDeleteRegionsAsync(BatchDeleteRegionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRegionsRequest(ref request, ref callSettings);
+            return _callBatchDeleteRegions.Async(request, callSettings);
         }
 
         /// <summary>
