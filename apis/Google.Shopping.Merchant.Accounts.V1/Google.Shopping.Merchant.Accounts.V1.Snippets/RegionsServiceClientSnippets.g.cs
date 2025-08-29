@@ -212,6 +212,47 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchCreateRegions</summary>
+        public void BatchCreateRegionsRequestObject()
+        {
+            // Snippet: BatchCreateRegions(BatchCreateRegionsRequest, CallSettings)
+            // Create client
+            RegionsServiceClient regionsServiceClient = RegionsServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateRegionsRequest request = new BatchCreateRegionsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new CreateRegionRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateRegionsResponse response = regionsServiceClient.BatchCreateRegions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateRegionsAsync</summary>
+        public async Task BatchCreateRegionsRequestObjectAsync()
+        {
+            // Snippet: BatchCreateRegionsAsync(BatchCreateRegionsRequest, CallSettings)
+            // Additional: BatchCreateRegionsAsync(BatchCreateRegionsRequest, CancellationToken)
+            // Create client
+            RegionsServiceClient regionsServiceClient = await RegionsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateRegionsRequest request = new BatchCreateRegionsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new CreateRegionRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateRegionsResponse response = await regionsServiceClient.BatchCreateRegionsAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateRegion</summary>
         public void UpdateRegionRequestObject()
         {
@@ -273,6 +314,47 @@ namespace GoogleCSharpSnippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             Region response = await regionsServiceClient.UpdateRegionAsync(region, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateRegions</summary>
+        public void BatchUpdateRegionsRequestObject()
+        {
+            // Snippet: BatchUpdateRegions(BatchUpdateRegionsRequest, CallSettings)
+            // Create client
+            RegionsServiceClient regionsServiceClient = RegionsServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateRegionsRequest request = new BatchUpdateRegionsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new UpdateRegionRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateRegionsResponse response = regionsServiceClient.BatchUpdateRegions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateRegionsAsync</summary>
+        public async Task BatchUpdateRegionsRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateRegionsAsync(BatchUpdateRegionsRequest, CallSettings)
+            // Additional: BatchUpdateRegionsAsync(BatchUpdateRegionsRequest, CancellationToken)
+            // Create client
+            RegionsServiceClient regionsServiceClient = await RegionsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateRegionsRequest request = new BatchUpdateRegionsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new UpdateRegionRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateRegionsResponse response = await regionsServiceClient.BatchUpdateRegionsAsync(request);
             // End snippet
         }
 
@@ -360,6 +442,47 @@ namespace GoogleCSharpSnippets
             RegionName name = RegionName.FromAccountRegion("[ACCOUNT]", "[REGION]");
             // Make the request
             await regionsServiceClient.DeleteRegionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteRegions</summary>
+        public void BatchDeleteRegionsRequestObject()
+        {
+            // Snippet: BatchDeleteRegions(BatchDeleteRegionsRequest, CallSettings)
+            // Create client
+            RegionsServiceClient regionsServiceClient = RegionsServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeleteRegionsRequest request = new BatchDeleteRegionsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new DeleteRegionRequest(),
+                },
+            };
+            // Make the request
+            regionsServiceClient.BatchDeleteRegions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteRegionsAsync</summary>
+        public async Task BatchDeleteRegionsRequestObjectAsync()
+        {
+            // Snippet: BatchDeleteRegionsAsync(BatchDeleteRegionsRequest, CallSettings)
+            // Additional: BatchDeleteRegionsAsync(BatchDeleteRegionsRequest, CancellationToken)
+            // Create client
+            RegionsServiceClient regionsServiceClient = await RegionsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeleteRegionsRequest request = new BatchDeleteRegionsRequest
+            {
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Requests =
+                {
+                    new DeleteRegionRequest(),
+                },
+            };
+            // Make the request
+            await regionsServiceClient.BatchDeleteRegionsAsync(request);
             // End snippet
         }
 

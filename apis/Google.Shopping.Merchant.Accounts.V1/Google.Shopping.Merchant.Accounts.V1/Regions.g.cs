@@ -36,69 +36,104 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             "cGFyZW50GAEgASgJQirgQQL6QSQKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMu",
             "Y29tL0FjY291bnQSFgoJcmVnaW9uX2lkGAIgASgJQgPgQQISQQoGcmVnaW9u",
             "GAMgASgLMiwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
-            "LlJlZ2lvbkID4EECIo4BChNVcGRhdGVSZWdpb25SZXF1ZXN0EkEKBnJlZ2lv",
-            "bhgBIAEoCzIsLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
-            "MS5SZWdpb25CA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBASJOChNEZWxldGVSZWdpb25SZXF1ZXN0",
-            "EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbWVyY2hhbnRhcGkuZ29vZ2xlYXBp",
-            "cy5jb20vUmVnaW9uIoEBChJMaXN0UmVnaW9uc1JlcXVlc3QSOgoGcGFyZW50",
-            "GAEgASgJQirgQQL6QSQKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0Fj",
-            "Y291bnQSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgD",
-            "IAEoCUID4EEBIm0KE0xpc3RSZWdpb25zUmVzcG9uc2USPQoHcmVnaW9ucxgB",
-            "IAMoCzIsLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5S",
-            "ZWdpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIuUFCgZSZWdpb24SEQoE",
-            "bmFtZRgBIAEoCUID4EEIEh4KDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEBSACI",
-            "AQESWgoQcG9zdGFsX2NvZGVfYXJlYRgDIAEoCzI7Lmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5hY2NvdW50cy52MS5SZWdpb24uUG9zdGFsQ29kZUFyZWFC",
-            "A+BBARJXCg5nZW90YXJnZXRfYXJlYRgEIAEoCzI6Lmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5hY2NvdW50cy52MS5SZWdpb24uR2VvVGFyZ2V0QXJlYUID",
-            "4EEBEkQKG3JlZ2lvbmFsX2ludmVudG9yeV9lbGlnaWJsZRgFIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBAxI6ChFzaGlwcGluZ19lbGln",
-            "aWJsZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBAxrL",
-            "AQoOUG9zdGFsQ29kZUFyZWESGAoLcmVnaW9uX2NvZGUYASABKAlCA+BBAhJm",
-            "Cgxwb3N0YWxfY29kZXMYAiADKAsySy5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuYWNjb3VudHMudjEuUmVnaW9uLlBvc3RhbENvZGVBcmVhLlBvc3RhbENv",
-            "ZGVSYW5nZUID4EECGjcKD1Bvc3RhbENvZGVSYW5nZRISCgViZWdpbhgBIAEo",
-            "CUID4EECEhAKA2VuZBgCIAEoCUID4EEBGjQKDUdlb1RhcmdldEFyZWESIwoW",
-            "Z2VvdGFyZ2V0X2NyaXRlcmlhX2lkcxgBIAMoA0ID4EECOlzqQVkKIW1lcmNo",
-            "YW50YXBpLmdvb2dsZWFwaXMuY29tL1JlZ2lvbhIjYWNjb3VudHMve2FjY291",
-            "bnR9L3JlZ2lvbnMve3JlZ2lvbn0qB3JlZ2lvbnMyBnJlZ2lvbkIPCg1fZGlz",
-            "cGxheV9uYW1lMoEICg5SZWdpb25zU2VydmljZRKqAQoJR2V0UmVnaW9uEjYu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkdldFJlZ2lv",
-            "blJlcXVlc3QaLC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMu",
-            "djEuUmVnaW9uIjfaQQRuYW1lgtPkkwIqEigvYWNjb3VudHMvdjEve25hbWU9",
-            "YWNjb3VudHMvKi9yZWdpb25zLyp9EssBCgxDcmVhdGVSZWdpb24SOS5nb29n",
-            "bGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuQ3JlYXRlUmVnaW9u",
-            "UmVxdWVzdBosLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
-            "MS5SZWdpb24iUtpBF3BhcmVudCxyZWdpb24scmVnaW9uX2lkgtPkkwIyIigv",
-            "YWNjb3VudHMvdjEve3BhcmVudD1hY2NvdW50cy8qfS9yZWdpb25zOgZyZWdp",
-            "b24SzQEKDFVwZGF0ZVJlZ2lvbhI5Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5hY2NvdW50cy52MS5VcGRhdGVSZWdpb25SZXF1ZXN0GiwuZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLlJlZ2lvbiJU2kEScmVnaW9u",
-            "LHVwZGF0ZV9tYXNrgtPkkwI5Mi8vYWNjb3VudHMvdjEve3JlZ2lvbi5uYW1l",
-            "PWFjY291bnRzLyovcmVnaW9ucy8qfToGcmVnaW9uEpoBCgxEZWxldGVSZWdp",
-            "b24SOS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuRGVs",
-            "ZXRlUmVnaW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI32kEE",
-            "bmFtZYLT5JMCKiooL2FjY291bnRzL3YxL3tuYW1lPWFjY291bnRzLyovcmVn",
-            "aW9ucy8qfRK9AQoLTGlzdFJlZ2lvbnMSOC5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQuYWNjb3VudHMudjEuTGlzdFJlZ2lvbnNSZXF1ZXN0GjkuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkxpc3RSZWdpb25zUmVz",
-            "cG9uc2UiOdpBBnBhcmVudILT5JMCKhIoL2FjY291bnRzL3YxL3twYXJlbnQ9",
-            "YWNjb3VudHMvKn0vcmVnaW9ucxpHykEabWVyY2hhbnRhcGkuZ29vZ2xlYXBp",
-            "cy5jb23SQSdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbnRl",
-            "bnRC/wEKKGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMu",
-            "djFCDFJlZ2lvbnNQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3Nob3Bw",
-            "aW5nL21lcmNoYW50L2FjY291bnRzL2FwaXYxL2FjY291bnRzcGI7YWNjb3Vu",
-            "dHNwYqoCJEdvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5BY2NvdW50cy5WMcoC",
-            "JEdvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxBY2NvdW50c1xWMeoCKEdvb2ds",
-            "ZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpBY2NvdW50czo6VjFiBnByb3RvMw=="));
+            "LlJlZ2lvbkID4EECIqkBChlCYXRjaENyZWF0ZVJlZ2lvbnNSZXF1ZXN0EjoK",
+            "BnBhcmVudBgBIAEoCUIq4EEC+kEkCiJtZXJjaGFudGFwaS5nb29nbGVhcGlz",
+            "LmNvbS9BY2NvdW50ElAKCHJlcXVlc3RzGAIgAygLMjkuZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkNyZWF0ZVJlZ2lvblJlcXVlc3RC",
+            "A+BBAiJbChpCYXRjaENyZWF0ZVJlZ2lvbnNSZXNwb25zZRI9CgdyZWdpb25z",
+            "GAEgAygLMiwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYx",
+            "LlJlZ2lvbiKOAQoTVXBkYXRlUmVnaW9uUmVxdWVzdBJBCgZyZWdpb24YASAB",
+            "KAsyLC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuUmVn",
+            "aW9uQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrQgPgQQEiqQEKGUJhdGNoVXBkYXRlUmVnaW9uc1JlcXVl",
+            "c3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQKIm1lcmNoYW50YXBpLmdvb2ds",
+            "ZWFwaXMuY29tL0FjY291bnQSUAoIcmVxdWVzdHMYAiADKAsyOS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuVXBkYXRlUmVnaW9uUmVx",
+            "dWVzdEID4EECIlsKGkJhdGNoVXBkYXRlUmVnaW9uc1Jlc3BvbnNlEj0KB3Jl",
+            "Z2lvbnMYASADKAsyLC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3Vu",
+            "dHMudjEuUmVnaW9uIk4KE0RlbGV0ZVJlZ2lvblJlcXVlc3QSNwoEbmFtZRgB",
+            "IAEoCUIp4EEC+kEjCiFtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9SZWdp",
+            "b24iqQEKGUJhdGNoRGVsZXRlUmVnaW9uc1JlcXVlc3QSOgoGcGFyZW50GAEg",
+            "ASgJQirgQQL6QSQKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291",
+            "bnQSUAoIcmVxdWVzdHMYAiADKAsyOS5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQuYWNjb3VudHMudjEuRGVsZXRlUmVnaW9uUmVxdWVzdEID4EECIoEBChJM",
+            "aXN0UmVnaW9uc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQKIm1l",
+            "cmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291bnQSFgoJcGFnZV9zaXpl",
+            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIm0KE0xpc3RS",
+            "ZWdpb25zUmVzcG9uc2USPQoHcmVnaW9ucxgBIAMoCzIsLmdvb2dsZS5zaG9w",
+            "cGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5SZWdpb24SFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIuUFCgZSZWdpb24SEQoEbmFtZRgBIAEoCUID4EEIEh4K",
+            "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EEBSACIAQESWgoQcG9zdGFsX2NvZGVf",
+            "YXJlYRgDIAEoCzI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50",
+            "cy52MS5SZWdpb24uUG9zdGFsQ29kZUFyZWFCA+BBARJXCg5nZW90YXJnZXRf",
+            "YXJlYRgEIAEoCzI6Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50",
+            "cy52MS5SZWdpb24uR2VvVGFyZ2V0QXJlYUID4EEBEkQKG3JlZ2lvbmFsX2lu",
+            "dmVudG9yeV9lbGlnaWJsZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29s",
+            "VmFsdWVCA+BBAxI6ChFzaGlwcGluZ19lbGlnaWJsZRgGIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBAxrLAQoOUG9zdGFsQ29kZUFyZWES",
+            "GAoLcmVnaW9uX2NvZGUYASABKAlCA+BBAhJmCgxwb3N0YWxfY29kZXMYAiAD",
+            "KAsySy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuUmVn",
+            "aW9uLlBvc3RhbENvZGVBcmVhLlBvc3RhbENvZGVSYW5nZUID4EECGjcKD1Bv",
+            "c3RhbENvZGVSYW5nZRISCgViZWdpbhgBIAEoCUID4EECEhAKA2VuZBgCIAEo",
+            "CUID4EEBGjQKDUdlb1RhcmdldEFyZWESIwoWZ2VvdGFyZ2V0X2NyaXRlcmlh",
+            "X2lkcxgBIAMoA0ID4EECOlzqQVkKIW1lcmNoYW50YXBpLmdvb2dsZWFwaXMu",
+            "Y29tL1JlZ2lvbhIjYWNjb3VudHMve2FjY291bnR9L3JlZ2lvbnMve3JlZ2lv",
+            "bn0qB3JlZ2lvbnMyBnJlZ2lvbkIPCg1fZGlzcGxheV9uYW1lMugMCg5SZWdp",
+            "b25zU2VydmljZRKqAQoJR2V0UmVnaW9uEjYuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LmFjY291bnRzLnYxLkdldFJlZ2lvblJlcXVlc3QaLC5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuUmVnaW9uIjfaQQRuYW1l",
+            "gtPkkwIqEigvYWNjb3VudHMvdjEve25hbWU9YWNjb3VudHMvKi9yZWdpb25z",
+            "Lyp9EssBCgxDcmVhdGVSZWdpb24SOS5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQuYWNjb3VudHMudjEuQ3JlYXRlUmVnaW9uUmVxdWVzdBosLmdvb2dsZS5z",
+            "aG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5SZWdpb24iUtpBF3BhcmVu",
+            "dCxyZWdpb24scmVnaW9uX2lkgtPkkwIyIigvYWNjb3VudHMvdjEve3BhcmVu",
+            "dD1hY2NvdW50cy8qfS9yZWdpb25zOgZyZWdpb24S2AEKEkJhdGNoQ3JlYXRl",
+            "UmVnaW9ucxI/Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
+            "MS5CYXRjaENyZWF0ZVJlZ2lvbnNSZXF1ZXN0GkAuZ29vZ2xlLnNob3BwaW5n",
+            "Lm1lcmNoYW50LmFjY291bnRzLnYxLkJhdGNoQ3JlYXRlUmVnaW9uc1Jlc3Bv",
+            "bnNlIj+C0+STAjkiNC9hY2NvdW50cy92MS97cGFyZW50PWFjY291bnRzLyp9",
+            "L3JlZ2lvbnM6YmF0Y2hDcmVhdGU6ASoSzQEKDFVwZGF0ZVJlZ2lvbhI5Lmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5VcGRhdGVSZWdp",
+            "b25SZXF1ZXN0GiwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRz",
+            "LnYxLlJlZ2lvbiJU2kEScmVnaW9uLHVwZGF0ZV9tYXNrgtPkkwI5Mi8vYWNj",
+            "b3VudHMvdjEve3JlZ2lvbi5uYW1lPWFjY291bnRzLyovcmVnaW9ucy8qfToG",
+            "cmVnaW9uEtgBChJCYXRjaFVwZGF0ZVJlZ2lvbnMSPy5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQuYWNjb3VudHMudjEuQmF0Y2hVcGRhdGVSZWdpb25zUmVx",
+            "dWVzdBpALmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5C",
+            "YXRjaFVwZGF0ZVJlZ2lvbnNSZXNwb25zZSI/gtPkkwI5IjQvYWNjb3VudHMv",
+            "djEve3BhcmVudD1hY2NvdW50cy8qfS9yZWdpb25zOmJhdGNoVXBkYXRlOgEq",
+            "EpoBCgxEZWxldGVSZWdpb24SOS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "YWNjb3VudHMudjEuRGVsZXRlUmVnaW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSI32kEEbmFtZYLT5JMCKiooL2FjY291bnRzL3YxL3tuYW1l",
+            "PWFjY291bnRzLyovcmVnaW9ucy8qfRKuAQoSQmF0Y2hEZWxldGVSZWdpb25z",
+            "Ej8uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkJhdGNo",
+            "RGVsZXRlUmVnaW9uc1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "P4LT5JMCOSI0L2FjY291bnRzL3YxL3twYXJlbnQ9YWNjb3VudHMvKn0vcmVn",
+            "aW9uczpiYXRjaERlbGV0ZToBKhK9AQoLTGlzdFJlZ2lvbnMSOC5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuTGlzdFJlZ2lvbnNSZXF1",
+            "ZXN0GjkuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkxp",
+            "c3RSZWdpb25zUmVzcG9uc2UiOdpBBnBhcmVudILT5JMCKhIoL2FjY291bnRz",
+            "L3YxL3twYXJlbnQ9YWNjb3VudHMvKn0vcmVnaW9ucxpHykEabWVyY2hhbnRh",
+            "cGkuZ29vZ2xlYXBpcy5jb23SQSdodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2NvbnRlbnRC/wEKKGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQuYWNjb3VudHMudjFCDFJlZ2lvbnNQcm90b1ABWkpjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRzL2FwaXYxL2FjY291",
+            "bnRzcGI7YWNjb3VudHNwYqoCJEdvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5B",
+            "Y2NvdW50cy5WMcoCJEdvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxBY2NvdW50",
+            "c1xWMeoCKEdvb2dsZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpBY2NvdW50czo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.GetRegionRequest), global::Google.Shopping.Merchant.Accounts.V1.GetRegionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest), global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest.Parser, new[]{ "Parent", "RegionId", "Region" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest), global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse), global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse.Parser, new[]{ "Regions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest), global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest.Parser, new[]{ "Region", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest), global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse), global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse.Parser, new[]{ "Regions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest), global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest), global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.ListRegionsRequest), global::Google.Shopping.Merchant.Accounts.V1.ListRegionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.ListRegionsResponse), global::Google.Shopping.Merchant.Accounts.V1.ListRegionsResponse.Parser, new[]{ "Regions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.Region), global::Google.Shopping.Merchant.Accounts.V1.Region.Parser, new[]{ "Name", "DisplayName", "PostalCodeArea", "GeotargetArea", "RegionalInventoryEligible", "ShippingEligible" }, new[]{ "DisplayName" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.Region.Types.PostalCodeArea), global::Google.Shopping.Merchant.Accounts.V1.Region.Types.PostalCodeArea.Parser, new[]{ "RegionCode", "PostalCodes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.Region.Types.PostalCodeArea.Types.PostalCodeRange), global::Google.Shopping.Merchant.Accounts.V1.Region.Types.PostalCodeArea.Types.PostalCodeRange.Parser, new[]{ "Begin", "End" }, null, null, null, null)}),
@@ -594,6 +629,418 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
   }
 
   /// <summary>
+  /// Request message for the `BatchCreateRegions` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateRegionsRequest : pb::IMessage<BatchCreateRegionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateRegionsRequest> _parser = new pb::MessageParser<BatchCreateRegionsRequest>(() => new BatchCreateRegionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateRegionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateRegionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateRegionsRequest(BatchCreateRegionsRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateRegionsRequest Clone() {
+      return new BatchCreateRegionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The account to create one or more regions for.
+    /// Format: `accounts/{account}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest> requests_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest>();
+    /// <summary>
+    /// Required. The region(s) to create.
+    /// The maximum number of regions that can be created in a batch is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateRegionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateRegionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateRegionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for the `BatchCreateRegions` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateRegionsResponse : pb::IMessage<BatchCreateRegionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateRegionsResponse> _parser = new pb::MessageParser<BatchCreateRegionsResponse>(() => new BatchCreateRegionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateRegionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateRegionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateRegionsResponse(BatchCreateRegionsResponse other) : this() {
+      regions_ = other.regions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateRegionsResponse Clone() {
+      return new BatchCreateRegionsResponse(this);
+    }
+
+    /// <summary>Field number for the "regions" field.</summary>
+    public const int RegionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Accounts.V1.Region> _repeated_regions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Shopping.Merchant.Accounts.V1.Region.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.Region> regions_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.Region>();
+    /// <summary>
+    /// The created region(s).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.Region> Regions {
+      get { return regions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateRegionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateRegionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!regions_.Equals(other.regions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= regions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      regions_.WriteTo(output, _repeated_regions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      regions_.WriteTo(ref output, _repeated_regions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += regions_.CalculateSize(_repeated_regions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateRegionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      regions_.Add(other.regions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            regions_.AddEntriesFrom(input, _repeated_regions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            regions_.AddEntriesFrom(ref input, _repeated_regions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for the `UpdateRegion` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -611,7 +1058,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -850,6 +1297,418 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
   }
 
   /// <summary>
+  /// Request message for the `BatchUpdateRegions` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchUpdateRegionsRequest : pb::IMessage<BatchUpdateRegionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchUpdateRegionsRequest> _parser = new pb::MessageParser<BatchUpdateRegionsRequest>(() => new BatchUpdateRegionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchUpdateRegionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateRegionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateRegionsRequest(BatchUpdateRegionsRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateRegionsRequest Clone() {
+      return new BatchUpdateRegionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The account to update one or more regions for.
+    /// Format: `accounts/{account}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest> requests_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest>();
+    /// <summary>
+    /// Required. The region(s) to update.
+    /// The maximum number of regions that can be updated in a batch is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateRegionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchUpdateRegionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchUpdateRegionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for the `BatchUpdateRegions` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchUpdateRegionsResponse : pb::IMessage<BatchUpdateRegionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchUpdateRegionsResponse> _parser = new pb::MessageParser<BatchUpdateRegionsResponse>(() => new BatchUpdateRegionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchUpdateRegionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateRegionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateRegionsResponse(BatchUpdateRegionsResponse other) : this() {
+      regions_ = other.regions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateRegionsResponse Clone() {
+      return new BatchUpdateRegionsResponse(this);
+    }
+
+    /// <summary>Field number for the "regions" field.</summary>
+    public const int RegionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Accounts.V1.Region> _repeated_regions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Shopping.Merchant.Accounts.V1.Region.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.Region> regions_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.Region>();
+    /// <summary>
+    /// The updated region(s).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.Region> Regions {
+      get { return regions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateRegionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchUpdateRegionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!regions_.Equals(other.regions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= regions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      regions_.WriteTo(output, _repeated_regions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      regions_.WriteTo(ref output, _repeated_regions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += regions_.CalculateSize(_repeated_regions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchUpdateRegionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      regions_.Add(other.regions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            regions_.AddEntriesFrom(input, _repeated_regions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            regions_.AddEntriesFrom(ref input, _repeated_regions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for the `DeleteRegion` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -867,7 +1726,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1047,6 +1906,233 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
   }
 
   /// <summary>
+  /// Request message for the `BatchDeleteRegions` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeleteRegionsRequest : pb::IMessage<BatchDeleteRegionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeleteRegionsRequest> _parser = new pb::MessageParser<BatchDeleteRegionsRequest>(() => new BatchDeleteRegionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeleteRegionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteRegionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteRegionsRequest(BatchDeleteRegionsRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteRegionsRequest Clone() {
+      return new BatchDeleteRegionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The account to delete one or more regions from.
+    /// Format: `accounts/{account}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest> requests_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest>();
+    /// <summary>
+    /// Required. The names of the regions to delete.
+    /// A maximum of 100 regions can be deleted in a batch.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeleteRegionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeleteRegionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeleteRegionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for the `ListRegions` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1064,7 +2150,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1348,7 +2434,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1579,7 +2665,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Shopping.Merchant.Accounts.V1.RegionsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

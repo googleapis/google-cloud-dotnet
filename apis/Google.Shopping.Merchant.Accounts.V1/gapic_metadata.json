@@ -481,6 +481,24 @@
         "grpc": {
           "libraryClient": "RegionsServiceClient",
           "rpcs": {
+            "BatchCreateRegions": {
+              "methods": [
+                "BatchCreateRegions",
+                "BatchCreateRegionsAsync"
+              ]
+            },
+            "BatchDeleteRegions": {
+              "methods": [
+                "BatchDeleteRegions",
+                "BatchDeleteRegionsAsync"
+              ]
+            },
+            "BatchUpdateRegions": {
+              "methods": [
+                "BatchUpdateRegions",
+                "BatchUpdateRegionsAsync"
+              ]
+            },
             "CreateRegion": {
               "methods": [
                 "CreateRegion",

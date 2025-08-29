@@ -74,11 +74,21 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest> __Marshaller_google_shopping_merchant_accounts_v1_CreateRegionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest> __Marshaller_google_shopping_merchant_accounts_v1_BatchCreateRegionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse> __Marshaller_google_shopping_merchant_accounts_v1_BatchCreateRegionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest> __Marshaller_google_shopping_merchant_accounts_v1_UpdateRegionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest> __Marshaller_google_shopping_merchant_accounts_v1_BatchUpdateRegionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse> __Marshaller_google_shopping_merchant_accounts_v1_BatchUpdateRegionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest> __Marshaller_google_shopping_merchant_accounts_v1_DeleteRegionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest> __Marshaller_google_shopping_merchant_accounts_v1_BatchDeleteRegionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.ListRegionsRequest> __Marshaller_google_shopping_merchant_accounts_v1_ListRegionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.ListRegionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -101,6 +111,14 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         __Marshaller_google_shopping_merchant_accounts_v1_Region);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse> __Method_BatchCreateRegions = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateRegions",
+        __Marshaller_google_shopping_merchant_accounts_v1_BatchCreateRegionsRequest,
+        __Marshaller_google_shopping_merchant_accounts_v1_BatchCreateRegionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest, global::Google.Shopping.Merchant.Accounts.V1.Region> __Method_UpdateRegion = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest, global::Google.Shopping.Merchant.Accounts.V1.Region>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,11 +127,27 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         __Marshaller_google_shopping_merchant_accounts_v1_Region);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse> __Method_BatchUpdateRegions = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateRegions",
+        __Marshaller_google_shopping_merchant_accounts_v1_BatchUpdateRegionsRequest,
+        __Marshaller_google_shopping_merchant_accounts_v1_BatchUpdateRegionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteRegion = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteRegion",
         __Marshaller_google_shopping_merchant_accounts_v1_DeleteRegionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteRegions = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteRegions",
+        __Marshaller_google_shopping_merchant_accounts_v1_BatchDeleteRegionsRequest,
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -160,6 +194,19 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       }
 
       /// <summary>
+      /// Creates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse> BatchCreateRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Updates a region definition in your Merchant Center account.
       /// Executing this method requires admin access.
       /// </summary>
@@ -173,6 +220,19 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       }
 
       /// <summary>
+      /// Updates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse> BatchUpdateRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a region definition from your Merchant Center account. Executing
       /// this method requires admin access.
       /// </summary>
@@ -181,6 +241,19 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRegion(global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes multiple regions by name from your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -327,6 +400,58 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRegion, null, options, request);
       }
       /// <summary>
+      /// Creates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse BatchCreateRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateRegions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse BatchCreateRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateRegions, null, options, request);
+      }
+      /// <summary>
+      /// Creates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse> BatchCreateRegionsAsync(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateRegionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse> BatchCreateRegionsAsync(global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateRegions, null, options, request);
+      }
+      /// <summary>
       /// Updates a region definition in your Merchant Center account.
       /// Executing this method requires admin access.
       /// </summary>
@@ -379,6 +504,58 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRegion, null, options, request);
       }
       /// <summary>
+      /// Updates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse BatchUpdateRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateRegions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse BatchUpdateRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateRegions, null, options, request);
+      }
+      /// <summary>
+      /// Updates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse> BatchUpdateRegionsAsync(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateRegionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates one or more regions in your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse> BatchUpdateRegionsAsync(global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateRegions, null, options, request);
+      }
+      /// <summary>
       /// Deletes a region definition from your Merchant Center account. Executing
       /// this method requires admin access.
       /// </summary>
@@ -429,6 +606,58 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRegionAsync(global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRegion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes multiple regions by name from your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteRegions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes multiple regions by name from your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteRegions(global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteRegions, null, options, request);
+      }
+      /// <summary>
+      /// Deletes multiple regions by name from your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteRegionsAsync(global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteRegionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes multiple regions by name from your Merchant Center account.
+      /// Executing this method requires admin access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteRegionsAsync(global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteRegions, null, options, request);
       }
       /// <summary>
       /// Lists the regions in your Merchant Center account.
@@ -494,8 +723,11 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetRegion, serviceImpl.GetRegion)
           .AddMethod(__Method_CreateRegion, serviceImpl.CreateRegion)
+          .AddMethod(__Method_BatchCreateRegions, serviceImpl.BatchCreateRegions)
           .AddMethod(__Method_UpdateRegion, serviceImpl.UpdateRegion)
+          .AddMethod(__Method_BatchUpdateRegions, serviceImpl.BatchUpdateRegions)
           .AddMethod(__Method_DeleteRegion, serviceImpl.DeleteRegion)
+          .AddMethod(__Method_BatchDeleteRegions, serviceImpl.BatchDeleteRegions)
           .AddMethod(__Method_ListRegions, serviceImpl.ListRegions).Build();
     }
 
@@ -508,8 +740,11 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     {
       serviceBinder.AddMethod(__Method_GetRegion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.GetRegionRequest, global::Google.Shopping.Merchant.Accounts.V1.Region>(serviceImpl.GetRegion));
       serviceBinder.AddMethod(__Method_CreateRegion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.CreateRegionRequest, global::Google.Shopping.Merchant.Accounts.V1.Region>(serviceImpl.CreateRegion));
+      serviceBinder.AddMethod(__Method_BatchCreateRegions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.BatchCreateRegionsResponse>(serviceImpl.BatchCreateRegions));
       serviceBinder.AddMethod(__Method_UpdateRegion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.UpdateRegionRequest, global::Google.Shopping.Merchant.Accounts.V1.Region>(serviceImpl.UpdateRegion));
+      serviceBinder.AddMethod(__Method_BatchUpdateRegions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.BatchUpdateRegionsResponse>(serviceImpl.BatchUpdateRegions));
       serviceBinder.AddMethod(__Method_DeleteRegion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.DeleteRegionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRegion));
+      serviceBinder.AddMethod(__Method_BatchDeleteRegions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.BatchDeleteRegionsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchDeleteRegions));
       serviceBinder.AddMethod(__Method_ListRegions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.ListRegionsRequest, global::Google.Shopping.Merchant.Accounts.V1.ListRegionsResponse>(serviceImpl.ListRegions));
     }
 
