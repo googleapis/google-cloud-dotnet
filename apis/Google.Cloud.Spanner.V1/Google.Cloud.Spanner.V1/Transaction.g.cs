@@ -559,8 +559,9 @@ namespace Google.Cloud.Spanner.V1 {
         /// actually occurred in parallel. Spanner assigns commit timestamps that
         /// reflect the order of committed transactions to implement this property.
         /// Spanner offers a stronger guarantee than serializability called external
-        /// consistency. For further details, please refer to
-        /// https://cloud.google.com/spanner/docs/true-time-external-consistency#serializability.
+        /// consistency. For more information, see
+        /// [TrueTime and external
+        /// consistency](https://cloud.google.com/spanner/docs/true-time-external-consistency#serializability).
         /// </summary>
         [pbr::OriginalName("SERIALIZABLE")] Serializable = 1,
         /// <summary>

@@ -44,223 +44,223 @@ namespace Google.Cloud.Spanner.V1 {
             "YXRlGAIgASgLMhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvbhIaCg1zZXNz",
             "aW9uX2NvdW50GAMgASgFQgPgQQIiSgobQmF0Y2hDcmVhdGVTZXNzaW9uc1Jl",
             "c3BvbnNlEisKB3Nlc3Npb24YASADKAsyGi5nb29nbGUuc3Bhbm5lci52MS5T",
-            "ZXNzaW9uIqMDCgdTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI2CgZsYWJl",
+            "ZXNzaW9uIrgDCgdTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI2CgZsYWJl",
             "bHMYAiADKAsyJi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9uLkxhYmVsc0Vu",
             "dHJ5EjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
             "bWVzdGFtcEID4EEDEkIKGWFwcHJveGltYXRlX2xhc3RfdXNlX3RpbWUYBCAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoMY3JlYXRv",
             "cl9yb2xlGAUgASgJEhgKC211bHRpcGxleGVkGAYgASgIQgPgQQEaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp06kFx",
-            "Ch5zcGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24ST3Byb2plY3RzL3tw",
-            "cm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9kYXRhYmFzZXMve2RhdGFi",
-            "YXNlfS9zZXNzaW9ucy97c2Vzc2lvbn0iSQoRR2V0U2Vzc2lvblJlcXVlc3QS",
-            "NAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFwaXMuY29t",
-            "L1Nlc3Npb24ihwEKE0xpc3RTZXNzaW9uc1JlcXVlc3QSOQoIZGF0YWJhc2UY",
-            "ASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFz",
-            "ZRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZm",
-            "aWx0ZXIYBCABKAkiXQoUTGlzdFNlc3Npb25zUmVzcG9uc2USLAoIc2Vzc2lv",
-            "bnMYASADKAsyGi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9uEhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCSJMChREZWxldGVTZXNzaW9uUmVxdWVzdBI0CgRu",
-            "YW1lGAEgASgJQibgQQL6QSAKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vz",
-            "c2lvbiLcAQoOUmVxdWVzdE9wdGlvbnMSPAoIcHJpb3JpdHkYASABKA4yKi5n",
-            "b29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0aW9ucy5Qcmlvcml0eRITCgty",
-            "ZXF1ZXN0X3RhZxgCIAEoCRIXCg90cmFuc2FjdGlvbl90YWcYAyABKAkiXgoI",
-            "UHJpb3JpdHkSGAoUUFJJT1JJVFlfVU5TUEVDSUZJRUQQABIQCgxQUklPUklU",
-            "WV9MT1cQARITCg9QUklPUklUWV9NRURJVU0QAhIRCg1QUklPUklUWV9ISUdI",
-            "EAMi6gQKE0RpcmVjdGVkUmVhZE9wdGlvbnMSUgoQaW5jbHVkZV9yZXBsaWNh",
-            "cxgBIAEoCzI2Lmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlv",
-            "bnMuSW5jbHVkZVJlcGxpY2FzSAASUgoQZXhjbHVkZV9yZXBsaWNhcxgCIAEo",
-            "CzI2Lmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlvbnMuRXhj",
-            "bHVkZVJlcGxpY2FzSAAarQEKEFJlcGxpY2FTZWxlY3Rpb24SEAoIbG9jYXRp",
-            "b24YASABKAkSSgoEdHlwZRgCIAEoDjI8Lmdvb2dsZS5zcGFubmVyLnYxLkRp",
-            "cmVjdGVkUmVhZE9wdGlvbnMuUmVwbGljYVNlbGVjdGlvbi5UeXBlIjsKBFR5",
-            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg4KClJFQURfV1JJVEUQARINCglS",
-            "RUFEX09OTFkQAhqGAQoPSW5jbHVkZVJlcGxpY2FzElMKEnJlcGxpY2Ffc2Vs",
-            "ZWN0aW9ucxgBIAMoCzI3Lmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVh",
-            "ZE9wdGlvbnMuUmVwbGljYVNlbGVjdGlvbhIeChZhdXRvX2ZhaWxvdmVyX2Rp",
-            "c2FibGVkGAIgASgIGmYKD0V4Y2x1ZGVSZXBsaWNhcxJTChJyZXBsaWNhX3Nl",
-            "bGVjdGlvbnMYASADKAsyNy5nb29nbGUuc3Bhbm5lci52MS5EaXJlY3RlZFJl",
-            "YWRPcHRpb25zLlJlcGxpY2FTZWxlY3Rpb25CCgoIcmVwbGljYXMijQcKEUV4",
-            "ZWN1dGVTcWxSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEjsKC3RyYW5zYWN0aW9uGAIg",
-            "ASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25TZWxlY3RvchIQ",
-            "CgNzcWwYAyABKAlCA+BBAhInCgZwYXJhbXMYBCABKAsyFy5nb29nbGUucHJv",
-            "dG9idWYuU3RydWN0EkkKC3BhcmFtX3R5cGVzGAUgAygLMjQuZ29vZ2xlLnNw",
-            "YW5uZXIudjEuRXhlY3V0ZVNxbFJlcXVlc3QuUGFyYW1UeXBlc0VudHJ5EhQK",
-            "DHJlc3VtZV90b2tlbhgGIAEoDBJCCgpxdWVyeV9tb2RlGAcgASgOMi4uZ29v",
-            "Z2xlLnNwYW5uZXIudjEuRXhlY3V0ZVNxbFJlcXVlc3QuUXVlcnlNb2RlEhcK",
-            "D3BhcnRpdGlvbl90b2tlbhgIIAEoDBINCgVzZXFubxgJIAEoAxJICg1xdWVy",
-            "eV9vcHRpb25zGAogASgLMjEuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZVNx",
-            "bFJlcXVlc3QuUXVlcnlPcHRpb25zEjoKD3JlcXVlc3Rfb3B0aW9ucxgLIAEo",
-            "CzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlcXVlc3RPcHRpb25zEkUKFWRpcmVj",
-            "dGVkX3JlYWRfb3B0aW9ucxgPIAEoCzImLmdvb2dsZS5zcGFubmVyLnYxLkRp",
-            "cmVjdGVkUmVhZE9wdGlvbnMSGgoSZGF0YV9ib29zdF9lbmFibGVkGBAgASgI",
-            "EhsKDmxhc3Rfc3RhdGVtZW50GBEgASgIQgPgQQEaTwoMUXVlcnlPcHRpb25z",
-            "EhkKEW9wdGltaXplcl92ZXJzaW9uGAEgASgJEiQKHG9wdGltaXplcl9zdGF0",
-            "aXN0aWNzX3BhY2thZ2UYAiABKAkaSgoPUGFyYW1UeXBlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRImCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5",
-            "cGU6AjgBIlcKCVF1ZXJ5TW9kZRIKCgZOT1JNQUwQABIICgRQTEFOEAESCwoH",
-            "UFJPRklMRRACEg4KCldJVEhfU1RBVFMQAxIXChNXSVRIX1BMQU5fQU5EX1NU",
-            "QVRTEAQivgQKFkV4ZWN1dGVCYXRjaERtbFJlcXVlc3QSNwoHc2Vzc2lvbhgB",
-            "IAEoCUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24S",
-            "QAoLdHJhbnNhY3Rpb24YAiABKAsyJi5nb29nbGUuc3Bhbm5lci52MS5UcmFu",
-            "c2FjdGlvblNlbGVjdG9yQgPgQQISTAoKc3RhdGVtZW50cxgDIAMoCzIzLmdv",
-            "b2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVCYXRjaERtbFJlcXVlc3QuU3RhdGVt",
-            "ZW50QgPgQQISEgoFc2Vxbm8YBCABKANCA+BBAhI6Cg9yZXF1ZXN0X29wdGlv",
-            "bnMYBSABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0aW9ucxIc",
-            "Cg9sYXN0X3N0YXRlbWVudHMYBiABKAhCA+BBARrsAQoJU3RhdGVtZW50EhAK",
-            "A3NxbBgBIAEoCUID4EECEicKBnBhcmFtcxgCIAEoCzIXLmdvb2dsZS5wcm90",
-            "b2J1Zi5TdHJ1Y3QSWAoLcGFyYW1fdHlwZXMYAyADKAsyQy5nb29nbGUuc3Bh",
-            "bm5lci52MS5FeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0LlN0YXRlbWVudC5QYXJh",
-            "bVR5cGVzRW50cnkaSgoPUGFyYW1UeXBlc0VudHJ5EgsKA2tleRgBIAEoCRIm",
-            "CgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5cGU6AjgBIsMB",
-            "ChdFeGVjdXRlQmF0Y2hEbWxSZXNwb25zZRIxCgtyZXN1bHRfc2V0cxgBIAMo",
-            "CzIcLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldBIiCgZzdGF0dXMYAiAB",
-            "KAsyEi5nb29nbGUucnBjLlN0YXR1cxJRCg9wcmVjb21taXRfdG9rZW4YAyAB",
-            "KAsyMy5nb29nbGUuc3Bhbm5lci52MS5NdWx0aXBsZXhlZFNlc3Npb25QcmVj",
-            "b21taXRUb2tlbkID4EEBIkgKEFBhcnRpdGlvbk9wdGlvbnMSHAoUcGFydGl0",
-            "aW9uX3NpemVfYnl0ZXMYASABKAMSFgoObWF4X3BhcnRpdGlvbnMYAiABKAMi",
-            "owMKFVBhcnRpdGlvblF1ZXJ5UmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJQibg",
-            "QQL6QSAKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhI7Cgt0cmFu",
-            "c2FjdGlvbhgCIAEoCzImLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9u",
-            "U2VsZWN0b3ISEAoDc3FsGAMgASgJQgPgQQISJwoGcGFyYW1zGAQgASgLMhcu",
-            "Z29vZ2xlLnByb3RvYnVmLlN0cnVjdBJNCgtwYXJhbV90eXBlcxgFIAMoCzI4",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpdGlvblF1ZXJ5UmVxdWVzdC5QYXJh",
-            "bVR5cGVzRW50cnkSPgoRcGFydGl0aW9uX29wdGlvbnMYBiABKAsyIy5nb29n",
-            "bGUuc3Bhbm5lci52MS5QYXJ0aXRpb25PcHRpb25zGkoKD1BhcmFtVHlwZXNF",
-            "bnRyeRILCgNrZXkYASABKAkSJgoFdmFsdWUYAiABKAsyFy5nb29nbGUuc3Bh",
-            "bm5lci52MS5UeXBlOgI4ASKxAgoUUGFydGl0aW9uUmVhZFJlcXVlc3QSNwoH",
-            "c2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFwaXMuY29t",
-            "L1Nlc3Npb24SOwoLdHJhbnNhY3Rpb24YAiABKAsyJi5nb29nbGUuc3Bhbm5l",
-            "ci52MS5UcmFuc2FjdGlvblNlbGVjdG9yEhIKBXRhYmxlGAMgASgJQgPgQQIS",
-            "DQoFaW5kZXgYBCABKAkSDwoHY29sdW1ucxgFIAMoCRIvCgdrZXlfc2V0GAYg",
-            "ASgLMhkuZ29vZ2xlLnNwYW5uZXIudjEuS2V5U2V0QgPgQQISPgoRcGFydGl0",
-            "aW9uX29wdGlvbnMYCSABKAsyIy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aXRp",
-            "b25PcHRpb25zIiQKCVBhcnRpdGlvbhIXCg9wYXJ0aXRpb25fdG9rZW4YASAB",
-            "KAwiegoRUGFydGl0aW9uUmVzcG9uc2USMAoKcGFydGl0aW9ucxgBIAMoCzIc",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpdGlvbhIzCgt0cmFuc2FjdGlvbhgC",
-            "IAEoCzIeLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uIvYFCgtSZWFk",
-            "UmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJQibgQQL6QSAKHnNwYW5uZXIuZ29v",
-            "Z2xlYXBpcy5jb20vU2Vzc2lvbhI7Cgt0cmFuc2FjdGlvbhgCIAEoCzImLmdv",
-            "b2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uU2VsZWN0b3ISEgoFdGFibGUY",
-            "AyABKAlCA+BBAhINCgVpbmRleBgEIAEoCRIUCgdjb2x1bW5zGAUgAygJQgPg",
-            "QQISLwoHa2V5X3NldBgGIAEoCzIZLmdvb2dsZS5zcGFubmVyLnYxLktleVNl",
-            "dEID4EECEg0KBWxpbWl0GAggASgDEhQKDHJlc3VtZV90b2tlbhgJIAEoDBIX",
-            "Cg9wYXJ0aXRpb25fdG9rZW4YCiABKAwSOgoPcmVxdWVzdF9vcHRpb25zGAsg",
-            "ASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuUmVxdWVzdE9wdGlvbnMSRQoVZGly",
-            "ZWN0ZWRfcmVhZF9vcHRpb25zGA4gASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "RGlyZWN0ZWRSZWFkT3B0aW9ucxIaChJkYXRhX2Jvb3N0X2VuYWJsZWQYDyAB",
-            "KAgSPQoIb3JkZXJfYnkYECABKA4yJi5nb29nbGUuc3Bhbm5lci52MS5SZWFk",
-            "UmVxdWVzdC5PcmRlckJ5QgPgQQESPwoJbG9ja19oaW50GBEgASgOMicuZ29v",
-            "Z2xlLnNwYW5uZXIudjEuUmVhZFJlcXVlc3QuTG9ja0hpbnRCA+BBASJUCgdP",
-            "cmRlckJ5EhgKFE9SREVSX0JZX1VOU1BFQ0lGSUVEEAASGAoUT1JERVJfQllf",
-            "UFJJTUFSWV9LRVkQARIVChFPUkRFUl9CWV9OT19PUkRFUhACIlQKCExvY2tI",
-            "aW50EhkKFUxPQ0tfSElOVF9VTlNQRUNJRklFRBAAEhQKEExPQ0tfSElOVF9T",
-            "SEFSRUQQARIXChNMT0NLX0hJTlRfRVhDTFVTSVZFEAIigwIKF0JlZ2luVHJh",
-            "bnNhY3Rpb25SZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEjsKB29wdGlvbnMYAiABKAsy",
-            "JS5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnNCA+BBAhI6",
-            "Cg9yZXF1ZXN0X29wdGlvbnMYAyABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5S",
-            "ZXF1ZXN0T3B0aW9ucxI2CgxtdXRhdGlvbl9rZXkYBCABKAsyGy5nb29nbGUu",
-            "c3Bhbm5lci52MS5NdXRhdGlvbkID4EEBItADCg1Db21taXRSZXF1ZXN0EjcK",
-            "B3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNv",
-            "bS9TZXNzaW9uEhgKDnRyYW5zYWN0aW9uX2lkGAIgASgMSAASRwoWc2luZ2xl",
-            "X3VzZV90cmFuc2FjdGlvbhgDIAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRy",
-            "YW5zYWN0aW9uT3B0aW9uc0gAEi4KCW11dGF0aW9ucxgEIAMoCzIbLmdvb2ds",
-            "ZS5zcGFubmVyLnYxLk11dGF0aW9uEhsKE3JldHVybl9jb21taXRfc3RhdHMY",
-            "BSABKAgSOAoQbWF4X2NvbW1pdF9kZWxheRgIIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbkID4EEBEjoKD3JlcXVlc3Rfb3B0aW9ucxgGIAEoCzIh",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlJlcXVlc3RPcHRpb25zElEKD3ByZWNvbW1p",
-            "dF90b2tlbhgJIAEoCzIzLmdvb2dsZS5zcGFubmVyLnYxLk11bHRpcGxleGVk",
-            "U2Vzc2lvblByZWNvbW1pdFRva2VuQgPgQQFCDQoLdHJhbnNhY3Rpb24iZwoP",
-            "Um9sbGJhY2tSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEhsKDnRyYW5zYWN0aW9uX2lk",
-            "GAIgASgMQgPgQQIizgIKEUJhdGNoV3JpdGVSZXF1ZXN0EjcKB3Nlc3Npb24Y",
-            "ASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9u",
-            "EjoKD3JlcXVlc3Rfb3B0aW9ucxgDIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYx",
-            "LlJlcXVlc3RPcHRpb25zElAKD211dGF0aW9uX2dyb3VwcxgEIAMoCzIyLmdv",
-            "b2dsZS5zcGFubmVyLnYxLkJhdGNoV3JpdGVSZXF1ZXN0Lk11dGF0aW9uR3Jv",
-            "dXBCA+BBAhIsCh9leGNsdWRlX3R4bl9mcm9tX2NoYW5nZV9zdHJlYW1zGAUg",
-            "ASgIQgPgQQEaRAoNTXV0YXRpb25Hcm91cBIzCgltdXRhdGlvbnMYASADKAsy",
-            "Gy5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbkID4EECIn8KEkJhdGNoV3Jp",
-            "dGVSZXNwb25zZRIPCgdpbmRleGVzGAEgAygFEiIKBnN0YXR1cxgCIAEoCzIS",
-            "Lmdvb2dsZS5ycGMuU3RhdHVzEjQKEGNvbW1pdF90aW1lc3RhbXAYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMosYCgdTcGFubmVyEqYBCg1D",
-            "cmVhdGVTZXNzaW9uEicuZ29vZ2xlLnNwYW5uZXIudjEuQ3JlYXRlU2Vzc2lv",
-            "blJlcXVlc3QaGi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9uIlDaQQhkYXRh",
-            "YmFzZYLT5JMCPyI6L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2luc3RhbmNl",
-            "cy8qL2RhdGFiYXNlcy8qfS9zZXNzaW9uczoBKhLgAQoTQmF0Y2hDcmVhdGVT",
-            "ZXNzaW9ucxItLmdvb2dsZS5zcGFubmVyLnYxLkJhdGNoQ3JlYXRlU2Vzc2lv",
-            "bnNSZXF1ZXN0Gi4uZ29vZ2xlLnNwYW5uZXIudjEuQmF0Y2hDcmVhdGVTZXNz",
-            "aW9uc1Jlc3BvbnNlImraQRZkYXRhYmFzZSxzZXNzaW9uX2NvdW50gtPkkwJL",
-            "IkYvdjEve2RhdGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
-            "c2VzLyp9L3Nlc3Npb25zOmJhdGNoQ3JlYXRlOgEqEpcBCgpHZXRTZXNzaW9u",
-            "EiQuZ29vZ2xlLnNwYW5uZXIudjEuR2V0U2Vzc2lvblJlcXVlc3QaGi5nb29n",
-            "bGUuc3Bhbm5lci52MS5TZXNzaW9uIkfaQQRuYW1lgtPkkwI6EjgvdjEve25h",
-            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9u",
-            "cy8qfRKuAQoMTGlzdFNlc3Npb25zEiYuZ29vZ2xlLnNwYW5uZXIudjEuTGlz",
-            "dFNlc3Npb25zUmVxdWVzdBonLmdvb2dsZS5zcGFubmVyLnYxLkxpc3RTZXNz",
-            "aW9uc1Jlc3BvbnNlIk3aQQhkYXRhYmFzZYLT5JMCPBI6L3YxL3tkYXRhYmFz",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqIAepB",
+            "hAEKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJPcHJvamVjdHMv",
+            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0",
+            "YWJhc2V9L3Nlc3Npb25zL3tzZXNzaW9ufSoIc2Vzc2lvbnMyB3Nlc3Npb24i",
+            "SQoRR2V0U2Vzc2lvblJlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5z",
+            "cGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24ihwEKE0xpc3RTZXNzaW9u",
+            "c1JlcXVlc3QSOQoIZGF0YWJhc2UYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhYmFzZRIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkiXQoUTGlzdFNlc3Np",
+            "b25zUmVzcG9uc2USLAoIc2Vzc2lvbnMYASADKAsyGi5nb29nbGUuc3Bhbm5l",
+            "ci52MS5TZXNzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJMChREZWxl",
+            "dGVTZXNzaW9uUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHnNwYW5u",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbiLcAQoOUmVxdWVzdE9wdGlvbnMS",
+            "PAoIcHJpb3JpdHkYASABKA4yKi5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0",
+            "T3B0aW9ucy5Qcmlvcml0eRITCgtyZXF1ZXN0X3RhZxgCIAEoCRIXCg90cmFu",
+            "c2FjdGlvbl90YWcYAyABKAkiXgoIUHJpb3JpdHkSGAoUUFJJT1JJVFlfVU5T",
+            "UEVDSUZJRUQQABIQCgxQUklPUklUWV9MT1cQARITCg9QUklPUklUWV9NRURJ",
+            "VU0QAhIRCg1QUklPUklUWV9ISUdIEAMi6gQKE0RpcmVjdGVkUmVhZE9wdGlv",
+            "bnMSUgoQaW5jbHVkZV9yZXBsaWNhcxgBIAEoCzI2Lmdvb2dsZS5zcGFubmVy",
+            "LnYxLkRpcmVjdGVkUmVhZE9wdGlvbnMuSW5jbHVkZVJlcGxpY2FzSAASUgoQ",
+            "ZXhjbHVkZV9yZXBsaWNhcxgCIAEoCzI2Lmdvb2dsZS5zcGFubmVyLnYxLkRp",
+            "cmVjdGVkUmVhZE9wdGlvbnMuRXhjbHVkZVJlcGxpY2FzSAAarQEKEFJlcGxp",
+            "Y2FTZWxlY3Rpb24SEAoIbG9jYXRpb24YASABKAkSSgoEdHlwZRgCIAEoDjI8",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlvbnMuUmVwbGlj",
+            "YVNlbGVjdGlvbi5UeXBlIjsKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAA",
+            "Eg4KClJFQURfV1JJVEUQARINCglSRUFEX09OTFkQAhqGAQoPSW5jbHVkZVJl",
+            "cGxpY2FzElMKEnJlcGxpY2Ffc2VsZWN0aW9ucxgBIAMoCzI3Lmdvb2dsZS5z",
+            "cGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlvbnMuUmVwbGljYVNlbGVjdGlv",
+            "bhIeChZhdXRvX2ZhaWxvdmVyX2Rpc2FibGVkGAIgASgIGmYKD0V4Y2x1ZGVS",
+            "ZXBsaWNhcxJTChJyZXBsaWNhX3NlbGVjdGlvbnMYASADKAsyNy5nb29nbGUu",
+            "c3Bhbm5lci52MS5EaXJlY3RlZFJlYWRPcHRpb25zLlJlcGxpY2FTZWxlY3Rp",
+            "b25CCgoIcmVwbGljYXMijQcKEUV4ZWN1dGVTcWxSZXF1ZXN0EjcKB3Nlc3Np",
+            "b24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNz",
+            "aW9uEjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "VHJhbnNhY3Rpb25TZWxlY3RvchIQCgNzcWwYAyABKAlCA+BBAhInCgZwYXJh",
+            "bXMYBCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EkkKC3BhcmFtX3R5",
+            "cGVzGAUgAygLMjQuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZVNxbFJlcXVl",
+            "c3QuUGFyYW1UeXBlc0VudHJ5EhQKDHJlc3VtZV90b2tlbhgGIAEoDBJCCgpx",
+            "dWVyeV9tb2RlGAcgASgOMi4uZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZVNx",
+            "bFJlcXVlc3QuUXVlcnlNb2RlEhcKD3BhcnRpdGlvbl90b2tlbhgIIAEoDBIN",
+            "CgVzZXFubxgJIAEoAxJICg1xdWVyeV9vcHRpb25zGAogASgLMjEuZ29vZ2xl",
+            "LnNwYW5uZXIudjEuRXhlY3V0ZVNxbFJlcXVlc3QuUXVlcnlPcHRpb25zEjoK",
+            "D3JlcXVlc3Rfb3B0aW9ucxgLIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJl",
+            "cXVlc3RPcHRpb25zEkUKFWRpcmVjdGVkX3JlYWRfb3B0aW9ucxgPIAEoCzIm",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlvbnMSGgoSZGF0",
+            "YV9ib29zdF9lbmFibGVkGBAgASgIEhsKDmxhc3Rfc3RhdGVtZW50GBEgASgI",
+            "QgPgQQEaTwoMUXVlcnlPcHRpb25zEhkKEW9wdGltaXplcl92ZXJzaW9uGAEg",
+            "ASgJEiQKHG9wdGltaXplcl9zdGF0aXN0aWNzX3BhY2thZ2UYAiABKAkaSgoP",
+            "UGFyYW1UeXBlc0VudHJ5EgsKA2tleRgBIAEoCRImCgV2YWx1ZRgCIAEoCzIX",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLlR5cGU6AjgBIlcKCVF1ZXJ5TW9kZRIKCgZO",
+            "T1JNQUwQABIICgRQTEFOEAESCwoHUFJPRklMRRACEg4KCldJVEhfU1RBVFMQ",
+            "AxIXChNXSVRIX1BMQU5fQU5EX1NUQVRTEAQivgQKFkV4ZWN1dGVCYXRjaERt",
+            "bFJlcXVlc3QSNwoHc2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdv",
+            "b2dsZWFwaXMuY29tL1Nlc3Npb24SQAoLdHJhbnNhY3Rpb24YAiABKAsyJi5n",
+            "b29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9yQgPgQQISTAoK",
+            "c3RhdGVtZW50cxgDIAMoCzIzLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVC",
+            "YXRjaERtbFJlcXVlc3QuU3RhdGVtZW50QgPgQQISEgoFc2Vxbm8YBCABKANC",
+            "A+BBAhI6Cg9yZXF1ZXN0X29wdGlvbnMYBSABKAsyIS5nb29nbGUuc3Bhbm5l",
+            "ci52MS5SZXF1ZXN0T3B0aW9ucxIcCg9sYXN0X3N0YXRlbWVudHMYBiABKAhC",
+            "A+BBARrsAQoJU3RhdGVtZW50EhAKA3NxbBgBIAEoCUID4EECEicKBnBhcmFt",
+            "cxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSWAoLcGFyYW1fdHlw",
+            "ZXMYAyADKAsyQy5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlQmF0Y2hEbWxS",
+            "ZXF1ZXN0LlN0YXRlbWVudC5QYXJhbVR5cGVzRW50cnkaSgoPUGFyYW1UeXBl",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRImCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlR5cGU6AjgBIsMBChdFeGVjdXRlQmF0Y2hEbWxSZXNwb25z",
+            "ZRIxCgtyZXN1bHRfc2V0cxgBIAMoCzIcLmdvb2dsZS5zcGFubmVyLnYxLlJl",
+            "c3VsdFNldBIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1cxJR",
+            "Cg9wcmVjb21taXRfdG9rZW4YAyABKAsyMy5nb29nbGUuc3Bhbm5lci52MS5N",
+            "dWx0aXBsZXhlZFNlc3Npb25QcmVjb21taXRUb2tlbkID4EEBIkgKEFBhcnRp",
+            "dGlvbk9wdGlvbnMSHAoUcGFydGl0aW9uX3NpemVfYnl0ZXMYASABKAMSFgoO",
+            "bWF4X3BhcnRpdGlvbnMYAiABKAMiowMKFVBhcnRpdGlvblF1ZXJ5UmVxdWVz",
+            "dBI3CgdzZXNzaW9uGAEgASgJQibgQQL6QSAKHnNwYW5uZXIuZ29vZ2xlYXBp",
+            "cy5jb20vU2Vzc2lvbhI7Cgt0cmFuc2FjdGlvbhgCIAEoCzImLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlRyYW5zYWN0aW9uU2VsZWN0b3ISEAoDc3FsGAMgASgJQgPg",
+            "QQISJwoGcGFyYW1zGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJN",
+            "CgtwYXJhbV90eXBlcxgFIAMoCzI4Lmdvb2dsZS5zcGFubmVyLnYxLlBhcnRp",
+            "dGlvblF1ZXJ5UmVxdWVzdC5QYXJhbVR5cGVzRW50cnkSPgoRcGFydGl0aW9u",
+            "X29wdGlvbnMYBiABKAsyIy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aXRpb25P",
+            "cHRpb25zGkoKD1BhcmFtVHlwZXNFbnRyeRILCgNrZXkYASABKAkSJgoFdmFs",
+            "dWUYAiABKAsyFy5nb29nbGUuc3Bhbm5lci52MS5UeXBlOgI4ASKxAgoUUGFy",
+            "dGl0aW9uUmVhZFJlcXVlc3QSNwoHc2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5z",
+            "cGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SOwoLdHJhbnNhY3Rpb24Y",
+            "AiABKAsyJi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9y",
+            "EhIKBXRhYmxlGAMgASgJQgPgQQISDQoFaW5kZXgYBCABKAkSDwoHY29sdW1u",
+            "cxgFIAMoCRIvCgdrZXlfc2V0GAYgASgLMhkuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "S2V5U2V0QgPgQQISPgoRcGFydGl0aW9uX29wdGlvbnMYCSABKAsyIy5nb29n",
+            "bGUuc3Bhbm5lci52MS5QYXJ0aXRpb25PcHRpb25zIiQKCVBhcnRpdGlvbhIX",
+            "Cg9wYXJ0aXRpb25fdG9rZW4YASABKAwiegoRUGFydGl0aW9uUmVzcG9uc2US",
+            "MAoKcGFydGl0aW9ucxgBIAMoCzIcLmdvb2dsZS5zcGFubmVyLnYxLlBhcnRp",
+            "dGlvbhIzCgt0cmFuc2FjdGlvbhgCIAEoCzIeLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlRyYW5zYWN0aW9uIvYFCgtSZWFkUmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJ",
+            "QibgQQL6QSAKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhI7Cgt0",
+            "cmFuc2FjdGlvbhgCIAEoCzImLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0",
+            "aW9uU2VsZWN0b3ISEgoFdGFibGUYAyABKAlCA+BBAhINCgVpbmRleBgEIAEo",
+            "CRIUCgdjb2x1bW5zGAUgAygJQgPgQQISLwoHa2V5X3NldBgGIAEoCzIZLmdv",
+            "b2dsZS5zcGFubmVyLnYxLktleVNldEID4EECEg0KBWxpbWl0GAggASgDEhQK",
+            "DHJlc3VtZV90b2tlbhgJIAEoDBIXCg9wYXJ0aXRpb25fdG9rZW4YCiABKAwS",
+            "OgoPcmVxdWVzdF9vcHRpb25zGAsgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "UmVxdWVzdE9wdGlvbnMSRQoVZGlyZWN0ZWRfcmVhZF9vcHRpb25zGA4gASgL",
+            "MiYuZ29vZ2xlLnNwYW5uZXIudjEuRGlyZWN0ZWRSZWFkT3B0aW9ucxIaChJk",
+            "YXRhX2Jvb3N0X2VuYWJsZWQYDyABKAgSPQoIb3JkZXJfYnkYECABKA4yJi5n",
+            "b29nbGUuc3Bhbm5lci52MS5SZWFkUmVxdWVzdC5PcmRlckJ5QgPgQQESPwoJ",
+            "bG9ja19oaW50GBEgASgOMicuZ29vZ2xlLnNwYW5uZXIudjEuUmVhZFJlcXVl",
+            "c3QuTG9ja0hpbnRCA+BBASJUCgdPcmRlckJ5EhgKFE9SREVSX0JZX1VOU1BF",
+            "Q0lGSUVEEAASGAoUT1JERVJfQllfUFJJTUFSWV9LRVkQARIVChFPUkRFUl9C",
+            "WV9OT19PUkRFUhACIlQKCExvY2tIaW50EhkKFUxPQ0tfSElOVF9VTlNQRUNJ",
+            "RklFRBAAEhQKEExPQ0tfSElOVF9TSEFSRUQQARIXChNMT0NLX0hJTlRfRVhD",
+            "TFVTSVZFEAIigwIKF0JlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0EjcKB3Nlc3Np",
+            "b24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNz",
+            "aW9uEjsKB29wdGlvbnMYAiABKAsyJS5nb29nbGUuc3Bhbm5lci52MS5UcmFu",
+            "c2FjdGlvbk9wdGlvbnNCA+BBAhI6Cg9yZXF1ZXN0X29wdGlvbnMYAyABKAsy",
+            "IS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0aW9ucxI2CgxtdXRhdGlv",
+            "bl9rZXkYBCABKAsyGy5nb29nbGUuc3Bhbm5lci52MS5NdXRhdGlvbkID4EEB",
+            "ItADCg1Db21taXRSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoe",
+            "c3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEhgKDnRyYW5zYWN0aW9u",
+            "X2lkGAIgASgMSAASRwoWc2luZ2xlX3VzZV90cmFuc2FjdGlvbhgDIAEoCzIl",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gAEi4KCW11",
+            "dGF0aW9ucxgEIAMoCzIbLmdvb2dsZS5zcGFubmVyLnYxLk11dGF0aW9uEhsK",
+            "E3JldHVybl9jb21taXRfc3RhdHMYBSABKAgSOAoQbWF4X2NvbW1pdF9kZWxh",
+            "eRgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjoKD3Jl",
+            "cXVlc3Rfb3B0aW9ucxgGIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlcXVl",
+            "c3RPcHRpb25zElEKD3ByZWNvbW1pdF90b2tlbhgJIAEoCzIzLmdvb2dsZS5z",
+            "cGFubmVyLnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2VuQgPg",
+            "QQFCDQoLdHJhbnNhY3Rpb24iZwoPUm9sbGJhY2tSZXF1ZXN0EjcKB3Nlc3Np",
+            "b24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNz",
+            "aW9uEhsKDnRyYW5zYWN0aW9uX2lkGAIgASgMQgPgQQIizgIKEUJhdGNoV3Jp",
+            "dGVSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5n",
+            "b29nbGVhcGlzLmNvbS9TZXNzaW9uEjoKD3JlcXVlc3Rfb3B0aW9ucxgDIAEo",
+            "CzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlcXVlc3RPcHRpb25zElAKD211dGF0",
+            "aW9uX2dyb3VwcxgEIAMoCzIyLmdvb2dsZS5zcGFubmVyLnYxLkJhdGNoV3Jp",
+            "dGVSZXF1ZXN0Lk11dGF0aW9uR3JvdXBCA+BBAhIsCh9leGNsdWRlX3R4bl9m",
+            "cm9tX2NoYW5nZV9zdHJlYW1zGAUgASgIQgPgQQEaRAoNTXV0YXRpb25Hcm91",
+            "cBIzCgltdXRhdGlvbnMYASADKAsyGy5nb29nbGUuc3Bhbm5lci52MS5NdXRh",
+            "dGlvbkID4EECIn8KEkJhdGNoV3JpdGVSZXNwb25zZRIPCgdpbmRleGVzGAEg",
+            "AygFEiIKBnN0YXR1cxgCIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEjQKEGNv",
+            "bW1pdF90aW1lc3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wMosYCgdTcGFubmVyEqYBCg1DcmVhdGVTZXNzaW9uEicuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuQ3JlYXRlU2Vzc2lvblJlcXVlc3QaGi5nb29nbGUuc3Bhbm5l",
+            "ci52MS5TZXNzaW9uIlDaQQhkYXRhYmFzZYLT5JMCPyI6L3YxL3tkYXRhYmFz",
             "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qfS9zZXNzaW9u",
-            "cxKZAQoNRGVsZXRlU2Vzc2lvbhInLmdvb2dsZS5zcGFubmVyLnYxLkRlbGV0",
-            "ZVNlc3Npb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkfaQQRu",
-            "YW1lgtPkkwI6KjgvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9k",
-            "YXRhYmFzZXMvKi9zZXNzaW9ucy8qfRKjAQoKRXhlY3V0ZVNxbBIkLmdvb2ds",
-            "ZS5zcGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1ZXN0GhwuZ29vZ2xlLnNwYW5u",
-            "ZXIudjEuUmVzdWx0U2V0IlGC0+STAksiRi92MS97c2Vzc2lvbj1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OmV4ZWN1",
-            "dGVTcWw6ASoSvgEKE0V4ZWN1dGVTdHJlYW1pbmdTcWwSJC5nb29nbGUuc3Bh",
-            "bm5lci52MS5FeGVjdXRlU3FsUmVxdWVzdBojLmdvb2dsZS5zcGFubmVyLnYx",
-            "LlBhcnRpYWxSZXN1bHRTZXQiWoLT5JMCVCJPL3YxL3tzZXNzaW9uPXByb2pl",
-            "Y3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06ZXhl",
-            "Y3V0ZVN0cmVhbWluZ1NxbDoBKjABEsABCg9FeGVjdXRlQmF0Y2hEbWwSKS5n",
-            "b29nbGUuc3Bhbm5lci52MS5FeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0GiouZ29v",
-            "Z2xlLnNwYW5uZXIudjEuRXhlY3V0ZUJhdGNoRG1sUmVzcG9uc2UiVoLT5JMC",
-            "UCJLL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
-            "c2VzLyovc2Vzc2lvbnMvKn06ZXhlY3V0ZUJhdGNoRG1sOgEqEpEBCgRSZWFk",
-            "Eh4uZ29vZ2xlLnNwYW5uZXIudjEuUmVhZFJlcXVlc3QaHC5nb29nbGUuc3Bh",
-            "bm5lci52MS5SZXN1bHRTZXQiS4LT5JMCRSJAL3YxL3tzZXNzaW9uPXByb2pl",
-            "Y3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cmVh",
-            "ZDoBKhKsAQoNU3RyZWFtaW5nUmVhZBIeLmdvb2dsZS5zcGFubmVyLnYxLlJl",
-            "YWRSZXF1ZXN0GiMuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGlhbFJlc3VsdFNl",
-            "dCJUgtPkkwJOIkkvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMv",
-            "Ki9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpzdHJlYW1pbmdSZWFkOgEqMAES",
-            "yQEKEEJlZ2luVHJhbnNhY3Rpb24SKi5nb29nbGUuc3Bhbm5lci52MS5CZWdp",
-            "blRyYW5zYWN0aW9uUmVxdWVzdBoeLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5z",
-            "YWN0aW9uImnaQQ9zZXNzaW9uLG9wdGlvbnOC0+STAlEiTC92MS97c2Vzc2lv",
+            "czoBKhLgAQoTQmF0Y2hDcmVhdGVTZXNzaW9ucxItLmdvb2dsZS5zcGFubmVy",
+            "LnYxLkJhdGNoQ3JlYXRlU2Vzc2lvbnNSZXF1ZXN0Gi4uZ29vZ2xlLnNwYW5u",
+            "ZXIudjEuQmF0Y2hDcmVhdGVTZXNzaW9uc1Jlc3BvbnNlImraQRZkYXRhYmFz",
+            "ZSxzZXNzaW9uX2NvdW50gtPkkwJLIkYvdjEve2RhdGFiYXNlPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L3Nlc3Npb25zOmJhdGNoQ3Jl",
+            "YXRlOgEqEpcBCgpHZXRTZXNzaW9uEiQuZ29vZ2xlLnNwYW5uZXIudjEuR2V0",
+            "U2Vzc2lvblJlcXVlc3QaGi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9uIkfa",
+            "QQRuYW1lgtPkkwI6EjgvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMv",
+            "Ki9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfRKuAQoMTGlzdFNlc3Npb25zEiYu",
+            "Z29vZ2xlLnNwYW5uZXIudjEuTGlzdFNlc3Npb25zUmVxdWVzdBonLmdvb2ds",
+            "ZS5zcGFubmVyLnYxLkxpc3RTZXNzaW9uc1Jlc3BvbnNlIk3aQQhkYXRhYmFz",
+            "ZYLT5JMCPBI6L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "L2RhdGFiYXNlcy8qfS9zZXNzaW9ucxKZAQoNRGVsZXRlU2Vzc2lvbhInLmdv",
+            "b2dsZS5zcGFubmVyLnYxLkRlbGV0ZVNlc3Npb25SZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IkfaQQRuYW1lgtPkkwI6KjgvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfRKj",
+            "AQoKRXhlY3V0ZVNxbBIkLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVTcWxS",
+            "ZXF1ZXN0GhwuZ29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0IlGC0+STAksi",
+            "Ri92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNl",
+            "cy8qL3Nlc3Npb25zLyp9OmV4ZWN1dGVTcWw6ASoSvgEKE0V4ZWN1dGVTdHJl",
+            "YW1pbmdTcWwSJC5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3FsUmVxdWVz",
+            "dBojLmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpYWxSZXN1bHRTZXQiWoLT5JMC",
+            "VCJPL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
+            "c2VzLyovc2Vzc2lvbnMvKn06ZXhlY3V0ZVN0cmVhbWluZ1NxbDoBKjABEsAB",
+            "Cg9FeGVjdXRlQmF0Y2hEbWwSKS5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRl",
+            "QmF0Y2hEbWxSZXF1ZXN0GiouZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZUJh",
+            "dGNoRG1sUmVzcG9uc2UiVoLT5JMCUCJLL3YxL3tzZXNzaW9uPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06ZXhlY3V0",
+            "ZUJhdGNoRG1sOgEqEpEBCgRSZWFkEh4uZ29vZ2xlLnNwYW5uZXIudjEuUmVh",
+            "ZFJlcXVlc3QaHC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXQiS4LT5JMC",
+            "RSJAL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
+            "c2VzLyovc2Vzc2lvbnMvKn06cmVhZDoBKhKsAQoNU3RyZWFtaW5nUmVhZBIe",
+            "Lmdvb2dsZS5zcGFubmVyLnYxLlJlYWRSZXF1ZXN0GiMuZ29vZ2xlLnNwYW5u",
+            "ZXIudjEuUGFydGlhbFJlc3VsdFNldCJUgtPkkwJOIkkvdjEve3Nlc3Npb249",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8q",
+            "fTpzdHJlYW1pbmdSZWFkOgEqMAESyQEKEEJlZ2luVHJhbnNhY3Rpb24SKi5n",
+            "b29nbGUuc3Bhbm5lci52MS5CZWdpblRyYW5zYWN0aW9uUmVxdWVzdBoeLmdv",
+            "b2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uImnaQQ9zZXNzaW9uLG9wdGlv",
+            "bnOC0+STAlEiTC92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "L2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OmJlZ2luVHJhbnNhY3Rpb246ASoS",
+            "6wEKBkNvbW1pdBIgLmdvb2dsZS5zcGFubmVyLnYxLkNvbW1pdFJlcXVlc3Qa",
+            "IS5nb29nbGUuc3Bhbm5lci52MS5Db21taXRSZXNwb25zZSKbAdpBIHNlc3Np",
+            "b24sdHJhbnNhY3Rpb25faWQsbXV0YXRpb25z2kEoc2Vzc2lvbixzaW5nbGVf",
+            "dXNlX3RyYW5zYWN0aW9uLG11dGF0aW9uc4LT5JMCRyJCL3YxL3tzZXNzaW9u",
+            "PXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMv",
+            "Kn06Y29tbWl0OgEqErABCghSb2xsYmFjaxIiLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlJvbGxiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJo2kEW",
+            "c2Vzc2lvbix0cmFuc2FjdGlvbl9pZILT5JMCSSJEL3YxL3tzZXNzaW9uPXBy",
+            "b2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06",
+            "cm9sbGJhY2s6ASoStwEKDlBhcnRpdGlvblF1ZXJ5EiguZ29vZ2xlLnNwYW5u",
+            "ZXIudjEuUGFydGl0aW9uUXVlcnlSZXF1ZXN0GiQuZ29vZ2xlLnNwYW5uZXIu",
+            "djEuUGFydGl0aW9uUmVzcG9uc2UiVYLT5JMCTyJKL3YxL3tzZXNzaW9uPXBy",
+            "b2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06",
+            "cGFydGl0aW9uUXVlcnk6ASoStAEKDVBhcnRpdGlvblJlYWQSJy5nb29nbGUu",
+            "c3Bhbm5lci52MS5QYXJ0aXRpb25SZWFkUmVxdWVzdBokLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlBhcnRpdGlvblJlc3BvbnNlIlSC0+STAk4iSS92MS97c2Vzc2lv",
             "bj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25z",
-            "Lyp9OmJlZ2luVHJhbnNhY3Rpb246ASoS6wEKBkNvbW1pdBIgLmdvb2dsZS5z",
-            "cGFubmVyLnYxLkNvbW1pdFJlcXVlc3QaIS5nb29nbGUuc3Bhbm5lci52MS5D",
-            "b21taXRSZXNwb25zZSKbAdpBIHNlc3Npb24sdHJhbnNhY3Rpb25faWQsbXV0",
-            "YXRpb25z2kEoc2Vzc2lvbixzaW5nbGVfdXNlX3RyYW5zYWN0aW9uLG11dGF0",
-            "aW9uc4LT5JMCRyJCL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2Vz",
-            "LyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06Y29tbWl0OgEqErABCghSb2xs",
-            "YmFjaxIiLmdvb2dsZS5zcGFubmVyLnYxLlJvbGxiYWNrUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJo2kEWc2Vzc2lvbix0cmFuc2FjdGlvbl9p",
-            "ZILT5JMCSSJEL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
-            "ZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cm9sbGJhY2s6ASoStwEKDlBhcnRp",
-            "dGlvblF1ZXJ5EiguZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0aW9uUXVlcnlS",
-            "ZXF1ZXN0GiQuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0aW9uUmVzcG9uc2Ui",
-            "VYLT5JMCTyJKL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
-            "ZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cGFydGl0aW9uUXVlcnk6ASoStAEK",
-            "DVBhcnRpdGlvblJlYWQSJy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aXRpb25S",
-            "ZWFkUmVxdWVzdBokLmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpdGlvblJlc3Bv",
-            "bnNlIlSC0+STAk4iSS92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNl",
-            "cy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OnBhcnRpdGlvblJlYWQ6ASoS",
-            "yAEKCkJhdGNoV3JpdGUSJC5nb29nbGUuc3Bhbm5lci52MS5CYXRjaFdyaXRl",
-            "UmVxdWVzdBolLmdvb2dsZS5zcGFubmVyLnYxLkJhdGNoV3JpdGVSZXNwb25z",
-            "ZSJr2kEXc2Vzc2lvbixtdXRhdGlvbl9ncm91cHOC0+STAksiRi92MS97c2Vz",
-            "c2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Np",
-            "b25zLyp9OmJhdGNoV3JpdGU6ASowARp3ykEWc3Bhbm5lci5nb29nbGVhcGlz",
-            "LmNvbdJBW2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcGFu",
-            "bmVyLmRhdGFCkQIKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIMU3Bhbm5lclBy",
-            "b3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9hcGl2MS9zcGFu",
-            "bmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdH",
-            "b29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNwYW5u",
-            "ZXI6OlYx6kFfCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlEjxw",
-            "cm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vZGF0YWJh",
-            "c2VzL3tkYXRhYmFzZX1QAGIGcHJvdG8z"));
+            "Lyp9OnBhcnRpdGlvblJlYWQ6ASoSyAEKCkJhdGNoV3JpdGUSJC5nb29nbGUu",
+            "c3Bhbm5lci52MS5CYXRjaFdyaXRlUmVxdWVzdBolLmdvb2dsZS5zcGFubmVy",
+            "LnYxLkJhdGNoV3JpdGVSZXNwb25zZSJr2kEXc2Vzc2lvbixtdXRhdGlvbl9n",
+            "cm91cHOC0+STAksiRi92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNl",
+            "cy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OmJhdGNoV3JpdGU6ASowARp3",
+            "ykEWc3Bhbm5lci5nb29nbGVhcGlzLmNvbdJBW2h0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9zcGFubmVyLmRhdGFCkQIKFWNvbS5nb29nbGUu",
+            "c3Bhbm5lci52MUIMU3Bhbm5lclByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vc3Bhbm5lci9hcGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xl",
+            "LkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoC",
+            "Gkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYx6kFfCh9zcGFubmVyLmdvb2ds",
+            "ZWFwaXMuY29tL0RhdGFiYXNlEjxwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
+            "Y2VzL3tpbnN0YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX1QAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Spanner.V1.CommitResponseReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -612,7 +612,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionTemplateFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.Session sessionTemplate_;
     /// <summary>
-    /// Parameters to be applied to each created session.
+    /// Parameters to apply to each created session.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -628,9 +628,9 @@ namespace Google.Cloud.Spanner.V1 {
     private int sessionCount_;
     /// <summary>
     /// Required. The number of sessions to be created in this batch call.
-    /// The API may return fewer than the requested number of sessions. If a
+    /// The API can return fewer than the requested number of sessions. If a
     /// specific number of sessions are desired, the client can make additional
-    /// calls to BatchCreateSessions (adjusting
+    /// calls to `BatchCreateSessions` (adjusting
     /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
     /// as necessary).
     /// </summary>
@@ -1128,7 +1128,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ApproximateLastUseTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp approximateLastUseTime_;
     /// <summary>
-    /// Output only. The approximate timestamp when the session is last used. It is
+    /// Output only. The approximate timestamp when the session is last used. It's
     /// typically earlier than the actual last use time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1159,13 +1159,14 @@ namespace Google.Cloud.Spanner.V1 {
     public const int MultiplexedFieldNumber = 6;
     private bool multiplexed_;
     /// <summary>
-    /// Optional. If true, specifies a multiplexed session. A multiplexed session
-    /// may be used for multiple, concurrent read-only operations but can not be
-    /// used for read-write transactions, partitioned reads, or partitioned
-    /// queries. Multiplexed sessions can be created via
-    /// [CreateSession][google.spanner.v1.Spanner.CreateSession] but not via
-    /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
-    /// Multiplexed sessions may not be deleted nor listed.
+    /// Optional. If `true`, specifies a multiplexed session. Use a multiplexed
+    /// session for multiple, concurrent read-only operations. Don't use them for
+    /// read-write transactions, partitioned reads, or partitioned queries. Use
+    /// [`sessions.create`][google.spanner.v1.Spanner.CreateSession] to create
+    /// multiplexed sessions. Don't use
+    /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions] to
+    /// create a multiplexed session. You can't delete or list multiplexed
+    /// sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2456,14 +2457,14 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// A per-request tag which can be applied to queries or reads, used for
     /// statistics collection.
-    /// Both request_tag and transaction_tag can be specified for a read or query
-    /// that belongs to a transaction.
-    /// This field is ignored for requests where it's not applicable (e.g.
-    /// CommitRequest).
+    /// Both `request_tag` and `transaction_tag` can be specified for a read or
+    /// query that belongs to a transaction.
+    /// This field is ignored for requests where it's not applicable (for example,
+    /// `CommitRequest`).
     /// Legal characters for `request_tag` values are all printable characters
     /// (ASCII 32 - 126) and the length of a request_tag is limited to 50
     /// characters. Values that exceed this limit are truncated.
-    /// Any leading underscore (_) characters will be removed from the string.
+    /// Any leading underscore (_) characters are removed from the string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2479,16 +2480,16 @@ namespace Google.Cloud.Spanner.V1 {
     private string transactionTag_ = "";
     /// <summary>
     /// A tag used for statistics collection about this transaction.
-    /// Both request_tag and transaction_tag can be specified for a read or query
-    /// that belongs to a transaction.
+    /// Both `request_tag` and `transaction_tag` can be specified for a read or
+    /// query that belongs to a transaction.
     /// The value of transaction_tag should be the same for all requests belonging
     /// to the same transaction.
-    /// If this request doesn't belong to any transaction, transaction_tag will be
+    /// If this request doesn't belong to any transaction, `transaction_tag` is
     /// ignored.
     /// Legal characters for `transaction_tag` values are all printable characters
-    /// (ASCII 32 - 126) and the length of a transaction_tag is limited to 50
+    /// (ASCII 32 - 126) and the length of a `transaction_tag` is limited to 50
     /// characters. Values that exceed this limit are truncated.
-    /// Any leading underscore (_) characters will be removed from the string.
+    /// Any leading underscore (_) characters are removed from the string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2684,22 +2685,22 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The relative priority for requests. Note that priority is not applicable
+      /// The relative priority for requests. Note that priority isn't applicable
       /// for [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
       ///
-      /// The priority acts as a hint to the Cloud Spanner scheduler and does not
+      /// The priority acts as a hint to the Cloud Spanner scheduler and doesn't
       /// guarantee priority or order of execution. For example:
       ///
       /// * Some parts of a write operation always execute at `PRIORITY_HIGH`,
-      ///   regardless of the specified priority. This may cause you to see an
+      ///   regardless of the specified priority. This can cause you to see an
       ///   increase in high priority workload even when executing a low priority
       ///   request. This can also potentially cause a priority inversion where a
-      ///   lower priority request will be fulfilled ahead of a higher priority
+      ///   lower priority request is fulfilled ahead of a higher priority
       ///   request.
       /// * If a transaction contains multiple operations with different priorities,
-      ///   Cloud Spanner does not guarantee to process the higher priority
-      ///   operations first. There may be other constraints to satisfy, such as
-      ///   order of operations.
+      ///   Cloud Spanner doesn't guarantee to process the higher priority
+      ///   operations first. There might be other constraints to satisfy, such as
+      ///   the order of operations.
       /// </summary>
       public enum Priority {
         /// <summary>
@@ -2726,11 +2727,11 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The DirectedReadOptions can be used to indicate which replicas or regions
+  /// The `DirectedReadOptions` can be used to indicate which replicas or regions
   /// should be used for non-transactional reads or queries.
   ///
-  /// DirectedReadOptions may only be specified for a read-only transaction,
-  /// otherwise the API will return an `INVALID_ARGUMENT` error.
+  /// `DirectedReadOptions` can only be specified for a read-only transaction,
+  /// otherwise the API returns an `INVALID_ARGUMENT` error.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DirectedReadOptions : pb::IMessage<DirectedReadOptions>
@@ -2788,11 +2789,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "include_replicas" field.</summary>
     public const int IncludeReplicasFieldNumber = 1;
     /// <summary>
-    /// Include_replicas indicates the order of replicas (as they appear in
-    /// this list) to process the request. If auto_failover_disabled is set to
-    /// true and all replicas are exhausted without finding a healthy replica,
-    /// Spanner will wait for a replica in the list to become available, requests
-    /// may fail due to `DEADLINE_EXCEEDED` errors.
+    /// `Include_replicas` indicates the order of replicas (as they appear in
+    /// this list) to process the request. If `auto_failover_disabled` is set to
+    /// `true` and all replicas are exhausted without finding a healthy replica,
+    /// Spanner waits for a replica in the list to become available, requests
+    /// might fail due to `DEADLINE_EXCEEDED` errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2807,8 +2808,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "exclude_replicas" field.</summary>
     public const int ExcludeReplicasFieldNumber = 2;
     /// <summary>
-    /// Exclude_replicas indicates that specified replicas should be excluded
-    /// from serving requests. Spanner will not route requests to the replicas
+    /// `Exclude_replicas` indicates that specified replicas should be excluded
+    /// from serving requests. Spanner doesn't route requests to the replicas
     /// in this list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3045,12 +3046,12 @@ namespace Google.Cloud.Spanner.V1 {
       /// Some examples of using replica_selectors are:
       ///
       ///   * `location:us-east1` --> The "us-east1" replica(s) of any available type
-      ///                             will be used to process the request.
-      ///   * `type:READ_ONLY`    --> The "READ_ONLY" type replica(s) in nearest
-      ///                             available location will be used to process the
+      ///                             is used to process the request.
+      ///   * `type:READ_ONLY`    --> The "READ_ONLY" type replica(s) in the nearest
+      ///                             available location are used to process the
       ///                             request.
       ///   * `location:us-east1 type:READ_ONLY` --> The "READ_ONLY" type replica(s)
-      ///                          in location "us-east1" will be used to process
+      ///                          in location "us-east1" is used to process
       ///                          the request.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3103,7 +3104,7 @@ namespace Google.Cloud.Spanner.V1 {
         public const int LocationFieldNumber = 1;
         private string location_ = "";
         /// <summary>
-        /// The location or region of the serving requests, e.g. "us-east1".
+        /// The location or region of the serving requests, for example, "us-east1".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3313,7 +3314,7 @@ namespace Google.Cloud.Spanner.V1 {
       }
 
       /// <summary>
-      /// An IncludeReplicas contains a repeated set of ReplicaSelection which
+      /// An `IncludeReplicas` contains a repeated set of `ReplicaSelection` which
       /// indicates the order in which replicas should be considered.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3380,9 +3381,9 @@ namespace Google.Cloud.Spanner.V1 {
         public const int AutoFailoverDisabledFieldNumber = 2;
         private bool autoFailoverDisabled_;
         /// <summary>
-        /// If true, Spanner will not route requests to a replica outside the
-        /// include_replicas list when all of the specified replicas are unavailable
-        /// or unhealthy. Default value is `false`.
+        /// If `true`, Spanner doesn't route requests to a replica outside the
+        /// &lt;`include_replicas` list when all of the specified replicas are
+        /// unavailable or unhealthy. Default value is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3818,7 +3819,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// transaction with strong concurrency.
     ///
     /// Standard DML statements require a read-write transaction. To protect
-    /// against replays, single-use transactions are not supported.  The caller
+    /// against replays, single-use transactions are not supported. The caller
     /// must either supply an existing transaction ID or begin a new transaction.
     ///
     /// Partitioned DML requires an existing Partitioned DML transaction ID.
@@ -3858,12 +3859,12 @@ namespace Google.Cloud.Spanner.V1 {
     /// to the naming requirements of identifiers as specified at
     /// https://cloud.google.com/spanner/docs/lexical#identifiers.
     ///
-    /// Parameters can appear anywhere that a literal value is expected.  The same
+    /// Parameters can appear anywhere that a literal value is expected. The same
     /// parameter name can be used more than once, for example:
     ///
     /// `"WHERE id > @msg_id AND id &lt; @msg_id + 100"`
     ///
-    /// It is an error to execute a SQL statement with unbound parameters.
+    /// It's an error to execute a SQL statement with unbound parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3880,12 +3881,12 @@ namespace Google.Cloud.Spanner.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.Type.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> paramTypes_ = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>();
     /// <summary>
-    /// It is not always possible for Cloud Spanner to infer the right SQL type
-    /// from a JSON value.  For example, values of type `BYTES` and values
+    /// It isn't always possible for Cloud Spanner to infer the right SQL type
+    /// from a JSON value. For example, values of type `BYTES` and values
     /// of type `STRING` both appear in
     /// [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
     ///
-    /// In these cases, `param_types` can be used to specify the exact
+    /// In these cases, you can use `param_types` to specify the exact
     /// SQL type for some or all of the SQL statement parameters. See the
     /// definition of [Type][google.spanner.v1.Type] for more information
     /// about SQL types.
@@ -3940,10 +3941,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PartitionTokenFieldNumber = 8;
     private pb::ByteString partitionToken_ = pb::ByteString.Empty;
     /// <summary>
-    /// If present, results will be restricted to the specified partition
-    /// previously created using PartitionQuery().  There must be an exact
+    /// If present, results are restricted to the specified partition
+    /// previously created using `PartitionQuery`. There must be an exact
     /// match for the values of fields common to this message and the
-    /// PartitionQueryRequest message used to create this partition_token.
+    /// `PartitionQueryRequest` message used to create this `partition_token`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3960,12 +3961,12 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// A per-transaction sequence number used to identify this request. This field
     /// makes each request idempotent such that if the request is received multiple
-    /// times, at most one will succeed.
+    /// times, at most one succeeds.
     ///
     /// The sequence number must be monotonically increasing within the
     /// transaction. If a request arrives for the first time with an out-of-order
-    /// sequence number, the transaction may be aborted. Replays of previously
-    /// handled requests will yield the same response as the first execution.
+    /// sequence number, the transaction can be aborted. Replays of previously
+    /// handled requests yield the same response as the first execution.
     ///
     /// Required for DML statements. Ignored for queries.
     /// </summary>
@@ -4030,7 +4031,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// If this is for a partitioned query and this field is set to `true`, the
     /// request is executed with Spanner Data Boost independent compute resources.
     ///
-    /// If the field is set to `true` but the request does not set
+    /// If the field is set to `true` but the request doesn't set
     /// `partition_token`, the API returns an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4046,15 +4047,15 @@ namespace Google.Cloud.Spanner.V1 {
     public const int LastStatementFieldNumber = 17;
     private bool lastStatement_;
     /// <summary>
-    /// Optional. If set to true, this statement marks the end of the transaction.
-    /// The transaction should be committed or aborted after this statement
-    /// executes, and attempts to execute any other requests against this
-    /// transaction (including reads and queries) will be rejected.
+    /// Optional. If set to `true`, this statement marks the end of the
+    /// transaction. After this statement executes, you must commit or abort the
+    /// transaction. Attempts to execute any other requests against this
+    /// transaction (including reads and queries) are rejected.
     ///
-    /// For DML statements, setting this option may cause some error reporting to
-    /// be deferred until commit time (e.g. validation of unique constraints).
-    /// Given this, successful execution of a DML statement should not be assumed
-    /// until a subsequent Commit call completes successfully.
+    /// For DML statements, setting this option might cause some error reporting to
+    /// be deferred until commit time (for example, validation of unique
+    /// constraints). Given this, successful execution of a DML statement shouldn't
+    /// be assumed until a subsequent `Commit` call completes successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4564,7 +4565,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// <summary>
         /// This mode returns the query plan, overall execution statistics,
         /// operator level execution statistics along with the results. This has a
-        /// performance overhead compared to the other modes. It is not recommended
+        /// performance overhead compared to the other modes. It isn't recommended
         /// to use this mode for production traffic.
         /// </summary>
         [pbr::OriginalName("PROFILE")] Profile = 2,
@@ -4645,7 +4646,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// overrides the default optimizer version for query execution.
         ///
         /// The list of supported optimizer versions can be queried from
-        /// SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS.
+        /// `SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS`.
         ///
         /// Executing a SQL statement with an invalid optimizer version fails with
         /// an `INVALID_ARGUMENT` error.
@@ -4677,13 +4678,13 @@ namespace Google.Cloud.Spanner.V1 {
         /// Specifying `latest` as a value instructs Cloud Spanner to use the latest
         /// generated statistics package. If not specified, Cloud Spanner uses
         /// the statistics package set at the database level options, or the latest
-        /// package if the database option is not set.
+        /// package if the database option isn't set.
         ///
         /// The statistics package requested by the query has to be exempt from
         /// garbage collection. This can be achieved with the following DDL
         /// statement:
         ///
-        /// ```
+        /// ```sql
         /// ALTER STATISTICS &lt;package_name> SET OPTIONS (allow_gc=false)
         /// ```
         ///
@@ -4977,12 +4978,12 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Required. A per-transaction sequence number used to identify this request.
     /// This field makes each request idempotent such that if the request is
-    /// received multiple times, at most one will succeed.
+    /// received multiple times, at most one succeeds.
     ///
     /// The sequence number must be monotonically increasing within the
     /// transaction. If a request arrives for the first time with an out-of-order
-    /// sequence number, the transaction may be aborted. Replays of previously
-    /// handled requests will yield the same response as the first execution.
+    /// sequence number, the transaction might be aborted. Replays of previously
+    /// handled requests yield the same response as the first execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5012,15 +5013,15 @@ namespace Google.Cloud.Spanner.V1 {
     public const int LastStatementsFieldNumber = 6;
     private bool lastStatements_;
     /// <summary>
-    /// Optional. If set to true, this request marks the end of the transaction.
-    /// The transaction should be committed or aborted after these statements
-    /// execute, and attempts to execute any other requests against this
-    /// transaction (including reads and queries) will be rejected.
+    /// Optional. If set to `true`, this request marks the end of the transaction.
+    /// After these statements execute, you must commit or abort the transaction.
+    /// Attempts to execute any other requests against this transaction
+    /// (including reads and queries) are rejected.
     ///
-    /// Setting this option may cause some error reporting to be deferred until
-    /// commit time (e.g. validation of unique constraints). Given this, successful
-    /// execution of statements should not be assumed until a subsequent Commit
-    /// call completes successfully.
+    /// Setting this option might cause some error reporting to be deferred until
+    /// commit time (for example, validation of unique constraints). Given this,
+    /// successful execution of statements shouldn't be assumed until a subsequent
+    /// `Commit` call completes successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5370,12 +5371,12 @@ namespace Google.Cloud.Spanner.V1 {
         /// parameter name (for example, `@firstName`). Parameter names can contain
         /// letters, numbers, and underscores.
         ///
-        /// Parameters can appear anywhere that a literal value is expected.  The
+        /// Parameters can appear anywhere that a literal value is expected. The
         /// same parameter name can be used more than once, for example:
         ///
         /// `"WHERE id > @msg_id AND id &lt; @msg_id + 100"`
         ///
-        /// It is an error to execute a SQL statement with unbound parameters.
+        /// It's an error to execute a SQL statement with unbound parameters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5392,8 +5393,8 @@ namespace Google.Cloud.Spanner.V1 {
             = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.Type.Parser), 26);
         private readonly pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> paramTypes_ = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>();
         /// <summary>
-        /// It is not always possible for Cloud Spanner to infer the right SQL type
-        /// from a JSON value.  For example, values of type `BYTES` and values
+        /// It isn't always possible for Cloud Spanner to infer the right SQL type
+        /// from a JSON value. For example, values of type `BYTES` and values
         /// of type `STRING` both appear in
         /// [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as
         /// JSON strings.
@@ -5716,13 +5717,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PrecommitTokenFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken precommitToken_;
     /// <summary>
-    /// Optional. A precommit token will be included if the read-write transaction
-    /// is on a multiplexed session.
-    /// The precommit token with the highest sequence number from this transaction
-    /// attempt should be passed to the
+    /// Optional. A precommit token is included if the read-write transaction
+    /// is on a multiplexed session. Pass the precommit token with the highest
+    /// sequence number from this transaction attempt should be passed to the
     /// [Commit][google.spanner.v1.Spanner.Commit] request for this transaction.
-    /// This feature is not yet supported and will result in an UNIMPLEMENTED
-    /// error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5923,8 +5921,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// Options for a PartitionQueryRequest and
-  /// PartitionReadRequest.
+  /// Options for a `PartitionQueryRequest` and `PartitionReadRequest`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PartitionOptions : pb::IMessage<PartitionOptions>
@@ -5976,12 +5973,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PartitionSizeBytesFieldNumber = 1;
     private long partitionSizeBytes_;
     /// <summary>
-    /// **Note:** This hint is currently ignored by PartitionQuery and
-    /// PartitionRead requests.
+    /// **Note:** This hint is currently ignored by `PartitionQuery` and
+    /// `PartitionRead` requests.
     ///
-    /// The desired data size for each partition generated.  The default for this
-    /// option is currently 1 GiB.  This is only a hint. The actual size of each
-    /// partition may be smaller or larger than this size request.
+    /// The desired data size for each partition generated. The default for this
+    /// option is currently 1 GiB. This is only a hint. The actual size of each
+    /// partition can be smaller or larger than this size request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5996,14 +5993,14 @@ namespace Google.Cloud.Spanner.V1 {
     public const int MaxPartitionsFieldNumber = 2;
     private long maxPartitions_;
     /// <summary>
-    /// **Note:** This hint is currently ignored by PartitionQuery and
-    /// PartitionRead requests.
+    /// **Note:** This hint is currently ignored by `PartitionQuery` and
+    /// `PartitionRead` requests.
     ///
-    /// The desired maximum number of partitions to return.  For example, this may
-    /// be set to the number of workers available.  The default for this option
-    /// is currently 10,000. The maximum value is currently 200,000.  This is only
-    /// a hint.  The actual number of partitions returned may be smaller or larger
-    /// than this maximum count request.
+    /// The desired maximum number of partitions to return. For example, this
+    /// might be set to the number of workers available. The default for this
+    /// option is currently 10,000. The maximum value is currently 200,000. This
+    /// is only a hint. The actual number of partitions returned can be smaller or
+    /// larger than this maximum count request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6243,8 +6240,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TransactionFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.TransactionSelector transaction_;
     /// <summary>
-    /// Read only snapshot transactions are supported, read/write and single use
-    /// transactions are not.
+    /// Read-only snapshot transactions are supported, read and write and
+    /// single-use transactions are not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6259,18 +6256,19 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SqlFieldNumber = 3;
     private string sql_ = "";
     /// <summary>
-    /// Required. The query request to generate partitions for. The request will
-    /// fail if the query is not root partitionable. For a query to be root
+    /// Required. The query request to generate partitions for. The request fails
+    /// if the query isn't root partitionable. For a query to be root
     /// partitionable, it needs to satisfy a few conditions. For example, if the
     /// query execution plan contains a distributed union operator, then it must be
     /// the first operator in the plan. For more information about other
     /// conditions, see [Read data in
     /// parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
     ///
-    /// The query request must not contain DML commands, such as INSERT, UPDATE, or
-    /// DELETE. Use
-    /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] with a
-    /// PartitionedDml transaction for large, partition-friendly DML operations.
+    /// The query request must not contain DML commands, such as `INSERT`,
+    /// `UPDATE`, or `DELETE`. Use
+    /// [`ExecuteStreamingSql`][google.spanner.v1.Spanner.ExecuteStreamingSql] with
+    /// a `PartitionedDml` transaction for large, partition-friendly DML
+    /// operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6291,12 +6289,12 @@ namespace Google.Cloud.Spanner.V1 {
     /// parameter name (for example, `@firstName`). Parameter names can contain
     /// letters, numbers, and underscores.
     ///
-    /// Parameters can appear anywhere that a literal value is expected.  The same
+    /// Parameters can appear anywhere that a literal value is expected. The same
     /// parameter name can be used more than once, for example:
     ///
     /// `"WHERE id > @msg_id AND id &lt; @msg_id + 100"`
     ///
-    /// It is an error to execute a SQL statement with unbound parameters.
+    /// It's an error to execute a SQL statement with unbound parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6313,8 +6311,8 @@ namespace Google.Cloud.Spanner.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.Type.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> paramTypes_ = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>();
     /// <summary>
-    /// It is not always possible for Cloud Spanner to infer the right SQL type
-    /// from a JSON value.  For example, values of type `BYTES` and values
+    /// It isn't always possible for Cloud Spanner to infer the right SQL type
+    /// from a JSON value. For example, values of type `BYTES` and values
     /// of type `STRING` both appear in
     /// [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
     ///
@@ -6761,7 +6759,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
     /// index keys in [index][google.spanner.v1.PartitionReadRequest.index].
     ///
-    /// It is not an error for the `key_set` to name rows that do not
+    /// It isn't an error for the `key_set` to name rows that don't
     /// exist in the database. Read yields nothing for nonexistent rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7135,9 +7133,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PartitionTokenFieldNumber = 1;
     private pb::ByteString partitionToken_ = pb::ByteString.Empty;
     /// <summary>
-    /// This token can be passed to Read, StreamingRead, ExecuteSql, or
-    /// ExecuteStreamingSql requests to restrict the results to those identified by
-    /// this partition token.
+    /// This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or
+    /// `ExecuteStreamingSql` requests to restrict the results to those identified
+    /// by this partition token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7673,11 +7671,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// If the [partition_token][google.spanner.v1.ReadRequest.partition_token]
     /// field is empty, rows are yielded in table primary key order (if
     /// [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
-    /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty).  If the
-    /// [partition_token][google.spanner.v1.ReadRequest.partition_token] field is
-    /// not empty, rows will be yielded in an unspecified order.
+    /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty). If the
+    /// [partition_token][google.spanner.v1.ReadRequest.partition_token] field
+    /// isn't empty, rows are yielded in an unspecified order.
     ///
-    /// It is not an error for the `key_set` to name rows that do not
+    /// It isn't an error for the `key_set` to name rows that don't
     /// exist in the database. Read yields nothing for nonexistent rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7694,7 +7692,7 @@ namespace Google.Cloud.Spanner.V1 {
     private long limit_;
     /// <summary>
     /// If greater than zero, only the first `limit` rows are yielded. If `limit`
-    /// is zero, the default is no limit. A limit cannot be specified if
+    /// is zero, the default is no limit. A limit can't be specified if
     /// `partition_token` is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7730,8 +7728,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PartitionTokenFieldNumber = 10;
     private pb::ByteString partitionToken_ = pb::ByteString.Empty;
     /// <summary>
-    /// If present, results will be restricted to the specified partition
-    /// previously created using PartitionRead().    There must be an exact
+    /// If present, results are restricted to the specified partition
+    /// previously created using `PartitionRead`. There must be an exact
     /// match for the values of fields common to this message and the
     /// PartitionReadRequest message used to create this partition_token.
     /// </summary>
@@ -7781,7 +7779,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// If this is for a partitioned read and this field is set to `true`, the
     /// request is executed with Spanner Data Boost independent compute resources.
     ///
-    /// If the field is set to `true` but the request does not set
+    /// If the field is set to `true` but the request doesn't set
     /// `partition_token`, the API returns an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7799,11 +7797,12 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Optional. Order for the returned rows.
     ///
-    /// By default, Spanner will return result rows in primary key order except for
-    /// PartitionRead requests. For applications that do not require rows to be
+    /// By default, Spanner returns result rows in primary key order except for
+    /// PartitionRead requests. For applications that don't require rows to be
     /// returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting
     /// `ORDER_BY_NO_ORDER` option allows Spanner to optimize row retrieval,
-    /// resulting in lower latencies in certain cases (e.g. bulk point lookups).
+    /// resulting in lower latencies in certain cases (for example, bulk point
+    /// lookups).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8311,14 +8310,14 @@ namespace Google.Cloud.Spanner.V1 {
         /// <summary>
         /// Default value.
         ///
-        /// ORDER_BY_UNSPECIFIED is equivalent to ORDER_BY_PRIMARY_KEY.
+        /// `ORDER_BY_UNSPECIFIED` is equivalent to `ORDER_BY_PRIMARY_KEY`.
         /// </summary>
         [pbr::OriginalName("ORDER_BY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Read rows are returned in primary key order.
         ///
         /// In the event that this option is used in conjunction with the
-        /// `partition_token` field, the API will return an `INVALID_ARGUMENT` error.
+        /// `partition_token` field, the API returns an `INVALID_ARGUMENT` error.
         /// </summary>
         [pbr::OriginalName("ORDER_BY_PRIMARY_KEY")] PrimaryKey = 1,
         /// <summary>
@@ -8334,7 +8333,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// <summary>
         /// Default value.
         ///
-        /// LOCK_HINT_UNSPECIFIED is equivalent to LOCK_HINT_SHARED.
+        /// `LOCK_HINT_UNSPECIFIED` is equivalent to `LOCK_HINT_SHARED`.
         /// </summary>
         [pbr::OriginalName("LOCK_HINT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -8367,8 +8366,8 @@ namespace Google.Cloud.Spanner.V1 {
         /// serialized. Each transaction waits its turn to acquire the lock and
         /// avoids getting into deadlock situations.
         ///
-        /// Because the exclusive lock hint is just a hint, it should not be
-        /// considered equivalent to a mutex. In other words, you should not use
+        /// Because the exclusive lock hint is just a hint, it shouldn't be
+        /// considered equivalent to a mutex. In other words, you shouldn't use
         /// Spanner exclusive locks as a mutual exclusion mechanism for the execution
         /// of code outside of Spanner.
         ///
@@ -8474,7 +8473,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Common options for this request.
     /// Priority is ignored for this request. Setting the priority in this
-    /// request_options struct will not do anything. To set the priority for a
+    /// `request_options` struct doesn't do anything. To set the priority for a
     /// transaction, set it on the reads and writes that are part of this
     /// transaction instead.
     /// </summary>
@@ -8492,11 +8491,9 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.Mutation mutationKey_;
     /// <summary>
     /// Optional. Required for read-write transactions on a multiplexed session
-    /// that commit mutations but do not perform any reads or queries. Clients
-    /// should randomly select one of the mutations from the mutation set and send
-    /// it as a part of this request.
-    /// This feature is not yet supported and will result in an UNIMPLEMENTED
-    /// error.
+    /// that commit mutations but don't perform any reads or queries. You must
+    /// randomly select one of the mutations from the mutation set and send it as a
+    /// part of this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8853,7 +8850,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// temporary transaction is non-idempotent. That is, if the
     /// `CommitRequest` is sent to Cloud Spanner more than once (for
     /// instance, due to retries in the application, or in the
-    /// transport library), it is possible that the mutations are
+    /// transport library), it's possible that the mutations are
     /// executed more than once. If this is undesirable, use
     /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
     /// [Commit][google.spanner.v1.Spanner.Commit] instead.
@@ -8888,7 +8885,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ReturnCommitStatsFieldNumber = 5;
     private bool returnCommitStats_;
     /// <summary>
-    /// If `true`, then statistics related to the transaction will be included in
+    /// If `true`, then statistics related to the transaction is included in
     /// the [CommitResponse][google.spanner.v1.CommitResponse.commit_stats].
     /// Default value is `false`.
     /// </summary>
@@ -8905,11 +8902,11 @@ namespace Google.Cloud.Spanner.V1 {
     public const int MaxCommitDelayFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration maxCommitDelay_;
     /// <summary>
-    /// Optional. The amount of latency this request is willing to incur in order
-    /// to improve throughput. If this field is not set, Spanner assumes requests
-    /// are relatively latency sensitive and automatically determines an
-    /// appropriate delay time. You can specify a batching delay value between 0
-    /// and 500 ms.
+    /// Optional. The amount of latency this request is configured to incur in
+    /// order to improve throughput. If this field isn't set, Spanner assumes
+    /// requests are relatively latency sensitive and automatically determines an
+    /// appropriate delay time. You can specify a commit delay value between 0 and
+    /// 500 ms.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8940,11 +8937,9 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken precommitToken_;
     /// <summary>
     /// Optional. If the read-write transaction was executed on a multiplexed
-    /// session, the precommit token with the highest sequence number received in
-    /// this transaction attempt, should be included here. Failing to do so will
-    /// result in a FailedPrecondition error.
-    /// This feature is not yet supported and will result in an UNIMPLEMENTED
-    /// error.
+    /// session, then you must include the precommit token with the highest
+    /// sequence number received in this transaction attempt. Failing to do so
+    /// results in a `FailedPrecondition` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9647,18 +9642,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ExcludeTxnFromChangeStreamsFieldNumber = 5;
     private bool excludeTxnFromChangeStreams_;
     /// <summary>
-    /// Optional. When `exclude_txn_from_change_streams` is set to `true`:
-    ///  * Mutations from all transactions in this batch write operation will not
-    ///  be recorded in change streams with DDL option `allow_txn_exclusion=true`
-    ///  that are tracking columns modified by these transactions.
-    ///  * Mutations from all transactions in this batch write operation will be
-    ///  recorded in change streams with DDL option `allow_txn_exclusion=false or
-    ///  not set` that are tracking columns modified by these transactions.
-    ///
-    /// When `exclude_txn_from_change_streams` is set to `false` or not set,
-    /// mutations from all transactions in this batch write operation will be
-    /// recorded in all change streams that are tracking columns modified by these
-    /// transactions.
+    /// Optional. If you don't set the `exclude_txn_from_change_streams` option or
+    /// if it's set to `false`, then any change streams monitoring columns modified
+    /// by transactions will capture the updates made within that transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

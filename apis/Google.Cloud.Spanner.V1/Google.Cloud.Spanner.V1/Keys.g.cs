@@ -653,8 +653,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.KeyRange.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange> ranges_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange>();
     /// <summary>
-    /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more information about
-    /// key range specifications.
+    /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more
+    /// information about key range specifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
