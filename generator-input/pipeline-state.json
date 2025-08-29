@@ -4510,7 +4510,7 @@
             "id": "Google.Cloud.CloudSecurityCompliance.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "1765b559c42386788ff0c6412491277b4791107a",
             "apiPaths": [
                 "google/cloud/cloudsecuritycompliance/v1"
