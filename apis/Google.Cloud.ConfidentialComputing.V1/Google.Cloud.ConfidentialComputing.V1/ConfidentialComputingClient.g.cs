@@ -50,6 +50,8 @@ namespace Google.Cloud.ConfidentialComputing.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateChallengeSettings = existing.CreateChallengeSettings;
             VerifyAttestationSettings = existing.VerifyAttestationSettings;
+            VerifyConfidentialSpaceSettings = existing.VerifyConfidentialSpaceSettings;
+            VerifyConfidentialGkeSettings = existing.VerifyConfidentialGkeSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -93,6 +95,44 @@ namespace Google.Cloud.ConfidentialComputing.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings VerifyAttestationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfidentialComputingClient.VerifyConfidentialSpace</c> and
+        /// <c>ConfidentialComputingClient.VerifyConfidentialSpaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifyConfidentialSpaceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfidentialComputingClient.VerifyConfidentialGke</c> and
+        /// <c>ConfidentialComputingClient.VerifyConfidentialGkeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifyConfidentialGkeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -386,7 +426,8 @@ namespace Google.Cloud.ConfidentialComputing.V1
             CreateChallengeAsync(parent, challenge, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Verifies the provided attestation info, returning a signed OIDC token.
+        /// Verifies the provided attestation info, returning a signed attestation
+        /// token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -395,7 +436,8 @@ namespace Google.Cloud.ConfidentialComputing.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Verifies the provided attestation info, returning a signed OIDC token.
+        /// Verifies the provided attestation info, returning a signed attestation
+        /// token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -404,13 +446,74 @@ namespace Google.Cloud.ConfidentialComputing.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Verifies the provided attestation info, returning a signed OIDC token.
+        /// Verifies the provided attestation info, returning a signed attestation
+        /// token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<VerifyAttestationResponse> VerifyAttestationAsync(VerifyAttestationRequest request, st::CancellationToken cancellationToken) =>
             VerifyAttestationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies whether the provided attestation info is valid, returning a signed
+        /// attestation token if so.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyConfidentialSpaceResponse VerifyConfidentialSpace(VerifyConfidentialSpaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies whether the provided attestation info is valid, returning a signed
+        /// attestation token if so.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConfidentialSpaceResponse> VerifyConfidentialSpaceAsync(VerifyConfidentialSpaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies whether the provided attestation info is valid, returning a signed
+        /// attestation token if so.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConfidentialSpaceResponse> VerifyConfidentialSpaceAsync(VerifyConfidentialSpaceRequest request, st::CancellationToken cancellationToken) =>
+            VerifyConfidentialSpaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies the provided Confidential GKE attestation info, returning a signed
+        /// OIDC token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyConfidentialGkeResponse VerifyConfidentialGke(VerifyConfidentialGkeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies the provided Confidential GKE attestation info, returning a signed
+        /// OIDC token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConfidentialGkeResponse> VerifyConfidentialGkeAsync(VerifyConfidentialGkeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies the provided Confidential GKE attestation info, returning a signed
+        /// OIDC token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyConfidentialGkeResponse> VerifyConfidentialGkeAsync(VerifyConfidentialGkeRequest request, st::CancellationToken cancellationToken) =>
+            VerifyConfidentialGkeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ConfidentialComputing client wrapper implementation, for convenient use.</summary>
@@ -422,6 +525,10 @@ namespace Google.Cloud.ConfidentialComputing.V1
         private readonly gaxgrpc::ApiCall<CreateChallengeRequest, Challenge> _callCreateChallenge;
 
         private readonly gaxgrpc::ApiCall<VerifyAttestationRequest, VerifyAttestationResponse> _callVerifyAttestation;
+
+        private readonly gaxgrpc::ApiCall<VerifyConfidentialSpaceRequest, VerifyConfidentialSpaceResponse> _callVerifyConfidentialSpace;
+
+        private readonly gaxgrpc::ApiCall<VerifyConfidentialGkeRequest, VerifyConfidentialGkeResponse> _callVerifyConfidentialGke;
 
         /// <summary>
         /// Constructs a client wrapper for the ConfidentialComputing service, with the specified gRPC client and
@@ -446,6 +553,12 @@ namespace Google.Cloud.ConfidentialComputing.V1
             _callVerifyAttestation = clientHelper.BuildApiCall<VerifyAttestationRequest, VerifyAttestationResponse>("VerifyAttestation", grpcClient.VerifyAttestationAsync, grpcClient.VerifyAttestation, effectiveSettings.VerifyAttestationSettings).WithGoogleRequestParam("challenge", request => request.Challenge);
             Modify_ApiCall(ref _callVerifyAttestation);
             Modify_VerifyAttestationApiCall(ref _callVerifyAttestation);
+            _callVerifyConfidentialSpace = clientHelper.BuildApiCall<VerifyConfidentialSpaceRequest, VerifyConfidentialSpaceResponse>("VerifyConfidentialSpace", grpcClient.VerifyConfidentialSpaceAsync, grpcClient.VerifyConfidentialSpace, effectiveSettings.VerifyConfidentialSpaceSettings).WithGoogleRequestParam("challenge", request => request.Challenge);
+            Modify_ApiCall(ref _callVerifyConfidentialSpace);
+            Modify_VerifyConfidentialSpaceApiCall(ref _callVerifyConfidentialSpace);
+            _callVerifyConfidentialGke = clientHelper.BuildApiCall<VerifyConfidentialGkeRequest, VerifyConfidentialGkeResponse>("VerifyConfidentialGke", grpcClient.VerifyConfidentialGkeAsync, grpcClient.VerifyConfidentialGke, effectiveSettings.VerifyConfidentialGkeSettings).WithGoogleRequestParam("challenge", request => request.Challenge);
+            Modify_ApiCall(ref _callVerifyConfidentialGke);
+            Modify_VerifyConfidentialGkeApiCall(ref _callVerifyConfidentialGke);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -454,6 +567,10 @@ namespace Google.Cloud.ConfidentialComputing.V1
         partial void Modify_CreateChallengeApiCall(ref gaxgrpc::ApiCall<CreateChallengeRequest, Challenge> call);
 
         partial void Modify_VerifyAttestationApiCall(ref gaxgrpc::ApiCall<VerifyAttestationRequest, VerifyAttestationResponse> call);
+
+        partial void Modify_VerifyConfidentialSpaceApiCall(ref gaxgrpc::ApiCall<VerifyConfidentialSpaceRequest, VerifyConfidentialSpaceResponse> call);
+
+        partial void Modify_VerifyConfidentialGkeApiCall(ref gaxgrpc::ApiCall<VerifyConfidentialGkeRequest, VerifyConfidentialGkeResponse> call);
 
         partial void OnConstruction(ConfidentialComputing.ConfidentialComputingClient grpcClient, ConfidentialComputingSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -466,6 +583,10 @@ namespace Google.Cloud.ConfidentialComputing.V1
         partial void Modify_CreateChallengeRequest(ref CreateChallengeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_VerifyAttestationRequest(ref VerifyAttestationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_VerifyConfidentialSpaceRequest(ref VerifyConfidentialSpaceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_VerifyConfidentialGkeRequest(ref VerifyConfidentialGkeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new Challenge in a given project and location.
@@ -492,7 +613,8 @@ namespace Google.Cloud.ConfidentialComputing.V1
         }
 
         /// <summary>
-        /// Verifies the provided attestation info, returning a signed OIDC token.
+        /// Verifies the provided attestation info, returning a signed attestation
+        /// token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -504,7 +626,8 @@ namespace Google.Cloud.ConfidentialComputing.V1
         }
 
         /// <summary>
-        /// Verifies the provided attestation info, returning a signed OIDC token.
+        /// Verifies the provided attestation info, returning a signed attestation
+        /// token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -513,6 +636,58 @@ namespace Google.Cloud.ConfidentialComputing.V1
         {
             Modify_VerifyAttestationRequest(ref request, ref callSettings);
             return _callVerifyAttestation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies whether the provided attestation info is valid, returning a signed
+        /// attestation token if so.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VerifyConfidentialSpaceResponse VerifyConfidentialSpace(VerifyConfidentialSpaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyConfidentialSpaceRequest(ref request, ref callSettings);
+            return _callVerifyConfidentialSpace.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies whether the provided attestation info is valid, returning a signed
+        /// attestation token if so.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VerifyConfidentialSpaceResponse> VerifyConfidentialSpaceAsync(VerifyConfidentialSpaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyConfidentialSpaceRequest(ref request, ref callSettings);
+            return _callVerifyConfidentialSpace.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies the provided Confidential GKE attestation info, returning a signed
+        /// OIDC token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VerifyConfidentialGkeResponse VerifyConfidentialGke(VerifyConfidentialGkeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyConfidentialGkeRequest(ref request, ref callSettings);
+            return _callVerifyConfidentialGke.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies the provided Confidential GKE attestation info, returning a signed
+        /// OIDC token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VerifyConfidentialGkeResponse> VerifyConfidentialGkeAsync(VerifyConfidentialGkeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyConfidentialGkeRequest(ref request, ref callSettings);
+            return _callVerifyConfidentialGke.Async(request, callSettings);
         }
     }
 

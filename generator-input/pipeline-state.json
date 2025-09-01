@@ -1042,7 +1042,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-02-25T19:18:27Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "bf9ef0b974165254603138d47a1f09ea1aa9cd0a",
             "apiPaths": [
                 "google/cloud/confidentialcomputing/v1"
             ],
