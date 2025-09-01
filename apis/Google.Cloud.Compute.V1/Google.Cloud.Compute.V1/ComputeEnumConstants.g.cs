@@ -1555,6 +1555,13 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.LocalityLbPolicy.WeightedGcpRendezvous"/>
+                /// .
+                /// </summary>
+                public const string WeightedGcpRendezvous = "WEIGHTED_GCP_RENDEZVOUS";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.LocalityLbPolicy.WeightedMaglev"/>.
                 /// </summary>
                 public const string WeightedMaglev = "WEIGHTED_MAGLEV";
@@ -1934,6 +1941,13 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string RoundRobin = "ROUND_ROBIN";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceLocalityLoadBalancingPolicyConfigPolicy.Types.Name.WeightedGcpRendezvous"/>
+                /// .
+                /// </summary>
+                public const string WeightedGcpRendezvous = "WEIGHTED_GCP_RENDEZVOUS";
 
                 /// <summary>
                 /// Wire representation of
