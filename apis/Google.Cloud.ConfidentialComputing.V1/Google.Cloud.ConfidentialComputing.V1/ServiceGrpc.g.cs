@@ -71,6 +71,14 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest> __Marshaller_google_cloud_confidentialcomputing_v1_VerifyAttestationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse> __Marshaller_google_cloud_confidentialcomputing_v1_VerifyAttestationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest> __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialSpaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse> __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialSpaceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest> __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialGkeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse> __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialGkeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest, global::Google.Cloud.ConfidentialComputing.V1.Challenge> __Method_CreateChallenge = new grpc::Method<global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest, global::Google.Cloud.ConfidentialComputing.V1.Challenge>(
@@ -87,6 +95,22 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         "VerifyAttestation",
         __Marshaller_google_cloud_confidentialcomputing_v1_VerifyAttestationRequest,
         __Marshaller_google_cloud_confidentialcomputing_v1_VerifyAttestationResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse> __Method_VerifyConfidentialSpace = new grpc::Method<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifyConfidentialSpace",
+        __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialSpaceRequest,
+        __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialSpaceResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse> __Method_VerifyConfidentialGke = new grpc::Method<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifyConfidentialGke",
+        __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialGkeRequest,
+        __Marshaller_google_cloud_confidentialcomputing_v1_VerifyConfidentialGkeResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -111,13 +135,40 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
 
       /// <summary>
-      /// Verifies the provided attestation info, returning a signed OIDC token.
+      /// Verifies the provided attestation info, returning a signed attestation
+      /// token.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse> VerifyAttestation(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Verifies whether the provided attestation info is valid, returning a signed
+      /// attestation token if so.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse> VerifyConfidentialSpace(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Verifies the provided Confidential GKE attestation info, returning a signed
+      /// OIDC token.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse> VerifyConfidentialGke(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -200,7 +251,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateChallenge, null, options, request);
       }
       /// <summary>
-      /// Verifies the provided attestation info, returning a signed OIDC token.
+      /// Verifies the provided attestation info, returning a signed attestation
+      /// token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +265,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         return VerifyAttestation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Verifies the provided attestation info, returning a signed OIDC token.
+      /// Verifies the provided attestation info, returning a signed attestation
+      /// token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +277,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_VerifyAttestation, null, options, request);
       }
       /// <summary>
-      /// Verifies the provided attestation info, returning a signed OIDC token.
+      /// Verifies the provided attestation info, returning a signed attestation
+      /// token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +291,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         return VerifyAttestationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Verifies the provided attestation info, returning a signed OIDC token.
+      /// Verifies the provided attestation info, returning a signed attestation
+      /// token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -246,6 +301,110 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse> VerifyAttestationAsync(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_VerifyAttestation, null, options, request);
+      }
+      /// <summary>
+      /// Verifies whether the provided attestation info is valid, returning a signed
+      /// attestation token if so.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse VerifyConfidentialSpace(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyConfidentialSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies whether the provided attestation info is valid, returning a signed
+      /// attestation token if so.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse VerifyConfidentialSpace(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifyConfidentialSpace, null, options, request);
+      }
+      /// <summary>
+      /// Verifies whether the provided attestation info is valid, returning a signed
+      /// attestation token if so.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse> VerifyConfidentialSpaceAsync(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyConfidentialSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies whether the provided attestation info is valid, returning a signed
+      /// attestation token if so.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse> VerifyConfidentialSpaceAsync(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifyConfidentialSpace, null, options, request);
+      }
+      /// <summary>
+      /// Verifies the provided Confidential GKE attestation info, returning a signed
+      /// OIDC token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse VerifyConfidentialGke(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyConfidentialGke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies the provided Confidential GKE attestation info, returning a signed
+      /// OIDC token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse VerifyConfidentialGke(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifyConfidentialGke, null, options, request);
+      }
+      /// <summary>
+      /// Verifies the provided Confidential GKE attestation info, returning a signed
+      /// OIDC token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse> VerifyConfidentialGkeAsync(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyConfidentialGkeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies the provided Confidential GKE attestation info, returning a signed
+      /// OIDC token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse> VerifyConfidentialGkeAsync(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifyConfidentialGke, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -262,7 +421,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateChallenge, serviceImpl.CreateChallenge)
-          .AddMethod(__Method_VerifyAttestation, serviceImpl.VerifyAttestation).Build();
+          .AddMethod(__Method_VerifyAttestation, serviceImpl.VerifyAttestation)
+          .AddMethod(__Method_VerifyConfidentialSpace, serviceImpl.VerifyConfidentialSpace)
+          .AddMethod(__Method_VerifyConfidentialGke, serviceImpl.VerifyConfidentialGke).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +435,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     {
       serviceBinder.AddMethod(__Method_CreateChallenge, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest, global::Google.Cloud.ConfidentialComputing.V1.Challenge>(serviceImpl.CreateChallenge));
       serviceBinder.AddMethod(__Method_VerifyAttestation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse>(serviceImpl.VerifyAttestation));
+      serviceBinder.AddMethod(__Method_VerifyConfidentialSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse>(serviceImpl.VerifyConfidentialSpace));
+      serviceBinder.AddMethod(__Method_VerifyConfidentialGke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest, global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse>(serviceImpl.VerifyConfidentialGke));
     }
 
   }

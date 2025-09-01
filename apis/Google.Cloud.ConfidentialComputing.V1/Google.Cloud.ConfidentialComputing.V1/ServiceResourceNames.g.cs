@@ -299,4 +299,28 @@ namespace Google.Cloud.ConfidentialComputing.V1
             set => Challenge = value?.ToString() ?? "";
         }
     }
+
+    public partial class VerifyConfidentialSpaceRequest
+    {
+        /// <summary>
+        /// <see cref="ChallengeName"/>-typed view over the <see cref="Challenge"/> resource name property.
+        /// </summary>
+        public ChallengeName ChallengeAsChallengeName
+        {
+            get => string.IsNullOrEmpty(Challenge) ? null : ChallengeName.Parse(Challenge, allowUnparsed: true);
+            set => Challenge = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class VerifyConfidentialGkeRequest
+    {
+        /// <summary>
+        /// <see cref="ChallengeName"/>-typed view over the <see cref="Challenge"/> resource name property.
+        /// </summary>
+        public ChallengeName ChallengeAsChallengeName
+        {
+            get => string.IsNullOrEmpty(Challenge) ? null : ChallengeName.Parse(Challenge, allowUnparsed: true);
+            set => Challenge = value?.ToString() ?? "";
+        }
+    }
 }
