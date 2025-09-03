@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta49, released 2025-09-03
+
+### New features
+
+- Add Validation mode in FunctionCallingConfig
+
+### Documentation improvements
+
+- Update the comment for ANY mode in FunctionCallingConfig.
+
 ## Version 1.0.0-beta48, released 2025-08-28
 
 ### New features
