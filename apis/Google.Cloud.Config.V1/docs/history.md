@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.9.0, released 2025-09-03
+
+### New features
+
+- Added support for service maintained provider
+
 ## Version 1.8.0, released 2025-07-09
 
 ### New features
