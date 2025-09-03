@@ -1023,12 +1023,12 @@
         },
         {
             "id": "Google.Cloud.Compute.V1",
-            "currentVersion": "3.14.0",
+            "currentVersion": "3.15.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-28T07:45:51.309732203Z",
+            "releaseTimestamp": "2025-09-03T08:55:54.973542211Z",
             "lastGeneratedCommit": "3d11d5f647ce5add08e412e090dc90a24c18fd51",
-            "lastReleasedCommit": "525c95a7a122ec2869ae06cd02fa5013819463f6",
+            "lastReleasedCommit": "3d11d5f647ce5add08e412e090dc90a24c18fd51",
             "apiPaths": [
                 "google/cloud/compute/v1"
             ],
