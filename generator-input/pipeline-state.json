@@ -602,12 +602,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.AnalyticsHub.V1",
-            "currentVersion": "1.9.0",
+            "currentVersion": "1.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-15T20:20:59.493324297Z",
+            "releaseTimestamp": "2025-09-03T08:51:28.522300047Z",
             "lastGeneratedCommit": "b49565973e491aad49612bafd5b473a3ead19a8b",
-            "lastReleasedCommit": "1270a1ba7ae32ce486b28d00ced9575c29d9ff75",
+            "lastReleasedCommit": "b49565973e491aad49612bafd5b473a3ead19a8b",
             "apiPaths": [
                 "google/cloud/bigquery/analyticshub/v1"
             ],
