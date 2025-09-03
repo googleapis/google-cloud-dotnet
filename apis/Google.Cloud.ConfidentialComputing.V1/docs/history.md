@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.9.0, released 2025-09-03
+
+### New features
+
+- Add new `VerifyConfidentialSpace` and `VerifyConfidentialGke` rpcs and relevant fields
+
+### Bug fixes
+
+- Move `AwsPrincipalTagsOptions` out from `TokenOptions` message
+
+### Documentation improvements
+
+- Updated comment for method `VerifyAttestation`, `VerifyAttestationRequest` and  `VerifyAttestationResponse` in service `ConfidentialComputing` is changed
+- A comment for field `aws_principal_tags_options` in message `.google.cloud.confidentialcomputing.v1.TokenOptions` is changed
+
 ## Version 1.8.0, released 2025-02-25
 
 ### New features
