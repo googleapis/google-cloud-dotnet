@@ -5654,6 +5654,1989 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_CreateQueryTemplate_sync",
+      "title": "CreateQueryTemplateRequestObject",
+      "description": "Snippet for CreateQueryTemplate",
+      "file": "AnalyticsHubServiceClient.CreateQueryTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.CreateQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.CreateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_CreateQueryTemplate_async",
+      "title": "CreateQueryTemplateRequestObjectAsync",
+      "description": "Snippet for CreateQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.CreateQueryTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.CreateQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.CreateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_CreateQueryTemplate_sync_flattened",
+      "title": "CreateQueryTemplate",
+      "description": "Snippet for CreateQueryTemplate",
+      "file": "AnalyticsHubServiceClient.CreateQueryTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.CreateQueryTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+            "name": "queryTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "queryTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.CreateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_CreateQueryTemplate_async_flattened",
+      "title": "CreateQueryTemplateAsync",
+      "description": "Snippet for CreateQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.CreateQueryTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.CreateQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+            "name": "queryTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "queryTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.CreateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_CreateQueryTemplate_sync_flattened_resourceNames",
+      "title": "CreateQueryTemplateResourceNames",
+      "description": "Snippet for CreateQueryTemplate",
+      "file": "AnalyticsHubServiceClient.CreateQueryTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.CreateQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+            "name": "queryTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "queryTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.CreateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_CreateQueryTemplate_async_flattened_resourceNames",
+      "title": "CreateQueryTemplateResourceNamesAsync",
+      "description": "Snippet for CreateQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.CreateQueryTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.CreateQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+            "name": "queryTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "queryTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.CreateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_GetQueryTemplate_sync",
+      "title": "GetQueryTemplateRequestObject",
+      "description": "Snippet for GetQueryTemplate",
+      "file": "AnalyticsHubServiceClient.GetQueryTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.GetQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "GetQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.GetQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_GetQueryTemplate_async",
+      "title": "GetQueryTemplateRequestObjectAsync",
+      "description": "Snippet for GetQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.GetQueryTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.GetQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "GetQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.GetQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_GetQueryTemplate_sync_flattened",
+      "title": "GetQueryTemplate",
+      "description": "Snippet for GetQueryTemplate",
+      "file": "AnalyticsHubServiceClient.GetQueryTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.GetQueryTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "GetQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.GetQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_GetQueryTemplate_async_flattened",
+      "title": "GetQueryTemplateAsync",
+      "description": "Snippet for GetQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.GetQueryTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.GetQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "GetQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.GetQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_GetQueryTemplate_sync_flattened_resourceNames",
+      "title": "GetQueryTemplateResourceNames",
+      "description": "Snippet for GetQueryTemplate",
+      "file": "AnalyticsHubServiceClient.GetQueryTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.GetQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "GetQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.GetQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_GetQueryTemplate_async_flattened_resourceNames",
+      "title": "GetQueryTemplateResourceNamesAsync",
+      "description": "Snippet for GetQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.GetQueryTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.GetQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "GetQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.GetQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ListQueryTemplates_sync",
+      "title": "ListQueryTemplatesRequestObject",
+      "description": "Snippet for ListQueryTemplates",
+      "file": "AnalyticsHubServiceClient.ListQueryTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueryTemplates",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ListQueryTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse, Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ListQueryTemplates",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ListQueryTemplates",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ListQueryTemplates_async",
+      "title": "ListQueryTemplatesRequestObjectAsync",
+      "description": "Snippet for ListQueryTemplatesAsync",
+      "file": "AnalyticsHubServiceClient.ListQueryTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueryTemplatesAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ListQueryTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse, Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ListQueryTemplates",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ListQueryTemplates",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ListQueryTemplates_sync_flattened",
+      "title": "ListQueryTemplates",
+      "description": "Snippet for ListQueryTemplates",
+      "file": "AnalyticsHubServiceClient.ListQueryTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueryTemplates",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ListQueryTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse, Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ListQueryTemplates",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ListQueryTemplates",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ListQueryTemplates_async_flattened",
+      "title": "ListQueryTemplatesAsync",
+      "description": "Snippet for ListQueryTemplatesAsync",
+      "file": "AnalyticsHubServiceClient.ListQueryTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueryTemplatesAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ListQueryTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse, Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ListQueryTemplates",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ListQueryTemplates",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ListQueryTemplates_sync_flattened_resourceNames",
+      "title": "ListQueryTemplatesResourceNames",
+      "description": "Snippet for ListQueryTemplates",
+      "file": "AnalyticsHubServiceClient.ListQueryTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueryTemplates",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ListQueryTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse, Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ListQueryTemplates",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ListQueryTemplates",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ListQueryTemplates_async_flattened_resourceNames",
+      "title": "ListQueryTemplatesResourceNamesAsync",
+      "description": "Snippet for ListQueryTemplatesAsync",
+      "file": "AnalyticsHubServiceClient.ListQueryTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueryTemplatesAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ListQueryTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.DataExchangeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse, Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ListQueryTemplates",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ListQueryTemplates",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_UpdateQueryTemplate_sync",
+      "title": "UpdateQueryTemplateRequestObject",
+      "description": "Snippet for UpdateQueryTemplate",
+      "file": "AnalyticsHubServiceClient.UpdateQueryTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.UpdateQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.UpdateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_UpdateQueryTemplate_async",
+      "title": "UpdateQueryTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.UpdateQueryTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.UpdateQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.UpdateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_UpdateQueryTemplate_sync_flattened",
+      "title": "UpdateQueryTemplate",
+      "description": "Snippet for UpdateQueryTemplate",
+      "file": "AnalyticsHubServiceClient.UpdateQueryTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.UpdateQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+            "name": "queryTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.UpdateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_UpdateQueryTemplate_async_flattened",
+      "title": "UpdateQueryTemplateAsync",
+      "description": "Snippet for UpdateQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.UpdateQueryTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.UpdateQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+            "name": "queryTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.UpdateQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_DeleteQueryTemplate_sync",
+      "title": "DeleteQueryTemplateRequestObject",
+      "description": "Snippet for DeleteQueryTemplate",
+      "file": "AnalyticsHubServiceClient.DeleteQueryTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.DeleteQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.DeleteQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_DeleteQueryTemplate_async",
+      "title": "DeleteQueryTemplateRequestObjectAsync",
+      "description": "Snippet for DeleteQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.DeleteQueryTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.DeleteQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.DeleteQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_DeleteQueryTemplate_sync_flattened",
+      "title": "DeleteQueryTemplate",
+      "description": "Snippet for DeleteQueryTemplate",
+      "file": "AnalyticsHubServiceClient.DeleteQueryTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.DeleteQueryTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.DeleteQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_DeleteQueryTemplate_async_flattened",
+      "title": "DeleteQueryTemplateAsync",
+      "description": "Snippet for DeleteQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.DeleteQueryTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.DeleteQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.DeleteQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_DeleteQueryTemplate_sync_flattened_resourceNames",
+      "title": "DeleteQueryTemplateResourceNames",
+      "description": "Snippet for DeleteQueryTemplate",
+      "file": "AnalyticsHubServiceClient.DeleteQueryTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.DeleteQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.DeleteQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_DeleteQueryTemplate_async_flattened_resourceNames",
+      "title": "DeleteQueryTemplateResourceNamesAsync",
+      "description": "Snippet for DeleteQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.DeleteQueryTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.DeleteQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.DeleteQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_SubmitQueryTemplate_sync",
+      "title": "SubmitQueryTemplateRequestObject",
+      "description": "Snippet for SubmitQueryTemplate",
+      "file": "AnalyticsHubServiceClient.SubmitQueryTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.SubmitQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.SubmitQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_SubmitQueryTemplate_async",
+      "title": "SubmitQueryTemplateRequestObjectAsync",
+      "description": "Snippet for SubmitQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.SubmitQueryTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.SubmitQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.SubmitQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_SubmitQueryTemplate_sync_flattened",
+      "title": "SubmitQueryTemplate",
+      "description": "Snippet for SubmitQueryTemplate",
+      "file": "AnalyticsHubServiceClient.SubmitQueryTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.SubmitQueryTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.SubmitQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_SubmitQueryTemplate_async_flattened",
+      "title": "SubmitQueryTemplateAsync",
+      "description": "Snippet for SubmitQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.SubmitQueryTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.SubmitQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.SubmitQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_SubmitQueryTemplate_sync_flattened_resourceNames",
+      "title": "SubmitQueryTemplateResourceNames",
+      "description": "Snippet for SubmitQueryTemplate",
+      "file": "AnalyticsHubServiceClient.SubmitQueryTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.SubmitQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.SubmitQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_SubmitQueryTemplate_async_flattened_resourceNames",
+      "title": "SubmitQueryTemplateResourceNamesAsync",
+      "description": "Snippet for SubmitQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.SubmitQueryTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.SubmitQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.SubmitQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ApproveQueryTemplate_sync",
+      "title": "ApproveQueryTemplateRequestObject",
+      "description": "Snippet for ApproveQueryTemplate",
+      "file": "AnalyticsHubServiceClient.ApproveQueryTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ApproveQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ApproveQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ApproveQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ApproveQueryTemplate_async",
+      "title": "ApproveQueryTemplateRequestObjectAsync",
+      "description": "Snippet for ApproveQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.ApproveQueryTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ApproveQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ApproveQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ApproveQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ApproveQueryTemplate_sync_flattened",
+      "title": "ApproveQueryTemplate",
+      "description": "Snippet for ApproveQueryTemplate",
+      "file": "AnalyticsHubServiceClient.ApproveQueryTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ApproveQueryTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ApproveQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ApproveQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ApproveQueryTemplate_async_flattened",
+      "title": "ApproveQueryTemplateAsync",
+      "description": "Snippet for ApproveQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.ApproveQueryTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ApproveQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ApproveQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ApproveQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ApproveQueryTemplate_sync_flattened_resourceNames",
+      "title": "ApproveQueryTemplateResourceNames",
+      "description": "Snippet for ApproveQueryTemplate",
+      "file": "AnalyticsHubServiceClient.ApproveQueryTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveQueryTemplate",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ApproveQueryTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ApproveQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ApproveQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticshub_v1_generated_AnalyticsHubService_ApproveQueryTemplate_async_flattened_resourceNames",
+      "title": "ApproveQueryTemplateResourceNamesAsync",
+      "description": "Snippet for ApproveQueryTemplateAsync",
+      "file": "AnalyticsHubServiceClient.ApproveQueryTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApproveQueryTemplateAsync",
+        "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient.ApproveQueryTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>",
+        "client": {
+          "shortName": "AnalyticsHubServiceClient",
+          "fullName": "Google.Cloud.BigQuery.AnalyticsHub.V1.AnalyticsHubServiceClient"
+        },
+        "method": {
+          "shortName": "ApproveQueryTemplate",
+          "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService.ApproveQueryTemplate",
+          "service": {
+            "shortName": "AnalyticsHubService",
+            "fullName": "google.cloud.bigquery.analyticshub.v1.AnalyticsHubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -275,6 +275,286 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         public static bool operator !=(DataExchangeName a, DataExchangeName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>QueryTemplate</c> resource.</summary>
+    public sealed partial class QueryTemplateName : gax::IResourceName, sys::IEquatable<QueryTemplateName>
+    {
+        /// <summary>The possible contents of <see cref="QueryTemplateName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+            /// .
+            /// </summary>
+            ProjectLocationDataExchangeQueryTemplate = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationDataExchangeQueryTemplate = new gax::PathTemplate("projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}");
+
+        /// <summary>Creates a <see cref="QueryTemplateName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="QueryTemplateName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static QueryTemplateName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new QueryTemplateName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="QueryTemplateName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataExchangeId">The <c>DataExchange</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queryTemplateId">The <c>QueryTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="QueryTemplateName"/> constructed from the provided ids.</returns>
+        public static QueryTemplateName FromProjectLocationDataExchangeQueryTemplate(string projectId, string locationId, string dataExchangeId, string queryTemplateId) =>
+            new QueryTemplateName(ResourceNameType.ProjectLocationDataExchangeQueryTemplate, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataExchangeId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataExchangeId, nameof(dataExchangeId)), queryTemplateId: gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="QueryTemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataExchangeId">The <c>DataExchange</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queryTemplateId">The <c>QueryTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="QueryTemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string dataExchangeId, string queryTemplateId) =>
+            FormatProjectLocationDataExchangeQueryTemplate(projectId, locationId, dataExchangeId, queryTemplateId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="QueryTemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataExchangeId">The <c>DataExchange</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queryTemplateId">The <c>QueryTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="QueryTemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationDataExchangeQueryTemplate(string projectId, string locationId, string dataExchangeId, string queryTemplateId) =>
+            s_projectLocationDataExchangeQueryTemplate.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataExchangeId, nameof(dataExchangeId)), gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="QueryTemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="queryTemplateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="QueryTemplateName"/> if successful.</returns>
+        public static QueryTemplateName Parse(string queryTemplateName) => Parse(queryTemplateName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="QueryTemplateName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="queryTemplateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="QueryTemplateName"/> if successful.</returns>
+        public static QueryTemplateName Parse(string queryTemplateName, bool allowUnparsed) =>
+            TryParse(queryTemplateName, allowUnparsed, out QueryTemplateName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="QueryTemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="queryTemplateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="QueryTemplateName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string queryTemplateName, out QueryTemplateName result) =>
+            TryParse(queryTemplateName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="QueryTemplateName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="queryTemplateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="QueryTemplateName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string queryTemplateName, bool allowUnparsed, out QueryTemplateName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(queryTemplateName, nameof(queryTemplateName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDataExchangeQueryTemplate.TryParseName(queryTemplateName, out resourceName))
+            {
+                result = FromProjectLocationDataExchangeQueryTemplate(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(queryTemplateName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private QueryTemplateName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string dataExchangeId = null, string locationId = null, string projectId = null, string queryTemplateId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DataExchangeId = dataExchangeId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            QueryTemplateId = queryTemplateId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="QueryTemplateName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/dataExchanges/{data_exchange}/queryTemplates/{query_template}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataExchangeId">The <c>DataExchange</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="queryTemplateId">The <c>QueryTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        public QueryTemplateName(string projectId, string locationId, string dataExchangeId, string queryTemplateId) : this(ResourceNameType.ProjectLocationDataExchangeQueryTemplate, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataExchangeId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataExchangeId, nameof(dataExchangeId)), queryTemplateId: gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DataExchange</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string DataExchangeId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>QueryTemplate</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string QueryTemplateId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDataExchangeQueryTemplate: return s_projectLocationDataExchangeQueryTemplate.Expand(ProjectId, LocationId, DataExchangeId, QueryTemplateId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as QueryTemplateName);
+
+        /// <inheritdoc/>
+        public bool Equals(QueryTemplateName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(QueryTemplateName a, QueryTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(QueryTemplateName a, QueryTemplateName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Listing</c> resource.</summary>
     public sealed partial class ListingName : gax::IResourceName, sys::IEquatable<ListingName>
     {
@@ -2161,6 +2441,90 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         public gcbav::DataExchangeName DataExchangeName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbav::DataExchangeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryTemplate
+    {
+        /// <summary>
+        /// <see cref="gcbav::QueryTemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::QueryTemplateName QueryTemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::QueryTemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateQueryTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="DataExchangeName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataExchangeName ParentAsDataExchangeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataExchangeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetQueryTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::QueryTemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::QueryTemplateName QueryTemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::QueryTemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListQueryTemplatesRequest
+    {
+        /// <summary>
+        /// <see cref="DataExchangeName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataExchangeName ParentAsDataExchangeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataExchangeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteQueryTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::QueryTemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::QueryTemplateName QueryTemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::QueryTemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SubmitQueryTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::QueryTemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::QueryTemplateName QueryTemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::QueryTemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ApproveQueryTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::QueryTemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::QueryTemplateName QueryTemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::QueryTemplateName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
