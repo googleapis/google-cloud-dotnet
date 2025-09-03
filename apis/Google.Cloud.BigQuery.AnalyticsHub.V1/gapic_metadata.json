@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "AnalyticsHubServiceClient",
           "rpcs": {
+            "ApproveQueryTemplate": {
+              "methods": [
+                "ApproveQueryTemplate",
+                "ApproveQueryTemplateAsync"
+              ]
+            },
             "CreateDataExchange": {
               "methods": [
                 "CreateDataExchange",
@@ -22,6 +28,12 @@
                 "CreateListingAsync"
               ]
             },
+            "CreateQueryTemplate": {
+              "methods": [
+                "CreateQueryTemplate",
+                "CreateQueryTemplateAsync"
+              ]
+            },
             "DeleteDataExchange": {
               "methods": [
                 "DeleteDataExchange",
@@ -32,6 +44,12 @@
               "methods": [
                 "DeleteListing",
                 "DeleteListingAsync"
+              ]
+            },
+            "DeleteQueryTemplate": {
+              "methods": [
+                "DeleteQueryTemplate",
+                "DeleteQueryTemplateAsync"
               ]
             },
             "DeleteSubscription": {
@@ -58,6 +76,12 @@
                 "GetListingAsync"
               ]
             },
+            "GetQueryTemplate": {
+              "methods": [
+                "GetQueryTemplate",
+                "GetQueryTemplateAsync"
+              ]
+            },
             "GetSubscription": {
               "methods": [
                 "GetSubscription",
@@ -80,6 +104,12 @@
               "methods": [
                 "ListOrgDataExchanges",
                 "ListOrgDataExchangesAsync"
+              ]
+            },
+            "ListQueryTemplates": {
+              "methods": [
+                "ListQueryTemplates",
+                "ListQueryTemplatesAsync"
               ]
             },
             "ListSharedResourceSubscriptions": {
@@ -112,6 +142,12 @@
                 "SetIamPolicyAsync"
               ]
             },
+            "SubmitQueryTemplate": {
+              "methods": [
+                "SubmitQueryTemplate",
+                "SubmitQueryTemplateAsync"
+              ]
+            },
             "SubscribeDataExchange": {
               "methods": [
                 "SubscribeDataExchange",
@@ -140,6 +176,12 @@
               "methods": [
                 "UpdateListing",
                 "UpdateListingAsync"
+              ]
+            },
+            "UpdateQueryTemplate": {
+              "methods": [
+                "UpdateQueryTemplate",
+                "UpdateQueryTemplateAsync"
               ]
             }
           }

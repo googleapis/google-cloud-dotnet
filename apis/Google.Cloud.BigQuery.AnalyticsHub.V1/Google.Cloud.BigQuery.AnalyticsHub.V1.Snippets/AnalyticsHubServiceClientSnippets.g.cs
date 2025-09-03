@@ -2913,5 +2913,792 @@ namespace GoogleCSharpSnippets
             TestIamPermissionsResponse response = await analyticsHubServiceClient.TestIamPermissionsAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateQueryTemplate</summary>
+        public void CreateQueryTemplateRequestObject()
+        {
+            // Snippet: CreateQueryTemplate(CreateQueryTemplateRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            CreateQueryTemplateRequest request = new CreateQueryTemplateRequest
+            {
+                ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
+                QueryTemplateId = "",
+                QueryTemplate = new QueryTemplate(),
+            };
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.CreateQueryTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueryTemplateAsync</summary>
+        public async Task CreateQueryTemplateRequestObjectAsync()
+        {
+            // Snippet: CreateQueryTemplateAsync(CreateQueryTemplateRequest, CallSettings)
+            // Additional: CreateQueryTemplateAsync(CreateQueryTemplateRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateQueryTemplateRequest request = new CreateQueryTemplateRequest
+            {
+                ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
+                QueryTemplateId = "",
+                QueryTemplate = new QueryTemplate(),
+            };
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.CreateQueryTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueryTemplate</summary>
+        public void CreateQueryTemplate()
+        {
+            // Snippet: CreateQueryTemplate(string, QueryTemplate, string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]";
+            QueryTemplate queryTemplate = new QueryTemplate();
+            string queryTemplateId = "";
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.CreateQueryTemplate(parent, queryTemplate, queryTemplateId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueryTemplateAsync</summary>
+        public async Task CreateQueryTemplateAsync()
+        {
+            // Snippet: CreateQueryTemplateAsync(string, QueryTemplate, string, CallSettings)
+            // Additional: CreateQueryTemplateAsync(string, QueryTemplate, string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]";
+            QueryTemplate queryTemplate = new QueryTemplate();
+            string queryTemplateId = "";
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.CreateQueryTemplateAsync(parent, queryTemplate, queryTemplateId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueryTemplate</summary>
+        public void CreateQueryTemplateResourceNames()
+        {
+            // Snippet: CreateQueryTemplate(DataExchangeName, QueryTemplate, string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            DataExchangeName parent = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]");
+            QueryTemplate queryTemplate = new QueryTemplate();
+            string queryTemplateId = "";
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.CreateQueryTemplate(parent, queryTemplate, queryTemplateId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQueryTemplateAsync</summary>
+        public async Task CreateQueryTemplateResourceNamesAsync()
+        {
+            // Snippet: CreateQueryTemplateAsync(DataExchangeName, QueryTemplate, string, CallSettings)
+            // Additional: CreateQueryTemplateAsync(DataExchangeName, QueryTemplate, string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataExchangeName parent = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]");
+            QueryTemplate queryTemplate = new QueryTemplate();
+            string queryTemplateId = "";
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.CreateQueryTemplateAsync(parent, queryTemplate, queryTemplateId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueryTemplate</summary>
+        public void GetQueryTemplateRequestObject()
+        {
+            // Snippet: GetQueryTemplate(GetQueryTemplateRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            GetQueryTemplateRequest request = new GetQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.GetQueryTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueryTemplateAsync</summary>
+        public async Task GetQueryTemplateRequestObjectAsync()
+        {
+            // Snippet: GetQueryTemplateAsync(GetQueryTemplateRequest, CallSettings)
+            // Additional: GetQueryTemplateAsync(GetQueryTemplateRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetQueryTemplateRequest request = new GetQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.GetQueryTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueryTemplate</summary>
+        public void GetQueryTemplate()
+        {
+            // Snippet: GetQueryTemplate(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.GetQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueryTemplateAsync</summary>
+        public async Task GetQueryTemplateAsync()
+        {
+            // Snippet: GetQueryTemplateAsync(string, CallSettings)
+            // Additional: GetQueryTemplateAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.GetQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueryTemplate</summary>
+        public void GetQueryTemplateResourceNames()
+        {
+            // Snippet: GetQueryTemplate(QueryTemplateName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.GetQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQueryTemplateAsync</summary>
+        public async Task GetQueryTemplateResourceNamesAsync()
+        {
+            // Snippet: GetQueryTemplateAsync(QueryTemplateName, CallSettings)
+            // Additional: GetQueryTemplateAsync(QueryTemplateName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.GetQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueryTemplates</summary>
+        public void ListQueryTemplatesRequestObject()
+        {
+            // Snippet: ListQueryTemplates(ListQueryTemplatesRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            ListQueryTemplatesRequest request = new ListQueryTemplatesRequest
+            {
+                ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> response = analyticsHubServiceClient.ListQueryTemplates(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QueryTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQueryTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QueryTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QueryTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QueryTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueryTemplatesAsync</summary>
+        public async Task ListQueryTemplatesRequestObjectAsync()
+        {
+            // Snippet: ListQueryTemplatesAsync(ListQueryTemplatesRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListQueryTemplatesRequest request = new ListQueryTemplatesRequest
+            {
+                ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> response = analyticsHubServiceClient.ListQueryTemplatesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QueryTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQueryTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QueryTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QueryTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QueryTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueryTemplates</summary>
+        public void ListQueryTemplates()
+        {
+            // Snippet: ListQueryTemplates(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]";
+            // Make the request
+            PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> response = analyticsHubServiceClient.ListQueryTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QueryTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQueryTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QueryTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QueryTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QueryTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueryTemplatesAsync</summary>
+        public async Task ListQueryTemplatesAsync()
+        {
+            // Snippet: ListQueryTemplatesAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]";
+            // Make the request
+            PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> response = analyticsHubServiceClient.ListQueryTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QueryTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQueryTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QueryTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QueryTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QueryTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueryTemplates</summary>
+        public void ListQueryTemplatesResourceNames()
+        {
+            // Snippet: ListQueryTemplates(DataExchangeName, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            DataExchangeName parent = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]");
+            // Make the request
+            PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> response = analyticsHubServiceClient.ListQueryTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QueryTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQueryTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QueryTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QueryTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QueryTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQueryTemplatesAsync</summary>
+        public async Task ListQueryTemplatesResourceNamesAsync()
+        {
+            // Snippet: ListQueryTemplatesAsync(DataExchangeName, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataExchangeName parent = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]");
+            // Make the request
+            PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> response = analyticsHubServiceClient.ListQueryTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QueryTemplate item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQueryTemplatesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QueryTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QueryTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QueryTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQueryTemplate</summary>
+        public void UpdateQueryTemplateRequestObject()
+        {
+            // Snippet: UpdateQueryTemplate(UpdateQueryTemplateRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateQueryTemplateRequest request = new UpdateQueryTemplateRequest
+            {
+                UpdateMask = new FieldMask(),
+                QueryTemplate = new QueryTemplate(),
+            };
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.UpdateQueryTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQueryTemplateAsync</summary>
+        public async Task UpdateQueryTemplateRequestObjectAsync()
+        {
+            // Snippet: UpdateQueryTemplateAsync(UpdateQueryTemplateRequest, CallSettings)
+            // Additional: UpdateQueryTemplateAsync(UpdateQueryTemplateRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateQueryTemplateRequest request = new UpdateQueryTemplateRequest
+            {
+                UpdateMask = new FieldMask(),
+                QueryTemplate = new QueryTemplate(),
+            };
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.UpdateQueryTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQueryTemplate</summary>
+        public void UpdateQueryTemplate()
+        {
+            // Snippet: UpdateQueryTemplate(QueryTemplate, FieldMask, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            QueryTemplate queryTemplate = new QueryTemplate();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.UpdateQueryTemplate(queryTemplate, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQueryTemplateAsync</summary>
+        public async Task UpdateQueryTemplateAsync()
+        {
+            // Snippet: UpdateQueryTemplateAsync(QueryTemplate, FieldMask, CallSettings)
+            // Additional: UpdateQueryTemplateAsync(QueryTemplate, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryTemplate queryTemplate = new QueryTemplate();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.UpdateQueryTemplateAsync(queryTemplate, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQueryTemplate</summary>
+        public void DeleteQueryTemplateRequestObject()
+        {
+            // Snippet: DeleteQueryTemplate(DeleteQueryTemplateRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteQueryTemplateRequest request = new DeleteQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            analyticsHubServiceClient.DeleteQueryTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQueryTemplateAsync</summary>
+        public async Task DeleteQueryTemplateRequestObjectAsync()
+        {
+            // Snippet: DeleteQueryTemplateAsync(DeleteQueryTemplateRequest, CallSettings)
+            // Additional: DeleteQueryTemplateAsync(DeleteQueryTemplateRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteQueryTemplateRequest request = new DeleteQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            await analyticsHubServiceClient.DeleteQueryTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQueryTemplate</summary>
+        public void DeleteQueryTemplate()
+        {
+            // Snippet: DeleteQueryTemplate(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            analyticsHubServiceClient.DeleteQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQueryTemplateAsync</summary>
+        public async Task DeleteQueryTemplateAsync()
+        {
+            // Snippet: DeleteQueryTemplateAsync(string, CallSettings)
+            // Additional: DeleteQueryTemplateAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            await analyticsHubServiceClient.DeleteQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQueryTemplate</summary>
+        public void DeleteQueryTemplateResourceNames()
+        {
+            // Snippet: DeleteQueryTemplate(QueryTemplateName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            analyticsHubServiceClient.DeleteQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQueryTemplateAsync</summary>
+        public async Task DeleteQueryTemplateResourceNamesAsync()
+        {
+            // Snippet: DeleteQueryTemplateAsync(QueryTemplateName, CallSettings)
+            // Additional: DeleteQueryTemplateAsync(QueryTemplateName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            await analyticsHubServiceClient.DeleteQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitQueryTemplate</summary>
+        public void SubmitQueryTemplateRequestObject()
+        {
+            // Snippet: SubmitQueryTemplate(SubmitQueryTemplateRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            SubmitQueryTemplateRequest request = new SubmitQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.SubmitQueryTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitQueryTemplateAsync</summary>
+        public async Task SubmitQueryTemplateRequestObjectAsync()
+        {
+            // Snippet: SubmitQueryTemplateAsync(SubmitQueryTemplateRequest, CallSettings)
+            // Additional: SubmitQueryTemplateAsync(SubmitQueryTemplateRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitQueryTemplateRequest request = new SubmitQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.SubmitQueryTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitQueryTemplate</summary>
+        public void SubmitQueryTemplate()
+        {
+            // Snippet: SubmitQueryTemplate(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.SubmitQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitQueryTemplateAsync</summary>
+        public async Task SubmitQueryTemplateAsync()
+        {
+            // Snippet: SubmitQueryTemplateAsync(string, CallSettings)
+            // Additional: SubmitQueryTemplateAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.SubmitQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitQueryTemplate</summary>
+        public void SubmitQueryTemplateResourceNames()
+        {
+            // Snippet: SubmitQueryTemplate(QueryTemplateName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.SubmitQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitQueryTemplateAsync</summary>
+        public async Task SubmitQueryTemplateResourceNamesAsync()
+        {
+            // Snippet: SubmitQueryTemplateAsync(QueryTemplateName, CallSettings)
+            // Additional: SubmitQueryTemplateAsync(QueryTemplateName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.SubmitQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveQueryTemplate</summary>
+        public void ApproveQueryTemplateRequestObject()
+        {
+            // Snippet: ApproveQueryTemplate(ApproveQueryTemplateRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            ApproveQueryTemplateRequest request = new ApproveQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.ApproveQueryTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveQueryTemplateAsync</summary>
+        public async Task ApproveQueryTemplateRequestObjectAsync()
+        {
+            // Snippet: ApproveQueryTemplateAsync(ApproveQueryTemplateRequest, CallSettings)
+            // Additional: ApproveQueryTemplateAsync(ApproveQueryTemplateRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ApproveQueryTemplateRequest request = new ApproveQueryTemplateRequest
+            {
+                QueryTemplateName = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]"),
+            };
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.ApproveQueryTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveQueryTemplate</summary>
+        public void ApproveQueryTemplate()
+        {
+            // Snippet: ApproveQueryTemplate(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.ApproveQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveQueryTemplateAsync</summary>
+        public async Task ApproveQueryTemplateAsync()
+        {
+            // Snippet: ApproveQueryTemplateAsync(string, CallSettings)
+            // Additional: ApproveQueryTemplateAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]/queryTemplates/[QUERY_TEMPLATE]";
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.ApproveQueryTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveQueryTemplate</summary>
+        public void ApproveQueryTemplateResourceNames()
+        {
+            // Snippet: ApproveQueryTemplate(QueryTemplateName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            QueryTemplate response = analyticsHubServiceClient.ApproveQueryTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApproveQueryTemplateAsync</summary>
+        public async Task ApproveQueryTemplateResourceNamesAsync()
+        {
+            // Snippet: ApproveQueryTemplateAsync(QueryTemplateName, CallSettings)
+            // Additional: ApproveQueryTemplateAsync(QueryTemplateName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryTemplateName name = QueryTemplateName.FromProjectLocationDataExchangeQueryTemplate("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[QUERY_TEMPLATE]");
+            // Make the request
+            QueryTemplate response = await analyticsHubServiceClient.ApproveQueryTemplateAsync(name);
+            // End snippet
+        }
     }
 }

@@ -140,6 +140,24 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_CreateQueryTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> __Marshaller_google_cloud_bigquery_analyticshub_v1_QueryTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_GetQueryTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_ListQueryTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse> __Marshaller_google_cloud_bigquery_analyticshub_v1_ListQueryTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_UpdateQueryTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_DeleteQueryTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_SubmitQueryTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_ApproveQueryTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListDataExchangesRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListDataExchangesResponse> __Method_ListDataExchanges = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListDataExchangesRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListDataExchangesResponse>(
@@ -316,6 +334,62 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> __Method_CreateQueryTemplate = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateQueryTemplate",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_CreateQueryTemplateRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_QueryTemplate);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> __Method_GetQueryTemplate = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetQueryTemplate",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_GetQueryTemplateRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_QueryTemplate);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse> __Method_ListQueryTemplates = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListQueryTemplates",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ListQueryTemplatesRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ListQueryTemplatesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> __Method_UpdateQueryTemplate = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateQueryTemplate",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_UpdateQueryTemplateRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_QueryTemplate);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteQueryTemplate = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteQueryTemplate",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_DeleteQueryTemplateRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> __Method_SubmitQueryTemplate = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SubmitQueryTemplate",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_SubmitQueryTemplateRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_QueryTemplate);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> __Method_ApproveQueryTemplate = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApproveQueryTemplate",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ApproveQueryTemplateRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_QueryTemplate);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -598,6 +672,90 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new QueryTemplate
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> CreateQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a QueryTemplate
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> GetQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all QueryTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse> ListQueryTemplates(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing QueryTemplate
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> UpdateQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a query template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submits a query template for approval.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> SubmitQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Approves a query template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> ApproveQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1731,6 +1889,342 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>
+      /// Creates a new QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate CreateQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQueryTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate CreateQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> CreateQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQueryTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> CreateQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate GetQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQueryTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate GetQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Gets a QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> GetQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQueryTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> GetQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Lists all QueryTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse ListQueryTemplates(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQueryTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all QueryTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse ListQueryTemplates(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListQueryTemplates, null, options, request);
+      }
+      /// <summary>
+      /// Lists all QueryTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse> ListQueryTemplatesAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQueryTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all QueryTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse> ListQueryTemplatesAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListQueryTemplates, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate UpdateQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQueryTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate UpdateQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> UpdateQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQueryTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing QueryTemplate
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> UpdateQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQueryTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQueryTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Submits a query template for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate SubmitQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitQueryTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a query template for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate SubmitQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SubmitQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Submits a query template for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> SubmitQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitQueryTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a query template for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> SubmitQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SubmitQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Approves a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate ApproveQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveQueryTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate ApproveQueryTemplate(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ApproveQueryTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Approves a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> ApproveQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApproveQueryTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a query template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate> ApproveQueryTemplateAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ApproveQueryTemplate, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsHubServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1766,7 +2260,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
           .AddMethod(__Method_DeleteSubscription, serviceImpl.DeleteSubscription)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_CreateQueryTemplate, serviceImpl.CreateQueryTemplate)
+          .AddMethod(__Method_GetQueryTemplate, serviceImpl.GetQueryTemplate)
+          .AddMethod(__Method_ListQueryTemplates, serviceImpl.ListQueryTemplates)
+          .AddMethod(__Method_UpdateQueryTemplate, serviceImpl.UpdateQueryTemplate)
+          .AddMethod(__Method_DeleteQueryTemplate, serviceImpl.DeleteQueryTemplate)
+          .AddMethod(__Method_SubmitQueryTemplate, serviceImpl.SubmitQueryTemplate)
+          .AddMethod(__Method_ApproveQueryTemplate, serviceImpl.ApproveQueryTemplate).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1798,6 +2299,13 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_CreateQueryTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.CreateQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(serviceImpl.CreateQueryTemplate));
+      serviceBinder.AddMethod(__Method_GetQueryTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(serviceImpl.GetQueryTemplate));
+      serviceBinder.AddMethod(__Method_ListQueryTemplates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListQueryTemplatesResponse>(serviceImpl.ListQueryTemplates));
+      serviceBinder.AddMethod(__Method_UpdateQueryTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(serviceImpl.UpdateQueryTemplate));
+      serviceBinder.AddMethod(__Method_DeleteQueryTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteQueryTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteQueryTemplate));
+      serviceBinder.AddMethod(__Method_SubmitQueryTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubmitQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(serviceImpl.SubmitQueryTemplate));
+      serviceBinder.AddMethod(__Method_ApproveQueryTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ApproveQueryTemplateRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.QueryTemplate>(serviceImpl.ApproveQueryTemplate));
     }
 
   }
