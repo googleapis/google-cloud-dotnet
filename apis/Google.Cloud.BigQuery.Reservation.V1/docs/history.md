@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.9.0, released 2025-09-03
+
+### New features
+
+- Add a new field `soft_failover_start_time` in the existing `replication_status` in `.google.cloud.bigquery.reservation.v1.Reservation` to provide visibility into the state of ongoing soft failover operations on the reservation
+- Add a new field `failover_mode` to `.google.cloud.bigquery.reservation.v1.FailoverReservationRequest` that allows users to choose between the HARD or SOFT failover modes when they initiate a failover operation on a reservation
+
 ## Version 2.8.0, released 2025-08-19
 
 ### New features
