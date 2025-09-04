@@ -64,83 +64,84 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             "lQEKEk11bHRpU3BlYWtlck1hcmt1cBJOCgV0dXJucxgBIAMoCzI6Lmdvb2ds",
             "ZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5NdWx0aVNwZWFrZXJNYXJr",
             "dXAuVHVybkID4EECGi8KBFR1cm4SFAoHc3BlYWtlchgBIAEoCUID4EECEhEK",
-            "BHRleHQYAiABKAlCA+BBAiKGAgoOU3ludGhlc2lzSW5wdXQSDgoEdGV4dBgB",
+            "BHRleHQYAiABKAlCA+BBAiKmAgoOU3ludGhlc2lzSW5wdXQSDgoEdGV4dBgB",
             "IAEoCUgAEhAKBm1hcmt1cBgFIAEoCUgAEg4KBHNzbWwYAiABKAlIABJVChRt",
             "dWx0aV9zcGVha2VyX21hcmt1cBgEIAEoCzI1Lmdvb2dsZS5jbG91ZC50ZXh0",
-            "dG9zcGVlY2gudjFiZXRhMS5NdWx0aVNwZWFrZXJNYXJrdXBIABJbChVjdXN0",
-            "b21fcHJvbnVuY2lhdGlvbnMYAyABKAsyNy5nb29nbGUuY2xvdWQudGV4dHRv",
-            "c3BlZWNoLnYxYmV0YTEuQ3VzdG9tUHJvbnVuY2lhdGlvbnNCA+BBAUIOCgxp",
-            "bnB1dF9zb3VyY2UivQIKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEhoKDWxhbmd1",
-            "YWdlX2NvZGUYASABKAlCA+BBAhIMCgRuYW1lGAIgASgJEkcKC3NzbWxfZ2Vu",
-            "ZGVyGAMgASgOMjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGEx",
-            "LlNzbWxWb2ljZUdlbmRlchJKCgxjdXN0b21fdm9pY2UYBCABKAsyNC5nb29n",
-            "bGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuQ3VzdG9tVm9pY2VQYXJh",
-            "bXMSTQoLdm9pY2VfY2xvbmUYBSABKAsyMy5nb29nbGUuY2xvdWQudGV4dHRv",
-            "c3BlZWNoLnYxYmV0YTEuVm9pY2VDbG9uZVBhcmFtc0ID4EEBEhcKCm1vZGVs",
-            "X25hbWUYBiABKAlCA+BBASL2AQoLQXVkaW9Db25maWcSTQoOYXVkaW9fZW5j",
-            "b2RpbmcYASABKA4yMC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0",
-            "YTEuQXVkaW9FbmNvZGluZ0ID4EECEh0KDXNwZWFraW5nX3JhdGUYAiABKAFC",
-            "BuBBBOBBARIVCgVwaXRjaBgDIAEoAUIG4EEE4EEBEh4KDnZvbHVtZV9nYWlu",
-            "X2RiGAQgASgBQgbgQQTgQQESHgoRc2FtcGxlX3JhdGVfaGVydHoYBSABKAVC",
-            "A+BBARIiChJlZmZlY3RzX3Byb2ZpbGVfaWQYBiADKAlCBuBBBOBBASL2AQoR",
-            "Q3VzdG9tVm9pY2VQYXJhbXMSMgoFbW9kZWwYASABKAlCI+BBAvpBHQobYXV0",
-            "b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEmEKDnJlcG9ydGVkX3VzYWdlGAMg",
-            "ASgOMkIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLkN1c3Rv",
-            "bVZvaWNlUGFyYW1zLlJlcG9ydGVkVXNhZ2VCBRgB4EEBIkoKDVJlcG9ydGVk",
-            "VXNhZ2USHgoaUkVQT1JURURfVVNBR0VfVU5TUEVDSUZJRUQQABIMCghSRUFM",
-            "VElNRRABEgsKB09GRkxJTkUQAiIyChBWb2ljZUNsb25lUGFyYW1zEh4KEXZv",
-            "aWNlX2Nsb25pbmdfa2V5GAEgASgJQgPgQQIiuQEKGFN5bnRoZXNpemVTcGVl",
-            "Y2hSZXNwb25zZRIVCg1hdWRpb19jb250ZW50GAEgASgMEkAKCnRpbWVwb2lu",
-            "dHMYAiADKAsyLC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEu",
-            "VGltZXBvaW50EkQKDGF1ZGlvX2NvbmZpZxgEIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5BdWRpb0NvbmZpZyI0CglUaW1lcG9p",
-            "bnQSEQoJbWFya19uYW1lGAQgASgJEhQKDHRpbWVfc2Vjb25kcxgDIAEoASKk",
-            "AQoUU3RyZWFtaW5nQXVkaW9Db25maWcSTQoOYXVkaW9fZW5jb2RpbmcYASAB",
-            "KA4yMC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuQXVkaW9F",
-            "bmNvZGluZ0ID4EECEh4KEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFQgPgQQES",
-            "HQoNc3BlYWtpbmdfcmF0ZRgDIAEoAUIG4EEE4EEBIqMCChlTdHJlYW1pbmdT",
-            "eW50aGVzaXplQ29uZmlnEksKBXZvaWNlGAEgASgLMjcuZ29vZ2xlLmNsb3Vk",
-            "LnRleHR0b3NwZWVjaC52MWJldGExLlZvaWNlU2VsZWN0aW9uUGFyYW1zQgPg",
-            "QQISXAoWc3RyZWFtaW5nX2F1ZGlvX2NvbmZpZxgEIAEoCzI3Lmdvb2dsZS5j",
-            "bG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TdHJlYW1pbmdBdWRpb0NvbmZp",
-            "Z0ID4EEBElsKFWN1c3RvbV9wcm9udW5jaWF0aW9ucxgFIAEoCzI3Lmdvb2ds",
-            "ZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5DdXN0b21Qcm9udW5jaWF0",
-            "aW9uc0ID4EEBImsKF1N0cmVhbWluZ1N5bnRoZXNpc0lucHV0Eg4KBHRleHQY",
-            "ASABKAlIABIQCgZtYXJrdXAYBSABKAlIABITCgZwcm9tcHQYBiABKAlIAYgB",
-            "AUIOCgxpbnB1dF9zb3VyY2VCCQoHX3Byb21wdCLYAQoaU3RyZWFtaW5nU3lu",
-            "dGhlc2l6ZVJlcXVlc3QSWAoQc3RyZWFtaW5nX2NvbmZpZxgBIAEoCzI8Lmdv",
-            "b2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TdHJlYW1pbmdTeW50",
-            "aGVzaXplQ29uZmlnSAASSwoFaW5wdXQYAiABKAsyOi5nb29nbGUuY2xvdWQu",
-            "dGV4dHRvc3BlZWNoLnYxYmV0YTEuU3RyZWFtaW5nU3ludGhlc2lzSW5wdXRI",
-            "AEITChFzdHJlYW1pbmdfcmVxdWVzdCI0ChtTdHJlYW1pbmdTeW50aGVzaXpl",
-            "UmVzcG9uc2USFQoNYXVkaW9fY29udGVudBgBIAEoDCpXCg9Tc21sVm9pY2VH",
-            "ZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIICgRN",
-            "QUxFEAESCgoGRkVNQUxFEAISCwoHTkVVVFJBTBADKowBCg1BdWRpb0VuY29k",
-            "aW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFS",
-            "MTYQARIHCgNNUDMQAhIPCgtNUDNfNjRfS0JQUxAEEgwKCE9HR19PUFVTEAMS",
-            "CQoFTVVMQVcQBRIICgRBTEFXEAYSBwoDUENNEAcSBwoDTTRBEAgy7wQKDFRl",
-            "eHRUb1NwZWVjaBKiAQoKTGlzdFZvaWNlcxI0Lmdvb2dsZS5jbG91ZC50ZXh0",
-            "dG9zcGVlY2gudjFiZXRhMS5MaXN0Vm9pY2VzUmVxdWVzdBo1Lmdvb2dsZS5j",
-            "bG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5MaXN0Vm9pY2VzUmVzcG9uc2Ui",
-            "J9pBDWxhbmd1YWdlX2NvZGWC0+STAhESDy92MWJldGExL3ZvaWNlcxLLAQoQ",
-            "U3ludGhlc2l6ZVNwZWVjaBI6Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
-            "djFiZXRhMS5TeW50aGVzaXplU3BlZWNoUmVxdWVzdBo7Lmdvb2dsZS5jbG91",
-            "ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TeW50aGVzaXplU3BlZWNoUmVzcG9u",
-            "c2UiPtpBGGlucHV0LHZvaWNlLGF1ZGlvX2NvbmZpZ4LT5JMCHSIYL3YxYmV0",
-            "YTEvdGV4dDpzeW50aGVzaXplOgEqEpoBChNTdHJlYW1pbmdTeW50aGVzaXpl",
-            "Ej0uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlN0cmVhbWlu",
-            "Z1N5bnRoZXNpemVSZXF1ZXN0Gj4uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVj",
-            "aC52MWJldGExLlN0cmVhbWluZ1N5bnRoZXNpemVSZXNwb25zZSIAKAEwARpP",
-            "ykEbdGV4dHRvc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULVAgolY29tLmdv",
-            "b2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMUIRVGV4dFRvU3BlZWNo",
-            "UHJvdG9QAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gvYXBp",
-            "djFiZXRhMS90ZXh0dG9zcGVlY2hwYjt0ZXh0dG9zcGVlY2hwYqICBENUVFOq",
-            "AiFHb29nbGUuQ2xvdWQuVGV4dFRvU3BlZWNoLlYxQmV0YTHKAiFHb29nbGVc",
-            "Q2xvdWRcVGV4dFRvU3BlZWNoXFYxYmV0YTHqAiRHb29nbGU6OkNsb3VkOjpU",
-            "ZXh0VG9TcGVlY2g6OlYxYmV0YTHqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNv",
-            "bS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L21vZGVscy97bW9kZWx9YgZwcm90bzM="));
+            "dG9zcGVlY2gudjFiZXRhMS5NdWx0aVNwZWFrZXJNYXJrdXBIABITCgZwcm9t",
+            "cHQYBiABKAlIAYgBARJbChVjdXN0b21fcHJvbnVuY2lhdGlvbnMYAyABKAsy",
+            "Ny5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuQ3VzdG9tUHJv",
+            "bnVuY2lhdGlvbnNCA+BBAUIOCgxpbnB1dF9zb3VyY2VCCQoHX3Byb21wdCK9",
+            "AgoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSGgoNbGFuZ3VhZ2VfY29kZRgBIAEo",
+            "CUID4EECEgwKBG5hbWUYAiABKAkSRwoLc3NtbF9nZW5kZXIYAyABKA4yMi5n",
+            "b29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuU3NtbFZvaWNlR2Vu",
+            "ZGVyEkoKDGN1c3RvbV92b2ljZRgEIAEoCzI0Lmdvb2dsZS5jbG91ZC50ZXh0",
+            "dG9zcGVlY2gudjFiZXRhMS5DdXN0b21Wb2ljZVBhcmFtcxJNCgt2b2ljZV9j",
+            "bG9uZRgFIAEoCzIzLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRh",
+            "MS5Wb2ljZUNsb25lUGFyYW1zQgPgQQESFwoKbW9kZWxfbmFtZRgGIAEoCUID",
+            "4EEBIvYBCgtBdWRpb0NvbmZpZxJNCg5hdWRpb19lbmNvZGluZxgBIAEoDjIw",
+            "Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5BdWRpb0VuY29k",
+            "aW5nQgPgQQISHQoNc3BlYWtpbmdfcmF0ZRgCIAEoAUIG4EEE4EEBEhUKBXBp",
+            "dGNoGAMgASgBQgbgQQTgQQESHgoOdm9sdW1lX2dhaW5fZGIYBCABKAFCBuBB",
+            "BOBBARIeChFzYW1wbGVfcmF0ZV9oZXJ0ehgFIAEoBUID4EEBEiIKEmVmZmVj",
+            "dHNfcHJvZmlsZV9pZBgGIAMoCUIG4EEE4EEBIvYBChFDdXN0b21Wb2ljZVBh",
+            "cmFtcxIyCgVtb2RlbBgBIAEoCUIj4EEC+kEdChthdXRvbWwuZ29vZ2xlYXBp",
+            "cy5jb20vTW9kZWwSYQoOcmVwb3J0ZWRfdXNhZ2UYAyABKA4yQi5nb29nbGUu",
+            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuQ3VzdG9tVm9pY2VQYXJhbXMu",
+            "UmVwb3J0ZWRVc2FnZUIFGAHgQQEiSgoNUmVwb3J0ZWRVc2FnZRIeChpSRVBP",
+            "UlRFRF9VU0FHRV9VTlNQRUNJRklFRBAAEgwKCFJFQUxUSU1FEAESCwoHT0ZG",
+            "TElORRACIjIKEFZvaWNlQ2xvbmVQYXJhbXMSHgoRdm9pY2VfY2xvbmluZ19r",
+            "ZXkYASABKAlCA+BBAiK5AQoYU3ludGhlc2l6ZVNwZWVjaFJlc3BvbnNlEhUK",
+            "DWF1ZGlvX2NvbnRlbnQYASABKAwSQAoKdGltZXBvaW50cxgCIAMoCzIsLmdv",
+            "b2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5UaW1lcG9pbnQSRAoM",
+            "YXVkaW9fY29uZmlnGAQgASgLMi4uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVj",
+            "aC52MWJldGExLkF1ZGlvQ29uZmlnIjQKCVRpbWVwb2ludBIRCgltYXJrX25h",
+            "bWUYBCABKAkSFAoMdGltZV9zZWNvbmRzGAMgASgBIqQBChRTdHJlYW1pbmdB",
+            "dWRpb0NvbmZpZxJNCg5hdWRpb19lbmNvZGluZxgBIAEoDjIwLmdvb2dsZS5j",
+            "bG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5BdWRpb0VuY29kaW5nQgPgQQIS",
+            "HgoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAVCA+BBARIdCg1zcGVha2luZ19y",
+            "YXRlGAMgASgBQgbgQQTgQQEiowIKGVN0cmVhbWluZ1N5bnRoZXNpemVDb25m",
+            "aWcSSwoFdm9pY2UYASABKAsyNy5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNo",
+            "LnYxYmV0YTEuVm9pY2VTZWxlY3Rpb25QYXJhbXNCA+BBAhJcChZzdHJlYW1p",
+            "bmdfYXVkaW9fY29uZmlnGAQgASgLMjcuZ29vZ2xlLmNsb3VkLnRleHR0b3Nw",
+            "ZWVjaC52MWJldGExLlN0cmVhbWluZ0F1ZGlvQ29uZmlnQgPgQQESWwoVY3Vz",
+            "dG9tX3Byb251bmNpYXRpb25zGAUgASgLMjcuZ29vZ2xlLmNsb3VkLnRleHR0",
+            "b3NwZWVjaC52MWJldGExLkN1c3RvbVByb251bmNpYXRpb25zQgPgQQEiawoX",
+            "U3RyZWFtaW5nU3ludGhlc2lzSW5wdXQSDgoEdGV4dBgBIAEoCUgAEhAKBm1h",
+            "cmt1cBgFIAEoCUgAEhMKBnByb21wdBgGIAEoCUgBiAEBQg4KDGlucHV0X3Nv",
+            "dXJjZUIJCgdfcHJvbXB0ItgBChpTdHJlYW1pbmdTeW50aGVzaXplUmVxdWVz",
+            "dBJYChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMjwuZ29vZ2xlLmNsb3VkLnRl",
+            "eHR0b3NwZWVjaC52MWJldGExLlN0cmVhbWluZ1N5bnRoZXNpemVDb25maWdI",
+            "ABJLCgVpbnB1dBgCIAEoCzI6Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
+            "djFiZXRhMS5TdHJlYW1pbmdTeW50aGVzaXNJbnB1dEgAQhMKEXN0cmVhbWlu",
+            "Z19yZXF1ZXN0IjQKG1N0cmVhbWluZ1N5bnRoZXNpemVSZXNwb25zZRIVCg1h",
+            "dWRpb19jb250ZW50GAEgASgMKlcKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01M",
+            "X1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEggKBE1BTEUQARIKCgZGRU1B",
+            "TEUQAhILCgdORVVUUkFMEAMqjAEKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9f",
+            "RU5DT0RJTkdfVU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhABEgcKA01QMxAC",
+            "Eg8KC01QM182NF9LQlBTEAQSDAoIT0dHX09QVVMQAxIJCgVNVUxBVxAFEggK",
+            "BEFMQVcQBhIHCgNQQ00QBxIHCgNNNEEQCDLvBAoMVGV4dFRvU3BlZWNoEqIB",
+            "CgpMaXN0Vm9pY2VzEjQuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJl",
+            "dGExLkxpc3RWb2ljZXNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLnRleHR0b3Nw",
+            "ZWVjaC52MWJldGExLkxpc3RWb2ljZXNSZXNwb25zZSIn2kENbGFuZ3VhZ2Vf",
+            "Y29kZYLT5JMCERIPL3YxYmV0YTEvdm9pY2VzEssBChBTeW50aGVzaXplU3Bl",
+            "ZWNoEjouZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlN5bnRo",
+            "ZXNpemVTcGVlY2hSZXF1ZXN0GjsuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVj",
+            "aC52MWJldGExLlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI+2kEYaW5wdXQs",
+            "dm9pY2UsYXVkaW9fY29uZmlngtPkkwIdIhgvdjFiZXRhMS90ZXh0OnN5bnRo",
+            "ZXNpemU6ASoSmgEKE1N0cmVhbWluZ1N5bnRoZXNpemUSPS5nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuU3RyZWFtaW5nU3ludGhlc2l6ZVJl",
+            "cXVlc3QaPi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuU3Ry",
+            "ZWFtaW5nU3ludGhlc2l6ZVJlc3BvbnNlIgAoATABGk/KQRt0ZXh0dG9zcGVl",
+            "Y2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtUCCiVjb20uZ29vZ2xlLmNsb3VkLnRl",
+            "eHR0b3NwZWVjaC52MWJldGExQhFUZXh0VG9TcGVlY2hQcm90b1ABWkljbG91",
+            "ZC5nb29nbGUuY29tL2dvL3RleHR0b3NwZWVjaC9hcGl2MWJldGExL3RleHR0",
+            "b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBiogIEQ1RUU6oCIUdvb2dsZS5DbG91",
+            "ZC5UZXh0VG9TcGVlY2guVjFCZXRhMcoCIUdvb2dsZVxDbG91ZFxUZXh0VG9T",
+            "cGVlY2hcVjFiZXRhMeoCJEdvb2dsZTo6Q2xvdWQ6OlRleHRUb1NwZWVjaDo6",
+            "VjFiZXRhMepBVQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEjZwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3tt",
+            "b2RlbH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1Beta1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -152,7 +153,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.CustomPronunciationParams), global::Google.Cloud.TextToSpeech.V1Beta1.CustomPronunciationParams.Parser, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1Beta1.CustomPronunciationParams.Types.PhoneticEncoding) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.CustomPronunciations), global::Google.Cloud.TextToSpeech.V1Beta1.CustomPronunciations.Parser, new[]{ "Pronunciations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.MultiSpeakerMarkup), global::Google.Cloud.TextToSpeech.V1Beta1.MultiSpeakerMarkup.Parser, new[]{ "Turns" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.MultiSpeakerMarkup.Types.Turn), global::Google.Cloud.TextToSpeech.V1Beta1.MultiSpeakerMarkup.Types.Turn.Parser, new[]{ "Speaker", "Text" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1Beta1.SynthesisInput.Parser, new[]{ "Text", "Markup", "Ssml", "MultiSpeakerMarkup", "CustomPronunciations" }, new[]{ "InputSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1Beta1.SynthesisInput.Parser, new[]{ "Text", "Markup", "Ssml", "MultiSpeakerMarkup", "Prompt", "CustomPronunciations" }, new[]{ "InputSource", "Prompt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.VoiceSelectionParams), global::Google.Cloud.TextToSpeech.V1Beta1.VoiceSelectionParams.Parser, new[]{ "LanguageCode", "Name", "SsmlGender", "CustomVoice", "VoiceClone", "ModelName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.AudioConfig), global::Google.Cloud.TextToSpeech.V1Beta1.AudioConfig.Parser, new[]{ "AudioEncoding", "SpeakingRate", "Pitch", "VolumeGainDb", "SampleRateHertz", "EffectsProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1Beta1.CustomVoiceParams), global::Google.Cloud.TextToSpeech.V1Beta1.CustomVoiceParams.Parser, new[]{ "Model", "ReportedUsage" }, null, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1Beta1.CustomVoiceParams.Types.ReportedUsage) }, null, null),
@@ -2600,6 +2601,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesisInput(SynthesisInput other) : this() {
+      prompt_ = other.prompt_;
       customPronunciations_ = other.customPronunciations_ != null ? other.customPronunciations_.Clone() : null;
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
@@ -2733,6 +2735,38 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "prompt" field.</summary>
+    public const int PromptFieldNumber = 6;
+    private readonly static string PromptDefaultValue = "";
+
+    private string prompt_;
+    /// <summary>
+    /// This system instruction is supported only for controllable/promptable voice
+    /// models. If this system instruction is used, we pass the unedited text to
+    /// Gemini-TTS. Otherwise, a default system instruction is used. AI Studio
+    /// calls this system instruction, Style Instructions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Prompt {
+      get { return prompt_ ?? PromptDefaultValue; }
+      set {
+        prompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrompt {
+      get { return prompt_ != null; }
+    }
+    /// <summary>Clears the value of the "prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrompt() {
+      prompt_ = null;
+    }
+
     /// <summary>Field number for the "custom_pronunciations" field.</summary>
     public const int CustomPronunciationsFieldNumber = 3;
     private global::Google.Cloud.TextToSpeech.V1Beta1.CustomPronunciations customPronunciations_;
@@ -2799,6 +2833,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       if (Markup != other.Markup) return false;
       if (Ssml != other.Ssml) return false;
       if (!object.Equals(MultiSpeakerMarkup, other.MultiSpeakerMarkup)) return false;
+      if (Prompt != other.Prompt) return false;
       if (!object.Equals(CustomPronunciations, other.CustomPronunciations)) return false;
       if (InputSourceCase != other.InputSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2812,6 +2847,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       if (HasMarkup) hash ^= Markup.GetHashCode();
       if (HasSsml) hash ^= Ssml.GetHashCode();
       if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) hash ^= MultiSpeakerMarkup.GetHashCode();
+      if (HasPrompt) hash ^= Prompt.GetHashCode();
       if (customPronunciations_ != null) hash ^= CustomPronunciations.GetHashCode();
       hash ^= (int) inputSourceCase_;
       if (_unknownFields != null) {
@@ -2852,6 +2888,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
         output.WriteRawTag(42);
         output.WriteString(Markup);
       }
+      if (HasPrompt) {
+        output.WriteRawTag(50);
+        output.WriteString(Prompt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2882,6 +2922,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
         output.WriteRawTag(42);
         output.WriteString(Markup);
       }
+      if (HasPrompt) {
+        output.WriteRawTag(50);
+        output.WriteString(Prompt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2904,6 +2948,9 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiSpeakerMarkup);
       }
+      if (HasPrompt) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Prompt);
+      }
       if (customPronunciations_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomPronunciations);
       }
@@ -2918,6 +2965,9 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     public void MergeFrom(SynthesisInput other) {
       if (other == null) {
         return;
+      }
+      if (other.HasPrompt) {
+        Prompt = other.Prompt;
       }
       if (other.customPronunciations_ != null) {
         if (customPronunciations_ == null) {
@@ -2986,6 +3036,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             Markup = input.ReadString();
             break;
           }
+          case 50: {
+            Prompt = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3027,6 +3081,10 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
           }
           case 42: {
             Markup = input.ReadString();
+            break;
+          }
+          case 50: {
+            Prompt = input.ReadString();
             break;
           }
         }
