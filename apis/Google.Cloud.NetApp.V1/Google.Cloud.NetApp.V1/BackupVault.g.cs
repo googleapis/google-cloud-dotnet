@@ -832,7 +832,7 @@ namespace Google.Cloud.NetApp.V1 {
         private bool dailyBackupImmutable_;
         /// <summary>
         /// Optional. Indicates if the daily backups are immutable.
-        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// At least one of daily_backup_immutable, weekly_backup_immutable,
         /// monthly_backup_immutable and manual_backup_immutable must be true.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -849,7 +849,7 @@ namespace Google.Cloud.NetApp.V1 {
         private bool weeklyBackupImmutable_;
         /// <summary>
         /// Optional. Indicates if the weekly backups are immutable.
-        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// At least one of daily_backup_immutable, weekly_backup_immutable,
         /// monthly_backup_immutable and manual_backup_immutable must be true.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -866,7 +866,7 @@ namespace Google.Cloud.NetApp.V1 {
         private bool monthlyBackupImmutable_;
         /// <summary>
         /// Optional. Indicates if the monthly backups are immutable.
-        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// At least one of daily_backup_immutable, weekly_backup_immutable,
         /// monthly_backup_immutable and manual_backup_immutable must be true.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -883,7 +883,7 @@ namespace Google.Cloud.NetApp.V1 {
         private bool manualBackupImmutable_;
         /// <summary>
         /// Optional. Indicates if the manual backups are immutable.
-        /// Atleast one of daily_backup_immutable, weekly_backup_immutable,
+        /// At least one of daily_backup_immutable, weekly_backup_immutable,
         /// monthly_backup_immutable and manual_backup_immutable must be true.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
