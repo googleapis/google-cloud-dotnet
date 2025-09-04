@@ -26,27 +26,33 @@ namespace Google.Cloud.NetApp.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvbmV0YXBwL3YxL2NvbW1vbi5wcm90bxIWZ29vZ2xl",
             "LmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90byKxAQoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
+            "cm90byLHAQoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
             "ZV9sZXZlbHMYASADKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlNlcnZp",
             "Y2VMZXZlbEID4EEDElAKGnN1cHBvcnRlZF9mbGV4X3BlcmZvcm1hbmNlGAIg",
             "AygOMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5GbGV4UGVyZm9ybWFuY2VC",
-            "A+BBAypfCgxTZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJ",
-            "RklFRBAAEgsKB1BSRU1JVU0QARILCgdFWFRSRU1FEAISDAoIU1RBTkRBUkQQ",
-            "AxIICgRGTEVYEAQqbgoPRmxleFBlcmZvcm1hbmNlEiAKHEZMRVhfUEVSRk9S",
-            "TUFOQ0VfVU5TUEVDSUZJRUQQABIcChhGTEVYX1BFUkZPUk1BTkNFX0RFRkFV",
-            "TFQQARIbChdGTEVYX1BFUkZPUk1BTkNFX0NVU1RPTRACKlUKDkVuY3J5cHRp",
-            "b25UeXBlEh8KG0VOQ1JZUFRJT05fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1NF",
-            "UlZJQ0VfTUFOQUdFRBABEg0KCUNMT1VEX0tNUxACKlQKFERpcmVjdG9yeVNl",
-            "cnZpY2VUeXBlEiYKIkRJUkVDVE9SWV9TRVJWSUNFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIUChBBQ1RJVkVfRElSRUNUT1JZEAFCrQEKGmNvbS5nb29nbGUuY2xv",
-            "dWQubmV0YXBwLnYxQgtDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29t",
-            "L2dvL25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5D",
-            "bG91ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29v",
-            "Z2xlOjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
+            "A+BBAxIUCgdoYXNfdmNwGAMgASgIQgPgQQMiJQoMVXNlckNvbW1hbmRzEhUK",
+            "CGNvbW1hbmRzGAEgAygJQgPgQQMqXwoMU2VydmljZUxldmVsEh0KGVNFUlZJ",
+            "Q0VfTEVWRUxfVU5TUEVDSUZJRUQQABILCgdQUkVNSVVNEAESCwoHRVhUUkVN",
+            "RRACEgwKCFNUQU5EQVJEEAMSCAoERkxFWBAEKm4KD0ZsZXhQZXJmb3JtYW5j",
+            "ZRIgChxGTEVYX1BFUkZPUk1BTkNFX1VOU1BFQ0lGSUVEEAASHAoYRkxFWF9Q",
+            "RVJGT1JNQU5DRV9ERUZBVUxUEAESGwoXRkxFWF9QRVJGT1JNQU5DRV9DVVNU",
+            "T00QAipVCg5FbmNyeXB0aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABITCg9TRVJWSUNFX01BTkFHRUQQARINCglDTE9VRF9LTVMQ",
+            "AipUChREaXJlY3RvcnlTZXJ2aWNlVHlwZRImCiJESVJFQ1RPUllfU0VSVklD",
+            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKnUK",
+            "GUh5YnJpZFJlcGxpY2F0aW9uU2NoZWR1bGUSKwonSFlCUklEX1JFUExJQ0FU",
+            "SU9OX1NDSEVEVUxFX1VOU1BFQ0lGSUVEEAASFAoQRVZFUllfMTBfTUlOVVRF",
+            "UxABEgoKBkhPVVJMWRACEgkKBURBSUxZEAMqOQoHUW9zVHlwZRIYChRRT1Nf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIKCgZNQU5VQUwQAkKtAQoa",
+            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCC0NvbW1vblByb3RvUAFaMmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFw",
+            "cHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxO",
+            "ZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance", "HasVcp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UserCommands), global::Google.Cloud.NetApp.V1.UserCommands.Parser, new[]{ "Commands" }, null, null, null, null)
           }));
     }
     #endregion
@@ -129,6 +135,48 @@ namespace Google.Cloud.NetApp.V1 {
     [pbr::OriginalName("ACTIVE_DIRECTORY")] ActiveDirectory = 1,
   }
 
+  /// <summary>
+  /// Schedule for Hybrid Replication.
+  /// New enum values may be added in future to support different frequency of
+  /// replication.
+  /// </summary>
+  public enum HybridReplicationSchedule {
+    /// <summary>
+    /// Unspecified HybridReplicationSchedule
+    /// </summary>
+    [pbr::OriginalName("HYBRID_REPLICATION_SCHEDULE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Replication happens once every 10 minutes.
+    /// </summary>
+    [pbr::OriginalName("EVERY_10_MINUTES")] Every10Minutes = 1,
+    /// <summary>
+    /// Replication happens once every hour.
+    /// </summary>
+    [pbr::OriginalName("HOURLY")] Hourly = 2,
+    /// <summary>
+    /// Replication happens once every day.
+    /// </summary>
+    [pbr::OriginalName("DAILY")] Daily = 3,
+  }
+
+  /// <summary>
+  /// QoS (Quality of Service) Types of the storage pool
+  /// </summary>
+  public enum QosType {
+    /// <summary>
+    /// Unspecified QoS Type
+    /// </summary>
+    [pbr::OriginalName("QOS_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// QoS Type is Auto
+    /// </summary>
+    [pbr::OriginalName("AUTO")] Auto = 1,
+    /// <summary>
+    /// QoS Type is Manual
+    /// </summary>
+    [pbr::OriginalName("MANUAL")] Manual = 2,
+  }
+
   #endregion
 
   #region Messages
@@ -173,6 +221,7 @@ namespace Google.Cloud.NetApp.V1 {
     public LocationMetadata(LocationMetadata other) : this() {
       supportedServiceLevels_ = other.supportedServiceLevels_.Clone();
       supportedFlexPerformance_ = other.supportedFlexPerformance_.Clone();
+      hasVcp_ = other.hasVcp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -210,6 +259,21 @@ namespace Google.Cloud.NetApp.V1 {
       get { return supportedFlexPerformance_; }
     }
 
+    /// <summary>Field number for the "has_vcp" field.</summary>
+    public const int HasVcpFieldNumber = 3;
+    private bool hasVcp_;
+    /// <summary>
+    /// Output only. Indicates if the location has VCP support.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVcp {
+      get { return hasVcp_; }
+      set {
+        hasVcp_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -227,6 +291,7 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if(!supportedServiceLevels_.Equals(other.supportedServiceLevels_)) return false;
       if(!supportedFlexPerformance_.Equals(other.supportedFlexPerformance_)) return false;
+      if (HasVcp != other.HasVcp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -236,6 +301,7 @@ namespace Google.Cloud.NetApp.V1 {
       int hash = 1;
       hash ^= supportedServiceLevels_.GetHashCode();
       hash ^= supportedFlexPerformance_.GetHashCode();
+      if (HasVcp != false) hash ^= HasVcp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -256,6 +322,10 @@ namespace Google.Cloud.NetApp.V1 {
     #else
       supportedServiceLevels_.WriteTo(output, _repeated_supportedServiceLevels_codec);
       supportedFlexPerformance_.WriteTo(output, _repeated_supportedFlexPerformance_codec);
+      if (HasVcp != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(HasVcp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -268,6 +338,10 @@ namespace Google.Cloud.NetApp.V1 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       supportedServiceLevels_.WriteTo(ref output, _repeated_supportedServiceLevels_codec);
       supportedFlexPerformance_.WriteTo(ref output, _repeated_supportedFlexPerformance_codec);
+      if (HasVcp != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(HasVcp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -280,6 +354,9 @@ namespace Google.Cloud.NetApp.V1 {
       int size = 0;
       size += supportedServiceLevels_.CalculateSize(_repeated_supportedServiceLevels_codec);
       size += supportedFlexPerformance_.CalculateSize(_repeated_supportedFlexPerformance_codec);
+      if (HasVcp != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -294,6 +371,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       supportedServiceLevels_.Add(other.supportedServiceLevels_);
       supportedFlexPerformance_.Add(other.supportedFlexPerformance_);
+      if (other.HasVcp != false) {
+        HasVcp = other.HasVcp;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -319,6 +399,10 @@ namespace Google.Cloud.NetApp.V1 {
             supportedFlexPerformance_.AddEntriesFrom(input, _repeated_supportedFlexPerformance_codec);
             break;
           }
+          case 24: {
+            HasVcp = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -342,6 +426,195 @@ namespace Google.Cloud.NetApp.V1 {
           case 18:
           case 16: {
             supportedFlexPerformance_.AddEntriesFrom(ref input, _repeated_supportedFlexPerformance_codec);
+            break;
+          }
+          case 24: {
+            HasVcp = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// UserCommands contains the commands to be executed by the customer.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UserCommands : pb::IMessage<UserCommands>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UserCommands> _parser = new pb::MessageParser<UserCommands>(() => new UserCommands());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UserCommands> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserCommands() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserCommands(UserCommands other) : this() {
+      commands_ = other.commands_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserCommands Clone() {
+      return new UserCommands(this);
+    }
+
+    /// <summary>Field number for the "commands" field.</summary>
+    public const int CommandsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_commands_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> commands_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. List of commands to be executed by the customer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Commands {
+      get { return commands_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UserCommands);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UserCommands other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!commands_.Equals(other.commands_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= commands_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      commands_.WriteTo(output, _repeated_commands_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      commands_.WriteTo(ref output, _repeated_commands_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += commands_.CalculateSize(_repeated_commands_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UserCommands other) {
+      if (other == null) {
+        return;
+      }
+      commands_.Add(other.commands_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            commands_.AddEntriesFrom(input, _repeated_commands_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            commands_.AddEntriesFrom(ref input, _repeated_commands_codec);
             break;
           }
         }

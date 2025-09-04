@@ -27,115 +27,121 @@ namespace Google.Cloud.NetApp.V1 {
             "Cihnb29nbGUvY2xvdWQvbmV0YXBwL3YxL3JlcGxpY2F0aW9uLnByb3RvEhZn",
             "b29nbGUuY2xvdWQubmV0YXBwLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUv",
-            "Y2xvdWQvbmV0YXBwL3YxL3ZvbHVtZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
-            "L2R1cmF0aW9uLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLUBAoNVHJh",
-            "bnNmZXJTdGF0cxIbCg50cmFuc2Zlcl9ieXRlcxgBIAEoA0gAiAEBEj8KF3Rv",
-            "dGFsX3RyYW5zZmVyX2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uSAGIAQESIAoTbGFzdF90cmFuc2Zlcl9ieXRlcxgDIAEoA0gC",
-            "iAEBEj4KFmxhc3RfdHJhbnNmZXJfZHVyYXRpb24YBCABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25IA4gBARI0CgxsYWdfZHVyYXRpb24YBSABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IBIgBARI0Cgt1cGRhdGVfdGlt",
-            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBYgBARI/ChZs",
-            "YXN0X3RyYW5zZmVyX2VuZF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEgGiAEBEiAKE2xhc3RfdHJhbnNmZXJfZXJyb3IYCCABKAlI",
-            "B4gBAUIRCg9fdHJhbnNmZXJfYnl0ZXNCGgoYX3RvdGFsX3RyYW5zZmVyX2R1",
-            "cmF0aW9uQhYKFF9sYXN0X3RyYW5zZmVyX2J5dGVzQhkKF19sYXN0X3RyYW5z",
-            "ZmVyX2R1cmF0aW9uQg8KDV9sYWdfZHVyYXRpb25CDgoMX3VwZGF0ZV90aW1l",
-            "QhkKF19sYXN0X3RyYW5zZmVyX2VuZF90aW1lQhYKFF9sYXN0X3RyYW5zZmVy",
-            "X2Vycm9yIsgOCgtSZXBsaWNhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQgSPQoF",
-            "c3RhdGUYAiABKA4yKS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0",
-            "aW9uLlN0YXRlQgPgQQMSGgoNc3RhdGVfZGV0YWlscxgDIAEoCUID4EEDEkYK",
-            "BHJvbGUYBCABKA4yMy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0",
-            "aW9uLlJlcGxpY2F0aW9uUm9sZUID4EEDEloKFHJlcGxpY2F0aW9uX3NjaGVk",
-            "dWxlGAUgASgOMjcuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlv",
-            "bi5SZXBsaWNhdGlvblNjaGVkdWxlQgPgQQISSgoMbWlycm9yX3N0YXRlGAYg",
-            "ASgOMi8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbi5NaXJy",
-            "b3JTdGF0ZUID4EEDEhkKB2hlYWx0aHkYCCABKAhCA+BBA0gAiAEBEjQKC2Ny",
-            "ZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEkAKEmRlc3RpbmF0aW9uX3ZvbHVtZRgKIAEoCUIk4EED+kEeChxuZXRh",
-            "cHAuZ29vZ2xlYXBpcy5jb20vVm9sdW1lEkIKDnRyYW5zZmVyX3N0YXRzGAsg",
-            "ASgLMiUuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5UcmFuc2ZlclN0YXRzQgPg",
-            "QQMSPwoGbGFiZWxzGAwgAygLMi8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5S",
-            "ZXBsaWNhdGlvbi5MYWJlbHNFbnRyeRIYCgtkZXNjcmlwdGlvbhgNIAEoCUgB",
-            "iAEBEmIKHWRlc3RpbmF0aW9uX3ZvbHVtZV9wYXJhbWV0ZXJzGA4gASgLMjMu",
-            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MS5EZXN0aW5hdGlvblZvbHVtZVBhcmFt",
-            "ZXRlcnNCBuBBBOBBAhI7Cg1zb3VyY2Vfdm9sdW1lGA8gASgJQiTgQQP6QR4K",
-            "HG5ldGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSUQoWaHlicmlkX3BlZXJp",
-            "bmdfZGV0YWlscxgQIAEoCzIsLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuSHli",
-            "cmlkUGVlcmluZ0RldGFpbHNCA+BBAxIdChBjbHVzdGVyX2xvY2F0aW9uGBIg",
-            "ASgJQgPgQQESXwoXaHlicmlkX3JlcGxpY2F0aW9uX3R5cGUYEyABKA4yOS5n",
-            "b29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uLkh5YnJpZFJlcGxp",
-            "Y2F0aW9uVHlwZUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
-            "SUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5HEAMS",
-            "DAoIREVMRVRJTkcQBRIJCgVFUlJPUhAGEhsKF1BFTkRJTkdfQ0xVU1RFUl9Q",
-            "RUVSSU5HEAgSFwoTUEVORElOR19TVk1fUEVFUklORxAJIlAKD1JlcGxpY2F0",
-            "aW9uUm9sZRIgChxSRVBMSUNBVElPTl9ST0xFX1VOU1BFQ0lGSUVEEAASCgoG",
-            "U09VUkNFEAESDwoLREVTVElOQVRJT04QAiJoChNSZXBsaWNhdGlvblNjaGVk",
-            "dWxlEiQKIFJFUExJQ0FUSU9OX1NDSEVEVUxFX1VOU1BFQ0lGSUVEEAASFAoQ",
-            "RVZFUllfMTBfTUlOVVRFUxABEgoKBkhPVVJMWRACEgkKBURBSUxZEAMijwEK",
-            "C01pcnJvclN0YXRlEhwKGE1JUlJPUl9TVEFURV9VTlNQRUNJRklFRBAAEg0K",
-            "CVBSRVBBUklORxABEgwKCE1JUlJPUkVEEAISCwoHU1RPUFBFRBADEhAKDFRS",
-            "QU5TRkVSUklORxAEEhkKFUJBU0VMSU5FX1RSQU5TRkVSUklORxAFEgsKB0FC",
-            "T1JURUQQBiJrChVIeWJyaWRSZXBsaWNhdGlvblR5cGUSJwojSFlCUklEX1JF",
-            "UExJQ0FUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABINCglNSUdSQVRJT04QARIa",
-            "ChZDT05USU5VT1VTX1JFUExJQ0FUSU9OEAI6lwHqQZMBCiFuZXRhcHAuZ29v",
-            "Z2xlYXBpcy5jb20vUmVwbGljYXRpb24SU3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9L3JlcGxpY2F0",
-            "aW9ucy97cmVwbGljYXRpb259KgxyZXBsaWNhdGlvbnMyC3JlcGxpY2F0aW9u",
-            "QgoKCF9oZWFsdGh5Qg4KDF9kZXNjcmlwdGlvbiL2AQoUSHlicmlkUGVlcmlu",
-            "Z0RldGFpbHMSFgoJc3VibmV0X2lwGAEgASgJQgPgQQESFAoHY29tbWFuZBgC",
-            "IAEoCUID4EEBEjwKE2NvbW1hbmRfZXhwaXJ5X3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESFwoKcGFzc3BocmFzZRgEIAEo",
-            "CUID4EEBEh0KEHBlZXJfdm9sdW1lX25hbWUYBSABKAlCA+BBARIeChFwZWVy",
-            "X2NsdXN0ZXJfbmFtZRgGIAEoCUID4EEBEhoKDXBlZXJfc3ZtX25hbWUYByAB",
-            "KAlCA+BBASKdAQoXTGlzdFJlcGxpY2F0aW9uc1JlcXVlc3QSOQoGcGFyZW50",
-            "GAEgASgJQingQQL6QSMSIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNh",
-            "dGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIQ",
-            "CghvcmRlcl9ieRgEIAEoCRIOCgZmaWx0ZXIYBSABKAkigwEKGExpc3RSZXBs",
-            "aWNhdGlvbnNSZXNwb25zZRI5CgxyZXBsaWNhdGlvbnMYASADKAsyIy5nb29n",
-            "bGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uEhcKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJQChVHZXRSZXBsaWNh",
-            "dGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29v",
-            "Z2xlYXBpcy5jb20vUmVwbGljYXRpb24iiwIKG0Rlc3RpbmF0aW9uVm9sdW1l",
-            "UGFyYW1ldGVycxI/CgxzdG9yYWdlX3Bvb2wYASABKAlCKeBBAvpBIwohbmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQb29sEhEKCXZvbHVtZV9pZBgC",
-            "IAEoCRISCgpzaGFyZV9uYW1lGAMgASgJEhgKC2Rlc2NyaXB0aW9uGAQgASgJ",
-            "SACIAQESRwoOdGllcmluZ19wb2xpY3kYBSABKAsyJS5nb29nbGUuY2xvdWQu",
-            "bmV0YXBwLnYxLlRpZXJpbmdQb2xpY3lCA+BBAUgBiAEBQg4KDF9kZXNjcmlw",
-            "dGlvbkIRCg9fdGllcmluZ19wb2xpY3kisQEKGENyZWF0ZVJlcGxpY2F0aW9u",
+            "Y2xvdWQvbmV0YXBwL3YxL2NvbW1vbi5wcm90bxojZ29vZ2xlL2Nsb3VkL25l",
+            "dGFwcC92MS92b2x1bWUucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlv",
+            "bi5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dv",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i1AQKDVRyYW5zZmVyU3Rh",
+            "dHMSGwoOdHJhbnNmZXJfYnl0ZXMYASABKANIAIgBARI/Chd0b3RhbF90cmFu",
+            "c2Zlcl9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkgBiAEBEiAKE2xhc3RfdHJhbnNmZXJfYnl0ZXMYAyABKANIAogBARI+ChZs",
+            "YXN0X3RyYW5zZmVyX2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uSAOIAQESNAoMbGFnX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uSASIAQESNAoLdXBkYXRlX3RpbWUYBiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAWIAQESPwoWbGFzdF90cmFu",
+            "c2Zlcl9lbmRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBIBogBARIgChNsYXN0X3RyYW5zZmVyX2Vycm9yGAggASgJSAeIAQFCEQoP",
+            "X3RyYW5zZmVyX2J5dGVzQhoKGF90b3RhbF90cmFuc2Zlcl9kdXJhdGlvbkIW",
+            "ChRfbGFzdF90cmFuc2Zlcl9ieXRlc0IZChdfbGFzdF90cmFuc2Zlcl9kdXJh",
+            "dGlvbkIPCg1fbGFnX2R1cmF0aW9uQg4KDF91cGRhdGVfdGltZUIZChdfbGFz",
+            "dF90cmFuc2Zlcl9lbmRfdGltZUIWChRfbGFzdF90cmFuc2Zlcl9lcnJvciLC",
+            "EAoLUmVwbGljYXRpb24SEQoEbmFtZRgBIAEoCUID4EEIEj0KBXN0YXRlGAIg",
+            "ASgOMikuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbi5TdGF0",
+            "ZUID4EEDEhoKDXN0YXRlX2RldGFpbHMYAyABKAlCA+BBAxJGCgRyb2xlGAQg",
+            "ASgOMjMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbi5SZXBs",
+            "aWNhdGlvblJvbGVCA+BBAxJaChRyZXBsaWNhdGlvbl9zY2hlZHVsZRgFIAEo",
+            "DjI3Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRpb24uUmVwbGlj",
+            "YXRpb25TY2hlZHVsZUID4EECEkoKDG1pcnJvcl9zdGF0ZRgGIAEoDjIvLmdv",
+            "b2dsZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRpb24uTWlycm9yU3RhdGVC",
+            "A+BBAxIZCgdoZWFsdGh5GAggASgIQgPgQQNIAIgBARI0CgtjcmVhdGVfdGlt",
+            "ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJAChJk",
+            "ZXN0aW5hdGlvbl92b2x1bWUYCiABKAlCJOBBA/pBHgocbmV0YXBwLmdvb2ds",
+            "ZWFwaXMuY29tL1ZvbHVtZRJCCg50cmFuc2Zlcl9zdGF0cxgLIAEoCzIlLmdv",
+            "b2dsZS5jbG91ZC5uZXRhcHAudjEuVHJhbnNmZXJTdGF0c0ID4EEDEj8KBmxh",
+            "YmVscxgMIAMoCzIvLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRp",
+            "b24uTGFiZWxzRW50cnkSGAoLZGVzY3JpcHRpb24YDSABKAlIAYgBARJiCh1k",
+            "ZXN0aW5hdGlvbl92b2x1bWVfcGFyYW1ldGVycxgOIAEoCzIzLmdvb2dsZS5j",
+            "bG91ZC5uZXRhcHAudjEuRGVzdGluYXRpb25Wb2x1bWVQYXJhbWV0ZXJzQgbg",
+            "QQTgQQISOwoNc291cmNlX3ZvbHVtZRgPIAEoCUIk4EED+kEeChxuZXRhcHAu",
+            "Z29vZ2xlYXBpcy5jb20vVm9sdW1lElEKFmh5YnJpZF9wZWVyaW5nX2RldGFp",
+            "bHMYECABKAsyLC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkh5YnJpZFBlZXJp",
+            "bmdEZXRhaWxzQgPgQQMSHQoQY2x1c3Rlcl9sb2NhdGlvbhgSIAEoCUID4EEB",
+            "El8KF2h5YnJpZF9yZXBsaWNhdGlvbl90eXBlGBMgASgOMjkuZ29vZ2xlLmNs",
+            "b3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbi5IeWJyaWRSZXBsaWNhdGlvblR5",
+            "cGVCA+BBAxJTCiBoeWJyaWRfcmVwbGljYXRpb25fdXNlcl9jb21tYW5kcxgU",
+            "IAEoCzIkLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVXNlckNvbW1hbmRzQgPg",
+            "QQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ASLTAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVB",
+            "VElORxABEgkKBVJFQURZEAISDAoIVVBEQVRJTkcQAxIMCghERUxFVElORxAF",
+            "EgkKBUVSUk9SEAYSGwoXUEVORElOR19DTFVTVEVSX1BFRVJJTkcQCBIXChNQ",
+            "RU5ESU5HX1NWTV9QRUVSSU5HEAkSGQoVUEVORElOR19SRU1PVEVfUkVTWU5D",
+            "EAoSIgoeRVhURVJOQUxMWV9NQU5BR0VEX1JFUExJQ0FUSU9OEAsiUAoPUmVw",
+            "bGljYXRpb25Sb2xlEiAKHFJFUExJQ0FUSU9OX1JPTEVfVU5TUEVDSUZJRUQQ",
+            "ABIKCgZTT1VSQ0UQARIPCgtERVNUSU5BVElPThACImgKE1JlcGxpY2F0aW9u",
+            "U2NoZWR1bGUSJAogUkVQTElDQVRJT05fU0NIRURVTEVfVU5TUEVDSUZJRUQQ",
+            "ABIUChBFVkVSWV8xMF9NSU5VVEVTEAESCgoGSE9VUkxZEAISCQoFREFJTFkQ",
+            "AyK8AQoLTWlycm9yU3RhdGUSHAoYTUlSUk9SX1NUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASDQoJUFJFUEFSSU5HEAESDAoITUlSUk9SRUQQAhILCgdTVE9QUEVEEAMS",
+            "EAoMVFJBTlNGRVJSSU5HEAQSGQoVQkFTRUxJTkVfVFJBTlNGRVJSSU5HEAUS",
+            "CwoHQUJPUlRFRBAGEhYKEkVYVEVSTkFMTFlfTUFOQUdFRBAHEhMKD1BFTkRJ",
+            "TkdfUEVFUklORxAIIqMBChVIeWJyaWRSZXBsaWNhdGlvblR5cGUSJwojSFlC",
+            "UklEX1JFUExJQ0FUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABINCglNSUdSQVRJ",
+            "T04QARIaChZDT05USU5VT1VTX1JFUExJQ0FUSU9OEAISFgoST05QUkVNX1JF",
+            "UExJQ0FUSU9OEAMSHgoaUkVWRVJTRV9PTlBSRU1fUkVQTElDQVRJT04QBDqX",
+            "AepBkwEKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbhJTcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ZvbHVtZXMv",
+            "e3ZvbHVtZX0vcmVwbGljYXRpb25zL3tyZXBsaWNhdGlvbn0qDHJlcGxpY2F0",
+            "aW9uczILcmVwbGljYXRpb25CCgoIX2hlYWx0aHlCDgoMX2Rlc2NyaXB0aW9u",
+            "IvYBChRIeWJyaWRQZWVyaW5nRGV0YWlscxIWCglzdWJuZXRfaXAYASABKAlC",
+            "A+BBAxIUCgdjb21tYW5kGAIgASgJQgPgQQMSPAoTY29tbWFuZF9leHBpcnlf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIX",
+            "CgpwYXNzcGhyYXNlGAQgASgJQgPgQQMSHQoQcGVlcl92b2x1bWVfbmFtZRgF",
+            "IAEoCUID4EEDEh4KEXBlZXJfY2x1c3Rlcl9uYW1lGAYgASgJQgPgQQMSGgoN",
+            "cGVlcl9zdm1fbmFtZRgHIAEoCUID4EEDIp0BChdMaXN0UmVwbGljYXRpb25z",
             "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0YXBwLmdvb2ds",
-            "ZWFwaXMuY29tL1JlcGxpY2F0aW9uEj0KC3JlcGxpY2F0aW9uGAIgASgLMiMu",
-            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbkID4EECEhsKDnJl",
-            "cGxpY2F0aW9uX2lkGAMgASgJQgPgQQIiUwoYRGVsZXRlUmVwbGljYXRpb25S",
-            "ZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFw",
-            "aXMuY29tL1JlcGxpY2F0aW9uIo8BChhVcGRhdGVSZXBsaWNhdGlvblJlcXVl",
-            "c3QSNAoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrQgPgQQISPQoLcmVwbGljYXRpb24YAiABKAsyIy5nb29nbGUuY2xv",
-            "dWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uQgPgQQIiYAoWU3RvcFJlcGxpY2F0",
-            "aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29n",
-            "bGVhcGlzLmNvbS9SZXBsaWNhdGlvbhINCgVmb3JjZRgCIAEoCCJTChhSZXN1",
-            "bWVSZXBsaWNhdGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFu",
-            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24iXQoiUmV2ZXJzZVJl",
-            "cGxpY2F0aW9uRGlyZWN0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6",
-            "QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbiLNAQoXRXN0",
-            "YWJsaXNoUGVlcmluZ1JlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFu",
-            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24SHgoRcGVlcl9jbHVz",
-            "dGVyX25hbWUYAiABKAlCA+BBAhIaCg1wZWVyX3N2bV9uYW1lGAMgASgJQgPg",
-            "QQISHgoRcGVlcl9pcF9hZGRyZXNzZXMYBCADKAlCA+BBARIdChBwZWVyX3Zv",
-            "bHVtZV9uYW1lGAUgASgJQgPgQQIiUQoWU3luY1JlcGxpY2F0aW9uUmVxdWVz",
-            "dBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNv",
-            "bS9SZXBsaWNhdGlvbkKyAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFC",
-            "EFJlcGxpY2F0aW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRh",
-            "cHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0",
-            "QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xv",
-            "dWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "ZWFwaXMuY29tL1JlcGxpY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJEg4KBmZpbHRlchgF",
+            "IAEoCSKDAQoYTGlzdFJlcGxpY2F0aW9uc1Jlc3BvbnNlEjkKDHJlcGxpY2F0",
+            "aW9ucxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRp",
+            "b24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMg",
+            "AygJIlAKFUdldFJlcGxpY2F0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQing",
+            "QQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbiKLAgob",
+            "RGVzdGluYXRpb25Wb2x1bWVQYXJhbWV0ZXJzEj8KDHN0b3JhZ2VfcG9vbBgB",
+            "IAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBv",
+            "b2wSEQoJdm9sdW1lX2lkGAIgASgJEhIKCnNoYXJlX25hbWUYAyABKAkSGAoL",
+            "ZGVzY3JpcHRpb24YBCABKAlIAIgBARJHCg50aWVyaW5nX3BvbGljeRgFIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVGllcmluZ1BvbGljeUID4EEB",
+            "SAGIAQFCDgoMX2Rlc2NyaXB0aW9uQhEKD190aWVyaW5nX3BvbGljeSKxAQoY",
+            "Q3JlYXRlUmVwbGljYXRpb25SZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC",
+            "+kEjEiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24SPQoLcmVw",
+            "bGljYXRpb24YAiABKAsyIy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxp",
+            "Y2F0aW9uQgPgQQISGwoOcmVwbGljYXRpb25faWQYAyABKAlCA+BBAiJTChhE",
+            "ZWxldGVSZXBsaWNhdGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEj",
+            "CiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24ijwEKGFVwZGF0",
+            "ZVJlcGxpY2F0aW9uUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhI9CgtyZXBsaWNhdGlvbhgC",
+            "IAEoCzIjLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRpb25CA+BB",
+            "AiJgChZTdG9wUmVwbGljYXRpb25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBB",
+            "AvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0aW9uEg0KBWZv",
+            "cmNlGAIgASgIIlMKGFJlc3VtZVJlcGxpY2F0aW9uUmVxdWVzdBI3CgRuYW1l",
+            "GAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNh",
+            "dGlvbiJdCiJSZXZlcnNlUmVwbGljYXRpb25EaXJlY3Rpb25SZXF1ZXN0EjcK",
+            "BG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1Jl",
+            "cGxpY2F0aW9uIs0BChdFc3RhYmxpc2hQZWVyaW5nUmVxdWVzdBI3CgRuYW1l",
+            "GAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNh",
+            "dGlvbhIeChFwZWVyX2NsdXN0ZXJfbmFtZRgCIAEoCUID4EECEhoKDXBlZXJf",
+            "c3ZtX25hbWUYAyABKAlCA+BBAhIeChFwZWVyX2lwX2FkZHJlc3NlcxgEIAMo",
+            "CUID4EEBEh0KEHBlZXJfdm9sdW1lX25hbWUYBSABKAlCA+BBAiJRChZTeW5j",
+            "UmVwbGljYXRpb25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0",
+            "YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0aW9uQrIBChpjb20uZ29vZ2xl",
+            "LmNsb3VkLm5ldGFwcC52MUIQUmVwbGljYXRpb25Qcm90b1ABWjJjbG91ZC5n",
+            "b29nbGUuY29tL2dvL25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoC",
+            "Fkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBw",
+            "XFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Cloud.NetApp.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.TransferStats), global::Google.Cloud.NetApp.V1.TransferStats.Parser, new[]{ "TransferBytes", "TotalTransferDuration", "LastTransferBytes", "LastTransferDuration", "LagDuration", "UpdateTime", "LastTransferEndTime", "LastTransferError" }, new[]{ "TransferBytes", "TotalTransferDuration", "LastTransferBytes", "LastTransferDuration", "LagDuration", "UpdateTime", "LastTransferEndTime", "LastTransferError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Replication), global::Google.Cloud.NetApp.V1.Replication.Parser, new[]{ "Name", "State", "StateDetails", "Role", "ReplicationSchedule", "MirrorState", "Healthy", "CreateTime", "DestinationVolume", "TransferStats", "Labels", "Description", "DestinationVolumeParameters", "SourceVolume", "HybridPeeringDetails", "ClusterLocation", "HybridReplicationType" }, new[]{ "Healthy", "Description" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Replication.Types.State), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationRole), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.MirrorState), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Replication), global::Google.Cloud.NetApp.V1.Replication.Parser, new[]{ "Name", "State", "StateDetails", "Role", "ReplicationSchedule", "MirrorState", "Healthy", "CreateTime", "DestinationVolume", "TransferStats", "Labels", "Description", "DestinationVolumeParameters", "SourceVolume", "HybridPeeringDetails", "ClusterLocation", "HybridReplicationType", "HybridReplicationUserCommands" }, new[]{ "Healthy", "Description" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Replication.Types.State), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationRole), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.MirrorState), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HybridPeeringDetails), global::Google.Cloud.NetApp.V1.HybridPeeringDetails.Parser, new[]{ "SubnetIp", "Command", "CommandExpiryTime", "Passphrase", "PeerVolumeName", "PeerClusterName", "PeerSvmName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListReplicationsRequest), global::Google.Cloud.NetApp.V1.ListReplicationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListReplicationsResponse), global::Google.Cloud.NetApp.V1.ListReplicationsResponse.Parser, new[]{ "Replications", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -783,6 +789,7 @@ namespace Google.Cloud.NetApp.V1 {
       hybridPeeringDetails_ = other.hybridPeeringDetails_ != null ? other.hybridPeeringDetails_.Clone() : null;
       clusterLocation_ = other.clusterLocation_;
       hybridReplicationType_ = other.hybridReplicationType_;
+      hybridReplicationUserCommands_ = other.hybridReplicationUserCommands_ != null ? other.hybridReplicationUserCommands_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1083,6 +1090,22 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "hybrid_replication_user_commands" field.</summary>
+    public const int HybridReplicationUserCommandsFieldNumber = 20;
+    private global::Google.Cloud.NetApp.V1.UserCommands hybridReplicationUserCommands_;
+    /// <summary>
+    /// Output only. Copy pastable snapmirror commands to be executed on onprem
+    /// cluster by the customer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.UserCommands HybridReplicationUserCommands {
+      get { return hybridReplicationUserCommands_; }
+      set {
+        hybridReplicationUserCommands_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1115,6 +1138,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (!object.Equals(HybridPeeringDetails, other.HybridPeeringDetails)) return false;
       if (ClusterLocation != other.ClusterLocation) return false;
       if (HybridReplicationType != other.HybridReplicationType) return false;
+      if (!object.Equals(HybridReplicationUserCommands, other.HybridReplicationUserCommands)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1139,6 +1163,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (hybridPeeringDetails_ != null) hash ^= HybridPeeringDetails.GetHashCode();
       if (ClusterLocation.Length != 0) hash ^= ClusterLocation.GetHashCode();
       if (HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) hash ^= HybridReplicationType.GetHashCode();
+      if (hybridReplicationUserCommands_ != null) hash ^= HybridReplicationUserCommands.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1222,6 +1247,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) HybridReplicationType);
       }
+      if (hybridReplicationUserCommands_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(HybridReplicationUserCommands);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1297,6 +1326,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) HybridReplicationType);
       }
+      if (hybridReplicationUserCommands_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(HybridReplicationUserCommands);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1355,6 +1388,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) HybridReplicationType);
+      }
+      if (hybridReplicationUserCommands_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HybridReplicationUserCommands);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1428,6 +1464,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HybridReplicationType != global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType.Unspecified) {
         HybridReplicationType = other.HybridReplicationType;
+      }
+      if (other.hybridReplicationUserCommands_ != null) {
+        if (hybridReplicationUserCommands_ == null) {
+          HybridReplicationUserCommands = new global::Google.Cloud.NetApp.V1.UserCommands();
+        }
+        HybridReplicationUserCommands.MergeFrom(other.HybridReplicationUserCommands);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1522,6 +1564,13 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 152: {
             HybridReplicationType = (global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) input.ReadEnum();
+            break;
+          }
+          case 162: {
+            if (hybridReplicationUserCommands_ == null) {
+              HybridReplicationUserCommands = new global::Google.Cloud.NetApp.V1.UserCommands();
+            }
+            input.ReadMessage(HybridReplicationUserCommands);
             break;
           }
         }
@@ -1619,6 +1668,13 @@ namespace Google.Cloud.NetApp.V1 {
             HybridReplicationType = (global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) input.ReadEnum();
             break;
           }
+          case 162: {
+            if (hybridReplicationUserCommands_ == null) {
+              HybridReplicationUserCommands = new global::Google.Cloud.NetApp.V1.UserCommands();
+            }
+            input.ReadMessage(HybridReplicationUserCommands);
+            break;
+          }
         }
       }
     }
@@ -1666,6 +1722,15 @@ namespace Google.Cloud.NetApp.V1 {
         /// Replication is waiting for SVM peering to be established.
         /// </summary>
         [pbr::OriginalName("PENDING_SVM_PEERING")] PendingSvmPeering = 9,
+        /// <summary>
+        /// Replication is waiting for Commands to be executed on Onprem ONTAP.
+        /// </summary>
+        [pbr::OriginalName("PENDING_REMOTE_RESYNC")] PendingRemoteResync = 10,
+        /// <summary>
+        /// Onprem ONTAP is destination and Replication can only be managed from
+        /// Onprem.
+        /// </summary>
+        [pbr::OriginalName("EXTERNALLY_MANAGED_REPLICATION")] ExternallyManagedReplication = 11,
       }
 
       /// <summary>
@@ -1745,6 +1810,14 @@ namespace Google.Cloud.NetApp.V1 {
         /// Replication is aborted.
         /// </summary>
         [pbr::OriginalName("ABORTED")] Aborted = 6,
+        /// <summary>
+        /// Replication is being managed from Onprem ONTAP.
+        /// </summary>
+        [pbr::OriginalName("EXTERNALLY_MANAGED")] ExternallyManaged = 7,
+        /// <summary>
+        /// Peering is yet to be established.
+        /// </summary>
+        [pbr::OriginalName("PENDING_PEERING")] PendingPeering = 8,
       }
 
       /// <summary>
@@ -1763,6 +1836,16 @@ namespace Google.Cloud.NetApp.V1 {
         /// Hybrid replication type for continuous replication.
         /// </summary>
         [pbr::OriginalName("CONTINUOUS_REPLICATION")] ContinuousReplication = 2,
+        /// <summary>
+        /// New field for reversible OnPrem replication, to be used for data
+        /// protection.
+        /// </summary>
+        [pbr::OriginalName("ONPREM_REPLICATION")] OnpremReplication = 3,
+        /// <summary>
+        /// Hybrid replication type for incremental Transfer in the reverse direction
+        /// (GCNV is source and Onprem is destination)
+        /// </summary>
+        [pbr::OriginalName("REVERSE_ONPREM_REPLICATION")] ReverseOnpremReplication = 4,
       }
 
     }
@@ -1828,7 +1911,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int SubnetIpFieldNumber = 1;
     private string subnetIp_ = "";
     /// <summary>
-    /// Optional. IP address of the subnet.
+    /// Output only. IP address of the subnet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1843,7 +1926,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int CommandFieldNumber = 2;
     private string command_ = "";
     /// <summary>
-    /// Optional. Copy-paste-able commands to be used on user's ONTAP to accept
+    /// Output only. Copy-paste-able commands to be used on user's ONTAP to accept
     /// peering requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1859,8 +1942,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int CommandExpiryTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp commandExpiryTime_;
     /// <summary>
-    /// Optional. Expiration time for the peering command to be executed on user's
-    /// ONTAP.
+    /// Output only. Expiration time for the peering command to be executed on
+    /// user's ONTAP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1875,7 +1958,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PassphraseFieldNumber = 4;
     private string passphrase_ = "";
     /// <summary>
-    /// Optional. Temporary passphrase generated to accept cluster peering command.
+    /// Output only. Temporary passphrase generated to accept cluster peering
+    /// command.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1890,7 +1974,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PeerVolumeNameFieldNumber = 5;
     private string peerVolumeName_ = "";
     /// <summary>
-    /// Optional. Name of the user's local source volume to be peered with the
+    /// Output only. Name of the user's local source volume to be peered with the
     /// destination volume.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1906,7 +1990,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PeerClusterNameFieldNumber = 6;
     private string peerClusterName_ = "";
     /// <summary>
-    /// Optional. Name of the user's local source cluster to be peered with the
+    /// Output only. Name of the user's local source cluster to be peered with the
     /// destination cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1922,8 +2006,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PeerSvmNameFieldNumber = 7;
     private string peerSvmName_ = "";
     /// <summary>
-    /// Optional. Name of the user's local source vserver svm to be peered with the
-    /// destination vserver svm.
+    /// Output only. Name of the user's local source vserver svm to be peered with
+    /// the destination vserver svm.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
