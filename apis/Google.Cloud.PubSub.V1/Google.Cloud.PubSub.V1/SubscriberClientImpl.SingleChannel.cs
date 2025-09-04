@@ -1182,10 +1182,11 @@ public sealed partial class SubscriberClientImpl
                         Skip(SkipFailuresInLogs).
                         GroupBy(ex => ex.StatusCode).
                         Select(group => $"{group.Count()} errors with status {group.Key}");
-                    _logger?.LogDebug(exception,
-                        "Can't recover after reaching the consecutive error limit on stream for client {index}. " +
-                        "The last errors were {lastErrors}.",
-                        _clientIndex, string.Join(", ", latestStatuses));
+                    var msg = $"Can't recover after reaching the consecutive error limit {ConsecutiveFailureLimit}"
+                        + $" on stream for client {_clientIndex}."
+                        + $" The last errors were {string.Join(", ", latestStatuses)}.";
+                    _logger?.LogError(exception, msg);
+                    rpcEx.Data.Add("ExtraInfo", msg);
                     return false;
                 }
 
