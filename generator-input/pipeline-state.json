@@ -621,7 +621,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T18:04:26Z",
-            "lastGeneratedCommit": "181ce7632c5f9d9495136a15c1b79d5a4d5647c2",
+            "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
             "apiPaths": [
                 "google/cloud/bigquery/connection/v1"
             ],
