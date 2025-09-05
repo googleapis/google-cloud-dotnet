@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -27,12 +28,27 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public ModelFormat? DestinationFormat { get; set; }
 
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="JobConfigurationExtract"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported by the properties in this options type.
+        /// </summary>
+        /// <remarks>
+        /// Prefer the properties on this type over this modifier to prepare the request.
+        /// Only use this modifier to configure aspects for which there are no properties available.
+        /// This modifier is applied to the request after all properties on this type have been applied.
+        /// The delegate is only called once per operation, even if the request is automatically retried.
+        /// </remarks>
+        public Action<JobConfigurationExtract> ConfigurationModifier { get; set; }
+
         internal void ModifyRequest(JobConfigurationExtract extract)
         {
             if (DestinationFormat != null)
             {
                 extract.DestinationFormat = EnumMap.ToApiValue(DestinationFormat.Value);
             }
+            ConfigurationModifier?.Invoke(extract);
         }
     }
 }
