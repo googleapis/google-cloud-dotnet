@@ -16,7 +16,6 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
@@ -67,9 +66,6 @@ namespace Google.Cloud.VMMigration.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
-            yield return gciv::IamPolicyReflection.Descriptor;
-            yield return gciv::OptionsReflection.Descriptor;
-            yield return gciv::PolicyReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return VmmigrationReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

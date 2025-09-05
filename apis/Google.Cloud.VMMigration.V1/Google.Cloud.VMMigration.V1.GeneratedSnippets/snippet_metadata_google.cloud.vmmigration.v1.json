@@ -1710,6 +1710,341 @@
       ]
     },
     {
+      "regionTag": "vmmigration_v1_generated_VmMigration_FetchStorageInventory_sync",
+      "title": "FetchStorageInventoryRequestObject",
+      "description": "Snippet for FetchStorageInventory",
+      "file": "VmMigrationClient.FetchStorageInventoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStorageInventory",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchStorageInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse, Google.Cloud.VMMigration.V1.SourceStorageResource>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "FetchStorageInventory",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.FetchStorageInventory",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_FetchStorageInventory_async",
+      "title": "FetchStorageInventoryRequestObjectAsync",
+      "description": "Snippet for FetchStorageInventoryAsync",
+      "file": "VmMigrationClient.FetchStorageInventoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStorageInventoryAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchStorageInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse, Google.Cloud.VMMigration.V1.SourceStorageResource>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "FetchStorageInventory",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.FetchStorageInventory",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_FetchStorageInventory_sync_flattened",
+      "title": "FetchStorageInventory",
+      "description": "Snippet for FetchStorageInventory",
+      "file": "VmMigrationClient.FetchStorageInventorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStorageInventory",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchStorageInventory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "source"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest+Types+StorageType",
+            "name": "type"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse, Google.Cloud.VMMigration.V1.SourceStorageResource>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "FetchStorageInventory",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.FetchStorageInventory",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_FetchStorageInventory_async_flattened",
+      "title": "FetchStorageInventoryAsync",
+      "description": "Snippet for FetchStorageInventoryAsync",
+      "file": "VmMigrationClient.FetchStorageInventoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStorageInventoryAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchStorageInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "source"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest+Types+StorageType",
+            "name": "type"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse, Google.Cloud.VMMigration.V1.SourceStorageResource>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "FetchStorageInventory",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.FetchStorageInventory",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_FetchStorageInventory_sync_flattened_resourceNames",
+      "title": "FetchStorageInventoryResourceNames",
+      "description": "Snippet for FetchStorageInventory",
+      "file": "VmMigrationClient.FetchStorageInventoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStorageInventory",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchStorageInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "source"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest+Types+StorageType",
+            "name": "type"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse, Google.Cloud.VMMigration.V1.SourceStorageResource>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "FetchStorageInventory",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.FetchStorageInventory",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_FetchStorageInventory_async_flattened_resourceNames",
+      "title": "FetchStorageInventoryResourceNamesAsync",
+      "description": "Snippet for FetchStorageInventoryAsync",
+      "file": "VmMigrationClient.FetchStorageInventoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStorageInventoryAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchStorageInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "source"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest+Types+StorageType",
+            "name": "type"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse, Google.Cloud.VMMigration.V1.SourceStorageResource>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "FetchStorageInventory",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.FetchStorageInventory",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "vmmigration_v1_generated_VmMigration_ListUtilizationReports_sync",
       "title": "ListUtilizationReportsRequestObject",
       "description": "Snippet for ListUtilizationReports",
@@ -6406,6 +6741,103 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ExtendMigration_sync",
+      "title": "ExtendMigrationRequestObject",
+      "description": "Snippet for ExtendMigration",
+      "file": "VmMigrationClient.ExtendMigrationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExtendMigration",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ExtendMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ExtendMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ExtendMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ExtendMigration",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ExtendMigration",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ExtendMigration_async",
+      "title": "ExtendMigrationRequestObjectAsync",
+      "description": "Snippet for ExtendMigrationAsync",
+      "file": "VmMigrationClient.ExtendMigrationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExtendMigrationAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ExtendMigrationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ExtendMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ExtendMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ExtendMigration",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ExtendMigration",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
           "type": "SHORT"
         }
       ]
@@ -12834,6 +13266,3907 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImports_sync",
+      "title": "ListImageImportsRequestObject",
+      "description": "Snippet for ListImageImports",
+      "file": "VmMigrationClient.ListImageImportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImports",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListImageImportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListImageImportsResponse, Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImports",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImports",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImports_async",
+      "title": "ListImageImportsRequestObjectAsync",
+      "description": "Snippet for ListImageImportsAsync",
+      "file": "VmMigrationClient.ListImageImportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListImageImportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListImageImportsResponse, Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImports",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImports",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImports_sync_flattened",
+      "title": "ListImageImports",
+      "description": "Snippet for ListImageImports",
+      "file": "VmMigrationClient.ListImageImportsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImports",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListImageImportsResponse, Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImports",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImports",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImports_async_flattened",
+      "title": "ListImageImportsAsync",
+      "description": "Snippet for ListImageImportsAsync",
+      "file": "VmMigrationClient.ListImageImportsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListImageImportsResponse, Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImports",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImports",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImports_sync_flattened_resourceNames",
+      "title": "ListImageImportsResourceNames",
+      "description": "Snippet for ListImageImports",
+      "file": "VmMigrationClient.ListImageImportsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImports",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImports",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListImageImportsResponse, Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImports",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImports",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImports_async_flattened_resourceNames",
+      "title": "ListImageImportsResourceNamesAsync",
+      "description": "Snippet for ListImageImportsAsync",
+      "file": "VmMigrationClient.ListImageImportsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListImageImportsResponse, Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImports",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImports",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImport_sync",
+      "title": "GetImageImportRequestObject",
+      "description": "Snippet for GetImageImport",
+      "file": "VmMigrationClient.GetImageImportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetImageImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.ImageImport",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImport_async",
+      "title": "GetImageImportRequestObjectAsync",
+      "description": "Snippet for GetImageImportAsync",
+      "file": "VmMigrationClient.GetImageImportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetImageImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImport_sync_flattened",
+      "title": "GetImageImport",
+      "description": "Snippet for GetImageImport",
+      "file": "VmMigrationClient.GetImageImportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.ImageImport",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImport_async_flattened",
+      "title": "GetImageImportAsync",
+      "description": "Snippet for GetImageImportAsync",
+      "file": "VmMigrationClient.GetImageImportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImport_sync_flattened_resourceNames",
+      "title": "GetImageImportResourceNames",
+      "description": "Snippet for GetImageImport",
+      "file": "VmMigrationClient.GetImageImportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.ImageImport",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImport_async_flattened_resourceNames",
+      "title": "GetImageImportResourceNamesAsync",
+      "description": "Snippet for GetImageImportAsync",
+      "file": "VmMigrationClient.GetImageImportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ImageImport>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateImageImport_sync",
+      "title": "CreateImageImportRequestObject",
+      "description": "Snippet for CreateImageImport",
+      "file": "VmMigrationClient.CreateImageImportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateImageImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateImageImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ImageImport, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateImageImport_async",
+      "title": "CreateImageImportRequestObjectAsync",
+      "description": "Snippet for CreateImageImportAsync",
+      "file": "VmMigrationClient.CreateImageImportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateImageImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ImageImport, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateImageImport_sync_flattened",
+      "title": "CreateImageImport",
+      "description": "Snippet for CreateImageImport",
+      "file": "VmMigrationClient.CreateImageImportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateImageImport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImport",
+            "name": "imageImport"
+          },
+          {
+            "type": "System.String",
+            "name": "imageImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ImageImport, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateImageImport_async_flattened",
+      "title": "CreateImageImportAsync",
+      "description": "Snippet for CreateImageImportAsync",
+      "file": "VmMigrationClient.CreateImageImportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImport",
+            "name": "imageImport"
+          },
+          {
+            "type": "System.String",
+            "name": "imageImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ImageImport, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateImageImport_sync_flattened_resourceNames",
+      "title": "CreateImageImportResourceNames",
+      "description": "Snippet for CreateImageImport",
+      "file": "VmMigrationClient.CreateImageImportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateImageImport",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImport",
+            "name": "imageImport"
+          },
+          {
+            "type": "System.String",
+            "name": "imageImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ImageImport, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateImageImport_async_flattened_resourceNames",
+      "title": "CreateImageImportResourceNamesAsync",
+      "description": "Snippet for CreateImageImportAsync",
+      "file": "VmMigrationClient.CreateImageImportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImport",
+            "name": "imageImport"
+          },
+          {
+            "type": "System.String",
+            "name": "imageImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ImageImport, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteImageImport_sync",
+      "title": "DeleteImageImportRequestObject",
+      "description": "Snippet for DeleteImageImport",
+      "file": "VmMigrationClient.DeleteImageImportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteImageImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteImageImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteImageImport_async",
+      "title": "DeleteImageImportRequestObjectAsync",
+      "description": "Snippet for DeleteImageImportAsync",
+      "file": "VmMigrationClient.DeleteImageImportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteImageImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteImageImport_sync_flattened",
+      "title": "DeleteImageImport",
+      "description": "Snippet for DeleteImageImport",
+      "file": "VmMigrationClient.DeleteImageImportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteImageImport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteImageImport_async_flattened",
+      "title": "DeleteImageImportAsync",
+      "description": "Snippet for DeleteImageImportAsync",
+      "file": "VmMigrationClient.DeleteImageImportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteImageImport_sync_flattened_resourceNames",
+      "title": "DeleteImageImportResourceNames",
+      "description": "Snippet for DeleteImageImport",
+      "file": "VmMigrationClient.DeleteImageImportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteImageImport",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteImageImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteImageImport_async_flattened_resourceNames",
+      "title": "DeleteImageImportResourceNamesAsync",
+      "description": "Snippet for DeleteImageImportAsync",
+      "file": "VmMigrationClient.DeleteImageImportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteImageImportAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteImageImportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteImageImport",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteImageImport",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImportJobs_sync",
+      "title": "ListImageImportJobsRequestObject",
+      "description": "Snippet for ListImageImportJobs",
+      "file": "VmMigrationClient.ListImageImportJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportJobs",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListImageImportJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListImageImportJobsResponse, Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImportJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImportJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImportJobs_async",
+      "title": "ListImageImportJobsRequestObjectAsync",
+      "description": "Snippet for ListImageImportJobsAsync",
+      "file": "VmMigrationClient.ListImageImportJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportJobsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListImageImportJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListImageImportJobsResponse, Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImportJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImportJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImportJobs_sync_flattened",
+      "title": "ListImageImportJobs",
+      "description": "Snippet for ListImageImportJobs",
+      "file": "VmMigrationClient.ListImageImportJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportJobs",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListImageImportJobsResponse, Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImportJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImportJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImportJobs_async_flattened",
+      "title": "ListImageImportJobsAsync",
+      "description": "Snippet for ListImageImportJobsAsync",
+      "file": "VmMigrationClient.ListImageImportJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportJobsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListImageImportJobsResponse, Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImportJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImportJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImportJobs_sync_flattened_resourceNames",
+      "title": "ListImageImportJobsResourceNames",
+      "description": "Snippet for ListImageImportJobs",
+      "file": "VmMigrationClient.ListImageImportJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportJobs",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListImageImportJobsResponse, Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImportJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImportJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListImageImportJobs_async_flattened_resourceNames",
+      "title": "ListImageImportJobsResourceNamesAsync",
+      "description": "Snippet for ListImageImportJobsAsync",
+      "file": "VmMigrationClient.ListImageImportJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListImageImportJobsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListImageImportJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListImageImportJobsResponse, Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListImageImportJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListImageImportJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImportJob_sync",
+      "title": "GetImageImportJobRequestObject",
+      "description": "Snippet for GetImageImportJob",
+      "file": "VmMigrationClient.GetImageImportJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetImageImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.ImageImportJob",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImportJob_async",
+      "title": "GetImageImportJobRequestObjectAsync",
+      "description": "Snippet for GetImageImportJobAsync",
+      "file": "VmMigrationClient.GetImageImportJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetImageImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImportJob_sync_flattened",
+      "title": "GetImageImportJob",
+      "description": "Snippet for GetImageImportJob",
+      "file": "VmMigrationClient.GetImageImportJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.ImageImportJob",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImportJob_async_flattened",
+      "title": "GetImageImportJobAsync",
+      "description": "Snippet for GetImageImportJobAsync",
+      "file": "VmMigrationClient.GetImageImportJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImportJob_sync_flattened_resourceNames",
+      "title": "GetImageImportJobResourceNames",
+      "description": "Snippet for GetImageImportJob",
+      "file": "VmMigrationClient.GetImageImportJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.ImageImportJob",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetImageImportJob_async_flattened_resourceNames",
+      "title": "GetImageImportJobResourceNamesAsync",
+      "description": "Snippet for GetImageImportJobAsync",
+      "file": "VmMigrationClient.GetImageImportJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetImageImportJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetImageImportJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ImageImportJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelImageImportJob_sync",
+      "title": "CancelImageImportJobRequestObject",
+      "description": "Snippet for CancelImageImportJob",
+      "file": "VmMigrationClient.CancelImageImportJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelImageImportJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelImageImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelImageImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelImageImportJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelImageImportJob_async",
+      "title": "CancelImageImportJobRequestObjectAsync",
+      "description": "Snippet for CancelImageImportJobAsync",
+      "file": "VmMigrationClient.CancelImageImportJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelImageImportJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelImageImportJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelImageImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelImageImportJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelImageImportJob_sync_flattened",
+      "title": "CancelImageImportJob",
+      "description": "Snippet for CancelImageImportJob",
+      "file": "VmMigrationClient.CancelImageImportJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelImageImportJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelImageImportJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelImageImportJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelImageImportJob_async_flattened",
+      "title": "CancelImageImportJobAsync",
+      "description": "Snippet for CancelImageImportJobAsync",
+      "file": "VmMigrationClient.CancelImageImportJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelImageImportJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelImageImportJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelImageImportJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelImageImportJob_sync_flattened_resourceNames",
+      "title": "CancelImageImportJobResourceNames",
+      "description": "Snippet for CancelImageImportJob",
+      "file": "VmMigrationClient.CancelImageImportJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelImageImportJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelImageImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelImageImportJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelImageImportJob_async_flattened_resourceNames",
+      "title": "CancelImageImportJobResourceNamesAsync",
+      "description": "Snippet for CancelImageImportJobAsync",
+      "file": "VmMigrationClient.CancelImageImportJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelImageImportJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelImageImportJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ImageImportJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelImageImportJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelImageImportJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelImageImportJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateDiskMigrationJob_sync",
+      "title": "CreateDiskMigrationJobRequestObject",
+      "description": "Snippet for CreateDiskMigrationJob",
+      "file": "VmMigrationClient.CreateDiskMigrationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateDiskMigrationJob_async",
+      "title": "CreateDiskMigrationJobRequestObjectAsync",
+      "description": "Snippet for CreateDiskMigrationJobAsync",
+      "file": "VmMigrationClient.CreateDiskMigrationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateDiskMigrationJob_sync_flattened",
+      "title": "CreateDiskMigrationJob",
+      "description": "Snippet for CreateDiskMigrationJob",
+      "file": "VmMigrationClient.CreateDiskMigrationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+            "name": "diskMigrationJob"
+          },
+          {
+            "type": "System.String",
+            "name": "diskMigrationJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateDiskMigrationJob_async_flattened",
+      "title": "CreateDiskMigrationJobAsync",
+      "description": "Snippet for CreateDiskMigrationJobAsync",
+      "file": "VmMigrationClient.CreateDiskMigrationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+            "name": "diskMigrationJob"
+          },
+          {
+            "type": "System.String",
+            "name": "diskMigrationJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateDiskMigrationJob_sync_flattened_resourceNames",
+      "title": "CreateDiskMigrationJobResourceNames",
+      "description": "Snippet for CreateDiskMigrationJob",
+      "file": "VmMigrationClient.CreateDiskMigrationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+            "name": "diskMigrationJob"
+          },
+          {
+            "type": "System.String",
+            "name": "diskMigrationJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CreateDiskMigrationJob_async_flattened_resourceNames",
+      "title": "CreateDiskMigrationJobResourceNamesAsync",
+      "description": "Snippet for CreateDiskMigrationJobAsync",
+      "file": "VmMigrationClient.CreateDiskMigrationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+            "name": "diskMigrationJob"
+          },
+          {
+            "type": "System.String",
+            "name": "diskMigrationJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CreateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CreateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListDiskMigrationJobs_sync",
+      "title": "ListDiskMigrationJobsRequestObject",
+      "description": "Snippet for ListDiskMigrationJobs",
+      "file": "VmMigrationClient.ListDiskMigrationJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiskMigrationJobs",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDiskMigrationJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse, Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListDiskMigrationJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListDiskMigrationJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListDiskMigrationJobs_async",
+      "title": "ListDiskMigrationJobsRequestObjectAsync",
+      "description": "Snippet for ListDiskMigrationJobsAsync",
+      "file": "VmMigrationClient.ListDiskMigrationJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiskMigrationJobsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDiskMigrationJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse, Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListDiskMigrationJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListDiskMigrationJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListDiskMigrationJobs_sync_flattened",
+      "title": "ListDiskMigrationJobs",
+      "description": "Snippet for ListDiskMigrationJobs",
+      "file": "VmMigrationClient.ListDiskMigrationJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiskMigrationJobs",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDiskMigrationJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse, Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListDiskMigrationJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListDiskMigrationJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListDiskMigrationJobs_async_flattened",
+      "title": "ListDiskMigrationJobsAsync",
+      "description": "Snippet for ListDiskMigrationJobsAsync",
+      "file": "VmMigrationClient.ListDiskMigrationJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiskMigrationJobsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDiskMigrationJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse, Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListDiskMigrationJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListDiskMigrationJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListDiskMigrationJobs_sync_flattened_resourceNames",
+      "title": "ListDiskMigrationJobsResourceNames",
+      "description": "Snippet for ListDiskMigrationJobs",
+      "file": "VmMigrationClient.ListDiskMigrationJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiskMigrationJobs",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDiskMigrationJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse, Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListDiskMigrationJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListDiskMigrationJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_ListDiskMigrationJobs_async_flattened_resourceNames",
+      "title": "ListDiskMigrationJobsResourceNamesAsync",
+      "description": "Snippet for ListDiskMigrationJobsAsync",
+      "file": "VmMigrationClient.ListDiskMigrationJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiskMigrationJobsAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDiskMigrationJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse, Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "ListDiskMigrationJobs",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.ListDiskMigrationJobs",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetDiskMigrationJob_sync",
+      "title": "GetDiskMigrationJobRequestObject",
+      "description": "Snippet for GetDiskMigrationJob",
+      "file": "VmMigrationClient.GetDiskMigrationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetDiskMigrationJob_async",
+      "title": "GetDiskMigrationJobRequestObjectAsync",
+      "description": "Snippet for GetDiskMigrationJobAsync",
+      "file": "VmMigrationClient.GetDiskMigrationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetDiskMigrationJob_sync_flattened",
+      "title": "GetDiskMigrationJob",
+      "description": "Snippet for GetDiskMigrationJob",
+      "file": "VmMigrationClient.GetDiskMigrationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetDiskMigrationJob_async_flattened",
+      "title": "GetDiskMigrationJobAsync",
+      "description": "Snippet for GetDiskMigrationJobAsync",
+      "file": "VmMigrationClient.GetDiskMigrationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetDiskMigrationJob_sync_flattened_resourceNames",
+      "title": "GetDiskMigrationJobResourceNames",
+      "description": "Snippet for GetDiskMigrationJob",
+      "file": "VmMigrationClient.GetDiskMigrationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_GetDiskMigrationJob_async_flattened_resourceNames",
+      "title": "GetDiskMigrationJobResourceNamesAsync",
+      "description": "Snippet for GetDiskMigrationJobAsync",
+      "file": "VmMigrationClient.GetDiskMigrationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.DiskMigrationJob>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "GetDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.GetDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_UpdateDiskMigrationJob_sync",
+      "title": "UpdateDiskMigrationJobRequestObject",
+      "description": "Snippet for UpdateDiskMigrationJob",
+      "file": "VmMigrationClient.UpdateDiskMigrationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "UpdateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.UpdateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_UpdateDiskMigrationJob_async",
+      "title": "UpdateDiskMigrationJobRequestObjectAsync",
+      "description": "Snippet for UpdateDiskMigrationJobAsync",
+      "file": "VmMigrationClient.UpdateDiskMigrationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "UpdateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.UpdateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_UpdateDiskMigrationJob_sync_flattened",
+      "title": "UpdateDiskMigrationJob",
+      "description": "Snippet for UpdateDiskMigrationJob",
+      "file": "VmMigrationClient.UpdateDiskMigrationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+            "name": "diskMigrationJob"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "UpdateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.UpdateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_UpdateDiskMigrationJob_async_flattened",
+      "title": "UpdateDiskMigrationJobAsync",
+      "description": "Snippet for UpdateDiskMigrationJobAsync",
+      "file": "VmMigrationClient.UpdateDiskMigrationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJob",
+            "name": "diskMigrationJob"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DiskMigrationJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "UpdateDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.UpdateDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteDiskMigrationJob_sync",
+      "title": "DeleteDiskMigrationJobRequestObject",
+      "description": "Snippet for DeleteDiskMigrationJob",
+      "file": "VmMigrationClient.DeleteDiskMigrationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteDiskMigrationJob_async",
+      "title": "DeleteDiskMigrationJobRequestObjectAsync",
+      "description": "Snippet for DeleteDiskMigrationJobAsync",
+      "file": "VmMigrationClient.DeleteDiskMigrationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteDiskMigrationJob_sync_flattened",
+      "title": "DeleteDiskMigrationJob",
+      "description": "Snippet for DeleteDiskMigrationJob",
+      "file": "VmMigrationClient.DeleteDiskMigrationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteDiskMigrationJob_async_flattened",
+      "title": "DeleteDiskMigrationJobAsync",
+      "description": "Snippet for DeleteDiskMigrationJobAsync",
+      "file": "VmMigrationClient.DeleteDiskMigrationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteDiskMigrationJob_sync_flattened_resourceNames",
+      "title": "DeleteDiskMigrationJobResourceNames",
+      "description": "Snippet for DeleteDiskMigrationJob",
+      "file": "VmMigrationClient.DeleteDiskMigrationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_DeleteDiskMigrationJob_async_flattened_resourceNames",
+      "title": "DeleteDiskMigrationJobResourceNamesAsync",
+      "description": "Snippet for DeleteDiskMigrationJobAsync",
+      "file": "VmMigrationClient.DeleteDiskMigrationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "DeleteDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.DeleteDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_RunDiskMigrationJob_sync",
+      "title": "RunDiskMigrationJobRequestObject",
+      "description": "Snippet for RunDiskMigrationJob",
+      "file": "VmMigrationClient.RunDiskMigrationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RunDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RunDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "RunDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.RunDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_RunDiskMigrationJob_async",
+      "title": "RunDiskMigrationJobRequestObjectAsync",
+      "description": "Snippet for RunDiskMigrationJobAsync",
+      "file": "VmMigrationClient.RunDiskMigrationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RunDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RunDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "RunDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.RunDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_RunDiskMigrationJob_sync_flattened",
+      "title": "RunDiskMigrationJob",
+      "description": "Snippet for RunDiskMigrationJob",
+      "file": "VmMigrationClient.RunDiskMigrationJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RunDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RunDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "RunDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.RunDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_RunDiskMigrationJob_async_flattened",
+      "title": "RunDiskMigrationJobAsync",
+      "description": "Snippet for RunDiskMigrationJobAsync",
+      "file": "VmMigrationClient.RunDiskMigrationJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RunDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RunDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "RunDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.RunDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_RunDiskMigrationJob_sync_flattened_resourceNames",
+      "title": "RunDiskMigrationJobResourceNames",
+      "description": "Snippet for RunDiskMigrationJob",
+      "file": "VmMigrationClient.RunDiskMigrationJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RunDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RunDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "RunDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.RunDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_RunDiskMigrationJob_async_flattened_resourceNames",
+      "title": "RunDiskMigrationJobResourceNamesAsync",
+      "description": "Snippet for RunDiskMigrationJobAsync",
+      "file": "VmMigrationClient.RunDiskMigrationJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RunDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DiskMigrationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RunDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "RunDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.RunDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelDiskMigrationJob_sync",
+      "title": "CancelDiskMigrationJobRequestObject",
+      "description": "Snippet for CancelDiskMigrationJob",
+      "file": "VmMigrationClient.CancelDiskMigrationJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDiskMigrationJob",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelDiskMigrationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmmigration_v1_generated_VmMigration_CancelDiskMigrationJob_async",
+      "title": "CancelDiskMigrationJobRequestObjectAsync",
+      "description": "Snippet for CancelDiskMigrationJobAsync",
+      "file": "VmMigrationClient.CancelDiskMigrationJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDiskMigrationJobAsync",
+        "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelDiskMigrationJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelDiskMigrationJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmMigrationClient",
+          "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient"
+        },
+        "method": {
+          "shortName": "CancelDiskMigrationJob",
+          "fullName": "google.cloud.vmmigration.v1.VmMigration.CancelDiskMigrationJob",
+          "service": {
+            "shortName": "VmMigration",
+            "fullName": "google.cloud.vmmigration.v1.VmMigration"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
           "type": "SHORT"
         }
       ]
