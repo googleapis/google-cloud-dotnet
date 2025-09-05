@@ -1627,7 +1627,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T06:58:17Z",
-            "lastGeneratedCommit": "dfe85eea9a7a14e220563ecbeef0517d592883ac",
+            "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
             "apiPaths": [
                 "google/cloud/gsuiteaddons/v1"
             ],
