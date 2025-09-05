@@ -3341,7 +3341,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:48:34Z",
-            "lastGeneratedCommit": "71f4e44ee4bfac439ac69c40f0178e82cca4a2d0",
+            "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
             "apiPaths": [
                 "google/cloud/videointelligence/v1"
             ],
