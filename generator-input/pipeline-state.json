@@ -180,7 +180,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T18:02:16Z",
-            "lastGeneratedCommit": "63f3f46ef0999566e5064e91788843e3bb9e5d76",
+            "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
             "apiPaths": [
                 "google/cloud/accessapproval/v1"
             ],
