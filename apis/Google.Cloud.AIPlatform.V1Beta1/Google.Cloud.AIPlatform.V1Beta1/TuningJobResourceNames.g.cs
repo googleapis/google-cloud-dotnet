@@ -361,4 +361,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => PipelineJob = value?.ToString() ?? "";
         }
     }
+
+    public partial class PreTunedModel
+    {
+        /// <summary>
+        /// <see cref="ModelName"/>-typed view over the <see cref="TunedModelName"/> resource name property.
+        /// </summary>
+        public ModelName TunedModelNameAsModelName
+        {
+            get => string.IsNullOrEmpty(TunedModelName) ? null : ModelName.Parse(TunedModelName, allowUnparsed: true);
+            set => TunedModelName = value?.ToString() ?? "";
+        }
+    }
 }
