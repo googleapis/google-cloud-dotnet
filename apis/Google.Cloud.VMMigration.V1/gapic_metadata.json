@@ -28,6 +28,18 @@
                 "CancelCutoverJobAsync"
               ]
             },
+            "CancelDiskMigrationJob": {
+              "methods": [
+                "CancelDiskMigrationJob",
+                "CancelDiskMigrationJobAsync"
+              ]
+            },
+            "CancelImageImportJob": {
+              "methods": [
+                "CancelImageImportJob",
+                "CancelImageImportJobAsync"
+              ]
+            },
             "CreateCloneJob": {
               "methods": [
                 "CreateCloneJob",
@@ -46,10 +58,22 @@
                 "CreateDatacenterConnectorAsync"
               ]
             },
+            "CreateDiskMigrationJob": {
+              "methods": [
+                "CreateDiskMigrationJob",
+                "CreateDiskMigrationJobAsync"
+              ]
+            },
             "CreateGroup": {
               "methods": [
                 "CreateGroup",
                 "CreateGroupAsync"
+              ]
+            },
+            "CreateImageImport": {
+              "methods": [
+                "CreateImageImport",
+                "CreateImageImportAsync"
               ]
             },
             "CreateMigratingVm": {
@@ -82,10 +106,22 @@
                 "DeleteDatacenterConnectorAsync"
               ]
             },
+            "DeleteDiskMigrationJob": {
+              "methods": [
+                "DeleteDiskMigrationJob",
+                "DeleteDiskMigrationJobAsync"
+              ]
+            },
             "DeleteGroup": {
               "methods": [
                 "DeleteGroup",
                 "DeleteGroupAsync"
+              ]
+            },
+            "DeleteImageImport": {
+              "methods": [
+                "DeleteImageImport",
+                "DeleteImageImportAsync"
               ]
             },
             "DeleteMigratingVm": {
@@ -112,10 +148,22 @@
                 "DeleteUtilizationReportAsync"
               ]
             },
+            "ExtendMigration": {
+              "methods": [
+                "ExtendMigration",
+                "ExtendMigrationAsync"
+              ]
+            },
             "FetchInventory": {
               "methods": [
                 "FetchInventory",
                 "FetchInventoryAsync"
+              ]
+            },
+            "FetchStorageInventory": {
+              "methods": [
+                "FetchStorageInventory",
+                "FetchStorageInventoryAsync"
               ]
             },
             "FinalizeMigration": {
@@ -142,10 +190,28 @@
                 "GetDatacenterConnectorAsync"
               ]
             },
+            "GetDiskMigrationJob": {
+              "methods": [
+                "GetDiskMigrationJob",
+                "GetDiskMigrationJobAsync"
+              ]
+            },
             "GetGroup": {
               "methods": [
                 "GetGroup",
                 "GetGroupAsync"
+              ]
+            },
+            "GetImageImport": {
+              "methods": [
+                "GetImageImport",
+                "GetImageImportAsync"
+              ]
+            },
+            "GetImageImportJob": {
+              "methods": [
+                "GetImageImportJob",
+                "GetImageImportJobAsync"
               ]
             },
             "GetMigratingVm": {
@@ -196,10 +262,28 @@
                 "ListDatacenterConnectorsAsync"
               ]
             },
+            "ListDiskMigrationJobs": {
+              "methods": [
+                "ListDiskMigrationJobs",
+                "ListDiskMigrationJobsAsync"
+              ]
+            },
             "ListGroups": {
               "methods": [
                 "ListGroups",
                 "ListGroupsAsync"
+              ]
+            },
+            "ListImageImportJobs": {
+              "methods": [
+                "ListImageImportJobs",
+                "ListImageImportJobsAsync"
+              ]
+            },
+            "ListImageImports": {
+              "methods": [
+                "ListImageImports",
+                "ListImageImportsAsync"
               ]
             },
             "ListMigratingVms": {
@@ -250,10 +334,22 @@
                 "ResumeMigrationAsync"
               ]
             },
+            "RunDiskMigrationJob": {
+              "methods": [
+                "RunDiskMigrationJob",
+                "RunDiskMigrationJobAsync"
+              ]
+            },
             "StartMigration": {
               "methods": [
                 "StartMigration",
                 "StartMigrationAsync"
+              ]
+            },
+            "UpdateDiskMigrationJob": {
+              "methods": [
+                "UpdateDiskMigrationJob",
+                "UpdateDiskMigrationJobAsync"
               ]
             },
             "UpdateGroup": {
