@@ -54,6 +54,7 @@ namespace Google.Cloud.Retail.V2
             yield return CompletionServiceReflection.Descriptor;
             yield return ControlReflection.Descriptor;
             yield return ControlServiceReflection.Descriptor;
+            yield return ConversationalSearchServiceReflection.Descriptor;
             yield return ExportConfigReflection.Descriptor;
             yield return GenerativeQuestionReflection.Descriptor;
             yield return GenerativeQuestionServiceReflection.Descriptor;
@@ -65,6 +66,7 @@ namespace Google.Cloud.Retail.V2
             yield return ProductServiceReflection.Descriptor;
             yield return PromotionReflection.Descriptor;
             yield return PurgeConfigReflection.Descriptor;
+            yield return SafetyReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;
             yield return ServingConfigReflection.Descriptor;
             yield return ServingConfigServiceReflection.Descriptor;

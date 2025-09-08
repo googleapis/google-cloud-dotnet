@@ -4066,6 +4066,54 @@
       ]
     },
     {
+      "regionTag": "retail_v2_generated_ConversationalSearchService_ConversationalSearch_sync",
+      "title": "ConversationalSearchRequestObject",
+      "description": "Snippet for ConversationalSearch",
+      "file": "ConversationalSearchServiceClient.ConversationalSearchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConversationalSearch",
+        "fullName": "Google.Cloud.Retail.V2.ConversationalSearchServiceClient.ConversationalSearch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ConversationalSearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.ConversationalSearchServiceClient+ConversationalSearchStream",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "ConversationalSearch",
+          "fullName": "google.cloud.retail.v2.ConversationalSearchService.ConversationalSearch",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.retail.v2.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 69,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 67,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionsFeatureConfig_sync",
       "title": "UpdateGenerativeQuestionsFeatureConfigRequestObject",
       "description": "Snippet for UpdateGenerativeQuestionsFeatureConfig",
