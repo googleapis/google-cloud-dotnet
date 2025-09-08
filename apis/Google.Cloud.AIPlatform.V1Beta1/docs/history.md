@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta50, released 2025-09-08
+
+### New features
+
+- PSC support for custom weights deploy
+- Tuning PreTunedModel API field
+
+### Documentation improvements
+
+- A comment for field `dedicated_endpoint_disabled` in message `.google.cloud.aiplatform.v1beta1.DeployRequest` is changed
+
 ## Version 1.0.0-beta49, released 2025-09-03
 
 ### New features
