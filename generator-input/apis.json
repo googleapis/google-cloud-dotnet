@@ -1359,6 +1359,25 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.CapacityPlanner.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Capacity Planner",
+      "productUrl": "https://cloud.google.com/capacity-planner/docs",
+      "description": "Provides programmatic access to Capacity Planner features.",
+      "tags": [],
+      "dependencies": {
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/capacityplanner/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "capacityplanner",
+      "serviceConfigFile": "capacityplanner_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.CertificateManager.V1",
       "version": "2.8.0",
       "type": "grpc",
