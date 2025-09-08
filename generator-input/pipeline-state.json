@@ -4522,6 +4522,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.CloudSecurityCompliance.V1/Google.Cloud.CloudSecurityCompliance.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.CapacityPlanner.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/capacityplanner/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.CapacityPlanner.V1Beta/Google.Cloud.CapacityPlanner.V1Beta"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
