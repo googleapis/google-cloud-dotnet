@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.12.0, released 2025-09-08
+
+### New features
+
+- Introduce DataTransfer APIs
+
 ## Version 2.11.0, released 2025-07-22
 
 ### New features
