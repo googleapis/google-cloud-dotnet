@@ -1,5 +1,30 @@
 # Version history
 
+## Version 2.7.0, released 2025-09-08
+
+### New features
+
+- Azure as a source
+- CMEK support
+- VM disk migration
+- Image Import
+- Machine Image Import
+- Cutover forecast
+- OS capabilities detection
+- Multiple additional supported target details
+- Migration warnings in addition to errors
+- API for extending the time to live (TTL) of a Migrating VM
+
+### Bug fixes
+
+- Changed field behavior for an existing field `key` in message `.google.cloud.vmmigration.v1.AwsSourceDetails` to `required` to protect from incorrect input
+- Changed field behavior for an existing field `value` in message `.google.cloud.vmmigration.v1.AwsSourceDetails` to `required` to protect from incorrect input
+- Changed field behavior for an existing field `project` in message `.google.cloud.vmmigration.v1.TargetProject` to `required` to protect from incorrect input
+
+### Documentation improvements
+
+- Updated comments and descriptions to improve clarity
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
