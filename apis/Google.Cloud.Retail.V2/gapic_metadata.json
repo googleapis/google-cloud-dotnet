@@ -155,6 +155,21 @@
         }
       }
     },
+    "ConversationalSearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConversationalSearchServiceClient",
+          "rpcs": {
+            "ConversationalSearch": {
+              "methods": [
+                "ConversationalSearch",
+                "ConversationalSearchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "GenerativeQuestionService": {
       "clients": {
         "grpc": {
