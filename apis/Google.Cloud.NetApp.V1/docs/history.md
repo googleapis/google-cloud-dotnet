@@ -1,5 +1,30 @@
 # Version history
 
+## Version 1.11.0, released 2025-09-08
+
+### New features
+
+- Add new fields for flex auto tiering
+- Add fields for manual qos
+- Add fields for hybrid replication
+
+### Documentation improvements
+
+- Field `daily_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `weekly_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `monthly_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `manual_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `subnet_ip` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `command` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `command_expiry_time` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `passphrase` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `peer_volume_name` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `peer_cluster_name` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `peer_svm_name` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `total_throughput_mibps` in message `.google.cloud.netapp.v1.StoragePool` is added
+- Field `total_iops` in message `.google.cloud.netapp.v1.StoragePool` is added
+- A comment for field `cold_tier_size_gib` in message `.google.cloud.netapp.v1.Volume` is changed
+
 ## Version 1.10.0, released 2025-05-16
 
 ### New features
