@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.15.0, released 2025-09-08
+
+### New features
+
+- Release the conversational search public SDK
+
 ## Version 2.14.0, released 2025-06-25
 
 ### New features
