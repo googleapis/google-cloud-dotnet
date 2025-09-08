@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta14, released 2025-09-08
+
+### New features
+
+- Add string value prompt to SynthesisInput
+
 ## Version 2.0.0-beta13, released 2025-08-28
 
 ### New features
