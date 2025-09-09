@@ -238,18 +238,19 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Theory]
-        [InlineData(5, -30, 0)]
-        [InlineData(-5, 30, 1)]
-        [InlineData(13, 31, -1_000_000_000)]
-        [InlineData(-13, -31, 1_000_000_000)]
-        [InlineData(24, 0, 999_999_999)]
-        [InlineData(-24, 3_660_000, -1)]
-        [InlineData(120000, -3_660_000, -999_999_999)]
-        [InlineData(-120000, 0, 0)]
-        [InlineData(0, 31, 1_000_000_000)]
-        [InlineData(0, 0, 0)]
-        public void FromMonthsDaysAndNanoseconds(int months, int days, BigInteger nanoseconds)
+        [InlineData(5, -30, "0")]
+        [InlineData(-5, 30, "1")]
+        [InlineData(13, 31, "-1_000_000_000")]
+        [InlineData(-13, -31, "1_000_000_000")]
+        [InlineData(24, 0, "999_999_999")]
+        [InlineData(-24, 3_660_000, "-1")]
+        [InlineData(120000, -3_660_000, "-999_999_999")]
+        [InlineData(-120000, 0, "0")]
+        [InlineData(0, 31, "1_000_000_000")]
+        [InlineData(0, 0, "0")]
+        public void FromMonthsDaysAndNanoseconds(int months, int days, string nanosecondsText)
         {
+            BigInteger nanoseconds = BigInteger.Parse(nanosecondsText.Replace("_", ""));
             Interval interval = Interval.FromMonthsDaysNanos(months, days, nanoseconds);
             Assert.Equal(nanoseconds, interval.Nanoseconds);
             Assert.Equal(days, interval.Days);
