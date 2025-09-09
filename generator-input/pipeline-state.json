@@ -4535,6 +4535,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.CapacityPlanner.V1Beta/Google.Cloud.CapacityPlanner.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.LocationFinder.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/locationfinder/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.LocationFinder.V1/Google.Cloud.LocationFinder.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
