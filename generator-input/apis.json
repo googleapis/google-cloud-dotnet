@@ -5523,7 +5523,8 @@
         "gcs"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.8.0",
+        "Google.Api.Gax.Grpc": "4.9.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.LongRunning": "3.3.0",
         "Grpc.Core": "2.46.6"
       },
