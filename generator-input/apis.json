@@ -3421,6 +3421,25 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.LocationFinder.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Location Finder",
+      "productUrl": "https://cloud.google.com/location-finder/docs/overview",
+      "description": "Recommended Google client library to access the Google Cloud Location Finder API, which offers a repository of all Google Cloud and Google Distributed Cloud locations, as well as cloud locations for other cloud providers.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/locationfinder/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "cloudlocationfinder",
+      "serviceConfigFile": "cloudlocationfinder_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Logging.Log4Net",
       "version": "4.4.0",
       "type": "other",
