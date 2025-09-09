@@ -361,7 +361,6 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             private AsyncServerStreamingCall<PartialResultSet> CreateStreamingCall(ByteString resumeToken)
             {
-                FileLogger.Log($"Called with token {resumeToken.ToStringUtf8()}");
                 Calls++;
                 IEnumerable<PartialResultSet> callResults = resumeToken.IsEmpty
                     ? _results
