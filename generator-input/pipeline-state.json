@@ -3034,7 +3034,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-15T20:28:49.609552Z",
-            "lastGeneratedCommit": "ec171c429e545d06e05a609e837bba006dde67cf",
+            "lastGeneratedCommit": "712043cb82fad4a36c79e20f7e356beda059885d",
             "lastReleasedCommit": "e6c5fab81918fda9facc0ee0b1a470e94ba05f18",
             "apiPaths": [
                 "google/storage/control/v2"
@@ -4528,6 +4528,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "74796639510582b7691162f54c346cb6ab815a07",
             "apiPaths": [
                 "google/cloud/capacityplanner/v1beta"
             ],
