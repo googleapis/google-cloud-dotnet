@@ -581,16 +581,17 @@ namespace Google.Cloud.Spanner.Data
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
 
                     PooledSession session;
-                    SpannerTransactionCreationOptions effectiveCreationOptions = transactionCreationOptions;
+                    SpannerTransactionCreationOptions effectiveCreationOptions;
                     if (transactionCreationOptions.TransactionId is null)
                     {
                         session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
                     }
                     else
                     {
-                        SessionName sessionName = SessionName.Parse(effectiveCreationOptions.TransactionId.Session);
-                        ByteString transactionIdBytes = ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id);
+                        SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
+                        ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
                         session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
+                        effectiveCreationOptions = transactionCreationOptions;
                     }
                     return new SpannerTransaction(this, session, effectiveCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);

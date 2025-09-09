@@ -83,6 +83,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             SpannerTransactionCreationOptions effectiveCreationOptions = _creationOptions;
                             session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out effectiveCreationOptions)).ConfigureAwait(false);
+
                             transaction = new SpannerTransaction(_connection, session, effectiveCreationOptions, _transactionOptions, isRetriable: true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
