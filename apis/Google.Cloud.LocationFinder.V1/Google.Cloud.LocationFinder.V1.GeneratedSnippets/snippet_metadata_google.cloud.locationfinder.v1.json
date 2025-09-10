@@ -1,0 +1,971 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.LocationFinder.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.locationfinder.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_ListCloudLocations_sync",
+      "title": "ListCloudLocationsRequestObject",
+      "description": "Snippet for ListCloudLocations",
+      "file": "CloudLocationFinderClient.ListCloudLocationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudLocations",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.ListCloudLocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.ListCloudLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LocationFinder.V1.ListCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "ListCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.ListCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_ListCloudLocations_async",
+      "title": "ListCloudLocationsRequestObjectAsync",
+      "description": "Snippet for ListCloudLocationsAsync",
+      "file": "CloudLocationFinderClient.ListCloudLocationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudLocationsAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.ListCloudLocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.ListCloudLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LocationFinder.V1.ListCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "ListCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.ListCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_ListCloudLocations_sync_flattened",
+      "title": "ListCloudLocations",
+      "description": "Snippet for ListCloudLocations",
+      "file": "CloudLocationFinderClient.ListCloudLocationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudLocations",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.ListCloudLocations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LocationFinder.V1.ListCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "ListCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.ListCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_ListCloudLocations_async_flattened",
+      "title": "ListCloudLocationsAsync",
+      "description": "Snippet for ListCloudLocationsAsync",
+      "file": "CloudLocationFinderClient.ListCloudLocationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudLocationsAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.ListCloudLocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LocationFinder.V1.ListCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "ListCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.ListCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_ListCloudLocations_sync_flattened_resourceNames",
+      "title": "ListCloudLocationsResourceNames",
+      "description": "Snippet for ListCloudLocations",
+      "file": "CloudLocationFinderClient.ListCloudLocationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudLocations",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.ListCloudLocations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LocationFinder.V1.ListCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "ListCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.ListCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_ListCloudLocations_async_flattened_resourceNames",
+      "title": "ListCloudLocationsResourceNamesAsync",
+      "description": "Snippet for ListCloudLocationsAsync",
+      "file": "CloudLocationFinderClient.ListCloudLocationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCloudLocationsAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.ListCloudLocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LocationFinder.V1.ListCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "ListCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.ListCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_GetCloudLocation_sync",
+      "title": "GetCloudLocationRequestObject",
+      "description": "Snippet for GetCloudLocation",
+      "file": "CloudLocationFinderClient.GetCloudLocationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudLocation",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.GetCloudLocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.GetCloudLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LocationFinder.V1.CloudLocation",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "GetCloudLocation",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.GetCloudLocation",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_GetCloudLocation_async",
+      "title": "GetCloudLocationRequestObjectAsync",
+      "description": "Snippet for GetCloudLocationAsync",
+      "file": "CloudLocationFinderClient.GetCloudLocationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudLocationAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.GetCloudLocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.GetCloudLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "GetCloudLocation",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.GetCloudLocation",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_GetCloudLocation_sync_flattened",
+      "title": "GetCloudLocation",
+      "description": "Snippet for GetCloudLocation",
+      "file": "CloudLocationFinderClient.GetCloudLocationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudLocation",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.GetCloudLocation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LocationFinder.V1.CloudLocation",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "GetCloudLocation",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.GetCloudLocation",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_GetCloudLocation_async_flattened",
+      "title": "GetCloudLocationAsync",
+      "description": "Snippet for GetCloudLocationAsync",
+      "file": "CloudLocationFinderClient.GetCloudLocationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudLocationAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.GetCloudLocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "GetCloudLocation",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.GetCloudLocation",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_GetCloudLocation_sync_flattened_resourceNames",
+      "title": "GetCloudLocationResourceNames",
+      "description": "Snippet for GetCloudLocation",
+      "file": "CloudLocationFinderClient.GetCloudLocationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudLocation",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.GetCloudLocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.CloudLocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.LocationFinder.V1.CloudLocation",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "GetCloudLocation",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.GetCloudLocation",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_GetCloudLocation_async_flattened_resourceNames",
+      "title": "GetCloudLocationResourceNamesAsync",
+      "description": "Snippet for GetCloudLocationAsync",
+      "file": "CloudLocationFinderClient.GetCloudLocationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCloudLocationAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.GetCloudLocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.CloudLocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "GetCloudLocation",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.GetCloudLocation",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_SearchCloudLocations_sync",
+      "title": "SearchCloudLocationsRequestObject",
+      "description": "Snippet for SearchCloudLocations",
+      "file": "CloudLocationFinderClient.SearchCloudLocationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCloudLocations",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.SearchCloudLocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.SearchCloudLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LocationFinder.V1.SearchCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "SearchCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.SearchCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_SearchCloudLocations_async",
+      "title": "SearchCloudLocationsRequestObjectAsync",
+      "description": "Snippet for SearchCloudLocationsAsync",
+      "file": "CloudLocationFinderClient.SearchCloudLocationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCloudLocationsAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.SearchCloudLocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationFinder.V1.SearchCloudLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LocationFinder.V1.SearchCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "SearchCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.SearchCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_SearchCloudLocations_sync_flattened",
+      "title": "SearchCloudLocations",
+      "description": "Snippet for SearchCloudLocations",
+      "file": "CloudLocationFinderClient.SearchCloudLocationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCloudLocations",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.SearchCloudLocations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceCloudLocation"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LocationFinder.V1.SearchCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "SearchCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.SearchCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_SearchCloudLocations_async_flattened",
+      "title": "SearchCloudLocationsAsync",
+      "description": "Snippet for SearchCloudLocationsAsync",
+      "file": "CloudLocationFinderClient.SearchCloudLocationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCloudLocationsAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.SearchCloudLocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceCloudLocation"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LocationFinder.V1.SearchCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "SearchCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.SearchCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_SearchCloudLocations_sync_flattened_resourceNames",
+      "title": "SearchCloudLocationsResourceNames",
+      "description": "Snippet for SearchCloudLocations",
+      "file": "CloudLocationFinderClient.SearchCloudLocationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCloudLocations",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.SearchCloudLocations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.LocationFinder.V1.CloudLocationName",
+            "name": "sourceCloudLocation"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.LocationFinder.V1.SearchCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "SearchCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.SearchCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudlocationfinder_v1_generated_CloudLocationFinder_SearchCloudLocations_async_flattened_resourceNames",
+      "title": "SearchCloudLocationsResourceNamesAsync",
+      "description": "Snippet for SearchCloudLocationsAsync",
+      "file": "CloudLocationFinderClient.SearchCloudLocationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCloudLocationsAsync",
+        "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient.SearchCloudLocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.LocationFinder.V1.CloudLocationName",
+            "name": "sourceCloudLocation"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.LocationFinder.V1.SearchCloudLocationsResponse, Google.Cloud.LocationFinder.V1.CloudLocation>",
+        "client": {
+          "shortName": "CloudLocationFinderClient",
+          "fullName": "Google.Cloud.LocationFinder.V1.CloudLocationFinderClient"
+        },
+        "method": {
+          "shortName": "SearchCloudLocations",
+          "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder.SearchCloudLocations",
+          "service": {
+            "shortName": "CloudLocationFinder",
+            "fullName": "google.cloud.locationfinder.v1.CloudLocationFinder"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
